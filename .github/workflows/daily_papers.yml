@@ -1,0 +1,41 @@
+name: Daily Paper Fetch
+
+on:
+  schedule:
+    # 02:00 UTC = 10:00 AM Beijing — arXiv new submissions available by then
+    - cron: '0 2 * * *'
+  workflow_dispatch:   # Allow manual trigger from GitHub UI
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Needed to push data/*.json back to repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch and summarise papers
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python fetch_papers.py
+
+      - name: Commit and push data file
+        run: |
+          git config user.name  "PaperPush Bot"
+          git config user.email "bot@paperpush.app"
+          git add data/
+          # Only commit if there are changes
+          git diff --staged --quiet || \
+            git commit -m "📄 Daily papers $(date -u +%Y-%m-%d)"
+          git push

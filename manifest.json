@@ -1,0 +1,12 @@
+{
+  "name": "PaperPush 论文日报",
+  "short_name": "PaperPush",
+  "description": "每日AI/ML论文精选，双语摘要，DeepSeek智能问答",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

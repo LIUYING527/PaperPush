@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaperPush 论文日报</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<style>
+  :root {
+    --primary:   #4f46e5;
+    --primary-d: #3730a3;
+    --accent:    #7c3aed;
+    --bg:        #f8fafc;
+    --card:      #ffffff;
+    --border:    #e2e8f0;
+    --text:      #1e293b;
+    --sub:       #64748b;
+    --tag-ai:    #3b82f6;
+    --tag-lg:    #10b981;
+    --tag-cl:    #8b5cf6;
+    --tag-cv:    #f59e0b;
+    --tag-ro:    #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* ── Header ── */
+  header {
+    background: var(--primary);
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 8px rgba(79,70,229,.3);
+  }
+  .header-left { display: flex; align-items: center; gap: 8px; }
+  .logo { width: 28px; height: 28px; }
+  .site-title { font-size: 1.1rem; font-weight: 700; letter-spacing: -.3px; }
+  .header-right { display: flex; gap: 8px; }
+  .icon-btn {
+    background: rgba(255,255,255,.15);
+    border: none; color: white;
+    width: 32px; height: 32px; border-radius: 8px;
+    cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .15s;
+  }
+  .icon-btn:hover { background: rgba(255,255,255,.25); }
+
+  /* ── Bottom Nav ── */
+  nav {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    display: flex;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .nav-btn {
+    flex: 1; border: none; background: none;
+    padding: 8px 4px 10px;
+    cursor: pointer; color: var(--sub);
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    font-size: .65rem; font-weight: 500;
+    transition: color .15s;
+    position: relative;
+  }
+  .nav-btn .nav-icon { font-size: 1.2rem; }
+  .nav-btn.active { color: var(--primary); }
+  .nav-badge {
+    position: absolute; top: 6px; right: calc(50% - 18px);
+    background: #ef4444; color: white;
+    font-size: .55rem; font-weight: 700;
+    min-width: 16px; height: 16px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 4px;
+  }
+  .nav-badge:empty { display: none; }
+
+  /* ── Main Content ── */
+  main { padding: 12px 12px 80px; max-width: 680px; margin: 0 auto; }
+
+  /* ── Tab panels ── */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── Date bar ── */
+  .date-bar {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 12px;
+  }
+  .date-bar input[type=date] {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 5px 8px; font-size: .85rem; color: var(--text);
+    background: var(--card); cursor: pointer;
+  }
+  .date-label {
+    font-size: .8rem; color: var(--sub);
+    flex: 1;
+  }
+
+  /* ── Category filter chips ── */
+  .filter-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .chip {
+    border: 1.5px solid var(--border); border-radius: 20px;
+    padding: 3px 10px; font-size: .75rem; font-weight: 600;
+    cursor: pointer; background: var(--card);
+    transition: all .15s;
+    color: var(--sub);
+  }
+  .chip.active, .chip:hover { border-color: var(--primary); color: var(--primary); background: #eef2ff; }
+  .chip[data-cat=cs\\.AI].active    { border-color: var(--tag-ai); color: var(--tag-ai); background: #eff6ff; }
+  .chip[data-cat=cs\\.LG].active    { border-color: var(--tag-lg); color: var(--tag-lg); background: #f0fdf4; }
+  .chip[data-cat=cs\\.CL].active    { border-color: var(--tag-cl); color: var(--tag-cl); background: #f5f3ff; }
+  .chip[data-cat=cs\\.CV].active    { border-color: var(--tag-cv); color: var(--tag-cv); background: #fffbeb; }
+  .chip[data-cat=cs\\.RO].active    { border-color: var(--tag-ro); color: var(--tag-ro); background: #fff1f2; }
+
+  /* ── Paper card ── */
+  .paper-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: box-shadow .15s;
+  }
+  .paper-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+
+  .card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
+  .card-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+
+  .cat-badge {
+    font-size: .68rem; font-weight: 700;
+    padding: 2px 7px; border-radius: 20px;
+    text-transform: uppercase;
+  }
+  .cat-cs\\.AI { background: #dbeafe; color: #1d4ed8; }
+  .cat-cs\\.LG { background: #dcfce7; color: #15803d; }
+  .cat-cs\\.CL { background: #ede9fe; color: #6d28d9; }
+  .cat-cs\\.CV { background: #fef9c3; color: #a16207; }
+  .cat-cs\\.RO { background: #fee2e2; color: #b91c1c; }
+
+  .paper-date { font-size: .7rem; color: var(--sub); }
+
+  .fav-btn {
+    border: none; background: none; cursor: pointer;
+    font-size: 1.2rem; color: #cbd5e1; transition: color .15s;
+    padding: 0 2px; line-height: 1;
+  }
+  .fav-btn.active { color: #f59e0b; }
+
+  .paper-title {
+    font-size: .95rem; font-weight: 700; line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .paper-title a { color: var(--text); text-decoration: none; }
+  .paper-title a:hover { color: var(--primary); }
+
+  .paper-authors { font-size: .75rem; color: var(--sub); margin-bottom: 10px; }
+
+  .summary-zh { font-size: .85rem; line-height: 1.6; color: var(--text); margin-bottom: 8px; }
+
+  .summary-en {
+    font-size: .82rem; line-height: 1.6; color: var(--sub);
+    border-left: 3px solid var(--border); padding-left: 10px;
+    margin-bottom: 8px; display: none;
+  }
+  .summary-en.visible { display: block; }
+
+  .toggle-lang-btn {
+    background: none; border: none; color: var(--primary);
+    font-size: .75rem; cursor: pointer; padding: 0;
+    font-weight: 500;
+  }
+
+  .highlights { list-style: none; margin: 10px 0; display: flex; flex-direction: column; gap: 5px; }
+  .highlights li {
+    font-size: .8rem; color: var(--sub);
+    display: flex; gap: 6px; align-items: flex-start;
+  }
+  .highlights li::before { content: '→'; color: var(--primary); flex-shrink: 0; font-weight: 700; }
+
+  .card-footer { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .link-btn {
+    font-size: .75rem; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px;
+    border: 1.5px solid var(--border);
+    color: var(--sub); text-decoration: none;
+    transition: all .15s;
+    background: var(--bg);
+  }
+  .link-btn:hover { border-color: var(--primary); color: var(--primary); background: #eef2ff; }
+
+  /* ── Empty / Loading states ── */
+  .state-box {
+    text-align: center; padding: 48px 16px;
+    color: var(--sub);
+  }
+  .state-box .state-icon { font-size: 2.5rem; margin-bottom: 12px; }
+  .state-box p { font-size: .9rem; }
+
+  /* ── Chat tab ── */
+  .chat-wrap { display: flex; flex-direction: column; height: calc(100vh - 150px); }
+  .chat-messages {
+    flex: 1; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 10px;
+    padding-bottom: 8px;
+  }
+  .msg { max-width: 85%; padding: 10px 13px; border-radius: 12px; font-size: .88rem; line-height: 1.5; }
+  .msg.user   { align-self: flex-end; background: var(--primary); color: white; border-bottom-right-radius: 4px; }
+  .msg.bot    { align-self: flex-start; background: var(--card); border: 1px solid var(--border); border-bottom-left-radius: 4px; white-space: pre-wrap; }
+  .msg.system { align-self: center; background: #f1f5f9; color: var(--sub); font-size: .75rem; border-radius: 8px; }
+
+  .chat-input-row {
+    display: flex; gap: 8px; padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .chat-input-row textarea {
+    flex: 1; border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 8px 12px; font-size: .88rem; resize: none; min-height: 40px;
+    max-height: 120px; font-family: inherit; outline: none;
+    transition: border-color .15s;
+  }
+  .chat-input-row textarea:focus { border-color: var(--primary); }
+  .send-btn {
+    background: var(--primary); color: white;
+    border: none; border-radius: 10px;
+    width: 40px; cursor: pointer;
+    font-size: 1.1rem; transition: background .15s;
+  }
+  .send-btn:hover { background: var(--primary-d); }
+  .send-btn:disabled { background: var(--sub); cursor: not-allowed; }
+
+  /* ── Favorites ── */
+  .fav-empty { padding: 40px 16px; text-align: center; color: var(--sub); font-size: .9rem; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.45); z-index: 200;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--card); border-radius: 16px;
+    padding: 20px; width: min(92vw, 400px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  }
+  .modal h3 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+  .modal label { font-size: .8rem; color: var(--sub); display: block; margin-bottom: 4px; margin-top: 10px; }
+  .modal input[type=text], .modal input[type=password], .modal input[type=email] {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 8px;
+    padding: 8px 10px; font-size: .88rem; outline: none;
+  }
+  .modal input:focus { border-color: var(--primary); }
+  .modal-btns { display: flex; gap: 8px; margin-top: 16px; justify-content: flex-end; }
+  .btn-primary {
+    background: var(--primary); color: white;
+    border: none; border-radius: 8px;
+    padding: 8px 18px; font-size: .85rem; font-weight: 600;
+    cursor: pointer; transition: background .15s;
+  }
+  .btn-primary:hover { background: var(--primary-d); }
+  .btn-ghost {
+    background: none; color: var(--sub);
+    border: 1.5px solid var(--border); border-radius: 8px;
+    padding: 8px 14px; font-size: .85rem;
+    cursor: pointer;
+  }
+  .modal-msg { font-size: .8rem; color: var(--sub); margin-top: 6px; min-height: 1em; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────── -->
+<header>
+  <div class="header-left">
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="20" fill="white" opacity=".15"/>
+      <rect x="22" y="30" width="52" height="46" rx="4" fill="white" opacity=".25"/>
+      <rect x="18" y="26" width="52" height="46" rx="4" fill="white" opacity=".45"/>
+      <rect x="14" y="22" width="52" height="46" rx="4" fill="white"/>
+      <rect x="22" y="32" width="30" height="3" rx="1.5" fill="#4f46e5" opacity=".6"/>
+      <rect x="22" y="40" width="38" height="2.5" rx="1.25" fill="#4f46e5" opacity=".3"/>
+      <rect x="22" y="47" width="34" height="2.5" rx="1.25" fill="#4f46e5" opacity=".3"/>
+      <rect x="22" y="54" width="36" height="2.5" rx="1.25" fill="#4f46e5" opacity=".3"/>
+      <circle cx="57" cy="62" r="11" fill="#4f46e5"/>
+      <path d="M57 55 L59 60 L64 60 L60 63.5 L61.5 69 L57 65.5 L52.5 69 L54 63.5 L50 60 L55 60 Z" fill="white"/>
+    </svg>
+    <span class="site-title">PaperPush</span>
+  </div>
+  <div class="header-right">
+    <button class="icon-btn" id="settingsBtn" title="设置" onclick="openSettings()">⚙️</button>
+    <button class="icon-btn" id="authBtn"     title="登录" onclick="openAuth()">👤</button>
+  </div>
+</header>
+
+<!-- ── Main ───────────────────────────────────────────────── -->
+<main>
+
+  <!-- Today -->
+  <div id="tab-today" class="tab-panel active">
+    <div class="date-bar">
+      <input type="date" id="todayDatePicker" onchange="onDateChange(this.value)">
+      <span class="date-label" id="dateLabel"></span>
+    </div>
+    <div class="filter-chips" id="filterChips"></div>
+    <div id="paperList"></div>
+  </div>
+
+  <!-- History -->
+  <div id="tab-history" class="tab-panel">
+    <div class="date-bar">
+      <input type="date" id="histDatePicker" onchange="loadDate(this.value)">
+      <span class="date-label" id="histLabel">选择日期查看历史论文</span>
+    </div>
+    <div id="histPaperList"></div>
+  </div>
+
+  <!-- Chat -->
+  <div id="tab-chat" class="tab-panel">
+    <div class="chat-wrap">
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-row">
+        <textarea id="chatInput" placeholder="问我关于今日论文的任何问题…" rows="1"
+          onkeydown="chatKeydown(event)" oninput="autoResize(this)"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendChat()" title="发送">↑</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Favorites -->
+  <div id="tab-favorites" class="tab-panel">
+    <div id="favList"></div>
+  </div>
+
+</main>
+
+<!-- ── Bottom Nav ─────────────────────────────────────────── -->
+<nav>
+  <button class="nav-btn active" id="nav-today"     onclick="switchTab('today')">
+    <span class="nav-icon">📄</span>今日
+  </button>
+  <button class="nav-btn"        id="nav-history"   onclick="switchTab('history')">
+    <span class="nav-icon">🗂️</span>历史
+  </button>
+  <button class="nav-btn"        id="nav-chat"      onclick="switchTab('chat')">
+    <span class="nav-icon">💬</span>对话
+  </button>
+  <button class="nav-btn"        id="nav-favorites" onclick="switchTab('favorites')">
+    <span class="nav-icon">⭐</span>收藏
+    <span class="nav-badge" id="favBadge"></span>
+  </button>
+</nav>
+
+<!-- ── Settings Modal ─────────────────────────────────────── -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <h3>⚙️ 设置</h3>
+    <label>DeepSeek API Key</label>
+    <input type="password" id="apiKeyInput" placeholder="sk-…">
+    <div class="modal-btns">
+      <button class="btn-ghost"   onclick="closeModal('settingsModal')">取消</button>
+      <button class="btn-primary" onclick="saveSettings()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Auth Modal ─────────────────────────────────────────── -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <h3 id="authTitle">👤 登录 / 注册</h3>
+    <label>邮箱</label>
+    <input type="email"    id="authEmail"    placeholder="you@example.com">
+    <label>密码</label>
+    <input type="password" id="authPassword" placeholder="••••••••">
+    <div class="modal-msg" id="authMsg"></div>
+    <div class="modal-btns">
+      <button class="btn-ghost"   onclick="closeModal('authModal')">取消</button>
+      <button class="btn-primary" id="authSubmitBtn" onclick="authSubmit()">登录</button>
+      <button class="btn-ghost"   id="authToggleBtn"  onclick="toggleAuthMode()">注册</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Script ─────────────────────────────────────────────── -->
+<script>
+// ─── Constants ────────────────────────────────────────────────────────────
+const SUPABASE_URL  = 'https://wzlypptsytnqfsmwxpzf.supabase.co';
+const SUPABASE_ANON = 'sb_publishable_9rXFdTyDO2yai9uLBRJSNQ_6irPiu6E';
+const APP_NAME      = 'paperpush';
+const DEEPSEEK_BASE = 'https://api.deepseek.com/v1';
+const CATEGORIES    = ['cs.AI', 'cs.LG', 'cs.CL', 'cs.CV', 'cs.RO'];
+
+const CAT_LABEL = {
+  'cs.AI': 'cs.AI', 'cs.LG': 'cs.LG',
+  'cs.CL': 'cs.CL', 'cs.CV': 'cs.CV', 'cs.RO': 'cs.RO'
+};
+
+// ─── State ────────────────────────────────────────────────────────────────
+const S = {
+  currentTab: 'today',
+  currentDate: todayStr(),
+  papers: [],            // papers for current Today tab date
+  loadedDates: {},       // date → papers cache
+  favorites: [],
+  chatHistory: [],
+  apiKey: '',
+  supabaseToken: null,
+  user: null,
+  authMode: 'login',     // 'login' | 'signup'
+  filterCat: 'all',
+  syncTimer: null,
+};
+
+// ─── Helpers ──────────────────────────────────────────────────────────────
+function todayStr() {
+  return new Date().toLocaleDateString('sv');  // YYYY-MM-DD
+}
+
+function fmtDate(d) {
+  return new Date(d).toLocaleDateString('zh-CN', { month:'long', day:'numeric', weekday:'short' });
+}
+
+function slugCat(cat) { return cat.replace('.', '\\.'); }   // for CSS class
+
+function catClass(cat) {
+  const map = { 'cs.AI': 'cs\\.AI', 'cs.LG': 'cs\\.LG', 'cs.CL': 'cs\\.CL',
+                'cs.CV': 'cs\\.CV', 'cs.RO': 'cs\\.RO' };
+  return map[cat] || cat;
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function truncAuthors(authors) {
+  if (!Array.isArray(authors)) return '';
+  if (authors.length <= 3) return authors.join(', ');
+  return authors.slice(0,3).join(', ') + ' et al.';
+}
+
+// ─── Data loading ─────────────────────────────────────────────────────────
+async function fetchDate(dateStr) {
+  if (S.loadedDates[dateStr]) return S.loadedDates[dateStr];
+  const resp = await fetch(`data/${dateStr}.json`);
+  if (!resp.ok) return null;
+  const data = await resp.json();
+  S.loadedDates[dateStr] = data.papers || [];
+  return S.loadedDates[dateStr];
+}
+
+async function loadDate(dateStr, target = 'today') {
+  const listEl    = target === 'today' ? document.getElementById('paperList')   : document.getElementById('histPaperList');
+  const labelEl   = target === 'today' ? document.getElementById('dateLabel')   : document.getElementById('histLabel');
+  const pickerEl  = target === 'today' ? document.getElementById('todayDatePicker') : document.getElementById('histDatePicker');
+
+  pickerEl.value = dateStr;
+  listEl.innerHTML = '<div class="state-box"><div class="state-icon">⏳</div><p>加载中…</p></div>';
+
+  const papers = await fetchDate(dateStr);
+  if (target === 'today') S.papers = papers || [];
+
+  if (!papers || papers.length === 0) {
+    labelEl.textContent = '';
+    listEl.innerHTML = `<div class="state-box">
+      <div class="state-icon">📭</div>
+      <p>${dateStr} 暂无数据，可能 Actions 还未运行</p>
+    </div>`;
+    return;
+  }
+
+  labelEl.textContent = `${fmtDate(dateStr)} · ${papers.length} 篇`;
+  renderPapers(papers, listEl, target === 'today' ? S.filterCat : 'all');
+}
+
+// ─── Rendering ────────────────────────────────────────────────────────────
+function renderPapers(papers, container, filterCat = 'all') {
+  const filtered = filterCat === 'all' ? papers
+    : papers.filter(p => (p.primary_category || '') === filterCat ||
+                          (p.categories || []).includes(filterCat));
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="state-box"><div class="state-icon">🔍</div><p>该分类暂无论文</p></div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(p => paperCard(p)).join('');
+}
+
+function paperCard(p) {
+  const isFav  = S.favorites.some(f => f.id === p.id);
+  const cat    = p.primary_category || '?';
+  const pubDay = p.published ? p.published.slice(0,10) : '';
+
+  return `
+<div class="paper-card" id="card-${escHtml(p.id)}">
+  <div class="card-header">
+    <div class="card-meta">
+      <span class="cat-badge cat-${catClass(cat)}">${escHtml(cat)}</span>
+      ${pubDay ? `<span class="paper-date">${escHtml(pubDay)}</span>` : ''}
+    </div>
+    <button class="fav-btn ${isFav ? 'active' : ''}"
+            onclick="toggleFav('${escHtml(p.id)}')" title="${isFav ? '取消收藏':'收藏'}">★</button>
+  </div>
+  <h3 class="paper-title">
+    <a href="${escHtml(p.arxiv_url || '#')}" target="_blank" rel="noopener">${escHtml(p.title)}</a>
+  </h3>
+  <p class="paper-authors">${escHtml(truncAuthors(p.authors))}</p>
+
+  <p class="summary-zh">${escHtml(p.summary_zh || p.abstract || '暂无摘要')}</p>
+  <div class="summary-en" id="en-${escHtml(p.id)}">${escHtml(p.summary_en || '')}</div>
+  ${p.summary_en ? `<button class="toggle-lang-btn" onclick="toggleEn('${escHtml(p.id)}', this)">查看英文 ▾</button>` : ''}
+
+  ${p.highlights_zh && p.highlights_zh.length ? `
+  <ul class="highlights">
+    ${p.highlights_zh.map(h => `<li>${escHtml(h)}</li>`).join('')}
+  </ul>` : ''}
+
+  <div class="card-footer">
+    <a href="${escHtml(p.arxiv_url || '#')}" target="_blank" rel="noopener" class="link-btn">arXiv ↗</a>
+    <a href="${escHtml(p.pdf_url  || '#')}" target="_blank" rel="noopener" class="link-btn">PDF ↗</a>
+  </div>
+</div>`;
+}
+
+function toggleEn(id, btn) {
+  const el = document.getElementById('en-' + id);
+  if (!el) return;
+  el.classList.toggle('visible');
+  btn.textContent = el.classList.contains('visible') ? '隐藏英文 ▴' : '查看英文 ▾';
+}
+
+// ─── Filter chips ─────────────────────────────────────────────────────────
+function renderChips() {
+  const cont = document.getElementById('filterChips');
+  const chips = ['all', ...CATEGORIES].map(cat => {
+    const label = cat === 'all' ? '全部' : cat;
+    const isActive = S.filterCat === cat;
+    return `<span class="chip ${isActive ? 'active' : ''}" data-cat="${escHtml(cat)}"
+      onclick="setFilter('${escHtml(cat)}')">${escHtml(label)}</span>`;
+  });
+  cont.innerHTML = chips.join('');
+}
+
+function setFilter(cat) {
+  S.filterCat = cat;
+  renderChips();
+  renderPapers(S.papers, document.getElementById('paperList'), cat);
+}
+
+// ─── Favorites ────────────────────────────────────────────────────────────
+function toggleFav(id) {
+  const idx = S.favorites.findIndex(f => f.id === id);
+  if (idx >= 0) {
+    S.favorites.splice(idx, 1);
+  } else {
+    const paper = [...(S.papers || []), ...Object.values(S.loadedDates).flat()]
+      .find(p => p && p.id === id);
+    if (paper) S.favorites.unshift({ ...paper, saved_at: new Date().toISOString() });
+  }
+  saveFavs();
+  // Update star buttons
+  document.querySelectorAll(`.fav-btn`).forEach(btn => {
+    const cardId = btn.closest('.paper-card')?.id?.replace('card-','');
+    if (cardId === id) btn.classList.toggle('active', S.favorites.some(f=>f.id===id));
+  });
+  updateFavBadge();
+  if (S.currentTab === 'favorites') renderFavList();
+  scheduleSync();
+}
+
+function saveFavs() {
+  localStorage.setItem('pp_favorites', JSON.stringify(S.favorites));
+}
+
+function updateFavBadge() {
+  const badge = document.getElementById('favBadge');
+  badge.textContent = S.favorites.length > 0 ? S.favorites.length : '';
+}
+
+function renderFavList() {
+  const cont = document.getElementById('favList');
+  if (S.favorites.length === 0) {
+    cont.innerHTML = '<div class="fav-empty">📌 暂无收藏<br><small>点击论文卡片的 ★ 即可收藏</small></div>';
+    return;
+  }
+  cont.innerHTML = S.favorites.map(p => paperCard(p)).join('');
+}
+
+// ─── Chat ─────────────────────────────────────────────────────────────────
+function buildSystemPrompt() {
+  const papers = S.papers || [];
+  if (!papers.length) return '你是一位AI/ML论文研究助手，请帮用户解答问题。';
+  const list = papers.map((p,i) =>
+    `${i+1}. [${p.primary_category}] ${p.title}\n   ${p.summary_zh || p.abstract?.slice(0,150) || ''}`
+  ).join('\n\n');
+  return `你是一位AI/ML论文研究助手。今天（${S.currentDate}）精选了 ${papers.length} 篇论文：\n\n${list}\n\n请帮助用户理解和分析这些论文，回答时可引用具体论文标题。`;
+}
+
+function addMsg(role, text) {
+  S.chatHistory.push({ role, content: text });
+  renderChatMsg(role, text);
+  localStorage.setItem('pp_chat', JSON.stringify(S.chatHistory));
+}
+
+function renderChatMsg(role, text) {
+  const cont = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `msg ${role === 'user' ? 'user' : role === 'system' ? 'system' : 'bot'}`;
+  div.textContent = text;
+  cont.appendChild(div);
+  cont.scrollTop = cont.scrollHeight;
+}
+
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  if (!S.apiKey) {
+    alert('请先在 ⚙️ 设置 中填写 DeepSeek API Key');
+    return;
+  }
+
+  input.value = '';
+  autoResize(input);
+  document.getElementById('sendBtn').disabled = true;
+
+  addMsg('user', text);
+
+  const messages = [
+    { role: 'system', content: buildSystemPrompt() },
+    ...S.chatHistory.filter(m => m.role !== 'system').slice(-20),
+  ];
+
+  try {
+    const resp = await fetch(`${DEEPSEEK_BASE}/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${S.apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'deepseek-chat',
+        messages,
+        temperature: 0.7,
+        max_tokens: 1000,
+      }),
+    });
+
+    if (!resp.ok) throw new Error(`API error ${resp.status}`);
+    const data = await resp.json();
+    const reply = data.choices?.[0]?.message?.content || '（无响应）';
+    addMsg('assistant', reply);
+    scheduleSync();
+  } catch (err) {
+    renderChatMsg('system', `⚠️ 请求失败: ${err.message}`);
+  }
+
+  document.getElementById('sendBtn').disabled = false;
+}
+
+function chatKeydown(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+// ─── Tab switching ─────────────────────────────────────────────────────────
+function switchTab(tab) {
+  S.currentTab = tab;
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`tab-${tab}`).classList.add('active');
+  document.getElementById(`nav-${tab}`).classList.add('active');
+
+  if (tab === 'favorites') renderFavList();
+  if (tab === 'chat') {
+    const cont = document.getElementById('chatMessages');
+    cont.scrollTop = cont.scrollHeight;
+  }
+}
+
+// ─── Date change ──────────────────────────────────────────────────────────
+function onDateChange(val) {
+  S.currentDate = val;
+  loadDate(val, 'today');
+}
+
+// ─── Settings ─────────────────────────────────────────────────────────────
+function openSettings() {
+  document.getElementById('apiKeyInput').value = S.apiKey;
+  openModal('settingsModal');
+}
+
+function saveSettings() {
+  S.apiKey = document.getElementById('apiKeyInput').value.trim();
+  localStorage.setItem('pp_apikey', S.apiKey);
+  closeModal('settingsModal');
+}
+
+// ─── Auth (Supabase REST) ─────────────────────────────────────────────────
+function openAuth() {
+  document.getElementById('authEmail').value = '';
+  document.getElementById('authPassword').value = '';
+  document.getElementById('authMsg').textContent = '';
+  openModal('authModal');
+}
+
+function toggleAuthMode() {
+  S.authMode = S.authMode === 'login' ? 'signup' : 'login';
+  const isLogin = S.authMode === 'login';
+  document.getElementById('authTitle').textContent       = isLogin ? '👤 登录' : '👤 注册';
+  document.getElementById('authSubmitBtn').textContent   = isLogin ? '登录' : '注册';
+  document.getElementById('authToggleBtn').textContent   = isLogin ? '注册' : '已有账号，去登录';
+}
+
+async function authSubmit() {
+  const email    = document.getElementById('authEmail').value.trim();
+  const password = document.getElementById('authPassword').value;
+  const msgEl    = document.getElementById('authMsg');
+
+  if (!email || !password) { msgEl.textContent = '请填写邮箱和密码'; return; }
+
+  msgEl.textContent = '处理中…';
+  const endpoint = S.authMode === 'login' ? 'token?grant_type=password' : 'signup';
+
+  try {
+    const resp = await fetch(`${SUPABASE_URL}/auth/v1/${endpoint}`, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_ANON, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await resp.json();
+
+    if (!resp.ok) throw new Error(data.error_description || data.msg || '认证失败');
+
+    S.supabaseToken = data.access_token;
+    S.user = data.user;
+    localStorage.setItem('pp_token', S.supabaseToken);
+    localStorage.setItem('pp_user',  JSON.stringify(S.user));
+
+    document.getElementById('authBtn').textContent = '✓';
+    msgEl.textContent = '登录成功！';
+    setTimeout(() => closeModal('authModal'), 800);
+
+    await syncFromCloud();
+  } catch (err) {
+    msgEl.textContent = `❌ ${err.message}`;
+  }
+}
+
+// ─── Supabase sync ────────────────────────────────────────────────────────
+async function syncFromCloud() {
+  if (!S.supabaseToken || !S.user) return;
+  try {
+    const resp = await fetch(
+      `${SUPABASE_URL}/rest/v1/sync_data?user_id=eq.${encodeURIComponent(S.user.id)}&app_name=eq.${APP_NAME}`,
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${S.supabaseToken}` } }
+    );
+    const rows = await resp.json();
+    if (rows.length > 0 && rows[0].data) {
+      const cloud = rows[0].data;
+      // Merge favorites (union by id)
+      const local = S.favorites;
+      const merged = [...local];
+      for (const p of (cloud.favorites || [])) {
+        if (!merged.find(x => x.id === p.id)) merged.push(p);
+      }
+      S.favorites = merged;
+      saveFavs();
+      updateFavBadge();
+
+      // Cloud chat history wins if longer
+      if ((cloud.chat_history || []).length > S.chatHistory.length) {
+        S.chatHistory = cloud.chat_history;
+        localStorage.setItem('pp_chat', JSON.stringify(S.chatHistory));
+        reloadChatUI();
+      }
+    }
+  } catch (_) { /* offline, ignore */ }
+}
+
+async function syncToCloud() {
+  if (!S.supabaseToken || !S.user) return;
+  const payload = {
+    user_id:  S.user.id,
+    app_name: APP_NAME,
+    data:     { favorites: S.favorites, chat_history: S.chatHistory.slice(-100) },
+    updated_at: new Date().toISOString(),
+  };
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/sync_data`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON,
+        'Authorization': `Bearer ${S.supabaseToken}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates',
+      },
+      body: JSON.stringify(payload),
+    });
+  } catch (_) { /* offline */ }
+}
+
+function scheduleSync() {
+  if (S.syncTimer) clearTimeout(S.syncTimer);
+  S.syncTimer = setTimeout(syncToCloud, 3000);
+}
+
+function reloadChatUI() {
+  const cont = document.getElementById('chatMessages');
+  cont.innerHTML = '';
+  S.chatHistory.forEach(m => renderChatMsg(m.role, m.content));
+}
+
+// ─── Modal helpers ────────────────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+// Close on overlay click
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+});
+
+// ─── Init ─────────────────────────────────────────────────────────────────
+async function init() {
+  // Restore settings
+  S.apiKey = localStorage.getItem('pp_apikey') || '';
+
+  // Restore auth
+  const savedToken = localStorage.getItem('pp_token');
+  const savedUser  = localStorage.getItem('pp_user');
+  if (savedToken && savedUser) {
+    S.supabaseToken = savedToken;
+    S.user = JSON.parse(savedUser);
+    document.getElementById('authBtn').textContent = '✓';
+  }
+
+  // Restore favorites & chat
+  S.favorites    = JSON.parse(localStorage.getItem('pp_favorites') || '[]');
+  S.chatHistory  = JSON.parse(localStorage.getItem('pp_chat')      || '[]');
+  updateFavBadge();
+  reloadChatUI();
+
+  // Set up date pickers
+  const today = todayStr();
+  S.currentDate = today;
+  document.getElementById('todayDatePicker').value = today;
+  document.getElementById('todayDatePicker').max   = today;
+  document.getElementById('histDatePicker').max    = today;
+
+  // Render filter chips
+  renderChips();
+
+  // Load today's papers (try today, fall back to yesterday on failure)
+  await loadDate(today, 'today');
+  if (S.papers.length === 0) {
+    const yest = new Date(Date.now() - 86400000).toLocaleDateString('sv');
+    await loadDate(yest, 'today');
+  }
+
+  // Sync from cloud
+  if (S.supabaseToken) await syncFromCloud();
+
+  // PWA service-worker (optional, falls back gracefully)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+}
+
+init();
+</script>
+</body>
+</html>
