@@ -9,6 +9,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon.svg">
 <meta name="theme-color" content="#4f46e5">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
   :root {
     --primary:   #4f46e5;
@@ -400,6 +401,7 @@
 const SUPABASE_URL  = 'https://wzlypptsytnqfsmwxpzf.supabase.co';
 const SUPABASE_ANON = 'sb_publishable_9rXFdTyDO2yai9uLBRJSNQ_6irPiu6E';
 const APP_NAME      = 'paperpush';
+const sb            = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 const DEEPSEEK_BASE = 'https://api.deepseek.com/v1';
 const CATEGORIES    = ['cs.AI', 'cs.LG', 'cs.CL', 'cs.CV', 'cs.RO'];
 
@@ -488,8 +490,7 @@ async function loadDate(dateStr, target = 'today') {
 // ─── Rendering ────────────────────────────────────────────────────────────
 function renderPapers(papers, container, filterCat = 'all') {
   const filtered = filterCat === 'all' ? papers
-    : papers.filter(p => (p.primary_category || '') === filterCat ||
-                          (p.categories || []).includes(filterCat));
+    : papers.filter(p => (p.primary_category || '') === filterCat);
 
   if (filtered.length === 0) {
     container.innerHTML = '<div class="state-box"><div class="state-icon">🔍</div><p>该分类暂无论文</p></div>';
@@ -738,47 +739,49 @@ async function authSubmit() {
   if (!email || !password) { msgEl.textContent = '请填写邮箱和密码'; return; }
 
   msgEl.textContent = '处理中…';
-  const endpoint = S.authMode === 'login' ? 'token?grant_type=password' : 'signup';
+  document.getElementById('authSubmitBtn').disabled = true;
 
-  try {
-    const resp = await fetch(`${SUPABASE_URL}/auth/v1/${endpoint}`, {
-      method: 'POST',
-      headers: { 'apikey': SUPABASE_ANON, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await resp.json();
+  const { data, error } = await (S.authMode === 'login'
+    ? sb.auth.signInWithPassword({ email, password })
+    : sb.auth.signUp({ email, password }));
 
-    if (!resp.ok) throw new Error(data.error_description || data.msg || '认证失败');
+  document.getElementById('authSubmitBtn').disabled = false;
 
-    S.supabaseToken = data.access_token;
-    S.user = data.user;
-    localStorage.setItem('pp_token', S.supabaseToken);
-    localStorage.setItem('pp_user',  JSON.stringify(S.user));
-
-    document.getElementById('authBtn').textContent = '✓';
-    msgEl.textContent = '登录成功！';
-    setTimeout(() => closeModal('authModal'), 800);
-
-    await syncFromCloud();
-  } catch (err) {
-    msgEl.textContent = `❌ ${err.message}`;
+  if (error) {
+    msgEl.textContent = `❌ ${error.message}`;
+    return;
   }
+
+  if (S.authMode === 'signup' && !data.session) {
+    msgEl.textContent = '✅ 注册成功！请查收验证邮件后登录';
+    return;
+  }
+
+  S.supabaseToken = data.session.access_token;
+  S.user = data.user;
+  localStorage.setItem('pp_token', S.supabaseToken);
+  localStorage.setItem('pp_user',  JSON.stringify(S.user));
+
+  document.getElementById('authBtn').textContent = '✓';
+  msgEl.textContent = '登录成功！';
+  setTimeout(() => closeModal('authModal'), 800);
+  await syncFromCloud();
 }
 
 // ─── Supabase sync ────────────────────────────────────────────────────────
 async function syncFromCloud() {
-  if (!S.supabaseToken || !S.user) return;
+  if (!S.user) return;
   try {
-    const resp = await fetch(
-      `${SUPABASE_URL}/rest/v1/sync_data?user_id=eq.${encodeURIComponent(S.user.id)}&app_name=eq.${APP_NAME}`,
-      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${S.supabaseToken}` } }
-    );
-    const rows = await resp.json();
-    if (rows.length > 0 && rows[0].data) {
+    const { data: rows } = await sb.from('sync_data')
+      .select('data')
+      .eq('user_id', S.user.id)
+      .eq('app_name', APP_NAME)
+      .limit(1);
+
+    if (rows && rows.length > 0 && rows[0].data) {
       const cloud = rows[0].data;
       // Merge favorites (union by id)
-      const local = S.favorites;
-      const merged = [...local];
+      const merged = [...S.favorites];
       for (const p of (cloud.favorites || [])) {
         if (!merged.find(x => x.id === p.id)) merged.push(p);
       }
@@ -797,24 +800,14 @@ async function syncFromCloud() {
 }
 
 async function syncToCloud() {
-  if (!S.supabaseToken || !S.user) return;
-  const payload = {
-    user_id:  S.user.id,
-    app_name: APP_NAME,
-    data:     { favorites: S.favorites, chat_history: S.chatHistory.slice(-100) },
-    updated_at: new Date().toISOString(),
-  };
+  if (!S.user) return;
   try {
-    await fetch(`${SUPABASE_URL}/rest/v1/sync_data`, {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_ANON,
-        'Authorization': `Bearer ${S.supabaseToken}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'resolution=merge-duplicates',
-      },
-      body: JSON.stringify(payload),
-    });
+    await sb.from('sync_data').upsert({
+      user_id:    S.user.id,
+      app_name:   APP_NAME,
+      data:       { favorites: S.favorites, chat_history: S.chatHistory.slice(-100) },
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,app_name' });
   } catch (_) { /* offline */ }
 }
 
@@ -845,12 +838,11 @@ async function init() {
   // Restore settings
   S.apiKey = localStorage.getItem('pp_apikey') || '';
 
-  // Restore auth
-  const savedToken = localStorage.getItem('pp_token');
-  const savedUser  = localStorage.getItem('pp_user');
-  if (savedToken && savedUser) {
-    S.supabaseToken = savedToken;
-    S.user = JSON.parse(savedUser);
+  // Restore auth via SDK (handles token refresh automatically)
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) {
+    S.supabaseToken = session.access_token;
+    S.user = session.user;
     document.getElementById('authBtn').textContent = '✓';
   }
 
@@ -878,7 +870,7 @@ async function init() {
   }
 
   // Sync from cloud
-  if (S.supabaseToken) await syncFromCloud();
+  if (S.user) await syncFromCloud();
 
   // PWA service-worker (optional, falls back gracefully)
   if ('serviceWorker' in navigator) {
