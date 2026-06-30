@@ -1,0 +1,330 @@
+{
+  "date": "2026-06-30",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2606.30645",
+      "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+      "authors": [
+        "Yen-Jen Wang",
+        "Jiaman Li",
+        "Sirui Chen",
+        "Takara E. Truong",
+        "Pei Xu",
+        "Pieter Abbeel",
+        "Rocky Duan",
+        "Koushil Sreenath",
+        "Angjoo Kanazawa",
+        "Carmelo Sferrazza",
+        "Guanya Shi",
+        "Karen Liu"
+      ],
+      "abstract": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
+      "published": "2026-06-29T17:59:55Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.GR",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30645",
+      "pdf_url": "https://arxiv.org/pdf/2606.30645",
+      "summary_zh": "基于感知的人形机器人全身操作需要同步的自我中心图像、语言指令和运动轨迹数据，但现有数据源无法大规模提供这种完整组合。本文提出通过3D高斯泼溅重建度量级室内环境，合成导航与物体交互轨迹并渲染配对自我中心观察，生成48,000条无需人工干预的视觉-语言-运动学（VLK）轨迹来训练策略。在物理Unitree G1机器人上的导航与单物体运输实验表明，合成交互数据能有效实现从仿真到真实的人形机器人感知操作迁移。",
+      "summary_en": "Perception-based humanoid loco-manipulation requires synchronized egocentric images, language commands, and kinematic trajectories, but no existing data source provides this complete tuple at scale. We propose a pipeline that uses 3D Gaussian Splatting to reconstruct metric-scale indoor scenes, synthesizes navigation and object-interaction trajectories with privileged information, and renders paired egocentric observations, producing 48,000 trajectories without human intervention. Experiments on the physical Unitree G1 robot demonstrate that synthetic interactions in reconstructed scenes effectively enable sim-to-real perception-based humanoid loco-manipulation.",
+      "highlights_zh": [
+        "合成VLK数据驱动人形机器人操作",
+        "48,000条无人工干预轨迹训练",
+        "成功实现仿真到真实物理机器人迁移"
+      ]
+    },
+    {
+      "id": "2606.30642",
+      "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+      "authors": [
+        "Shun Lei",
+        "Huaicheng Zhang",
+        "Dapeng Wu",
+        "Yaoxun Xu",
+        "Lishi Zuo",
+        "Wei Tan",
+        "Hangting Chen",
+        "Guangzheng Li",
+        "Jianwei Yu",
+        "Zhiyong Wu",
+        "Dong Yu"
+      ],
+      "abstract": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a structural trade-off: mixed-token modeling preserves vocal-instrument coordination but obscures track-specific details, whereas dual-track prediction improves acoustics but requires longer sequences and weakens global planning. We present LeVo 2, a hybrid LLM-Diffusion framework for controllable full-length song generation. LeVo 2 formulates this trade-off as hierarchical modeling: LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel for track-specific refinement, while a diffusion-based Music Codec reconstructs full-length waveforms. A central contribution of this extended version is an aesthetics-guided training schedule for alignment. During pre-training, an automated music aesthetic evaluation framework assigns musicality-tier conditions to large-scale data, providing musicality priors before preference alignment. Progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO to separately improve generation quality, controllability, and musicality. Modular extension then trains the Track-Specific LM for acoustic refinement while preserving the aligned semantic planner. This schedule separates musicality learning, controllability alignment, and acoustic refinement, mitigating optimization conflict and the limitations of static offline preference pairs. Expert listening tests and objective evaluations show that LeVo 2 outperforms open-source baselines across six subjective dimensions, and approaches leading commercial systems on several listening metrics. Ablations validate the effects of the training strategy, aesthetics guidance, scaling, and hierarchical architecture.",
+      "published": "2026-06-29T17:59:20Z",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30642",
+      "pdf_url": "https://arxiv.org/pdf/2606.30642",
+      "summary_zh": "现有基于语言模型的歌曲生成系统在混合token建模与双轨预测之间存在结构权衡，难以同时保证全局连贯性和局部声学细节。LeVo 2提出混合LLM-Diffusion框架，通过分层建模先预测混合token进行语义规划，再并行预测人声和伴奏token进行声学细化，并采用美学引导的训练流程。实验表明LeVo 2在六个主观维度上超越开源基线，在多个听感指标上接近商业系统，验证了分层架构和渐进式后训练策略的有效性。",
+      "summary_en": "Existing language model-based song generation systems face a structural trade-off between mixed-token modeling and dual-track prediction, struggling to balance global coherence and local acoustic details. LeVo 2 proposes a hybrid LLM-Diffusion framework with hierarchical modeling that first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel for acoustic refinement, along with an aesthetics-guided training schedule. Experiments show LeVo 2 outperforms open-source baselines across six subjective dimensions and approaches commercial systems on several listening metrics, validating the hierarchical architecture and progressive post-training strategy.",
+      "highlights_zh": [
+        "混合LLM-Diffusion分层建模框架",
+        "六维度主观评测超越开源基线",
+        "渐进式后训练缓解优化冲突"
+      ]
+    },
+    {
+      "id": "2606.30634",
+      "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining",
+      "authors": [
+        "Philip Zmushko",
+        "Egor Petrov",
+        "Nursultan Abdullaev",
+        "Mikhail Khrushchev",
+        "Samuel Horváth"
+      ],
+      "abstract": "Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of pipeline depth. However, its adoption remains limited due to the common belief that optimizing under staleness is fundamentally unstable. In this work, we challenge this assumption, demonstrating that degradation under one-step delay depends strongly on optimizer choice rather than being an intrinsic limitation. We provide the first comprehensive empirical analysis showing that while AdamW, the predominant optimizer at the time when PipeDream-2BW was introduced, indeed suffers from severe degradation, recent methods like Muon exhibit strong robustness under a one-step delay. We introduce an optimizer-agnostic Error Feedback-inspired correction to further mitigate delay effects. We provide supporting theoretical analysis demonstrating convergence for Muon with and without this correction. Extensive evaluation on models up to 10B parameters confirms that our strategies bridge the performance gap with synchronous training, highlighting the practical potential of asynchronous pipeline parallelism at scale.",
+      "published": "2026-06-29T17:57:50Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30634",
+      "pdf_url": "https://arxiv.org/pdf/2606.30634",
+      "summary_zh": "大规模LLM预训练中同步流水线并行存在气泡导致GPU空闲，异步流水线并行虽能消除气泡但梯度陈旧性被认为会导致训练不稳定。本文挑战了这一假设，证明一步延迟下的性能下降主要取决于优化器选择而非固有缺陷，并引入基于误差反馈的修正方法。实验表明，结合Muon优化器与修正方法，异步流水线并行在10B参数模型上达到了与同步训练相当的性能。",
+      "summary_en": "Synchronous pipeline parallelism in large-scale LLM pretraining suffers from idle GPU bubbles, while asynchronous schedules eliminate bubbles but introduce gradient staleness. This work challenges the belief that one-step gradient delay is inherently unstable, showing degradation depends on optimizer choice, and proposes an error-feedback correction to mitigate delay effects. Experiments on models up to 10B parameters demonstrate that combining Muon optimizer with the correction bridges the performance gap with synchronous training.",
+      "highlights_zh": [
+        "揭示一步延迟非固有障碍，依赖优化器",
+        "Muon+修正达10B模型同步训练性能",
+        "为大规模异步流水线并行提供实用方案"
+      ]
+    },
+    {
+      "id": "2606.30627",
+      "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
+      "authors": [
+        "Subramanyam Sahoo",
+        "Aman Chadha",
+        "Vinija Jain",
+        "Divya Chaudhary"
+      ],
+      "abstract": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to exploit imperfections in a learned reward model. We challenge this intuition empirically and mechanistically. We train a Qwen3-14B policy under Direct Preference Optimisation (DPO) with three levels of conservatism ($β\\in \\{β_{\\mathrm{lo}}, β_{\\mathrm{mid}}, β_{\\mathrm{hi}}\\}$ derived from empirical log-ratio percentiles), then adapt each checkpoint online against a learned reward ensemble (3\\,$\\times$\\,Qwen3-1.7B) while measuring true performance on GSM8K exact-answer accuracy. We find that \\emph{higher offline conservatism monotonically increases reward-hacking damage}, measured by the Goodhart gap and its area under the curve (AUGC), with Spearman $ρ= 1.0$ across all three conditions. Mechanistic analysis reveals a three-link causal chain: (i) high-$β$ DPO compresses policy entropy, (ii) Low-entropy policies generate responses with reduced diversity, concentrating in a narrow region of the reward model's training distribution (lower pairwise cosine distance), and (iii) despite this proximity, ensemble disagreement (epistemic uncertainty) increases with $β$ and is exploited faster during online optimisation. We further fit a power-law curve to the $(β, \\augc)$ data and identify a practical optimal conservatism level $β^{\\star}$ that balances alignment fidelity against hacking vulnerability. Our results suggest that the field needs \\emph{calibrated}, not \\emph{maximal}, conservatism.",
+      "published": "2026-06-29T17:56:03Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30627",
+      "pdf_url": "https://arxiv.org/pdf/2606.30627",
+      "summary_zh": "保守离线训练被广泛认为是安全在线适应的基础，但研究发现更高的保守性反而会加剧奖励黑客攻击。本文通过训练Qwen3-14B策略在三种保守水平下进行DPO，然后在线适应奖励集成，并测量GSM8K准确率。结果表明高保守性单调增加奖励黑客损害，并揭示了熵压缩、响应多样性降低和不确定性增加的因果链，提出需要校准而非最大化的保守性。",
+      "summary_en": "Conservative offline training is widely advocated as a safe foundation for online adaptation, but this paper challenges that intuition. The authors train a Qwen3-14B policy under DPO with three levels of conservatism and adapt it online against a reward ensemble, measuring GSM8K accuracy. They find that higher conservatism monotonically increases reward hacking, revealing a causal chain of entropy compression, reduced diversity, and increased epistemic uncertainty, advocating for calibrated rather than maximal conservatism.",
+      "highlights_zh": [
+        "挑战保守训练安全直觉",
+        "高保守性单调增加奖励黑客",
+        "需校准而非最大化保守性"
+      ]
+    },
+    {
+      "id": "2606.30616",
+      "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent",
+      "authors": [
+        "Lei Bai",
+        "Zongsheng Cao",
+        "Yang Chen",
+        "Zhiyao Cui",
+        "Shangheng Du",
+        "Yue Fan",
+        "Shiyang Feng",
+        "Zijie Guo",
+        "Haonan He",
+        "Liang He",
+        "Xiaohan He",
+        "Shuyue Hu",
+        "Yusong Hu",
+        "Songtao Huang",
+        "Yichen Jiang",
+        "Hao Li",
+        "Xin Li",
+        "Dahua Lin",
+        "Weihao Lin",
+        "Fenghua Ling",
+        "Dongrui Liu",
+        "Zhuo Liu",
+        "Runmin Ma",
+        "Chunjiang Mu",
+        "Haoyang Peng",
+        "Tianshuo Peng",
+        "Jinxin Shi",
+        "Luohe Shi",
+        "Boyuan Sun",
+        "Zelin Tan",
+        "Shengji Tang",
+        "Qianyi Wang",
+        "Yiming Wu",
+        "Yi Xie",
+        "Xiangchao Yan",
+        "Jingqi Ye",
+        "Peng Ye",
+        "Fangchen Yu",
+        "Jiakang Yuan",
+        "Bihao Zhan",
+        "Bo Zhang",
+        "Chen Zhang",
+        "Shufei Zhang",
+        "Shuaiyu Zhang",
+        "Wenlong Zhang",
+        "Yiqun Zhang",
+        "Junpeng Zhao",
+        "Zhijie Zhong",
+        "Bowen Zhou",
+        "Yuhao Zhou"
+      ],
+      "abstract": "We introduce Agents-A1, a 35B Mixture-of-Experts Agentic Model that reaches trillion-parameter-level performance by scaling the agent horizon. We investigate agent-horizon scaling from two perspectives: scaling long-horizon trajectories and scaling heterogeneous agent abilities. To support this goal, we build a long-horizon knowledge-action infrastructure that connects external knowledge, actions, observations, and verifier outcomes, producing agentic trajectories with an average length of 45K tokens. Based on this, we train Agents-A1 with a three-stage recipe. First, we perform full-domain supervised fine-tuning to align the base model with broad agentic behaviors. Second, we train domain-level teacher models to capture specialized expertise in each domain. Third, we propose a multi-teacher domain-routed on-policy distillation with salient vocabulary alignment to improve knowledge transfer efficiency across different domains, unifying six heterogeneous domains into one deployable student model. Agents-A1 achieves strong and broad performance for long-horizon agent benchmarks. Compared with 1T-parameter model such as Kimi-K2.6 and DeepSeek-V4-pro, Agents-A1 achieves leading results on SEAL-0 (56.4), IFBench (80.6), HiPhO (46.4), FrontierScience-Olympiad (79.0), and MolBench-Bind (56.8), and remains highly competitive on SciCode (44.3), HLE (47.6) and BrowseComp (75.5). We hope this work provides the community with a practical path for scaling the horizon using a 35B agent that can reach or match the performance of 1T models on long-horizon tasks.",
+      "published": "2026-06-29T17:50:54Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30616",
+      "pdf_url": "https://arxiv.org/pdf/2606.30616",
+      "summary_zh": "当前大模型性能提升主要依赖扩大参数规模，但计算成本高昂。本文提出通过扩展智能体任务轨迹长度和异构能力来提升性能，并构建了长程知识-动作基础设施。基于35B参数的混合专家模型Agents-A1在多个长程任务基准上达到或超越万亿参数模型性能，为高效扩展提供了新路径。",
+      "summary_en": "Scaling model parameters incurs high computational costs. This work proposes scaling agent horizon via long trajectories and heterogeneous abilities, building a knowledge-action infrastructure. The 35B MoE model Agents-A1 matches or surpasses trillion-parameter models on long-horizon benchmarks, offering a practical scaling alternative.",
+      "highlights_zh": [
+        "通过扩展智能体轨迹而非参数规模",
+        "35B模型在SEAL-0达56.4，超越万亿模型",
+        "为高效长程任务部署提供可行路径"
+      ]
+    },
+    {
+      "id": "2606.30578",
+      "title": "Uncertainty-Aware Generation and Decision-Making Under Ambiguity",
+      "authors": [
+        "Nico Daheim",
+        "Iryna Gurevych"
+      ],
+      "abstract": "With rapidly improving capabilities, Large Language Models (LLMs) are increasingly used in many complex real-world tasks. Beyond requiring in-depth knowledge and reasoning skills, many of these tasks exhibit a high degree of subjectivity and require that the outputs of the model can be trusted. While a lot of progress has been made to train better models, decision-making algorithms have received less attention. In this work, we present and evaluate various uncertainty-aware decision-making algorithms based on Bayesian decision theory and risk-averse decision making on the tasks of tutoring and automatic peer reviewing. Concretely, we take uncertainty over tutoring strategies and review scores into account when generating a tutor response or review and use conformal prediction to provide guarantees over strategy and score. We find empirically that these algorithms can improve the utility of the generations but need to be carefully implemented when ambiguity is high. For example, risk-averse rules can degrade performance by optimizing for generic outputs, while Bayesian methods tend to perform better. Our work uses techniques from decision theory to improve LLM-based decision-making and outlines open challenges for the community.",
+      "published": "2026-06-29T17:20:43Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30578",
+      "pdf_url": "https://arxiv.org/pdf/2606.30578",
+      "summary_zh": "大型语言模型在复杂任务中面临主观性和可信度挑战，而决策算法研究不足。本文基于贝叶斯决策理论和风险规避方法，提出不确定性感知的决策算法，并在辅导和自动评审任务中结合保形预测提供策略与分数的保证。实验表明，贝叶斯方法能提升生成效用，但风险规避规则在高模糊性下可能因优化通用输出而降低性能。",
+      "summary_en": "Large language models face challenges of subjectivity and trustworthiness in complex tasks, yet decision-making algorithms remain underexplored. This work introduces uncertainty-aware decision algorithms based on Bayesian decision theory and risk-averse methods, using conformal prediction to guarantee strategies and scores in tutoring and peer review tasks. Empirical results show Bayesian methods improve generation utility, while risk-averse rules may degrade performance under high ambiguity by optimizing generic outputs.",
+      "highlights_zh": [
+        "提出不确定性感知决策算法",
+        "贝叶斯方法提升生成效用",
+        "高模糊性下风险规避可能失效"
+      ]
+    },
+    {
+      "id": "2606.30638",
+      "title": "Open-Vocabulary and Referring Segmentation for 3D Gaussians Using 2D Detectors",
+      "authors": [
+        "Jameel Hassan",
+        "Yasiru Ranasinghe",
+        "Vishal Patel"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) has emerged at the forefront of 3D scene reconstruction. Extending 3DGS with language-driven, open-vocabulary understanding has gained significant attention for real-world applications such as embodied AI. Recent methods achieve this by learning an instance feature attribute and assigning semantics by distilling high-dimensional Contrastive Language-Image Pretraining (CLIP) features directly into the scene representation. However, the instance grouping mechanisms of these methods either require a predefined number of instances or suffer from noise in their bottom-up grouping strategies. Furthermore, the reliance on CLIP restricts semantic understanding to simple noun phrases, preventing complex spatial reasoning and referential expression grounding. We present GaussDet, a method that circumvents the need for dense CLIP features by leveraging discrete, open-vocabulary 2D object detectors with referring expression capabilities. We learn instance features for individual Gaussians to decompose the scene into 3D instance groups. By rendering these groups and aggregating semantic votes from multi-view 2D detections, we generate a robust View-Aggregated Semantic Label Distribution (VASD) for each 3D instance. This view-aggregation strategy acts as a strong regularizer, attenuating spurious labels caused by low-quality instance grouping. Our approach enables a straightforward, zero-shot extension from simple language queries to complex referential grounding. Extensive evaluations across two key tasks -- open-vocabulary segmentation (LeRF-OVS, ScanNet) and referring expression grounding (Ref-LeRF) -- demonstrate that GaussDet achieves consistent improvements over existing methods. Most notably, we achieve a substantial 16.7% mIoU improvement in referential grounding within a strict zero-shot setting.",
+      "published": "2026-06-29T17:58:41Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30638",
+      "pdf_url": "https://arxiv.org/pdf/2606.30638",
+      "summary_zh": "现有基于3D高斯泼溅的开放词汇语义理解方法依赖CLIP特征蒸馏，存在实例分组需预设数量或噪声大、且无法处理复杂空间推理与指代表达的问题。本文提出GaussDet，利用离散的开放词汇2D检测器学习实例特征，通过多视图聚合语义投票生成鲁棒的语义标签分布。在开放词汇分割和指代表达定位任务上，GaussDet实现了一致性提升，尤其在零样本指代定位中mIoU提高了16.7%。",
+      "summary_en": "Existing methods for open-vocabulary 3D Gaussian Splatting rely on CLIP feature distillation, suffering from predefined instance numbers or noisy grouping, and cannot handle complex spatial reasoning or referring expressions. GaussDet leverages discrete open-vocabulary 2D detectors with referring capabilities to learn instance features, and generates robust semantic labels via multi-view aggregated voting. It achieves consistent improvements on open-vocabulary segmentation and referring expression grounding, notably a 16.7% mIoU gain in zero-shot referential grounding.",
+      "highlights_zh": [
+        "利用2D检测器替代CLIP蒸馏",
+        "零样本指代定位mIoU提升16.7%",
+        "支持复杂指代表达与空间推理"
+      ]
+    },
+    {
+      "id": "2606.30611",
+      "title": "Reweighting Framewise Attention in Video Transformers for Facial Expression Understanding",
+      "authors": [
+        "Seongro Yoon",
+        "Donghyeon Cho",
+        "Jinsun Park",
+        "François Brémond"
+      ],
+      "abstract": "Understanding facial expressions in videos requires modeling subtle and localized facial dynamics under unconstrained conditions. Although recent Vision Transformer~(ViT)-based video models have shown strong performance through large-scale self-supervised pretraining, their attention mechanisms often emphasize dominant global motions and coarse temporal dynamics, limiting sensitivity to fine-grained facial variations. To address this limitation, we propose MiRA (Marginal-induced Attention Redistribution), a plug-in frame-marginal attention redistribution framework for ViT backbones that enhances spatio-temporal selectivity toward subtle facial dynamics without introducing additional trainable parameters. MiRA derives frame-level confidence and intra-frame concentration statistics from self-attention maps to estimate frame-wise marginal importance and redistribute attention toward spatiotemporally localized facial cues. We first introduce a principled \\textit{exact mode} based on post-softmax attention redistribution. To further improve efficiency, we propose \\textit{flashLite mode}, a lightweight pre-softmax approximation that integrates frame-marginal redistribution into FlashAttention kernels while preserving the effectiveness of the exact formulation. Experimental results on challenging Facial Expression Recognition~(FER) benchmarks demonstrate consistent improvements over strong ViT baselines.",
+      "published": "2026-06-29T17:46:10Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30611",
+      "pdf_url": "https://arxiv.org/pdf/2606.30611",
+      "summary_zh": "视频面部表情理解中，现有ViT模型注意力机制偏向全局运动，难以捕捉细微面部动态。为此提出MiRA框架，通过从自注意力图导出帧级置信度和帧内集中度统计量，无需额外参数即可重分配注意力到局部时空面部线索。在多个挑战性FER基准上，MiRA显著提升了强ViT基线的性能。",
+      "summary_en": "Existing ViT-based video models for facial expression understanding tend to focus on dominant global motions, limiting sensitivity to subtle facial dynamics. We propose MiRA, a plug-in framework that redistributes attention toward spatiotemporally localized facial cues by deriving frame-level confidence and intra-frame concentration statistics from self-attention maps without introducing extra parameters. MiRA achieves consistent improvements over strong ViT baselines on challenging FER benchmarks.",
+      "highlights_zh": [
+        "无需额外参数的重分配注意力",
+        "在FER基准上持续提升ViT性能",
+        "可即插即用于现有ViT骨干"
+      ]
+    },
+    {
+      "id": "2606.30613",
+      "title": "Sequential Planning via Anchored Robotic Keypoints",
+      "authors": [
+        "Bryce Grant",
+        "Aryeh Rothenberg",
+        "Logan Senning",
+        "Zonghe Chua",
+        "Zach Patterson",
+        "Peng Wang"
+      ],
+      "abstract": "We present Sequential Planning via Anchored Robotic Keypoints, SPARK, a training-free neurosymbolic manipulation system that reaches 43.7% on six LIBERO-PRO position \\& task cells, more than doubling CaP-Agent0 and Vision-Language-Action (VLA) baselines. CaP-Agent0, a multi-turn code-generation agent, achieves 18.2% by re-querying an LLM at every turn, but its restart-from-scratch solution proves costly against minor policy failures. Perception is the layer that fails most under position and task changes so SPARK spends its computation there. A single Gemini call composes the plan as a typed behavior tree (BT) of composable primitives, each already containing the low-level control (motion, grasping, depth geometry) a code-generation agent would otherwise regenerate on every trial. The rest of the budget goes to perception: a second Gemini call proposes three alternative text prompts per object, SAM3 evaluates each, and we keep the prompt$\\to$label pair with the most confident detection and a recovery loop then retries a failed primitive against freshly detected objects, with no new LLM call. The alternative prompts add +27.7 points on the spatial suite and +10.0 on the object suite, with the recovery loop adding +5.0 overall. SPARK runs the same primitives on three robot families (UR10e, Franka FR3, bimanual Franka) across nine unique tasks at twenty trials each, averaging 68%. Since the detector, planner, and controller modules sit behind the typed plan, they swap independently without training, and each primitive's checkable post-condition traces a failure to the corresponding module or a kinematic limit. Every trial logs a verified, labeled trajectory, so a training-free planner that already beats VLAs can supply the data those policies need without teleoperation. Project page: https://cwru-aism.github.io/spark-page/",
+      "published": "2026-06-29T17:48:01Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30613",
+      "pdf_url": "https://arxiv.org/pdf/2606.30613",
+      "summary_zh": "现有机器人操作策略在位置和任务变化下感知层易失败，导致性能低下。SPARK通过神经符号方法，用两次Gemini调用分别生成类型化行为树和优化物体检测提示，无需训练即可规划。在LIBERO-PRO基准上达到43.7%，超过VLA基线两倍，并能在多种机器人上平均68%成功率。",
+      "summary_en": "Existing robotic manipulation policies suffer from perception failures under position and task changes. SPARK introduces a training-free neurosymbolic system that uses two Gemini calls to compose a typed behavior tree and optimize object detection prompts. It achieves 43.7% on LIBERO-PRO, doubling VLA baselines, and averages 68% across three robot families on nine tasks.",
+      "highlights_zh": [
+        "无需训练的神经符号规划系统",
+        "LIBERO-PRO达43.7%，超VLA两倍",
+        "可独立替换模块，生成训练数据"
+      ]
+    },
+    {
+      "id": "2606.30581",
+      "title": "Realtime Wind Estimation using Low Cost Quadrotor Uncrewed Aerial Vehicles",
+      "authors": [
+        "Hiranya Udagedara",
+        "Mahdis Bisheban"
+      ],
+      "abstract": "In environmental monitoring as well as emergency response applications such as wildfires, wind velocity measurement is essential. Quadrotor UAVs have become popular platforms for wind velocity estimation due to their maneuverability, compact size, and cost-effectiveness. Numerous studies use the Extended Kalman Filter (EKF) to estimate the wind velocity based on the quadrotor dynamic model. However, most of them use hovering quadrotors only for wind estimation, others use a near-linear trajectory to estimate near-constant velocities. Furthermore, EKF performance is constrained by its reliance on linearized approximations of the nonlinear quadrotor dynamics around current states, limiting accuracy in highly nonlinear scenarios, including windy conditions. This study proposes the use of an Unscented Kalman Filter (UKF), a nonlinear estimator to provide accurate wind estimations while maintaining the trajectory of the quadrotor UAV. The quadrotor is modeled on the Special Euclidean group SE(3) and the approach is evaluated through numerical simulations using a geometric controller to maintain quadrotor flight paths. The results indicate that as the nonlinearity of the simulation increases, the UKF consistently outperforms the EKF. This demonstrates the potential of the UKF as a reliable estimator for highly nonlinear scenarios, capable of maintaining the trajectory with minimal deviation while providing accurate wind velocity estimations.",
+      "published": "2026-06-29T17:24:16Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.30581",
+      "pdf_url": "https://arxiv.org/pdf/2606.30581",
+      "summary_zh": "在环境监测和应急响应中，风速度测量至关重要，但现有基于四旋翼无人机的风估计方法多局限于悬停或近线性轨迹，且扩展卡尔曼滤波（EKF）在强非线性场景下精度受限。本研究提出使用无迹卡尔曼滤波（UKF）这一非线性估计器，基于SE(3)群上的四旋翼模型进行风估计，并结合几何控制器维持飞行轨迹。仿真结果表明，随着非线性程度增加，UKF始终优于EKF，能在保持轨迹偏差最小的同时提供准确的风速估计。",
+      "summary_en": "Wind velocity measurement is critical for environmental monitoring and emergency response, but existing quadrotor-based wind estimation methods are limited to hovering or near-linear trajectories, and the Extended Kalman Filter (EKF) suffers from accuracy loss in highly nonlinear scenarios. This study proposes an Unscented Kalman Filter (UKF), a nonlinear estimator, for accurate wind estimation while maintaining quadrotor trajectory, modeling the quadrotor on the Special Euclidean group SE(3) and using a geometric controller. Simulation results show that as nonlinearity increases, the UKF consistently outperforms the EKF, demonstrating its potential as a reliable estimator for highly nonlinear scenarios with minimal trajectory deviation and accurate wind velocity estimation.",
+      "highlights_zh": [
+        "提出UKF替代EKF用于四旋翼风估计",
+        "UKF在强非线性下始终优于EKF",
+        "适用于高动态环境如野火应急响应"
+      ]
+    }
+  ]
+}
