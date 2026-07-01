@@ -1,0 +1,298 @@
+{
+  "date": "2026-07-01",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2606.32038",
+      "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+      "authors": [
+        "Zifan Carl Guo",
+        "Laura Ruis",
+        "Jacob Andreas",
+        "Belinda Z. Li"
+      ],
+      "abstract": "When does training language models (LMs) to generate explanations of their predictions yield faithful introspection, rather than superficial imitation? We study LMs trained to explain which features of their inputs influenced their behavior, using models' counterfactual behavior on modified inputs as supervision. Surprisingly, we find that LMs trained on fixed counterfactual explanations derived from earlier checkpoints of themselves, or even from behaviorally similar models in different families, frequently produce explanations more faithful to their own current behaviors than to those of their training targets. This \"introspective\" coupling between LM explanations and behaviors occurs when training explanations remain sufficiently correlated with current behaviors over the course of training, even as behaviors themselves shift. We also show that introspective coupling tracks behavior shifts: when explanation training is provided concurrently with other post-training objectives, explanations track those shifts without requiring updated supervision. This phenomenon appears in multiple tasks, including sycophancy and refusal, and is robust to label noise. Overall, our results show that even fixed datasets of counterfactual explanations can provide scalable and generalizable post-training signal for introspection.",
+      "published": "2026-06-30T17:59:32Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32038",
+      "pdf_url": "https://arxiv.org/pdf/2606.32038",
+      "summary_zh": "训练语言模型生成解释时，常面临解释是否忠实于模型自身行为的问题。本研究提出使用固定反事实解释数据集训练模型，发现模型解释会自发与自身当前行为耦合，而非仅模仿训练目标。这种内省耦合能追踪行为变化，为可扩展的模型内省训练提供了新方法。",
+      "summary_en": "Training language models to generate explanations raises the question of whether explanations faithfully reflect model behavior. This study finds that training on fixed counterfactual explanations from earlier checkpoints or behaviorally similar models leads to explanations that spontaneously couple with the model's own current behavior. This introspective coupling tracks behavioral shifts and offers a scalable, generalizable approach for post-training introspection.",
+      "highlights_zh": [
+        "固定解释训练实现内省耦合",
+        "解释忠实追踪行为变化",
+        "无需更新监督的可扩展方法"
+      ]
+    },
+    {
+      "id": "2606.32034",
+      "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+      "authors": [
+        "Sergio Hernández-Gutiérrez",
+        "Matteo Merler",
+        "Ilze Amanda Auzina",
+        "Joschka Strüber",
+        "Ameya Prabhu",
+        "Matthias Bethge"
+      ],
+      "abstract": "LLM agents increasingly act over long horizons, where a single trajectory can contain hundreds or thousands of actions. In these settings, outcome-only rewards provide too sparse guidance, failing to inform the model about the goodness of intermediate actions. Dense supervision methods aim to solve this problem by scoring intermediate steps, from intrinsic confidence to self-distillation and embedding similarities. However, it is common practice to evaluate them by measuring the downstream performance of a training pipeline that integrates them. This is expensive, conflates supervision quality with training engineering confounders, and renders different methodological families requiring distinct training setups incomparable. As a result, dense supervision methods are rarely benchmarked on common ground. We introduce QVal, a training-free testbed for directly evaluating dense supervision signals. Given a state-action pair, QVal measures how well a method's score is Q-aligned: whether it orders actions according to the Q-values of a strong reference-policy. This lets us compare signals before any training run and separate signal quality from other engineering choices. We instantiate QVal as QVal-v1.0, benchmarking 21 dense supervision methods across four diverse environments and seven methodological families, with over 1.2K evaluation experiments across six open-weight model backbones. We find that simple prompting baselines consistently outperform recent dense supervision methods from the literature, and that performance clusters strongly by family. These findings hold across model sizes, environments, and observation modalities. QVal is designed to be easily extensible to new environments and methods, enabling researchers to iterate on dense supervision methods before any training run.",
+      "published": "2026-06-30T17:58:23Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32034",
+      "pdf_url": "https://arxiv.org/pdf/2606.32034",
+      "summary_zh": "长周期LLM智能体的密集监督信号评估因依赖下游训练而昂贵且不可比。QVal提出无需训练的测试平台，通过Q值对齐直接评估信号质量。实验表明简单提示基线优于多数最新方法，且性能按方法族聚类。",
+      "summary_en": "Evaluating dense supervision signals for long-horizon LLM agents is expensive and incomparable due to reliance on downstream training. QVal introduces a training-free testbed that directly evaluates signal quality via Q-value alignment. Experiments show simple prompting baselines outperform most recent methods, with performance clustering by methodological family.",
+      "highlights_zh": [
+        "无需训练直接评估密集监督信号",
+        "简单提示基线超越多数最新方法",
+        "可扩展至新环境与方法族"
+      ]
+    },
+    {
+      "id": "2606.32027",
+      "title": "Freeform Preference Learning for Robotic Manipulation",
+      "authors": [
+        "Marcel Torne",
+        "Anubha Mahajan",
+        "Abhijnya Bhat",
+        "Chelsea Finn"
+      ],
+      "abstract": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary preferences collapse many competing notions of quality into one ambiguous signal. We introduce Freeform Preference Learning (FPL), a method for learning robot policies from freeform human preferences. Rather than asking annotators which of two trajectories is better overall, FPL lets them define natural-language preference axes, such as speed, safety, quality of placement, or carefulness, and provide pairwise preferences along each axis. These annotations are used to learn a language-conditioned reward model that maps a trajectory and preference label to an axis-specific reward. We use this model to train a reward-conditioned policy that optimizes across the multiple human-specified dimensions. Across four real-world and two simulated long-horizon manipulation tasks, FPL improves over sparse-reward and binary-preference methods by 38 percentage points. Beyond improved performance, FPL learns dense progress signals without explicit subtask segmentation, shows compositionality of behavior not present in the data, and allows users to steer the policy towards different behaviors at test time without retraining. Blog post with videos available at https://freeform-pl.github.io/fpl.website/",
+      "published": "2026-06-30T17:54:02Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32027",
+      "pdf_url": "https://arxiv.org/pdf/2606.32027",
+      "summary_zh": "在机器人长程操作任务中，稀疏奖励和二元偏好信号不足且模糊。我们提出自由形式偏好学习（FPL），允许标注者定义自然语言偏好轴并提供轴内成对偏好，从而学习语言条件奖励模型。在真实与模拟任务中，FPL比稀疏奖励和二元偏好方法提升38个百分点，并支持行为组合与测试时策略引导。",
+      "summary_en": "Reward design is a bottleneck for robot policy learning in long-horizon tasks due to sparse signals and ambiguous binary preferences. Freeform Preference Learning (FPL) lets annotators define natural-language preference axes and provide pairwise preferences per axis, learning a language-conditioned reward model. FPL outperforms sparse-reward and binary-preference methods by 38 percentage points across tasks, and enables compositional behavior and test-time policy steering.",
+      "highlights_zh": [
+        "自由形式自然语言偏好学习",
+        "性能提升38个百分点",
+        "支持行为组合与测试时引导"
+      ]
+    },
+    {
+      "id": "2606.32026",
+      "title": "AdaJEPA: An Adaptive Latent World Model",
+      "authors": [
+        "Ying Wang",
+        "Oumayma Bounou",
+        "Yann LeCun",
+        "Mengye Ren"
+      ],
+      "abstract": "Latent world models enable planning from high-dimensional observations by predicting future states in a compact latent space. However, these models are typically kept frozen at test time: when their predictions become inaccurate, planning can fail, especially under test-time distribution shift. To address this, we propose AdaJEPA, an adaptive latent world model that performs test-time adaptation within the closed loop of model predictive control (MPC). After training, AdaJEPA plans and executes the first action chunk, uses the observed next-state transition as a self-supervised adaptation signal, and replans with the updated model. This closed-loop update continuously recalibrates the world model without additional expert demonstrations. Across a range of goal-reaching tasks, AdaJEPA substantially improves planning success with as few as one gradient step per MPC replanning step.",
+      "published": "2026-06-30T17:53:48Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32026",
+      "pdf_url": "https://arxiv.org/pdf/2606.32026",
+      "summary_zh": "潜在世界模型在测试时通常保持冻结，导致分布偏移下预测不准和规划失败。AdaJEPA提出在模型预测控制闭环中进行测试时自适应，利用观测到的下一状态转换作为自监督信号持续更新模型。仅需每步一次梯度更新即可显著提升目标到达任务的成功率。",
+      "summary_en": "Latent world models are typically frozen at test time, causing planning failures under distribution shift. AdaJEPA performs test-time adaptation within the MPC loop by using observed next-state transitions as self-supervised signals. It substantially improves planning success with as few as one gradient step per replanning step.",
+      "highlights_zh": [
+        "测试时自适应世界模型",
+        "一步梯度更新提升规划成功率",
+        "无需专家演示的闭环适应"
+      ]
+    },
+    {
+      "id": "2606.32040",
+      "title": "FaceMoE: Mixture of Experts for Low-Resolution Face Recognition",
+      "authors": [
+        "Kartik Narayan",
+        "Vishal M. Patel"
+      ],
+      "abstract": "Low-resolution face recognition (LR-FR) remains a challenging task due to poor feature extraction and aggregation, as probe images often contain limited identity information resulting from extreme degradations such as blur, occlusion, and low contrast. Additionally, the domain gap between high-resolution (HR) gallery images and low-resolution (LR) probe images poses a significant challenge. A single feature encoder struggles to generalize effectively across both domains when fine-tuned on an LR dataset, and this issue is further magnified by catastrophic forgetting. To address these challenges, we propose FaceMoE, an effective adaptation of Mixture of Experts (MoE) transfomer architecture for low-resolution face-recognition . Specifically, we introduce multiple specialized feed-forward network (FFN) experts and incorporate a top-k router, which dynamically assigns tokens to appropriate experts. This design emergently promotes specialization across experts for different semantic regions of the face, which enables FaceMoE to perform resolution-aware feature extraction. Moreover, the top-k router facilitates sparse expert activation, enabling the model to preserve pretrained knowledge when finetuned on a LR dataset, while increasing model capacity without proportional computational overhead. FaceMoE is trained with a combined face recognition loss, router z-loss, and load balancing loss to ensure expert specialization and stable training. To the best of our knowledge, this is the first work leveraging MoE for LR-FR. Extensive experiments across eleven datasets, spanning HR, mixed-quality, and LR benchmarks, demonstrate that FaceMoE significantly outperforms state-of-the-art methods. Code: https://github.com/Kartik-3004/FaceMoE",
+      "published": "2026-06-30T17:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32040",
+      "pdf_url": "https://arxiv.org/pdf/2606.32040",
+      "summary_zh": "低分辨率人脸识别因图像退化严重且与高分辨率图库存在域差异而极具挑战，单一编码器难以泛化且易遗忘。本文提出FaceMoE，首次将混合专家（MoE）Transformer架构用于该任务，通过多个前馈网络专家和top-k路由器实现分辨率感知的特征提取与稀疏激活。在11个数据集上的实验表明，FaceMoE显著优于现有方法，且能保持预训练知识。",
+      "summary_en": "Low-resolution face recognition (LR-FR) suffers from poor feature extraction and domain gap with high-resolution gallery images. FaceMoE introduces a Mixture of Experts (MoE) Transformer with specialized FFN experts and a top-k router for resolution-aware feature extraction and sparse activation. Extensive experiments on 11 datasets show it significantly outperforms state-of-the-art methods while preserving pretrained knowledge.",
+      "highlights_zh": [
+        "首次将MoE用于低分辨率人脸识别",
+        "在11个数据集上超越SOTA方法",
+        "保持预训练知识，避免灾难性遗忘"
+      ]
+    },
+    {
+      "id": "2606.32039",
+      "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
+      "authors": [
+        "Bin Lin",
+        "Zheyuan Liu",
+        "Chenguo Lin",
+        "Sixiang Chen",
+        "Yunyang Ge",
+        "Yunlong Lin",
+        "Jianwei Zhang",
+        "Miles Yang",
+        "Zhao Zhong",
+        "Liefeng Bo",
+        "Li Yuan"
+      ],
+      "abstract": "Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer's own features become less DINOv2-like while the AR's become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.",
+      "published": "2026-06-30T17:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32039",
+      "pdf_url": "https://arxiv.org/pdf/2606.32039",
+      "summary_zh": "当前视觉生成模型通常分两阶段训练，先训练分词器再冻结，导致分词器不了解生成器的建模偏好。GEAR提出一种端到端联合训练方法，通过双读出机制让硬分支训练自回归模型、软分支传递表示对齐损失来引导分词器，使分词器生成更易被自回归模型预测的索引分布。该方法在ImageNet上实现gFID收敛速度提升高达10倍，学习到更好的补丁级和空间一致特征，并泛化到多种量化器和文本到图像生成任务。",
+      "summary_en": "Current visual generative models typically train a tokenizer first and freeze it, leaving it unaware of the generator's modeling preferences. GEAR proposes an end-to-end joint training method with a dual read-out mechanism where a hard branch trains the autoregressive model and a soft branch propagates representation alignment loss to guide the tokenizer toward producing indices easier for the AR model to predict. This achieves up to 10x faster gFID convergence on ImageNet, learns better patch-level and spatially-coherent features, and generalizes across quantizers and to text-to-image generation.",
+      "highlights_zh": [
+        "端到端联合训练分词器与自回归模型",
+        "ImageNet gFID收敛速度提升10倍",
+        "泛化至多种量化器与文本到图像生成"
+      ]
+    },
+    {
+      "id": "2606.32028",
+      "title": "DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation",
+      "authors": [
+        "Ziyu Shan",
+        "Zhenyu Wu",
+        "Xiaofeng Wang",
+        "Zheng Zhu",
+        "Ziwei Wang"
+      ],
+      "abstract": "Video-based embodied world models provide an appealing substrate for robotic manipulation by predicting future states, yet current approaches remain limited by a fundamental entanglement: accurately modeling dynamics typically requires low-level temporal reasoning, while producing high-resolution frames demands expansive visual synthesis according to high-level semantics. This entanglement results in slow inference speed for iterative planning or too coarse predictions to retain contact-rich details. To solve this dilemma, we present Disentangled Video Generation World Model (DVG-WM), an efficient framework that explicitly decomposes world modeling into dynamics learning and visual synthesis. Conditioned on an initial observation and a language instruction, our model first generates a plausible sequence of intermediate visual states to preview the physical interaction and refines them to obtain high-fidelity videos. Furthermore, an efficient cascading mechanism is proposed, where DVG-WM uses flow matching to directly map the dynamics to video latents, and introduces a latent degradation mechanism to regenerate contact-rich details. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97 times acceleration, validating that disentangled video generation can be an efficient embodied world model for robotic manipulation.",
+      "published": "2026-06-30T17:54:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32028",
+      "pdf_url": "https://arxiv.org/pdf/2606.32028",
+      "summary_zh": "现有基于视频的具身世界模型在动态建模与高分辨率视觉合成之间存在根本性纠缠，导致推理速度慢或预测粗糙。本文提出解耦视频生成世界模型(DVG-WM)，将世界建模显式分解为动态学习和视觉合成，并设计级联机制通过流匹配和潜在退化机制高效生成高保真视频。在LIBERO和真实平台上的实验表明，该方法在提升视频质量的同时实现了最高3.97倍的加速，验证了解耦视频生成作为高效具身世界模型的有效性。",
+      "summary_en": "Current video-based embodied world models suffer from fundamental entanglement between dynamics modeling and high-resolution visual synthesis, leading to slow inference or coarse predictions. This paper proposes Disentangled Video Generation World Model (DVG-WM), which explicitly decomposes world modeling into dynamics learning and visual synthesis, and introduces a cascading mechanism using flow matching and latent degradation for efficient high-fidelity video generation. Experiments on LIBERO and real-world platforms demonstrate improved video quality with up to 3.97x speedup, validating disentangled video generation as an efficient embodied world model for robotic manipulation.",
+      "highlights_zh": [
+        "解耦动态学习与视觉合成",
+        "最高3.97倍推理加速",
+        "适用于机器人操作规划"
+      ]
+    },
+    {
+      "id": "2606.32009",
+      "title": "Human-as-Humanoid: Enabling Zero-Shot Humanoid Learning from Ego-Exo Human Videos with Human-Aligned Embodiments",
+      "authors": [
+        "Xiaopeng Lin",
+        "Ruoqi Yang",
+        "Shijie Lian",
+        "Zhaolong Shen",
+        "Bin Yu",
+        "Changti Wu",
+        "Haibao Liu",
+        "Yuxiang Zhang",
+        "Hong Li",
+        "Qiyuan Su",
+        "Haochen Liu",
+        "Xuguo He",
+        "Yukun Shi",
+        "Cong Huang",
+        "Zhirui Zhang",
+        "Bojun Cheng",
+        "Kai Chen"
+      ],
+      "abstract": "Vision-language-action (VLA) models across robot embodiments require high-quality observation--action supervision to learn deployable action distributions, yet scaling such robot data remains difficult, especially for high-DoF humanoids. Teleoperation provides controller-aligned supervision, while human egocentric videos capture diverse bimanual manipulation but do not directly provide executable robot actions. We introduce Human-as-Humanoid, a human-to-humanoid supervision framework that enables near-real-time human-centric action generation, making human demonstrations usable for high-DoF humanoid VLA training by jointly aligning the robot embodiment, the sensing setup, and the action-label interface. Built on PrimeU, a human-aligned 60-DoF upper-body humanoid, Human-as-Humanoid uses synchronized ego-exo videos to pair deployment-aligned egocentric observations with exocentric motion recovery, retargets the recovered human motion through staged Inverse Kinematics (IK) into controller-aligned 60-DoF action chunks, and trains the VLA model with Forward Kinematics (FK)-aware supervision to preserve wrist and fingertip task-space geometry. This converts large-scale human demonstrations from visual observations into executable observation--action supervision for the target humanoid. Experiments validate the conversion chain at the motion-recovery, robot-action-space, and real-robot deployment levels. Human-as-Humanoid yields a 4.8--7.2x raw demonstration-throughput gain over humanoid teleoperation in our data-collection analysis, and on several downstream tasks, policies post-trained only with the converted human labels generalize to real-robot deployment without target-task robot demonstrations. The official project website is available at https://zgc-embodyai.github.io/Human-as-Humanoid.",
+      "published": "2026-06-30T17:44:16Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32009",
+      "pdf_url": "https://arxiv.org/pdf/2606.32009",
+      "summary_zh": "现有高自由度人形机器人VLA模型训练依赖高质量动作标注数据，但遥操作数据采集效率低，而人类视频虽丰富却无法直接提供机器人可执行动作。本文提出Human-as-Humanoid框架，通过构建与人类对齐的60自由度人形机器人PrimeU，利用同步第一/第三人称视频恢复人体运动，经分段逆运动学重定向为控制器对齐的动作块，并采用前向运动学感知监督训练VLA模型。该方法将大规模人类演示转化为可执行观测-动作监督，数据采集效率提升4.8-7.2倍，且仅用转换后的人类标签训练的策略可直接泛化到真实机器人部署。",
+      "summary_en": "Scaling high-quality observation-action supervision for high-DoF humanoid VLA models is challenging due to inefficient teleoperation data collection and the gap between human videos and executable robot actions. Human-as-Humanoid introduces a human-aligned 60-DoF humanoid PrimeU, using synchronized ego-exo videos for motion recovery, staged IK retargeting, and FK-aware supervision to convert human demonstrations into deployable action chunks. It achieves 4.8-7.2x data throughput gain over teleoperation and enables zero-shot real-robot deployment with policies trained solely on converted human labels.",
+      "highlights_zh": [
+        "人机对齐的60自由度人形机器人设计",
+        "数据采集效率提升4.8-7.2倍",
+        "零样本泛化到真实机器人部署"
+      ]
+    },
+    {
+      "id": "2606.32032",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "authors": [
+        "Gabrielle Kaili-May Liu",
+        "Avi Caciularu",
+        "Gal Yona",
+        "Idan Szpektor",
+        "Arman Cohan"
+      ],
+      "abstract": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+      "published": "2026-06-30T17:56:01Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32032",
+      "pdf_url": "https://arxiv.org/pdf/2606.32032",
+      "summary_zh": "大型语言模型在元认知方面存在系统性缺陷，如高置信度幻觉和无法识别知识边界，这损害了其可信度。本文提出基于元认知反馈的强化学习（RLMF）和元认知数据选择两种新机制，通过利用模型对自身表现的判断质量来优化偏好学习和训练数据选择。实验表明，RLMF在多种任务上实现了最先进的忠实校准性能，且比标准强化学习提升高达63%，增强了模型评估和表达自身能力极限的能力。",
+      "summary_en": "Large language models exhibit systemic deficiencies in metacognition, such as high-confidence hallucinations and failure to recognize knowledge boundaries, undermining trustworthiness. This paper introduces reinforcement learning with metacognitive feedback (RLMF) and metacognitive data selection, which leverage the quality of a model's self-judgments to refine preference optimization and training data selection. Experiments show RLMF achieves state-of-the-art faithful calibration across diverse tasks, outperforming standard RL by up to 63%, and enhances models' ability to assess and express their own capability limits.",
+      "highlights_zh": [
+        "元认知反馈强化学习新范式",
+        "RLMF比标准RL提升高达63%",
+        "提升LLM可信度与自我认知能力"
+      ]
+    },
+    {
+      "id": "2606.32029",
+      "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
+      "authors": [
+        "Yuqing Yang",
+        "Qi Zhu",
+        "Zhen Han",
+        "Boran Han",
+        "Zhengyuan Shen",
+        "Shuai Wang",
+        "Vassilis N. Ioannidis",
+        "Huzefa Rangwala"
+      ],
+      "abstract": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across different models and tasks. Our results show that DREs occur across all tested models (1.7B to 20B parameters). Furthermore, we demonstrate that incorporating data referencing as a critic significantly improves answer accuracy up to 12.0%, through critic-based filtering and rejection sampling. Finally, we trained a lightweight 4B-parameter critic model that achieves an average F1 score of 78.2% in detecting both in-distribution and out-of-distribution DREs, and effectively assists inference for larger models.",
+      "published": "2026-06-30T17:54:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2606.32029",
+      "pdf_url": "https://arxiv.org/pdf/2606.32029",
+      "summary_zh": "大型语言模型在处理表格任务时会出现数据引用错误，即错误引用或遗漏表格数值，影响推理步骤的可靠性。本研究首次系统评估了不同模型和任务中的表格数据引用错误，并提出将数据引用作为批评者来提升答案准确率。实验表明，该方法通过批评者过滤和拒绝采样可将准确率提升高达12.0%，且训练的轻量级批评模型能有效检测分布内外的数据引用错误。",
+      "summary_en": "Large language models suffer from data referencing errors when processing tables, incorrectly citing or omitting values and compromising reasoning reliability. This work systematically evaluates such errors across models and tasks, introducing a critic-based approach that incorporates data referencing to improve answer accuracy. Results show up to 12.0% accuracy improvement through critic filtering and rejection sampling, with a lightweight 4B-parameter critic achieving 78.2% F1 score for detecting both in-distribution and out-of-distribution errors.",
+      "highlights_zh": [
+        "首次系统评估表格数据引用错误",
+        "准确率提升高达12.0%",
+        "轻量批评模型F1达78.2%"
+      ]
+    }
+  ]
+}
