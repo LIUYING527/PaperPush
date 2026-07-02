@@ -239,6 +239,33 @@
   .send-btn:hover { background: var(--primary-d); }
   .send-btn:disabled { background: var(--sub); cursor: not-allowed; }
 
+  /* ── Focused paper banner ── */
+  .focus-banner {
+    display: none;
+    align-items: center; gap: 8px;
+    background: #eef2ff; border: 1px solid #c7d2fe;
+    border-radius: 10px; padding: 8px 12px;
+    margin-bottom: 10px; font-size: .8rem; color: var(--primary);
+  }
+  .focus-banner.visible { display: flex; }
+  .focus-banner-title { flex: 1; font-weight: 600; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .focus-clear-btn {
+    border: none; background: none; cursor: pointer;
+    color: var(--sub); font-size: 1rem; line-height: 1;
+    padding: 0 2px; flex-shrink: 0;
+  }
+  .focus-clear-btn:hover { color: var(--text); }
+
+  /* ── Ask btn on card ── */
+  .ask-btn {
+    font-size: .75rem; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px;
+    border: 1.5px solid var(--primary);
+    color: var(--primary); background: #eef2ff;
+    cursor: pointer; transition: all .15s;
+  }
+  .ask-btn:hover { background: var(--primary); color: white; }
+
   /* ── Favorites ── */
   .fav-empty { padding: 40px 16px; text-align: center; color: var(--sub); font-size: .9rem; }
 
@@ -332,6 +359,11 @@
   <!-- Chat -->
   <div id="tab-chat" class="tab-panel">
     <div class="chat-wrap">
+      <div class="focus-banner" id="focusBanner">
+        <span>聚焦：</span>
+        <span class="focus-banner-title" id="focusBannerTitle"></span>
+        <button class="focus-clear-btn" onclick="clearFocus()" title="取消聚焦">✕</button>
+      </div>
       <div class="chat-messages" id="chatMessages"></div>
       <div class="chat-input-row">
         <textarea id="chatInput" placeholder="问我关于今日论文的任何问题…" rows="1"
@@ -424,6 +456,7 @@ const S = {
   authMode: 'login',     // 'login' | 'signup'
   filterCat: 'all',
   syncTimer: null,
+  focusedPaper: null,    // paper currently focused in chat
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -532,6 +565,7 @@ function paperCard(p) {
   <div class="card-footer">
     <a href="${escHtml(p.arxiv_url || '#')}" target="_blank" rel="noopener" class="link-btn">arXiv ↗</a>
     <a href="${escHtml(p.pdf_url  || '#')}" target="_blank" rel="noopener" class="link-btn">PDF ↗</a>
+    <button class="ask-btn" onclick="askAboutPaper('${escHtml(p.id)}')">💬 提问</button>
   </div>
 </div>`;
 }
@@ -604,10 +638,71 @@ function renderFavList() {
 function buildSystemPrompt() {
   const papers = S.papers || [];
   if (!papers.length) return '你是一位AI/ML论文研究助手，请帮用户解答问题。';
+
+  let prompt = `你是一位AI/ML论文研究助手。今天（${S.currentDate}）精选了 ${papers.length} 篇论文。\n\n`;
+
+  if (S.focusedPaper) {
+    const p = S.focusedPaper;
+    prompt += `【当前聚焦论文】用户正在询问这篇论文，请优先针对它作答：\n`;
+    prompt += `标题：${p.title}\n`;
+    prompt += `分类：${p.primary_category}\n`;
+    prompt += `中文摘要：${p.summary_zh || ''}\n`;
+    prompt += `英文摘要：${p.summary_en || ''}\n`;
+    if (p.highlights_zh?.length) prompt += `核心亮点：${p.highlights_zh.join('；')}\n`;
+    if (p.abstract) prompt += `原始摘要：${p.abstract}\n`;
+    prompt += `\n`;
+  }
+
   const list = papers.map((p,i) =>
     `${i+1}. [${p.primary_category}] ${p.title}\n   ${p.summary_zh || p.abstract?.slice(0,150) || ''}`
   ).join('\n\n');
-  return `你是一位AI/ML论文研究助手。今天（${S.currentDate}）精选了 ${papers.length} 篇论文：\n\n${list}\n\n请帮助用户理解和分析这些论文，回答时可引用具体论文标题。`;
+  prompt += `今日所有论文：\n${list}\n\n请帮助用户理解和分析这些论文，回答时可引用具体论文标题。`;
+  return prompt;
+}
+
+function askAboutPaper(id) {
+  const paper = [...(S.papers || []), ...Object.values(S.loadedDates).flat()]
+    .find(p => p && p.id === id);
+  if (!paper) return;
+
+  S.focusedPaper = paper;
+  updateFocusBanner();
+  switchTab('chat');
+
+  // Add a system message only if this is a new focus
+  const cont = document.getElementById('chatMessages');
+  const lastMsg = cont.lastElementChild;
+  if (!lastMsg || !lastMsg.textContent.startsWith('聚焦论文：')) {
+    const div = document.createElement('div');
+    div.className = 'msg system';
+    div.textContent = `聚焦论文：${paper.title}`;
+    cont.appendChild(div);
+    cont.scrollTop = cont.scrollHeight;
+  } else {
+    lastMsg.textContent = `聚焦论文：${paper.title}`;
+    cont.scrollTop = cont.scrollHeight;
+  }
+
+  const input = document.getElementById('chatInput');
+  input.placeholder = `关于这篇论文，你想了解什么？`;
+  input.focus();
+}
+
+function clearFocus() {
+  S.focusedPaper = null;
+  updateFocusBanner();
+  document.getElementById('chatInput').placeholder = '问我关于今日论文的任何问题…';
+}
+
+function updateFocusBanner() {
+  const banner = document.getElementById('focusBanner');
+  const title  = document.getElementById('focusBannerTitle');
+  if (S.focusedPaper) {
+    title.textContent = S.focusedPaper.title;
+    banner.classList.add('visible');
+  } else {
+    banner.classList.remove('visible');
+  }
 }
 
 function addMsg(role, text) {
