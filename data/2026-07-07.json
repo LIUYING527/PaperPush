@@ -1,0 +1,347 @@
+{
+  "date": "2026-07-07",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.05396",
+      "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
+      "authors": [
+        "Wenhao Li",
+        "Xueying Jiang",
+        "Quanhao Qian",
+        "Deli Zhao",
+        "Shijian Lu",
+        "Gongjie Zhang",
+        "Ran Xu"
+      ],
+      "abstract": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
+      "published": "2026-07-06T17:59:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05396",
+      "pdf_url": "https://arxiv.org/pdf/2607.05396",
+      "summary_zh": "现有视鲁棒VLA策略依赖相机外参，导致部署脆弱且难以使用。CamVLA通过预测相机坐标系动作和手眼矩阵，解耦操作控制与相机几何。该方法无需标定、深度和多视角，在仿真和真实实验中显著提升跨视角成功率。",
+      "summary_en": "Existing view-robust VLA policies rely on explicit camera extrinsics, making them fragile in deployment. CamVLA decouples manipulation from camera geometry by predicting camera-centric actions and a hand-eye matrix. It requires no calibration, depth, or multi-view, consistently improving success rates across unseen viewpoints in simulation and real-world tests.",
+      "highlights_zh": [
+        "解耦操作与相机几何的视鲁棒VLA",
+        "跨未知视角成功率显著提升",
+        "无需标定与深度，单目RGB即可部署"
+      ]
+    },
+    {
+      "id": "2607.05394",
+      "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+      "authors": [
+        "Shiyuan Feng",
+        "Huan-ang Gao",
+        "Haohan Chi",
+        "Hanlin Wu",
+        "Zhilong Zhang",
+        "Zheng Jiang",
+        "Bingxiang He",
+        "Wei-Ying Ma",
+        "Ya-Qin Zhang",
+        "Hao Zhou"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
+      "published": "2026-07-06T17:59:58Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05394",
+      "pdf_url": "https://arxiv.org/pdf/2607.05394",
+      "summary_zh": "针对强化学习在大型语言模型上训练成本高昂的问题，提出了一种弱到强的知识迁移方法。该方法通过直接在线策略蒸馏（Direct-OPD），将弱模型强化学习前后的策略变化作为隐式奖励信号，用于指导强模型训练。实验表明，该方法在AIME 2024上仅用4小时就将Qwen3-1.7B的性能从48.3%提升至62.4%，且优于直接强化学习。",
+      "summary_en": "To address the high cost of reinforcement learning (RL) on large language models, we propose Direct On-Policy Distillation (Direct-OPD), which transfers the policy shift induced by RL on a weaker teacher model as an implicit reward signal for a stronger student model. This method avoids training explicit reward models or running expensive RL on the target model. Empirically, Direct-OPD boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs, outperforming step-matched direct RL.",
+      "highlights_zh": [
+        "弱到强策略迁移新范式",
+        "AIME 2024提升14.1%",
+        "无需显式奖励模型，训练高效"
+      ]
+    },
+    {
+      "id": "2607.05381",
+      "title": "What Does a Discrete Diffusion Model Learn?",
+      "authors": [
+        "Rodrigo Casado Noguerales",
+        "Bernhard Schölkopf",
+        "Thomas Hofmann",
+        "Aran Raoufi"
+      ],
+      "abstract": "What does a discrete diffusion model learn: a denoiser, a score ratio, or a bridge plug-in predictor? At the level of jump rates, these are one object in different coordinates, and reading a neural network in the wrong coordinate changes the process being trained and sampled. Starting with a rigorous derivation of the continuous-time Markov chain (CTMC) ELBO for any noising process, boundary terms included, we prove the \\emph{Oracle Distance} theorem: the negative ELBO is exactly equal to the data entropy plus the path KL from the oracle reverse process to the learned one, not merely a bound. Its unique optimizer is therefore the conditional expectation of the true reverse jump rate given the current noisy state, and its irreducible cost is the rate at which the forward process $Z_t$ destroys information about the clean data $Z_0$, $-\\tfrac{d}{dt}I(Z_0; Z_t)$, so every noising process shares the same best achievable negative ELBO: the data entropy. For sequences with token-factorizing noise, the oracle projection yields three exact coordinates for the optimizer: denoiser, cavity (bridge plug-in), and score, with closed-form conversions among them. This framework identifies which law each loss in the literature actually optimizes, recovering MDM, UDM, SEDD, and GIDD as special cases; explains why denoiser and cavity coincide for masked diffusion but not for uniform diffusion; proves that a denoiser parameterization makes the uniform ELBO diverge at initialization while the bridge plug-in stays finite; and calibrates ELBO implementations exactly at initialization. Every identity is verified numerically, without approximation, on an exactly solvable model.",
+      "published": "2026-07-06T17:56:11Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.IT",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05381",
+      "pdf_url": "https://arxiv.org/pdf/2607.05381",
+      "summary_zh": "离散扩散模型的学习目标在去噪器、分数比和桥接预测器三种坐标下本质相同，但错误坐标会导致训练和采样过程偏差。本文严格推导了连续时间马尔可夫链的ELBO，证明了Oracle距离定理：负ELBO精确等于数据熵加上路径KL散度，其唯一优化器是真实反向跳跃率的条件期望。该框架统一了MDM、UDM、SEDD和GIDD等现有方法，解释了不同噪声过程下参数化的行为差异，并实现了初始化时的精确校准。",
+      "summary_en": "This paper reveals that what a discrete diffusion model learns—a denoiser, score ratio, or bridge plug-in predictor—is the same object in different coordinates, but using the wrong coordinate distorts training and sampling. It rigorously derives the CTMC ELBO and proves the Oracle Distance theorem, showing the negative ELBO exactly equals data entropy plus path KL divergence, with the unique optimizer being the conditional expectation of the true reverse jump rate. The framework unifies existing methods like MDM, UDM, SEDD, and GIDD, explains why denoiser and cavity coincide for masked but not uniform diffusion, and enables exact calibration at initialization.",
+      "highlights_zh": [
+        "统一离散扩散模型三种参数化坐标",
+        "证明负ELBO精确等于数据熵加路径KL",
+        "统一MDM/UDM/SEDD/GIDD并解释行为差异"
+      ]
+    },
+    {
+      "id": "2607.05369",
+      "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
+      "authors": [
+        "Kaiyuan Chen",
+        "Shuangyu Xie",
+        "Letian Fu",
+        "Justin Yu",
+        "William Pacini",
+        "Sandeep Bajamahal",
+        "Hudson Kim",
+        "Jaimyn Drake",
+        "Daehwa Kim",
+        "Haoru Xue",
+        "Jonathan Francis",
+        "Christian Juette",
+        "Peter Schaldenbrand",
+        "Muhammet Yunus Seker",
+        "Ruwan Wickramarachchi",
+        "Uksang Yoo",
+        "Guanzhi Wang",
+        "Adithyavairavan Murali",
+        "Balakumar Sundaralingam",
+        "S. Shankar Sastry",
+        "Spencer Huang",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan",
+        "Ken Goldberg"
+      ],
+      "abstract": "For robots to work reliably in commercial and industrial applications, can recent advances in agentic coding systems combine interpretable robot programming with the open-world adaptability of model-free policies? We focus on \"Variational Automation\" (VA), a class of tasks that have larger variations in object geometry and pose than fixed automation. Model-free policies often struggle to close the reliability gap for VA tasks, which must be executed persistently and reliably in commercial and industrial applications. Motivated by prior work on Task and Motion Planning (TAMP) and the Robot Operating System (ROS), we introduce Graph-as-Policy (GaP), a multi-agent coding harness that generates directed computation graphs with perception, planning, and control nodes from a Modular Open Robot Skill Library (MORSL). GaP then generates an internal simulation environment to rehearse task instances with different graphs in parallel to iteratively refine the graph structure and parameters to improve success rates and throughput. Evaluation with 8 new open VA task benchmarks, 4 in-simulation and 4 in real-world, suggests that GaP can achieve success rates that significantly outperform baselines. Details, code, and data can be found online: https://graph-robots.github.io/gap",
+      "published": "2026-07-06T17:47:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05369",
+      "pdf_url": "https://arxiv.org/pdf/2607.05369",
+      "summary_zh": "针对变体自动化任务中模型无关策略可靠性不足的问题，提出了一种名为GaP的多智能体编码框架。GaP从模块化开放机器人技能库生成有向计算图，并通过内部仿真环境并行迭代优化图结构与参数。在8个新基准测试中，GaP的成功率显著优于基线方法，展示了其在商业和工业应用中的潜力。",
+      "summary_en": "To address the reliability gap of model-free policies in Variational Automation tasks with large object variations, we propose GaP, a multi-agent coding harness that generates directed computation graphs from a modular robot skill library. GaP creates an internal simulation to iteratively refine graph structures and parameters in parallel. Evaluated on 8 new benchmarks, GaP significantly outperforms baselines in success rates, demonstrating its potential for reliable commercial and industrial applications.",
+      "highlights_zh": [
+        "图结构策略与自学习框架",
+        "成功率显著优于基线方法",
+        "适用于商业与工业变体自动化"
+      ]
+    },
+    {
+      "id": "2607.05392",
+      "title": "SynCity 3000: Bootstrapping Scene-Scale 3D Diffusion",
+      "authors": [
+        "Paul Engstler",
+        "Iro Laina",
+        "Christian Rupprecht",
+        "Andrea Vedaldi"
+      ],
+      "abstract": "We present SynCity 3000, a framework for generating 3D scenes that are globally coherent while enabling fine-grained layout control. Building on the ability of current image-to-3D generators to produce complex 3D assets from a single image, we extend this capability to the scale of entire scenes by adapting the generator to be applicable as a convolutional operator. We achieve this by fine-tuning the model on scene-like data generated by a new synthetic data engine, which we propose to address the scarcity of 3D scene data for training. The convolutional generator is then applied to a dimetric image of the entire scene, generated from the user prompt, resulting in 3D scenes of arbitrary size and complexity. Across diverse prompts and layouts, SynCity 3000 produces large, coherent, and detailed scenes, addressing the shortcomings of prior approaches to 3D scene generation.",
+      "published": "2026-07-06T17:59:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05392",
+      "pdf_url": "https://arxiv.org/pdf/2607.05392",
+      "summary_zh": "现有3D场景生成方法难以兼顾全局一致性与细粒度布局控制，且缺乏大规模3D场景训练数据。我们提出SynCity 3000框架，通过微调图像到3D生成模型使其作为卷积算子，并设计合成数据引擎解决数据稀缺问题。该方法能生成任意规模、全局连贯且细节丰富的3D场景，显著优于此前方法。",
+      "summary_en": "Current 3D scene generation methods struggle with global coherence and fine-grained layout control, while 3D scene training data is scarce. We propose SynCity 3000, which fine-tunes an image-to-3D generator as a convolutional operator and introduces a synthetic data engine to address data scarcity. The method produces large-scale, globally coherent, and detailed 3D scenes, outperforming prior approaches.",
+      "highlights_zh": [
+        "卷积化3D生成实现场景级扩散",
+        "生成任意规模连贯3D场景",
+        "合成数据引擎解决训练数据稀缺"
+      ]
+    },
+    {
+      "id": "2607.05390",
+      "title": "Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models",
+      "authors": [
+        "Hongyu Li",
+        "Wanjia Fu",
+        "Xiaoyan Cong",
+        "Zekun Li",
+        "Binghao Huang",
+        "Hanxiao Jiang",
+        "Xintong He",
+        "Yiqing Liang",
+        "Rao Fu",
+        "Tao Lu",
+        "Srinath Sridhar",
+        "Kevin A. Smith",
+        "George Konidaris",
+        "Yunzhu Li"
+      ],
+      "abstract": "Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz",
+      "published": "2026-07-06T17:59:18Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05390",
+      "pdf_url": "https://arxiv.org/pdf/2607.05390",
+      "summary_zh": "预测可变形物体的动力学是机器人操作中的核心挑战，但现有方法因缺乏大规模真实数据而难以系统比较2D像素空间与3D几何空间模型的优劣。为此，我们提出Deform360数据集，包含198个日常物体、1980次交互序列及215小时的多视角触觉观测，并开发了无标记的视觉触觉3D追踪管线以提取密集几何与运动信息。通过系统评估当前最先进的2D和3D世界模型，我们揭示了结构先验与可扩展性之间的权衡，为可变形物体世界建模提供了基准。",
+      "summary_en": "Predicting the dynamics of deformable objects is a fundamental challenge in robotic manipulation, yet a systematic comparison between 2D pixel-space and 3D geometric-space models is hindered by the lack of diverse real-world data. We introduce Deform360, a large-scale visuotactile dataset with 198 objects, 1,980 interaction sequences, and 215 hours of multi-view observations, along with a novel markerless visuotactile 3D tracking pipeline for dense geometry and motion extraction. Our evaluation of state-of-the-art world models reveals key trade-offs between structural priors and scalability, establishing a benchmark for deformable object-centric world modeling.",
+      "highlights_zh": [
+        "大规模多视角触觉数据集",
+        "系统对比2D/3D世界模型",
+        "揭示结构先验与可扩展性权衡"
+      ]
+    },
+    {
+      "id": "2607.05377",
+      "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+      "authors": [
+        "Jiaqi Peng",
+        "Xiqian Yu",
+        "Delin Feng",
+        "Yuqiang Yang",
+        "Wenzhe Cai",
+        "Jing Xiong",
+        "Ganlin Yang",
+        "Jinliang Zheng",
+        "Jiafei Cao",
+        "Xueyuan Wei",
+        "Jiangmiao Pang",
+        "Yuan Shen",
+        "Tai Wang"
+      ],
+      "abstract": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics. We introduce Cortex, a bidirectionally aligned embodied agent framework with a customized planning interface that conveys executable and tractable subtask plans from high-level VLM to low-level VLA. Specifically, we standardize manipulation subtasks into 32 canonical skill primitives and inject tractability principles, such as representative object attributes and improved trajectory reachability, into the data generation pipeline. This enables automatic annotation of over 4k hours of open-source video data and generation of 30 hours of simulation data. We further devise an event-balanced sampling strategy to construct training data for fine-tuning the framework to better handle planning ambiguity during subtask transitions, enhanced by carefully designed harness engineering from task contexts to skill constraints during inference. Both open-loop VLM and closed-loop system evaluations demonstrate Cortex's efficacy, e.g., it outperforms monolithic baselines by 3.1% on Libero-long and 4.1% on RoboTwin. Notably, Cortex's generalist VLM enables zero-shot completion of unseen real-world long-horizon tasks, such as multi-stage chemistry experiments, by simply combining with a fine-tuned VLA-a capability infeasible through VLA fine-tuning alone.",
+      "published": "2026-07-06T17:55:05Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05377",
+      "pdf_url": "https://arxiv.org/pdf/2607.05377",
+      "summary_zh": "现有视觉-语言-动作模型在处理长时程任务时因马尔可夫性而表现不佳，且层次化方法存在高层规划与低层执行之间的语义鸿沟。本文提出Cortex框架，通过标准化32种技能原语并注入可执行性约束，实现高层VLM与低层VLA的双向对齐。实验表明Cortex在Libero-long和RoboTwin上分别提升3.1%和4.1%，并支持零样本完成真实世界长时程任务。",
+      "summary_en": "Current Vision-Language-Action models struggle with long-horizon tasks due to their Markovian nature, and hierarchical methods suffer from a gap between high-level planning semantics and low-level execution kinematics. Cortex introduces a bidirectionally aligned framework that standardizes manipulation subtasks into 32 canonical skill primitives with tractability principles, enabling automatic data annotation and fine-tuning for planning ambiguity. It outperforms monolithic baselines by 3.1% on Libero-long and 4.1% on RoboTwin, and achieves zero-shot completion of unseen real-world long-horizon tasks like multi-stage chemistry experiments.",
+      "highlights_zh": [
+        "双向对齐的层次化框架",
+        "Libero-long提升3.1%",
+        "零样本完成真实长时程任务"
+      ]
+    },
+    {
+      "id": "2607.05393",
+      "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+      "authors": [
+        "Raphaël Bonnet-Guerrini",
+        "Bruno Sanchez",
+        "Dominique Fouchez",
+        "Benjamin Racine",
+        "Maya Guy",
+        "Mariam Sabalbal",
+        "Manal Yassine",
+        "Vincenzo Piuri"
+      ],
+      "abstract": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
+      "published": "2026-07-06T17:59:58Z",
+      "primary_category": "astro-ph.IM",
+      "categories": [
+        "astro-ph.IM",
+        "astro-ph.GA",
+        "astro-ph.HE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05393",
+      "pdf_url": "https://arxiv.org/pdf/2607.05393",
+      "summary_zh": "时域巡天产生大量瞬变候选体，需要可靠的Real-Bogus分类，但人工标注成本高且存在噪声。本文提出一种无需人工标签的训练框架，通过注入模拟瞬变信号并利用含噪声的巡天数据，结合非对称协同教学与双网络模型实现鲁棒分类与不确定性量化。该方法在标注子集上表现优异，能有效恢复瞬变光变曲线类别，且混合不确定性量化策略在标定上接近更昂贵的集成方法。",
+      "summary_en": "Time-domain surveys generate numerous transient candidates requiring Real-Bogus classification, but human labels are costly and noisy. This paper proposes a human-label-free training framework using injected simulated transients and contaminated survey data, with asymmetric co-teaching and dual-network models for robust classification and uncertainty quantification. The method achieves strong performance on labeled subsets, recovers transient light-curve classes with high fidelity, and its hybrid uncertainty quantification approach provides competitive calibration at lower cost.",
+      "highlights_zh": [
+        "无需人工标签的弱监督训练",
+        "混合UQ标定接近深度集成",
+        "适用于未来巡天迁移部署"
+      ]
+    },
+    {
+      "id": "2607.05391",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "authors": [
+        "Jacky Kwok",
+        "Shulu Li",
+        "Pranav Atreya",
+        "Yuejiang Liu",
+        "Yixing Jiang",
+        "Chelsea Finn",
+        "Marco Pavone",
+        "Ion Stoica",
+        "Azalia Mirhoseini"
+      ],
+      "abstract": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
+      "published": "2026-07-06T17:59:35Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05391",
+      "pdf_url": "https://arxiv.org/pdf/2607.05391",
+      "summary_zh": "当前大语言模型主要通过扩展预训练、后训练和测试时计算来提升能力，但缺乏通用的验证机制来判断解决方案的正确性。本文提出LLM-as-a-Verifier框架，通过计算评分token logits分布的期望生成连续分数，实现无需额外训练的细粒度验证，并支持评分粒度、重复评估和标准分解三个维度的扩展。该方法在多个基准测试上达到最先进性能，并能作为任务进度估计和强化学习密集反馈的代理，显著提升样本效率。",
+      "summary_en": "Current LLM improvement relies on scaling pre-training, post-training, and test-time compute, but lacks a general verification mechanism for solution correctness. This paper introduces LLM-as-a-Verifier, which computes continuous scores from scoring token logits distribution expectation, enabling fine-grained verification without additional training and scaling along score granularity, repeated evaluation, and criteria decomposition. The method achieves state-of-the-art results on multiple benchmarks and serves as a proxy for task progress estimation and dense RL feedback, significantly improving sample efficiency.",
+      "highlights_zh": [
+        "连续概率分数实现细粒度验证",
+        "Terminal-Bench V2达86.5%最优",
+        "可扩展至RL反馈与任务监控"
+      ]
+    },
+    {
+      "id": "2607.05389",
+      "title": "InFlux++: Real and Synthetic Data for Estimating Dynamic Camera Intrinsics",
+      "authors": [
+        "Erich Liang",
+        "Caleb Kha-Uong",
+        "Chinmaya Saran",
+        "Sreemanti Dey",
+        "David W. Liu",
+        "Junhan Ouyang",
+        "Benjamin Zhou",
+        "Jia Deng"
+      ],
+      "abstract": "Camera intrinsics are vital for recovering 3D structure from 2D video. However, most 3D algorithms assume fixed intrinsics throughout a video, an assumption that often fails for real-world in-the-wild videos. Consequently, estimating per-frame intrinsics from RGB images is critical for making 3D methods robust to videos with dynamic intrinsics. InFlux previously advanced this research direction by establishing the first real-world benchmark with per-frame ground truth intrinsics for dynamic intrinsics videos. Nevertheless, existing methods remain inaccurate due to two obstacles: (i) training data is scarce and lacks intrinsics diversity; and (ii) benchmarks, including InFlux, have limited scene and camera motion diversity, making it difficult to properly evaluate methods. To address both gaps, we present InFlux++, consisting of two components. InFlux++ Synth is a large-scale procedurally generated synthetic video dataset with 441K+ annotated frames from 1841 high-resolution videos, providing accurate per-frame ground truth intrinsics for training dynamic intrinsics prediction models; a subset also includes per-frame pose, depth, and normals. The videos feature rich intrinsics diversity through changes in camera zoom and focus, as well as dynamic objects and realistic rendering effects such as lens distortion and defocus blur. InFlux++ Real is a large-scale real-world benchmark that extends InFlux with 514K+ newly captured frames across 334 high-resolution videos, spanning a wider range of scenes and camera motions. Finetuning existing intrinsics prediction methods on InFlux++ Synth consistently improves focal length estimation across both InFlux++ Real and InFlux, suggesting that synthetic supervision is promising for RGB-based intrinsics prediction. For the dataset, benchmark, code, videos, submission instructions, and live leaderboard, please visit https://influx.cs.princeton.edu/ .",
+      "published": "2026-07-06T17:58:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.05389",
+      "pdf_url": "https://arxiv.org/pdf/2607.05389",
+      "summary_zh": "现有3D算法大多假设视频中相机内参固定，但真实视频常因变焦、对焦等导致内参动态变化，而训练数据稀缺且基准场景有限。InFlux++通过大规模合成数据集（44万+帧，含丰富内参变化）和扩展的真实世界基准（51万+帧，场景更多样）来填补这一空白。实验表明，在合成数据上微调现有方法能持续提升焦距估计精度，证明合成监督对RGB内参预测的有效性。",
+      "summary_en": "Most 3D algorithms assume fixed camera intrinsics, but real-world videos often have dynamic changes due to zoom and focus, while training data and benchmarks are limited. InFlux++ addresses this by introducing a large-scale synthetic dataset (441K+ frames with diverse intrinsics) and an extended real-world benchmark (514K+ frames with broader scenes). Finetuning existing methods on synthetic data consistently improves focal length estimation, demonstrating the promise of synthetic supervision for RGB-based intrinsics prediction.",
+      "highlights_zh": [
+        "首个大规模动态内参合成+真实基准",
+        "合成数据微调提升焦距估计精度",
+        "数据与基准开源，促进动态内参研究"
+      ]
+    }
+  ]
+}
