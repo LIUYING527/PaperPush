@@ -1,0 +1,306 @@
+{
+  "date": "2026-07-08",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.06565",
+      "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
+      "authors": [
+        "Tianjiao Yu",
+        "Xinzhuo Li",
+        "Yifan Shen",
+        "Onkar Susladkar",
+        "Yuanzhe Liu",
+        "Xiaona Zhou",
+        "Ismini Lourentzou"
+      ],
+      "abstract": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatenate text and 3D tokens into a flat sequence and rely on self-attention, collapsing coarse structural cues and fine geometric details into one undifferentiated representation. We introduce ELSA3D, a unified 3D model that addresses this with elastic semantic anchoring, structuring language and geometric reasoning jointly along matched abstraction scales. ELSA3D represents geometry with a scale-aware octree tokenizer and introduces Anchor Tokens, sparse cross-modal units that select semantic cues, route them to the most relevant 3D scale, retrieve scale-specific geometric evidence, and write the fused signal back into the unified representation, keeping interaction sparse yet precise. A lightweight per-block router makes both computation and reasoning elastic, choosing which text tokens instantiate anchors at which geometric scale so that cross-modal capacity concentrates where alignment is most needed. ELSA3D achieves state-of-the-art performance across image-to-3D generation, text-to-3D generation, and 3D captioning, outperforming the strongest unified baseline while roughly halving FLOPs and inference latency relative to the non-elastic version of the same model.",
+      "published": "2026-07-07T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06565",
+      "pdf_url": "https://arxiv.org/pdf/2607.06565",
+      "summary_zh": "现有统一3D基础模型将文本与3D令牌简单拼接，导致文本-3D交互隐式且结构细节与几何细节混淆。ELSA3D通过弹性语义锚定机制，利用尺度感知八叉树分词器和锚点令牌在匹配的抽象尺度上联合结构化语言与几何推理。该方法在图像/文本到3D生成和3D描述任务上达到最优性能，同时相比非弹性版本减少约一半计算量和推理延迟。",
+      "summary_en": "Existing unified 3D models concatenate text and 3D tokens into a flat sequence, causing implicit text-3D interaction and collapsed structural/geometric details. ELSA3D introduces elastic semantic anchoring with a scale-aware octree tokenizer and Anchor Tokens to jointly structure language and geometric reasoning along matched abstraction scales. It achieves state-of-the-art on image-to-3D, text-to-3D generation and 3D captioning, while roughly halving FLOPs and inference latency compared to its non-elastic counterpart.",
+      "highlights_zh": [
+        "弹性语义锚定与尺度感知八叉树",
+        "SOTA性能且计算量减半",
+        "统一3D理解与生成的高效框架"
+      ]
+    },
+    {
+      "id": "2607.06546",
+      "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
+      "authors": [
+        "Shervin Khalafi",
+        "Igor Krawczuk",
+        "Sergio Rozada",
+        "Charilaos Kanatsoulis",
+        "Antonio G Marques",
+        "Alejandro Ribeiro"
+      ],
+      "abstract": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoising graphs. However, our principled understanding of attention-based graph denoising remains limited, making it unclear whether standard attention is the right mechanism for this task. Here we show that, under a denoising objective, linear attention is suboptimal and can only learn an average spectral denoising filter over the training distribution. This creates a fundamental limitation as graphs often vary spectrally across the distribution. To overcome this limitation, we introduce Spectral Attention, which directly utilizes the input graph spectrum and provably outperforms linear attention by a margin governed by the spectral diversity of the distribution. We then derive Graph Convolutional Attention (GCA), a practical and permutation-equivariant realization of this idea that implements spectral denoising through graph-filtered queries and keys. For stochastic block models, GCA provably matches the idealized Spectral Attention mechanism. We further show that the softmax operation, that follows the attention, provides additional denoising by approximately projecting noisy eigenvectors onto the clean eigenspace. Empirically, replacing linear attention with GCA consistently improves graph denoising and diffusion on synthetic and real datasets, with gains strongly correlated with spectral diversity. In DiGress, GCA matches standard graph-transformer performance without computing expensive structural features, and when combined with the recently proposed PEARL positional encodings, avoids explicit eigendecomposition computations resulting in faster inference without degrading quality. The code can be found here: github.com/shervinkhalafi/graph_conv_att",
+      "published": "2026-07-07T17:52:17Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06546",
+      "pdf_url": "https://arxiv.org/pdf/2607.06546",
+      "summary_zh": "图去噪是图学习与扩散模型的核心问题，但现有注意力机制在图去噪中的原理性理解有限。本文从谱视角出发，提出图卷积注意力（GCA），通过图滤波的查询和键实现谱去噪，并证明其在线性注意力基础上显著提升性能。实验表明GCA在合成与真实数据集上一致改善图去噪与扩散效果，且与PEARL位置编码结合可避免显式特征分解，加速推理。",
+      "summary_en": "Denoising graphs is fundamental yet poorly understood in attention-based models. This paper introduces Graph Convolutional Attention (GCA), which leverages spectral denoising via graph-filtered queries and keys, provably outperforming linear attention. Empirically, GCA consistently improves graph denoising and diffusion, and combined with PEARL positional encodings, it avoids explicit eigendecomposition for faster inference.",
+      "highlights_zh": [
+        "提出谱注意力机制克服线性注意力局限",
+        "GCA在合成与真实数据集上一致提升去噪效果",
+        "与PEARL结合避免特征分解，加速推理"
+      ]
+    },
+    {
+      "id": "2607.06532",
+      "title": "GraphBU: MILP Instance Generation with Graph-Native Block Units",
+      "authors": [
+        "Xiaolei Guo",
+        "Chenyu Zhou",
+        "Jianghao Lin",
+        "Dongdong Ge"
+      ],
+      "abstract": "Mixed-integer linear programming (MILP) instances used for solver development are hard to obtain when models come from private or application-specific pipelines. A generator must keep the structure that solvers and learned policies rely on. Existing general generators usually choose their generation unit from a formulation template, summary statistics, local graph edits, or blocks found after recombination. These units do not explicitly record how a local part of the MILP is coupled to the rest of the instance. We propose GraphBU, a graph-native generator whose basic unit is a local subproblem plus its interface. The method promotes coupling nodes into master constraints or boundary variables and uses the resulting block units for compatibility-checked replacement. The analysis focuses on the properties needed by this construction: promotion separates interfaces, replacement can preserve feasibility under an interface-slack condition, and the graph construction is invariant to row-column permutations. On MILP instances generation, this unit keeps graph statistics close to the source family, preserves feasibility on most datasets, and improves downstream Predict-and-Search training. Genrated by GraphBU, The average graph-statistical similarity was approximately 0.934, the average feasibility was approximately 96.7%, and the average increase in the main index of downstream PS was approximately 8.0%.",
+      "published": "2026-07-07T17:39:06Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06532",
+      "pdf_url": "https://arxiv.org/pdf/2607.06532",
+      "summary_zh": "混合整数线性规划实例因隐私或专用流程而难以获取，现有生成器未能显式记录局部子问题与整体实例的耦合关系。本文提出GraphBU，以局部子问题及其接口为基本单元，通过提升耦合节点为约束或边界变量并基于兼容性检查替换块单元来生成实例。该方法在图统计相似度（约0.934）、可行性（约96.7%）和下游预测搜索训练指标（提升约8.0%）上均表现优异。",
+      "summary_en": "Obtaining MILP instances for solver development is challenging due to private or application-specific pipelines, and existing generators fail to explicitly capture how local subproblems couple with the rest of the instance. GraphBU proposes a graph-native generator using local subproblems with interfaces as basic units, promoting coupling nodes into master constraints or boundary variables and performing compatibility-checked block replacement. It achieves high graph-statistical similarity (~0.934), feasibility (~96.7%), and an ~8.0% improvement in downstream Predict-and-Search training.",
+      "highlights_zh": [
+        "提出图原生块单元生成方法",
+        "图统计相似度达0.934",
+        "可行性96.7%，下游任务提升8%"
+      ]
+    },
+    {
+      "id": "2607.06542",
+      "title": "On the feasibility of dependency parsing of non-human sequences without a gold standard. Is evaluation possible in other species?",
+      "authors": [
+        "Ramon Ferrer-i-Cancho",
+        "Catherine Hobaiter",
+        "Thore Bergman",
+        "Morgan Gustison"
+      ],
+      "abstract": "Dependency parsing consists of finding a tree representation for a sequence. Unsupervised dependency parsing aims to develop parsing methods without a gold standard during model training. In human languages, an unsupervised parser can be evaluated because some gold standard is usually available or can be created. For other species, a gold standard is unknown. Thus one may conclude that it is impossible to determine the accuracy of an unsupervised parser and, consequently, dependency parsing is unfeasible in other species. However, here we apply recent advances in network science to demonstrate that the proportion of correct edges retrieved by a parser must be high for the sequences of vocalizations or gestures that non-human primates produce due to the fast decay of the sequence length distribution. In contrast, human language sequences lack that property. Therefore, evaluation without a gold standard is feasible in non-human primates but a hard problem in humans.",
+      "published": "2026-07-07T17:47:26Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06542",
+      "pdf_url": "https://arxiv.org/pdf/2607.06542",
+      "summary_zh": "无监督依存解析在非人类物种中因缺乏金标准而难以评估。本文利用网络科学的最新进展，提出通过序列长度分布的快速衰减来间接评估解析器正确性。结果表明，非人灵长类动物的发声或手势序列因分布特性而可评估，但人类语言则难以实现。",
+      "summary_en": "Unsupervised dependency parsing faces evaluation challenges in non-human species due to the lack of a gold standard. This work applies recent advances in network science to show that the proportion of correct edges can be inferred from the fast decay of sequence length distribution. The method enables feasible evaluation in non-human primates but remains a hard problem for human language.",
+      "highlights_zh": [
+        "利用网络科学评估无监督解析",
+        "非人灵长类序列可间接评估正确率",
+        "人类语言序列缺乏快速衰减特性"
+      ]
+    },
+    {
+      "id": "2607.06540",
+      "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
+      "authors": [
+        "Zhenyu Liu",
+        "Yunxin Li",
+        "Xuanyu Zhang",
+        "Qixun Teng",
+        "Shenyuan Jiang",
+        "Haolan Chen",
+        "Minjun Zhao",
+        "Fanbo Meng",
+        "Yu Xu",
+        "Yancheng He",
+        "Baotian Hu",
+        "Haizhou Li",
+        "Min Zhang"
+      ],
+      "abstract": "Developing seamless, high-performance, native intelligent full-duplex Spoken Language Models (SLMs) remains a critical challenge and long-standing goal for the speech and NLP community. Despite notable progress, recent endeavors are fundamentally constrained by severe modality interference, which causes substantial knowledge degradation and compromises semantic integrity -- ultimately making full-duplex SLMs feel unnatural and unintelligent. In this paper, through an exhaustive fine-grained analysis of model optimization dynamics, we uncover the root cause of such performance degradation, revealing that modality interference arises from inherent gradient conflicts between acoustic and semantic modeling when the two modalities are forced to share a deep parameter space. Guided by this key insight, we introduce Lychee-FD, a native end-to-end full-duplex framework designed to mitigate modality interference. Importantly, we propose a hierarchical parameter separation strategy that decouples conflicting modalities in deep layers while preserving cross-modality coherence via a dedicated semantic alignment channel. Extensive experiments on multiple full-duplex benchmarks demonstrate that our method significantly advances the state of the art, yielding substantial improvements in both speech intelligence (+7.4% on Spoken QA) and full-duplex interaction fluidity (+28.5% on FullDuplexBench 1.5) without compromising inference efficiency. To the best of our knowledge, this work is the first to achieve two key advances: 1) uncovering and elucidating the root cause of modality interference in full-duplex SLMs, and 2) designing an elegant hierarchical model together with a practical solution for seamless, high-performance, native intelligent full-duplex SLMs.",
+      "published": "2026-07-07T17:43:36Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06540",
+      "pdf_url": "https://arxiv.org/pdf/2607.06540",
+      "summary_zh": "全双工口语语言模型面临严重的模态干扰问题，导致知识退化和语义完整性受损。本文通过分析模型优化动态，揭示了模态干扰源于声学与语义建模在深层参数空间中的梯度冲突，并提出Lychee-FD框架，采用分层参数分离策略解耦冲突模态，同时通过语义对齐通道保持跨模态一致性。实验表明，该方法在口语问答和全双工交互流畅性上分别提升7.4%和28.5%，且不牺牲推理效率，首次阐明了模态干扰的根源并提供了实用解决方案。",
+      "summary_en": "Full-duplex Spoken Language Models suffer from severe modality interference causing knowledge degradation and semantic compromise. This paper identifies gradient conflicts between acoustic and semantic modeling in shared deep parameter spaces as the root cause, and proposes Lychee-FD with hierarchical parameter separation and a semantic alignment channel to decouple modalities while preserving coherence. Experiments show +7.4% on Spoken QA and +28.5% on FullDuplexBench 1.5 without efficiency loss, marking the first work to both uncover the root cause of modality interference and provide a practical solution.",
+      "highlights_zh": [
+        "分层参数分离解耦模态干扰",
+        "口语问答+7.4%，交互流畅性+28.5%",
+        "首次揭示全双工SLM模态干扰根源"
+      ]
+    },
+    {
+      "id": "2607.06564",
+      "title": "Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation",
+      "authors": [
+        "Jiaming Liu",
+        "Qingpo Wuwu",
+        "Nuowei Han",
+        "Hao Chen",
+        "Zhuoyang Liu",
+        "Fan Fei",
+        "Yueru Jia",
+        "Chenyang Gu",
+        "Yandong Guo",
+        "Boxin Shi",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Recently, Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse tasks. However, effective robotic manipulation in physical environments fundamentally requires geometric understanding and spatial reasoning. While some VLA approaches attempt to incorporate 3D information, they are constrained by limited data availability and geometric information loss in current 3D encoding pipelines, and fail to jointly capture 3D geometry and temporally structured actions in dynamic environments. To address these limitations, we introduce Lift3D-VLA, a unified VLA framework that equips models with explicit 3D point cloud reasoning and enables temporally coherent action generation. First, building upon our previous work Lift3D, an enhanced 2D model-lifting strategy is proposed to geometrically align 3D points with pretrained 2D positional embeddings. This design enables direct point-cloud encoding within the VLA vision encoder while minimizing spatial information loss. Based on explicit 3D inputs, we propose Geometry-Centric Masked Autoencoding (GC-MAE), a dual-objective self-supervised framework that reconstructs the current point cloud while predicting its future geometric evolution. This formulation allows the 2D vision encoder to internalize both 3D structure and physical dynamics. To fully exploit 3D representations, we further design layer-wise temporal action modeling, which leverages multiple layers of the LLM to collaboratively predict action chunks, enabling temporally consistent predictions. Across 22 simulated tasks and 8 real-world manipulation tasks, Lift3D-VLA achieves 10.8% and 11.1% higher mean success rates on MetaWorld and RLBench than the best-performing prior VLA methods, and outperforms the strongest real-world baseline by 4 percentage points, while exhibiting stronger generalization to out-of-distribution perturbations.",
+      "published": "2026-07-07T17:59:47Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06564",
+      "pdf_url": "https://arxiv.org/pdf/2607.06564",
+      "summary_zh": "现有VLA模型在机器人操作中缺乏3D几何与动态理解能力，且受限于数据不足和编码信息损失。本文提出Lift3D-VLA框架，通过改进的2D模型提升策略实现3D点云直接编码，并设计几何中心掩码自编码与分层时序动作建模来联合学习3D结构与物理动态。在22个模拟和8个真实任务中，该方法相比最优基线分别提升10.8%和11.1%的成功率，并展现出更强的分布外泛化能力。",
+      "summary_en": "Existing VLA models lack 3D geometry and dynamics understanding for robotic manipulation, limited by data scarcity and information loss in 3D encoding. Lift3D-VLA introduces an enhanced 2D model-lifting strategy for direct point-cloud encoding, along with Geometry-Centric Masked Autoencoding and layer-wise temporal action modeling to jointly capture 3D structure and physical dynamics. It achieves 10.8% and 11.1% higher success rates on MetaWorld and RLBench over prior VLA methods, and outperforms real-world baselines by 4%, with stronger generalization to out-of-distribution perturbations.",
+      "highlights_zh": [
+        "提出3D点云直接编码与动态自监督学习",
+        "模拟任务成功率提升10.8%，真实任务提升4%",
+        "增强机器人对3D几何与动态环境的泛化能力"
+      ]
+    },
+    {
+      "id": "2607.06560",
+      "title": "Vision as Unified Multimodal Generation",
+      "authors": [
+        "Xiaoyang Han",
+        "Jianhua Li",
+        "Kewang Deng",
+        "Zukai Chen",
+        "Xuanke Shi",
+        "Sihan Wang",
+        "Boxuan Li",
+        "Linyan Wang",
+        "Siyi Xie",
+        "Xin You",
+        "Jinsheng Quan",
+        "Zhongang Cai",
+        "Haiwen Diao",
+        "Ziwei Liu",
+        "Lei Yang",
+        "Dahua Lin",
+        "Quan Wang"
+      ],
+      "abstract": "We formulate computer vision as unified multimodal generation, where heterogeneous visual tasks are expressed in the native text and image generation spaces of a unified multimodal model, without task-specific architectures. Under this formulation, SenseNova-Vision uses natural-language instructions and optional visual prompts to specify tasks, target regions or views, and decoding conventions, and generates responses as text for symbolic outputs, images for dense spatial predictions, or mixed text-and-image outputs for compositional tasks. To support large-scale training, we convert diverse computer vision annotations into instruction-response examples compatible with these generation spaces, resulting in the SenseNova-Vision Corpus, a computer-vision instruction-response corpus spanning text, image, and mixed targets. Starting from an off-the-shelf pretrained unified multimodal model, SenseNova-Vision is trained primarily on this corpus, with auxiliary multimodal data used as a capability-preserving mixture, and requires no task-specific prediction heads or architectural modifications. The resulting model covers a broad range of vision tasks, including detection, OCR, keypoint estimation, segmentation, depth estimation, surface normal prediction, point maps, and camera pose estimation, while supporting language-defined variants that combine category, color, region, and other visual cues. Experiments show that a single unified model can match leading task-specialized systems across structured visual understanding, dense geometric prediction, segmentation, and multi-view visual geometry. These results suggest unified multimodal generation as a scalable route for integrating computer vision capabilities into general-purpose foundation models. The model and corpus are publicly available.",
+      "published": "2026-07-07T17:58:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06560",
+      "pdf_url": "https://arxiv.org/pdf/2607.06560",
+      "summary_zh": "计算机视觉任务通常需要专用架构，限制了通用模型的发展。本文提出将视觉任务统一为多模态生成问题，利用自然语言指令和可选视觉提示，在统一模型中同时处理文本和图像输出。实验表明，单一模型在多种视觉任务上可媲美专用系统，为通用基础模型集成视觉能力提供了可扩展路径。",
+      "summary_en": "Computer vision tasks typically require task-specific architectures, limiting the development of general-purpose models. This paper formulates vision as unified multimodal generation, using natural-language instructions and optional visual prompts to handle both text and image outputs within a single model. Experiments show that a single unified model matches specialized systems across diverse tasks, offering a scalable route for integrating vision into foundation models.",
+      "highlights_zh": [
+        "统一多模态生成框架",
+        "单一模型媲美专用系统",
+        "无需任务特定架构修改"
+      ]
+    },
+    {
+      "id": "2607.06563",
+      "title": "Embodied Human-Robot Interaction via Acoustics: A MARL Approach with AcoustoBots for Spatial Data Physicalization",
+      "authors": [
+        "Shiqi Liu",
+        "Narsimlu Kemsaram",
+        "Prateek Mittal",
+        "Pengyuan Wei",
+        "Sriram Subramanian"
+      ],
+      "abstract": "Traditional data physicalization is often static and disconnected from real environments, limiting its ability to convey embodied spatial dynamics and engage users. To address this limitation, we present AcoustoBots, a mobile acoustophoretic data-physicalization platform in which TurtleBot3 robots carry upward-facing 8 x 8 ultrasonic phased arrays. Each array levitates a particle whose height (1-10 cm) encodes a local urban scalar value, such as population density, noise, or traffic. A MARL (Multi-Agent Reinforcement Learning) policy based on the Multi-Agent Deep Deterministic Policy Gradient (MADDPG) algorithm, with centralized training and decentralized execution, selects collision-aware navigation actions, while a high-rate Gerchberg-Saxton-Phased Array of Transducers (GS-PAT) acoustic controller maintains trap stability and updates array phases to achieve the commanded height during motion. This creates a closed perception-display-action loop. We evaluate single-robot city-to-city traversal and dual-robot cooperative coverage on a 4 m x 3 m scaled UK map using PhaseSpace-based localization for repeatable multi-robot trials. Results show stable in-motion levitation and consistent, location-dependent height rendering, with task success rates of 90% and 80% for the single and dual-robot regimes, respectively, over 10 trials per regime, and low collision counts. These findings support acoustophoretic levitation as a simple, glanceable, robot-mediated communication cue for embodied human-robot interaction in spatial analytics.",
+      "published": "2026-07-07T17:59:44Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06563",
+      "pdf_url": "https://arxiv.org/pdf/2607.06563",
+      "summary_zh": "传统数据物理化通常是静态的，难以传达空间动态和吸引用户参与。为此，我们提出AcoustoBots平台，利用搭载超声相控阵的移动机器人通过声悬浮粒子高度编码城市数据，并采用基于MADDPG的多智能体强化学习实现碰撞感知导航与稳定悬浮控制。实验表明，单/双机器人任务成功率分别达90%和80%，验证了声悬浮作为机器人介导的直观交互方式在空间数据分析中的有效性。",
+      "summary_en": "Traditional data physicalization is often static and disconnected from real environments, limiting its ability to convey spatial dynamics. We present AcoustoBots, a mobile platform where TurtleBot3 robots carry ultrasonic phased arrays to levitate particles encoding urban data, using a MARL policy (MADDPG) for collision-aware navigation and a GS-PAT controller for stable in-motion levitation. Results show 90% and 80% task success rates for single and dual-robot regimes, demonstrating acoustophoretic levitation as an effective, glanceable communication cue for embodied human-robot interaction.",
+      "highlights_zh": [
+        "声悬浮+移动机器人数据物理化",
+        "单/双机器人任务成功率90%/80%",
+        "为空间分析提供直观人机交互方式"
+      ]
+    },
+    {
+      "id": "2607.06559",
+      "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+      "authors": [
+        "Haoyu Zhao",
+        "Xingyue Zhao",
+        "Siteng Huang",
+        "Xin Li",
+        "Deli Zhao",
+        "Zhongyu Li"
+      ],
+      "abstract": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+      "published": "2026-07-07T17:58:15Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06559",
+      "pdf_url": "https://arxiv.org/pdf/2607.06559",
+      "summary_zh": "开放世界机器人操作需要理解场景的3D结构在交互下的动态变化。本文提出RynnWorld-4D，一种联合生成未来RGB、深度图和光流的4D世界模型，通过三分支架构和跨模态注意力实现外观、几何与运动的一致性。该方法在真实世界灵巧双臂操作任务上达到最先进性能，尤其在需要空间精度和时间协调的任务中表现优异。",
+      "summary_en": "Robotic manipulation in open worlds requires understanding how 3D scenes move under interaction. This paper introduces RynnWorld-4D, a generative model that jointly predicts future RGB, depth, and optical flow via a tri-branch architecture with cross-modal attention, ensuring consistent appearance, geometry, and motion. It achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, excelling in spatial precision and temporal coordination.",
+      "highlights_zh": [
+        "联合生成RGB-DF的4D世界模型",
+        "灵巧双臂操作任务SOTA性能",
+        "依赖大规模伪标签数据集训练"
+      ]
+    },
+    {
+      "id": "2607.06544",
+      "title": "Rethinking Indic AI from a Lens of Cultural Heritage Preservation",
+      "authors": [
+        "Aparna Madva",
+        "Sharath Srivatsa",
+        "Srinath Srinivasa",
+        "Tulika Saha"
+      ],
+      "abstract": "As Artificial Intelligence (AI) makes inroads into different parts of the Indian subcontinent, there is significant interest in studying how AI impacts the linguistic and cultural foundations of this civilization. AI is seen as a ''double-edged sword'' where on the one hand, it can enable access and inclusion for a large population, on the other, it can homogenize worldviews and exclude underrepresented languages and worldviews. In this paper, we try to characterize this problem by addressing the extensive characteristic nature of Indian linguistics and the way they closely connect to cultural practices and worldview. We then perform a longitudinal survey of how Natural Language Processing (NLP) techniques have evolved in this space, tracing the historical development of Indic NLP, covering key milestones, methodological shifts, and resource creation efforts. In addition, the paper also examines the structural and sociolinguistic characteristics of Indian languages, such as rich morphology, complex scripts and grammar rules, diglossia, and large dialectal variation, and explains how these create unique challenges for building AI foundation models. We then discuss the growing role of Indic foundation models and analyze how these models address these long-standing resource and representation gaps. Finally, we propose a research direction called 'Culture Sensing', which re-imagines AI based on hermeneutic reasoning. Culture Sensing aims to address open problems such as ensuring equitable performance across low-resource languages and producing outputs that are culturally meaningful. By bringing together past work, current techniques, and emerging trends, this paper outlines research directions that can guide the next phase of Indic NLP and contribute to the development of more robust and inclusive Indic foundation models.",
+      "published": "2026-07-07T17:51:10Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.06544",
+      "pdf_url": "https://arxiv.org/pdf/2607.06544",
+      "summary_zh": "本文探讨了人工智能在印度次大陆应用时对语言和文化基础的双刃剑效应，即促进包容性同时可能同化世界观。通过纵向调查印度自然语言处理技术的历史演进，分析了印度语言的结构与社会语言学特性（如丰富形态、复杂语法、双言现象等）对构建AI基础模型带来的独特挑战。提出了名为“文化感知”的研究方向，基于诠释学推理重新构想AI，旨在解决低资源语言公平性和文化意义输出等开放问题。",
+      "summary_en": "This paper examines the dual-edged impact of AI on the linguistic and cultural foundations of the Indian subcontinent, highlighting both inclusion and homogenization risks. It conducts a longitudinal survey of Indic NLP evolution, analyzing structural and sociolinguistic challenges (e.g., rich morphology, diglossia) for foundation models. The proposed 'Culture Sensing' direction, grounded in hermeneutic reasoning, aims to ensure equitable performance across low-resource languages and culturally meaningful outputs.",
+      "highlights_zh": [
+        "提出文化感知新研究方向",
+        "分析印度语言结构挑战",
+        "推动包容性基础模型发展"
+      ]
+    }
+  ]
+}
