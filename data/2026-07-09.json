@@ -1,0 +1,351 @@
+{
+  "date": "2026-07-09",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.07708",
+      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+      "authors": [
+        "Chen Tang",
+        "Yizhou Wang",
+        "Jianyu Wu",
+        "Lintao Wang",
+        "Shixiang Tang",
+        "Pengze Li",
+        "Encheng Su",
+        "Jun Yao",
+        "Jiabei Xiao",
+        "Yuqi Shi",
+        "Jielan Li",
+        "Hongxia Hao",
+        "Zhangyang Gao",
+        "Fang Wu",
+        "Ben Fei",
+        "Xiangyu Yue",
+        "Pan Tan",
+        "Bozitao Zhong",
+        "Jinouwen Zhang",
+        "Aoran Wang",
+        "Yan Lu",
+        "Jiaheng Liu",
+        "Xinzhu Ma",
+        "Liang Hong",
+        "Mingyue Zheng",
+        "Phil Torr",
+        "Bowen Zhou",
+        "Wanli Ouyang",
+        "Lei Bai"
+      ],
+      "abstract": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.",
+      "published": "2026-07-08T17:59:59Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07708",
+      "pdf_url": "https://arxiv.org/pdf/2607.07708",
+      "summary_zh": "结构-性质关系是生物学、化学和材料科学的基础，但现有AI模型难以在保留领域原生结构信息的同时进行可解释推理。本文提出SciReasoner，一种多模态科学基础模型，通过将坐标、拓扑和周期连接离散化为统一的结构感知词汇，将结构标记作为可寻址证据单元进行推理。在86个基准测试中，SciReasoner在67个任务上达到最优性能，其推理轨迹在98%的案例中被专家认为优于或堪比前沿大语言模型，实现了准确预测与可解释科学推理的结合。",
+      "summary_en": "Structure-property relationships are fundamental to biology, chemistry, and materials science, but existing AI models struggle to preserve domain-native structural information while enabling interpretable reasoning. This paper introduces SciReasoner, a multimodal scientific foundation model that discretizes coordinates, topologies, and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks, with its reasoning traces preferred or comparable to a frontier large language model in 98% of cases, connecting accurate prediction with interpretable scientific inference.",
+      "highlights_zh": [
+        "统一结构感知词汇实现原生推理",
+        "67/86基准达最优，Fmax提升至0.55",
+        "可解释推理获98%专家认可"
+      ]
+    },
+    {
+      "id": "2607.07707",
+      "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "authors": [
+        "Yair Feldman",
+        "Linxi Zhao",
+        "Nathan Godey",
+        "Dongyoung Go",
+        "Yilun Hua",
+        "Kilian Q. Weinberger",
+        "Jennifer J. Sun",
+        "Yoav Artzi"
+      ],
+      "abstract": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches knowledge from the KB as needed. This recently introduced paradigm provides multiple advantages, including knowledge control capabilities that remain beyond conventional LLMs. We propose continuous-query LMLM (CO-LMLM), where the KB pairs continuous keys with textual knowledge values, a significant departure from prior reliance on relational KB and queries. CO-LMLM generates flexible vector queries at minimal cost, while still integrating human-readable and attributable retrieved knowledge into its generation. We pair this design with an annotation pipeline that tags free-form factual spans in arbitrary text, removing prior work's restriction to Wikipedia. Across pretraining on Wikipedia and FineWeb-Edu and at multiple model scales, CO-LMLM outperforms prior LMLMs and vanilla LLMs in both perplexity and factual precision. At 360M scale, this includes lower perplexity than models pretrained on 40x more data, and SimpleQA-verified performance that is in line with gpt-4o-mini and higher than Claude Sonnet 4.5.",
+      "published": "2026-07-08T17:59:45Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07707",
+      "pdf_url": "https://arxiv.org/pdf/2607.07707",
+      "summary_zh": "传统大语言模型依赖权重记忆知识，而有限记忆语言模型通过外部知识库实现知识控制但受限于关系型查询。本文提出连续查询LMLM，用连续键值对替代关系型查询，并设计自动标注流水线处理任意文本。在维基百科和FineWeb-Edu上预训练后，360M参数模型在困惑度和事实精度上超越先前模型，甚至优于40倍数据量的模型和GPT-4o-mini。",
+      "summary_en": "Limited memory language models externalize knowledge to a KB but rely on relational queries. CO-LMLM introduces continuous key-value pairs for flexible vector queries and an annotation pipeline for arbitrary text. At 360M scale, it achieves lower perplexity than models trained on 40x more data and factual accuracy comparable to GPT-4o-mini.",
+      "highlights_zh": [
+        "连续键值对替代关系查询",
+        "360M模型超越40倍数据量模型",
+        "事实精度媲美GPT-4o-mini"
+      ]
+    },
+    {
+      "id": "2607.07706",
+      "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+      "authors": [
+        "Anna Kuzina",
+        "Paul N. Whatmough",
+        "Babak Ehteshami Bejnordi"
+      ],
+      "abstract": "The quadratic cost of causal self-attention severely bottlenecks long-context transformer inference. While numerous post hoc linearization pipelines exist, it is difficult to identify which components preserve model quality. This work isolates the effect of state update design in a strict frozen-backbone regime. We show that softmax relies on key-dependent, rank-1 orthogonal projections, elucidating why delta-style networks outperform purely gated accumulation. We identify a potential source of approximation errors and introduce structural interventions, specifically sink tokens, short convolutions, and fixed-budget cache routing, which reduces the remaining gap. We scale this linearization approach across LLaMA and Qwen models up to 32B parameters, outperforming prior post hoc baselines on MMLU and matching the long-context retrieval of complex adaptive-caching frameworks.",
+      "published": "2026-07-08T17:59:09Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07706",
+      "pdf_url": "https://arxiv.org/pdf/2607.07706",
+      "summary_zh": "因果自注意力机制的二次复杂度严重限制了长上下文Transformer推理的效率。本文在严格冻结骨干网络条件下，隔离分析了状态更新设计的影响，揭示了softmax依赖关键依赖的秩1正交投影，并引入sink token、短卷积和固定预算缓存路由等结构干预来减少近似误差。该方法在LLaMA和Qwen模型上扩展到32B参数，在MMLU上优于先前事后线性化基线，并匹配了复杂自适应缓存框架的长上下文检索性能。",
+      "summary_en": "The quadratic cost of causal self-attention severely bottlenecks long-context transformer inference. This work isolates the effect of state update design in a frozen-backbone regime, revealing that softmax relies on key-dependent rank-1 orthogonal projections, and introduces structural interventions like sink tokens, short convolutions, and fixed-budget cache routing to reduce approximation errors. Scaling this approach to LLaMA and Qwen models up to 32B parameters, it outperforms prior post hoc baselines on MMLU and matches the long-context retrieval of complex adaptive-caching frameworks.",
+      "highlights_zh": [
+        "揭示softmax秩1投影机制",
+        "32B模型MMLU超越基线",
+        "匹配复杂自适应缓存框架"
+      ]
+    },
+    {
+      "id": "2607.07693",
+      "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+      "authors": [
+        "Eric Zhu",
+        "Abhinav Shrivastava",
+        "Soumik Mukhopadhyay"
+      ],
+      "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that substantially improve the feedback efficiency of diffusion RLHF while preserving generalization to unseen prompts. Our key observation is that reward information in diffusion trajectories is unevenly distributed: not all denoising timesteps or trajectories contribute equally to learning from a reward signal. By emphasizing informative timesteps and trajectories during optimization, we obtain more effective gradient updates. First, we introduce a per-timestep weighting scheme that reweights denoising steps during policy optimization. We theoretically connect this weighting to the optimal convergence properties of proximal policy optimization (PPO) and approximate the resulting weighting trend empirically. Second, we introduce a replay mechanism that prioritizes informative trajectories, enabling the model to reuse past samples instead of repeatedly querying new rewards. Together, these strategies significantly improve the feedback efficiency of diffusion RLHF. Under identical hyperparameter settings, our approach achieves up to a 6$\\times$ improvement in sample efficiency compared to widely used diffusion RLHF baselines.",
+      "published": "2026-07-08T17:49:49Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07693",
+      "pdf_url": "https://arxiv.org/pdf/2607.07693",
+      "summary_zh": "扩散模型RLHF面临反馈效率低下的问题，因为现有方法需要大量人类或奖励模型评估。本文提出两种互补策略：基于时间步的加权方案和基于优势的重放机制，分别强调信息量大的去噪步骤和轨迹。这些方法在相同超参数下实现了高达6倍的样本效率提升，同时保持了对未见提示的泛化能力。",
+      "summary_en": "Diffusion RLHF suffers from low feedback efficiency due to heavy reliance on human or reward model evaluations. This paper proposes two complementary strategies: a per-timestep weighting scheme and an advantage-based replay mechanism, which emphasize informative denoising steps and trajectories respectively. These methods achieve up to 6× improvement in sample efficiency under identical hyperparameters while preserving generalization to unseen prompts.",
+      "highlights_zh": [
+        "选择性时间步加权与优势重放",
+        "样本效率提升高达6倍",
+        "提升反馈效率，降低实际部署成本"
+      ]
+    },
+    {
+      "id": "2607.07702",
+      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+      "authors": [
+        "Ying Chang",
+        "Jiahang Xu",
+        "Xuan Feng",
+        "Chenyuan Yang",
+        "Peng Cheng",
+        "Yuqing Yang"
+      ],
+      "abstract": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .",
+      "published": "2026-07-08T17:57:27Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07702",
+      "pdf_url": "https://arxiv.org/pdf/2607.07702",
+      "summary_zh": "长周期智能体优化中，真实执行轨迹存在冗余和异构问题，导致优化效率低且易过拟合。STRACE框架通过批次级故障模式挖掘和轨迹内因果定位，构建高信噪比优化上下文。在形式化验证任务上，STRACE将人类专家设计的智能体成功率从42.5%提升至58.5%。",
+      "summary_en": "Long-horizon agent optimization suffers from redundant and heterogeneous execution traces, causing inefficiency and overfitting. STRACE constructs high signal-noise optimization contexts via batch-level failure pattern mining and causal localization over textual dependency graphs. It achieves a 1.4× success-rate improvement (42.5% to 58.5%) on a challenging formal verification task.",
+      "highlights_zh": [
+        "因果定位+故障模式挖掘",
+        "成功率提升1.4倍(42.5%→58.5%)",
+        "适用于长周期智能体优化"
+      ]
+    },
+    {
+      "id": "2607.07690",
+      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+      "authors": [
+        "Vladislav Beliaev"
+      ],
+      "abstract": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather than to think better, since the trace itself is never graded and no label for good thinking exists. We introduce Agon, which makes two competing models each other's graders. Both attempt the same problem; in alternating roles, one drafts a solution and the other reads it while solving, and each is rewarded for out-solving the other. To win, a model must out-reason a rival that has seen its work, so reasoning is judged implicitly during training, with no process labels and no reward model. Because both models are optimized, each faces a progressively stronger rival, which single-model RL cannot provide. The two need only be comparably strong and behaviorally different. At inference the pair deploys as it trains, a two-stage cascade in which one model drafts and the other answers after reading the draft. On the hard split of DeepMath with Qwen3, this doubles GRPO's pass@1, roughly eight times the gain of an untrained Mixture-of-Agents pass over the same base. The ordering replicates on competitive-programming code and across model families (Qwen3.5, Gemma 4). For now the models talk in text; the next step is to let them reason together in latent space.",
+      "published": "2026-07-08T17:49:14Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07690",
+      "pdf_url": "https://arxiv.org/pdf/2607.07690",
+      "summary_zh": "当前基于可验证奖励的强化学习（如GRPO）仅对最终答案评分，导致模型在难题上倾向于增加输出长度而非提升推理质量。Agon提出一种竞争性跨模型强化学习框架，让两个模型互为评分者，通过交替扮演解题者和审阅者的角色，在无需过程标签和奖励模型的情况下隐式评判推理质量。在Deepmath硬子集上，Agon使GRPO的pass@1翻倍，效果远超未训练的混合专家方法，并推广至编程竞赛和多模型家族。",
+      "summary_en": "Current reinforcement learning from verifiable rewards (e.g., GRPO) only grades final answers, causing models to write more rather than think better on hard problems. Agon introduces a competitive cross-model RL framework where two models act as each other's graders, implicitly judging reasoning through alternating roles of drafting and reviewing solutions without process labels or reward models. On the hard split of DeepMath, Agon doubles GRPO's pass@1, achieving roughly eight times the gain of an untrained Mixture-of-Agents, and generalizes to competitive programming and multiple model families.",
+      "highlights_zh": [
+        "竞争性跨模型隐式推理评分",
+        "DeepMath硬子集pass@1翻倍",
+        "无需过程标签，可推广至多模型"
+      ]
+    },
+    {
+      "id": "2607.07675",
+      "title": "Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence",
+      "authors": [
+        "Shuailei Ma",
+        "Jiaqi Liao",
+        "Xinyang Wang",
+        "Jingjing Wang",
+        "Chaoran Feng",
+        "Zijing Hu",
+        "Chong Bao",
+        "Zichen Xi",
+        "Yuqi Gan",
+        "Weisen Wang",
+        "Yanhong Zeng",
+        "Qin Zhao",
+        "Zifan Shi",
+        "Wei Wu",
+        "Hao Ouyang",
+        "Qiuyu Wang",
+        "Shangzhan Zhang",
+        "Jiahao Shao",
+        "Yipengjing Sun",
+        "Liangxiao Hu",
+        "Lunke Pan",
+        "Nan Xue",
+        "Kecheng Zheng",
+        "Yinghao Xu",
+        "Xing Zhu",
+        "Yujun Shen",
+        "Ka Leong Cheng"
+      ],
+      "abstract": "Despite the recent promise in robot control, video generative models suffer from a domain mismatch due to their primary focus on content creation. For example, their design inherently prioritizes visual fidelity and creativity over computational efficiency and physical realism. In this work, we present LingBot-Video, a DiT-based video pretraining paradigm specifically tailored for embodied intelligence. From the architecture perspective, we adopt the Mixture-of-Experts (MoE), instead of dense, framework to achieve a better trade-off between modeling capacity and inference efficiency, and manage to scale it up from scratch. From the data perspective, we construct a data profiling engine that augments standard internet videos with extensive robot-oriented footage, encompassing manipulation, navigation, and egocentric perspectives, to equip the base model with an intrinsic understanding of actions and world dynamics. From the training perspective, we develop a multi-dimensional reward system to enforce the alignment regarding physical rationality and task completion, going beyond standard criteria such as aesthetics, prompt-following, and motion consistency. Comprehensive evaluations validate its performance and efficiency as a video foundation model. We contribute LingBot-Video as the inaugural large-scale, open-source MoE video foundation model to the community, in a pioneering effort to bridge digital creativity and physical actuation.",
+      "published": "2026-07-08T17:33:40Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07675",
+      "pdf_url": "https://arxiv.org/pdf/2607.07675",
+      "summary_zh": "当前视频生成模型主要面向内容创作，存在领域不匹配问题，难以直接用于具身智能。本文提出LingBot-Video，一种基于DiT和混合专家架构的视频预训练范式，通过构建机器人导向数据引擎和多维奖励系统，实现计算效率与物理真实性的平衡。该模型作为首个大规模开源MoE视频基础模型，在机器人控制任务中验证了其性能与效率，弥合了数字创造与物理执行之间的鸿沟。",
+      "summary_en": "Existing video generative models suffer from domain mismatch for embodied intelligence due to their focus on content creation. This work presents LingBot-Video, a DiT-based video pretraining paradigm using Mixture-of-Experts architecture, a robot-oriented data profiling engine, and a multi-dimensional reward system to enforce physical rationality and task completion. As the first large-scale open-source MoE video foundation model, it demonstrates superior performance and efficiency, bridging digital creativity and physical actuation.",
+      "highlights_zh": [
+        "首个大规模开源MoE视频基础模型",
+        "机器人控制任务验证性能与效率",
+        "弥合数字创造与物理执行鸿沟"
+      ]
+    },
+    {
+      "id": "2607.07673",
+      "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
+      "authors": [
+        "Hyunjae Kim",
+        "Dain Kim",
+        "Pan Xiao",
+        "Serina S. Applebaum",
+        "Younjoon Chung",
+        "Xuguang Ai",
+        "Yu Yin",
+        "Roy Jiang",
+        "Yuexi Du",
+        "Yawen Wei",
+        "Yiming Kong",
+        "Tuo Guo",
+        "Zhiyuan Cao",
+        "Mengmeng Du",
+        "Yuelei Fu",
+        "Yan Hu",
+        "Rui Shi",
+        "Gui Yang",
+        "Kevin W. Jin",
+        "Yuntian Liu",
+        "Yuxuan Tian",
+        "Jonathan Marquez",
+        "Zhen Chen",
+        "Sheng Zhang",
+        "Hoifung Poon",
+        "Hua Xu",
+        "Jaewoo Kang",
+        "Qingyu Chen"
+      ],
+      "abstract": "Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-quality clinical data. Although PubMed Central (PMC) offers a complementary source of expert-authored image-text data, existing PMC-derived resources remain limited in fidelity, reproducibility, and clinical validation. We introduce MedPMC, an automated, continuously updatable framework that transforms permissively licensed literature into high-fidelity infrastructure for medical multimodal models. Applied to 6.1 million PMC articles, MedPMC curated 11 million medical image-text pairs. Component evaluations showed strong performance for initial screening (F1 = 93.2), multi-panel figure detection (F1 = 96.5), figure separation (mAP = 89.8), caption separation and alignment (F1 = 81.4; ROUGE-L = 85.3), and medical figure classification (F1 = 96.5). Manual review by five annotators, three with medical training, found 95.3% of MedPMC images medically relevant, versus 19.7% in a prior PMC-derived dataset. Across 26 benchmarks spanning 11 specialties, a MedPMC-trained CLIP-style model improved average zero-shot AUC by 7.1 percentage points over the strongest architecture-matched biomedical CLIP baseline despite using fewer than half as many image-text pairs. As the vision encoder in a multimodal large language model, it improved medical visual question-answering by 1.9 and 16.9 percentage points across two benchmarks. In 10,524 Yale New Haven Health System dermatology photographs, it improved morphology-to-image retrieval Recall@5 by 11.7 percentage points. These findings show that high-fidelity literature curation strengthens medical multimodal foundation models across benchmark and clinical settings. We publicly release the framework, corpus, benchmarks, and pretrained models.",
+      "published": "2026-07-08T17:26:49Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07673",
+      "pdf_url": "https://arxiv.org/pdf/2607.07673",
+      "summary_zh": "医学多模态基础模型的发展受限于大规模高质量临床数据的缺乏。MedPMC提出一个自动化、可持续更新的框架，从PMC文献中提取高保真医学图像-文本对。该框架构建的模型在26个基准测试和临床应用中显著优于现有方法，验证了高质量文献数据对医学多模态模型的重要性。",
+      "summary_en": "The development of medical multimodal foundation models is limited by the lack of large-scale high-quality clinical data. MedPMC introduces an automated, continuously updatable framework that extracts high-fidelity medical image-text pairs from PMC literature. The resulting models significantly outperform existing methods across 26 benchmarks and clinical applications, demonstrating the importance of high-quality literature curation for medical multimodal models.",
+      "highlights_zh": [
+        "自动化高保真医学文献数据提取",
+        "零样本AUC提升7.1个百分点，超越基线",
+        "临床皮肤病检索Recall@5提升11.7个百分点"
+      ]
+    },
+    {
+      "id": "2607.07622",
+      "title": "Continuous and large-scale: ELEANOR, the soft architected arm inspired by the elephant trunk",
+      "authors": [
+        "Giovanna A. Naselli",
+        "Anderson B. Nardin",
+        "Seonggun Joe",
+        "Ryan Drinkwater",
+        "Enrico Donato",
+        "Diego Bianchi",
+        "Egidio Falotico",
+        "Michel C. Milinkovitch",
+        "Lucia Beccai"
+      ],
+      "abstract": "The elephant trunk is a dexterous and versatile manipulator whose performance is still unmatched in robotics. In previous works, modularity was prioritized and relatively small-scale continuum robots were built. We take the natural proboscis of the *Loxodonta africana* species as a model and propose a different design approach which favors structural continuity and dynamic properties that plausibly emulate those of the natural trunk, while conferring high adaptability to the environment and humans. Instead of targeting prescribed behaviors, we show that a biomimetic design based on the macroscopic properties of the natural system enables elephant-like movements and grasping. We build by 3D printing an 85 cm long, compliant, tapered, volumetrically tessellated continuum arm, which is combined with tendon-driven actuation mimicking the longitudinal and oblique muscles of the natural model. We demonstrate whole-body grasping of objects having different shapes and dimensions and discuss a comparison to the biological trunk highlighting aspects of both biology and robotics.",
+      "published": "2026-07-08T16:38:51Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07622",
+      "pdf_url": "https://arxiv.org/pdf/2607.07622",
+      "summary_zh": "大象鼻子是灵巧的操控器，但现有机器人难以模仿其性能。我们基于非洲象鼻的宏观特性，设计并3D打印了85厘米长的连续软体仿生臂，采用肌腱驱动模仿其肌肉结构。该臂实现了对不同形状物体的全身抓取，在连续性和动态性能上更接近真实象鼻。",
+      "summary_en": "The elephant trunk is a dexterous manipulator unmatched in robotics. We propose a biomimetic design based on macroscopic properties of the elephant trunk, building an 85 cm long 3D-printed continuum arm with tendon-driven actuation. The arm achieves whole-body grasping of various objects, demonstrating improved continuity and dynamic similarity to the biological trunk.",
+      "highlights_zh": [
+        "基于宏观仿生的连续软体臂设计",
+        "85cm长臂实现多形状物体全身抓取",
+        "为仿生软体机器人提供新设计范式"
+      ]
+    },
+    {
+      "id": "2607.07601",
+      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "authors": [
+        "Kaicong Huang",
+        "Meng Ma",
+        "Ruimin Ke"
+      ],
+      "abstract": "Safety evaluation for autonomous driving is dominated by rare, safety-critical interactions, motivating simulators that can deliberately synthesize corner cases with photorealistic observations. Corner-case generation is inherently a multi-source problem spanning visual representation, scene reasoning, and vehicle trajectory generation and control. Prior knowledge- and model-based approaches typically focus on scene or trajectory components in isolation, while diffusion-based methods attempt end-to-end generation but still struggle to ensure spatiotemporal consistency and physical realism. To unify these aspects within a single framework, we propose CARLA-GS, a modular corner-case synthesis pipeline that decouples visual representation, semantic reasoning, and physics-based execution while maintaining tight cross-module coupling. Starting from real driving data, we reconstruct an editable gaussian scene with additional geometry-consistent constraints. A multi-agent LLM then performs scene-level reasoning to identify risky interactions and generate intent-level waypoint trajectories, while the low-level motion control is delegated to CARLA, where a PID controller ensures kinematic and dynamic feasibility. The simulated vehicle states are finally re-projected into the gaussian scene for ego-centric rendering. This design enables high-level semantic reasoning, low-level physically executable motion, and photorealistic corner-case generation within a unified pipeline. Experiments on the Waymo Open Dataset show, both quantitatively and qualitatively, that our framework enables controllable corner-case generation and produces photorealistic, spatiotemporally consistent videos aligned with semantic intent and physically feasible motion.",
+      "published": "2026-07-08T16:20:19Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.07601",
+      "pdf_url": "https://arxiv.org/pdf/2607.07601",
+      "summary_zh": "自动驾驶安全评估面临罕见但关键的边缘场景合成难题，现有方法难以兼顾视觉真实、语义合理与物理可行。本文提出CARLA-GS模块化框架，解耦视觉表示、语义推理与物理仿真，通过可编辑高斯场景、多智能体LLM轨迹规划与CARLA物理控制实现统一合成。在Waymo数据集上验证了该方法能生成可控、逼真且时空一致的高质量边缘场景视频。",
+      "summary_en": "Autonomous driving safety evaluation requires synthesizing rare corner cases with photorealistic observations, but existing methods struggle to balance visual fidelity, semantic reasoning, and physical feasibility. CARLA-GS proposes a modular pipeline that decouples visual representation, multi-agent LLM-based scene reasoning, and CARLA physics simulation, enabling controllable generation of spatiotemporally consistent videos. Experiments on Waymo Open Dataset demonstrate photorealistic, semantically aligned, and physically feasible corner-case synthesis.",
+      "highlights_zh": [
+        "解耦视觉、推理与物理的模块化框架",
+        "生成时空一致且物理可行的逼真视频",
+        "依赖CARLA物理引擎，泛化性待验证"
+      ]
+    }
+  ]
+}
