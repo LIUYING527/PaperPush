@@ -1,0 +1,297 @@
+{
+  "date": "2026-07-10",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.08763",
+      "title": "OpenCoF: Learning to Reason Through Video Generation",
+      "authors": [
+        "Xinyan Chen",
+        "Ziyu Guo",
+        "Renrui Zhang",
+        "Dongzhi Jiang",
+        "Hongsheng Li"
+      ],
+      "abstract": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known as Chain-of-Frame (CoF) reasoning. However, existing video generators are primarily trained on general video corpora, still lacking diverse supervision and dedicated designs for CoF reasoning. To address this gap, we introduce OpenCoF, a framework comprising the OpenCoF-17K dataset, a reasoning video dataset spanning 11 task families, and Wan-CoF, a fine-tuned video model for studying whether diverse temporal supervision improves CoF behavior. Across four video reasoning benchmarks, Wan-CoF achieves considerable gains over the Wan2.2-I2V-A14B baseline. Building on this, we empirically explore more advanced designs for CoF capabilities, i.e., equipping the model with visual and textual reasoning tokens. This mechanism respectively captures low-level visual cues and high-level semantic priors for spatial and temporal reasoning. Through performance comparisons and attention analysis, we examine how these tokens contribute across model depth, denoising steps, space, and time. Our results suggest that stronger video reasoning requires both broad temporal supervision and explicit mechanisms for organizing intermediate reasoning state. We open-source the dataset, model, and code to facilitate future research on reasoning-oriented video generation.",
+      "published": "2026-07-09T17:58:29Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08763",
+      "pdf_url": "https://arxiv.org/pdf/2607.08763",
+      "summary_zh": "当前视频生成模型缺乏针对链式帧推理的专门设计和多样化监督数据。为此，本文提出OpenCoF框架，包含OpenCoF-17K推理视频数据集和微调模型Wan-CoF，并引入视觉与文本推理令牌机制。实验表明，Wan-CoF在四个视频推理基准上显著超越基线，证明广泛的时序监督和显式推理状态组织对视频推理至关重要。",
+      "summary_en": "Current video generation models lack dedicated designs and diverse supervision for Chain-of-Frame reasoning. To address this, we introduce OpenCoF, comprising the OpenCoF-17K dataset and the fine-tuned Wan-CoF model, along with visual and textual reasoning tokens. Wan-CoF achieves significant gains over baselines on four video reasoning benchmarks, demonstrating that broad temporal supervision and explicit reasoning state organization are crucial for video reasoning.",
+      "highlights_zh": [
+        "提出CoF推理框架与数据集",
+        "Wan-CoF在4个基准上显著提升",
+        "开源数据集/模型/代码促进研究"
+      ]
+    },
+    {
+      "id": "2607.08758",
+      "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+      "authors": [
+        "Yifan Zhou",
+        "Qihao Yang",
+        "Yan Li",
+        "Donggang Li",
+        "Xiru Hu",
+        "Hokin Deng",
+        "Ziyang Gong",
+        "Xuanyi Zhou",
+        "Huacan Wang",
+        "Xiangchao Yan",
+        "Wanghan Xu",
+        "Wenlong Zhang",
+        "Shaofeng Zhang",
+        "Yue Zhou",
+        "Yifan Yang",
+        "Zhihang Zhong",
+        "Xue Yang"
+      ],
+      "abstract": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say little about whether AI systems can follow this inheritance structure. We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation. IG-Bench is organized around the IdeaGene framework: each paper or proposal is represented as a set of minimal, typed, evidence-grounded Idea Genome objects, and a GenomeDiff aligns these objects to record inheritance, mutation, loss, external import, and novel insertion under six operational evolutionary dynamics. The benchmark contains 1,961 golden lineage traces, 1,085 curated Idea Genome objects, and 920 pairwise GenomeDiff records across 10 scientific domains. It supports two evaluations. IG-Exam (42 task types, 1,029 instances) tests closed-form lineage reasoning across Idea Genome abstraction, inheritance tracing, evolutionary reasoning, and lineage verification. IG-Arena evaluates generation with a lineage-conditioned Population-Evolution Score(PES), asking whether a proposal can be inserted as a coherent descendant of a given lineage population: it should inherit the right Idea Genome objects, vary meaningfully from nearby work, and offer selection value for future research. Experiments on 14 LLM-based scientists expose a compositional bottleneck. The strongest system reaches only 27.3% exact accuracy on lineage reasoning, and structured lineage context reshuffles system rankings rather than helping every participant uniformly.",
+      "published": "2026-07-09T17:55:53Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08758",
+      "pdf_url": "https://arxiv.org/pdf/2607.08758",
+      "summary_zh": "现有基准难以评估AI系统是否理解科学思想的继承与演化结构。我们提出IdeaGene-Bench，基于IdeaGenome框架将论文表示为带类型的基因组对象，并通过GenomeDiff记录六种演化动态，支持封闭式推理和生成评估。最强系统在推理任务上仅达27.3%的精确准确率，且结构化谱系上下文会重新排序系统排名，揭示了组合瓶颈。",
+      "summary_en": "Current benchmarks fail to assess whether AI systems understand the inheritance and evolution structure of scientific ideas. We propose IdeaGene-Bench, which represents papers as typed Idea Genome objects and uses GenomeDiff to record six evolutionary dynamics, supporting closed-form reasoning and generation evaluation. The strongest system achieves only 27.3% exact accuracy on reasoning, and structured lineage context reshuffles system rankings, revealing a compositional bottleneck.",
+      "highlights_zh": [
+        "提出IdeaGenome框架与六种演化动态",
+        "最强系统推理准确率仅27.3%",
+        "揭示AI科学推理的组合瓶颈"
+      ]
+    },
+    {
+      "id": "2607.08757",
+      "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
+      "authors": [
+        "Yiwei Zhou"
+      ],
+      "abstract": "Score matching controls average error under the forward marginals, but a discretized reverse-time sampler evaluates the learned score along its own trajectory. We show that small forward-marginal error does not guarantee numerical stability. We construct a single smooth score field with arbitrarily small forward-marginal $L^2$ error. The learned reverse-time process is nonexplosive, has moments of every order, and can be arbitrarily close to the exact reverse-time process in path-space total variation. Yet its Euler--Maruyama discretizations converge in probability while every positive moment diverges. Thus weak convergence can hold even though every Wasserstein distance $W_p$, $p\\ge1$, diverges. The same failure can occur within one fixed finite neural architecture. We construct a family of bounded, globally Lipschitz denoisers for which both the forward-marginal error and the path-space total variation distance tend to zero, while their Euler--Maruyama endpoints diverge in every $W_p$. For compactly supported data, we also give a simple positive result. Projecting the learned denoiser onto a known bounded closed convex set containing the support preserves pointwise accuracy, gives grid-uniform moment bounds, and yields Wasserstein convergence under mild local regularity. Experiments with a small fixed DiT-style network show large growth along rare numerical trajectories and its suppression by denoiser projection, while overall trajectory errors remain small.",
+      "published": "2026-07-09T17:55:52Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.NA",
+        "math.PR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08757",
+      "pdf_url": "https://arxiv.org/pdf/2607.08757",
+      "summary_zh": "扩散模型的分数匹配仅保证前向边际分布下的平均误差小，但离散化反向采样依赖沿自身轨迹的分数评估，因此前向误差小不能确保数值稳定性。我们构造了具有任意小前向L2误差的平滑分数场，其Euler-Maruyama离散化虽依概率收敛，但所有正阶矩发散，导致Wasserstein距离发散。对于紧支撑数据，投影去噪器到已知有界凸集可保持逐点精度、获得一致矩界并实现Wasserstein收敛。",
+      "summary_en": "Score matching only ensures small average error under forward marginals, but discretized reverse-time sampling evaluates the learned score along its own trajectory, so small forward error does not guarantee numerical stability. We construct a smooth score field with arbitrarily small forward L2 error whose Euler-Maruyama discretizations converge in probability while every positive moment diverges, causing all Wasserstein distances to diverge. For compactly supported data, projecting the denoiser onto a known bounded convex set preserves pointwise accuracy, yields uniform moment bounds, and achieves Wasserstein convergence.",
+      "highlights_zh": [
+        "前向误差小不保证反向采样稳定性",
+        "Euler-Maruyama矩发散但依概率收敛",
+        "投影去噪器可恢复矩界与Wasserstein收敛"
+      ]
+    },
+    {
+      "id": "2607.08756",
+      "title": "MulTTiPop: A Multitrack Transcription Dataset for Pop Music",
+      "authors": [
+        "Nathan Pruyne",
+        "Benjamin Stoler",
+        "William Chen",
+        "Chien-yu Huang",
+        "Shinji Watanabe",
+        "Chris Donahue"
+      ],
+      "abstract": "We present MulTTiPop, a dataset of pop music segments and their associated multitrack MIDI recordings for the evaluation of automatic music transcription models. MulTTiPop contains 572 segments of popular music totaling 3.5 hours of audio, and contains songs from diverse genres and decades from the 1930s to 2000s. To collect this dataset, we perform metadata-based matching on song segments from the Lakh MIDI and TheoryTab datasets, manually identify an anchor beat between the audio and MIDI, then use beat tracking on the audio and warp the MIDI to match its tempo and timing. We evaluate state-of-the-art automatic music transcription models on MulTTiPop and find substantial room for improvement, with the best model achieving 38% Onset F1. More details and sound examples of MulTTiPop are available at https://gclef-cmu.org/multtipop.",
+      "published": "2026-07-09T17:55:33Z",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08756",
+      "pdf_url": "https://arxiv.org/pdf/2607.08756",
+      "summary_zh": "自动音乐转录模型在流行音乐多音轨评估中缺乏标准数据集。我们通过元数据匹配、人工对齐节拍和时域扭曲构建了包含572段流行音乐的多轨MIDI数据集MulTTiPop。实验表明现有最优模型仅达38%的起始点F1分数，揭示该领域仍有显著提升空间。",
+      "summary_en": "Automatic music transcription models lack standardized evaluation datasets for pop music multitrack recordings. We construct MulTTiPop with 572 pop segments by metadata matching, manual anchor beat alignment, and tempo-warped MIDI synchronization. State-of-the-art models achieve only 38% Onset F1, highlighting substantial room for improvement.",
+      "highlights_zh": [
+        "首个流行音乐多轨转录评估数据集",
+        "最优模型起始点F1仅38%",
+        "覆盖1930-2000年代多元流行音乐"
+      ]
+    },
+    {
+      "id": "2607.08768",
+      "title": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "authors": [
+        "Zhekai Chen",
+        "Chengqi Duan",
+        "Kaiyue Sun",
+        "Bohao Li",
+        "Yuqing Wang",
+        "Manyuan Zhang",
+        "Xihui Liu"
+      ],
+      "abstract": "The rapid development of large language models and multimodal large language models has accelerated the emergence of proactive agents capable of operating everyday tools and assisting users in real-world environments. However, existing benchmarks struggle to evaluate such agents effectively, as they often rely on sandboxed environments and single-turn evaluation paradigms. Moreover, their scenario-based task taxonomies mix multiple model capabilities within the same task category, making it difficult to identify the root causes of agent failures. To address these limitations, we introduce UniClawBench, the first capability-driven benchmark designed to evaluate proactive agents in dynamic, real-world settings. UniClawBench is built around five foundational model capabilities: Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, and Cross-Platform Coordination. Based on these capabilities, we design 400 bilingual real-world tasks. Unlike previous benchmarks that rely on static, pre-recorded answers, our benchmark evaluates agents in live Docker containers using fine-grained, step-by-step completion checkpoints. Furthermore, we design a closed-loop evaluation strategy comprising an executor agent, a hidden supervisor agent, and a user agent to simulate realistic multi-turn human feedback without leaking grading criteria. To disentangle base model capabilities from framework-level design choices, we evaluate state-of-the-art models under multiple agent frameworks. Through comprehensive comparisons across both models and frameworks, we show how base model capabilities and agent framework designs jointly shape performance in real-world environments. To facilitate future research, we make our benchmark and code publicly available at https://github.com/HKU-MMLab/UniClawBench.",
+      "published": "2026-07-09T17:59:32Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08768",
+      "pdf_url": "https://arxiv.org/pdf/2607.08768",
+      "summary_zh": "现有基准测试多依赖沙盒环境和单轮评估，难以有效评估真实世界中具备主动能力的AI代理。UniClawBench首次提出基于五种基础模型能力（技能使用、探索、长上下文推理、多模态理解、跨平台协调）的动态真实世界基准，并采用实时Docker容器与闭环评估策略。实验揭示了基础模型能力与框架设计共同影响代理性能，为主动代理研究提供了标准化评估平台。",
+      "summary_en": "Existing benchmarks rely on sandboxed environments and single-turn evaluations, failing to effectively assess proactive agents in real-world settings. UniClawBench introduces the first capability-driven benchmark with five foundational abilities, evaluating agents in live Docker containers with a closed-loop multi-turn feedback strategy. Results show how base model capabilities and framework designs jointly shape performance, providing a standardized evaluation platform for proactive agent research.",
+      "highlights_zh": [
+        "首个能力驱动的主动代理基准",
+        "实时Docker+闭环多轮评估",
+        "揭示模型与框架的协同影响"
+      ]
+    },
+    {
+      "id": "2607.08731",
+      "title": "Validity of LLMs as data annotators: AMALIA on authority",
+      "authors": [
+        "Manuel Pita"
+      ],
+      "abstract": "A national language model offers a linguistic community its own instrument for measuring what its citizens say and value. Portugal's AMALIA, a publicly funded 9B-parameter model for European Portuguese, appears competitive on agreement alone: asked to code the moral foundation of authority, it agrees with trained human coders to within six F1 points of open models eight to thirteen times its size. Yet agreement is reliability, not validity. For theoretical constructs that must be inferred rather than read from surface features, the question is whether the model follows the construct's theory or reaches the right code by correlated shortcuts. We test this with the recovery gap: the loss in performance when a holistic prompt is decomposed into the codebook's atomic clauses and recombined by the theory's explicit rule. If calibration closes that gap, some portability should survive across models and languages; where it does not, the construct-model instrument is the likely locus of failure. We ask whether a calibrated English instrument transfers to AMALIA-9B and to European Portuguese. For one construct and one corpus, it does not. Decomposition recovers only about half of AMALIA's holistic performance, and error analysis suggests reliance on surface correlates, especially moral outrage near authority figures. An open multilingual LLM closes the gap on the same Portuguese corpus under the same instructions, pointing away from the corpus as the main explanation. AMALIA can still screen and pre-code at scale, but it cannot yet measure this construct well enough to stand alone. The study is a single counterexample, not a verdict on national models; it argues that sovereign-LLM benchmark batteries should test not only agreement with human coders, but the evidential route by which that agreement is warranted.",
+      "published": "2026-07-09T17:34:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08731",
+      "pdf_url": "https://arxiv.org/pdf/2607.08731",
+      "summary_zh": "大型语言模型作为数据标注工具的效度问题，尤其是对于需要推断的理论构念，不能仅凭与人类标注者的一致性来判定。本研究提出“恢复差距”方法，通过将整体提示分解为原子条款再按理论规则重组，来检验模型是否遵循理论或依赖表面捷径。实验发现，AMALIA模型在权威道德基础标注上存在恢复差距，依赖表面相关特征，无法独立完成测量，表明主权语言模型基准测试应检验证据路径而非仅一致性。",
+      "summary_en": "The validity of LLMs as data annotators for theoretical constructs requiring inference cannot be judged solely by agreement with human coders. This study introduces the recovery gap method, decomposing holistic prompts into atomic clauses and recombining them by theory, to test whether models follow theory or rely on surface shortcuts. Results show that AMALIA exhibits a recovery gap for authority moral foundation coding, relying on surface correlates, and cannot measure this construct independently, arguing that sovereign-LLM benchmarks should test evidential routes beyond agreement.",
+      "highlights_zh": [
+        "提出恢复差距验证方法",
+        "AMALIA恢复仅约50%整体性能",
+        "主权模型需检验证据路径"
+      ]
+    },
+    {
+      "id": "2607.08772",
+      "title": "Wat3R: Underwater 3D Geometry Learning without Annotations",
+      "authors": [
+        "Jiangwei Ren",
+        "Xingyu Jiang",
+        "Zijie Song",
+        "Wei Xu",
+        "Hongkai Lin",
+        "Dingkang Liang",
+        "Xiang Bai"
+      ],
+      "abstract": "Estimating 3D geometry in underwater environments presents unique challenges due to light attenuation, scattering, and the absence of large-scale, high-quality 3D annotations. Pioneering methods rely on massive dense annotations that are impractical in underwater settings. In this paper, we propose Wat3R, a cross-domain semi-supervised learning framework designed to adapt feed-forward 3D reconstruction models from air to underwater scenes. Uniquely, our method eliminates the need for any annotated underwater data following a teacher-student architecture, that learns robust geometry representations merely on abundant unlabeled real underwater video footage. We also design a cross-view consistency loss that leverages geometric cues from other views to compensate for the information degradation in the current view caused by water attenuation and scattering. Furthermore, considering the lack of comprehensive evaluation benchmarks, we construct Water3D, a diverse dataset covering various water bodies and underwater scenarios, designed for geometric task evaluation. Experimental results demonstrate that Wat3R outperforms current state-of-the-art methods in underwater multi-view depth estimation and point cloud reconstruction. The dataset and code are available at https://github.com/LSXI7/Wat3R .",
+      "published": "2026-07-09T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08772",
+      "pdf_url": "https://arxiv.org/pdf/2607.08772",
+      "summary_zh": "水下环境因光衰减和散射导致3D几何估计困难，且缺乏大规模高质量标注数据。本文提出Wat3R，一种无需水下标注的跨域半监督学习框架，通过教师-学生架构和跨视图一致性损失，仅利用无标注水下视频学习鲁棒的几何表示。实验表明，Wat3R在水下多视图深度估计和点云重建任务上优于现有方法，并构建了Water3D评估基准。",
+      "summary_en": "Underwater 3D geometry estimation faces challenges from light attenuation and scattering, along with a lack of annotated data. Wat3R proposes a cross-domain semi-supervised framework using a teacher-student architecture and cross-view consistency loss to learn robust geometry from unlabeled underwater videos without any annotations. It outperforms state-of-the-art methods on underwater multi-view depth estimation and point cloud reconstruction, and introduces the Water3D benchmark.",
+      "highlights_zh": [
+        "无需水下标注的跨域半监督学习",
+        "水下多视图深度估计与点云重建SOTA",
+        "构建Water3D评估基准数据集"
+      ]
+    },
+    {
+      "id": "2607.08771",
+      "title": "ZipDepth: Bringing Lightweight Zero-Shot Monocular Depth Anywhere, on Any Device",
+      "authors": [
+        "Fabio Tosi",
+        "Luca Bartolomei",
+        "Matteo Poggi",
+        "Stefano Mattoccia"
+      ],
+      "abstract": "Monocular depth estimation has seen remarkable progress through foundation models achieving robust zero-shot generalization, yet their computational demands place them far beyond the reach of embedded and mobile platforms. Lightweight alternatives exist, but have been developed almost exclusively within single-domain, self-supervised paradigms, failing silently under domain shift. We present ZipDepth, a compact monocular depth network that bridges this gap by combining an efficient reparameterizable encoder-decoder with large-scale knowledge distillation from a foundation model over a large multi-domain training set. Comprising just 6.1M parameters, ZipDepth runs at real-time rates from server GPUs to power-constrained devices, achieving the best trade-off between zero-shot accuracy and deployment efficiency among lightweight models across five benchmarks, taking a significant step towards the accuracy of foundation models with 50x more parameters.",
+      "published": "2026-07-09T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08771",
+      "pdf_url": "https://arxiv.org/pdf/2607.08771",
+      "summary_zh": "单目深度估计的基础模型虽零样本泛化强，但计算量大，难以部署在嵌入式设备上。ZipDepth通过轻量级可重参数化编解码器结合大规模多域知识蒸馏，仅6.1M参数实现高效推理。在五个基准上取得轻量模型最佳零样本精度与部署效率权衡，性能接近参数多50倍的基础模型。",
+      "summary_en": "Monocular depth foundation models achieve robust zero-shot generalization but are too computationally heavy for embedded devices. ZipDepth bridges this gap with a compact reparameterizable encoder-decoder and large-scale multi-domain knowledge distillation, using only 6.1M parameters. It achieves real-time inference across devices and the best zero-shot accuracy-efficiency trade-off among lightweight models, approaching foundation model performance with 50x fewer parameters.",
+      "highlights_zh": [
+        "轻量可重参数化编解码器+多域蒸馏",
+        "6.1M参数，实时运行于多种设备",
+        "零样本精度与效率最优，适合边缘部署"
+      ]
+    },
+    {
+      "id": "2607.08751",
+      "title": "DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation",
+      "authors": [
+        "Yunchao Yao",
+        "Zhuxiu Xu",
+        "Tianqi Zhang",
+        "Zixian Liu",
+        "Sikai Li",
+        "Zhenyu Wei",
+        "Feng Chen",
+        "Dihong Huang",
+        "Kechang Wan",
+        "Chenyang Ma",
+        "Shuqi Zhao",
+        "Shenghua Gao",
+        "Masayoshi Tomizuka",
+        "Yi Ma",
+        "Mingyu Ding"
+      ],
+      "abstract": "Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $π_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site",
+      "published": "2026-07-09T17:50:47Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08751",
+      "pdf_url": "https://arxiv.org/pdf/2607.08751",
+      "summary_zh": "现有灵巧操作基准在任务多样性、机器人形态覆盖和视觉变化可控性方面存在局限，难以系统评估策略的跨任务和跨形态泛化能力。DexVerse提出了一个大规模模块化基准，包含100个任务、3种机械臂和6种灵巧手，并支持可配置的视觉变化和VR遥操作接口。实验表明现有方法在任务泛化和视觉运动鲁棒性上仍面临重大挑战，DexVerse为通用灵巧操作研究提供了有效测试平台。",
+      "summary_en": "Existing dexterous manipulation benchmarks lack task diversity, embodiment coverage, and controllable visual variations, hindering systematic evaluation of cross-task and cross-embodiment generalization. DexVerse introduces a large-scale modular benchmark with 100 tasks, 3 robot arms, 6 dexterous hands, configurable visual variations, and a VR teleoperation interface. Benchmarking results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation.",
+      "highlights_zh": [
+        "首个模块化多任务多形态灵巧操作基准",
+        "19个任务上评估4种代表性方法",
+        "支持VR遥操作和可配置视觉变化"
+      ]
+    },
+    {
+      "id": "2607.08742",
+      "title": "ContactMimic: Humanoid Object Interaction via Contact Control",
+      "authors": [
+        "Xinyao Li",
+        "Xialin He",
+        "Runpei Dong",
+        "Saurabh Gupta"
+      ],
+      "abstract": "Keypoint tracking alone is insufficient for object interaction tasks such as sitting on a chair, wiping a board, or pushing furniture, where the robot can reach the correct pose without making meaningful physical contact with the object. We present CONTACTMIMIC, a learning framework that tracks explicit partlevel binary contact commands alongside keypoint trajectories. CONTACTMIMIC is made possible through the use of contact-following rewards and a trajectory augmentation scheme aimed at breaking the correlations between keypoint trajectories and contact labels. The resulting policy successfully decouples contact behavior from keypoint geometry, and achieves precise physical contact as well as contact-controllability (produce or suppress contact during deployment as desired). Simulation experiments across 10 diverse human-object interaction motions confirm that CONTACTMIMIC exhibits contact controllability that enables it to complete manipulation tasks without task-specific rewards, while also outperforming keypoint-only trackers on contact-relevant tasks. Ablations confirm the necessity of the proposed trajectory augmentation scheme and sim2real deployment validates contact controllability in the real world across 5 different motions. Video results are available on https://lixinyao11.github.io/contactmimic-page/.",
+      "published": "2026-07-09T17:42:15Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.08742",
+      "pdf_url": "https://arxiv.org/pdf/2607.08742",
+      "summary_zh": "人形机器人与物体交互时仅靠关键点追踪无法实现有效物理接触。本文提出ContactMimic框架，通过显式部件级接触指令追踪、接触奖励和轨迹增强方案解耦接触行为与几何轨迹。实验证明该方法在10种交互动作中实现接触可控性，无需任务特定奖励即可完成操作任务，并在真实世界验证了效果。",
+      "summary_en": "Keypoint tracking alone fails to achieve meaningful physical contact in humanoid object interaction tasks. ContactMimic introduces explicit part-level binary contact command tracking, contact-following rewards, and a trajectory augmentation scheme to decouple contact behavior from keypoint geometry. The method achieves contact controllability across 10 diverse motions, outperforms keypoint-only trackers on contact-relevant tasks without task-specific rewards, and is validated in real-world deployment.",
+      "highlights_zh": [
+        "解耦接触行为与几何轨迹",
+        "10种动作中接触可控性优于基线",
+        "无需任务奖励即可完成操作任务"
+      ]
+    }
+  ]
+}
