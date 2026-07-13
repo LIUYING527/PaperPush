@@ -1,0 +1,301 @@
+{
+  "date": "2026-07-13",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.09662",
+      "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+      "authors": [
+        "Ren Takahashi",
+        "Emre Yusuf",
+        "Jayabrata Bhaduri"
+      ],
+      "abstract": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating characteristic curve (AUC) of approximately 0.70 on the DREAM database (Wong et al., 2025, Nature Communications). We introduce PHINN-EEG (Persistent Homology Inspired Neural Network for EEG), the first topological time-series framework for dream mentation analysis. Using sliding-window Takens delay embeddings and Vietoris-Rips filtrations on multichannel pre-awakening EEG epochs, we extract Dynamic Betti Curves that characterize the geometric architecture of neural activity, not merely its energy. These topological invariants, combined with topology-conditioned flow matching, are analytically projected to outperform existing PSD and catch22 benchmarks, targeting AUC = 0.82-0.90 on the 1,462-awakening open-access subset of the DREAM database (drawn from a full registry of 3,191 total awakenings from 263 participants across 20 independent laboratories). We further introduce a topology-conditioned rectified flow model for dream-state EEG synthesis-with a spectral-conditioned flow model of comparable feature dimensionality as an additional ablation baseline to isolate the value of topological conditioning specifically-and propose a set of candidate Betti transition archetypes linking topology to phenomenological dream report categories, presented as an exploratory hypothesis space pending empirical validation. If validated, this work represents a paradigm shift from spectral energy to phase-space geometry in neural rare-event detection, with potential future implications for wearable BCI dream monitoring.",
+      "published": "2026-07-10T17:59:45Z",
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI",
+        "cs.LG",
+        "eess.SP",
+        "math.AT"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09662",
+      "pdf_url": "https://arxiv.org/pdf/2607.09662",
+      "summary_zh": "当前基于EEG的梦境检测主要依赖功率谱密度等特征，AUC仅约0.70。我们提出PHINN-EEG框架，首次利用持续同调提取动态Betti曲线刻画神经活动的拓扑几何结构，并结合拓扑条件流匹配进行梦境分类与信号合成。该方法目标AUC达0.82-0.90，有望实现从频谱能量到相空间几何的范式转变，推动可穿戴BCI梦境监测。",
+      "summary_en": "Current EEG-based dream detection relies on spectral features with AUC ~0.70. We propose PHINN-EEG, the first topological time-series framework using persistent homology to extract Dynamic Betti Curves and topology-conditioned flow matching for dream classification and EEG synthesis. Targeting AUC 0.82-0.90, it represents a paradigm shift from spectral energy to phase-space geometry, with implications for wearable BCI dream monitoring.",
+      "highlights_zh": [
+        "首次将持续同调用于梦境EEG分析",
+        "目标AUC 0.82-0.90，超越现有基准",
+        "范式转向相空间几何，推动可穿戴梦境监测"
+      ]
+    },
+    {
+      "id": "2607.09657",
+      "title": "Scalable Visual Pretraining for Language Intelligence",
+      "authors": [
+        "Yiming Zhang",
+        "Zhonghan Zhao",
+        "Wenwei Zhang",
+        "Haiteng Zhao",
+        "Tianyang Lin",
+        "Yunhua Zhou",
+        "Demin Song",
+        "Kuikun Liu",
+        "Haochen Ye",
+        "Haian Huang",
+        "Yuzhe Gu",
+        "Haijun Lv",
+        "Qipeng Guo",
+        "Bin Liu",
+        "Gaoang Wang",
+        "Kai Chen"
+      ],
+      "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning language intelligence. This paper challenges the default assumption that language models must be trained on text-only representations and shows that Visual Pretraining is a scalable learner for foundation model intelligence. To this end, we conduct a systematic study of unsupervised visual pretraining paradigms that directly leverage visual documents without text extraction. Across multiple backbones and benchmarks, visual pretraining on the same underlying corpora consistently outperforms text-only pretraining, offering an efficient pathway to scalable language intelligence.",
+      "published": "2026-07-10T17:57:03Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.MM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09657",
+      "pdf_url": "https://arxiv.org/pdf/2607.09657",
+      "summary_zh": "当前语言模型预训练通常丢弃视觉信息，将文档和网页转为纯文本，导致知识损失。本文提出视觉预训练方法，直接利用视觉文档进行无监督学习，无需文本提取。实验表明，视觉预训练在多个骨干网络和基准上一致优于纯文本预训练，为可扩展的语言智能提供了高效路径。",
+      "summary_en": "Current language model pretraining discards visual cues by converting documents into plain text, losing rich information. This paper proposes visual pretraining that directly leverages visual documents without text extraction. Experiments show it consistently outperforms text-only pretraining across backbones and benchmarks, offering an efficient pathway to scalable language intelligence.",
+      "highlights_zh": [
+        "直接利用视觉文档进行无监督预训练",
+        "视觉预训练一致优于纯文本预训练",
+        "为语言智能提供可扩展的高效路径"
+      ]
+    },
+    {
+      "id": "2607.09645",
+      "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+      "authors": [
+        "Federico L. Perlino",
+        "Oliver Hamelijnck",
+        "Adam M. Johansen",
+        "Theodoros Damoulas"
+      ],
+      "abstract": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions are partially observed across the DAG, with noisy and heterogeneously sampled measurements, posing significant challenges for reconstruction, uncertainty propagation, and inference. To tackle these challenges, we place priors over functions and naturally arrive at Deep Gaussian Processes over DAGs. We theoretically study their prior-collapse behaviour, and the effect of graph topology and intermediate observations on the preservation of information. We obtain almost-sure lower bounds on the asymptotic frequency of depths at which the distinction between inputs is preserved, identify broad kernel classes for which these hold, and prove an observation by \\cite{dunlop2018} on the role of input connections. We offer a structured variational approximation that retains graph dependencies, preserves compositional uncertainty, and captures the explaining-away behaviour of colliders. Finally, we empirically validate our theoretical results and our methodology, and model a latent-collider DAG, a protein signalling network, and a multi-fidelity heavy-ion collision emulation task, attaining state-of-the-art performance while recovering low-fidelity contributions and yielding interpretability of the simulator hierarchy.",
+      "published": "2026-07-10T17:41:11Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.ST",
+        "stat.CO",
+        "stat.ME"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09645",
+      "pdf_url": "https://arxiv.org/pdf/2607.09645",
+      "summary_zh": "许多真实世界过程可表示为有向无环图上的函数组合，但面临部分观测、噪声和异构采样等挑战。本文提出深度高斯过程框架，理论上研究了先验坍塌行为和拓扑结构对信息保持的影响，并开发了保留图依赖的结构化变分近似方法。实验在蛋白质信号网络和多保真重离子碰撞模拟等任务上取得最优性能，同时恢复了低保真度贡献并提供了可解释性。",
+      "summary_en": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG), but face challenges from partial observations, noise, and heterogeneous sampling. This paper proposes Deep Gaussian Processes over DAGs, theoretically studies prior-collapse behavior and the effect of graph topology on information preservation, and develops a structured variational approximation that retains graph dependencies. Experiments achieve state-of-the-art performance on protein signaling networks and multi-fidelity heavy-ion collision emulation, while recovering low-fidelity contributions and providing interpretability.",
+      "highlights_zh": [
+        "提出DAG深度高斯过程框架",
+        "多任务达SOTA并恢复低保真度",
+        "保留图依赖的可解释变分推断"
+      ]
+    },
+    {
+      "id": "2607.09641",
+      "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+      "authors": [
+        "Cláudio Lúcio do Val Lopes",
+        "Lucca Machado da Silva"
+      ],
+      "abstract": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance anomaly interdiction with customer friction. To overcome this without distortive data resampling, we propose the Semantic Pareto-DQN, a multi-objective reinforcement learning framework. Our approach synthesizes heterogeneous transaction features into cohesive natural-language narratives, encoded by large language models, thereby producing a robust, scale-invariant state representation. The agent optimizes a vectorial reward that explicitly decouples financial efficacy, operational friction, and semantic discovery. By mapping the continuous Pareto frontier, the system dynamically navigates the asymmetric costs of missed anomalies versus false positives. Empirical evaluations across E-Commerce fraud and UCI Credit datasets show that semantic Pareto-DQN successfully shatters the zero-recall trap. It achieves superior minority-class recall compared to scalarized baselines, providing an alternative to trade bounded operational friction for financial anomaly discovery.",
+      "published": "2026-07-10T17:39:00Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09641",
+      "pdf_url": "https://arxiv.org/pdf/2607.09641",
+      "summary_zh": "金融异常检测面临极端类别不平衡问题，传统单目标算法易出现“欺诈崩溃”，无法平衡异常拦截与客户摩擦。我们提出语义Pareto-DQN多目标强化学习框架，利用大语言模型将异构交易特征编码为自然语言状态表示，并优化解耦金融效能、操作摩擦和语义发现的向量化奖励。实验表明该方法成功打破零召回陷阱，在少数类召回率上优于标量化基线，为平衡操作摩擦与异常发现提供了新途径。",
+      "summary_en": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit 'fraud collapse'. We propose Semantic Pareto-DQN, a multi-objective RL framework that uses LLMs to encode transaction features into natural-language states and optimizes a vectorial reward decoupling financial efficacy, operational friction, and semantic discovery. Empirical results show it shatters the zero-recall trap and achieves superior minority-class recall over scalarized baselines.",
+      "highlights_zh": [
+        "多目标RL+LLM语义状态表示",
+        "打破零召回陷阱，提升少数类召回",
+        "无需数据重采样，平衡摩擦与发现"
+      ]
+    },
+    {
+      "id": "2607.09623",
+      "title": "Task-Specific Multimodal Question Answering Agents via Confidence Calibration and Incremental Reasoning for QANTA 2026",
+      "authors": [
+        "Nirjhar Das",
+        "Md. Al-Mamun Provath"
+      ],
+      "abstract": "We present our submission to the QANTA 2026 shared challenge at the ICML 2026 Workshop on Efficient Multimodal Question Answering (EMM-QA). Quanta evaluates multimodal quizbowl systems that answer pyramid-style questions from incrementally revealed text and accompanying images while operating under realistic efficiency constraints. The challenge consists of two distinct tasks: Tossup questions, which require deciding when to answer under uncertainty, and Bonus questions, which emphasize accurate answer selection and human adoption. To address these differing objectives, we develop a task-specific two-agent architecture. Our Tossup agent utilizes a GPT-4o-mini-class model (referred to as GPT-4.1-mini in the competition logs) with confidence-calibrated answering and a domain-specific numeric reasoning policy that reduces overconfident predictions from isolated quantitative clues. Our Bonus agent uses GPT-4o-class model (referred to as GPT-4.1) with leadin-aware reasoning, structured relational reasoning, and multimodal evidence integration to improve exact answer selection. Rather than relying on a retrieval pipeline or model ensembles, our approach emphasizes efficient reasoning policies and confidence calibration within a hosted-only environment. Our system achieved the highest overall leaderboard score of 0.402, including a Tossup score of 0.238 and a Bonus Effect score of 0.164. The results demonstrate that lightweight, task-specific reasoning strategies can provide strong performance on resource-constrained multimodal question answering benchmarks.",
+      "published": "2026-07-10T17:22:49Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09623",
+      "pdf_url": "https://arxiv.org/pdf/2607.09623",
+      "summary_zh": "QANTA 2026挑战赛要求多模态问答系统在效率约束下处理渐进式文本和图像，包含需不确定性决策的Tossup问题和强调准确选择的Bonus问题。我们提出任务特定双智能体架构：Tossup智能体采用GPT-4o-mini模型结合置信度校准与领域数值推理策略，Bonus智能体使用GPT-4o模型集成引导推理与多模态证据。系统以0.402总分获得排行榜第一，证明轻量级任务特定推理策略在资源受限多模态问答中的有效性。",
+      "summary_en": "The QANTA 2026 challenge requires multimodal QA systems to handle incrementally revealed text and images under efficiency constraints, with Tossup questions demanding uncertainty-aware answering and Bonus questions emphasizing accurate selection. We propose a task-specific two-agent architecture: a Tossup agent using GPT-4o-mini with confidence calibration and domain-specific numeric reasoning, and a Bonus agent using GPT-4o with leadin-aware reasoning and multimodal integration. Our system achieved the top leaderboard score of 0.402, demonstrating that lightweight task-specific reasoning strategies can excel in resource-constrained multimodal QA.",
+      "highlights_zh": [
+        "任务特定双智能体架构",
+        "总分0.402排行榜第一",
+        "轻量推理策略高效可行"
+      ]
+    },
+    {
+      "id": "2607.09611",
+      "title": "Toward Real-Time Sentence-Level Sign Language Translation",
+      "authors": [
+        "Thanh-Hoang Nguyen Doan"
+      ],
+      "abstract": "Most sign language understanding systems operate at the level of isolated signs, limiting their usefulness in natural communication. We study sentence-level sign language translation (SLT) with the primary goal of real-time deployment rather than proposing a new translation architecture. We fine-tune a SHuBERT-ByT5 translation stack on a uniformly sampled 9,872-example subset of How2Sign, selected because of compute and storage constraints, using QLoRA while keeping SHuBERT frozen. The model obtains a validation BLEU of 16.7 and, on the test split, BLEU 15.9 and BLEURT 44.7. The main contribution is a hardware-aware streaming system: a Raspberry Pi 4B reference client provides camera capture, local text display, and speech output, while compute-intensive perception and translation run on a CPU/GPU backend. The capture protocol remains client-agnostic, so the same backend can serve a browser, phone, or laptop. Chunked ingestion, bounded queues, parallelized perception, temporal reordering, and a sentence-boundary state machine reduce mean post-finalization response latency from 1.873 to 1.354 seconds (27.71%) and P95 latency from 2.919 to 2.130 seconds (27.03%) over the complete 9,872-example working subset.",
+      "published": "2026-07-10T17:11:03Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09611",
+      "pdf_url": "https://arxiv.org/pdf/2607.09611",
+      "summary_zh": "现有手语翻译系统多局限于孤立词汇，难以支持自然交流中的实时句子级翻译。本研究通过QLoRA微调SHuBERT-ByT5翻译栈，并设计了一套硬件感知的流式系统，包括树莓派客户端和CPU/GPU后端。该系统将平均响应延迟从1.873秒降至1.354秒（降低27.71%），在How2Sign测试集上达到BLEU 15.9和BLEURT 44.7。",
+      "summary_en": "Most sign language translation systems operate at isolated sign level, limiting natural communication. This work fine-tunes a SHuBERT-ByT5 stack with QLoRA and proposes a hardware-aware streaming system with Raspberry Pi client and CPU/GPU backend. It reduces mean response latency by 27.71% to 1.354 seconds while achieving BLEU 15.9 and BLEURT 44.7 on How2Sign test set.",
+      "highlights_zh": [
+        "硬件感知的流式实时翻译系统",
+        "BLEU 15.9，延迟降低27.71%",
+        "支持树莓派等低功耗设备部署"
+      ]
+    },
+    {
+      "id": "2607.09661",
+      "title": "PanoWorld: Real-World Panoramic Generation",
+      "authors": [
+        "Haoyuan Li",
+        "Dizhe Zhang",
+        "Yuemei Zhou",
+        "Xiangkai Zhang",
+        "Haoran Feng",
+        "Xiaofan Lin",
+        "Wenjie Jiang",
+        "Bo Du",
+        "Ming-Hsuan Yang",
+        "Lu Qi"
+      ],
+      "abstract": "In this work, we aim to address the challenge of long-range memory in panoramic world models by exploiting the rotation-equivariant property of omnidirectional representations, where rotation can be treated as an implicit geometric transformation.Building on this insight, we propose PanoWorld, which simplifies camera trajectories into translations via fixed headings for both current-action modeling and long-range memory through Dense Panoramic Ray-Conditioning (DPRC) and Geometry-aware Memory Augmentation (GMA).Then, a three-stage training pipeline is introduced to progressively optimize each component. To better evaluate physical consistency under large-scale spatial variations and diverse illumination conditions, where existing datasets are relatively stable, we construct World360, a large-scale dataset consisting of both real-world video clips collected via panoramic unmanned aerial vehicles and high-quality simulated clips generated by AirSim360.Extensive experiments on World360 demonstrate the effectiveness of PanoWorld, outperforming alternative methods by a large margin.Our models, training code, and dataset will be publicly available. More information can be found on our project page: https://lihaoy-ux.github.io/panoworld-page/.",
+      "published": "2026-07-10T17:59:32Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09661",
+      "pdf_url": "https://arxiv.org/pdf/2607.09661",
+      "summary_zh": "全景世界模型面临长程记忆挑战，现有数据集在空间变化和光照多样性上存在不足。提出PanoWorld，利用全景表示的旋转等变性，通过密集全景射线条件与几何感知记忆增强简化相机轨迹建模，并构建大规模真实+仿真数据集World360。实验表明PanoWorld在物理一致性上大幅超越现有方法，代码与数据将开源。",
+      "summary_en": "Panoramic world models suffer from long-range memory limitations, and existing datasets lack large-scale spatial variations and diverse illumination. PanoWorld exploits rotation-equivariant properties of omnidirectional representations, simplifying camera trajectories via Dense Panoramic Ray-Conditioning and Geometry-aware Memory Augmentation, and introduces the World360 dataset with real UAV and simulated data. Extensive experiments show PanoWorld significantly outperforms alternatives in physical consistency, with models and data to be released.",
+      "highlights_zh": [
+        "旋转等变性简化长程记忆建模",
+        "在World360上大幅超越对比方法",
+        "开源真实+仿真数据集推动研究"
+      ]
+    },
+    {
+      "id": "2607.09655",
+      "title": "OpenLongTail: Generative Scaling of Long-Tail Driving Data",
+      "authors": [
+        "Lulin Liu",
+        "Nuo Chen",
+        "Yan Wang",
+        "Bangya Liu",
+        "Wenyan Cong",
+        "Hezhen Hu",
+        "Boris Ivanovic",
+        "Hao Wang",
+        "Ziyao Zeng",
+        "Xinyu Gong",
+        "Yang Zhou",
+        "Zixiang Xiong",
+        "Dilin Wang",
+        "Zhangyang Wang",
+        "Weisong Shi",
+        "Ruohan Zhang",
+        "Marco Pavone",
+        "Zhiwen Fan"
+      ],
+      "abstract": "Scaling robust driving policies is fundamentally bottlenecked by the scarcity of edge cases in curated datasets. While the real world continuously captures these critical events, such long-tail events remain underutilized when collected from heterogeneous sources. Specifically, diverse but valuable in-the-wild long-tail videos lack the full view coverage required for training policy models, often missing multi-view poses or originating solely from monocular dash cameras. This modality gap prevents these ubiquitous observations from being converted into scalable training data for long-tail generalization. We introduce OpenLongTail, an open-source generative data engine for scaling autonomous driving policies under long-tail events. To transform heterogeneous data sources into view-aligned and temporally coherent multi-view assets that are useful for policy learning, we develop a pose-informed extrapolative view synthesis pipeline that generates the missing views. We further enhance cross-view consistency and the temporal alignment for the newly generated views by injecting Plücker ray geometry into the scalable generation engine. By synthesizing heterogeneous long-tail data, we observe a significant improvement in closed-loop driving robustness in handling long-tail events. By measuring the extrapolative view synthesis and pose metrics, we validate the effectiveness of OpenLongTail in visual fidelity, cross-view consistency, and ego-trajectory recovery.",
+      "published": "2026-07-10T17:54:14Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09655",
+      "pdf_url": "https://arxiv.org/pdf/2607.09655",
+      "summary_zh": "自动驾驶策略的扩展受限于长尾事件数据的稀缺，而现实世界收集的异构长尾视频因缺乏多视角覆盖而难以用于策略训练。本文提出OpenLongTail，一种开源生成式数据引擎，通过位姿感知的外推视图合成管道生成缺失视角，并注入Plücker射线几何增强跨视角一致性和时间对齐。实验表明，该方法显著提升了闭环驾驶在长尾事件中的鲁棒性，并在视觉保真度、跨视角一致性和自车轨迹恢复上验证了有效性。",
+      "summary_en": "Scaling robust driving policies is bottlenecked by the scarcity of long-tail events in curated datasets, while heterogeneous real-world long-tail videos lack multi-view coverage for policy training. OpenLongTail introduces an open-source generative data engine that synthesizes missing views via pose-informed extrapolative view synthesis and enhances cross-view consistency with Plücker ray geometry. It significantly improves closed-loop driving robustness in long-tail events and validates effectiveness in visual fidelity, cross-view consistency, and ego-trajectory recovery.",
+      "highlights_zh": [
+        "基于位姿的外推视图合成",
+        "闭环长尾驾驶鲁棒性显著提升",
+        "开源生成引擎，可扩展异构数据"
+      ]
+    },
+    {
+      "id": "2607.09648",
+      "title": "B-spline Policy: Accelerating Manipulation Policies via B-spline Action Representations",
+      "authors": [
+        "Xiaoshen Han",
+        "Haoyu Xiong",
+        "Haonan Chen",
+        "Chaoqi Liu",
+        "Antonio Torralba",
+        "Yuke Zhu",
+        "Yilun Du"
+      ],
+      "abstract": "In this work, we present B-spline Policy (BSP), an action representation designed for accelerating robot manipulation policies. Rather than predicting discrete-time action chunks, BSP parameterizes actions as continuous B-spline curves defined by a set of knots and control points. This representation yields smooth, time-continuous trajectories that can be temporally scaled and executed by low-level controllers at higher frequencies and speeds. We show that B-spline-parameterized actions can be seamlessly integrated into standard policy learning pipelines by directly predicting B-spline parameters. Experiments on simulated and real-world tasks demonstrate that BSP significantly reduces task completion time, achieving substantial improvements over baseline methods while maintaining strong success rates. More results: https://b-spline-policy.github.io",
+      "published": "2026-07-10T17:46:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09648",
+      "pdf_url": "https://arxiv.org/pdf/2607.09648",
+      "summary_zh": "机器人操作策略通常预测离散时间动作块，导致执行效率受限。本文提出B-spline Policy (BSP)，将动作参数化为连续B样条曲线，通过预测控制点实现平滑、可时间缩放的动作表示。实验表明BSP显著缩短任务完成时间，在保持高成功率的同时大幅提升执行速度。",
+      "summary_en": "Robot manipulation policies typically predict discrete-time action chunks, limiting execution efficiency. This paper proposes B-spline Policy (BSP), which parameterizes actions as continuous B-spline curves via control points, enabling smooth and temporally scalable action representations. Experiments show BSP significantly reduces task completion time while maintaining high success rates, achieving substantial speed improvements over baselines.",
+      "highlights_zh": [
+        "连续B样条动作参数化",
+        "任务完成时间显著缩短",
+        "可集成标准策略学习流程"
+      ]
+    },
+    {
+      "id": "2607.09590",
+      "title": "PAC-ACT: Post-training Actor-Critic for Action Chunking Transformers",
+      "authors": [
+        "Yujie Pang",
+        "Zudong Li"
+      ],
+      "abstract": "Precision industrial contact manipulation requires reliable robot policies under pose perturbations and contact-force constraints. Vision-language-action models offer broad generalization but often introduce high inference latency and GPU-memory cost, while vision-action chunking policies are more suitable for real-time industrial control. However, these policies are usually trained by behavior cloning and suffer from distribution shift in contact-rich tasks. This paper proposes PAC-ACT, a reinforcement-learning post-training framework for pretrained Action Chunking Transformer policies. PAC-ACT reformulates policy optimization at the chunk level, constructs an ACT-transferred actor-critic architecture, and introduces a hybrid behavior-prior constraint to preserve the pretrained action distribution during online fine-tuning. Experiments on industrial precision-contact benchmarks show that PAC-ACT improves task success, contact stability, and force safety while retaining low latency and low GPU-memory usage. On the Contour task, PAC-ACT significantly reduces peak contact force and decreases the proportion of force readings above 60 N by 46 times. Sparse-reward ablations further show that the proposed behavior-prior constraint enables effective exploration under randomized initial poses.",
+      "published": "2026-07-10T16:42:17Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.09590",
+      "pdf_url": "https://arxiv.org/pdf/2607.09590",
+      "summary_zh": "工业精密接触操作中，现有视觉-语言-动作模型推理延迟高且GPU内存消耗大，而基于行为克隆的视觉动作分块策略在接触密集任务中面临分布偏移问题。本文提出PAC-ACT框架，通过后训练强化学习对预训练的动作分块Transformer策略进行优化，引入分块级策略优化、ACT迁移的演员-评论家架构和混合行为先验约束。实验表明，PAC-ACT在保持低延迟和低GPU内存的同时，显著提升了任务成功率、接触稳定性和力安全性，在轮廓跟踪任务中将峰值接触力降低46倍。",
+      "summary_en": "Precision industrial contact manipulation faces challenges of high inference latency and GPU-memory cost from vision-language-action models, while behavior-cloned vision-action chunking policies suffer from distribution shift in contact-rich tasks. PAC-ACT proposes a reinforcement-learning post-training framework that reformulates policy optimization at the chunk level, constructs an ACT-transferred actor-critic architecture, and introduces a hybrid behavior-prior constraint to preserve pretrained action distribution. Experiments on industrial precision-contact benchmarks show improved task success, contact stability, and force safety with low latency and GPU memory, reducing peak contact force by 46 times on the Contour task.",
+      "highlights_zh": [
+        "分块级强化学习后训练框架",
+        "峰值接触力降低46倍",
+        "低延迟低内存的工业部署方案"
+      ]
+    }
+  ]
+}
