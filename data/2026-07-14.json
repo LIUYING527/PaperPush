@@ -1,0 +1,288 @@
+{
+  "date": "2026-07-14",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.11881",
+      "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+      "authors": [
+        "Gabrielle Kaili-May Liu",
+        "Areeb Gani",
+        "Jacqueline Lu",
+        "Jordan Thomas",
+        "Mark Steyvers",
+        "Arman Cohan"
+      ],
+      "abstract": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerstone of capable, transparent AI systems. Yet while LLMs have made significant progress across diverse real-world tasks, it is not yet clear when, how, or to what extent they can exhibit or be endowed with effective metacognitive abilities, nor how such abilities can be adapted to advance the fundamental capabilities, reliability, and intelligence of AI systems. This paper bridges this gap by presenting the first comprehensive overview of the current state of knowledge on metacognition for LLMs. We analyze and taxonomize the landscape of this emerging field and summarize recent technical advancements, including methods and benchmarks to measure and evaluate LLMs' metacognitive abilities, techniques to elicit, improve, and apply metacognition in LLMs, and findings and implications of ongoing research. We also discuss applications, open questions and challenges, and promising directions for future work. Our aim is to provide a detailed and up-to-date review of this topic and stimulate meaningful research and discussion. An organized list of papers can be found at https://github.com/yale-nlp/LLM-Metacognition.",
+      "published": "2026-07-13T17:58:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11881",
+      "pdf_url": "https://arxiv.org/pdf/2607.11881",
+      "summary_zh": "大型语言模型（LLM）是否具备元认知能力及其如何实现尚不明确。本文首次全面综述了LLM元认知领域的研究现状，系统分类了评估方法、提升技术及应用。该综述为构建更可靠、透明的AI系统提供了关键理论基础与未来研究方向。",
+      "summary_en": "It remains unclear whether and how Large Language Models (LLMs) exhibit metacognitive abilities. This paper presents the first comprehensive overview of metacognition in LLMs, taxonomizing evaluation methods, improvement techniques, and applications. The survey provides a foundational understanding for building more capable, reliable, and transparent AI systems.",
+      "highlights_zh": [
+        "首个LLM元认知全面综述",
+        "系统分类评估与提升方法",
+        "指导构建可靠透明AI系统"
+      ]
+    },
+    {
+      "id": "2607.11875",
+      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+      "authors": [
+        "Tiberiu Musat",
+        "Tiago Pimentel",
+        "Nicholas Zucchet",
+        "Thomas Hofmann"
+      ],
+      "abstract": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been mostly tied to specific tasks, we study a generalized class of inductive tasks that unifies several synthetic tasks known in the literature, including in-context n-grams and multi-hop reasoning. In this class, we theoretically prove that the training dynamics of attention models can be confined to a highly interpretable, low-dimensional invariant manifold. On this manifold, the learning dynamics are captured by a handful of interpretable coordinates rather than millions of parameters, making both theoretical and empirical analysis more tractable. Using this framework, we characterize how data statistics govern the competition between in-context and in-weights learning, we study how random initializations determine the `winning' circuit when multiple solutions are possible, and we demonstrate that the coordinate frame associated with the manifold can be used to automatically detect which circuits have been learned in trained models. By casting circuit formation as a low-dimensional dynamical phenomenon, we take a step toward a predictive theory of how Transformers learn.",
+      "published": "2026-07-13T17:56:11Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11875",
+      "pdf_url": "https://arxiv.org/pdf/2607.11875",
+      "summary_zh": "当前研究缺乏对Transformer在归纳推理任务中学习动态的统一理论解释。本文提出一个理论框架，将训练动态约束到低维不变流形上，用少量可解释坐标描述数百万参数的行为。该框架揭示了数据统计如何影响上下文学习与权重学习的竞争，并可用于自动检测已学习的电路。",
+      "summary_en": "Existing work lacks a unified theoretical explanation for Transformer learning dynamics in inductive reasoning tasks. This paper proposes a framework that confines training dynamics to a low-dimensional invariant manifold, capturing behavior with interpretable coordinates. It reveals how data statistics govern in-context vs. in-weights learning competition and enables automatic detection of learned circuits.",
+      "highlights_zh": [
+        "提出低维不变流形理论框架",
+        "揭示数据统计驱动电路竞争",
+        "可自动检测已学习电路"
+      ]
+    },
+    {
+      "id": "2607.11883",
+      "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+      "authors": [
+        "Shikai Qiu",
+        "Marc Finzi",
+        "Yujia Zheng",
+        "Kun Zhang",
+        "Andrew Gordon Wilson"
+      ],
+      "abstract": "Compression is fundamental to intelligence. A model that can represent its training data as a short code has discovered regularities that enable generalization. Large neural networks may learn functions far simpler than their parameter counts suggest, but it is challenging to construct codes that realize this simplicity. Parameter-based methods such as quantization produce code lengths that scale with model size, insensitive to how much information the parameters store. Prequential coding bypasses this issue by compressing the training trajectory, but codes the exact data sequence regardless of how much the model learns, yielding large codes when the data has high entropy. We introduce requential coding, where a teacher model selects training samples drawn from the student's own distribution. The student's code records only these selections, which cost bits only where teacher and student disagree. The resulting code length is independent of parameter count and data entropy, and often orders of magnitude shorter than the prequential counterpart, with an advantage that grows with scale. This compression sheds light on phenomena inaccessible to prior compressors. Holding loss fixed, larger models and ensembles compress to much smaller sizes despite more parameters. Plugged into a PAC-Bayes bound, the requential code yields state-of-the-art generalization guarantees for billion-parameter LLMs, outperforming bounds built on aggressive post-training quantization even granted zero error. The bound tightens with scale in the compute-optimal regime, as models become increasingly compressible relative to dataset size. The same code predicts that models gradually overfit when trained for multiple epochs. It also isolates the learnable information in a dataset from its unpredictable, random content, revealing that lower-entropy text holds far more learnable structure than higher-entropy image data.",
+      "published": "2026-07-13T17:58:50Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11883",
+      "pdf_url": "https://arxiv.org/pdf/2607.11883",
+      "summary_zh": "现有模型压缩方法如量化对参数数量敏感，且预编码方法在数据熵高时产生大码长。本文提出requential coding，通过教师模型从学生自身分布中选择训练样本，仅编码师生分歧处的选择。该方法码长与参数数量和数据熵无关，在大型模型上压缩效果显著，并提供了更优的泛化保证。",
+      "summary_en": "Existing compression methods like quantization scale with model size, while prequential coding produces large codes for high-entropy data. This paper introduces requential coding, where a teacher selects training samples from the student's own distribution, coding only disagreements. The resulting code length is independent of parameter count and data entropy, achieving orders-of-magnitude compression for large models and yielding state-of-the-art generalization guarantees.",
+      "highlights_zh": [
+        "码长与参数数量和数据熵无关",
+        "在大型模型上压缩效果显著优于预编码",
+        "提供十亿参数LLM的SOTA泛化保证"
+      ]
+    },
+    {
+      "id": "2607.11873",
+      "title": "A Durability and Cross-Language Transfer Benchmark for a Validated Teaching-Feedback Classification Protocol",
+      "authors": [
+        "Esteban U. Vega Barajas"
+      ],
+      "abstract": "Institutions collect far more open-ended teaching-evaluation feedback than they read. A prior study introduced a validated protocol for classifying such comments by thematic category and sentiment, built from a documented annotation guide, an intra-annotator reliability measurement, stratified cross-validation, and a held-out evaluation on a Spanish institutional corpus with a frozen-encoder design. Two questions limit its reuse: whether a protocol fixed to 2019-era frozen embeddings stays competitive as representation methods advance, and whether it transfers to a second language. We re-run it on the original Spanish data across three representation generations, sparse lexical features, frozen transformer embeddings, and prompted large language models, and transfer its sentiment task to English with a balanced 45,000-comment corpus checked against an aspect-labeled education dataset. Treating paired comparisons as descriptive, we find the protocol durable: a 2026 frontier model posts the highest thematic F1 on the hardest Spanish task, yet shows no sentiment advantage over a cheap model and no descriptive separation from it on English, so model choice is a deployment decision, not a property of the method.",
+      "published": "2026-07-13T17:56:05Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11873",
+      "pdf_url": "https://arxiv.org/pdf/2607.11873",
+      "summary_zh": "机构收集了大量开放式教学评价反馈但缺乏有效分析，现有分类协议面临嵌入方法更新和跨语言迁移的挑战。本研究在原始西班牙语数据上测试了三代表示方法（稀疏词特征、冻结Transformer嵌入、提示大语言模型），并将情感分析任务迁移至英语45,000条评论数据集。结果表明该协议具有持久性：2026年前沿模型在西班牙语任务上主题F1最高，但情感分析无显著优势，模型选择取决于部署需求而非方法本身。",
+      "summary_en": "Institutions collect vast amounts of open-ended teaching evaluation feedback but lack effective analysis, while existing classification protocols face challenges from advancing embedding methods and cross-language transfer. This study tests three representation generations (sparse lexical features, frozen transformer embeddings, prompted LLMs) on original Spanish data and transfers sentiment analysis to a balanced 45,000-comment English corpus. Results show protocol durability: a 2026 frontier model achieves highest thematic F1 on Spanish but no sentiment advantage, making model choice a deployment decision rather than a property of the method.",
+      "highlights_zh": [
+        "协议跨语言与跨模型持久性验证",
+        "前沿模型主题F1最高但情感无优势",
+        "模型选择取决于部署需求而非方法"
+      ]
+    },
+    {
+      "id": "2607.11849",
+      "title": "AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification",
+      "authors": [
+        "Lingkai Kong",
+        "Zijian Wu",
+        "Yuzhe Gu",
+        "Haiteng Zhao",
+        "Wenyong Huang",
+        "Shuang Sun",
+        "Zhicheng Xiong",
+        "Xiaotian Zhang",
+        "Shuya Zhao",
+        "Yan Wang",
+        "Disheng Xu",
+        "Wenwei Zhang",
+        "Kai Chen"
+      ],
+      "abstract": "Large language models (LLMs) have achieved remarkable performance on high-school and olympiad-style mathematics, yet their capabilities on advanced mathematics remain poorly understood. Existing benchmarks, however, fall short in both scope and evaluation granularity: they provide limited disciplinary coverage and often rely on final-answer correctness or coarse judgments, leaving the validity of the reasoning process inadequately assessed. To bridge this gap, we introduce AdvancedMathBench, a benchmark suite designed to evaluate advanced mathematical reasoning capabilities. Its core proof-generation benchmark, ProverBench, contains 296 problems spanning undergraduate and doctoral qualifying-exam levels. To provide reliable evaluation of the proofs, we develop a dedicated automatic verification pipeline trained on large-scale expert annotations to produce both correctness verdicts and fine-grained assessments of proof errors, which exhibits strong agreement with human experts on held-out proof trajectories. We further introduce VerifierBench, consisting of 888 model-generated proof trajectories paired with expert ground truth, to evaluate whether models can correctly judge proof validity and provide sound verification rationales. Experiments show that AdvancedMathBench remains challenging for frontier models. On proof generation, the best-performing model, GPT-5.5-xhigh, achieves only 75.8 and 66.1 on the UGD and QE splits, respectively, indicating substantial room for improvement on advanced mathematical proof construction. On proof verification, the best model attains a Balanced F1 of only 65.1, and models generally exhibit low true negative rates, suggesting that critical error detection remains a major bottleneck.",
+      "published": "2026-07-13T17:38:22Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11849",
+      "pdf_url": "https://arxiv.org/pdf/2607.11849",
+      "summary_zh": "现有基准测试在高级数学推理评估上存在学科覆盖有限和依赖最终答案正确性的问题。为此，我们提出了AdvancedMathBench基准套件，包含ProverBench（296道本科至博士资格考试级别的证明题）和VerifierBench（888个带专家标注的模型证明轨迹），并开发了与人类专家高度一致的自动验证流水线。实验表明，最强模型GPT-5.5-xhigh在证明生成上仅达75.8分，验证任务的平衡F1仅65.1，证明高级数学推理仍是重大挑战。",
+      "summary_en": "Existing benchmarks for advanced mathematical reasoning suffer from limited disciplinary coverage and reliance on final-answer correctness. We introduce AdvancedMathBench, featuring ProverBench with 296 advanced proof problems and VerifierBench with 888 expert-annotated proof trajectories, along with an automatic verification pipeline achieving strong human agreement. Results show the best model GPT-5.5-xhigh scores only 75.8 on proof generation and 65.1 Balanced F1 on verification, highlighting significant room for improvement in advanced math reasoning.",
+      "highlights_zh": [
+        "首个覆盖博士资格考级别的数学证明基准",
+        "GPT-5.5-xhigh证明生成仅75.8分",
+        "验证任务平衡F1仅65.1，错误检测是瓶颈"
+      ]
+    },
+    {
+      "id": "2607.11886",
+      "title": "Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
+      "authors": [
+        "Runhui Huang",
+        "Qihui Zhang",
+        "Zhe Liu",
+        "Yu Gao",
+        "Jie Wu",
+        "Hengshuang Zhao"
+      ],
+      "abstract": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning. Instead of asking the MLLM to judge a generated image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass. We use the average image-conditioned prompt log-likelihood as the reward, directly reusing the MLLM's pretrained image-text alignment ability without preference labels, reward-model fine-tuning. We further introduce Self-SpectraReward, a special case for unified multimodal models where the policy's own understanding branch serves as the reward model for its generation branch, forming a closed-loop self-improving framework without external reward models or external knowledge. Extensive experiments validate SpectraReward through a broad image-generation RL study covering two diffusion models, three RL algorithms, nine reward MLLM backbones from four MLLM families spanning 4B to 235B parameters, and five out-of-distribution text-to-image benchmarks. Results show that both SpectraReward and Self-SpectraReward significantly and consistently improve generation performance and outperform prior MLLM-derived reward training methods. Further analysis reveals that larger reward MLLMs are not always better, while Self-SpectraReward can match or surpass much larger external reward models, suggesting that reward-policy alignment is a key factor for effective image-generation RL. Project Page: https://huangrh99.github.io/SpectraReward/",
+      "published": "2026-07-13T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11886",
+      "pdf_url": "https://arxiv.org/pdf/2607.11886",
+      "summary_zh": "现有文本到图像生成强化学习依赖人工标注或微调奖励模型，成本高且泛化性差。本文提出SpectraReward，利用预训练多模态大模型直接计算图像恢复原提示的似然作为奖励，无需额外训练。实验表明该方法在多种模型和算法上显著提升生成质量，且自监督版本可匹敌更大外部奖励模型。",
+      "summary_en": "Current text-to-image generation RL relies on human-annotated or fine-tuned reward models, which are costly and lack generalization. This paper proposes SpectraReward, a training-free method that uses pretrained MLLMs to compute the likelihood of recovering the original prompt from the generated image as reward. Extensive experiments show consistent improvements across diverse models and algorithms, with the self-supervised version matching larger external reward models.",
+      "highlights_zh": [
+        "零样本奖励函数，无需训练",
+        "超越现有MLLM奖励方法",
+        "自监督闭环提升生成质量"
+      ]
+    },
+    {
+      "id": "2607.11885",
+      "title": "Latent-Identity Tuning in Text-to-Image Personalization Models",
+      "authors": [
+        "Daniel Garibi",
+        "Ronen Kamenetsky",
+        "Hadar Averbuch-Elor",
+        "Daniel Cohen-Or",
+        "Or Patashnik"
+      ],
+      "abstract": "Generating and editing a person's face demands high precision, as even minor modifications can significantly alter a subject's perceived identity. Current personalization and editing methods built on general-purpose text-to-image models, however, often lack the precision required for fine-grained facial edits. We present a method for fine-grained identity tuning in text-to-image personalization models. Unlike standard image editing, which operates on a given image, identity tuning modifies the latent representation of a specific identity, enabling the generation of diverse images that consistently depict the same edited identity. To enable fine-grained latent identity tuning, we explore the latent space of a pre-trained, frozen encoder for text-to-image personalization. Our approach requires no additional training. Instead, it leverages the existing architecture of a frozen encoder to uncover latent semantic directions. This space consists of a set of latent tokens that play distinct roles in capturing different aspects of an identity and often correspond to specific spatial or semantic facial regions. We show that meaningful directions can be identified within this space and within subspaces defined by selected tokens, enabling localized, fine-grained, and semantically coherent edits. We validate our approach through qualitative and quantitative experiments that demonstrate diverse localized facial edits while preserving cross-image identity consistency. Project page at: https://garibida.github.io/IdentityTuning/",
+      "published": "2026-07-13T17:59:49Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11885",
+      "pdf_url": "https://arxiv.org/pdf/2607.11885",
+      "summary_zh": "现有基于通用文本到图像模型的个性化生成与编辑方法难以实现精细的人脸身份编辑。本文提出一种无需额外训练的潜在身份调优方法，通过探索预训练冻结编码器的潜在空间，发现语义方向以实现细粒度编辑。该方法在保持跨图像身份一致性的同时，实现了局部化、语义连贯的人脸编辑，并通过定性与定量实验验证了其有效性。",
+      "summary_en": "Current personalization and editing methods built on general-purpose text-to-image models lack precision for fine-grained facial edits. We present a training-free method for latent identity tuning that discovers semantic directions in the latent space of a pre-trained frozen encoder, enabling localized and semantically coherent edits. The approach achieves diverse facial edits while preserving cross-image identity consistency, validated through qualitative and quantitative experiments.",
+      "highlights_zh": [
+        "无需训练的潜在身份调优",
+        "保持跨图像身份一致性",
+        "实现局部化语义人脸编辑"
+      ]
+    },
+    {
+      "id": "2607.11884",
+      "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
+      "authors": [
+        "Dian Wang",
+        "Jisang Park",
+        "Xiaomeng Xu",
+        "Han Zhang",
+        "Shuran Song",
+        "Jeannette Bohg"
+      ],
+      "abstract": "Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame. However, modern diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing one denoiser to model action distributions that are often unnecessarily complex in that frame. We propose Mixture of Frames Policy (MoF), a diffusion policy that performs synchronized action denoising across multiple coordinate frames. MoF maintains a single canonical diffusion state, re-expresses it in several task-relevant frames, applies frame-specialized denoisers, and fuses their noise predictions back in the canonical frame. To make this possible for intermediate noisy diffusion states, we introduce a column-based 6D rotation representation within an SE(3) action parameterization that supports exact, differentiable frame transformations without requiring noisy rotations to lie on the SO(3) manifold. Across nine simulated bimanual manipulation tasks, we show that the best action frame is task-dependent and that MoF improves over oracle frame selection and standard Mixture-of-Experts (MoE) baselines. We further evaluate MoF on two real-world bimanual mobile manipulation tasks, demonstrating that it outperforms all constituent single-frame baselines. Project homepage: https://mofpo.github.io",
+      "published": "2026-07-13T17:59:40Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11884",
+      "pdf_url": "https://arxiv.org/pdf/2607.11884",
+      "summary_zh": "现有基于扩散的视觉运动策略通常使用单一预定义的动作坐标系，导致去噪器需要建模在该坐标系下不必要的复杂动作分布。我们提出混合帧策略（MoF），通过维护一个标准扩散状态并在多个任务相关坐标系中同步去噪，引入基于列的6D旋转表示支持精确可微的坐标系变换。在9个模拟和2个真实双臂移动操作任务中，MoF优于最优单帧选择及标准混合专家基线。",
+      "summary_en": "Current diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing denoisers to model unnecessarily complex action distributions. We propose Mixture of Frames Policy (MoF), which maintains a single canonical diffusion state, re-expresses it in multiple task-relevant frames, applies specialized denoisers, and fuses predictions via a column-based 6D rotation representation enabling exact differentiable frame transformations. MoF outperforms oracle frame selection and standard Mixture-of-Experts baselines across 9 simulated and 2 real-world bimanual mobile manipulation tasks.",
+      "highlights_zh": [
+        "多帧同步去噪扩散策略",
+        "9模拟+2真实任务超越基线",
+        "支持SE(3)可微帧变换"
+      ]
+    },
+    {
+      "id": "2607.11855",
+      "title": "Robust bipedal locomotion on flowable slopes via foot-driven terrain manipulation",
+      "authors": [
+        "Deniz Kerimoglu",
+        "Junnosuke Kamohara",
+        "Jiyeon Maeng",
+        "Ziwon Yoon",
+        "Seth Hutchinson",
+        "Ye Zhao",
+        "Daniel I. Goldman"
+      ],
+      "abstract": "Bipedal robots are challenging to control because they operate close to instability, where small variations in foot-terrain contact can rapidly destabilize locomotion. On rigid terrain, bipedal robots mitigate this fragility by using well-established contact mechanics and control strategies. On flowable surfaces such as granular slopes, foot contact can induce large surface deformations and solid-fluid-like transitions, coupling terrain effects with robot dynamics, leading to underperformance or failure. This is partly due to the lack of reliable methods to represent the dynamics of flowable terrain, making it difficult to account for terrain effects in locomotion design. Here, we investigate how controlling terrain response can improve bipedal locomotion on granular slopes by studying the terradynamics of cleated feet, thin plates emanating from the foot soles. Systematic studies of a small-scale (1.4 kg) robophysical biped reveal that cleats with sparse and dense spacing lead to excessive terrain yielding and resistance, respectively, degrading performance and leading to failure. An intermediate cleat spacing distributes interaction forces to maintain substrate stresses near (or below) the yield threshold, enabling walking on granular slopes up to 30 degrees. Guided by these principles, we design a foot that actively adjusts cleat depth and accommodates both rigid and granular terrain. We also demonstrate that the principles of effective foot-terrain interaction translate to a larger (15 kg) autonomous biped. Our study presents an alternative to conventional body-centric robot control approaches, which regulate terrain-induced effects through body motion, by instead regulating terrain interactions through limb-centric approach.",
+      "published": "2026-07-13T17:42:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11855",
+      "pdf_url": "https://arxiv.org/pdf/2607.11855",
+      "summary_zh": "双足机器人在流动性地形（如颗粒斜坡）上行走时，脚-地接触易引发大变形和固-液转变，导致失稳。本文通过研究带齿足板的颗粒地形动力学，发现中等齿间距能优化力分布、避免屈服，从而在30度斜坡上实现稳定行走。基于此设计了可主动调节齿深的足部，并验证了从1.4kg到15kg机器人的跨尺度有效性，提出了一种通过足部主动调控地形而非依赖身体运动的控制新范式。",
+      "summary_en": "Bipedal robots struggle on flowable slopes due to foot-induced terrain deformation and solid-fluid transitions. By studying cleated foot terradynamics, we found that intermediate cleat spacing balances force distribution to stay below yield threshold, enabling walking on granular slopes up to 30°. This limb-centric terrain manipulation principle was validated on robots from 1.4kg to 15kg, offering an alternative to conventional body-centric control.",
+      "highlights_zh": [
+        "足部主动调控地形新范式",
+        "30°颗粒斜坡稳定行走",
+        "跨尺度验证（1.4-15kg）"
+      ]
+    },
+    {
+      "id": "2607.11874",
+      "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
+      "authors": [
+        "Yunhai Feng",
+        "Natalie Leung",
+        "Jiaxuan Wang",
+        "Lujie Yang",
+        "Haozhi Qi",
+        "Preston Culbertson"
+      ],
+      "abstract": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track them. But how does this recipe transfer to dexterous manipulation? The answer is not obvious, as manipulation involves complex, contact-rich dynamics and requires delicate regulation of contact modes and forces. We present REGRIND, a minimalist retargeting-guided RL pipeline that learns dexterous manipulation policies from a single human demonstration. REGRIND retargets human hand-object motion to a robot reference that preserves hand-object spatial and contact relationships, trains a residual RL policy in simulation to track object-centric keypoints along that reference, and transfers the resulting policy zero-shot to hardware with careful system identification. The resulting policies produce fluid, human-like behavior on two different multi-fingered hands across contact-rich tool-use tasks, including operating a pair of scissors and turning a screwdriver. Through systematic hardware experiments, we identify and analyze the key factors that govern sim-to-real transfer in dexterous manipulation, offering practical guidance for retargeting-based learning in contact-rich settings. Videos and code are available at https://yunhaifeng.com/REGRIND.",
+      "published": "2026-07-13T17:56:08Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.11874",
+      "pdf_url": "https://arxiv.org/pdf/2607.11874",
+      "summary_zh": "灵巧操作面临复杂接触动力学和接触模式调控的挑战，现有全身控制方法难以直接迁移。本文提出REGRIND，通过将单次人类演示重定向为保持手-物空间与接触关系的机器人参考轨迹，并训练残差强化学习策略跟踪物体关键点，实现零样本迁移。在剪刀操作和螺丝刀旋转等任务中，该方法在两种多指手上产生了流畅类人行为，并通过系统实验揭示了影响仿真到现实迁移的关键因素。",
+      "summary_en": "Dexterous manipulation faces challenges from complex contact-rich dynamics and delicate contact regulation, making direct transfer of whole-body control recipes difficult. REGRIND retargets a single human demonstration to a robot reference preserving hand-object spatial and contact relationships, trains a residual RL policy to track object-centric keypoints, and achieves zero-shot sim-to-real transfer. The method produces fluid human-like behaviors on two multi-fingered hands across tool-use tasks like scissor operation and screwdriver turning, with systematic experiments identifying key factors for successful transfer.",
+      "highlights_zh": [
+        "单演示重定向+残差RL",
+        "零样本迁移至真实剪刀/螺丝刀任务",
+        "提供接触丰富场景的迁移指导"
+      ]
+    }
+  ]
+}
