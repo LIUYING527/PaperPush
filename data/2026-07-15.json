@@ -1,0 +1,299 @@
+{
+  "date": "2026-07-15",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.13034",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+      "authors": [
+        "Junjie Yin",
+        "Xinyu Feng"
+      ],
+      "abstract": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path before committing budget. We formalize minimum-sufficient execution and the Agent Cognitive Redundancy Ratio (ACRR), and propose E3 (Estimate, Execute, Expand): the agent estimates an initial operating point, executes a minimum viable path, and expands scope only when verification fails. On MSE-Bench--a deterministic benchmark of 121 edits in a capability-controlled simulator--E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, and further beats a strong adaptive retrieval baseline by 16%; the gains survive held-out instruction wording and essentially every cost weighting. A companion real-model harness (LLM-Case) corroborates the effect on a live gpt-4o agent editing a real open-source library, with every candidate patch graded by actually running the project's real pytest suite against a measured oracle: the over-reading is milder but real, and E3 is the leanest and fastest policy at comparable task success--its one shortfall a provider rate-limit, not a wrong edit. We frame this as a controlled probe of execution redundancy, not a measurement of any deployed agent, and position task-aware execution as a step toward engineering-grounded AI (EGAI)--agents whose effort is anchored in the engineering reality of the task. We release the framework and benchmark.",
+      "published": "2026-07-14T17:59:31Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13034",
+      "pdf_url": "https://arxiv.org/pdf/2607.13034",
+      "summary_zh": "当前LLM代理在执行多步骤任务时，常采用“最大上下文优先”策略导致大量冗余计算，缺乏对任务实际复杂度的感知能力。本文提出E3框架，通过先估计任务难度、执行最小可行路径、仅在验证失败时扩展范围，并引入最小充分执行和代理认知冗余比（ACRR）等概念。在MSE-Bench基准上，E3在保持100%成功率的同时，将成本降低85%、令牌减少91%、检查文件减少92%，并在真实模型测试中验证了其高效性。",
+      "summary_en": "LLM agents often waste resources by blindly re-reading all context, lacking awareness of task complexity. The paper proposes E3 (Estimate, Execute, Expand) which first estimates difficulty, executes a minimal viable path, and expands only on verification failure, formalized via minimum-sufficient execution and Agent Cognitive Redundancy Ratio (ACRR). On MSE-Bench, E3 matches 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, with gains persisting across cost weightings and real-model tests.",
+      "highlights_zh": [
+        "提出复杂度感知的E3执行框架",
+        "成本降低85%且成功率100%",
+        "推动工程导向AI（EGAI）发展"
+      ]
+    },
+    {
+      "id": "2607.13028",
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+      "authors": [
+        "Zhouchonghao Wu",
+        "Akshay Rangesh",
+        "Weixin Li",
+        "Wei-Jer Chang",
+        "Zachary Lee",
+        "Tim Wang",
+        "Wei Zhan"
+      ],
+      "abstract": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists.",
+      "published": "2026-07-14T17:59:02Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13028",
+      "pdf_url": "https://arxiv.org/pdf/2607.13028",
+      "summary_zh": "训练鲁棒的自动驾驶智能体需要快速、真实且多样的仿真环境，但现有模拟器难以兼顾速度、保真度和长尾场景覆盖。TerraZero提出了一种程序化驾驶模拟器和自博弈训练栈，通过CPU模拟与GPU推理的零拷贝路径实现每秒130万智能体步数，并利用随机化规则生成无限场景。该方法是首个完全通过强化学习从头训练的策略，在InterPlan长尾基准测试中超越其他学习型规划器，并在常规驾驶和安全指标上达到最优。",
+      "summary_en": "Training robust autonomous driving agents requires a simulator that is fast, realistic, and diverse, yet existing simulators struggle to balance speed, fidelity, and long-tail scenario coverage. TerraZero introduces a procedural driving simulator and self-play training stack that achieves 1.3M agent-steps per second via a zero-copy CPU-GPU path, and generates unbounded scenarios by randomizing rule-based road users and dynamics per episode. It is the first fully learned policy to top the InterPlan long-tail benchmark, outperforming larger learned planners, and achieves the best collision and time-to-collision scores on routine-driving benchmarks.",
+      "highlights_zh": [
+        "零演示自博弈训练框架",
+        "InterPlan长尾基准第一",
+        "支持多智能体与跨城市泛化"
+      ]
+    },
+    {
+      "id": "2607.13031",
+      "title": "The Seriality Gap in Video Diffusion Models",
+      "authors": [
+        "Jorge Diaz Chao",
+        "Konpat Preechakul",
+        "Yuxi Liu",
+        "Yutong Bai"
+      ],
+      "abstract": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, even when provided more denoising steps. In a length-matched single-ball control, where ball-ball interactions are absent, the degradation largely disappears, isolating dependent-event structure rather than video length as the cause. Across intervention studies, methods that increase effective serial computation improve performance disproportionately, including autoregressive/blockwise generation and architectural depth. We identify this pattern as the seriality gap: a mismatch between tasks requiring growing serial computation and video diffusion models whose denoising loop does not provide scalable serial compute. We then prove that, for deterministic video prediction, denoising steps do not add serial computation beyond the backbone, indicating a structural obstacle for video diffusion on serial reasoning and simulation tasks.",
+      "published": "2026-07-14T17:59:22Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13031",
+      "pdf_url": "https://arxiv.org/pdf/2607.13031",
+      "summary_zh": "视频扩散模型在处理多球碰撞等因果链较长的任务时性能下降，即使增加去噪步数也无法改善。通过对比实验发现，性能下降源于依赖事件结构而非视频长度，并识别为“序列性差距”。研究表明去噪步数无法为模型提供可扩展的序列计算能力，揭示了视频扩散模型在序列推理和模拟任务中的结构性障碍。",
+      "summary_en": "Video diffusion models degrade in performance on tasks with long causal chains like multi-ball collisions, even with more denoising steps. Controlled experiments isolate the cause to dependent-event structure rather than video length, identifying a 'seriality gap'. The study proves denoising steps cannot provide scalable serial computation, revealing a structural obstacle for video diffusion in serial reasoning and simulation tasks.",
+      "highlights_zh": [
+        "发现序列性差距现象",
+        "因果链越长性能越差",
+        "揭示扩散模型序列推理局限"
+      ]
+    },
+    {
+      "id": "2607.13022",
+      "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
+      "authors": [
+        "Gianluca Galletti",
+        "Gerald Gutenbrunner",
+        "William Hornsby",
+        "Lorenzo Zanisi",
+        "Naomi Carey",
+        "Stanislas Pamela",
+        "Johannes Brandstetter",
+        "Fabian Paischer"
+      ],
+      "abstract": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching it, incurring significant computational cost. In Computational Fluid Dynamics, reduced-order approaches such as Large Eddy Simulation mitigate computational cost by modeling small-scale dynamics, enabling tractable approximations of turbulent flows. In contrast, for systems such as gyrokinetics, comparably effective closures for the full dynamics are not generally available, and high-fidelity simulations remain necessary. Existing surrogate modeling approaches for these systems are autoregressive, hence they suffer from accumulating error. We instead propose to bypass explicit time evolution by directly modeling the distribution of saturated states under an ergodicity assumption, stating that ensemble averages over samples are equivalent to time averages of a single long simulation. We introduce GyroFlow, a latent generative model that directly estimates steady-state statistics of gyrokinetic turbulence in 5D phase space, without resolving the transient phase. GyroFlow generates saturated snapshots from noise, conditioned on dimensionless operating parameters and outperforms autoregressive, reduced-order, and other generative approaches, while providing substantial speedup. To evaluate generation quality we propose FGyD, a distributional metric computed in the latent space of a pretrained gyrokinetic model, and show that it correlates with downstream flux accuracy and solver convergence. Finally, GyroFlow can be used to warm-start the numerical code used to produce the data.",
+      "published": "2026-07-14T17:58:13Z",
+      "primary_category": "physics.plasm-ph",
+      "categories": [
+        "physics.plasm-ph",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13022",
+      "pdf_url": "https://arxiv.org/pdf/2607.13022",
+      "summary_zh": "许多非线性物理系统在达到统计稳态前需经历耗时的瞬态演化阶段，现有自回归代理模型存在误差累积问题。本文提出GyroFlow，一种基于流匹配的潜空间生成模型，通过直接建模饱和态分布绕过瞬态模拟，并引入FGyD指标评估生成质量。GyroFlow在生成速度上显著优于自回归、降阶及其他生成方法，且能用于预热数值求解器。",
+      "summary_en": "Many nonlinear physical systems require resolving costly transient dynamics before reaching a statistically steady state, and existing autoregressive surrogates suffer from error accumulation. This paper introduces GyroFlow, a latent generative model using flow matching to directly model the distribution of saturated states under ergodicity, bypassing transient simulation, along with a distributional metric FGyD. GyroFlow outperforms autoregressive, reduced-order, and other generative approaches in speed and quality, and can warm-start numerical solvers.",
+      "highlights_zh": [
+        "流匹配生成稳态湍流分布",
+        "速度与精度均优于现有方法",
+        "可预热数值求解器加速计算"
+      ]
+    },
+    {
+      "id": "2607.12963",
+      "title": "The Illusion of Robustness: Aggregate Accuracy Hides Prediction Flips under Task-Irrelevant Context",
+      "authors": [
+        "Yanzhe Zhang",
+        "Sanmi Koyejo",
+        "Diyi Yang"
+      ],
+      "abstract": "As large language models (LLMs) grow more capable, they are increasingly deployed in context-rich settings where task inputs are often accompanied by long, partially irrelevant context. In a controlled setting, we find that state-of-the-art models often appear robust to task-irrelevant context at the aggregate level: prepending it to benchmark questions causes little change in overall accuracy. This aggregate stability, however, masks significant per-example instability. Even semantically meaningless pseudo-words, formed by randomly combining characters, can markedly shift model predictions on a small fraction of examples, degrading performance on some while improving it on others. This two-sided effect holds consistently across a wide range of models and datasets, yet the affected examples are largely model-specific. We further show that this instability is modulated by context type, context length, test-time compute, and model development stage. Together, our findings reveal context-induced tail risks concealed by aggregate accuracy, motivating per-example reliability evaluation of language models.",
+      "published": "2026-07-14T17:01:12Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.12963",
+      "pdf_url": "https://arxiv.org/pdf/2607.12963",
+      "summary_zh": "大型语言模型在任务无关上下文下，聚合准确率看似稳健，但掩盖了逐样本的预测翻转现象。通过系统实验，发现即使随机字符组成的伪词也会导致部分样本性能波动，且影响具有模型特异性。研究表明聚合指标存在尾部风险，需关注逐样本可靠性评估。",
+      "summary_en": "Large language models appear robust to task-irrelevant context in aggregate accuracy, but this masks significant per-example prediction flips. Even semantically meaningless pseudo-words can shift predictions on a small fraction of examples, with effects being model-specific. The findings reveal tail risks concealed by aggregate metrics, motivating per-example reliability evaluation.",
+      "highlights_zh": [
+        "揭示聚合准确率的虚假鲁棒性",
+        "随机伪词导致部分样本预测翻转",
+        "需转向逐样本可靠性评估"
+      ]
+    },
+    {
+      "id": "2607.12893",
+      "title": "MemOps: Benchmarking Lifecycle Memory Operations in Long-Horizon Conversations",
+      "authors": [
+        "Xixuan Hao",
+        "Zeyu Zhang",
+        "Zehao Lin",
+        "Yihang Sun",
+        "Ziliang Guo",
+        "Xichong Zhang",
+        "Yuxuan Liang",
+        "Feiyu Xiong",
+        "Zhiyu Li"
+      ],
+      "abstract": "Long-term memory has become a foundational capability for LLM-based agents that accompany users across extended, multi-session interactions. Existing benchmarks, however, evaluate such memory almost exclusively through downstream question answering, scoring only the correctness of a final answer. This black-box formulation conflates the heterogeneous causes of memory failure, such as missing the introduction of a relevant fact, binding an operation to the wrong target, or relying on stale values after a correction. As a result, it can credit correct answers despite their reliance on inconsistent or unsafe memory states. In this paper, we argue that, in dynamic long-horizon interactions, memory is not a static collection of facts but a lifecycle of explicit operations, including remembering, forgetting, updating, reflecting, and their compositions. We introduce MemOps, a benchmark that reformulates conversational memory as a sequence of lifecycle operations and represents each memory event with a structured trace specifying its trigger, target, scope, state transition, and supporting evidence. A controllable generation pipeline embeds these operations into long, task-oriented conversations and produces gold operation traces together with six categories of operation-level probes, evaluated under both adjacent-evidence and long-context settings. Across long-context, retrieval-based, parametric and managed-memory systems, MemOps disentangles failure modes that final-answer accuracy alone conceals, revealing that current systems remain far from uniformly reliable. For instance, session-level retrieval outperforms turn-level retrieval, and long-context models remain notably weak at reconstructing ordered memory-state trajectories. These results move long-term memory evaluation from final-answer scoring toward interpretable, operation-level diagnosis.",
+      "published": "2026-07-14T15:33:44Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.12893",
+      "pdf_url": "https://arxiv.org/pdf/2607.12893",
+      "summary_zh": "现有长对话记忆评测仅通过最终问答准确性评估，混淆了多种记忆失败原因。本文提出MemOps基准，将对话记忆重构为生命周期操作序列，并生成结构化操作轨迹与六类操作级探针。实验揭示当前系统在操作级诊断下远非可靠，长上下文模型在重建有序记忆状态轨迹方面尤为薄弱。",
+      "summary_en": "Existing benchmarks evaluate long-term memory in conversations solely via final answer accuracy, conflating heterogeneous memory failures. This paper introduces MemOps, which reformulates conversational memory as a sequence of lifecycle operations with structured traces and operation-level probes. Results show current systems are far from uniformly reliable under operation-level diagnosis, with long-context models notably weak at reconstructing ordered memory-state trajectories.",
+      "highlights_zh": [
+        "将记忆评测从最终答案转向操作级诊断",
+        "长上下文模型重建记忆轨迹能力薄弱",
+        "为动态记忆系统提供细粒度诊断工具"
+      ]
+    },
+    {
+      "id": "2607.13017",
+      "title": "FlowWAM: Optical Flow as a Unified Action Representation for World Action Models",
+      "authors": [
+        "Yixiang Chen",
+        "Peiyan Li",
+        "Yuan Xu",
+        "Qisen Ma",
+        "Jiabing Yang",
+        "Kai Wang",
+        "Jianhua Yang",
+        "Dong An",
+        "He Guan",
+        "Gaoteng Liu",
+        "Jianlou Si",
+        "Jun Huang",
+        "Jing Liu",
+        "Nianfeng Liu",
+        "Yan Huang",
+        "Liang Wang"
+      ],
+      "abstract": "World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to represent actions in a suitable form that aligns with pretrained video generators while carrying enough motion cues for accurate control. Existing numerical actions fail to satisfy the former, and prior visual action representations overlook the temporal motion structure across frames. We address this issue with FlowWAM, a dual-stream diffusion framework that adopts optical flow as a unified, video-native action representation. Flow videos share the same format as RGB videos and encode rich per-pixel displacement. By jointly modeling them within a shared pretrained video generator, FlowWAM can naturally implement two modes of WAMs. In policy mode, FlowWAM generates flow for action prediction, while in world-model mode, it uses target flow sequences to guide future video generation. Moreover, since flow can be easily extracted from raw videos without action labels, FlowWAM can leverage large-scale action-unlabeled video datasets for pretraining. We empirically find that our flow-based action representation delivers gains across both modes. On RoboTwin manipulation, FlowWAM raises the success rate to 92.94% on the Clean setting and 92.14% on Random, outperforming both VLA and WAM baselines. On WorldArena world modeling, it achieves the best overall EWMScore (63.71) with an 18.4% relative improvement in trajectory accuracy. More results can be found on our project website: https://flow-wam.github.io .",
+      "published": "2026-07-14T17:57:12Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13017",
+      "pdf_url": "https://arxiv.org/pdf/2607.13017",
+      "summary_zh": "现有世界动作模型（WAM）在利用预训练视频生成器进行控制时，面临动作表示与视频生成器对齐且携带足够运动线索的挑战。FlowWAM提出双流扩散框架，采用光流作为统一、视频原生的动作表示，通过联合建模RGB和光流视频实现策略与世界模型两种模式。在RoboTwin操作任务中，FlowWAM在Clean和Random设置下分别达到92.94%和92.14%的成功率，在WorldArena世界建模中实现最佳EWMScore（63.71），轨迹准确率相对提升18.4%。",
+      "summary_en": "Existing World Action Models (WAMs) face the challenge of representing actions in a form that aligns with pretrained video generators while carrying sufficient motion cues for accurate control. FlowWAM proposes a dual-stream diffusion framework that adopts optical flow as a unified, video-native action representation, enabling both policy and world-model modes through joint modeling of RGB and flow videos. On RoboTwin manipulation, FlowWAM achieves 92.94% and 92.14% success rates on Clean and Random settings, and on WorldArena world modeling, it attains the best EWMScore (63.71) with an 18.4% relative improvement in trajectory accuracy.",
+      "highlights_zh": [
+        "光流作为统一视频原生动作表示",
+        "Clean设置成功率92.94%",
+        "可无标签预训练，提升轨迹精度"
+      ]
+    },
+    {
+      "id": "2607.13010",
+      "title": "DermDepth: Toward Monocular Metric Scale 3D Reconstruction Models for Dermatology",
+      "authors": [
+        "Héctor Carrión",
+        "Narges Norouzi"
+      ],
+      "abstract": "Dermatological practice routinely involves measuring and tracking lesion size, morphology and texture, as critical components of wound or skin cancer screening, monitoring and diagnosis. To accomplish this task, practitioners often image the skin surface with commonly available off-the-shelf camera sensors. This has led to an overwhelming research focus on 2D methods while these objectives naturally benefit from 3D information. In this paper, we demonstrate that dense monocular 3D reconstructions, metric scale measurements and rich surface normal texture estimates are achievable for both dermoscopic and macroscopic cases without the need for additional hardware or multiple captures. We present DermDepth, the first single-view metric scale 3D model for the dermatological domain and D-Synth, the first synthetic dermoscopic dataset with pixel-perfect 3D information. Our experiments show training DermDepth on D-Synth corrects metric scale error from over 16x to under 1.1x for real dermoscopic data, while preserving geometric quality and increasing texture richness. Fine-tuning on a small amount of real clinical samples generalizes our method across three real-world benchmarks spanning the few mm to hundred cm range, diverse skin-tones, chronic wound cases and produces measurements broadly consistent with disease size reported in medical literature. All code, data and models are available at https://github.com/hectorcarrion/dermdepth.",
+      "published": "2026-07-14T17:51:37Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13010",
+      "pdf_url": "https://arxiv.org/pdf/2607.13010",
+      "summary_zh": "皮肤科临床实践中常需测量和追踪病变尺寸、形态和纹理，但现有研究多聚焦于2D方法，而3D信息能更自然支持这些目标。本文提出DermDepth，首个面向皮肤科领域的单视图度量尺度3D重建模型，并构建了首个合成皮肤镜数据集D-Synth。实验表明，DermDepth在真实皮肤镜数据上将度量尺度误差从16倍以上降至1.1倍以下，且通过少量临床样本微调即可泛化至多种真实场景。",
+      "summary_en": "Dermatological practice requires measuring lesion size, morphology, and texture, but existing research focuses on 2D methods while 3D information is more beneficial. This paper proposes DermDepth, the first single-view metric scale 3D model for dermatology, and D-Synth, the first synthetic dermoscopic dataset with pixel-perfect 3D information. Experiments show DermDepth reduces metric scale error from over 16x to under 1.1x on real dermoscopic data, and fine-tuning on a small clinical dataset generalizes across diverse real-world benchmarks.",
+      "highlights_zh": [
+        "首个皮肤科单视图度量3D模型",
+        "尺度误差从16x降至1.1x以下",
+        "无需额外硬件，泛化至多种真实场景"
+      ]
+    },
+    {
+      "id": "2607.13033",
+      "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
+      "authors": [
+        "Yu Fang",
+        "Wanxi Dong",
+        "Jiaqi Liu",
+        "Yue Yang",
+        "Mingxiao Huo",
+        "Yao Mu",
+        "Huaxiu Yao",
+        "Li Erran Li",
+        "Daniel Szafir",
+        "Mingyu Ding"
+      ],
+      "abstract": "Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.",
+      "published": "2026-07-14T17:59:29Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.13033",
+      "pdf_url": "https://arxiv.org/pdf/2607.13033",
+      "summary_zh": "强化学习在机器人策略优化中潜力巨大，但缺乏可靠的密集奖励模型，主要瓶颈在于难以大规模获取多样化失败数据和细粒度奖励信号。DenseReward提出自动化故障数据生成流水线，在仿真中合成物理真实的失败轨迹，并基于视觉和语言指令预测逐帧密集奖励分数。实验表明其在模拟和真实操作中均优于现有模型，并为下游模型预测控制和强化学习提供有效奖励指导。",
+      "summary_en": "Reinforcement learning holds promise for improving robot policies but lacks reliable dense reward models due to challenges in acquiring diverse failure data and fine-grained reward signals. DenseReward introduces an automated pipeline to synthesize physically realistic failure trajectories in simulation and predicts dense frame-level reward scores from visual observations and language instructions. It outperforms existing models in both simulated and real-world manipulation, providing effective reward guidance for downstream model predictive control and reinforcement learning.",
+      "highlights_zh": [
+        "自动化合成多样化失败轨迹",
+        "密集逐帧奖励预测优于基线",
+        "支撑下游强化学习与MPC"
+      ]
+    },
+    {
+      "id": "2607.12992",
+      "title": "ChunkFlow: Towards Continuity-Consistent Chunked Policy Learning",
+      "authors": [
+        "Zhao Yang",
+        "Yinan Shi",
+        "Mingyuan Yao",
+        "Wenyao Xue",
+        "Yawei Jueluo",
+        "Longjun Liu"
+      ],
+      "abstract": "Vision-language action (VLA) models increasingly adopt chunked action heads to satisfy real-time constraints; however, this introduces boundary jitter: overlapping regions between consecutive chunks often yield inconsistent predictions, degrading temporal coherence and the task success rate. Existing methods, such as inference-time blending, merely reweight mismatched proposals without correcting underlying errors, leading to residual accumulation under biased or noisy histories. We propose ChunkFlow, a seam-aware training-and-execution framework for chunked policies that aligns chunk structure with boundary execution. It partitions each chunk into frozen, editable, and future zones, applies deterministic overlap blending at execution, and trains raw predictions with seam and first- and second-order continuity losses. History corruption and scheduled sampling improve robustness to executed-history errors, while an AWAC fine-tuning stage adapts the policy without removing these structural regularizers. Under mild smoothness assumptions, pre-blending seam discrepancies provably decay with increasing overlap. Experiments on CALVIN, LIBERO, and real robots show an improved success-stability trade-off with low-latency inference. Project page: https://cytoderm-ai.github.io/chunkflow.",
+      "published": "2026-07-14T17:43:25Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.12992",
+      "pdf_url": "https://arxiv.org/pdf/2607.12992",
+      "summary_zh": "VLA模型采用分块动作头满足实时性要求，但导致相邻块间边界抖动和预测不一致。ChunkFlow提出一种感知边界的训练-执行框架，通过分区、确定性重叠融合及连续性损失训练来对齐分块结构与边界执行。实验在CALVIN、LIBERO和真实机器人上展示了改进的成功-稳定性权衡与低延迟推理。",
+      "summary_en": "Vision-language action models using chunked action heads suffer from boundary jitter and inconsistent predictions between consecutive chunks. ChunkFlow introduces a seam-aware training-and-execution framework that aligns chunk structure with boundary execution via zone partitioning, deterministic overlap blending, and continuity losses. Experiments on CALVIN, LIBERO, and real robots demonstrate improved success-stability trade-off with low-latency inference.",
+      "highlights_zh": [
+        "感知边界的分块策略训练与执行",
+        "CALVIN/LIBERO上成功-稳定性权衡提升",
+        "低延迟推理，适用于实时机器人控制"
+      ]
+    }
+  ]
+}
