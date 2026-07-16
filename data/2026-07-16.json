@@ -1,0 +1,295 @@
+{
+  "date": "2026-07-16",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.14049",
+      "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+      "authors": [
+        "Hefeng Zhou",
+        "Jinxuan Zhang",
+        "Jiong Lou",
+        "Yuxin Liu",
+        "Chaochao Lu",
+        "Jingjing Qu",
+        "Jie Li"
+      ],
+      "abstract": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make mistakes again, or users laboriously flag the faulty step in follow-up turns that may get responses <You are right, I made a mistake here> followed by similar errors recurring. To address this issue, we propose an efficient human intervention mechanism for precisely correcting reasoning errors in LLMs, termed Deep Interaction. Our approach enables direct editing of the original response, allowing erroneous parts to be corrected while preserving accurate reasoning steps. We refine the edited CoT into a distilled prompt, which then steers the LLM along the corrected reasoning path. Experimental results show that our method achieves over a 25% improvement in correction success rate and reduces token usage by approximately 40% on STEM tasks reasoning compared to baseline approaches.",
+      "published": "2026-07-15T17:16:43Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14049",
+      "pdf_url": "https://arxiv.org/pdf/2607.14049",
+      "summary_zh": "当前大语言模型在链式推理出错时，传统交互方式需重新生成或逐轮纠错，效率低且易重复犯错。本文提出Deep Interaction方法，允许用户直接编辑原始推理步骤中的错误部分，并将修正后的推理链蒸馏为提示词以引导模型沿正确路径推理。实验表明，该方法在STEM任务上纠错成功率提升超25%，且令牌消耗减少约40%。",
+      "summary_en": "Current interaction methods for LLMs with chain-of-thought reasoning errors require full regeneration or tedious step-by-step correction, often leading to repeated mistakes. This paper proposes Deep Interaction, enabling direct editing of erroneous reasoning steps and distilling the corrected chain into a prompt to steer the model. Results show over 25% improvement in correction success rate and ~40% reduction in token usage on STEM tasks.",
+      "highlights_zh": [
+        "直接编辑纠错+蒸馏引导",
+        "纠错成功率提升>25%",
+        "令牌消耗减少约40%"
+      ]
+    },
+    {
+      "id": "2607.14046",
+      "title": "Earthquaker-AI: A Retrieval-Augmented Generation Framework with Rubric-Based Assessment for Primary School Earthquake Education",
+      "authors": [
+        "Xanthi Kokkinou",
+        "Chaido Mizeli",
+        "Nafsika Koulaxidou",
+        "Marina Delianidi",
+        "Konstantinos Diamantaras"
+      ],
+      "abstract": "This paper presents Earthquaker-AI, a hybrid educational framework building upon a previously implemented educational robotics project by integrating a conversational AI assistant based on Retrieval-Augmented Generation. It aims to enhance earthquake preparedness and conscious action among primary-school students. The system extends the award-winning STEM project Earthquaker moving from mechanical simulation with Lego WeDo2 to cognitive and metacognitive processing. The robotics component uses Lego WeDo2 automation to simulate seismic response, letting students interact with sensors and actuators as tangible representations of protective actions. The assistant operates as a guided learning mechanism aligning student responses with safety guidelines, while providing rubric-based verbal feedback that supports self-regulated learning and calmness under emergency conditions. Earthquaker-AI follows a progressive learning trajectory aligned with cognitive development. In early grades, the focus is on basic recognition of safety actions through multiple-choice questions, assessed via a two-dimensional rubric. In middle grades, students identify correct action sequences through multiple-choice questions, evaluated via a three-axis rubric. In upper grades, the approach shifts to verbal production, requiring short written responses assessed via a four-dimensional rubric that includes clarity of expression. The dialogic module uses RAG to match student queries semantically with official guidelines, generating safe, accurate responses. Experimental evaluation shows high groundedness and accuracy, with a low hallucination rate. Overall, Earthquaker-AI combines hands-on engagement, information processing, and reflective practice. Combining robotics, rubrics, and AI promotes technological literacy, self-regulation, and responsible use of digital systems, contributing to early crisis-management skills.",
+      "published": "2026-07-15T17:15:16Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14046",
+      "pdf_url": "https://arxiv.org/pdf/2607.14046",
+      "summary_zh": "针对小学生地震教育中缺乏互动性和认知引导的问题，提出Earthquaker-AI混合框架。该方法将乐高机器人模拟与基于检索增强生成的对话AI助手结合，并引入多维度评分规则实现渐进式学习评估。实验表明系统具有高准确率和低幻觉率，有效提升了学生的地震准备意识与自我调节能力。",
+      "summary_en": "To address the lack of interactivity and cognitive guidance in primary school earthquake education, this paper proposes Earthquaker-AI, a hybrid framework. It integrates Lego WeDo2 robotics simulation with a Retrieval-Augmented Generation conversational AI assistant, and employs multi-dimensional rubrics for progressive learning assessment. Experiments demonstrate high groundedness and accuracy with low hallucination rates, effectively enhancing students' earthquake preparedness and self-regulated learning.",
+      "highlights_zh": [
+        "RAG+乐高机器人混合教育框架",
+        "高准确率与低幻觉率验证",
+        "渐进式评分规则支持自我调节学习"
+      ]
+    },
+    {
+      "id": "2607.14086",
+      "title": "Leveraging unlabelled data for generalizable neural population decoding",
+      "authors": [
+        "Ximeng Mao",
+        "Nanda H. Krishna",
+        "Avery Hee-Woon Ryoo",
+        "Matthew G. Perich",
+        "Guillaume Lajoie"
+      ],
+      "abstract": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-based JOint training), a training framework for spike-tokenizing models that jointly leverages self-supervised learning (SSL) via masked autoencoding and SL objectives. We evaluate MOJO on three spiking datasets spanning monkey motor cortex during reaching tasks and multi-regional mouse recordings during vision and decision making tasks, demonstrating superior performance over purely SL-trained models. This improvement is especially pronounced when training with limited labelled data, particularly in few-shot finetuning, where only a small amount of labelled data from a new session is available. Incorporating SSL also yields more interpretable neuronal representations, improving performance on brain region classification and spike-statistics prediction without explicit optimization for these tasks. We further show that MOJO generalizes beyond spiking data to human electrocorticography during speech, where it continues to outperform purely SL-trained models and achieves performance comparable to neuro-foundation models (NFMs) designed specifically for continuous signals. Overall, augmenting spike-tokenizing models with SSL improves performance in label-impoverished settings and enables the use of unlabelled data across various tasks and species, while generalizing to other neural modalities. These results suggest a path towards more flexible and scalable data usage when training NFMs.",
+      "published": "2026-07-15T17:58:00Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14086",
+      "pdf_url": "https://arxiv.org/pdf/2607.14086",
+      "summary_zh": "当前基于尖峰令牌化的神经解码模型局限于监督学习，无法利用无标签数据。本文提出MOJO框架，通过联合掩码自编码自监督学习与监督学习目标来训练此类模型。在多个跨物种、跨模态的神经数据集上，MOJO在标签稀缺场景下显著优于纯监督模型，并提升了表征可解释性。",
+      "summary_en": "Current spike-tokenizing neural decoders are limited to supervised learning, unable to leverage unlabelled data. We introduce MOJO, a joint training framework combining masked autoencoding self-supervised learning with supervised objectives for spike-tokenizing models. Across multiple species and neural modalities, MOJO significantly outperforms purely supervised models in label-scarce settings and yields more interpretable representations.",
+      "highlights_zh": [
+        "联合SSL与SL的尖峰令牌训练框架",
+        "标签有限时性能显著优于纯监督模型",
+        "跨物种模态通用，提升数据利用效率"
+      ]
+    },
+    {
+      "id": "2607.14081",
+      "title": "Linear Independent Component Analysis via Optimal Transport",
+      "authors": [
+        "Ashutosh Jha",
+        "Michel Besserve",
+        "Simon Buchholz"
+      ],
+      "abstract": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasserstein distance $W_2^2$ to a standard Gaussian. We prove that the Wasserstein distance between a standard normal distribution and linear projections of the data is maximized when the projection recovers an independent component. Based on this observation, we propose the OT-ICA algorithm which finds this projection by gradient-based optimization. Empirical evaluation on simulated data shows that OT-ICA outperforms proxy-based methods for different distributions of the latent variables. Application to EEG artifact removal and econometric price discovery confirm OT-ICA can be used for applied ICA tasks without distributional assumptions.",
+      "published": "2026-07-15T17:56:11Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14081",
+      "pdf_url": "https://arxiv.org/pdf/2607.14081",
+      "summary_zh": "线性独立成分分析（ICA）旨在从线性混合中恢复独立源信号，但传统方法依赖非高斯性代理函数。本文提出使用平方Wasserstein距离直接度量非高斯性，并证明最大化该距离可恢复独立成分。实验表明OT-ICA在模拟和实际任务中优于基于代理的方法，无需分布假设。",
+      "summary_en": "Linear ICA recovers independent sources from mixtures, but classical methods rely on proxy measures for non-Gaussianity. This paper proposes using the squared Wasserstein distance to a Gaussian as a direct measure, proving its maximization recovers independent components. OT-ICA outperforms proxy-based methods on simulated data and real-world EEG/econometric tasks without distributional assumptions.",
+      "highlights_zh": [
+        "用Wasserstein距离直接度量非高斯性",
+        "模拟数据上优于代理方法",
+        "无需分布假设，适用EEG与计量经济"
+      ]
+    },
+    {
+      "id": "2607.14051",
+      "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
+      "authors": [
+        "Xiao Ye",
+        "Jacob Dineen",
+        "Evan Zhu",
+        "Shijie Lu",
+        "Kevin Song",
+        "Ben Zhou"
+      ],
+      "abstract": "Forecasters are evaluated by backtesting, which replays resolved questions and grades the probability the system would have assigned before the outcome was known. For LLMs, two channels leak the answer into this test. A model that retrieves can surface reports written after the event, turning forecasting into a lookup, and each new model is trained on data closer to the event, so a question that lay in the future for last year's models sits inside this year's training data. Either way, the test grades recall while claiming to grade foresight. We introduce Hindcast, which closes both leaks by grading a model as if it stood at a chosen past date $t_0$, before the outcome existed in either channel. Hindcast replays resolved Polymarket prediction markets against a frozen snapshot of public Reddit, lets the model read only posts written before $t_0$, and scores each forecast against both what happened and the market's own price at $t_0$, itself a human forecast made from the same past information. Because the cutoff is set per market and the snapshot never changes, the evaluation re-runs on new markets as models improve, without going stale. Once the leak is closed, retrieval still helps most models, but only where Reddit discussed the event beforehand. Where the archive carried only speculation, retrieval hurts.",
+      "published": "2026-07-15T17:21:43Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14051",
+      "pdf_url": "https://arxiv.org/pdf/2607.14051",
+      "summary_zh": "现有LLM预测评估存在数据泄露问题，模型可通过检索事后报道或利用训练数据中的未来信息来“作弊”。本文提出Hindcast方法，通过冻结过去时间点的Reddit快照并仅允许模型读取该时间点前的帖子，同时用市场自身价格作为人类预测基准，彻底封堵了两种信息泄露渠道。实验表明，封堵泄露后检索仍有助于模型，但仅限于Reddit事先讨论过的事件，否则检索反而会降低性能。",
+      "summary_en": "Existing LLM forecasting evaluations suffer from data leakage, where models can cheat by retrieving post-event reports or exploiting future information in training data. This paper introduces Hindcast, which closes both leaks by freezing a past Reddit snapshot, allowing models to read only pre-cutoff posts, and using market prices as human baselines. Results show that after leak closure, retrieval still helps for events discussed on Reddit beforehand, but hurts performance when the archive contains only speculation.",
+      "highlights_zh": [
+        "封堵数据泄露的评估框架",
+        "检索仅对事先讨论事件有效",
+        "可复现且不过时的评测方法"
+      ]
+    },
+    {
+      "id": "2607.14040",
+      "title": "Can an Old Dog Be Taught New Tricks? Taking LLMs Beyond Sentence Level Translation",
+      "authors": [
+        "Alaina Brandt"
+      ],
+      "abstract": "Automatic translation systems, from CAT tools to MT, overwhelmingly treat translation as a sentence-by-sentence act. This paper asks whether LLMs can be moved beyond that paradigm through whole-document, corpus-informed translation. We present PAT (Pragmatic Auto-Translator), a RAG-based system that pairs user-configured specifications with context from a comparable corpus of authentic longform texts in U.S. English and Latin American Spanish, passing retrieved paragraph-, section-, and document-level examples to an LLM for whole-document generation. The goal is draft translation for professional verification: target texts reformulated to fit their Spanish-language context, where discourse organization, rhetorical style, and pragmatic norms differ meaningfully from English. We evaluated six automatic translations of essays on generative AI across three projects using a customized MQM typology, assessed by two trained evaluators working from U.S. English into LATAM and Mexican Spanish. Results show that a limited prompt produced no meaningful reformulation, and specifications and corpus-informed translations at times showed substantial reformulation, though not always to effect. We find that LLMs can be moved toward reformulation and away from the sentence-by-sentence paradigm, though more work is needed to improve the effectiveness of those reformulations. In this paper, we discuss considerations related to automatic translation system design, corpus construction, and translation quality evaluation methodology and results.",
+      "published": "2026-07-15T17:10:24Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14040",
+      "pdf_url": "https://arxiv.org/pdf/2607.14040",
+      "summary_zh": "当前自动翻译系统普遍以句子为单位进行翻译，忽略了篇章级语用和修辞差异。本文提出PAT系统，基于RAG技术结合用户配置与可比语料库，将段落、章节和文档级示例传递给LLM进行整篇文档生成。实验表明LLM可被引导进行篇章级重构，但重构效果仍需改进。",
+      "summary_en": "Current automatic translation systems overwhelmingly treat translation as a sentence-by-sentence act, ignoring discourse-level pragmatic and rhetorical differences. This paper presents PAT, a RAG-based system that pairs user specifications with context from a comparable corpus, passing paragraph-, section-, and document-level examples to an LLM for whole-document generation. Results show LLMs can be moved toward reformulation beyond the sentence-level paradigm, though more work is needed to improve effectiveness.",
+      "highlights_zh": [
+        "提出RAG驱动的整篇文档翻译方法",
+        "实现篇章级重构但效果不稳定",
+        "为专业译后编辑提供初稿工具"
+      ]
+    },
+    {
+      "id": "2607.14088",
+      "title": "VideoRAE: Taming Video Foundation Models for Generative Modeling via Representation Autoencoders",
+      "authors": [
+        "Zhihao Xie",
+        "Junfeng Wu",
+        "Xinting Hu",
+        "Junchao Huang",
+        "Li Jiang"
+      ],
+      "abstract": "Video generative models commonly rely on latent spaces learned by 3D Variational Autoencoders (3D-VAEs). However, conventional 3D-VAEs are mainly optimized for pixel-level reconstruction, which can limit the semantic and spatio-temporal structure captured by their latents. Meanwhile, Video Foundation Models (VFMs) such as V-JEPA 2 and VideoMAEv2 show strong video understanding capabilities, yet whether their frozen representations can be transformed into compact, reconstruction-capable, and generation-friendly video latents remains largely unexplored. We answer this question with VideoRAE, a representation autoencoder that leverages multi-scale hierarchical features from a frozen video foundation encoder and compresses them with a lightweight 1D self-attention projector. VideoRAE supports both continuous latents for Diffusion Transformers and discrete tokens for autoregressive models via multi-codebook high-dimensional quantization. During decoding, a local-and-global representation alignment objective with the frozen VFM teacher improves semantic preservation and enables training without KL regularization. Experiments show that VideoRAE achieves strong reconstruction in both continuous and discrete regimes. On UCF-101, it obtains state-of-the-art class-to-video gFVDs of 40 and 93 with AR and DiT generators, respectively, while converging approximately 5x faster than competing autoencoder baselines. In a controlled 2B-scale text-to-video study, replacing LTX-VAE with VideoRAE leads to faster convergence under comparable settings. These results validate frozen VFM representations as versatile and generation-friendly video latents. The model and code will be released on https://zhxie0117.github.io/VideoRAE.",
+      "published": "2026-07-15T17:59:23Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14088",
+      "pdf_url": "https://arxiv.org/pdf/2607.14088",
+      "summary_zh": "传统3D-VAE主要优化像素级重建，限制了视频潜变量的语义和时空结构。VideoRAE利用冻结的视频基础模型的多尺度层次特征，通过轻量级1D自注意力投影器压缩为紧凑的视频潜变量，并支持连续和离散两种生成范式。实验表明VideoRAE在UCF-101上取得了最优的类到视频生成结果，且收敛速度比基线快约5倍。",
+      "summary_en": "Conventional 3D-VAEs are optimized for pixel-level reconstruction, limiting the semantic and spatio-temporal structure of video latents. VideoRAE leverages multi-scale hierarchical features from a frozen video foundation encoder and compresses them into compact latents via a lightweight 1D self-attention projector, supporting both continuous and discrete generative models. It achieves state-of-the-art class-to-video generation on UCF-101 with approximately 5x faster convergence than competing baselines.",
+      "highlights_zh": [
+        "利用冻结VFM提取多尺度层次特征",
+        "UCF-101上gFVD达40和93",
+        "收敛速度比基线快约5倍"
+      ]
+    },
+    {
+      "id": "2607.14076",
+      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
+      "authors": [
+        "Zhen Li",
+        "Zian Meng",
+        "Shuwei Shi",
+        "Mingliang Zhai",
+        "Jiaming Tan",
+        "Chuanhao Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence. Recent video generative models provide a data-driven route toward this goal by predicting future observations conditioned on user actions, and are increasingly regarded as potential next-generation game engines. Realizing a genuinely interactive game world, however, requires interaction outcomes that follow rules over evolving game conditions, consequences that persist over long horizons, and a generation loop that operates in real time. Conventional game engines realize these properties through a recurrent action-state-observation loop, in which player actions update an explicit game state according to predefined rules and observations are rendered from the resulting state. Taking this loop as an organizing lens, this paper examines interactive game world modeling along four dimensions: player action control, game state dynamics, state-observation persistence, and real-time interactive generation. For each dimension, we start from the capabilities required by an interactive game world, group existing approaches into representative families, and discuss the strengths and trade-offs of each family. Complementing this analysis, we present a scalable data engine for Black Myth: Wukong that collects over 90 hours of gameplay with frame-aligned player actions, ground-truth game states, and visual observations, together with structured and semantic annotations, as a resource for state-aware game world modeling. We hope this paper offers a clear picture of where the field stands and fosters progress toward interactive game worlds.",
+      "published": "2026-07-15T17:48:48Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14076",
+      "pdf_url": "https://arxiv.org/pdf/2607.14076",
+      "summary_zh": "构建能对玩家行为做出连贯响应的交互式游戏世界是计算机图形学、游戏和人工智能领域的共同目标，但现有视频生成模型在规则遵循、长期持久性和实时性方面存在不足。本文以传统游戏引擎的“动作-状态-观察”循环为组织框架，从四个维度系统分析了现有交互式游戏世界建模方法，并提出了一个包含90小时游戏数据的状态感知数据引擎。该工作为状态感知游戏世界建模提供了重要资源，并清晰展示了该领域的研究现状与未来方向。",
+      "highlights_zh": [
+        "以游戏引擎循环重新审视交互世界模型",
+        "构建90小时《黑神话》状态感知数据集",
+        "为状态感知游戏建模提供分析框架与资源"
+      ]
+    },
+    {
+      "id": "2607.14047",
+      "title": "PhysClaw-0: A Symbiotic Agentic System for Robot Autonomy via Language Corrections",
+      "authors": [
+        "Boyuan Wang",
+        "Zhenyuan Zhang",
+        "Zhiqin Yang",
+        "Peijun Gu",
+        "Shuya Wang",
+        "Xiaofeng Wang",
+        "Xianghui Ze",
+        "Yifan Chang",
+        "Guosheng Zhao",
+        "Jiangnan Shao",
+        "Guan Huang",
+        "Hengyu Liu",
+        "Yonggang Zhang",
+        "Wei Xue",
+        "Chunyuan Guan",
+        "Chenglin Pu",
+        "Yike Guo",
+        "Xingang Wang",
+        "Zheng Zhu"
+      ],
+      "abstract": "Autonomous data collection governs the volume and quality of real-world trajectories for manipulation policy learning. Existing pipelines reduce human effort via self-resetting, VLM verification, or language-guided correction, yet episode-scoped fixes must be reissued whenever the same failure recurs, so oversight cost grows with session length rather than with the number of distinct problems. We present PhysClaw-0, a human-robot symbiotic agentic system in which corrections are retained and reused across rounds. The collection loop collects, verifies, and resets autonomously, pausing for a remote operator only when a phase exhausts an explicit retry budget. An LLM parser maps each natural-language utterance to a structured adjustment stored in Corrective Memory, so addressed failure modes typically need not be corrected again under the same conditions. On a real-robot desktop-clearing testbed, PhysClaw-0 matches teleoperation episode success while reducing human working time to 16%. Language corrections improve verifier-human agreement in all four evaluated settings and raise average single-attempt success from 12.5% to 47.5% (arm-selection: 20.0% to 50.0%). Policies fine-tuned on PhysClaw-0 data match teleoperation-trained policy success at a fraction of collection human cost.",
+      "published": "2026-07-15T17:16:24Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14047",
+      "pdf_url": "https://arxiv.org/pdf/2607.14047",
+      "summary_zh": "现有机器人自主数据收集系统需要重复修正相同错误，导致人力成本随会话长度增长。PhysClaw-0提出人机共生代理系统，通过LLM将自然语言修正映射为结构化调整并存入纠正记忆，实现修正的跨轮次复用。在桌面清理测试中，该系统将人力工作时间降至16%，单次尝试成功率从12.5%提升至47.5%，微调策略性能媲美遥操作训练。",
+      "summary_en": "Existing autonomous data collection systems require re-issuing corrections for recurring failures, causing human cost to scale with session length. PhysClaw-0 introduces a human-robot symbiotic agentic system that uses an LLM to map natural-language corrections to structured adjustments stored in Corrective Memory for reuse across rounds. On a real-robot desktop-clearing testbed, it reduces human working time to 16%, raises single-attempt success from 12.5% to 47.5%, and achieves teleoperation-comparable policy performance at a fraction of the human cost.",
+      "highlights_zh": [
+        "人机共生纠正记忆机制",
+        "单次成功率提升至47.5%",
+        "人力成本降至16%的实用系统"
+      ]
+    },
+    {
+      "id": "2607.14021",
+      "title": "Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation",
+      "authors": [
+        "Honglu He",
+        "Jacob Laufer",
+        "Zhiwu Zheng",
+        "David Elkan-gonzalez",
+        "Raman Goyal",
+        "Xinyi Li",
+        "Su Lu",
+        "Mishek Musa",
+        "Berke Saat",
+        "Nicolas Tan",
+        "Colm Prendergast"
+      ],
+      "abstract": "Dexterous manipulation remains a critical bottleneck in industrial automation; tasks such as cable routing, connector insertion, and precision assembly still rely heavily on manual labor despite decades of robotics research. This work presents a progression from classical, modular robotics pipelines toward an end-to-end multimodal imitation-learning framework for industrial dexterous manipulation. As a part of this work, we introduce three key contributions: a set of Industrial Dexterity Benchmark (IDB) boards aimed to mimic datacenter cable management, automotive cable harnesses, and gearbox assembly tasks; a scalable imitation learning framework (DAG-ROS); and a multimodal diffusion-based policy framework (AG-iDP3) that creates models fusing RGB images, point clouds, joint positions, and wrist-frame wrench data. Focusing on the datacenter cable manipulation board, we evaluate the performance of a task involving cleaning a single cable over variations of an end-to-end AI policy using 48 trials per configuration. The best performing configuration, a multimodal expansion Diffusion Policy (DP), includes a multi-view RGB image source passed through an R3M encoder and reaches a 78% grasp and insert combined task success rate. This performance marks a significant improvement over the 36% observed from the single-camera RGB DP baseline. Each of the tested configurations requires only approximately 100 teleoperated demonstrations per task phase. These results indicate that the correct learned policy can outperform classical vision and control robotic methods in robustness, generalization, and deployment efficiency, justifying a shift toward scalable robotic automation for high up-time industrial environments.",
+      "published": "2026-07-15T16:54:28Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.14021",
+      "pdf_url": "https://arxiv.org/pdf/2607.14021",
+      "summary_zh": "工业灵巧操作仍是自动化瓶颈，许多任务依赖人工。本文提出IDB基准平台、DAG-ROS框架和AG-iDP3多模态策略，用于工业灵巧操作。最佳配置实现78%成功率，显著优于基线，证明学习策略可替代传统方法。",
+      "summary_en": "Dexterous manipulation remains a bottleneck in industrial automation, relying heavily on manual labor. This work introduces the IDB benchmark, DAG-ROS framework, and AG-iDP3 multimodal diffusion policy for industrial tasks. The best configuration achieves 78% success rate, significantly outperforming baselines, demonstrating the potential of learned policies for scalable automation.",
+      "highlights_zh": [
+        "多模态扩散策略与基准平台",
+        "78%抓取插入联合成功率",
+        "推动工业灵巧操作自动化"
+      ]
+    }
+  ]
+}
