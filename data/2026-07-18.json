@@ -1,0 +1,296 @@
+{
+  "date": "2026-07-18",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.15275",
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "authors": [
+        "Yunfan Jiang",
+        "Yevgen Chebotar",
+        "Ruijie Zheng",
+        "Fengyuan Hu",
+        "Yunhao Ge",
+        "Jimmy Wu",
+        "Tianyuan Dai",
+        "Scott Reed",
+        "Li Fei-Fei",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan"
+      ],
+      "abstract": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/",
+      "published": "2026-07-16T17:59:06Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15275",
+      "pdf_url": "https://arxiv.org/pdf/2607.15275",
+      "summary_zh": "现有机器人基础模型通常仅使用单步或短历史视觉运动上下文，限制了其在复杂任务中的表现。RoboTTT通过将测试时训练集成到视觉-语言-动作策略中，利用梯度下降更新参数作为循环状态，将上下文长度扩展到8000时间步，且不增加推理延迟。该方法在真实机器人操作任务上性能提升87%，并首次完成五分钟十阶段装配任务，表明上下文长度可作为机器人基础模型的新扩展维度。",
+      "summary_en": "Current robot foundation models typically use single-step or short-history visuomotor context, limiting performance on complex tasks. RoboTTT integrates Test-Time Training into Vision-Language-Action policies, using gradient descent updates as recurrent states to scale context to 8K timesteps without increasing inference latency. It achieves 87% performance improvement on real-robot tasks and completes a five-minute ten-stage assembly task for the first time, demonstrating context length as a new scaling axis for robot foundation models.",
+      "highlights_zh": [
+        "将测试时训练用于长上下文机器人策略",
+        "8K上下文下性能提升87%",
+        "首次完成五分钟十阶段装配任务"
+      ]
+    },
+    {
+      "id": "2607.15272",
+      "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
+      "authors": [
+        "Yasheng Sun",
+        "Zezi Zeng",
+        "Yifan Yang",
+        "Chong Luo",
+        "Wenyi Wang",
+        "Ziwei Liu",
+        "Jürgen Schmidhuber"
+      ],
+      "abstract": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scientific figure is a dense infographic in which heterogeneous visual elements such as schematics, plots, photos, captions, and arrows are composed under a tight visual grammar to advance a specific argument. To address this, we present SciDiagramEdit, a benchmark and skill-evolution framework that learns from natural paper revisions and operates on the figure's editable vector source, where users can inspect and co-edit individual primitives alongside the agent. Our benchmark mines before/after figure pairs from arXiv version histories, each grounded in the authors' own revision intent. To accommodate the diversity of editing instructions, we adopt agentic learning via skill evolution: an agentic proposer continually refines the agent's skill specification from execution traces over multiple epochs. The resulting skill progressively lifts edit accuracy on a held-out validation set, providing evidence that natural paper revisions are an effective training signal for instruction-driven figure editing.",
+      "published": "2026-07-16T17:58:36Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15272",
+      "pdf_url": "https://arxiv.org/pdf/2607.15272",
+      "summary_zh": "科研论文中的图表编辑耗时且繁琐，现有方法难以处理科学图表中异构视觉元素与严格视觉语法的复杂组合。本文提出SciDiagramEdit基准与技能进化框架，通过挖掘arXiv论文修订历史中的前后图对，并采用智能体学习从执行轨迹中持续优化编辑技能。实验表明该方法能有效提升指令驱动的图表编辑准确率，证明自然论文修订可作为有效的训练信号。",
+      "summary_en": "Editing scientific figures in research papers is time-consuming and challenging due to their dense infographics with heterogeneous elements. We propose SciDiagramEdit, a benchmark and skill-evolution framework that mines before/after figure pairs from arXiv revisions and uses agentic learning to refine editing skills from execution traces. Results show progressive improvement in edit accuracy, demonstrating that natural paper revisions serve as effective training signals for instruction-driven figure editing.",
+      "highlights_zh": [
+        "基于论文修订历史的图表编辑学习",
+        "编辑准确率在验证集上持续提升",
+        "为自动化科研图表编辑提供新范式"
+      ]
+    },
+    {
+      "id": "2607.15273",
+      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+      "authors": [
+        "Yushi Huang",
+        "Xiangxin Zhou",
+        "Jun Zhang",
+        "Liefeng Bo",
+        "Tianyu Pang"
+      ],
+      "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).",
+      "published": "2026-07-16T17:59:02Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15273",
+      "pdf_url": "https://arxiv.org/pdf/2607.15273",
+      "summary_zh": "现有强化学习方法如DiffusionNFT适用于优化瞬时速度的扩散模型，但无法直接应用于基于平均速度的MeanFlow生成器。本文提出MeanFlowNFT，通过构建诱导瞬时速度预测器将DiffusionNFT的奖励优化目标适配到MeanFlow上，同时保留其快速少步采样的优势。实验表明，MeanFlowNFT在图像和视频生成任务中显著提升基线性能，并在多数指标上超越现有少步生成器，甚至用4步采样超越50步的强化学习扩散模型。",
+      "summary_en": "Existing RL methods like DiffusionNFT optimize instantaneous velocities and cannot be directly applied to MeanFlow generators that use average velocities. This paper introduces MeanFlowNFT, which constructs an induced instantaneous-velocity predictor via the MeanFlow identity to adapt DiffusionNFT's reward optimization to MeanFlow while preserving its fast few-step sampling. Experiments show MeanFlowNFT consistently improves baselines on image and video generation, outperforming prior state-of-the-art RL-tuned few-step generators on most metrics, and even surpassing multi-step RL-tuned diffusion with only a few steps (e.g., 4-step MeanFlowNFT achieves VBench 84.33 vs. 50-step LongCat-Video RL's 82.57).",
+      "highlights_zh": [
+        "桥接平均与瞬时速度的RL框架",
+        "4步采样超越50步RL扩散模型",
+        "可推广至图像与视频生成任务"
+      ]
+    },
+    {
+      "id": "2607.15271",
+      "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
+      "authors": [
+        "Baback Elmieh",
+        "Lynn Tsai",
+        "Zeman Li",
+        "Srinivas Kaza",
+        "Tiancheng Sun",
+        "Gabor Csapo",
+        "Ali Behrouz",
+        "Yuan Deng",
+        "Stephen Lombardi",
+        "Steven M. Seitz",
+        "Xuan Luo"
+      ],
+      "abstract": "Online novel view synthesis from multi-view streaming videos faces a fundamental trade-off: maintaining a persistent, long-horizon memory to reconstruct temporarily occluded regions while operating under strict real-time constraints. While Test-Time Training (TTT) offers a powerful memory mechanism, standard models mandate gradient-based memory updates at every frame to adapt to the changing motion in dynamic scenes. The computational cost of heavy memory updates precludes real-time application and can lead to instability over long contexts. Given that memory updates are more demanding than memory application and video content is largely redundant, we propose to decouple the frequencies of these two processes. Our approach performs periodic memory updates while applying the memory on a per-frame basis, using cross-view attention to manage deformations between the prior memory state and the current frame. To lock in the historical context, we introduce two critical mechanisms: an auxiliary Memory Loss that forces persistent internalization of the scene, and a Memory Caching strategy that regularizes active weights against catastrophic drift. Our method demonstrates real-time, state-of-the-art performance on scenes with dynamic human motion as well as minute-scale online memorization.",
+      "published": "2026-07-16T17:58:18Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15271",
+      "pdf_url": "https://arxiv.org/pdf/2607.15271",
+      "summary_zh": "在线新视角合成面临实时性与长期记忆的权衡，标准测试时训练方法因每帧梯度更新而计算成本过高。本文提出解耦记忆更新与应用的频率，通过周期性更新、跨视角注意力及辅助记忆损失和缓存策略实现高效在线记忆。该方法在动态人体场景中达到实时且最优的性能，并支持分钟级在线记忆。",
+      "summary_en": "Online novel view synthesis faces a trade-off between real-time constraints and long-term memory, where standard Test-Time Training requires costly per-frame gradient updates. This paper decouples memory update and application frequencies via periodic updates, cross-view attention, auxiliary memory loss, and caching strategy. The method achieves real-time state-of-the-art performance on dynamic human scenes and supports minute-scale online memorization.",
+      "highlights_zh": [
+        "解耦记忆更新与应用频率",
+        "实时SOTA性能于动态场景",
+        "支持分钟级在线记忆"
+      ]
+    },
+    {
+      "id": "2607.15277",
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "authors": [
+        "Patrik Wolf",
+        "Thomas Kleine Buening",
+        "Andreas Krause",
+        "Celestine Mendler-Dünner"
+      ],
+      "abstract": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.",
+      "published": "2026-07-16T17:59:31Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15277",
+      "pdf_url": "https://arxiv.org/pdf/2607.15277",
+      "summary_zh": "当前研究探讨大语言模型（LLM）在上下文学习中是否满足概率自洽性，特别是全概率定律。本文通过二叉树递归划分人群，提示LLM不同子群体描述并聚合其估计，与不同粒度划分结果比较。实验发现模型普遍违反自洽性，且细粒度子群体估计反而比直接总体估计更准确，揭示了“宏观谬误”现象。",
+      "summary_en": "This work investigates whether LLMs adhere to the law of total probability in in-context learning. Using binary trees to recursively partition populations and prompt LLMs with subpopulation descriptions, the authors compare aggregated estimates across partitions. They find widespread consistency violations and a 'macro fallacy' where fine-grained subpopulation estimates align better with human data than direct population estimates, highlighting a gap in statistical self-consistency.",
+      "highlights_zh": [
+        "提出统计自洽性作为无参考评估准则",
+        "细粒度子群体估计优于直接总体估计",
+        "揭示LLM知识传播不完整，需改进聚合"
+      ]
+    },
+    {
+      "id": "2607.15253",
+      "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+      "authors": [
+        "Debayan Mukhopadhyay",
+        "Utshab Kumar Ghosh",
+        "Shubham Chatterjee"
+      ],
+      "abstract": "Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model works as a search agent, issuing several queries and reasoning across turns, because a document can matter for what it lets the agent do next rather than for what it says about the current question. We measure that gap rather than argue it. Using a ReAct style agent over HotpotQA, we replay 1000 development questions and, for every document the agent read, delete it and re-run the rest of the trajectory from that point. Comparing the original run against its counterfactual gives a Counterfactual Trajectory Utility (CTU) score from three deltas: final answer quality, next query retrieval quality, and turn count. Crossing CTU against Static RAG Utility (SRU) over 23,322 document observations, the two are close to statistically independent (Spearman rho = -0.026). Roughly a third of the documents the agent reads are causally load bearing while looking useless to a static reader; we call these bridge documents. The pattern survives when the reader based axis is swapped for a BM25 and cross encoder proxy, giving a bridge cell of 27.2% on an evenly spread axis. A second experiment pins down the mechanism. Using the Observable Entity Relevance (OER) measure from prior work, entities that discriminate relevant from non-relevant candidates appear in the agent's next query 4.02 times more often than entities found only in non-relevant documents (6.1% vs 1.5%, n = 227,139). A bridge document earns its keep by handing the agent a discriminative entity that redirects the search. Static relevance and causal usefulness are different quantities in agentic retrieval, and optimizing the first does not deliver the second.",
+      "published": "2026-07-16T17:48:29Z",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15253",
+      "pdf_url": "https://arxiv.org/pdf/2607.15253",
+      "summary_zh": "当前检索系统基于静态效用评估，但在多步智能体搜索中，文档的因果效用与静态效用存在显著差异。本文通过反事实轨迹分析，提出Counterfactual Trajectory Utility (CTU)指标，并对比静态RAG效用（SRU），发现两者近乎独立（Spearman rho=-0.026）。约三分之一的文档在静态评估中无用，但对智能体后续搜索至关重要，称为“桥接文档”，其机制在于提供区分性实体以引导下一查询。",
+      "summary_en": "Current retrieval systems are evaluated based on static utility, which fails to capture causal usefulness in multi-step agentic search. This paper introduces Counterfactual Trajectory Utility (CTU) by replaying agent trajectories and deleting documents, finding CTU and Static RAG Utility (SRU) are nearly independent (Spearman rho=-0.026). About one-third of documents are causally load-bearing but appear useless to static readers, termed bridge documents, which provide discriminative entities to redirect the agent's next query.",
+      "highlights_zh": [
+        "提出反事实轨迹效用CTU指标",
+        "CTU与SRU近乎独立(rho=-0.026)",
+        "桥接文档通过区分性实体引导搜索"
+      ]
+    },
+    {
+      "id": "2607.15278",
+      "title": "Hierarchical Denoising For Multi-Step Visual Reasoning",
+      "authors": [
+        "Zezhong Qian",
+        "Xiaowei Chi",
+        "Chak-Wing Mak",
+        "Tianze Zhou",
+        "Ruibin Yuan",
+        "Yuhan Rui",
+        "Hengzhe Sun",
+        "Zhuoqun Wu",
+        "Yuming Li",
+        "Siyuan Qian",
+        "Sirui Han",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.",
+      "published": "2026-07-16T17:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15278",
+      "pdf_url": "https://arxiv.org/pdf/2607.15278",
+      "summary_zh": "现有视频模型在多步视觉推理中难以兼顾逻辑一致性与低延迟流式生成。本文提出HDR框架，通过树状层次化潜变量组织视频生成，实现从粗到细的推理过程，并设计稀疏层次注意力模式降低计算成本。在多个推理任务上，HDR相比基线方法将成功率从34.22提升至60.29，推理速度比双向扩散快54.2倍，且仅需2%训练数据即可保留82.9%性能。",
+      "summary_en": "Current video models struggle to achieve both logical consistency and low-latency streaming for multi-step visual reasoning. This paper proposes HDR, a unified framework that organizes video latents into a tree-structured hierarchy for coarse-to-fine reasoning, with a sparse hierarchical attention pattern to reduce computational cost. HDR improves success rate from 34.22 to 60.29 (76.2% relative gain) over streaming autoregressive diffusion baselines, achieves 54.2x faster inference than bidirectional diffusion, and retains 82.9% of full-data performance with only 2% training data.",
+      "highlights_zh": [
+        "层次化潜变量与粗到细推理",
+        "成功率提升76.2%，推理速度54.2倍",
+        "仅需2%数据保留82.9%性能"
+      ]
+    },
+    {
+      "id": "2607.15268",
+      "title": "Motion-Conditioned Multi-View Fusion for Myocardial Infarction Localization from Echocardiography",
+      "authors": [
+        "Guang Yang",
+        "Wentian Xu",
+        "Siyu Wang",
+        "Betty Raman",
+        "Lei Li",
+        "Vicente Grau"
+      ],
+      "abstract": "Myocardial infarction (MI) remains a leading cause of mortality worldwide. Echocardiography (Echo) is a widely available modality for MI assessment, where regional wall motion abnormality is a key indicator. Prior learning based methods for myocardial motion analysis often use handcrafted descriptors or densely supervised estimation, but the need for extensive annotation limits applicability. Foundation models have recently improved vision-based Echo analysis; however, most methods operate on single views and segment-level localization remains unreliable under view-dependent ambiguity, especially in apical views. To address this, we propose MCF-Net, a novel motion-guided multi-view fusion framework that fuses myocardial motion cues with foundation model representations to localize infarction. Visual features are extracted using EchoPrime, a pretrained Echo foundation model shared across dual views. Cardiac motion is modeled with extremely sparse supervision: a single annotated template frame is transferred across videos to initialize point tracking, avoiding dense labels. Motion-derived segment-aware soft masks provide coarse spatial priors that selectively enhance features for challenging myocardial segments. A motion-conditioned fusion mechanism then integrates motion and vision across views, refining predictions without overriding strong appearance cues. On segment-level MI localization, MCF-Net achieves 72.4\\% F1 and 84.9\\% accuracy, outperforming state-of-the-art motion-only, vision-only, and fusion baselines.",
+      "published": "2026-07-16T17:56:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15268",
+      "pdf_url": "https://arxiv.org/pdf/2607.15268",
+      "summary_zh": "心肌梗死是全球主要死因，超声心动图评估中依赖区域壁运动异常，但现有方法需密集标注且单视图分析存在视角歧义。本文提出MCF-Net，通过极稀疏标注的模板帧初始化点追踪建模心脏运动，并利用运动条件融合机制将运动线索与基础模型视觉特征跨视图整合。在节段级梗死定位任务上，MCF-Net达到72.4% F1和84.9%准确率，显著优于现有运动、视觉及融合基线方法。",
+      "summary_en": "Myocardial infarction is a leading cause of death, and echocardiography relies on regional wall motion abnormalities for assessment, but existing methods require dense annotations and suffer from view-dependent ambiguity in single-view analysis. We propose MCF-Net, which models cardiac motion via extremely sparse supervision by transferring a single annotated template frame for point tracking, and integrates motion cues with foundation model visual features across dual views through a motion-conditioned fusion mechanism. On segment-level MI localization, MCF-Net achieves 72.4% F1 and 84.9% accuracy, outperforming state-of-the-art motion-only, vision-only, and fusion baselines.",
+      "highlights_zh": [
+        "极稀疏监督运动建模+跨视图融合",
+        "节段级梗死定位F1 72.4% 准确率84.9%",
+        "减少标注依赖，提升超声多视图分析可靠性"
+      ]
+    },
+    {
+      "id": "2607.15207",
+      "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
+      "authors": [
+        "Qi Li",
+        "Xingyi Yang",
+        "Xinchao Wang"
+      ],
+      "abstract": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction. This coupling is often viewed as a source of robustness, interpretability, and safety, as a robot's action can in principle be checked against its imagined future. In this paper, we show that this assumption is fragile. We introduce BadWAM, a unified framework for modeling and evaluating World-Action Drift Attacks: a new class of WAM-specific adversarial attacks that use small visual perturbations to break the alignment between what a WAM imagines and what it executes. BadWAM characterizes this attack surface along two natural criteria: attack strength and stealthiness. When the adversary prioritizes disruption, BadWAM instantiates an action-only adversarial attack, which directly drives the model toward task-failing actions. When the adversary additionally prioritizes stealth, BadWAM instantiates an imagination-preserving adversarial attack, which seeks to induce harmful action shifts while keeping the model's predicted future close to its clean imagination. Together, these two attacks capture a spectrum of WAM-specific failures: from overt action hijacking to stealthier cases where the model appears to imagine a plausible future but executes a desynchronized action. We evaluate BadWAM across different variants of WAMs. Results show that our attacks substantially reduce task success rates under closed-loop execution. For example, our action-only attack reduces the model performance from 96.5% to 43.1% success. The results of our imagination-preserving attack further exposes a WAM-specific vulnerability: moderate future-preserving regularization can maintain strong attack performance while reducing future imagination drift.",
+      "published": "2026-07-16T17:04:15Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15207",
+      "pdf_url": "https://arxiv.org/pdf/2607.15207",
+      "summary_zh": "世界-动作模型（WAM）虽被视为具身控制的安全基础，但其想象与执行间的对齐易受攻击。本文提出BadWAM框架，通过两类对抗攻击（动作攻击与想象保持攻击）系统性地破坏这种对齐。实验表明攻击可大幅降低任务成功率（如从96.5%降至43.1%），并揭示WAM特有的脆弱性。",
+      "summary_en": "World-action models (WAMs) are assumed robust due to coupling action with future prediction, but this alignment is fragile. BadWAM introduces a unified framework for World-Action Drift Attacks, including action-only and imagination-preserving attacks that break this coupling. Results show significant task success reduction (e.g., 96.5% to 43.1%), exposing a WAM-specific vulnerability where plausible future predictions coexist with harmful actions.",
+      "highlights_zh": [
+        "提出WAM特定对抗攻击框架",
+        "任务成功率从96.5%降至43.1%",
+        "揭示想象-执行对齐的脆弱性"
+      ]
+    },
+    {
+      "id": "2607.15182",
+      "title": "Stigmergic Graph Memory: An Environment-Aware Approach for Many-to-Many Multi-Agent Pickup and Delivery",
+      "authors": [
+        "Aditya Dutta",
+        "Joon-Seok Kim"
+      ],
+      "abstract": "Automated fulfillment warehouses must continuously assign and execute pickup-and-delivery work while avoiding congestion. In many-to-many Multi-Agent Pickup and Delivery (MAPD), a request specifies a stock-keeping unit rather than fixed endpoints, requiring the controller to select an agent, source, and destination before path planning. Existing graph-guidance methods primarily influence routing after goals are fixed, leaving endpoint instantiation uninformed by recent traffic. We introduce Stigmergic Graph Memory (SGM), a bounded, decaying memory layer that records recent execution signals on warehouse nodes and directed edges to rank feasible endpoints and route preferences without altering collision constraints or planner validity. Across paired request streams on five layouts, three load levels, and 25 seeds per condition, SGM outperforms two reconstructed many-to-many allocation baselines in all 15 map-load conditions, with paired throughput gains of 20.5-36.7%. These results show that recent execution memory can improve warehouse throughput by shaping which feasible goals enter the planner, not only how agents travel to already fixed goals.",
+      "published": "2026-07-16T16:34:57Z",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.15182",
+      "pdf_url": "https://arxiv.org/pdf/2607.15182",
+      "summary_zh": "在多对多多智能体拣选与配送（MAPD）问题中，现有方法在目标固定后才进行路径规划，忽略了近期交通信息对端点选择的影响。本文提出Stigmergic Graph Memory（SGM），一种有界、衰减的记忆层，通过记录仓库节点和边上的近期执行信号来排序可行端点与路径偏好，而不改变碰撞约束或规划器有效性。在五种布局、三种负载水平和25个随机种子下的实验表明，SGM在所有15种地图-负载条件下均优于两种基线方法，吞吐量提升20.5%-36.7%，证明近期执行记忆可通过优化目标选择而非仅路径规划来提高仓库吞吐量。",
+      "summary_en": "In many-to-many Multi-Agent Pickup and Delivery (MAPD), existing methods plan paths only after goals are fixed, leaving endpoint selection uninformed by recent traffic. This paper introduces Stigmergic Graph Memory (SGM), a bounded, decaying memory layer that records recent execution signals on warehouse nodes and edges to rank feasible endpoints and route preferences without altering collision constraints or planner validity. Across five layouts, three load levels, and 25 seeds, SGM outperforms two baselines in all 15 map-load conditions with 20.5-36.7% throughput gains, demonstrating that recent execution memory can improve warehouse throughput by shaping goal selection rather than just path planning.",
+      "highlights_zh": [
+        "环境感知的记忆层引导端点选择",
+        "吞吐量提升20.5%-36.7%",
+        "适用于自动化仓库的实时调度优化"
+      ]
+    }
+  ]
+}
