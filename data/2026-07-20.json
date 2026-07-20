@@ -1,0 +1,277 @@
+{
+  "date": "2026-07-20",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.16175",
+      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "authors": [
+        "Md Erfan",
+        "Ahmed Ryan",
+        "Md Kamal Hossain Chowdhury",
+        "Md Rayhanur Rahman"
+      ],
+      "abstract": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security.",
+      "published": "2026-07-17T17:55:19Z",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16175",
+      "pdf_url": "https://arxiv.org/pdf/2607.16175",
+      "summary_zh": "联网自动驾驶汽车（CAV）的漏洞通常以纯文本形式记录在CVE数据库中，但安全从业者需要结构化的威胁信息来有效缓解风险。为此，我们构建了CAV-STIXGen数据集，并评估了11种开源大语言模型在不同提示策略和温度下生成STIX结构化威胁信息的能力。单模型在SDO和CWE映射上取得高F1分数（0.94和0.99），但完整MITRE ATT&CK映射仍有挑战，多智能体设置下Gemma-4-31B和Codestral-22B分别达到0.91和0.43的F1分数。",
+      "summary_en": "Vulnerabilities in Connected and Autonomous Vehicles (CAVs) are typically documented as plain text in CVE databases, but security practitioners require structured threat information for effective mitigation. To address this, we constructed the CAV-STIXGen dataset and evaluated 11 open-weight LLMs across various prompting strategies and temperatures for generating STIX-structured threat information. Single models achieved high F1 scores of 0.94 for SDO and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging; in a multi-agent setup, Gemma-4-31B and Codestral-22B reached F1 scores of 0.91 and 0.43, respectively.",
+      "highlights_zh": [
+        "构建CAV-STIXGen数据集评估LLM生成STIX",
+        "单模型SDO F1达0.94，CWE映射达0.99",
+        "多智能体提升SRO生成，但ATT&CK映射仍难"
+      ]
+    },
+    {
+      "id": "2607.16169",
+      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Zihe Huang",
+        "Ziqi Zhou",
+        "Qianshan Wei",
+        "Xuan Wang",
+        "Hao Sun"
+      ],
+      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly. Multi-seed and cross-task validation remain open.",
+      "published": "2026-07-17T17:49:05Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16169",
+      "pdf_url": "https://arxiv.org/pdf/2607.16169",
+      "summary_zh": "该论文研究Muon优化器在稀疏奖励的智能体强化学习后训练中的效果，背景是Muon在大规模预训练中与AdamW竞争力相当，但在RL后训练中的价值尚不明确。方法上，在ALFWorld环境中使用Qwen2.5-0.5B-Instruct模型，通过Group-in-Group Policy Optimization框架，仅对隐藏权重矩阵应用Muon进行对比实验。结果表明，Muon能显著提升验证成功率（最高+88%），且效果依赖于优势估计器和学习率，为联合研究策略优化器、优势估计器和学习率提供了动机。",
+      "summary_en": "This paper investigates whether Muon optimizer benefits reinforcement-learning post-training in sparse-reward agentic tasks, as its value remains unclear despite being competitive with AdamW in large-scale pre-training. The authors apply vanilla Muon only to hidden weight matrices within Group-in-Group Policy Optimization (GiGPO) on ALFWorld using Qwen2.5-0.5B-Instruct, comparing with AdamW under matched single-seed conditions. Results show Muon boosts final-window validation success by up to 88% (from 0.290 to 0.546) and improves normalized validation AUC from 0.399 to 0.556, with effects depending on advantage estimator and learning rate, motivating joint study of policy optimizer, advantage estimator, and learning rate.",
+      "highlights_zh": [
+        "Muon仅应用于隐藏权重矩阵",
+        "验证成功率从0.290提升至0.546（+88%）",
+        "多种子和跨任务验证尚待研究"
+      ]
+    },
+    {
+      "id": "2607.16184",
+      "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "authors": [
+        "Yuchen Yang",
+        "Yifan Zhao",
+        "Anisha Dasgupta",
+        "Sasa Misailovic"
+      ],
+      "abstract": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We propose PagedWeight, a novel management method for MoE LLM serving that dynamically quantizes MoE model's weights at runtime and balances expert-weight precision with the KV cache sizes. PagedWeight exposes and effectively navigates the complex tradeoff between the model's task accuracy, memory consumption, and throughput/latency. Across several memory-sensitive MoE serving scenarios, PagedWeight improves the quality-memory tradeoff over several existing quantization baselines. PagedWeight achieves FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94$\\times$ throughput improvement, and improves quality over quantization methods by up to 39.3% at a similar memory budget with at most 4.1% throughput loss.",
+      "published": "2026-07-17T17:58:29Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16184",
+      "pdf_url": "https://arxiv.org/pdf/2607.16184",
+      "summary_zh": "在KV缓存密集型服务场景中，MoE大语言模型面临模型权重与KV缓存之间的GPU内存竞争。PagedWeight提出一种运行时动态量化MoE模型权重的方法，通过平衡专家权重精度与KV缓存大小来优化内存分配。该方法在保持FP16等效精度的同时，实现高达72%的GPU内存节省和1.94倍吞吐量提升，并在相似内存预算下比现有量化方法提升最多39.3%的质量。",
+      "summary_en": "MoE LLMs face GPU memory tension between model weights and KV cache in memory-intensive serving scenarios. PagedWeight introduces runtime dynamic weight quantization for MoE models, balancing expert-weight precision with KV cache sizes to navigate the accuracy-memory-throughput tradeoff. It achieves FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94× throughput improvement, while improving quality by up to 39.3% over quantization baselines at similar memory budgets.",
+      "highlights_zh": [
+        "运行时动态量化MoE权重",
+        "72%内存节省+1.94倍吞吐",
+        "质量提升39.3%，吞吐损失≤4.1%"
+      ]
+    },
+    {
+      "id": "2607.16183",
+      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+      "authors": [
+        "Owen Lockwood",
+        "Jérémy Béjanin",
+        "Joost Bus",
+        "Christopher Chamberland",
+        "Patrick Huembeli",
+        "Frank Schäfer",
+        "Guillaume Verdon"
+      ],
+      "abstract": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from basic parameterized energy-based models. We demonstrate how to construct and train popular classes of machine learning models based on these hardware-native energy-based models, using the framework of probabilistic graphical models. We analyze the runtime and energy consumption of different models in this thermodynamic paradigm based on theoretical considerations and numerical studies. As a preliminary experimental realization of such hardware, we present our stochastic analog superconducting circuits driven by thermal noise. Together, these results outline a path toward energy-efficient thermodynamic hardware for probabilistic machine learning.",
+      "published": "2026-07-17T17:57:49Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.ET",
+        "physics.app-ph"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16183",
+      "pdf_url": "https://arxiv.org/pdf/2607.16183",
+      "summary_zh": "当前机器学习工作负载面临日益增长的能耗和延迟挑战。本文提出一种基于平衡态可微连续变量热力学计算的蓝图，利用物理硬件中的随机模拟过程实现能量高效的热力学计算堆栈。通过理论分析和数值研究，展示了基于热力学硬件的概率机器学习模型的构建与训练方法，并初步实现了热噪声驱动的随机模拟超导电路。",
+      "summary_en": "To address the growing energy and latency demands of machine learning workloads, this paper introduces a blueprint for equilibrium-based differentiable continuous-variable thermodynamic computing that leverages stochastic analog processes in physical hardware. The method implements tunable energy potentials via Langevin dynamics to generate and sample from parameterized energy-based models, constructing and training popular ML models within the probabilistic graphical model framework. Theoretical analysis and numerical studies demonstrate runtime and energy efficiency improvements, with preliminary experimental realization using stochastic analog superconducting circuits driven by thermal noise.",
+      "highlights_zh": [
+        "基于热力学硬件的可微计算框架",
+        "热噪声驱动超导电路初步实验验证",
+        "为概率机器学习提供低能耗硬件路径"
+      ]
+    },
+    {
+      "id": "2607.16131",
+      "title": "ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning",
+      "authors": [
+        "Binglin Zhou",
+        "Peng Shi",
+        "Ryo Kamoi",
+        "Nan Zhang",
+        "Rui Zhang"
+      ],
+      "abstract": "Multimodal Scientific Claim Verification (MSCV) requires models to verify scientific claims using visually grounded evidence from papers, including figures, tables, charts, and textual context. However, existing methods often fail because they struggle to locate decisive visual evidence, accurately read structured scientific visuals, and integrate multimodal observations into reliable reasoning. We introduce ToolSciVer, the first tool-augmented framework for MSCV to our knowledge. ToolSciVer equips a VLM with three type-aware visual tools, table row/column focus, chart-to-structure parsing, and high-resolution region zoom, which convert dense scientific visuals into explicit, claim-facing evidence, and trains the policy with Group Relative Policy Optimization (GRPO) under a composite reward of answer correctness, format validity, length control, tool-use efficiency, and tool-validity penalties. Experiments on SciVer and MuSciClaims datasets on five VLMs from three model families (Qwen, InternVL, Gemma) demonstrate that our method achieves superior performance compared to four competitive baselines including prompting-based and RL-based tool-use methods, highlighting the effectiveness of learned, type-aware tool use for scientific claim verification.",
+      "published": "2026-07-17T17:11:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16131",
+      "pdf_url": "https://arxiv.org/pdf/2607.16131",
+      "summary_zh": "多模态科学声明验证（MSCV）任务中，现有方法难以定位关键视觉证据、准确解析结构化科学图像并整合多模态推理。本文提出ToolSciVer框架，首次为视觉语言模型配备三种类型感知的视觉工具（表格行列聚焦、图表结构解析、高分辨率区域缩放），并通过GRPO策略优化工具使用。在SciVer和MuSciClaims数据集上，基于Qwen、InternVL、Gemma三个模型家族的五个VLM实验表明，该方法优于四种基线方法，验证了学习型工具使用的有效性。",
+      "summary_en": "Multimodal Scientific Claim Verification (MSCV) faces challenges in locating decisive visual evidence and integrating multimodal reasoning. We propose ToolSciVer, the first tool-augmented framework that equips VLMs with three type-aware visual tools and optimizes tool-use policy via GRPO with composite rewards. Experiments on five VLMs across three model families demonstrate superior performance over four baselines, highlighting the effectiveness of learned tool use for scientific claim verification.",
+      "highlights_zh": [
+        "首次提出工具增强的MSCV框架",
+        "在五个VLM上超越四种基线方法",
+        "提升科学声明验证的视觉证据利用"
+      ]
+    },
+    {
+      "id": "2607.16117",
+      "title": "Rate-Utility Frontiers for Language Encodings: Comparing Tokens, Bytes, and Pixels Under Controlled Linguistic Content",
+      "authors": [
+        "Ingo Ziegler",
+        "Martin Krebs",
+        "Desmond Elliott"
+      ],
+      "abstract": "Language models encode text as subword tokens, raw bytes, or rendered pixels, but these encodings are usually compared under modeling constraints that expose different amounts of linguistic content to models across different languages. We instead ask what each encoding preserves when both the content and the downstream capacity are controlled. Using verified parallel sentences across thirteen languages and five scripts, we compare tokens, bytes, and pixels through a shared bottleneck whose width is swept to trace rate-utility frontiers. This separates three quantities that are often conflated: the number of input positions an encoding creates, the latent capacity available after encoding, and the task-relevant information that survives compression. We evaluate three utilities: surface form preservation, cross-lingual sentence alignment, and topic classification. No encoding dominates across tasks or capacity regimes. Pixels preserve surface form best, bytes preserve cross-lingual alignment best, especially in same-script multilingual settings, and tokens support topic prediction best. These performances are not explained by sequence length alone. Short inputs can discard useful meaning, while long inputs can preserve information that compresses well. Choosing an encoding is therefore not a fixed preference for tokens, bytes, or pixels, but a rate-utility tradeoff that depends on the task, language mix, capacity regime, and compute budget.",
+      "published": "2026-07-17T16:55:27Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16117",
+      "pdf_url": "https://arxiv.org/pdf/2607.16117",
+      "summary_zh": "语言编码（子词、字节、像素）通常在不同语言暴露不同语言内容量的建模约束下比较，导致公平性不足。本研究通过控制内容和下游容量，使用13种语言的平行句子，通过共享瓶颈宽度扫描绘制率-效用前沿，分离了输入位置数、潜在容量和任务相关信息。结果显示没有编码在所有任务和容量区间占优：像素保留表面形式最佳，字节保留跨语言对齐最佳，子词支持主题预测最佳，选择编码需根据任务、语言组合和计算预算权衡。",
+      "summary_en": "Language encodings (tokens, bytes, pixels) are typically compared under modeling constraints that expose different amounts of linguistic content across languages. This study controls both content and downstream capacity, using verified parallel sentences across 13 languages and 5 scripts, sweeping bottleneck width to trace rate-utility frontiers that separate input positions, latent capacity, and task-relevant information. Results show no encoding dominates across tasks or capacity regimes: pixels best preserve surface form, bytes best preserve cross-lingual alignment, and tokens best support topic prediction, revealing encoding choice as a rate-utility tradeoff dependent on task, language mix, and compute budget.",
+      "highlights_zh": [
+        "提出率-效用前沿比较框架",
+        "像素保留表面形式最佳",
+        "字节在跨语言对齐中表现最优"
+      ]
+    },
+    {
+      "id": "2607.16193",
+      "title": "Knowing the Self, Understanding the World: A Dual-Cognition Benchmark for UAV Spatio-temporal Reasoning with MLLMs",
+      "authors": [
+        "Like Liu",
+        "Zhengzheng Xu",
+        "Haitao He",
+        "Hongzhe Li",
+        "Shuchang Zhang",
+        "Dian Shao"
+      ],
+      "abstract": "Multimodal large language models have achieved strong performance across diverse vision-language tasks, yet their capabilities in UAV scenarios remain insufficiently explored. Recent UAV-oriented benchmarks have begun to evaluate MLLMs in aerial scenarios, but they typically focus on scene understanding, event recognition, or navigation completion, rather than jointly assessing the dual-cognition capability required for UAV agents: reasoning about both the UAV's own state and the external environment in multiview spatio-temporal contexts. To address this gap, we present UAV-DualCog, a benchmark for aerial multiview spatio-temporal reasoning built on this dual-cognition perspective. UAV-DualCog includes both image and video tasks to jointly evaluate self-state and environment-state reasoning, while requiring spatial or temporal grounding beyond discrete answer prediction. We also develop an automated pipeline that constructs data from scene-level semantic point clouds, yielding a scalable benchmark with diverse scenes, hundreds of landmarks, and thousands of QA samples. Extensive evaluations show that current MLLMs remain far from reliable in UAV dual cognition. Self-state reasoning, viewpoint transformation, precise spatial grounding, and temporal interval localization are persistent bottlenecks, and additional validation with thinking/frontier models and a human baseline confirms that the benchmark is understandable to humans but challenging for existing models. We further construct UAV-DualCog-Train from disjoint scenes and show through a lightweight optimization probe that it provides useful structured supervision, suggesting its value not only as an evaluation benchmark but also as a data resource for advancing MLLM-based UAV agents. Project website and supplementary materials: https://uav-dualcog.lozumi.com",
+      "published": "2026-07-17T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16193",
+      "pdf_url": "https://arxiv.org/pdf/2607.16193",
+      "summary_zh": "现有无人机多模态大模型基准测试主要关注场景理解或导航，缺乏对无人机自身状态与外部环境联合推理的双认知能力评估。为此，我们提出UAV-DualCog基准，通过构建基于语义点云的自动化数据生成管道，包含图像和视频任务，要求模型进行空间或时间定位。实验表明当前MLLMs在无人机双认知任务上表现远不可靠，该基准不仅可作为评估标准，还能作为结构化监督的数据资源推动模型发展。",
+      "summary_en": "Existing UAV-oriented benchmarks for MLLMs focus on scene understanding or navigation, lacking joint evaluation of dual-cognition reasoning about both the UAV's own state and the external environment. We propose UAV-DualCog, a benchmark with an automated pipeline constructing data from scene-level semantic point clouds, featuring image and video tasks requiring spatial or temporal grounding. Evaluations show current MLLMs are far from reliable on UAV dual cognition, and the benchmark provides valuable structured supervision for advancing MLLM-based UAV agents.",
+      "highlights_zh": [
+        "提出无人机双认知推理基准",
+        "MLLMs在双认知任务上远不可靠",
+        "提供结构化监督数据资源"
+      ]
+    },
+    {
+      "id": "2607.16192",
+      "title": "MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction",
+      "authors": [
+        "Homanga Bharadhwaj",
+        "Yash Jangir"
+      ],
+      "abstract": "Humans can infer how objects are likely to move from passive observation: a cup may be lifted, a drawer may slide, and a lid may rotate shut. Such predictions expose the physical consequences of interaction needed to act in the real world. We study how to learn this anticipation from ordinary monocular videos of human-object interaction. Given a short observed video context, MotionForesight predicts future 3D trajectories for points on the manipulated object. This casts interaction prediction as object-centered 3D motion forecasting without any assumptions on the object properties. Our key insight is that video prediction models already encode rich priors about how objects move during human interactions. We redirect these priors from pixel prediction toward future 3D scene flow. We start from a dense 3D tracker built on a pretrained video model, generate pseudo-ground-truth tracks from complete clips, and train the forecaster using only the observed frames. We replace future RGB and geometry with learned mask latents and train a lightweight adapter to turn the retrospective tracking representation into a forward predictor, while freezing the large video and tracking components. Using just 40k human videos and no auxiliary inputs such as language, MotionForesight generalizes across diverse out-of-distribution objects, environments, viewpoints, and interactions. It also outperforms substantially larger models that use over a million training videos. These results show that we can efficiently re-purpose video priors into explicit geometric forecasts for embodied intelligence. https://motionforesight.github.io/",
+      "published": "2026-07-17T17:59:38Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16192",
+      "pdf_url": "https://arxiv.org/pdf/2607.16192",
+      "summary_zh": "人类能从被动观察中推断物体的运动方式，但现有方法难以从单目视频预测未来3D轨迹。MotionForesight通过重利用视频预测模型中的先验知识，将其从像素预测转向未来3D场景流预测，仅需40K人类视频即可训练。该方法在多样化的物体、环境和交互中表现出色，超越了使用百万级视频训练的更大模型。",
+      "summary_en": "Humans can infer object motion from passive observation, but predicting future 3D trajectories from monocular videos remains challenging. MotionForesight repurposes video prediction priors from pixel prediction to future 3D scene flow, training a lightweight adapter on only 40K human videos while freezing large video and tracking components. It generalizes across diverse objects, environments, and interactions, outperforming substantially larger models trained on millions of videos.",
+      "highlights_zh": [
+        "重利用视频先验预测3D场景流",
+        "仅40K视频超越百万级模型",
+        "无需语言等辅助输入，泛化性强"
+      ]
+    },
+    {
+      "id": "2607.16187",
+      "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+      "authors": [
+        "Ruogu Li",
+        "Chenyang Ma",
+        "Sikai Li",
+        "Zhenyu Wei",
+        "Yunchao Yao",
+        "Haochen Shi",
+        "C. Karen Liu",
+        "Shuran Song",
+        "Mingyu Ding"
+      ],
+      "abstract": "Dexterous hands and humanoid robots are typically developed as distinct embodiments: the former enable contact-rich manipulation at the object scale, whereas the latter provide mobility and whole-body interaction in human-centered environments. We introduce \\textbf{Handroid}, a desktop-scale dual-embodiment robot that integrates both capabilities within a single reconfigurable platform. Handroid reuses one 27-DoF electromechanical body as either a dexterous hand or a desktop humanoid, measuring 0.33 m in height and 2.05 kg in weight. In the dexterous hand embodiment, 20 DoFs form an anthropomorphic hand closely matching the kinematic structure of the human hand. In the humanoid embodiment, the same articulated modules are reconfigured into a humanoid with a head, arms, and legs, including a 12-DoF lower-limb structure for locomotion and whole-body motion. Handroid further provides a unified control and learning framework supporting hand teleoperation, dexterous grasping, in-hand manipulation, humanoid locomotion, gait generation, and interactive motion authoring. We validate the platform through real-world dexterous manipulation, reinforcement-learning-based locomotion, keyframe motion deployment, and a long-horizon task involving embodiment reconfiguration, locomotion, docking, and dexterous pick-and-place. These results position Handroid as a compact and reproducible platform for advancing morphology-reconfigurable robotics and cross-embodiment robot learning.",
+      "published": "2026-07-17T17:59:05Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16187",
+      "pdf_url": "https://arxiv.org/pdf/2607.16187",
+      "summary_zh": "灵巧手与人形机器人通常作为不同形态独立发展，限制了单一平台同时实现精细操作与全身移动的能力。Handroid提出一种桌面级双形态可重构平台，将27自由度的机电身体在灵巧手（20自由度拟人手）与33厘米高的人形机器人之间切换，并统一了控制与学习框架。实验验证了其在灵巧操作、强化学习运动控制、长时域任务（形态重构、移动、对接与抓取）中的有效性，为形态可重构机器人与跨形态学习提供了紧凑可复现的平台。",
+      "summary_en": "Dexterous hands and humanoid robots are typically developed as distinct embodiments, limiting a single platform to both fine manipulation and whole-body mobility. Handroid introduces a desktop-scale dual-embodiment reconfigurable platform that reuses a 27-DoF electromechanical body as either a dexterous hand (20 DoFs anthropomorphic) or a 0.33m-tall humanoid, with a unified control and learning framework. Real-world experiments validate dexterous manipulation, RL-based locomotion, and long-horizon tasks involving reconfiguration, locomotion, docking, and pick-and-place, positioning Handroid as a compact and reproducible platform for morphology-reconfigurable robotics.",
+      "highlights_zh": [
+        "双形态可重构灵巧手与人形机器人",
+        "27自由度统一机电身体实现两种形态",
+        "紧凑平台支持跨形态学习与长时域任务"
+      ]
+    },
+    {
+      "id": "2607.16173",
+      "title": "Vision-Language-Motion Maps: An Open-Vocabulary, Uncertainty-Aware, Queryable Motion Attribute for 3D Scene Maps",
+      "authors": [
+        "Dibyendu Ghosh",
+        "Ayushi Shakya"
+      ],
+      "abstract": "Open-vocabulary 3D maps let robots answer language queries about what and where, but they assume a static world and cannot answer queries about how scene elements behave. We introduce Vision-Language-Motion Maps (VLMM), an open-vocabulary, natural-language-queryable 3D map in which each element carries a fused motion attribute: a VLM/LLM semantic movability prior combined with geometrically observed cross-frame motion, together with a per-element uncertainty. Queries reduce to attribute filters that distinguish what has been seen to move, what could move but has not, and what stays still. On a controlled simulator benchmark with exact ground truth (AI2-THOR, three scene types) we show through ablation that the schema fields are non-substitutable: a semantic-only baseline fails motion queries even with strong features, and neither motion field substitutes for the other (the prior cannot answer \"what is moving,\" observed motion cannot answer \"what could move\"). On real dynamic RGB-D (TUM and Bonn, six sequences) we show the uncertainty channel-our key difference from prior fused-motion work-consistently improves moving-vs-static average precision and reduces false motion flags, and is robust to estimated (noisy) poses. The raw confidence is not calibrated, but post-hoc isotonic calibration reaches an expected calibration error of 0.10. VLMM is a representation contribution: the closest prior maps each lack at least one of the four properties-open-vocabulary, language-queryable, fused prior-and-observed motion, and per-element uncertainty-that our combination provides.",
+      "published": "2026-07-17T17:53:13Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.16173",
+      "pdf_url": "https://arxiv.org/pdf/2607.16173",
+      "summary_zh": "现有开放词汇3D地图只能回答静态场景中物体“是什么、在哪里”的问题，无法处理场景元素“如何运动”的查询。本文提出VLMM，为每个地图元素融合了基于VLM/LLM的语义可动性先验与几何观测的跨帧运动，并附带逐元素的不确定性。实验表明，该表示在模拟器和真实动态场景中显著优于纯语义或纯运动基线，不确定性通道有效提升了运动/静态分类精度。",
+      "summary_en": "Open-vocabulary 3D maps answer what and where but assume static worlds, failing to answer how scene elements behave. VLMM introduces a fused motion attribute combining VLM/LLM semantic movability priors with geometrically observed cross-frame motion and per-element uncertainty. Experiments show it outperforms semantic-only and motion-only baselines on simulated and real dynamic scenes, with uncertainty consistently improving moving-vs-static precision.",
+      "highlights_zh": [
+        "融合语义先验与几何观测的运动属性",
+        "不确定性通道提升运动/静态AP达0.10",
+        "支持开放词汇自然语言运动查询"
+      ]
+    }
+  ]
+}
