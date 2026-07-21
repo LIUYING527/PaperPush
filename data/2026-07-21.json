@@ -1,0 +1,292 @@
+{
+  "date": "2026-07-21",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.18235",
+      "title": "Automated Discovery Has No Universally Superior Harness",
+      "authors": [
+        "Akshat Gupta",
+        "Jermaine Lei",
+        "Alexander Lu",
+        "Gopala Anumanchipalli",
+        "Leshem Choshen"
+      ],
+      "abstract": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about archives, parent selection, exploration, and budget allocation into a single recipe. Because discovery runs are expensive and inherently stochastic, existing harnesses are often compared using too few independent trials to distinguish key methodological improvements from run-to-run variance. We systematically decompose OpenEvolve-style evolutionary search and the TTT-Discover search harness into its constituent components and systematically evaluate 30 budget-matched harnesses across 12 model-problem pairs using more than 3.1 million LLM rollouts and repeated-trial statistical analysis. Our results show that discovery harnesses have a generalization problem: No fixed harness is reliably superior across the evaluated model-problem pairs, and variants of OpenEvolve generally underperform simpler alternatives. Thus, harness choice is better viewed as a hyperparameter rather than as a universal recipe, and should be tailored to the specific problem and underlying model. We also find that early discovery progress predicts final performance, and use this property to present a budget-matched adaptive-allocation experiment that starts multiple harnesses, prunes weak partial runs, and reallocates compute to stronger survivors, outperforming both commitment to a randomly sampled fixed harness and a non-adaptive harness ensemble. Together, these results motivate shifting from fixed harness selection to online adaptation guided by early performance. We release all run pools including baseline null distributions for every model-problem pair as reusable statistical infrastructure against for future harness proposals.",
+      "published": "2026-07-20T17:59:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18235",
+      "pdf_url": "https://arxiv.org/pdf/2607.18235",
+      "summary_zh": "当前自动发现系统（如OpenEvolve和TTT-Discover）常被用作通用框架，但实际是多个设计选择的组合，且因实验昂贵、随机性大，现有比较缺乏足够独立试验来区分方法改进与随机波动。本文系统分解了这些搜索框架的组成，在12个模型-问题对上评估了30种预算匹配的框架，使用了超过310万次LLM调用和重复试验统计分析。结果表明没有固定框架在所有场景下普遍优越，OpenEvolve变体通常不如简单替代方案，因此框架选择应视为超参数而非通用配方，并提出了基于早期性能的在线自适应分配方法，优于固定框架或非自适应集成。",
+      "summary_en": "Current autonomous discovery systems like OpenEvolve and TTT-Discover are often used as general-purpose harnesses but are composites of multiple design choices, and comparisons suffer from insufficient trials due to high cost and stochasticity. This work systematically decomposes these search harnesses into components and evaluates 30 budget-matched harnesses across 12 model-problem pairs using over 3.1 million LLM rollouts with repeated-trial statistical analysis. Results show no fixed harness is universally superior, OpenEvolve variants generally underperform simpler alternatives, and harness choice should be treated as a hyperparameter; an online adaptive allocation method based on early performance outperforms fixed or non-adaptive ensembles.",
+      "highlights_zh": [
+        "框架选择应视为超参数而非通用配方",
+        "OpenEvolve变体普遍不如简单替代方案",
+        "基于早期性能的在线自适应分配方法更优"
+      ]
+    },
+    {
+      "id": "2607.18230",
+      "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+      "authors": [
+        "Yi Tang",
+        "Xinyi Shang",
+        "Jiacheng Cui",
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tran Dinh Tien",
+        "Ahmed Elhagry",
+        "Salwa K. Al Khatib",
+        "Tianjun Yao",
+        "Yonina C. Eldar",
+        "Jing-Hao Xue",
+        "Hao Li",
+        "Salman Khan",
+        "Zhiqiang Shen"
+      ],
+      "abstract": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions. We propose a simple yet effective domain-generalized training framework built on two practical strategies. First, we introduce a balanced minibatch sampling scheme that strategically samples tampered and real images in each minibatch, preventing biased optimization toward either manipulated artifacts or clean-image priors and avoiding training collapse, ensuring that each optimization step receives proper sampled gradient signals. Second, we adopt a simple late-injection strategy, where the detector is first trained on large-scale base data until stable convergence, and then exposed to a small amount of newly selected supporting data from emerging VLM distributions, improving adaptability without overfitting to limited new domains. Together, these components provide a simple yet strong recipe for improving pixel-level tampering localization and OOD robustness across modern VLMs. Despite the conceptual simplicity, our framework outperforms the prior state-of-the-art PIXAR by a large margin of 26.1% and 26.8% relative improvement in average gIoU and cIoU, respectively, across OOD VLMs of GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5. Our code is available at https://github.com/VILA-Lab/PIXAR-DG",
+      "published": "2026-07-20T17:58:13Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18230",
+      "pdf_url": "https://arxiv.org/pdf/2607.18230",
+      "summary_zh": "现代视觉语言模型(VLM)的图像编辑能力使像素级篡改检测在跨模型和分布外场景下变得重要且困难。本文提出一个简单有效的域泛化训练框架，包含平衡小批量采样和后期注入策略，以提升检测器对多样化VLM生成篡改分布的鲁棒性。该方法在多个OOD VLM上相比PIXAR实现了平均gIoU和cIoU分别提升26.1%和26.8%的相对改进。",
+      "summary_en": "Pixel-level image tampering detection is increasingly important yet challenging under cross-model and out-of-distribution shifts in modern VLMs. This work proposes a simple domain-generalized training framework with balanced minibatch sampling and late-injection strategies to improve robustness across diverse VLM-generated manipulation distributions. The framework outperforms prior state-of-the-art PIXAR by 26.1% and 26.8% relative improvement in average gIoU and cIoU across OOD VLMs.",
+      "highlights_zh": [
+        "平衡采样+后期注入域泛化",
+        "相对PIXAR提升26.1% gIoU",
+        "提升VLM篡改检测OOD鲁棒性"
+      ]
+    },
+    {
+      "id": "2607.18237",
+      "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+      "authors": [
+        "Sheng-Yu Wang",
+        "Yotam Nitzan",
+        "Aaron Hertzmann",
+        "Jun-Yan Zhu",
+        "Eli Shechtman",
+        "Alexei A. Efros",
+        "Richard Zhang"
+      ],
+      "abstract": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspects. To bridge this gap, we introduce a large-scale dataset of human similarity judgments over image triplets, where each triplet is annotated across multiple, free-form semantic aspects of similarity. Benchmarking a broad range of frontier vision-language models (VLMs) reveals a considerable performance gap compared to human annotators' consensus. Leveraging our data, we fine-tune a VLM to produce our Text-Prompted Image Perceptual Similarity (TPIPS) metric, capturing multiple senses of visual similarity depending on the specified text prompt. We demonstrate that TPIPS aligns more closely with human perception and generalizes reliably beyond the training distribution. Finally, we show that TPIPS unlocks new capabilities in text-guided retrieval, compositional search, and the fine-grained evaluation of generative models. Our code, data, and trained models are at https://peterwang512.github.io/TPIPS",
+      "published": "2026-07-20T17:59:51Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18237",
+      "pdf_url": "https://arxiv.org/pdf/2607.18237",
+      "summary_zh": "人类视觉相似性判断具有上下文依赖性，但现有感知相似度指标仅输出单一标量值，无法针对特定语义方面进行条件化。为此，我们构建了一个大规模图像三元组人类相似性判断数据集，并基于此微调视觉语言模型，提出文本提示图像感知相似度（TPIPS）指标。实验表明，TPIPS与人类感知一致性更高，且能泛化到训练分布之外，在文本引导检索、组合搜索和生成模型细粒度评估中展现出新能力。",
+      "summary_en": "Human visual similarity judgments are context-dependent, yet existing perceptual metrics collapse nuances into a single scalar without conditioning on specific aspects. We introduce a large-scale dataset of human similarity judgments over image triplets annotated across multiple semantic aspects, and fine-tune a VLM to produce the Text-Prompted Image Perceptual Similarity (TPIPS) metric that captures multiple senses of similarity based on text prompts. TPIPS aligns more closely with human perception, generalizes beyond training distribution, and unlocks new capabilities in text-guided retrieval, compositional search, and fine-grained evaluation of generative models.",
+      "highlights_zh": [
+        "提出文本提示的感知相似度指标",
+        "TPIPS与人类感知一致性更高",
+        "支持文本引导检索与生成模型评估"
+      ]
+    },
+    {
+      "id": "2607.18236",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "authors": [
+        "Gaoyue Zhou",
+        "Zichen Jeff Cui",
+        "Ada Langford",
+        "Bowen Tan",
+        "Yann LeCun",
+        "Lerrel Pinto"
+      ],
+      "abstract": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
+      "published": "2026-07-20T17:59:41Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18236",
+      "pdf_url": "https://arxiv.org/pdf/2607.18236",
+      "summary_zh": "现有机器人策略要么压缩视觉观测为全局token丢失空间细节，要么从头训练视觉骨干无法利用大规模预训练，而大型视觉-语言-动作模型又过于笨重缓慢。本文提出Patch Policy，通过块因果注意力掩码让Transformer策略直接处理密集的预训练patch token，无需完整视觉-语言模型的计算开销。该方法在多个仿真和真实环境套件中比使用全局池化表示的策略提升40%，并以仅0.7%的参数超越OpenVLA-OFT 18%，为机器人社区高效利用视觉预训练提供了轻量级方案。",
+      "summary_en": "Existing robot policies either compress visual observations into global tokens losing spatial details or train visual backbones from scratch without leveraging large-scale pre-training, while large vision-language-action models are heavy and slow. Patch Policy introduces a block-causal attention mask that enables transformer-based policies to directly consume dense pre-trained patch tokens without the computational overhead of a full VLM. It achieves 40% relative improvement over policies using global-pooled representations across multiple environments and surpasses fine-tuned OpenVLA-OFT by 18% using only 0.7% of the parameters, offering a lightweight pipeline for leveraging visual pre-training in robotics.",
+      "highlights_zh": [
+        "块因果注意力掩码实现密集patch token处理",
+        "相对全局池化策略提升40%，超越OpenVLA 18%",
+        "轻量高效，便于机器人社区利用视觉预训练"
+      ]
+    },
+    {
+      "id": "2607.18232",
+      "title": "It's Not What You Say, It's How You Say It: Evaluating LLM Responses to Expressions of Belief",
+      "authors": [
+        "Kevin Du",
+        "Clara Kümpel",
+        "Michelle Wastl",
+        "Alex Warstadt"
+      ],
+      "abstract": "Users frequently express their beliefs to large language models (LLMs). In some situations, the LLM should accept these contextual beliefs as true. In others, they should stick to their prior knowledge. Notably, users' expressions of belief (EoBs) can take linguistically diverse forms - using presuppositions, evidential and certainty markers, or varied tones - each of which may have a different persuasiveness over the LLMs. We introduce a typology to systematically evaluate how different EoBs affect whether models follow context versus prior knowledge. The typology is grounded in four linguistically motivated dimensions: form, evidentiality, epistemic stance, and tone, spanning 17 fine-grained types. By pairing these EoBs with world knowledge facts, we generate controlled EoB-query pairs that isolate the effect of linguistic variation. Using this benchmark, we evaluate 16 LLMs that differ in architecture (Llama3, Qwen3, Gemma3), scale (1B-30B parameters), and training stages (base vs instruct). We identify meaningful variations in response behavior across these axes, e.g., that bigger models and instruction models tend to be less context-following than smaller models and base models. We further identify specific EoBs that statistically significantly persuade LMs more consistently than others. Our work reveals systematic patterns in how linguistic framing affects LLM context integration, with implications for prompt engineering and model robustness.",
+      "published": "2026-07-20T17:58:31Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18232",
+      "pdf_url": "https://arxiv.org/pdf/2607.18232",
+      "summary_zh": "用户向大语言模型表达信念时，模型需区分何时接受上下文、何时坚持先验知识，但不同语言表达形式对模型的影响尚不明确。我们提出一个基于语言学维度的分类体系，涵盖形式、证据性、认知立场和语气4个维度共17种细粒度类型，并构建了控制变量的EoB-查询对基准。实验发现更大规模模型和指令模型更少遵循上下文，且特定表达形式（如预设）能显著影响模型行为，为提示工程和模型鲁棒性提供启示。",
+      "summary_en": "Users express beliefs to LLMs in diverse linguistic forms, yet how these variations affect model behavior remains unclear. We introduce a linguistically-grounded typology with 17 fine-grained types across four dimensions (form, evidentiality, epistemic stance, tone) and create controlled EoB-query pairs to isolate effects. Evaluating 16 LLMs reveals that larger and instruction-tuned models are less context-following, and specific EoBs (e.g., presuppositions) consistently persuade models, informing prompt engineering and robustness.",
+      "highlights_zh": [
+        "提出语言学驱动的EoB分类体系",
+        "大模型和指令模型更少遵循上下文",
+        "特定表达形式可显著影响模型行为"
+      ]
+    },
+    {
+      "id": "2607.18213",
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "authors": [
+        "Yuhang Wang",
+        "Yuling Shi",
+        "Shaoqiu Zhang",
+        "Jialiang Liang",
+        "Shilin He",
+        "Siyu Ye",
+        "Yuting Chen",
+        "Kai Cai",
+        "Xiaodong Gu"
+      ],
+      "abstract": "Pruning long context for coding agents has been a vital technology for efficient context management. While existing context pruning methods such as SWE-Pruner realize this by attaching a separate code classifier, we find the agent itself encodes internal representations indicating the relevance of code context when reading tool output. Based on this finding, we propose SWE-Pruner Pro, which prunes tool outputs directly inside the agent. Concretely, a small head turns the agent's own internal representations into a keep-or-prune label for each line, with a length-aware embedding keyed to each tool output's line count. Across two open-weight backbones and four multi-turn benchmarks, SWE-Pruner Pro saves up to 39% of prompt and completion tokens while preserving task quality, with bounded inference overhead. Notably, on MiMo-V2-Flash SWE-Pruner Pro additionally raises the SWE-Bench Verified resolve rate by +3.8% and the long-context Oolong accuracy by +2.2 points.",
+      "published": "2026-07-20T17:47:44Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18213",
+      "pdf_url": "https://arxiv.org/pdf/2607.18213",
+      "summary_zh": "现有代码智能体的长上下文剪枝方法依赖外部分类器，效率受限。本文发现智能体自身内部表征已蕴含代码相关性信息，据此提出SWE-Pruner Pro，通过在智能体内直接利用其表征进行逐行剪枝。该方法在多个基准上节省高达39%的token，同时保持任务质量，甚至在某些任务上提升了解码率和准确率。",
+      "summary_en": "Existing long-context pruning methods for coding agents rely on external classifiers. This paper finds that the agent's own internal representations already encode code relevance, and proposes SWE-Pruner Pro to prune tool outputs directly inside the agent using these representations. It saves up to 39% tokens while preserving task quality, and even improves resolve rate by +3.8% and accuracy by +2.2 points on certain benchmarks.",
+      "highlights_zh": [
+        "利用智能体内部表征剪枝",
+        "节省39% token，提升3.8%解码率",
+        "无需外部分类器，推理开销低"
+      ]
+    },
+    {
+      "id": "2607.18227",
+      "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+      "authors": [
+        "Dingyun Zhang",
+        "Lixue Gong",
+        "Wei Liu"
+      ],
+      "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+      "published": "2026-07-20T17:58:03Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18227",
+      "pdf_url": "https://arxiv.org/pdf/2607.18227",
+      "summary_zh": "当前视频编辑数据收集依赖人工标注和复杂流程，导致任务多样性远低于图像编辑。本文提出像素对时序扭曲流场，可直接从图像编辑样本实时生成视频编辑样本，并设计模态模仿损失来对齐图像与视频的能力。实验表明模型仅用此类数据即可学习多种视频编辑任务，且通过引入感知相关任务实现了无需外部辅助的编辑区域定位。",
+      "summary_en": "Current video editing data collection relies on labor-intensive annotation and complex pipelines, limiting task diversity compared to image editing. We propose a pixel-pair temporal warped flow field that generates video editing samples from image samples in real time, along with modality mimicry losses to align capabilities across modalities. The model learns multiple video editing tasks using only such data and internalizes region localization without external aids through sense-related tasks.",
+      "highlights_zh": [
+        "无需掩码的实时视频编辑数据生成",
+        "仅用生成数据即可学习多种视频编辑任务",
+        "实现无需外部辅助的编辑区域定位"
+      ]
+    },
+    {
+      "id": "2607.18231",
+      "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+      "authors": [
+        "Ruicheng Li",
+        "Qixiu Li",
+        "Ruichun Ma",
+        "Yu Deng",
+        "Lin Luo",
+        "Zhiying Du",
+        "Jianfeng Xiang",
+        "Huizhi Liang",
+        "Ruicheng Wang",
+        "Jiaolong Yang",
+        "Baining Guo"
+      ],
+      "abstract": "Vision-language-action (VLA) models have achieved impressive generalization in robotic manipulation, and recent memory-augmented VLAs have relaxed the Markovian assumption by conditioning on past images or language summaries. Vision-based memory approaches address this by conditioning on sampled past image frames, but they are computationally expensive and fundamentally limited when temporal events are visually ambiguous, e.g., pushing a button multiple times with small movements. We propose FM-VLA, a VLA model with force-based memory, enabling temporal context reasoning for non-Markovian, contact-rich manipulation. We encode force histories into compact force memory tokens with a variational autoencoder (VAE) pretrained with force time series reconstruction. By projecting force latent representations and short state history as additional conditioning tokens to the action expert module, we enable VLAs to leverage accumulated contact event history to guide manipulation. We evaluate FM-VLA on three memory-dependent tasks, including finding a hidden block, pressing a button, and wiping a dish for a specific number of times. Our lightweight force memory achieves over 80% success rate with minimal inference overhead, significantly outperforming baseline approaches. Project page: https://qft-333.github.io/FM-VLA-Page/",
+      "published": "2026-07-20T17:58:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18231",
+      "pdf_url": "https://arxiv.org/pdf/2607.18231",
+      "summary_zh": "现有记忆增强的视觉-语言-动作模型依赖视觉记忆，在处理接触丰富任务时计算成本高且对视觉模糊事件（如多次按按钮）效果有限。本文提出FM-VLA，通过变分自编码器将力历史编码为紧凑的力记忆令牌，并作为额外条件输入动作专家模块，实现非马尔可夫接触操作的时间上下文推理。在隐藏方块寻找、按钮按压和指定次数擦拭等任务中，FM-VLA以最小推理开销取得超80%成功率，显著优于基线方法。",
+      "summary_en": "Existing memory-augmented vision-language-action models rely on visual memory, which is computationally expensive and limited in contact-rich tasks with visually ambiguous temporal events. We propose FM-VLA, which encodes force histories into compact force memory tokens via a variational autoencoder and conditions the action expert on them for non-Markovian reasoning. FM-VLA achieves over 80% success rate on three memory-dependent tasks with minimal inference overhead, significantly outperforming baselines.",
+      "highlights_zh": [
+        "力记忆令牌替代视觉记忆",
+        "超80%成功率，低推理开销",
+        "适用于接触丰富操作任务"
+      ]
+    },
+    {
+      "id": "2607.18210",
+      "title": "Optimization of sim-to-real transfer in the humanoid robot NICO",
+      "authors": [
+        "Juraj Gavura",
+        "Igor Farkaš"
+      ],
+      "abstract": "Robotic grasping requires accurate coordination between visual perception, object localization, inverse kinematics, and hand control. However, when movements planned in simulation are executed on a physical robot, the sim-to-real gap can cause small positioning errors that prevent successful grasping. In our previous work, we introduced a low-cost haptic calibration method that improved 2D reaching accuracy of the humanoid robot NICO. In this paper, we extend this approach from reaching to tabletop object grasping by adding YOLO-based object and hand detection, stereo vision-based localization using the robot's built-in low-resolution fisheye cameras, and task-specific corrections for grasp execution. Together, these components form a novel calibration-based grasping pipeline that does not require RGB-D cameras, motion capture, or external tracking systems. We also implemented a visual feedback model that aligns the robot hand with the detected object before grasping. Our results show that the fully nonlinear calibration model achieved the best performance inside the calibrated area, while the visual feedback model achieved the highest overall grasping success across the full tabletop workspace.",
+      "published": "2026-07-20T17:45:04Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18210",
+      "pdf_url": "https://arxiv.org/pdf/2607.18210",
+      "summary_zh": "机器人抓取面临仿真到现实迁移的定位误差问题。本文提出一种基于YOLO检测、立体视觉和校准的低成本抓取流水线，无需RGB-D相机或外部追踪。非线性校准模型在标定区域内表现最佳，视觉反馈模型在全工作台上取得最高抓取成功率。",
+      "summary_en": "Robotic grasping suffers from positioning errors due to the sim-to-real gap. This paper extends a haptic calibration method to tabletop grasping using YOLO-based detection, stereo vision, and task-specific corrections, without requiring RGB-D cameras or external tracking. The nonlinear calibration model excels in the calibrated area, while the visual feedback model achieves the highest overall grasping success across the full workspace.",
+      "highlights_zh": [
+        "低成本无RGB-D的抓取校准流水线",
+        "视觉反馈模型实现全工作台最高成功率",
+        "适用于低分辨率相机的人形机器人抓取"
+      ]
+    },
+    {
+      "id": "2607.18228",
+      "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+      "authors": [
+        "Brian K Chen"
+      ],
+      "abstract": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce across controlled variations in logical form and interface. By studying which prefixes succeed and how their effects generalize, we characterize how learned contextual pressure can override correct judgments and expose limits in a model's logical stability. Across Qwen3.6-35B-A3B MoE, Qwen3-8B, and Gemma 4 31B, learned prefixes redirect many correct answers and remain effective across unseen forms and interface changes. In repeated tests with Qwen3.6 MoE and Gemma, they outperform paired random controls in all 16 model--direction--split comparisons by 37 to 99 percentage points. Qwen3.6 MoE flip rates remain between 72% and 90% across wording and prompt changes, while Gemma validity prefixes retain 54% to 56% flip compared with less than 1% for matched random prefixes. Diagnostic tests show that the dominant effect is a broad preference for one answer meaning rather than fixed-symbol forcing or a logical operation that transfers reliably between tasks. The form of this bias differs across models. In both Qwen models, simple score models often predict which judgments will flip but not how far their margins will move, whereas Gemma's overall response is more closely approximated by the same models. These results show that the dominant behavioral effect of successful soft prefixes is a broad answer preference, while the remaining response reveals substantial model-specific differences in logical stability.",
+      "published": "2026-07-20T17:58:05Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.18228",
+      "pdf_url": "https://arxiv.org/pdf/2607.18228",
+      "summary_zh": "本研究旨在探究学习到的上下文压力如何影响大语言模型的逻辑判断稳定性。通过向三段论推理基准中插入可学习的软前缀（soft prefix），在固定模型参数的情况下观察其行为变化。实验发现软前缀能有效覆盖正确判断，且效果在不同模型、逻辑形式和界面间具有泛化性，揭示了模型逻辑稳定性的显著差异。",
+      "summary_en": "This study investigates how learned contextual pressure affects the stability of logical judgments in large language models. By inserting learned soft prefixes into a syllogistic reasoning benchmark while keeping model parameters fixed, the authors characterize the induced behavioral changes. Results show that soft prefixes can override correct judgments effectively and generalize across models, logical forms, and interfaces, revealing substantial model-specific differences in logical stability.",
+      "highlights_zh": [
+        "软前缀可覆盖正确逻辑判断",
+        "Qwen3.6翻转率达72%-90%",
+        "揭示模型逻辑稳定性差异"
+      ]
+    }
+  ]
+}
