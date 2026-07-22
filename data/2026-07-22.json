@@ -1,0 +1,298 @@
+{
+  "date": "2026-07-22",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.19345",
+      "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+      "authors": [
+        "Lizhe Fang",
+        "Weizhou Shen",
+        "Tianyi Tang",
+        "Yisen Wang"
+      ],
+      "abstract": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies with context length. By separating each prompt into task-relevant key evidence and irrelevant distractor context, we further show that the root cause is insufficient grounding: models copy from the prompt indiscriminately, and those that fail to focus on key evidence are far more likely to answer incorrectly. Motivated by this diagnosis, we propose GEAR (Grounding Evidence-Aware Reward), a reward shaping method that augments the accuracy signal with a grounding reward for overlap with key evidence and a distractor penalty for overlap with irrelevant context. To enable GEAR on natural-language data, we develop an automated pipeline that constructs evidence-annotated training data from arbitrary documents. We validate GEAR across multiple model scales and benchmarks, showing consistent improvements of up to +4.6 average points over standard RL with accuracy-based rewards, with larger gains at longer contexts, while also reducing repetitive copying and thinking length. Our findings suggest that, even as long-context evaluation shifts from simple retrieval toward complex reasoning, accurate grounding in relevant evidence remains an indispensable capability with substantial room for improvement.",
+      "published": "2026-07-21T17:59:21Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19345",
+      "pdf_url": "https://arxiv.org/pdf/2607.19345",
+      "summary_zh": "大型语言模型在长上下文推理中普遍存在从输入中重复复制文本的失败模式，且该问题随上下文长度加剧。本文提出GEAR方法，通过基于证据的奖励塑造（对关键证据重叠给予奖励，对无关上下文重叠施加惩罚）来增强模型对相关证据的利用。实验表明GEAR在多个模型规模和基准上平均提升最多4.6个点，同时减少了重复复制和思考长度。",
+      "summary_en": "Large language models suffer from repetitive copying in long-context reasoning, where they extensively copy input text instead of solving problems, and this issue worsens with context length. The paper proposes GEAR, a reward shaping method that augments accuracy signals with grounding rewards for key evidence and penalties for irrelevant context, enabled by an automated pipeline for evidence-annotated training data. GEAR achieves consistent improvements of up to +4.6 average points over standard RL across multiple benchmarks, reduces repetitive copying and thinking length, and demonstrates that accurate grounding in relevant evidence remains crucial for complex reasoning.",
+      "highlights_zh": [
+        "证据感知的奖励塑造方法",
+        "平均提升+4.6个点",
+        "减少重复复制与思考长度"
+      ]
+    },
+    {
+      "id": "2607.19344",
+      "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+      "authors": [
+        "Rahul Sajnani",
+        "Yulia Gryaditskaya",
+        "Radomír Měch",
+        "Srinath Sridhar",
+        "Matheus Gadelha"
+      ],
+      "abstract": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reliably achieved through text prompting alone. Diffusion Transformers (DiTs) can natively ingest heterogeneous tokens stemming from texts and images, but they lack mechanisms for determining where and how these tokens should influence the output. We introduce appearance pointers, compact tokens that guide DiTs toward the correct appearance cues at the correct spatial locations by aligning text or image inputs with user-specified masks. Appearance pointers are produced by a region correspondence network and refined through a spatial aggregation mechanism, enabling the model to handle multiple regional descriptions without significantly increasing token load. Our approach introduces the first modality-agnostic interface for localized multimodal control in a DiT without retraining the base model from scratch. Across a range of metrics, our single model reaches or surpasses the performance of modality-specific state of the art methods, offering a simple and extensible path toward precise, region-aware, multimodal guidance in generative image synthesis.",
+      "published": "2026-07-21T17:59:12Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19344",
+      "pdf_url": "https://arxiv.org/pdf/2607.19344",
+      "summary_zh": "现有可控图像生成方法难以实现精确的区域级多模态控制，文本提示无法可靠指定材质、对象身份和空间布局。本文提出外观指针（appearance pointers），通过区域对应网络和空间聚合机制，将文本或图像输入与用户指定掩码对齐，在不显著增加token负载的情况下实现多区域描述引导。该方法首次为扩散Transformer提供了无需重新训练基础模型的模态无关接口，在多个指标上达到或超越现有模态特定方法，为精确区域感知的多模态生成提供了简洁可扩展的路径。",
+      "summary_en": "Controllable image generation struggles with precise regional control over materials, object identities, and spatial arrangements that text prompts alone cannot achieve. We introduce appearance pointers—compact tokens produced by a region correspondence network and refined via spatial aggregation—that align text or image inputs with user-specified masks to guide Diffusion Transformers without retraining the base model. This first modality-agnostic interface for localized multimodal control matches or surpasses modality-specific state-of-the-art methods across metrics, offering a simple and extensible path toward region-aware multimodal guidance.",
+      "highlights_zh": [
+        "首个模态无关的DiT区域控制接口",
+        "单模型超越多模态特定SOTA方法",
+        "无需重新训练基础模型的可扩展方案"
+      ]
+    },
+    {
+      "id": "2607.19335",
+      "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+      "authors": [
+        "Davide Murari",
+        "Marta Ghirardelli",
+        "Ben Adcock",
+        "Elena Celledoni",
+        "Brynjulf Owren",
+        "Carola-Bibiane Schönlieb"
+      ],
+      "abstract": "Controlling the Lipschitz constant of a neural network is a standard way to promote robustness and stability. Most existing constraining strategies are designed for Euclidean spaces. In this work, we construct and analyze a class of 1-Lipschitz neural networks on Hadamard manifolds. Our layers are of gradient-descent type, $1$-Lipschitz, and quasi-$α$-firmly nonexpansive. The core building blocks of the proposed architecture are Busemann functions, and we exploit the properties of Busemann gradient flows to design $1$-Lipschitz geometry-preserving layers. We provide explicit constructions and examples for hyperbolic manifolds and the manifold of symmetric positive definite (SPD) matrices. We test the proposed architecture in two numerical experiments: robust classification on the Poincaré disk and masked-Wishart covariance reconstruction. On the Poincaré disk, the proposed networks yield robust classifiers under hyperbolic perturbations. On the SPD manifold, we train SPD-valued denoisers and adopt them as a Plug-and-Play prior for a masked-Wishart covariance reconstruction problem. We show improved results from the nonexpansive denoiser over static, data-only, and Log-Euclidean denoising baselines, and empirically test its convergence properties.",
+      "published": "2026-07-21T17:54:34Z",
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19335",
+      "pdf_url": "https://arxiv.org/pdf/2607.19335",
+      "summary_zh": "现有神经网络Lipschitz约束方法多针对欧氏空间，缺乏在流形上的设计。本文在Hadamard流形上构建了基于Busemann梯度流的1-Lipschitz神经网络层，具有准α-非扩张性。实验表明该方法在双曲圆盘鲁棒分类和SPD流形协方差重建任务上优于基线，并验证了收敛性。",
+      "summary_en": "Existing Lipschitz-constrained neural networks are mostly designed for Euclidean spaces. This work constructs 1-Lipschitz layers on Hadamard manifolds using Busemann gradient flows, achieving quasi-α-firm nonexpansiveness. Experiments on robust classification over the Poincaré disk and SPD covariance reconstruction show improved robustness and convergence over baselines.",
+      "highlights_zh": [
+        "首次在Hadamard流形上构建1-Lipschitz网络",
+        "Poincaré圆盘鲁棒分类优于基线",
+        "可推广至SPD流形协方差重建"
+      ]
+    },
+    {
+      "id": "2607.19334",
+      "title": "Fundamental limits of distributed multiclass classification from simple binary decisions",
+      "authors": [
+        "Ioannis Papageorgiou",
+        "Srinivas Nomula",
+        "Ayalvadi Ganesh",
+        "Sidharth Jaggi",
+        "Parimal Parag"
+      ],
+      "abstract": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task. We study the fundamental performance limits of such a classifier when the corresponding binary classifiers are hyperplanes. For a stylized Gaussian setting where the $K$ class centers are independent Gaussian points in $\\mathbb R^d$ and the observations are corrupted by Gaussian noise, we derive explicit performance bounds across several decoding and dimensional regimes. Extensive simulation experiments provide strong empirical validation of the presented theoretical results.",
+      "published": "2026-07-21T17:53:44Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG",
+        "math.ST"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19334",
+      "pdf_url": "https://arxiv.org/pdf/2607.19334",
+      "summary_zh": "本文研究如何通过组合O(log K)个简单二分类器来构建K类分类器的问题。作者在类中心为独立高斯点、观测受高斯噪声干扰的设定下，分析了以超平面为基分类器的分布式多分类性能极限。推导了不同解码和维度机制下的显式性能界，并通过大量仿真实验验证了理论结果。",
+      "summary_en": "This paper studies the problem of constructing a K-class classifier by combining O(log K) simple binary classifiers. Under a stylized Gaussian setting with independent Gaussian class centers and noisy observations, it analyzes the fundamental performance limits of such distributed multiclass classifiers using hyperplanes as base classifiers. Explicit performance bounds are derived across various decoding and dimensional regimes, with extensive simulations validating the theoretical findings.",
+      "highlights_zh": [
+        "分布式多分类性能极限分析",
+        "显式性能界推导与验证",
+        "理论指导分布式分类器设计"
+      ]
+    },
+    {
+      "id": "2607.19326",
+      "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
+      "authors": [
+        "Atahan Dokme",
+        "Larry Heck"
+      ],
+      "abstract": "Low-rank adaptation introduces a static learned update applied identically to every input. The update provides task-level adaptation but does not explicitly represent token-level or instance-level state variation. A family of adapters is proposed that introduces selective state-space recurrence at two complementary granularities. At the token level, \\textbf{MaLoRA} (Mamba-modulated low-rank adaptation) makes the adapter's scaling factor a dynamic input-dependent function with recurrent state across tokens, in contrast to the stateless modulators of prior work. At the context level, \\textbf{MaRA} (Mamba Retrieval Adapter) tracks cross-segment state and selects the segments most relevant to the query, before the modulated language model generates its answer. Across three frozen backbones (Qwen-2.5-7B, Llama-3.1-8B, Gemma-2-9B) and two reasoning benchmarks (MuSiQue, 2WikiMultihopQA), the family improves reasoning accuracy on every cell of the $3{\\times}2$ grid, by $+6.8$ F1 ($+10.5\\%$ relative) on average and up to $+9.3$ F1 ($+18.2\\%$ relative) on the hardest cell over the LoRA baseline, and the token-level gains carry to RULER QA-2 under length stress.",
+      "published": "2026-07-21T17:47:57Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19326",
+      "pdf_url": "https://arxiv.org/pdf/2607.19326",
+      "summary_zh": "低秩适配方法对所有输入施加相同的静态更新，无法捕捉词元或实例级别的状态变化。本文提出基于选择性状态空间递归的适配器族，包括词元级动态缩放因子MaLoRA和上下文级跨段检索适配器MaRA。在多个冻结大模型和推理基准上，该方法平均F1提升6.8（相对提升10.5%），并在长文本压力测试中保持优势。",
+      "summary_en": "Low-rank adaptation applies a static update identically to all inputs, failing to capture token- or instance-level state variation. This work proposes a family of adapters with selective state-space recurrence at token level (MaLoRA, dynamic input-dependent scaling) and context level (MaRA, cross-segment retrieval). Across three frozen backbones and two reasoning benchmarks, it achieves an average +6.8 F1 (+10.5% relative) over LoRA, with gains persisting under length stress.",
+      "highlights_zh": [
+        "选择性状态空间递归适配",
+        "平均F1提升6.8（+10.5%）",
+        "适用于冻结大模型的推理增强"
+      ]
+    },
+    {
+      "id": "2607.19322",
+      "title": "Two-Level Meta-Rubrics for Evaluating Open-Ended Generation: GAMUT, a Benchmark for Factual Completeness",
+      "authors": [
+        "Xilun Chen",
+        "Zhaleh Feizollahi",
+        "Ross Goodwin",
+        "Seungwhan Moon",
+        "Scott Yih",
+        "Pinar Donmez",
+        "Babak Damavandi",
+        "Luna Dong"
+      ],
+      "abstract": "Evaluating the factuality of long-form generations has focused predominantly on precision, measuring whether the claims a model makes are correct. The dominant decompose-search-verify pipeline catches incorrect claims well but says little about whether a response contains all the information it should. Measuring factual completeness, the missing half of factuality, is harder: it requires enumerating the full set of facts a complete answer should contain, and these facts rarely form a flat list. They often involve open-ended sets where coverage is what matters, ordered processes, and relationships among facts that a list of independent boolean checks fails to capture. We introduce a two-level meta-rubric framework for evaluating open-ended generation, and instantiate it as Gamut (Grounded Assessment of Multimodal Factuality), a benchmark for factual completeness in long-form generation. The framework rests on a two-level rubric representation: a structured meta-rubric captures the organization and importance of the required content, which is then mechanically compiled into a flat checklist of binary, machine-gradable rubrics that an LLM judge scores reliably. We construct 1,813 questions grounded in real wearable imagery across 10 diverse domains, each paired with an evidence-backed rubric verified by expert human annotators. Because the framework is modality-agnostic, we also release a text-only variant. Evaluating 14 frontier and open-weight models, we find the benchmark genuinely challenging (best score 58.7% from Gemini 3.1 Pro), highly discriminative, and robust to the choice of judge.",
+      "published": "2026-07-21T17:42:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19322",
+      "pdf_url": "https://arxiv.org/pdf/2607.19322",
+      "summary_zh": "当前长文本生成的事实性评估主要关注精确性（判断生成内容是否正确），但忽略了事实完整性（是否包含所有必要信息），而完整性评估更难，因为所需事实集往往是开放式的、有顺序的或存在关联关系。本文提出了一种两级元评估框架，通过结构化元评估表捕获内容组织与重要性，再自动编译为机器可评分的二元检查表，并构建了基于真实可穿戴图像的多模态基准GAMUT。实验表明该基准具有挑战性（最佳得分58.7%）、高区分度且对评估模型选择鲁棒。",
+      "summary_en": "Current factuality evaluation of long-form generation focuses on precision but neglects factual completeness, which is harder to measure due to open-ended, ordered, or relational fact sets. This paper introduces a two-level meta-rubric framework that captures content organization via a structured meta-rubric and compiles it into a machine-gradable checklist, instantiated as the GAMUT benchmark grounded in real wearable imagery. Results show the benchmark is challenging (best score 58.7%), highly discriminative, and robust to judge choice.",
+      "highlights_zh": [
+        "两级元评估框架解决完整性评估",
+        "最佳得分58.7%（Gemini 3.1 Pro）",
+        "多模态通用，可扩展至文本"
+      ]
+    },
+    {
+      "id": "2607.19343",
+      "title": "Masked Visual Actions for Unified World Modeling",
+      "authors": [
+        "Hadi Alzayer",
+        "Wenlong Huang",
+        "Haonan Chen",
+        "Christopher Luey",
+        "Lvmin Zhang",
+        "Maneesh Agrawala",
+        "Gordon Wetzstein",
+        "Li Fei-Fei",
+        "Yilun Du",
+        "Jiajun Wu",
+        "Jia-Bin Huang"
+      ],
+      "abstract": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+      "published": "2026-07-21T17:59:11Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19343",
+      "pdf_url": "https://arxiv.org/pdf/2607.19343",
+      "summary_zh": "视频模型蕴含丰富的视觉交互先验，但如何将机器人动作以与视觉空间对齐的形式输入模型仍是核心挑战。本文提出掩码视觉动作（Masked Visual Actions），通过部分揭示视频中任意实体的轨迹作为像素级控制接口，使同一模型既能作为前向动力学模型预测场景响应，又能逆向合成机器人动作。仅需15小时微调数据，该模型在多样场景和多种机器人形态下实现了高视觉保真度和可控性，并在策略评估、模型规划与逆建模中展现出实际应用价值。",
+      "summary_en": "Video models encode rich priors on visual interactions, but communicating robot actions in a form aligned with their learned visual space remains a challenge. This paper introduces Masked Visual Actions, a pixel-space interface that expresses actions as partially revealed trajectories of arbitrary entities, enabling the same model to serve as both a forward dynamics predictor and an inverse action synthesizer. Finetuned with only 15 hours of masked examples, the model achieves strong visual fidelity and controllability across diverse scenes and embodiments, and demonstrates practical utility in policy evaluation, model-based planning, and inverse modeling.",
+      "highlights_zh": [
+        "像素级动作控制接口",
+        "15小时微调实现高保真控制",
+        "支持前向预测与逆向建模"
+      ]
+    },
+    {
+      "id": "2607.19341",
+      "title": "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis",
+      "authors": [
+        "Yuan Wang",
+        "Yongchao Du",
+        "Mengting Chen",
+        "Jinsong Lan",
+        "Xuetao Feng",
+        "Xiaoyong Zhu"
+      ],
+      "abstract": "Recent advances in multimodal generative models have enabled instruction-based image generation to move beyond semantic manipulation to knowledge-driven visual reasoning. However, these methods focus on explicit commonsense reasoning, shallow causal understanding, and direct knowledge recall, failing at knowledge-intensive generation. We develop \\textbf{ExpertVerse}, a capability-centric benchmark to evaluate generative models via knowledge-intensive lens. ExpertVerse stratifies reasoning generation across an orthogonal taxonomy of \\textit{9 cognitive capabilities} and \\textit{8 expert disciplines}, yielding \\textit{58 sub-disciplines}. We curate 1,611 expert-annotated instances covering single-image editing, multi-image composition, and text-to-image generation. We further develop an automated workflow to produce \\textbf{ExpertVerse-100K}, a large-scale dataset with reasoning traces and knowledge-anchored rationale annotations. Based on this, we train \\textbf{KnowThinker} with RL fine-tuning, a VLM reasoning engine with world knowledge that jointly generates thinking processes and refined instructions. Towards the cross-modal credit misalignment and multi-objective gradient conflicts in multi-reward optimization, we propose a tailored Bootstrapped Pareto Policy Optimization (BPPO), which synergizes Bootstrapping Reward Rectification (BRR) and Conflict-Aware Pareto Advantage Fusion (CPAF). Extensive results of both open-source and proprietary models exposes critical reasoning deficits, highlighting imperative for knowledge-intensive benchmarks towards next-generation visual generation.",
+      "published": "2026-07-21T17:59:02Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19341",
+      "pdf_url": "https://arxiv.org/pdf/2607.19341",
+      "summary_zh": "当前多模态生成模型在知识密集型视觉推理任务中表现不足，缺乏对深层因果理解和专业知识的整合能力。为此，我们提出了ExpertVerse基准，通过正交分类法覆盖9种认知能力和8个专家学科，并构建了包含推理轨迹的大规模数据集ExpertVerse-100K。基于该基准训练的KnowThinker模型结合BPPO优化策略，显著提升了知识驱动视觉合成的推理能力，揭示了现有模型的推理缺陷。",
+      "summary_en": "Current multimodal generative models struggle with knowledge-intensive visual reasoning, lacking deep causal understanding and expert knowledge integration. We propose ExpertVerse, a benchmark with an orthogonal taxonomy of 9 cognitive capabilities and 8 expert disciplines, along with the large-scale ExpertVerse-100K dataset containing reasoning traces. The KnowThinker model trained with BPPO optimization demonstrates improved reasoning in knowledge-driven visual synthesis, exposing critical deficits in existing models.",
+      "highlights_zh": [
+        "首个知识密集型视觉合成推理基准",
+        "BPPO策略提升多目标优化效果",
+        "揭示现有模型深层推理缺陷"
+      ]
+    },
+    {
+      "id": "2607.19306",
+      "title": "From Distances to Trajectories: Real-Time Signed Distance Function Mapping and Distance-Accelerated Motion Planning for UAVs",
+      "authors": [
+        "Jason Stanley",
+        "Zhirui Dai",
+        "Qihao Qian",
+        "Tzu-Chin Ho",
+        "Tianxing Fan",
+        "Siddharth Saha",
+        "Christopher Barngrover",
+        "Ki Myung Brian Lee",
+        "Nikolay Atanasov"
+      ],
+      "abstract": "Autonomous flight in cluttered environments requires a robot to build a geometric map of its surroundings and plan safe, dynamically feasible trajectories, all onboard and in real time. Conventional approaches treat mapping and planning as separate stages and often rely on binary occupancy for collision checking. We argue that these two stages should be co-designed around a single representation: a signed distance function (SDF). By encoding distance to the nearest obstacle, an SDF provides richer information for planning and trajectory optimization than occupancy alone. We develop an Octree REsidual Network (OREN) that pairs an explicit octree prior with an implicit neural residual to reconstruct SDFs online from point cloud observations with the efficiency of volumetric methods and the accuracy and differentiability of neural methods. In tandem, we develop Bubble$^\\star$, a search-based planner that exploits the distance information to grow maximal collision-free balls, which we call bubbles, with formal guarantees of termination, completeness, and failure detection. Planning over a graph of bubbles significantly reduces collision checks compared to a grid-based A$^\\star$ search and returns a bubble sequence that forms a safe corridor for trajectory optimization. We demonstrate the integrated OREN-Bubble$^\\star$ approach onboard a quadrotor, navigating unseen indoor environments in real time under tight compute constraints. OREN improves SDF estimation by $22$% compared to baselines, while Bubble$^\\star$ finds trajectories spanning $\\approx 90$ m through a cluttered environment in $1$-$3$ sec., whereas baselines take up to $10$ sec. in the same environment.",
+      "published": "2026-07-21T17:18:46Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19306",
+      "pdf_url": "https://arxiv.org/pdf/2607.19306",
+      "summary_zh": "无人机在复杂环境中自主飞行需要实时建图和规划，但传统方法将两者分离且依赖二值占据信息。本文提出OREN网络（结合八叉树先验与神经残差）在线重建符号距离函数（SDF），并设计Bubble*搜索规划器利用距离信息生成最大无碰撞球体，实现建图与规划的协同设计。OREN将SDF估计精度提升22%，Bubble*在杂乱环境中90米轨迹规划仅需1-3秒，而基线方法需10秒。",
+      "summary_en": "Autonomous UAV flight in cluttered environments requires real-time mapping and planning, but conventional approaches treat them separately using binary occupancy. This paper proposes OREN (Octree Residual Network) combining octree prior with neural residual for online SDF reconstruction, and Bubble* planner exploiting distance to grow maximal collision-free bubbles, co-designing mapping and planning around SDF. OREN improves SDF estimation by 22%, while Bubble* plans ~90m trajectories in 1-3 seconds versus 10 seconds for baselines.",
+      "highlights_zh": [
+        "建图与规划协同的SDF框架",
+        "SDF精度提升22%，规划快3-10倍",
+        "实时机载运行，适用于计算受限平台"
+      ]
+    },
+    {
+      "id": "2607.19288",
+      "title": "No Training, Better Flights: Test-Time Scaled VLMs for UAV Navigation",
+      "authors": [
+        "Feinan Cheng",
+        "Dongliang Xu",
+        "Wenli Nong",
+        "Zhiheng Zhang",
+        "Ang Liu",
+        "Tianyu Wang",
+        "Yue Yao"
+      ],
+      "abstract": "Test-time scaling offers a promising method to improve the inference performance of Vision-Language Models (VLMs) without additional training. Existing approaches to vision-language navigation (VLN) for Unmanned Aerial Vehicle (UAV) typically relies on a single inference pass, which can falter in complex environments by producing suboptimal or unsafe trajectories. In this paper, we explore a simple and effective approach to apply test-time scaling to VLN for UAV. We enhance navigation reasoning through an iterative refinement process that requires no extra model training, guiding the model to re-evaluate its initial navigation plan for better accuracy and safety. Our method first prompts the model to generate multiple parallel candidates and then performs a self-correction step, achieving deeper and more robust planning without changing the underlying model. To further strengthen decision-making, we design a multi-criteria scoring function to evaluate the refined candidates based on safety, goal alignment, and forward-progress. This simple yet powerful combination enables a frozen UAV navigation VLMs to self-correct and generate more accurate and reliable flight plans, achieving SOTA performance in this task.",
+      "published": "2026-07-21T16:59:12Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.19288",
+      "pdf_url": "https://arxiv.org/pdf/2607.19288",
+      "summary_zh": "现有无人机视觉语言导航方法依赖单次推理，在复杂环境中易产生次优或危险轨迹。本文提出无需额外训练的测试时缩放方法，通过迭代优化、并行候选生成与自校正，结合多准则评分函数提升导航规划质量。该方法使冻结的VLM模型实现自我修正，生成更准确可靠的飞行计划，达到当前最优性能。",
+      "summary_en": "Existing UAV vision-language navigation methods rely on single-pass inference, often producing suboptimal or unsafe trajectories in complex environments. This paper proposes a training-free test-time scaling approach that enhances navigation reasoning through iterative refinement, parallel candidate generation, self-correction, and a multi-criteria scoring function. The method enables frozen VLMs to self-correct and generate more accurate flight plans, achieving state-of-the-art performance.",
+      "highlights_zh": [
+        "无需训练的测试时缩放方法",
+        "达到无人机导航任务SOTA性能",
+        "可提升复杂环境下的导航安全性与准确性"
+      ]
+    }
+  ]
+}
