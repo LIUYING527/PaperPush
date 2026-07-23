@@ -1,0 +1,276 @@
+{
+  "date": "2026-07-23",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.20402",
+      "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
+      "authors": [
+        "Wael AbdAlmageed"
+      ],
+      "abstract": "In many reasoning problems, the premises are not observed as discrete symbols, but must be inferred from high-dimensional inputs. Further, the predicate vocabulary, argument structure, and trusted evidence are supplied by a Knowledge Graph (KG), or rule definitions. Classical neuro-symbolic pipelines have a discrete interface between perception and deduction. We present a neuro-soft-symbolic architecture for differentiable deductive reasoning over latent perceptual facts and knowledge-provided predicates. SoftReason removes the gradient gap by representing the deductive state as a local soft interpretation tensor over candidate constants and predicates. Perception proposes probabilistic base facts, KG triples enter as high-confidence soft evidence, and every query anchor, predicate choice, and closure update remains differentiable. Our core innovation is a learned differentiable lift of the immediate-consequence operator. It uses predicate-definition embeddings and latent composition channels to form soft body-predicate mixtures, aggregate over all possible witnesses, propose query-conditioned head facts, and update the interpretation through a monotone probabilistic OR. We instantiate the framework on Knowledge-aware Visual Question Answering (KVQA), and demonstrates how SoftReason supports end-to-end perceptual grounding, KG evidence injection, and differentiable deductive closure in one trainable architecture.",
+      "published": "2026-07-22T17:38:39Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20402",
+      "pdf_url": "https://arxiv.org/pdf/2607.20402",
+      "summary_zh": "在感知数据为高维输入且推理需依赖知识图谱的背景下，传统神经符号方法存在感知与推理间的离散梯度断裂问题。SoftReason通过将推理状态表示为可微的软解释张量，并引入可学习的微分立即推论算子，实现了从感知到推理的完全可微推理架构。该方法在知识感知视觉问答任务上验证了端到端感知接地、知识图谱证据注入与可微推理闭包的有效性。",
+      "summary_en": "Traditional neuro-symbolic pipelines suffer from a discrete gradient gap between perception and deduction when premises must be inferred from high-dimensional inputs with knowledge graph support. SoftReason bridges this gap by representing the deductive state as a differentiable soft interpretation tensor and introducing a learned differentiable lift of the immediate-consequence operator. It enables end-to-end perceptual grounding, KG evidence injection, and differentiable deductive closure, demonstrated on Knowledge-aware Visual Question Answering.",
+      "highlights_zh": [
+        "完全可微的神经软符号推理架构",
+        "在KVQA任务上验证端到端可微推理",
+        "支持感知与知识图谱的联合可微学习"
+      ]
+    },
+    {
+      "id": "2607.20385",
+      "title": "Persian Pixel: A large-scale synthetic OCR dataset for Persian language",
+      "authors": [
+        "Pouria Mahdi",
+        "Haq Nawaz Malik"
+      ],
+      "abstract": "Optical Character Recognition (OCR) for Persian remains substantially less mature than for Latin-script languages despite Persian being spoken by more than 110 million people across multiple countries. This gap arises from two fundamental challenges: the intrinsic complexity of the Perso-Arabic writing system and the limited availability of large-scale, high-quality annotated datasets. Persian script exhibits obligatory cursive connectivity, context-dependent glyph shaping, extensive ligatures, diacritic placement, and stylistic variation across writing forms such as Naskh and Nastaliq, all of which significantly complicate text recognition. At the same time, the high cost and labor-intensive nature of manual annotation have created a persistent data bottleneck, limiting the development of robust OCR systems and slowing progress in Persian document digitization.In this paper, we introduce Persian Pixel, a comprehensive synthetic OCR dataset specifically designed to address these challenges. Comprising over 343,000 high-fidelity image text pairs, the dataset spans sentence, paragraph, and full-page document layouts generated from a carefully curated seven-million-word Persian corpus using the SynthOCR-Gen rendering framework. The generation pipeline faithfully models the typographic characteristics of Persian script, including contextual character joining, positional glyph variants, diacritic placement, and multiple representative Persian typefaces. To bridge the synthetic-to-real domain gap, the rendered images are further enriched with more than twenty-five stochastic degradation models that emulate realistic document acquisition artifacts, including ink bleed, paper aging, blur, illumination variation, scanner imperfections, compression artifacts, and multiple noise processes.By overcoming the long-standing scarcity of annotated Persian OCR data, Persian Pixel provides a scalable and openly available resource for training and fine-tuning modern OCR architectures, including transformer-based models such as TrOCR and Donut. The dataset establishes a strong foundation for research in Persian document analysis, historical manuscript digitization, and end-to-end document understanding, while demonstrating that programmatic synthetic data generation offers a practical, cost-effective, and scalable alternative to manual annotation for advancing OCR in low-resource and typographically complex scripts.",
+      "published": "2026-07-22T17:13:25Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20385",
+      "pdf_url": "https://arxiv.org/pdf/2607.20385",
+      "summary_zh": "波斯语OCR因文字复杂和标注数据稀缺而发展滞后。本文提出Persian Pixel数据集，包含34.3万对高保真合成图像-文本对，并引入25种随机退化模型弥合合成与真实域差距。该数据集为训练现代OCR架构提供了可扩展的公开资源，有望推动波斯语文档数字化。",
+      "summary_en": "Persian OCR lags behind due to script complexity and data scarcity. This paper introduces Persian Pixel, a dataset of 343K synthetic image-text pairs with 25 stochastic degradation models to bridge the synthetic-to-real gap. It provides a scalable open resource for training modern OCR models, advancing Persian document digitization.",
+      "highlights_zh": [
+        "大规模合成波斯语OCR数据集",
+        "34.3万对图像-文本，25种退化模型",
+        "弥合合成-真实域差距，推动数字化"
+      ]
+    },
+    {
+      "id": "2607.20411",
+      "title": "Lipschitzian SLLNs for random functions",
+      "authors": [
+        "Lai Tian",
+        "Johannes O. Royset"
+      ],
+      "abstract": "We prove strong laws of large numbers for locally Lipschitz functions in the Lipschitz pseudometric. Our results hold under either a topological or a model-theoretic condition, with the latter encompassing functions jointly definable in o-minimal structures but extending substantially beyond this class. Applications include uniform convergence of limiting and Clarke subdifferentials and finite-sample identification of solutions. Consequently, we identify broad classes of functions for which the failure phenomena revealed by our previous negative results [Tian and Royset, arXiv:2511.16568, 2025] do not occur.",
+      "published": "2026-07-22T17:50:53Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "math.ST"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20411",
+      "pdf_url": "https://arxiv.org/pdf/2607.20411",
+      "summary_zh": "本文研究随机函数的强律大数定律在Lipschitz伪度量下的成立条件。通过拓扑或模型论条件（包括o-minimal结构可定义函数等广泛类别）证明了局部Lipschitz函数的收敛性。结果应用于Clarke次微分的一致收敛和有限样本解识别，避免了先前负面结果中的失效现象。",
+      "summary_en": "This paper proves strong laws of large numbers for locally Lipschitz functions under the Lipschitz pseudometric. It establishes convergence under topological or model-theoretic conditions, extending well beyond o-minimal structures. Applications include uniform convergence of Clarke subdifferentials and finite-sample solution identification, avoiding failure phenomena from prior negative results.",
+      "highlights_zh": [
+        "在Lipschitz伪度量下证明SLLN",
+        "覆盖o-minimal结构外广泛函数类",
+        "避免次微分收敛失效现象"
+      ]
+    },
+    {
+      "id": "2607.20399",
+      "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
+      "authors": [
+        "Nicolas Kosanovic",
+        "Jordan Dowdy",
+        "Jean Chagas Vaz"
+      ],
+      "abstract": "Full-sized humanoid robot capabilities have grown exponentially in recent years, aiming towards general-purpose deployment in human environments. A popular control method used by manufacturers utilizes Virtual Reality for upper-body teleoperation and Reinforcement Learning for lower-body balance and locomotion control. As a result, a single remote operator can see, manipulate, and navigate about a real, distant physical environment. This powerful control stack is often relegated to expensive full-sized robots, many of which are inaccessible to the research community. Miniature humanoids are more prevalent, but employ less biomimicry in their design (e.g. fewer sensors, Degrees of Freedom, etc) and lack similar developments. This paper describes a compliant full-body telepresence control stack developed from the ground up for miniature humanoids. Framework experimentation on ROBOTIS OP3 hardware showcases walking at speeds up to 0.45 m/s independent of arm motions. Tele-loco-manipulation is demonstrated via a cube relocation experiment with an expert human operator. On average, the teleoperated system moved 2 different 40 g cubes within 10 mins, walking a total distance of 5 m. Overall, the developed system shows potential for miniature humanoid tele-loco-manipulation.",
+      "published": "2026-07-22T17:35:43Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20399",
+      "pdf_url": "https://arxiv.org/pdf/2607.20399",
+      "summary_zh": "全尺寸人形机器人昂贵且难以获取，而微型人形机器人仿生性不足、缺乏类似控制框架。本文为微型人形机器人开发了一套基于虚拟现实和强化学习的全身遥操作控制栈。实验表明系统能以0.45米/秒速度行走，并在10分钟内完成5米距离的物体搬运任务。",
+      "summary_en": "Full-sized humanoid robots are expensive and inaccessible, while miniature humanoids lack biomimicry and similar control frameworks. This paper develops a compliant full-body telepresence control stack for miniature humanoids using VR and reinforcement learning. The system achieves walking speeds up to 0.45 m/s and demonstrates tele-loco-manipulation by relocating cubes over 5 meters within 10 minutes.",
+      "highlights_zh": [
+        "首个微型人形机器人全身遥操作框架",
+        "行走速度达0.45米/秒，独立于手臂运动",
+        "10分钟内完成5米距离的物体搬运"
+      ]
+    },
+    {
+      "id": "2607.20410",
+      "title": "LKValues: Aligning Large Language Models with Sri Lankan Societal Values",
+      "authors": [
+        "Nethmi Muthugala",
+        " Supryadi",
+        "Surangika Ranathunga",
+        "Nisansa de Silva",
+        "Ruijie Tao",
+        "Ovindu Gunatunga",
+        "Pengyun Zhu",
+        "Shaowei Zhang",
+        "Jingting Zheng",
+        "Deyi Xiong"
+      ],
+      "abstract": "Value alignment of Large Language Models (LLMs) has been shown to be culturally biased toward Western norms. This results in the mishandling of local values in multilingual societies such as Sri Lanka that have their unique cultural dynamics. Existing benchmarks overlook Sri Lankan-contextualized values in its official language Sinhala, hindering culturally sensitive evaluation and fine-tuning. To bridge this gap, we propose LKValues, the first survey-grounded resource suite for Sri Lankan value alignment. From a trilingual survey of 205 respondents, blending adapted global frameworks and LLM-elicited local constructs, we derive 40 majority-endorsed societal values. Using these values, we construct LKvaluesIT, a Sinhala-English news-derived instruction corpus containing 150k scenario-based instances, and LKvaluesBench, a value-sensitive evaluation benchmark of 1,000 instances. We evaluate a set of proprietary and open-weight LLMs with LKvaluesBench. We fine-tune three open-weight base models (Qwen3.5-4B-Base, Qwen3.5-9B-Base, and Aya-Expanse-8B-Base). Our experiments show that newer and larger LLMs still exhibit low-resource and cultural value-alignment gaps. LKValues fine-tuning improves Qwen-family models in English and Sinhala, reducing invalid outputs and cross-lingual disparities, though gains remain model-family dependent. These highlight LKValues efficacy in embedding Sri Lankan values, offering a replicable pipeline for low-resource, country-specific pluralist value alignment. The dataset is publicly available at https://github.com/NextME14/LKValues.",
+      "published": "2026-07-22T17:49:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20410",
+      "pdf_url": "https://arxiv.org/pdf/2607.20410",
+      "summary_zh": "大型语言模型的价值对齐存在文化偏见，忽视斯里兰卡等多元语言社会的本土价值观。为此，我们提出LKValues，首个基于调查的斯里兰卡价值对齐资源套件，包含150K指令语料和1K评估基准。实验表明，LKValues微调能提升模型在英语和僧伽罗语上的表现，减少无效输出和跨语言差异，为低资源国家的多元价值对齐提供了可复现方案。",
+      "summary_en": "Large language models exhibit cultural bias in value alignment, overlooking local values in multilingual societies like Sri Lanka. We propose LKValues, the first survey-grounded resource suite for Sri Lankan value alignment, comprising a 150K-instruction corpus and a 1K-instance benchmark. Fine-tuning with LKValues improves Qwen-family models in both English and Sinhala, reducing invalid outputs and cross-lingual gaps, offering a replicable pipeline for low-resource pluralist value alignment.",
+      "highlights_zh": [
+        "首个斯里兰卡价值对齐资源套件",
+        "微调Qwen模型减少无效输出和跨语言差异",
+        "为低资源国家提供可复现的价值对齐方案"
+      ]
+    },
+    {
+      "id": "2607.20372",
+      "title": "Notes to Self: Can LLMs Benefit from Experiential Abstractions?",
+      "authors": [
+        "Chang Liu",
+        "Xinyu Li",
+        "Artur Dubrawski"
+      ],
+      "abstract": "Humans distill experience into reusable abstractions, e.g., strategies and cautionary reminders, and apply them to gradually solve problems more effectively. We study whether Large Language Models (LLMs) can similarly benefit from such experiential abstractions. From LLMs' solution traces on the MATH training set, a stronger teacher or the LLMs themselves extract natural-language abstractions into a retrievable library. We explore two usage modes: (1) inference-time retrieval and (2) reinforcement learning (RL) with abstraction-augmented training prompts. Experiential abstractions improve LLM performance on mathematical and logical reasoning benchmarks. Self-extracted abstractions match teacher-extracted ones, and our abstraction usage framework can transfer to other datasets and models. These findings suggest LLMs can extract and apply experiential abstractions much as humans leverage distilled experience.",
+      "published": "2026-07-22T17:02:34Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20372",
+      "pdf_url": "https://arxiv.org/pdf/2607.20372",
+      "summary_zh": "人类能从经验中提炼可复用的抽象概念（如策略和警示）来逐步更有效地解决问题，本研究探讨大型语言模型（LLMs）是否也能受益于这种经验性抽象。研究者从LLMs在MATH训练集上的解题轨迹中，由更强的教师模型或LLMs自身提取自然语言抽象并存入可检索库，探索了推理时检索和强化学习两种使用模式。实验表明，经验性抽象能提升LLMs在数学和逻辑推理基准上的表现，自提取抽象与教师提取效果相当，且该框架可迁移至其他数据集和模型。",
+      "summary_en": "Humans distill experience into reusable abstractions like strategies and reminders to solve problems more effectively; this study investigates whether LLMs can similarly benefit from such experiential abstractions. The method extracts natural-language abstractions from LLMs' solution traces into a retrievable library, using either a stronger teacher or the LLMs themselves, and explores inference-time retrieval and reinforcement learning with abstraction-augmented prompts. Results show that experiential abstractions improve LLM performance on math and logic reasoning benchmarks, self-extracted abstractions match teacher-extracted ones, and the framework transfers to other datasets and models.",
+      "highlights_zh": [
+        "LLM从解题轨迹中自提取经验抽象",
+        "自提取抽象效果媲美教师提取",
+        "可迁移至其他数据集和模型"
+      ]
+    },
+    {
+      "id": "2607.20417",
+      "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+      "authors": [
+        "Cho In",
+        "Jeonghwan Cho",
+        "Mijin Yoo",
+        "Gim Hee Lee",
+        "Seon Joo Kim"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than $5.7\\times$ compared with dense feed-forward 3DGS methods. From 12 input images at $512 \\times 960$ resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS ($512 \\times 960$) with only 311K Gaussians.",
+      "published": "2026-07-22T17:54:44Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20417",
+      "pdf_url": "https://arxiv.org/pdf/2607.20417",
+      "summary_zh": "现有前馈3DGS方法因像素对齐导致高斯数量冗余，无法像优化式3DGS那样自适应分配容量。ATSplat通过自适应3D令牌和令牌扩展模块，从稀疏锚点令牌回归局部高斯并选择性扩展高不确定性区域。在RealEstate10K和DL3DV上，ATSplat以5.7倍更少的高斯数达到SOTA渲染质量，单GPU重建<1秒，渲染达1136 FPS。",
+      "summary_en": "Existing feed-forward 3DGS methods suffer from redundant Gaussians due to pixel-aligned formulations, losing the adaptive capacity allocation of optimization-based 3DGS. ATSplat introduces Adaptive 3D Tokens and an Adaptive Token Expansion module that regresses local Gaussians from sparse anchor tokens and selectively expands high-uncertainty regions. It achieves state-of-the-art rendering quality with 5.7× fewer Gaussians, completing reconstruction in <1 second on a single GPU and rendering at 1136 FPS.",
+      "highlights_zh": [
+        "自适应令牌扩展实现紧凑3DGS",
+        "5.7倍高斯数减少，SOTA渲染质量",
+        "单GPU亚秒重建，1136 FPS渲染"
+      ]
+    },
+    {
+      "id": "2607.20389",
+      "title": "PercepCap: Video Captioner with Structured Spatio-Temporal Perception",
+      "authors": [
+        "Yifan Xu",
+        "Zihao Wang",
+        "Zhixiao Wang",
+        "Jiaming Zhang",
+        "Yichun Yang",
+        "Desen Meng",
+        "Yuanxing Zhang",
+        "Pengfei Wan",
+        "Limin Wang"
+      ],
+      "abstract": "Video captioning requires fine-grained spatio-temporal understanding of videos, including spatial perception of where objects are located and temporal perception of when events occur. Existing MLLMs usually generate captions directly from video inputs without exposing the perceptual evidence behind descriptions. As a result, mistakes in spatiotemporal perception are only observed in the final caption, making it difficult to identify the underlying perceptual errors directly. To address these issues, we present PercepCap, a perception-aware video captioning framework that makes perceptual evidence explicit before producing the final caption. Specifically, PercepCap follows a perceive-describe generation chain, where the model first produces a spatiotemporal perception trace comprising object trajectories and temporal events, and then generates the final caption conditioned on the perceived evidence. To support this, we design a two-stage training strategy. Perceive-then-Describe Supervised Fine-tuning adapts the model from caption-only generation to the proposed perceive-describe chain, while Perception-Grounded Reinforcement Learning optimizes perception trace and caption quality with joint rewards over perception chain and the final caption. To support our two-stage training, we introduce Caption-Anchored Perception Data Construction. This pipeline builds the SFT and RL training data by first generating a caption-only description, extracting the objects and events it mentions, and grounding them back in the video with boxes and timestamps. This yields caption-aligned perception data that provides solid training ground truth, ensuring that the explicit perception trace and final caption refer to the same objects and events. Across direct caption and caption-to-QA evaluation, PercepCap consistently improves upon the Qwen3-VL baseline and demonstrates leading caption quality.",
+      "published": "2026-07-22T17:17:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20389",
+      "pdf_url": "https://arxiv.org/pdf/2607.20389",
+      "summary_zh": "现有视频描述模型缺乏显式时空感知证据，导致错误难以追溯。PercepCap提出“感知-描述”生成链，先输出物体轨迹与事件时间戳再生成描述，并采用两阶段训练策略优化感知与描述质量。该方法在Qwen3-VL基线上显著提升描述质量，并在描述到问答评估中表现领先。",
+      "summary_en": "Existing video captioning models lack explicit spatio-temporal perception evidence, making errors hard to trace. PercepCap introduces a perceive-describe generation chain that first outputs object trajectories and temporal events before generating captions, with a two-stage training strategy optimizing both perception and description quality. The method consistently improves upon the Qwen3-VL baseline and achieves leading caption quality in both direct caption and caption-to-QA evaluations.",
+      "highlights_zh": [
+        "显式时空感知链生成",
+        "在Qwen3-VL上显著提升",
+        "可追溯错误，提升可解释性"
+      ]
+    },
+    {
+      "id": "2607.20392",
+      "title": "Distributed Acoustic Localization Array Deployed Using a Soft Everting Vine Robot",
+      "authors": [
+        "Sebastian Lorca Godoy",
+        "Ciera McFarland",
+        "Michael Val",
+        "Antonio Alvarez Valdivia",
+        "Nathaniel Hanson",
+        "Margaret McGuinness"
+      ],
+      "abstract": "Soft robot exteroception is increasingly being explored for a variety of field applications. In this work, we present a sound-based system for localizing disaster victims in confined and unstructured environments, based on a distributed acoustic sensing architecture embedded along the body of a soft everting vine robot. We propose a dynamic Steered Response Power with Phase Transform framework that supports both far-field direction-of-arrival estimation and near-field three-dimensional source localization as the robot approaches the sound source. To better understand the design and control space related to localizing sound using a soft, shape-morphing robot body, we conduct experiments measuring the accuracy of these methods for a five-microphone array attached to the robot body using three placements relative to the outer membrane of the robot (inside the pressurized body, inside the inner tail, and outside the outer wall) and in four robot configurations (linear, double linear, circular, and sinusoidal). We measure the change in accuracy as the signal-to-noise ratio, the direction of approach, and the distance of the sound source from the center of the array change. Finally, we demonstrate a vine robot growing into an arbitrary shape while carrying microphones along its outer wall, and show that a sound source located with the array's near field can be localized with high accuracy after only three microphones have everted from the robot body. These results highlight the potential of distributed acoustic sensing for reliable victim localization using soft growing robots.",
+      "published": "2026-07-22T17:26:08Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20392",
+      "pdf_url": "https://arxiv.org/pdf/2607.20392",
+      "summary_zh": "针对灾后受限非结构化环境中的受害者定位问题，本文提出一种基于软体翻转藤蔓机器人的分布式声学定位系统。该方法创新性地引入动态SRP-PHAT框架，支持远场波达方向估计与近场三维声源定位，并研究了麦克风不同放置位置与机器人构型对定位精度的影响。实验表明，仅需三个麦克风从机器人主体外翻后即可实现高精度近场声源定位，验证了分布式声学感知在软体生长机器人中用于可靠受害者定位的潜力。",
+      "summary_en": "This paper addresses the problem of localizing disaster victims in confined and unstructured environments by proposing a distributed acoustic sensing system deployed on a soft everting vine robot. The method introduces a dynamic Steered Response Power with Phase Transform (SRP-PHAT) framework for both far-field DOA estimation and near-field 3D localization, and investigates the impact of microphone placement and robot configuration on accuracy. Results demonstrate that high-accuracy near-field localization is achievable with only three microphones everted from the robot body, highlighting the potential of distributed acoustic sensing for reliable victim localization using soft growing robots.",
+      "highlights_zh": [
+        "动态SRP-PHAT框架支持远近场定位",
+        "三麦克风外翻即达高精度近场定位",
+        "软体生长机器人分布式声学感知应用"
+      ]
+    },
+    {
+      "id": "2607.20352",
+      "title": "Distributed Motion Planning with Safety Guarantees for Self-Reconfiguring Robotic Boats",
+      "authors": [
+        "Alejandro Gonzalez-Garcia",
+        "Wei Wang",
+        "Wei Xiao",
+        "Wilm Decre",
+        "Jan Swevers",
+        "Carlo Ratti",
+        "Daniela Rus"
+      ],
+      "abstract": "Aquatic self-reconfigurable robots must assemble into desired shapes while ensuring safe interactions among multiple agents. This paper proposes a hybrid framework that combines distributed Model Predictive Control (MPC) with Control Barrier Functions (CBFs) for multi-agent shape formation and reconfiguration. Given a desired shape and target assignment, a distributed MPC scheme, solved via the Alternating Direction Method of Multipliers (ADMM), computes coordinated trajectories through local optimization and information exchange. To ensure safety in real time, distributed CBF-based filters are applied to enforce inter-agent collision avoidance. The proposed approach leverages the predictive capabilities of MPC to mitigate local minima, while CBFs provide formal safety guarantees despite the nonconvexity of the underlying optimization problem. Simulation results with up to 25 agents and experimental validation with four physical robots demonstrate the effectiveness and scalability of the framework.",
+      "published": "2026-07-22T16:37:05Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.20352",
+      "pdf_url": "https://arxiv.org/pdf/2607.20352",
+      "summary_zh": "水上自重构机器人需要在多智能体交互中安全地组装成目标形状。本文提出一种混合框架，结合分布式模型预测控制（MPC）与控制屏障函数（CBF），通过ADMM求解协调轨迹并利用CBF滤波器实时保证避碰安全。仿真（25个智能体）和实物实验（4个机器人）验证了该框架的有效性和可扩展性。",
+      "summary_en": "Aquatic self-reconfigurable robots must assemble into desired shapes while ensuring safe interactions. This paper proposes a hybrid framework combining distributed MPC with Control Barrier Functions, using ADMM for coordinated trajectory optimization and CBF filters for real-time collision avoidance. Simulations with up to 25 agents and experiments with 4 physical robots demonstrate effectiveness and scalability.",
+      "highlights_zh": [
+        "MPC+CBF混合框架保障安全",
+        "25智能体仿真验证可扩展性",
+        "实物实验验证实际可行性"
+      ]
+    }
+  ]
+}
