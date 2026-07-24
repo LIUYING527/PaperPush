@@ -1,0 +1,295 @@
+{
+  "date": "2026-07-24",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.21595",
+      "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
+      "authors": [
+        "Wenhao Li",
+        "Xueying Jiang",
+        "Quanhao Qian",
+        "Deli Zhao",
+        "Ran Xu",
+        "Shijian Lu",
+        "Gongjie Zhang"
+      ],
+      "abstract": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos. Our VLM-IE3D introduces Implicit Geometry Tokens (IGTs) that capture high-level geometric priors from input videos, as well as complementary Explicit Geometry Tokens (EGTs) that encode detailed geometric structures from reconstructed 3D attributes. On top of that, VLM-IE3D comes with a 3D-aware adapter that effectively fuses the two types of geometric representations with 2D visual cues. This RGB-only design injects strong 3D inductive biases for fine-grained spatial understanding and reasoning without requiring any additional 3D inputs. Extensive experiments show that VLM-IE3D achieves superior performance consistently across various 3D tasks including 3D video detection, 3D visual grounding, 3D dense captioning, and spatial reasoning. Code and models are available at https://github.com/Vegetebird/VLM-IE3D.",
+      "published": "2026-07-23T17:59:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21595",
+      "pdf_url": "https://arxiv.org/pdf/2607.21595",
+      "summary_zh": "现有视觉语言模型（VLM）基于2D输入，在需要精细空间理解的3D任务中表现不佳。为此，我们提出VLM-IE3D框架，通过从RGB视频中学习隐式和显式3D几何表征，并设计3D感知适配器融合二者与2D视觉线索，增强VLM的3D空间感知能力。实验表明，该方法在3D视频检测、视觉定位、密集描述和空间推理等任务上均取得一致优越性能。",
+      "summary_en": "Current vision-language models (VLMs) built from 2D inputs struggle with 3D tasks requiring fine-grained spatial understanding. We propose VLM-IE3D, a unified framework that enhances 3D spatial awareness by learning both implicit and explicit 3D geometries from RGB videos, and fusing them with 2D cues via a 3D-aware adapter. Extensive experiments demonstrate consistent superior performance across 3D video detection, visual grounding, dense captioning, and spatial reasoning.",
+      "highlights_zh": [
+        "隐式+显式3D几何融合增强VLM空间感知",
+        "在4类3D任务上均取得最优性能",
+        "仅需RGB视频输入，无需额外3D数据"
+      ]
+    },
+    {
+      "id": "2607.21580",
+      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+      "authors": [
+        "Vedant Shah",
+        "Onkar Susladkar",
+        "Tushar Prakash",
+        "Kiet Nguyen",
+        "Tianjio Yu",
+        "Adheesh Juvekar",
+        "Muntasir Waheed",
+        "Ismini Lourentzou"
+      ],
+      "abstract": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate tracks for multiple objects, which scales poorly with scene complexity and becomes ambiguous under occlusion or overlap. To enable flexible yet precise multi-subject control, we introduce $\\textbf{GraphVid}$, a graph-conditioned image-to-video generation model that enables interactive control through structured interaction graphs. We further curate $\\textbf{GraphVid-Bench}$, a large-scale interaction-centric video dataset with structured relational annotations to enable training of interaction-aware video generation models. Despite using substantially less training data and fewer trainable parameters than prior motion-control methods, GraphVid delivers strong controllability and video quality. Compared with Motion-I2V, GraphVid reduces FID by up to 39.9% and FVD by 37.6%, while improving PSNR (9.87=>15.98) and SSIM (0.38=>0.61). Our results highlight the potential of structured semantic interfaces as a powerful paradigm for controllable video generation.",
+      "published": "2026-07-23T17:56:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21580",
+      "pdf_url": "https://arxiv.org/pdf/2607.21580",
+      "summary_zh": "现有可控视频生成方法依赖文本或轨迹控制，难以精确描述多物体交互且扩展性差。本文提出GraphVid，通过结构化交互图实现图条件化的图像到视频生成，并构建了大规模交互中心数据集GraphVid-Bench。相比Motion-I2V，GraphVid在FID、FVD、PSNR和SSIM上均有显著提升，展示了结构化语义接口在可控视频生成中的潜力。",
+      "summary_en": "Existing controllable video generation methods rely on text or trajectory control, which struggle to precisely specify multi-object interactions and scale poorly. This paper introduces GraphVid, a graph-conditioned image-to-video generation model enabling interactive control via structured interaction graphs, along with a large-scale interaction-centric dataset GraphVid-Bench. GraphVid significantly outperforms Motion-I2V in FID, FVD, PSNR, and SSIM, highlighting the potential of structured semantic interfaces for controllable video generation.",
+      "highlights_zh": [
+        "图结构交互控制视频生成",
+        "FID降低39.9%，FVD降低37.6%",
+        "为多物体交互生成提供新范式"
+      ]
+    },
+    {
+      "id": "2607.21585",
+      "title": "Expanding Flow Maps",
+      "authors": [
+        "Sophia Tang",
+        "Pranam Chatterjee"
+      ],
+      "abstract": "Flow-based generative models have enabled remarkable progress in fast and controllable generation across continuous and discrete state spaces, yet existing parameterizations are constrained to fixed dimensions or fixed sequence lengths. Here, we introduce Expanding Generative Flows (EFlows), which define flows between distributions of increasing dimensionality along an expanding interpolant that grows the state by augmenting it with conditional noise. Building on this construction, we propose Expanding Flow Maps (EFMs), a new class of flow maps that distill the expanding interpolant into efficient few-step generative models. Each EFM factors the map between any two timesteps into two learnable operations: an expand operator, which augments the state space with new coordinates or tokens conditioned on the current state, and a transport map, which pushes the expanded state forward along the interpolant. Composing these operators yields a single map that jointly expands and denoises the state, recovering existing fixed-canvas flows and flow maps as the special case in which the expand operator is the identity. We further extend the framework to the discrete simplex, enabling variable-size graph generation and variable-length sequence generation. Across both continuous and discrete modalities, we establish EFlows and EFMs as a principled framework for settings in which output size is itself a learned, controllable degree of freedom.",
+      "published": "2026-07-23T17:57:38Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21585",
+      "pdf_url": "https://arxiv.org/pdf/2607.21585",
+      "summary_zh": "现有基于流的生成模型受限于固定维度或序列长度，无法处理输出大小可变的生成任务。本文提出扩展生成流（EFlows）和扩展流映射（EFMs），通过定义维度递增的插值路径并引入扩展算子与传输算子的组合，实现状态空间的自适应扩展与去噪。该方法在连续和离散模态（如图生成、序列生成）上均有效，将输出大小本身变为可学习的自由度。",
+      "summary_en": "Existing flow-based generative models are constrained to fixed dimensions or sequence lengths, limiting their applicability to variable-size generation tasks. This paper introduces Expanding Generative Flows (EFlows) and Expanding Flow Maps (EFMs), which define flows between distributions of increasing dimensionality via an expanding interpolant, and factor the map into expand and transport operators for joint expansion and denoising. The framework generalizes fixed-canvas flows, achieves strong results on variable-size graph and sequence generation, and establishes output size as a learnable degree of freedom.",
+      "highlights_zh": [
+        "提出维度递增的扩展流框架",
+        "在变长图/序列生成任务上有效",
+        "输出大小成为可学习的自由度"
+      ]
+    },
+    {
+      "id": "2607.21574",
+      "title": "Surprisal Theory is Tautological (without Rational Grounding)",
+      "authors": [
+        "Ryan Cotterell"
+      ],
+      "abstract": "Surprisal theory holds that the human processing difficulty of a linguistic unit in context is an affine function of its surprisal under some language model. I argue this claim is a tautology without further constraint: for any non-negative difficulty measure over units in context, there exists a language model whose surprisal is an affine function of it under mild technical conditions. Therefore, because any pattern of difficulty is consistent with some language model, without an additional constraint on the language model, surprisal theory makes no falsifiable predictions. The tautology was long obscured by an assumption implicit in two decades of psycholinguistic work---that the relevant language model is the distribution that generated the training corpus, so that improving corpus fit improves predictions of human behavior. Recent empirical work has undermined this assumption, demonstrating that better corpus models can be worse predictors of processing difficulty. I conclude that breaking the tautology requires a rationalist intervention, i.e., the relevant language model must be derived from a non-empirically motivated model of the comprehender, which could be based on, for instance, memory constraints or processing goals, and that, thus, does not depend on the behavioral data surprisal theory is meant to explain.",
+      "published": "2026-07-23T17:54:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21574",
+      "pdf_url": "https://arxiv.org/pdf/2607.21574",
+      "summary_zh": "Surprisal理论认为语言单元的处理难度是其惊讶值的仿射函数，但该理论本质上是同义反复，因为任何非负难度模式都可被某个语言模型的惊讶值拟合。本文通过数学证明揭示了这一同义反复，并指出过去二十年隐含的假设（即语言模型应拟合训练语料分布）已被实证推翻。要打破同义反复，必须引入理性主义约束，例如基于记忆限制或处理目标推导语言模型，而非依赖行为数据。",
+      "summary_en": "Surprisal theory claims processing difficulty is an affine function of surprisal, but this is tautological since any difficulty pattern can be matched by some language model. The paper proves this tautology mathematically and shows the implicit assumption that better corpus fit improves predictions has been empirically falsified. Breaking the tautology requires rationalist constraints on the language model, such as memory limitations or processing goals, independent of behavioral data.",
+      "highlights_zh": [
+        "揭示Surprisal理论的同义反复本质",
+        "任何难度模式均可被某语言模型拟合",
+        "需理性主义约束打破理论循环"
+      ]
+    },
+    {
+      "id": "2607.21570",
+      "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
+      "authors": [
+        "Qian Wu",
+        "Xinrong Zhou",
+        "Zizhan Ma",
+        "Kai Chen",
+        "Zheyao Gao",
+        "Xun Lin",
+        "Hongqiu Wu",
+        "Longfei Gou",
+        "Yixiao Liu",
+        "Ann Sin Nga Lau",
+        "Qi Dou"
+      ],
+      "abstract": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical storylines with states and decision nodes, while a Story Director converts them into dependency-aware multimodal orchestration plans rendered by our released interactive platform. We construct MedGame Bench, a 5,000-case benchmark and evaluation protocol for Medical Narrative Generation and Story Direction. Experiments show that task-specific fine-tuning substantially improves open-source LLMs on MedGame Bench and narrows the gap with commercial models. A pilot student study further shows that learners perceive MedGame as more engaging and useful than text-only alternatives.",
+      "published": "2026-07-23T17:50:28Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.HC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21570",
+      "pdf_url": "https://arxiv.org/pdf/2607.21570",
+      "summary_zh": "现有基于大语言模型的医学教育系统多局限于局部交互，缺乏将完整临床病例组织成决策导向学习轨迹的能力。MedGame框架通过双引擎设计（医学叙事设计器与故事导演）将静态病例转化为结构化、可执行的叙事游戏，并构建了包含5000个病例的基准测试集。实验表明任务微调显著提升开源模型性能，学生研究显示该框架比纯文本方式更具吸引力和实用性。",
+      "summary_en": "Existing LLM-based medical education systems focus on localized interactions like QA, lacking the ability to organize full clinical cases into decision-centered learning trajectories. MedGame introduces a dual-engine framework with a Medical Narrative Designer and Story Director to transform static cases into structured storytelling games, along with a 5,000-case benchmark. Experiments show task-specific fine-tuning significantly improves open-source LLMs, and a pilot study indicates learners find MedGame more engaging and useful than text-only alternatives.",
+      "highlights_zh": [
+        "双引擎叙事游戏化医学教育框架",
+        "任务微调使开源模型接近商业模型性能",
+        "学生感知游戏化学习更吸引人且有用"
+      ]
+    },
+    {
+      "id": "2607.21594",
+      "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+      "authors": [
+        "Sicheng Mo",
+        "Yuheng Li",
+        "Ziyang Leng",
+        "Krishna Kumar Singh",
+        "Bolei Zhou"
+      ],
+      "abstract": "Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video diffusion pipelines carry forward observation history as conditioning context, which makes shared state difficult to maintain in multi-agent and multi-view settings. We present WorldWeaver (W^2), a streaming multi-agent video diffusion model that augments rollout with cross-agent world state registers: learnable tokens that store shared world information, track individual agent status, and are dynamically updated after each generated chunk. We ground these registers with supervision signals spanning individual agent status, global state views including bird's-eye views, and scene text. We further improve the architecture with a Mixture-of-Transformers design that uses separate weights for world state modeling and visual frame modeling. Extensive experiments in two-agent Minecraft video generation show that explicit world-state modeling improves logical consistency and generation quality.",
+      "published": "2026-07-23T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21594",
+      "pdf_url": "https://arxiv.org/pdf/2607.21594",
+      "summary_zh": "现有自回归视频扩散模型在多智能体场景中难以维护跨视角的共享世界状态。本文提出WorldWeaver，通过可学习的“世界状态寄存器”令牌来存储和动态更新共享信息，并采用混合Transformer架构分别处理状态建模与视觉帧生成。实验表明，显式世界状态建模显著提升了双智能体Minecraft视频生成的逻辑一致性和质量。",
+      "summary_en": "Existing autoregressive video diffusion models struggle to maintain shared world states across agents and views in multi-agent scenarios. We propose WorldWeaver, which augments rollout with learnable world state registers that store and dynamically update shared information, and employs a Mixture-of-Transformers design for separate state and visual modeling. Experiments on two-agent Minecraft video generation demonstrate that explicit world-state modeling improves logical consistency and generation quality.",
+      "highlights_zh": [
+        "提出世界状态寄存器令牌",
+        "双智能体视频生成质量提升",
+        "适用于多智能体世界模型"
+      ]
+    },
+    {
+      "id": "2607.21592",
+      "title": "Unified Video Dense Prediction from Disjoint Data",
+      "authors": [
+        "Yihong Sun",
+        "Seoung Wug Oh",
+        "Jiahui Huang",
+        "Bharath Hariharan",
+        "Joon-Young Lee"
+      ],
+      "abstract": "Scene understanding requires simultaneous prediction about geometry, appearance, and semantics. However, existing task-specific annotations are fragmented across incompatible, domain-specific datasets. Current unified systems circumvent this by restricting training to fully co-annotated data, or by incurring the large computational cost of pseudo-labeling. To mitigate this, we introduce UniD, a unified video model that jointly predicts eight dense scene properties-depth, surface normals, semantic segmentation, boundaries, human parts, albedo, shading, and materials-all learned from disjoint, domain-specific datasets. We propose a simple yet effective distillation step in which per-task experts supervise a unified backbone through lightweight task projectors, eliminating the need for annotation overlap or pseudo-labeling. Our key insight is that the strong visual priors of a pretrained diffusion model are sufficient to bridge the domain gaps introduced by disjoint training sources, enabling robust generalization to scene-task combinations never seen during training. UniD achieves competitive performance against per-task specialists and multi-task baselines, with strong generalization to out-of-distribution scenarios and enhanced temporal and cross-task consistency. Code and video results are available at https://unid-video.github.io/.",
+      "published": "2026-07-23T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21592",
+      "pdf_url": "https://arxiv.org/pdf/2607.21592",
+      "summary_zh": "现有视频密集预测任务依赖碎片化、领域特定的数据集，缺乏统一标注。本文提出UniD模型，利用预训练扩散模型的强视觉先验，通过轻量级任务投影器蒸馏专家知识，无需标注重叠或伪标签。UniD在八种密集预测任务上达到与专用模型相当的性能，并展现出强泛化能力与时序一致性。",
+      "summary_en": "Current video dense prediction relies on fragmented, domain-specific datasets without unified annotations. We propose UniD, which leverages strong visual priors from pretrained diffusion models to distill per-task expert knowledge via lightweight projectors, eliminating the need for co-annotated data or pseudo-labeling. UniD achieves competitive performance across eight dense prediction tasks, with strong generalization and temporal consistency.",
+      "highlights_zh": [
+        "无需标注重叠的联合训练框架",
+        "八种密集预测任务达专用模型水平",
+        "强泛化能力与时序一致性"
+      ]
+    },
+    {
+      "id": "2607.21588",
+      "title": "AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation",
+      "authors": [
+        "Mengfei Zhao",
+        "Dihong Huang",
+        "Yikai Tang",
+        "Peihao Li",
+        "Mingxuan Yan",
+        "Ruiqi Zhuang",
+        "Yanjia Huang",
+        "Jie Wang",
+        "Hai Zhai",
+        "Tony Zhou",
+        "Rui Zhang",
+        "Zhexi Luo",
+        "Yuchen Huang",
+        "Jianfei Yang",
+        "Jiachen Li"
+      ],
+      "abstract": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites. We present AXIS, a growable community-driven data engine and benchmark for scalable robot learning, which enables browser-based teleoperation for large-scale demonstration collection, automatically generates and validates new manipulation tasks, and transforms community-collected demonstrations into training-ready data through automated success checking, quality filtering, trajectory smoothing, and visual and physics-based augmentation. The AXIS dataset currently contains 207 diverse tasks and 50K+ trajectories. Meanwhile, AXIS organizes data into task snapshots and evaluates policies with a systematic held-out protocol. We compare vision-language-action (VLA) policies under a unified AXIS evaluation suite and analyze scaling behavior across different data volumes. Continual pretraining on AXIS substantially improves the overall success rate of $π_{0.5}$ by 5.8%, outperforms the model pretrained on RoboCasa365 by 37.3%, and exhibits consistent scaling with increasing data volume, with the largest gains observed under layout, sensor-noise, and camera perturbations.",
+      "published": "2026-07-23T17:58:08Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21588",
+      "pdf_url": "https://arxiv.org/pdf/2607.21588",
+      "summary_zh": "现有机器人学习数据管道因依赖专用硬件、集中式操作或固定任务集而难以扩展。AXIS提出了一种可增长的社区驱动数据引擎，通过浏览器遥操作、自动任务生成与验证、以及数据增强流水线实现规模化数据采集。AXIS数据集包含207个任务和5万+轨迹，持续预训练使π0.5模型成功率提升5.8%，并在多种扰动下展现一致扩展性。",
+      "summary_en": "Existing robot learning data pipelines are difficult to scale due to reliance on specialized hardware, centralized operators, or fixed task suites. AXIS presents a growable community-driven data engine enabling browser-based teleoperation, automatic task generation and validation, and data augmentation for scalable demonstration collection. The AXIS dataset contains 207 tasks and 50K+ trajectories, with continual pretraining improving π0.5 success rate by 5.8% and showing consistent scaling under various perturbations.",
+      "highlights_zh": [
+        "社区驱动的可增长数据引擎",
+        "π0.5成功率提升5.8%",
+        "支持浏览器遥操作与自动任务生成"
+      ]
+    },
+    {
+      "id": "2607.21582",
+      "title": "Scale Up Strategically: Learning Compositional Generalization via Bias-Aware Evaluation and Data Collection for Robotic Manipulation",
+      "authors": [
+        "Yu Qi",
+        "Zhang Ye",
+        "Xinyi Xu",
+        "Yuxuan Lu",
+        "Amitoj Sandhu",
+        "Boce Hu",
+        "Haojie Huang",
+        "Jonathan Tremblay",
+        "Lawson L. S. Wong"
+      ],
+      "abstract": "Compositional generalization is essential for robot to follow diverse instructions. However, pretrained policies are known to take shortcuts, deferring to salient cues rather than grounding language. We introduce a diagnostic framework that localizes this failure to individual \\textit{instruction factors}, \\textit{e.g.,} reusable semantic components such as color, verb, object, size, and spatial attribute. Our framework formalizes instruction factor bias, the tendency of fine-tuned policies to over-rely on dominant factors as shortcuts, and quantifies it through two metrics: Factor Dominance Rate (FDR), capturing pairwise bias between factors, and Factor Dominance Hierarchy (FDH), aggregating these into a global ranking. Evaluation on six foundation policies reveals broadly consistent ordering, \\textit{i.e.}, color $\\geq$ object $\\geq$ spatial $\\geq$ verb $\\geq$ size, with color dominant, and verb and size most under-grounded. We further show the diagnosis is actionable: a bias-aware data collection strategy that reallocates a fixed budget toward under-grounded factors outperforms baselines in simulation and on a real robot using half the demonstrations, thereby enabling more sample-efficient and generalizable policy learning.",
+      "published": "2026-07-23T17:57:09Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21582",
+      "pdf_url": "https://arxiv.org/pdf/2607.21582",
+      "summary_zh": "机器人策略在遵循多样化指令时存在组合泛化失败问题，倾向于依赖语言中的显著线索而非完整理解语义。本文提出一个诊断框架，通过因子主导率(FDR)和因子主导层级(FDH)量化策略对颜色、动词等语义组件的偏见，并揭示出普遍偏见排序。基于此偏见感知的数据收集策略，在固定预算下优先补充被忽视的因子，在仿真和真实机器人上以更少演示实现更优泛化性能。",
+      "summary_en": "Compositional generalization in robotic manipulation fails due to policies taking shortcuts by relying on salient cues. This paper introduces a diagnostic framework that quantifies instruction factor bias via Factor Dominance Rate (FDR) and Factor Dominance Hierarchy (FDH), revealing a consistent bias order across policies. A bias-aware data collection strategy reallocating budget to under-grounded factors achieves superior generalization with half the demonstrations in both simulation and real robot experiments.",
+      "highlights_zh": [
+        "量化因子偏见诊断框架",
+        "半量演示实现更优泛化",
+        "可指导数据收集策略"
+      ]
+    },
+    {
+      "id": "2607.21579",
+      "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
+      "authors": [
+        "Dawei Li",
+        "Xiaotian Jiang",
+        "Mingyi Hong"
+      ],
+      "abstract": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic problem and initialization. We provide a negative answer to this question. Specifically, for every finite dimension $n\\geq4$, we construct a nonempty open, hence positive-Lebesgue-measure, family of strictly convex quadratic problems and initial points for which the long Barzilai--Borwein method (BB1) converges but cannot converge root-superlinearly. More precisely, with the explicit constants $ρ_{\\min}=10^{-6},ρ_{\\max}=0.61$, every spectral component of the gradient is bounded above and below by the corresponding geometric sequence. Consequently, the gradient norm and the energy norm of the error satisfy two-sided geometric estimates with the same rates, while the objective gap satisfies the corresponding estimates with squared rates. In particular, all three quantities are bounded below by geometric sequences, ruling out superlinear convergence. The construction is highly nontrivial, based on a computer-assisted proof of a nonresonant, attracting seven-cycle of the projectivized BB dynamics in dimension four.",
+      "published": "2026-07-23T17:56:05Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.21579",
+      "pdf_url": "https://arxiv.org/pdf/2607.21579",
+      "summary_zh": "Barzilai-Borwein (BB) 方法在连续优化中表现优异，但其收敛动力学尚不明确，核心未解问题是BB是否对几乎所有严格凸二次问题及初始点超线性收敛。本文通过计算机辅助证明，在维度n≥4时构造了一个非空开集（正勒贝格测度）的严格凸二次问题与初始点，使得长步BB1方法收敛但无法达到根超线性收敛。该构造基于四维投影化BB动力学中一个非共振吸引七周期轨，证明了梯度范数、误差能量范数和目标间隙均受几何序列上下界约束，从而排除了超线性收敛的可能性。",
+      "highlights_zh": [
+        "首次证明BB方法在开集上非超线性收敛",
+        "构造了n≥4维非空开集的反例",
+        "揭示了BB方法收敛速率的根本局限"
+      ]
+    }
+  ]
+}
