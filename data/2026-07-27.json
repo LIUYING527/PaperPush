@@ -1,0 +1,306 @@
+{
+  "date": "2026-07-27",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.22534",
+      "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+      "authors": [
+        "Shing Ho J. Lin",
+        "Wenzhao Zheng",
+        "Dong Zhuo",
+        "Yuqi Wu",
+        "Jie Zhou",
+        "Jiwen Lu"
+      ],
+      "abstract": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing motion perception methods (e.g., sparse tracking, dense point-wise flow) treat motion as independent point-wise displacements, ignoring the structured nature of physical motion. However, real-world objects usually obey rigid-body kinematics, and points thus usually move collectively, not in isolation. Motion itself possesses geometric structure: physical objects undergo a set of rigid-body transformations governed by SE(3), rather than unstructured point-wise displacements. Building on this insight, we propose SM4RT, a Structured Motion 4D Reconstruction Transformer for end-to-end 3D reconstruction and structured motion perception. SM4RT introduces Structure-of-Motion to represent scene dynamics, where scene motion is decomposed into a compact set of motion bases, each represented as a temporal sequence of 6D twists in SE(3). Dense scene motion is then recovered by sparse, time-shared per-pixel assignment weights over these bases, ensuring points on the same object share a common rigid-body motion trajectory. SM4RT introduces a parallel motion geometry encoder and decoder that jointly infer 3D geometry, world-coordinate motion, and scene kinematic structure in a single forward pass from monocular RGB video. SM4RT achieves strong motion reconstruction performance while preserving the geometric structure of scene motion.",
+      "published": "2026-07-24T17:59:51Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22534",
+      "pdf_url": "https://arxiv.org/pdf/2607.22534",
+      "summary_zh": "现有4D动态理解方法将运动视为独立点位移，忽略了物理运动的刚体结构。SM4RT提出结构运动表示，将场景运动分解为紧凑的SE(3)运动基元，通过稀疏分配权重恢复稠密运动。该方法在保持运动几何结构的同时，实现了从单目视频到3D重建与运动感知的端到端强性能。",
+      "summary_en": "Existing 4D dynamic understanding methods treat motion as independent point displacements, ignoring the structured nature of rigid-body kinematics. SM4RT introduces Structure-of-Motion, decomposing scene dynamics into compact SE(3) motion bases with sparse assignment weights for dense motion recovery. It achieves strong motion reconstruction performance while preserving geometric structure in an end-to-end monocular video framework.",
+      "highlights_zh": [
+        "提出结构运动表示与SE(3)运动基元",
+        "单目视频端到端4D重建与运动感知",
+        "保持运动几何结构，提升动态理解"
+      ]
+    },
+    {
+      "id": "2607.22525",
+      "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+      "authors": [
+        "Anduel Mehmeti",
+        "Gabriella Gigante",
+        "Salvatore Venticinque"
+      ],
+      "abstract": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to the explainability of AI systems. The rapid advancements in AI across various domains have underscored the challenges of establishing trust, raising increasing interest in AI explainability even more when applied to deep learning. In this context, the present work aims to explore the application of explainability techniques to Reinforcement Learning (RL) algorithms, specifically within the safety-critical domain of Air Traffic Control (ATC). Using a simplified ATC environment as an initial testbed, an intelligent agent is trained with a reinforcement learning algorithm to make decisions on alternative flight routes that avoid no-fly zones. As a preliminary explainability approach, a saliency map is employed, providing insights into the input features that most significantly influence the agent's decision-making process.",
+      "published": "2026-07-24T17:56:38Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22525",
+      "pdf_url": "https://arxiv.org/pdf/2607.22525",
+      "summary_zh": "在高风险领域如航空交通管制中，建立对AI的信任至关重要，而这与AI系统的可解释性密切相关。本研究探索将可解释性技术应用于强化学习算法，在简化空管环境中训练智能体做出避开禁飞区的航线决策。采用显著性图作为初步可解释方法，揭示了影响智能体决策的关键输入特征。",
+      "summary_en": "Building trust in AI is critical in high-stakes domains like Air Traffic Control, which is closely tied to explainability. This work applies explainability techniques to Reinforcement Learning in a simplified ATC environment, training an agent to avoid no-fly zones. Using saliency maps, it identifies key input features influencing the agent's decisions, offering insights for human-AI collaboration.",
+      "highlights_zh": [
+        "可解释强化学习用于空管",
+        "显著性图揭示关键决策特征",
+        "提升高安全领域AI信任度"
+      ]
+    },
+    {
+      "id": "2607.22518",
+      "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
+      "authors": [
+        "Olafur Gudmundsson",
+        "Bo Zhao",
+        "Huayi Liao",
+        "Anna Kiyantseva",
+        "Sai Xiao",
+        "Heath Vinicombe",
+        "Mostafa Keikha",
+        "Luke DeLuccia",
+        "Zihao Chen",
+        "Junpeng Hou",
+        "Weijie Jiang",
+        "Bhawna Juneja",
+        "Andreanne Lemay",
+        "Wei-Ting Lin",
+        "Keyvan Moghadam",
+        "Jiaxing Qu",
+        "Zhiqing Rao",
+        "Zhihua Zhang"
+      ],
+      "abstract": "In this paper, we propose a new solution for addressing the content cold-start problem in industry-scale search and recommender systems. Compared to prior approaches, we have made the following new contributions: 1) our solution spans the entire multi-stage funnel and generalizes well for both search and recommendation surfaces, 2) our solution reduces bias favoring existing content, allowing more accurate model prediction across content types and reducing short-term tradeoffs associated with high volumes of explicit content exploration, 3) our solution is evaluated with a scalable measurement framework that enables fast short-term experimentation while validating long-term impact. We have iteratively built and successfully deployed this new system at Pinterest in the past two years and observed significant improvements in fresh content exploration, overall user engagement, and content ecosystem health.",
+      "published": "2026-07-24T17:41:28Z",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22518",
+      "pdf_url": "https://arxiv.org/pdf/2607.22518",
+      "summary_zh": "工业级搜索与推荐系统面临内容冷启动和偏向现有内容的偏差问题。本文提出PinEqualizer，一种覆盖多阶段漏斗的全链路内容探索与去偏系统，适用于搜索和推荐场景。该系统在Pinterest部署后显著提升了新内容探索、用户参与度和内容生态健康度。",
+      "summary_en": "Industrial-scale search and recommender systems suffer from content cold-start and bias favoring existing content. This paper proposes PinEqualizer, a full-funnel content exploration and debiasing system that generalizes across search and recommendation surfaces. Deployed at Pinterest, it significantly improves fresh content exploration, user engagement, and content ecosystem health.",
+      "highlights_zh": [
+        "全漏斗内容探索与去偏",
+        "新内容探索提升显著",
+        "工业级部署验证长期效果"
+      ]
+    },
+    {
+      "id": "2607.22514",
+      "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+      "authors": [
+        "Siyuan Zhao",
+        "Eric Ababio Anyimadu",
+        "Zachary G. Brumm",
+        "Yue Ma",
+        "Clifton David Fuller",
+        "Xinhua Zhang",
+        "G. Elisabeta Marai",
+        "Guadalupe Canahuate"
+      ],
+      "abstract": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on videofluoroscopic imaging, as captured by the Dynamic Imaging Grade of Swallowing Toxicity (CTCAE-DIGEST), which, while validated, requires specialized equipment, trained personnel, and significant patient burden, limiting its routine use in surveillance. Patient-reported outcomes (PROs), by contrast, are low-cost, scalable, and easily collected at any clinical encounter, making them an attractive alternative signal for identifying patients who may warrant further evaluation. However, a clear clinical framework for translating PRO responses into actionable interventions is still evolving. In particular, uncertainty remains regarding when a patient's self-reported symptom burden should prompt escalation of care. This study addresses this gap by formulating a single-visit PRO-clinical prediction framework and introducing a clinically interpretable two-stage stacking model to predict swallowing impairment risk using PRO responses and structured clinical variables, without requiring videofluoroscopic imaging. The proposed framework quantifies the independent contributions of patient-reported symptoms and clinical factors within a unified and interpretable risk assessment model. Our findings demonstrate that individual MDADI responses contain predictive information beyond that captured by composite or global summary scores, while interpretability analyses reveal symptom patterns and clinical risk factors associated with swallowing impairment. Together, these results support the use of structured PRO-clinical integration as a practical, imaging-free approach for dysphagia risk stratification in HNC survivorship.",
+      "published": "2026-07-24T17:34:26Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22514",
+      "pdf_url": "https://arxiv.org/pdf/2607.22514",
+      "summary_zh": "头颈癌治疗后吞咽困难评估依赖专业影像设备，成本高且难以常规监测。本研究提出两阶段堆叠模型，仅用患者报告结局和临床变量即可预测吞咽障碍风险。模型揭示了个体症状与复合评分的差异，为无影像吞咽困难风险分层提供了实用方案。",
+      "summary_en": "Dysphagia assessment in head and neck cancer survivors relies on costly videofluoroscopic imaging, limiting routine surveillance. This study introduces a two-stage stacking model that predicts swallowing impairment risk using only patient-reported outcomes and clinical variables, without imaging. The model reveals that individual symptom items carry predictive value beyond composite scores, offering a practical, imaging-free risk stratification framework.",
+      "highlights_zh": [
+        "两阶段PRO-临床堆叠模型",
+        "个体症状优于复合评分预测",
+        "无需影像的吞咽困难风险分层"
+      ]
+    },
+    {
+      "id": "2607.22529",
+      "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+      "authors": [
+        "Siyuan Huang",
+        "Pengyu Cheng",
+        "Haotian Liu",
+        "Tao Chen",
+        "Yihao Liu",
+        "Jingwei Ni",
+        "Shijie Zhou",
+        "Ziyi Yang",
+        "Gangwei Jiang",
+        "Mengyu Zhou",
+        "Yu Cheng",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "abstract": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned on dynamically sampled skills; the solver explores candidate solutions to push its capability boundaries; and the skill controller collects execution feedback to update and expand the skill library. This interactive co-evolution effectively bridges the gap between structured verification and open-ended exploration. Empirical evaluations on tool-use and reasoning benchmarks demonstrate that Skill-SP, serving as a robust evolution engine, consistently pushes the performance ceiling of competent backbones while catalyzing striking turnarounds for initially misaligned models. Our code is available at https://github.com/Qwen-Applications/skill-self-play.",
+      "published": "2026-07-24T17:59:22Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22529",
+      "pdf_url": "https://arxiv.org/pdf/2607.22529",
+      "summary_zh": "当前LLM自进化方法在任务多样性与验证可靠性之间存在根本矛盾，环境受限方法反馈精确但领域狭窄，开放自生成方法任务多样但缺乏可靠验证。本文提出技能自我对弈（Skill-SP）框架，通过提议者、求解者和动态技能控制器的协同进化，在结构化验证与开放探索之间建立桥梁。在工具使用和推理基准上，Skill-SP持续提升强模型性能上限，并显著扭转初始对齐不佳模型的表现。",
+      "summary_en": "Existing self-evolutionary methods for LLMs face a fundamental dilemma between task diversity and verification reliability. This paper introduces Skill Self-Play (Skill-SP), a co-evolutionary framework with a proposer, solver, and dynamic skill controller that bridges structured verification and open-ended exploration via reinforcement learning. Empirical results on tool-use and reasoning benchmarks show Skill-SP consistently pushes the performance ceiling of strong backbones and catalyzes striking turnarounds for initially misaligned models.",
+      "highlights_zh": [
+        "技能作为多样性与验证的中间地带",
+        "持续提升强模型性能上限",
+        "显著扭转弱模型初始对齐问题"
+      ]
+    },
+    {
+      "id": "2607.22513",
+      "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
+      "authors": [
+        "Davide Scarso",
+        "Hugo Noronha de Almeida",
+        "Joaquim Pina"
+      ],
+      "abstract": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families (Claude, Grok, GPT, Gemini) evaluate ethnonationalist pseudo-science derived from Frank Salter's biosocial framework across four temporal snapshots (October 2025-February 2026), via both API and web interfaces. Grok's Fast versions (which power the default user experience on X) consistently assigned credibility scores of 70-75, two to five times higher than all other models (which scored 15-40). This pattern was absent from control prompts testing basic evolutionary consensus and refuted Lamarckian claims, where all models performed comparably. Three additional findings emerged: (1) a silent patch reversed Grok's behaviour from chaotic to stably high validation overnight, without any public documentation; (2) the same Grok model identifier produced radically divergent outputs via API (75) and web (5.5) three months later; (3) refusal to rate the pseudo-scientific claim, the most defensible response observed, appeared in two model families through different interfaces (Claude Opus 4.1 categorically via web, GPT-5.1 Chat intermittently via API) and eroded in the successor version of each. These results indicate that the epistemic stance of a commercial LLM is not a stable property of the model but a contingent effect of deployment configuration: system prompts, safety layers, interface routing, and silent updates. This remains opaque to users and researchers alike. We argue this constitutes a matter of public concern requiring new forms of epistemic accountability.",
+      "published": "2026-07-24T17:32:43Z",
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22513",
+      "pdf_url": "https://arxiv.org/pdf/2607.22513",
+      "summary_zh": "商业大语言模型作为知识参考时，其对有争议科学主张的立场不稳定且不透明。我们测试了四个主流LLM家族在四个时间点通过API和网页接口对伪科学主张的评估，发现Grok的Fast版本始终给出显著更高的可信度评分。结果表明LLM的认识论立场是部署配置的偶然效应，而非模型的稳定属性，这需要新的认识论问责形式。",
+      "summary_en": "Commercial LLMs are increasingly used as knowledge references but their stance on contested scientific claims is unstable and opaque. We tested four major LLM families across temporal snapshots via API and web interfaces, finding that Grok's Fast versions consistently assigned much higher credibility scores to pseudo-scientific claims. The results reveal that an LLM's epistemic stance is a contingent effect of deployment configuration rather than a stable model property, demanding new forms of epistemic accountability.",
+      "highlights_zh": [
+        "揭示LLM认识论立场的不稳定性",
+        "Grok Fast评分高出其他模型2-5倍",
+        "需建立LLM部署的问责机制"
+      ]
+    },
+    {
+      "id": "2607.22535",
+      "title": "Robot-Factored World Models via Robot Rendering",
+      "authors": [
+        "Byungjun Kim",
+        "Taeksoo Kim",
+        "Hyunsoo Cha",
+        "Hanbyul Joo"
+      ],
+      "abstract": "Action-conditioned video world models predict future observations from an initial observation and an action signal. In robotics, actions influence future observations through two distinct processes: they are first realized into robot motion by the robot body and controller, and the scene then responds through contact and object motion. Conditioning directly on action commands asks the world model to learn the realization process itself, while conditioning on logged future states leaks the interaction outcomes it is meant to predict. We propose robot-factored world models, which move two robot-specific factors outside the world model. First, action realization: each command is rolled through the robot's own controller and kinematics into a deployment-available nominal trajectory, a middle signal that avoids both action-realization learning and future-state leakage. Second, robot rendering: this nominal trajectory is rendered through the robot URDF, factoring the robot's geometry, kinematics, and appearance out of the model and into explicit rendered robot geometry. To resolve depth ambiguity, we pair end-effector depth with scene depth, giving geometric cues for contact and occlusion beyond image-plane overlap. Together, camera-aware static RGB/depth context and rendered robot geometry form a shared visual world-model interface that stays consistent across viewpoints and robot embodiments, so the model sees the action only as visible robot geometry and learns how objects respond to it. Our experiments show that the rendered interface outperforms vector-conditioned baselines and generalizes to unseen robot embodiments at inference. We further demonstrate that our model generates robot manipulation videos from human demonstrations by retargeting and rendering the hand motion as robot geometry.",
+      "published": "2026-07-24T17:59:57Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22535",
+      "pdf_url": "https://arxiv.org/pdf/2607.22535",
+      "summary_zh": "机器人视频世界模型需预测动作对未来的影响，但直接学习动作实现过程或泄露未来状态均存在问题。本文提出机器人因子化世界模型，通过名义轨迹和机器人渲染将机器人特定因素移出模型，利用渲染的机器人几何与场景深度构建共享视觉接口。实验表明该方法优于向量条件基线，能泛化到未见机器人形态，并可从人类演示生成机器人操作视频。",
+      "summary_en": "Video world models for robotics must predict how actions affect future observations, but directly learning action realization or leaking future states are problematic. This paper proposes robot-factored world models that externalize robot-specific factors via nominal trajectories and robot rendering, creating a shared visual interface with rendered robot geometry and scene depth. Experiments show it outperforms vector-conditioned baselines, generalizes to unseen robot embodiments, and can generate robot manipulation videos from human demonstrations.",
+      "highlights_zh": [
+        "通过机器人渲染解耦动作实现与场景响应",
+        "优于向量条件基线并泛化到未见机器人",
+        "可从人类演示生成机器人操作视频"
+      ]
+    },
+    {
+      "id": "2607.22531",
+      "title": "Twins: Learn to Predict Unified Representations with Focal Loss",
+      "authors": [
+        "Kaixiong Gong",
+        "Xin Cai",
+        "Bin Lin",
+        "Hao Wang",
+        "Yunlong Lin",
+        "Mingzhe Zheng",
+        "Bohao Li",
+        "Jian-Wei Zhang",
+        "Miles Yang",
+        "Zhao Zhong",
+        "Liefeng Bo",
+        "Xiangyu Yue"
+      ],
+      "abstract": "Unified multimodal models seek a shared visual token space that supports both multimodal understanding and image generation. Discrete methods unify the interface via a shared codebook, whereas continuous pipelines often rely on two disparate representations -- semantic features (e.g., ViT) for understanding and low-level latents (e.g., VAE) for synthesis -- resulting in mismatched latent spaces. We propose Twins, a unified continuous token space formed by channel-wise concatenating ViT and VAE features on the same token grid, so the sequence length is unchanged and attention cost does not increase. However, jointly modeling Twins in a Diffusion Transformer exposes a severe optimization imbalance: the model fits the ViT component well but struggles to match the VAE latent distribution. We trace this imbalance to three sources of heterogeneity: frequency bias, intrinsic dimensionality, and condition-aligned vs condition-independent uncertainty. To address it, we adapt a focal regression objective for flow matching that upweights large-error VAE dimensions, better balancing optimization across the ViT and VAE components. On ImageNet, this yields up to 10.57 gFID gain over naive MSE loss without classifier-free guidance. Twins also performs competitively on multimodal understanding benchmarks and improves reconstruction fidelity, narrowing the gap between understanding- and generation-oriented representations.",
+      "published": "2026-07-24T17:59:39Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22531",
+      "pdf_url": "https://arxiv.org/pdf/2607.22531",
+      "summary_zh": "现有统一多模态模型在连续表示空间中面临理解特征与生成特征不匹配的问题。本文提出Twins，通过通道级联ViT和VAE特征形成统一连续令牌空间，并针对联合建模中的优化不平衡问题引入聚焦回归损失。在ImageNet上gFID提升达10.57，同时提升了多模态理解与重建性能。",
+      "summary_en": "Unified multimodal models suffer from mismatched latent spaces between semantic features for understanding and low-level latents for generation. Twins proposes a unified continuous token space via channel-wise concatenation of ViT and VAE features, and addresses optimization imbalance with a focal regression loss for flow matching. It achieves up to 10.57 gFID improvement on ImageNet and narrows the gap between understanding- and generation-oriented representations.",
+      "highlights_zh": [
+        "通道级联ViT与VAE特征",
+        "gFID提升10.57",
+        "缩小理解与生成表示差距"
+      ]
+    },
+    {
+      "id": "2607.22530",
+      "title": "ViTacWorld: Scaling Visuo-Tactile World Models for Contact-Rich Robot Manipulation",
+      "authors": [
+        "Yunao Huang",
+        "Shiyu Sang",
+        "Haotao Lu",
+        "Suting Ni",
+        "Shijie Wu",
+        "Ziyang Guo",
+        "Ye Shi",
+        "Jingya Wang"
+      ],
+      "abstract": "Contact-rich robot manipulation requires physical interaction cues that are often invisible to cameras, making tactile sensing essential for robust control. However, scaling visuo-tactile robot learning remains difficult because real tactile interaction data are expensive to collect, hardware-dependent, and limited in task and scene diversity. We present ViTacWorld, an action-conditioned visuo-tactile world model for scalable contact-rich robot manipulation. ViTacWorld leverages public real tactile datasets and a constructed simulation environment to scale visuo-tactile-action data, exploiting the fact that tactile signals are directly grounded in physical contact and can exhibit a smaller simulation-to-real gap than purely visual observations. The model is first pretrained with large-scale real and simulated visuo-tactile trajectories, and then finetuned with real-world policy rollouts to better match downstream manipulation behaviors. Given robot actions, ViTacWorld predicts temporally aligned visual observations and tactile feedback, enabling visuo-tactile-action rollout generation. To the best of our knowledge, ViTacWorld is the first framework that uses a world model for robot visuo-tactile-action trajectory generation and policy evaluation. It serves two roles: synthesizing rollouts to improve downstream tactile policies, and evaluating policies by predicting action-conditioned visuo-tactile outcomes under controlled action sequences. Experiments on contact-rich manipulation tasks show that ViTacWorld generates physically meaningful rollouts, improves policy performance through scalable data augmentation, and enables action-conditioned policy evaluation. Project page: https://vitacworld.github.io/",
+      "published": "2026-07-24T17:59:33Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22530",
+      "pdf_url": "https://arxiv.org/pdf/2607.22530",
+      "summary_zh": "接触丰富的机器人操作需要触觉传感，但触觉数据收集昂贵且依赖硬件，限制了规模化学习。ViTacWorld提出一种动作条件的视觉-触觉世界模型，利用公共真实数据集和仿真环境大规模生成视觉-触觉-动作轨迹，并通过预训练与微调实现跨域泛化。实验表明该模型能生成物理合理的轨迹，通过数据增强提升下游策略性能，并支持动作条件的策略评估。",
+      "summary_en": "Contact-rich robot manipulation requires tactile sensing due to visual occlusion, but scaling tactile learning is hindered by expensive data collection and hardware dependence. ViTacWorld introduces an action-conditioned visuo-tactile world model that leverages public real datasets and simulation to generate large-scale visuo-tactile-action trajectories, pretrains on mixed data, and finetunes with real rollouts. Experiments demonstrate physically meaningful rollout generation, improved policy performance via data augmentation, and effective action-conditioned policy evaluation.",
+      "highlights_zh": [
+        "首个视觉-触觉世界模型框架",
+        "数据增强提升策略性能达SOTA",
+        "支持动作条件策略评估"
+      ]
+    },
+    {
+      "id": "2607.22483",
+      "title": "Plug, Play, and Comply: A Modular Framework for Online Variable Impedance with Arbitrarily Oriented Compliance Axes",
+      "authors": [
+        "Mihael Simonič",
+        "Xiaocong Li"
+      ],
+      "abstract": "The paper proposes a robot-agnostic compliant-control framework that extends the ROS control ecosystem with standardized joint and Cartesian command interfaces. It addresses a key limitation of existing control software: no reusable infrastructure for implementing compliant-control algorithms across different manipulators while preserving a common interface to higher-level applications. A plugin-based architecture separates controller infrastructure from control-law implementation. Generic wrappers use existing hardware abstractions to interface with different manipulators, while runtime-loaded plugins implement only the control law. Command interfaces support joint- and Cartesian-space references, stiffness and damping gains, nullspace targets, and feedforward terms, enabling variable impedance and diverse compliant-control formulations. Robot kinematics and dynamics are computed from URDF models using Pinocchio. The architecture facilitates the development of compliant-control strategies and enables the same implementation to be deployed across platforms unchanged. The complete framework, including reference controllers, high-level task interfaces, and example configurations for various manipulators, is open-sourced. The reference Cartesian impedance controller supports task-dependent compliance by rotating translational and rotational stiffness and damping, allowing the principal compliance directions to be updated online according to local task geometry rather than remaining fixed in the robot base or TCP frame. This is particularly important in contact-rich manipulation, where the desired directions of motion, constraints, and compliance directions may vary throughout task execution. Real-robot experiments demonstrate task-dependent compliance in contact-rich manipulation, while simulations show portability across manipulators with distinct kinematic and dynamic characteristics.",
+      "published": "2026-07-24T16:53:51Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.22483",
+      "pdf_url": "https://arxiv.org/pdf/2607.22483",
+      "summary_zh": "现有机器人控制软件缺乏可复用的柔顺控制算法实现框架，难以在不同机械臂上保持统一接口。本文提出一种机器人无关的模块化柔顺控制框架，采用插件式架构分离控制器基础设施与控制律实现，并通过URDF模型和Pinocchio库计算运动学与动力学。该框架支持在线可变阻抗和任意方向柔顺轴，在接触丰富的操作任务中实现了任务依赖的柔顺控制，并通过实验验证了其跨机械臂的可移植性。",
+      "summary_en": "Existing robot control software lacks reusable infrastructure for implementing compliant-control algorithms across different manipulators with a common interface. This paper proposes a robot-agnostic modular framework using a plugin-based architecture that separates controller infrastructure from control-law implementation, with kinematics and dynamics computed from URDF models via Pinocchio. The framework supports online variable impedance and arbitrarily oriented compliance axes, enabling task-dependent compliance in contact-rich manipulation, and demonstrates portability across manipulators with distinct kinematic and dynamic characteristics.",
+      "highlights_zh": [
+        "插件式架构分离控制律与基础设施",
+        "支持在线可变阻抗与任意方向柔顺轴",
+        "跨机械臂可移植的开源柔顺控制框架"
+      ]
+    }
+  ]
+}
