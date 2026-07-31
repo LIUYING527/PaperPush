@@ -1,0 +1,338 @@
+{
+  "date": "2026-07-31",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.28628",
+      "title": "Learning to Trace Seiberg Dualities",
+      "authors": [
+        "Jonathan J. Heckman",
+        "Shani Meynet",
+        "Alessandro Mininno",
+        "Gary Shiu"
+      ],
+      "abstract": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
+      "published": "2026-07-30T17:59:56Z",
+      "primary_category": "hep-th",
+      "categories": [
+        "hep-th",
+        "cs.AI",
+        "cs.LG",
+        "hep-ph"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28628",
+      "pdf_url": "https://arxiv.org/pdf/2607.28628",
+      "summary_zh": "该论文研究如何高效判断超对称quiver规范理论之间的Seiberg对偶性，这是一个计算上具有挑战性的问题。作者采用机器学习方法（包括Transformer和多层感知机）来学习quiver的突变操作，并辅以路径查找算法提升搜索效率。结果表明，对于约10个节点的quiver，神经网络架构优于确定性算法，且该方法可作为AI模型在理论物理中的基准测试。",
+      "summary_en": "This paper addresses the computational challenge of establishing Seiberg dualities in supersymmetric quiver gauge theories. The authors employ machine learning models, including transformers and MLPs, to learn quiver mutations, supplemented by pathfinder algorithms for improved search. Results show that neural architectures outperform deterministic algorithms for quivers with ~10 nodes, offering a practical tool and benchmark for AI in theoretical physics.",
+      "highlights_zh": [
+        "用ML学习quiver突变实现Seiberg对偶追踪",
+        "神经网络优于确定性算法，路径查找辅助提升效率",
+        "可作为AI物理基准，但规模限于约10节点"
+      ]
+    },
+    {
+      "id": "2607.28627",
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "authors": [
+        "Yao Xiao",
+        "Reuben Tan",
+        "Zhen Zhu",
+        "Yuqun Wu",
+        "Jianfeng Gao",
+        "Derek Hoiem"
+      ],
+      "abstract": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
+      "published": "2026-07-30T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28627",
+      "pdf_url": "https://arxiv.org/pdf/2607.28627",
+      "summary_zh": "长视觉上下文会导致视觉语言模型性能下降，且全量token处理受GPU内存限制。ReToken提出一个可学习的检索目标嵌入，从预填充的视觉KV缓存中稀疏选择查询相关的视觉token。在Visual Haystacks和LVBench等基准上显著提升性能，且训练和长视频推理仅需单张H100。",
+      "summary_en": "Long visual context degrades vision-language model performance and makes full-token processing infeasible under GPU memory limits. ReToken introduces a single learnable embedding as an explicit retrieval target to sparsely select query-relevant visual tokens from a pre-filled visual KV cache. It achieves consistent gains on image and video benchmarks, including 13.4-point improvement on Visual Haystacks with Qwen3VL-8B, while training and long-video inference fit on one H100.",
+      "highlights_zh": [
+        "单可学习嵌入实现稀疏检索",
+        "Visual Haystacks提升13.4点",
+        "轻量设计，单卡H100可训"
+      ]
+    },
+    {
+      "id": "2607.28608",
+      "title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
+      "authors": [
+        "Sparsh Roy",
+        "Samuel Girmachew",
+        "Nishita Chavan"
+      ],
+      "abstract": "Clinical risk models routinely achieve strong aggregate performance while producing materially different error rates across patient subgroups. Audit pipelines have been proposed to catch this, but their components are rarely stress-tested, so it is unclear which parts of an audit can be trusted and under what conditions. We present KAISEN, a five-phase audit pipeline covering subgroup stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring, evaluated to the point of failure on a synthetic benchmark of 16 disease tasks, 15 social-determinant axes from Healthy People 2030, and three prespecified intersections. Four findings follow. (i) Significance tracks each axis's gap against its own minimum detectable effect: rank correlation between significance count and raw equalized-odds difference (EOD) across the 15 axes is rho = 0.56, rising to rho = 0.78 once EOD is standardized by that floor. (ii) Per-group threshold optimization reduces EOD in 48 of 48 held-out runs (paired delta = -0.285, 95% CI [-0.313, -0.252]), while group-wise Platt scaling -- the better calibrator -- behaves as a coin flip on EOD (19 of 48 runs improved, 95% CI [0.26, 0.55]) with mean effect near zero, so what an audit should report is the variance, not the average. (iii) The mechanism diagnostic classifies 144 of 144 controlled cases correctly but recovers none of 48 model-driven cases under proxy misspecification, with no signal that it failed. (iv) CUSUM failures and false alarms track cohort realization far more than disease: at the reference threshold, all 27 false alarms and 7 of 8 missed shifts come from different seeds (chi-squared p = 0.002), so a threshold tuned on one cohort fails to transfer. All results are synthetic with known ground truth and do not establish clinical validity. Code, artifacts, and scripts reproducing every number are released.",
+      "published": "2026-07-30T17:57:18Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28608",
+      "pdf_url": "https://arxiv.org/pdf/2607.28608",
+      "summary_zh": "临床风险模型在总体表现良好时，常在不同患者亚组间产生显著差异的错误率，现有审计流程缺乏压力测试。KAISEN提出一个五阶段审计管线，在合成基准上系统评估亚组分层、差异度量、机制诊断、事后缓解和漂移监测各环节的失效条件。研究发现显著性受最小可检测效应影响、阈值优化稳定降低差异而校准方法效果不稳定、机制诊断在代理误设时静默失效、漂移阈值不可跨队列迁移，强调审计应报告方差而非平均值。",
+      "summary_en": "Clinical risk models often achieve strong aggregate performance while producing disparate error rates across patient subgroups, yet audit pipeline components are rarely stress-tested. KAISEN introduces a five-phase audit pipeline systematically evaluated to failure on a synthetic benchmark with known ground truth, covering stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring. Key findings reveal that significance tracks minimum detectable effects, threshold optimization reliably reduces disparity while calibration behaves randomly, mechanism diagnostics fail silently under proxy misspecification, and drift thresholds do not transfer across cohorts—highlighting the need to report variance rather than averages.",
+      "highlights_zh": [
+        "五阶段审计管线压力测试",
+        "阈值优化48/48降低EOD",
+        "代理误设时诊断静默失效"
+      ]
+    },
+    {
+      "id": "2607.28617",
+      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+      "authors": [
+        "Xiangning Lin",
+        "Shenzhe Zhu",
+        "Shu Yang",
+        "Zhenyu Zhang",
+        "Haoqian Zhang",
+        "Yipeng Zhao",
+        "Chengxuan Qian",
+        "Tianwei Wang",
+        "Ziheng Zhang",
+        "Zhenlong Yuan",
+        "Dingcheng Wang",
+        "Juncheng Wu",
+        "Yuan Si",
+        "Jiaxin Liu",
+        "Baolong Bi",
+        "Robert Mahari",
+        "Tobin South",
+        "Dazza Greenwood",
+        "Zexue He",
+        "Rishi Bommasani",
+        "Sophia Kazinnik",
+        "Andreas Haupt",
+        "Samuele Marro",
+        "Erik Brynjolfsson",
+        "Alex Pentland",
+        "Jiaxin Pei"
+      ],
+      "abstract": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
+      "published": "2026-07-30T17:58:58Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28617",
+      "pdf_url": "https://arxiv.org/pdf/2607.28617",
+      "summary_zh": "大型语言模型应用中的系统提示词通常不公开，导致用户与监管机构面临信任和问责缺口。本文提出AISPA框架，从八个维度对系统提示词进行用户中心化审计，并分析了88个商业产品中的3249条指令。审计发现保护性指令普遍但覆盖浅，约40%产品存在损害用户利益的指令，凸显了提高透明度和标准化监管的迫切性。",
+      "summary_en": "System prompts in commercial LLM applications are rarely disclosed, creating a trust and accountability gap. This paper introduces AISPA, a user-centric auditing framework evaluating prompts across eight dimensions, applied to 3,249 instructions from 88 products. Findings reveal protective instructions are common but shallow, while ~40% of products contain problematic instructions, underscoring the need for transparency and oversight.",
+      "highlights_zh": [
+        "用户中心八维审计框架",
+        "88产品3249指令系统审计",
+        "揭示保护与问题指令并存"
+      ]
+    },
+    {
+      "id": "2607.28609",
+      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+      "authors": [
+        "Qiushi Sun",
+        "Kanzhi Cheng",
+        "Yian Wang",
+        "Bowen Yang",
+        "Hang Yan",
+        "Liheng Chen",
+        "Fangzhi Xu",
+        "Zichen Ding",
+        "Nuo Chen",
+        "Jialin Cao",
+        "Xingdong Gong",
+        "Zehao Li",
+        "Kaiming Jin",
+        "Xinfeng Yuan",
+        "Zhoumianze Liu",
+        "Jingyang Gong",
+        "Zhangyue Yin",
+        "Jiahui Gao",
+        "Zhiyong Wu",
+        "Tianbao Xie",
+        "Jianbing Zhang",
+        "Ben Kao",
+        "Lingpeng Kong"
+      ],
+      "abstract": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifiers nor human annotators can provide such verification at scale, so the field increasingly turns to vision-language models (VLMs) as judges of CUA trajectories. But a fundamental question has long gone unexamined: are these VLM judges reliable enough? To study it systematically, we introduce OSReward, a realistic, high-quality benchmark that evaluates VLM judges on CUA trajectories. The trajectories come from diverse agent backbones executing human-verified instructions across platforms, then rigorously labeled with ground-truth verdicts through multi-stage human annotation. Building on it, we derive OSReward-Hard, a challenge set concentrating genuinely hard cases, and OSReward-Multi for fine-grained efficiency and alignment scoring. The most comprehensive evaluation of VLM judges to date finds even state-of-the-art models fall short of an ideal judge, sharing a systematic leniency bias that mislabels failed runs as successes. The few reliable enough to trust are too expensive to run at scale, while affordable open models trail far behind. To close this gap, we construct and release OS-Shepherd-100K, an open corpus of reasoning-annotated trajectory judgments for the CUA community. On it, we train OS-Shepherd (9B and 35B), open reward models that supply low-cost, stable, and reliable reward signals, matching commercial judges at 30-60% lower cost than the frontier. Extensive analyses further inform the design of reliable CUA reward at scale. Our code, benchmark, dataset, and model checkpoints are available at https://os-copilot.github.io/OSReward-Home/.",
+      "published": "2026-07-30T17:57:41Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28609",
+      "pdf_url": "https://arxiv.org/pdf/2607.28609",
+      "summary_zh": "计算机使用智能体（CUA）的轨迹验证对评估、数据整理和强化学习至关重要，但现有VLM评判器的可靠性未得到系统检验。为此，我们提出OSReward基准，包含跨平台真实轨迹和人工标注的严格标签，并构建OSReward-Hard和OSReward-Multi以评估VLM评判器，同时开发OS-Shepherd-100K语料库并训练开源奖励模型OS-Shepherd。研究发现最先进的VLM评判器存在系统性宽松偏差，而OS-Shepherd模型以30-60%更低的成本匹配商业评判器性能，为大规模可靠CUA奖励信号提供了低成本解决方案。",
+      "summary_eng": "Verifying computer-using agent (CUA) trajectories is critical for evaluation and reinforcement learning, yet the reliability of VLM judges remains unexamined. We introduce OSReward, a benchmark with human-verified cross-platform trajectories, plus OSReward-Hard and OSReward-Multi, and construct OS-Shepherd-100K to train open reward models OS-Shepherd. Our evaluation reveals systematic leniency bias in state-of-the-art VLM judges, while OS-Shepherd matches commercial judges at 30-60% lower cost, enabling scalable and reliable CUA reward signals.",
+      "highlights_zh": [
+        "首个系统评估VLM评判器的CUA基准",
+        "OS-Shepherd以更低成本匹配商业评判器",
+        "揭示VLM评判器系统性宽松偏差"
+      ]
+    },
+    {
+      "id": "2607.28625",
+      "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
+      "authors": [
+        "Yukang Cao",
+        "Haozhe Xie",
+        "Beichen Wen",
+        "Runmao Yao",
+        "Yinghao Liu",
+        "Yue Huang",
+        "Zhichao Liao",
+        "Yunxiang Wang",
+        "Haiheng Liu",
+        "Xingshun Tian",
+        "Dawei Su",
+        "Long Zhuo",
+        "Dacheng Tao",
+        "Xiaogang Wang",
+        "Liang Pan",
+        "Ziwei Liu"
+      ],
+      "abstract": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two complementary scales: a table-scale configuration resolves hand-object manipulation, while a room-scale configuration captures whole-body motion, locomotion, and interactions across a furnished home. ACE records egocentric and multi-view exocentric video, full-body and articulated hand motion, object geometry and 6-DoF trajectories, audio, and tactile signals as a unified multisensory stream. Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes. The dataset spans atomic manipulation, long-horizon chains of household activities, and human-scene interaction, while preserving natural behavioral variation through goal-level rather than step-by-step instructions. We further introduce a hierarchical benchmark that progresses from signals to scene components and then to interactions. Evaluations of state-of-the-art methods expose substantial gaps under contact, occlusion, egomotion, and long temporal horizons. ACE-Data-0 provides synchronized human demonstrations with aligned perceptual, kinematic, and contact supervision, offering a scalable foundation for imitation learning, world models, vision-language-action systems, and embodied AI.",
+      "published": "2026-07-30T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28625",
+      "pdf_url": "https://arxiv.org/pdf/2607.28625",
+      "summary_zh": "具身智能面临数据瓶颈，现有数据集割裂了感知-行动循环中的多模态信息。我们提出ACE数据引擎，将真实家庭环境改造为时空校准的同步录制工作室，以桌面和房间两种尺度统一采集视频、全身与手部运动、物体轨迹、音频和触觉信号。构建了含150小时、17M帧、7.5万交互片段的ACE-Data-0数据集及分层基准，揭示现有方法在接触、遮挡和长时程任务中的显著不足。",
+      "summary_en": "Embodied intelligence faces a data bottleneck as existing datasets fragment the perception-action loop across modalities and scales. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms homes into calibrated recording studios, capturing unified multisensory streams at table and room scales. ACE-Data-0 provides 150 hours/17M frames across 75K episodes, and a hierarchical benchmark exposes gaps in current methods under contact, occlusion, and long horizons.",
+      "highlights_zh": [
+        "双尺度多模态同步采集引擎",
+        "150小时/7.5万片段大规模数据集",
+        "分层基准揭示接触与长时程短板"
+      ]
+    },
+    {
+      "id": "2607.28624",
+      "title": "PhiZero: A World Model Built Around Physical Language",
+      "authors": [
+        "Shuyao Shang",
+        "Yuqi Wang",
+        "Ruopeng Gao",
+        "Xu Chen",
+        "Tieniu Tan",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
+      "published": "2026-07-30T17:59:46Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28624",
+      "pdf_url": "https://arxiv.org/pdf/2607.28624",
+      "summary_zh": "现有物理世界模型直接在像素空间预测视频，隐含了世界动态，缺乏显式推理。PhiZero提出“物理语言”这一紧凑离散表示，通过自监督从视频中学习，并采用先推理后渲染的范式显式预测世界演化。实验表明PhiZero在生成和理解基准上均能建模物理一致的世界演化，并支持交互式模拟、动作条件仿真和零样本运动迁移。",
+      "summary_en": "Existing physical world models predict future videos directly in pixel space, leaving world dynamics implicit. PhiZero introduces physical language, a compact discrete representation learned via self-supervision, and adopts a reason-then-render paradigm to explicitly infer world evolution before rendering videos. Experiments show PhiZero achieves physically coherent generation and understanding, with potential for interactive simulation, action-conditioned generation, and zero-shot motion transfer.",
+      "highlights_zh": [
+        "提出物理语言离散表示",
+        "生成和理解基准均领先",
+        "支持交互模拟与零样本迁移"
+      ]
+    },
+    {
+      "id": "2607.28596",
+      "title": "FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation",
+      "authors": [
+        "Lifeng Zhuo",
+        "Wendi Chen",
+        "Han Xue",
+        "Shirun Tang",
+        "Jun Lv",
+        "Cewu Lu",
+        "Chuan Wen"
+      ],
+      "abstract": "In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes. After contact, geometric constraints and force limits narrow the solution space, while successful execution demands rapid responses to force feedback. However, standard diffusion policies use a fixed inference frequency and sampling steps throughout the episode, forcing a fundamental compromise: low-frequency, multi-step sampling better preserves pre-contact multimodality but responds slowly to force feedback, whereas high-frequency sampling improves reactivity but tends to collapse distinct pre-contact modes. To resolve this tradeoff, we present FA-RDP, a frequency-adaptive reactive diffusion policy. A shared multi-frequency visual-force Transformer predicts action chunks at both low and high frequencies, while a learned multimodality indicator dynamically selects multi-step low-frequency sampling before contact and one-step high-frequency sampling as action ambiguity decreases. We further introduce Manifold Consistency Distillation (MCD), which reparameterizes the diffusion network to predict actions on the robot action manifold while retaining DDPM-based residual supervision. Experiments on three contact-rich manipulation tasks show that FA-RDP achieves the highest success rate while preserving diverse pre-contact trajectory modes. Code and videos are available at https://fa-rdp.github.io.",
+      "published": "2026-07-30T17:47:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28596",
+      "pdf_url": "https://arxiv.org/pdf/2607.28596",
+      "summary_zh": "接触丰富的操作任务中，动作多模态性和反应性在不同阶段占据主导，而标准扩散策略因固定推理频率和采样步数难以兼顾两者。为此，提出FA-RDP，利用共享多频视觉-力Transformer预测动作块，并通过学习的多模态指示器动态切换低频多步采样与高频单步采样，同时引入流形一致性蒸馏以保持动作流形。实验表明，FA-RDP在三个接触丰富任务中取得最高成功率，并保留接触前的多模态轨迹。",
+      "summary_en": "In contact-rich manipulation, action multimodality and reactivity dominate different stages, yet standard diffusion policies with fixed inference frequency and sampling steps struggle to balance both. FA-RDP introduces a shared multi-frequency visual-force Transformer and a learned multimodality indicator to dynamically switch between low-frequency multi-step sampling and high-frequency one-step sampling, along with Manifold Consistency Distillation for action manifold preservation. Experiments show FA-RDP achieves the highest success rate across three contact-rich tasks while preserving pre-contact trajectory multimodality.",
+      "highlights_zh": [
+        "频率自适应动态切换采样策略",
+        "最高成功率且保留多模态轨迹",
+        "适用于接触丰富操作，计算开销待评估"
+      ]
+    },
+    {
+      "id": "2607.28560",
+      "title": "X-NavDP: Generalizing Navigation Diffusion Policy to Novel Behavior and Embodiments with Group Q-score Reweighted Matching",
+      "authors": [
+        "Tianyu Yang",
+        "Yiming Zeng",
+        "Wenzhe Cai",
+        "Yuqiang Yang",
+        "Jiaqi Peng",
+        "Hui Cheng",
+        "Jiangmiao Pang",
+        "Tai Wang"
+      ],
+      "abstract": "Pretraining navigation diffusion policies rely on large-scale expert demonstrations. These data are typically generated by a fully-informed oracle planner suited to a single nominal robot. This limits the policy's generalization to diverse embodiments and challenging scenarios (e.g., escaping dead ends or detouring long obstacles) that demand diverse local reactive behaviors with only onboard local observations. Post-training the policy with reinforcement learning (RL) offers a principled remedy. However, previous RL for diffusion approaches lead to only marginal improvements. This is because the intractable likelihood of diffusion policies renders policy gradients unstable in addition to inefficient policy exploration. To address these challenges, we propose a data-efficient diffusion RL post-training framework - GQRM (Group Q-score Reweighted Matching). Our framework introduces two complementary designs: (i) a self-bootstrapped exploration strategy with behavior perturbation that preserves the pretrained policy prior, and (ii) a group Q-score normalization mechanism that computes per-trajectory values on each state for efficient reweighted score matching. By conducting distributed online RL training across heterogeneous embodiments, the resulting fine-tuned policy, X-NavDP, achieves state-of-the-art cross-embodiment visual navigation performance, improving the overall success rate from 61.20% to 84.28% in simulation and 10% to 65% in real-world hard cases. The code and model are publicly available at https://yty-sky.github.io/x-navdp-project-page.",
+      "published": "2026-07-30T17:26:12Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28560",
+      "pdf_url": "https://arxiv.org/pdf/2607.28560",
+      "summary_zh": "导航扩散策略预训练依赖大规模专家数据，且受限于单一机器人，难以泛化到新行为和多形态场景。本文提出GQRM框架，通过自举探索与群体Q值归一化重加权匹配，实现数据高效的扩散策略强化学习后训练。微调后的X-NavDP在跨形态视觉导航中成功率从61.20%提升至84.28%，真实世界困难场景从10%提升至65%。",
+      "summary_en": "Pretrained navigation diffusion policies rely on large-scale expert data from a single robot, limiting generalization to novel behaviors and embodiments. We propose GQRM, a diffusion RL post-training framework with self-bootstrapped exploration and group Q-score normalized reweighted matching for data-efficient fine-tuning. The resulting X-NavDP achieves state-of-the-art cross-embodiment navigation, improving success rates from 61.20% to 84.28% in simulation and 10% to 65% in real-world hard cases.",
+      "highlights_zh": [
+        "群体Q值重加权匹配",
+        "成功率84.28%（仿真）",
+        "跨形态导航泛化"
+      ]
+    },
+    {
+      "id": "2607.28623",
+      "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
+      "authors": [
+        "Lizhi Yang",
+        "Junheng Li",
+        "Aaron D. Ames"
+      ],
+      "abstract": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ball only as segmentation-masked depth from a head-mounted camera, while training-time CBF guidance represents clearance to every body link, and an adversarial motion prior regularizes the resulting evasive reflexes. We evaluate on a controlled any-link contact benchmark with seeded throws in two regimes: single throws and a deployment loop in which the robot walks back to its station and recovers between throws. On this benchmark, the policy comes within a few points of a privileged state oracle: a fixed onboard camera alone is adequate for evasion. We find that usable barrier structure depends on perceptual observability: Joint-CBF gives the best performance with accurate ball states, degrades under fixed-camera observations when used only as training guidance, and recovers with a ball-tracking gimbal or privileged runtime filter. We therefore deploy a lightweight Link-CBF policy zero-shot on the Unitree G1 in the real world, where it tolerates imperfect perception, succeeds on 95% of throws, and uses semantic segmentation to dodge different balls.",
+      "published": "2026-07-30T17:59:35Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.28623",
+      "pdf_url": "https://arxiv.org/pdf/2607.28623",
+      "summary_zh": "人形机器人躲避球任务中，现有安全控制方法依赖精确状态，难以应对真实世界的不完美感知。本文提出PAC-MAN框架，将控制屏障函数与强化学习结合，利用分割掩码深度相机感知，并通过训练时CBF引导和对抗运动先验实现全身安全躲避。实验表明该策略在固定相机下接近特权状态性能，并在真实Unitree G1机器人上零样本部署，成功躲避95%的投掷。",
+      "summary_en": "Humanoid dodgeball requires whole-body safety under realistic perception, yet existing CBF-based controllers assume privileged state access. PAC-MAN couples control-barrier safety with RL, using segmentation-masked depth from a head-mounted camera and adversarial motion priors to learn evasive reflexes. It approaches privileged-oracle performance in simulation and achieves 95% real-world dodge success on the Unitree G1, showing that barrier structure depends on perceptual observability.",
+      "highlights_zh": [
+        "感知感知CBF-RL框架",
+        "95%真实躲避成功率",
+        "固定相机下接近特权性能"
+      ]
+    }
+  ]
+}
