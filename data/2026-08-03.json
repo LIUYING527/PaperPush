@@ -1,0 +1,283 @@
+{
+  "date": "2026-08-03",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2607.29677",
+      "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
+      "authors": [
+        "Boyang Zhang",
+        "Adrian Lyjak",
+        "Eli Stewart",
+        "Zhaoqi Li",
+        "Simon Suo"
+      ],
+      "abstract": "Enterprise workflows increasingly rely on agents for \\emph{schema-guided extraction}: given a document and a user-defined schema, the agent faithfully follows the schema to produce the correct output with source evidence as grounding metadata. We present ExtractBench, a benchmark for schema-guided extraction and, to our knowledge, the first to score value accuracy, record completeness at scale, grounding, and measured cost together. The evaluation system contains 4,869 pages across 370 enterprise documents, 8 business domains, and 67 document types, with clear tags differentiating their challenge scenarios. The scalable schema and ground-truth curation pipeline combines independent-system agreement for real documents, known values for synthetic lists, and human verification for forms. We report order-insensitive value F1 for value accuracy, plus two grounding metrics for source traceability: word- and page-level F1. Commercial VLMs perform well on short documents but often truncate record lists on long ones, while coding agents retain higher accuracy at much higher cost. LlamaExtract Agentic Plus ranks first on all three metrics, with accuracy comparable to coding agents at a fraction of the cost. Dataset and evaluation code are available on \\href{https://huggingface.co/datasets/llamaindex/ExtractBench}{HuggingFace} and \\href{https://github.com/run-llama/ExtractBench}{GitHub}.",
+      "published": "2026-07-31T17:55:58Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29677",
+      "pdf_url": "https://arxiv.org/pdf/2607.29677",
+      "summary_zh": "企业工作流日益依赖智能体进行模式引导的文档抽取，但现有基准缺乏对准确性、完整性和成本的综合评估。ExtractBench提出了一个包含370份企业文档、4869页和67种文档类型的基准，并设计了结合独立系统一致性、合成列表已知值和人工验证的可扩展标注流程。商业VLM在短文档上表现良好但长文档截断，而LlamaExtract Agentic Plus在三个指标上均排名第一，以极低成本达到编码智能体的准确性。",
+      "summary_en": "Enterprise workflows increasingly rely on agents for schema-guided extraction, yet existing benchmarks lack combined evaluation of accuracy, completeness, grounding, and cost. ExtractBench introduces a benchmark with 370 enterprise documents, 4,869 pages, and 67 document types, plus a scalable curation pipeline combining independent-system agreement, known values for synthetic lists, and human verification. Commercial VLMs truncate long documents, while LlamaExtract Agentic Plus ranks first on all metrics, achieving coding-agent-level accuracy at a fraction of the cost.",
+      "highlights_zh": [
+        "首个综合评估准确性、完整性和成本",
+        "LlamaExtract Agentic Plus三项指标第一",
+        "长文档截断问题凸显，成本差异显著"
+      ]
+    },
+    {
+      "id": "2607.29657",
+      "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
+      "authors": [
+        "Yimin Chen",
+        "Brian Fricke",
+        "Bo Shen",
+        "Jamie Lian",
+        "Mingkan Zhang",
+        "James Lo",
+        "Yun Zhang",
+        "Shi Ye",
+        "Jiajing Huang",
+        "Han Hu",
+        "Chujie Lu",
+        "Rui Tang",
+        "George Zhuang"
+      ],
+      "abstract": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in buildings requires structured domain knowledge that can bridge heterogeneous data sources, diverse equipment types, and varied diagnostic outputs. Limited data interpretability and interoperability within the FDD domain have led to fragmented information silos, hindering the implementation of FDD and related applications, such as the digital twin-enabled FDD frameworks and artificial intelligence (AI)-driven maintenance decision-making systems. This paper presents an FDD Ontology (FDD-ON), a modular and extensible ontology to formally represent variable air volume (VAV) HVAC system components, fault types, symptom statuses, fault impacts and associated attributes. FDD-ON integrates HVAC system FDD semantics to provide comprehensive representations of fault and symptom attributes, supported by the well-defined controlled vocabulary. Additionally, FDD-ON offers comprehensive fault, symptom, and impact libraries to capture a broad spectrum of operational abnormalities and their consequences in VAV HVAC systems. Through explicit contributing cause-fault-symptom-impact relations, FDD-ON serves as a machine-interpretable basis for querying diagnostic knowledge, mapping heterogeneous FDD outputs, and developing interoperable FDD-related applications. FDD-ON is evaluated using publicly available VAV HVAC system datasets and demonstrated through FDD development applications. Results indicate that FDD-ON provides a foundational semantic framework for advancing scalable, transparent, and interoperable FDD solutions across various applications.",
+      "published": "2026-07-31T17:37:34Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29657",
+      "pdf_url": "https://arxiv.org/pdf/2607.29657",
+      "summary_zh": "建筑暖通空调系统故障检测与诊断（FDD）面临数据异构和互操作性差的问题，阻碍了FDD及数字孪生等应用的部署。本文提出模块化可扩展的FDD-ON本体，形式化表示VAV系统组件、故障类型、症状状态及影响，并建立因果关联和受控词表。基于公开数据集评估表明，FDD-ON为可扩展、透明、互操作的FDD解决方案提供了基础语义框架。",
+      "summary_en": "FDD in HVAC systems suffers from data heterogeneity and poor interoperability, hindering deployment of FDD and digital twin applications. This paper presents FDD-ON, a modular and extensible ontology that formally represents VAV system components, fault types, symptom statuses, and impacts with explicit cause-fault-symptom-effect relations and controlled vocabularies. Evaluated on public VAV datasets, FDD-ON provides a foundational semantic framework for scalable, transparent, and interoperable FDD solutions across applications.",
+      "highlights_zh": [
+        "模块化可扩展FDD本体",
+        "公开数据集验证语义框架",
+        "支持异构FDD输出映射"
+      ]
+    },
+    {
+      "id": "2607.29675",
+      "title": "Differentially Private Nonparametric Modal Learning with Applications to Regression and Clustering",
+      "authors": [
+        "Arkajyoti Bhattacharjee",
+        "Arnab Auddy"
+      ],
+      "abstract": "Density modes provide a localized and interpretable summary of multimodal distributions, but their estimation under rigorous differential privacy constraints remains largely unexplored. We study differentially private recovery of density modes for multivariate distributions under local smoothness, curvature, and separation conditions. We propose DP-GRAMS, a mean-shift inspired method that performs noisy ascent on a differentially private score estimator. Assuming the density belongs locally to a Hölder class with smoothness parameter $β> 2$, our score estimator uses bias-reducing higher-order kernels, and then enforces privacy in the gradient ascent steps via gradient clipping and calibrated Gaussian noise. A private initialization scheme combines a density-aware utility with a suppression rule and, with $k\\asymp M\\log n$ draws over a public $h_{\\mathrm{DAP}}$-grid and suppression radius $ρ_{\\mathrm{init}}\\asymp (\\log n)^{-1/d}$, achieves high-probability coverage of the modal basins by successively suppressing selected local neighborhoods in competitive regions, while correlated noise across multiple starts enables joint release under a single $(\\varepsilon,δ)$-differential privacy guarantee. We prove that all population modes are recovered with high probability and establish asymptotic error rates of the form $O\\!\\left((\\tfrac{\\log n}{n})^{\\frac{2(β-1)}{d+2β}}\\right) + O\\!\\left((\\tfrac{\\mathrm{polylog}(n,δ)}{n^2\\varepsilon^2})^{\\frac{β-1}{d+β}}\\right)$. We also provide minimax lower bounds for private mode estimation, and show that our estimators are nearly optimal, up to a logarithmic factor in the MSE. We present two natural extensions: DP-PMS, a private modal-regression method, and DP-GRAMS-C, a clustering pipeline. Extensive experiments on synthetic and real data demonstrate favorable privacy-utility trade-offs relative to common baselines.",
+      "published": "2026-07-31T17:55:02Z",
+      "primary_category": "math.ST",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29675",
+      "pdf_url": "https://arxiv.org/pdf/2607.29675",
+      "summary_zh": "本文研究差分隐私约束下多变量密度模态的估计问题，该问题此前鲜有探索。作者提出DP-GRAMS方法，基于均值漂移思想，在差分隐私得分估计器上执行带噪声的上升步骤，并采用偏差减少的高阶核、梯度裁剪和高斯噪声机制，同时设计了结合密度感知效用与抑制规则的私有初始化方案。理论证明该方法能以高概率恢复所有总体模态，并建立了渐近误差率及极小极大下界，表明估计器在均方误差上近乎最优（仅差对数因子）；实验验证了其在隐私-效用权衡上的优越性。",
+      "summary_en": "This paper studies differentially private recovery of density modes for multivariate distributions, a largely unexplored problem. The authors propose DP-GRAMS, a mean-shift inspired method performing noisy ascent on a private score estimator with bias-reducing higher-order kernels, gradient clipping, and calibrated Gaussian noise, plus a private initialization scheme using density-aware utility and suppression rules. They prove high-probability recovery of all population modes, establish asymptotic error rates and minimax lower bounds showing near-optimality up to logarithmic factors, and demonstrate favorable privacy-utility trade-offs in experiments.",
+      "highlights_zh": [
+        "首个差分隐私模态估计框架",
+        "误差率达极小极大最优（差对数因子）",
+        "支持回归与聚类扩展，实用性强"
+      ]
+    },
+    {
+      "id": "2607.29674",
+      "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+      "authors": [
+        "Maria Smirnova",
+        "Alexey Kravatskiy"
+      ],
+      "abstract": "SignMuon compresses the Muon update to one bit per parameter by taking its elementwise sign, providing the most direct way to run a matrix-aware optimizer under an extremely low communication budget. It outperforms SignSGD in practice, yet it can ascend even on a linear function. Signing the gradient before the Linear Minimization Oracle (LMO), rather than after, does not repair this: we construct a small explicit instance on which sign-before (MuonUSign) and sign-on-both-sides (MuonSign) ascend as well, so no placement of the sign around the oracle descends in general. Error feedback, the standard remedy for a biased compressor, does not rescue SignMuon: when applied to Muon's output, error feedback can fail for every smoothness constant, step size, and momentum. Applied to the gradient, error feedback does work, and EF21-MuonUSign and EF21-MuonSign attain the standard $\\mathcal{O}(T^{-1/2})$ rate for the squared gradient norm on smooth nonconvex problems, the latter at one bit in each direction. Experiments then reverse the ordering: across centralized CIFAR-10, federated CIFAR-10, and the nanoGPT speedrun, the strongest compressed method is consistently sign-after-the-LMO, precisely the placement we prove divergent, with the provably convergent variants trailing it. Compressing after the LMO, a heuristic, matters more at these scales than the guarantee does.",
+      "published": "2026-07-31T17:54:46Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29674",
+      "pdf_url": "https://arxiv.org/pdf/2607.29674",
+      "summary_zh": "Muon优化器在低通信预算下需要压缩更新，但直接对更新取符号（SignMuon）会导致算法在简单线性函数上也能发散。研究发现无论将符号操作放在LMO之前、之后还是两侧，都无法保证下降，且标准误差反馈（EF）对Muon输出无效，但应用于梯度时能恢复收敛并达到O(T^{-1/2})速率。实验却显示，在CIFAR-10和nanoGPT等实际任务中，发散风险的sign-after-LMO启发式方法性能最强，超越有理论保证的变体，表明实际规模下启发式比收敛保证更重要。",
+      "summary_enh": "Muon optimizer faces communication bottlenecks, prompting sign-based compression of its update. This work proves that SignMuon and its variants (sign-before/after LMO) can ascend even on linear functions, and error feedback applied to Muon's output fails universally, while EF on gradients (EF21-MuonUSign/Sign) restores the standard O(T^{-1/2}) nonconvex rate. Surprisingly, experiments on centralized/federated CIFAR-10 and nanoGPT show the theoretically divergent sign-after-LMO heuristic performs best, highlighting a gap between theory and practice at scale.",
+      "highlights_zh": [
+        "证明SignMuon可发散且EF无效",
+        "EF21梯度反馈恢复O(T^{-1/2})速率",
+        "实验显示启发式sign-after-LMO最优"
+      ]
+    },
+    {
+      "id": "2607.29678",
+      "title": "TokTier: Exact Stateful Tokenization for Agentic LLM Serving",
+      "authors": [
+        "Zhenyu Zhang",
+        "Zhichao Cao"
+      ],
+      "abstract": "LLM serving systems cache prompt KV state, yet most front ends still re-tokenize the full request text on every call. The cost lands on coding agents, which resubmit a long transcript after each small tool result, and reuse is hard because even a short append can change token boundaries near the end of the previous sequence. Across 153,951 calls from two agent ecosystems, the median call appends about 1.4K characters, and only 1.0-3.6% of calls start or rebuild a session with contexts of millions of characters. At a 94.1% fleet prompt-cache hit rate, tokenization reaches up to 64% of time to first token. TokTier is a stateful tokenization service with one contract: emitted token IDs are always identical to full reference tokenization of the request text. For a session continuation, it re-tokenizes a small window around the append and splices only after a per-request stable-boundary check, widening the window or falling back to full tokenization on failure. For a call without a reusable prefix, it decomposes GPT-family regex pre-tokenization into run-local rules and runs exact pre-tokenization and BPE on a GPU. A sampled shadow verifier re-checks live traffic. Across 17 tokenizer families, differential campaigns cover 1.5x10^10 split checks, a 12.4 TB real-text corpus, and 93,000+ replayed agent steps, with zero divergence. Incremental repair takes 0.5-1.1 ms from 100K to 3M characters, up to 437x faster than HF tokenization and 2.1x faster at 1M than the strongest cache-based baseline (Gigatoken) fully prewarmed. GPU full tokenization encodes a 1M-character request in 0.87 ms, up to 491x below HF and 23.4x below the fastest published CPU method. With vLLM, median time to first token drops 16-34% and P99 drops 23% under recorded bursts. Under a 50 ms P99 objective, four repair cores plus one GPU sustain 1,821 requests/s where a 16-core stateless front end saturates at 40.",
+      "published": "2026-07-31T17:56:30Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.DC",
+        "cs.PF"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29678",
+      "pdf_url": "https://arxiv.org/pdf/2607.29678",
+      "summary_zh": "LLM服务系统虽缓存提示词KV状态，但前端仍对每次请求全文重新分词，导致编码智能体在长会话追加时产生高达64%的首词延迟。TokTier提出有状态分词服务，通过窗口重分词与稳定边界检查实现精确拼接，并在无复用前缀时用GPU执行正则预分词和BPE。实验显示增量修复比HF快437倍，GPU全量分词比HF快491倍，在vLLM下P99首词延迟降低23%，且零分叉。",
+      "summary_en": "LLM serving systems cache prompt KV state but still re-tokenize full request text, causing up to 64% of time-to-first-token overhead in coding agents with long transcripts. TokTier introduces a stateful tokenization service that re-tokenizes a small window around appends with stable-boundary checks, and falls back to GPU-based exact pre-tokenization and BPE for non-reusable prefixes. It achieves up to 437x faster incremental repair than HF, 491x faster GPU full tokenization, 16-34% median TTFT reduction with vLLM, and zero divergence across 1.5x10^10 split checks.",
+      "highlights_zh": [
+        "有状态精确分词，零分叉",
+        "增量修复437x，GPU全量491x加速",
+        "降低TTFT 16-34%，支撑高并发"
+      ]
+    },
+    {
+      "id": "2607.29642",
+      "title": "Evolving language compositionality in a frequency-structured meaning space",
+      "authors": [
+        "Fabio De Ponte",
+        "Eloise Gaines-White",
+        "Conor Houghton",
+        "Seth Bullock"
+      ],
+      "abstract": "The iterated learning model was introduced to investigate language evolution: the way in which the characteristic properties of human languages have been shaped, at least partly, by repeated transmission from one language user to another. The key finding is that language compositionality can arise spontaneously as a consequence of language being passed repeatedly through a language learning bottleneck. Here we explore how changing the frequency of different meanings, so that some meanings occur much more frequently than others, affects the character of its compositionality. We find that, as observed in natural languages, high-frequency meanings can escape the pressure to conform to the grammar that characterizes lower-frequency meanings. However, when the frequency structure is instead imposed on parts rather than on whole meaning vectors, the language fails to transmit across generations. This occurs despite the fact that the most frequent elements are reliably learned. These results suggest that frequency can shape emergent linguistic structure only when the frequency distribution is defined over form-meaning units that learners can acquire holistically. When frequency is instead distributed over smaller units, it fails to support the relational structure required for compositional generalisation, thereby preventing stable language transmission.",
+      "published": "2026-07-31T17:18:57Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29642",
+      "pdf_url": "https://arxiv.org/pdf/2607.29642",
+      "summary_zh": "迭代学习模型研究语言演化，但以往未考虑意义频率分布的影响。本文在频率结构化的意义空间中模拟语言传递，考察频率对组合性涌现的作用。发现高频意义可脱离语法约束，但频率作用于部分而非整体时会导致语言无法跨代稳定传递。",
+      "summary_en": "Iterated learning models explain how compositionality emerges through transmission bottlenecks, yet the role of meaning frequency remains underexplored. This study introduces a frequency-structured meaning space, showing that high-frequency meanings escape grammatical pressure while low-frequency ones conform. However, when frequency is distributed over sub-units rather than whole meanings, transmission fails, revealing that holistic learnability is prerequisite for frequency-driven compositional structure.",
+      "highlights_zh": [
+        "频率影响组合性涌现机制",
+        "高频意义可脱离语法约束",
+        "频率作用于部分时语言失传"
+      ]
+    },
+    {
+      "id": "2607.29684",
+      "title": "Toward Robust and 3D-Aware RGB-NIR Imaging in the Dark",
+      "authors": [
+        "Muyao Niu",
+        "Mingze Ma",
+        "Yifan Zhan",
+        "Qingtian Zhu",
+        "Zhihang Zhong",
+        "Wei Guo",
+        "Chang Wen Chen",
+        "Yinqiang Zheng"
+      ],
+      "abstract": "Robust low-light imaging remains challenging for the community. Recent studies have explored fusing Near-Infrared (NIR) with noisy RGB to achieve improved enhancement, yet most methods depend on carefully curated training data pairs, with limited robustness under different scenarios. This paper offers a new perspective for RGB-NIR low-light imaging by incorporating 3D-aware neural modeling. Without using clean RGB supervision, a powerful model can be optimized to implicitly fuse extremely noisy RGB observations with NIR cues in 3D space, effectively recovering clean RGB images. The proposed model obviates the requirement for clean RGB data collection, generalizes across different noise levels. Extensive evaluations on synthetic and real data demonstrate its superiority. Codes available: https://github.com/MyNiuuu/3DarkFusion",
+      "published": "2026-07-31T17:59:18Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29684",
+      "pdf_url": "https://arxiv.org/pdf/2607.29684",
+      "summary_zh": "低光成像中RGB与近红外（NIR）融合方法依赖成对训练数据，鲁棒性不足。本文提出3D感知神经建模，无需干净RGB监督，在三维空间中隐式融合极噪RGB与NIR线索。该方法泛化于不同噪声水平，在合成与真实数据上均优于现有方法。",
+      "summary_en": "Low-light RGB-NIR fusion methods rely on curated paired data and lack robustness. This paper introduces 3D-aware neural modeling that implicitly fuses extremely noisy RGB with NIR cues in 3D space without clean RGB supervision. The model generalizes across noise levels and achieves superior performance on synthetic and real data.",
+      "highlights_zh": [
+        "无监督3D隐式融合RGB-NIR",
+        "合成与真实数据均达最优",
+        "无需干净RGB，泛化噪声鲁棒"
+      ]
+    },
+    {
+      "id": "2607.29679",
+      "title": "Scaling Properties of Text Conditioning in Visual Generation",
+      "authors": [
+        "Zilong Chen",
+        "Chaorui Deng",
+        "Kunchang Li",
+        "Hongyi Yuan",
+        "Haoqi Fan"
+      ],
+      "abstract": "We study empirical scaling properties for text conditioning in visual generation. Such properties have rarely been measured because diffusion loss does not scale with the number of tokens in natural-language prompts. Surprisingly, we find that the converged diffusion loss scales with the amount of structured language in the prompt. To quantify structured language, we adapt two complementary measures: a white-box likelihood metric (GPG) and a black-box attribute metric (ED). Across controlled training runs, the converged diffusion loss decreases approximately linearly with GPG and follows a power law with ED. Guided by these scaling properties, we improve \\emph{diffusability} by constructing structured prompts with semantic and geometric annotations derived from images, and improve \\emph{promptability} by training a prompter through supervised fine-tuning, cold-start, and verifier-gated on-policy distillation. The resulting system outperforms all evaluated open-weight models on nearly every compositional, reasoning, and world-knowledge benchmark, while matching or surpassing the strongest closed-weight models on most evaluations.",
+      "published": "2026-07-31T17:56:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29679",
+      "pdf_url": "https://arxiv.org/pdf/2607.29679",
+      "summary_zh": "文本条件在视觉生成中的缩放特性此前未被系统研究，因为扩散损失不随自然语言提示词数量缩放。本文发现收敛的扩散损失与提示词中的结构化语言量呈线性或幂律缩放关系，并据此通过构建结构化提示和训练提示器提升可扩散性与可提示性。所提系统在多数组合、推理和世界知识基准上超越所有开源模型，并匹配或超越最强闭源模型。",
+      "summary_en": "Scaling properties of text conditioning in visual generation were rarely measured because diffusion loss does not scale with token count. This work discovers that converged diffusion loss scales linearly with a white-box likelihood metric and follows a power law with a black-box attribute metric, guiding improvements in diffusability and promptability. The resulting system outperforms all evaluated open-weight models on nearly every compositional, reasoning, and world-knowledge benchmark, while matching or surpassing closed-weight models on most evaluations.",
+      "highlights_zh": [
+        "发现损失随结构化语言量缩放",
+        "超越所有开源及多数闭源模型",
+        "提升提示构造与提示器训练"
+      ]
+    },
+    {
+      "id": "2607.29687",
+      "title": "Diagnosing Compositional Generalization in Sequential Robot Tasks",
+      "authors": [
+        "Yixiao Wang",
+        "Cheng-En Wu",
+        "Lingfeng Sun",
+        "Pengcheng Wang",
+        "Xiang Ji",
+        "Boyuan Liang",
+        "Guojian Zhan",
+        "Masayoshi Tomizuka"
+      ],
+      "abstract": "Sequential robot manipulation requires policies to execute novel combinations of familiar instruction components. However, collecting demonstrations for all possible instruction tuples is combinatorially expensive, while sparsely covered datasets often fail under out-of-distribution recombination. This paper studies compositional generalization through the lens of instruction-space coverage. We decompose the generalization gap into three sources: \\textit{marginal instruction shift}, \\textit{instruction-compositional shift}, and \\textit{context--action shift}. This decomposition allows us to diagnose when sparse training coverage is sufficient, and what structure the training set must preserve for reliable action prediction. Our results show that exhaustive tuple enumeration is unnecessary: a structured subset, as small as one quarter of the full task space, can recover strong out-of-distribution performance when it covers action-relevant dependencies. We further find that sparse training often fails due to instruction steering rather than missing low-level skills; finetuning only one demonstration per task improves OOD success from \\(0.4\\%\\) to \\(54.7\\%\\). For semantically dependent tasks, effective coverage must capture relational structure rather than only factor diversity. These findings suggest that efficient robot data collection should prioritize dependency coverage in instruction space over exhaustive task expansion. More results are available in the supplementary material. Project website: https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/.",
+      "published": "2026-07-31T17:59:59Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29687",
+      "pdf_url": "https://arxiv.org/pdf/2607.29687",
+      "summary_zh": "顺序机器人操作任务中，组合泛化因指令空间覆盖不足而失败，且穷举所有指令组合成本过高。本文通过将泛化差距分解为边际指令偏移、指令组合偏移和上下文-动作偏移三类来源，诊断稀疏训练覆盖何时足够及需保留何种结构。结果表明，仅覆盖动作相关依赖的结构化子集（如全任务空间的四分之一）即可恢复强分布外性能，且微调每个任务一个演示可将OOD成功率从0.4%提升至54.7%。",
+      "summary_en": "Sequential robot manipulation requires policies to handle novel combinations of familiar instructions, but exhaustive data collection is combinatorially expensive and sparse coverage often fails under out-of-distribution recombination. This paper decomposes the generalization gap into marginal instruction shift, instruction-compositional shift, and context-action shift, revealing when sparse training coverage suffices and what structure must be preserved. Results show that a structured subset covering action-relevant dependencies (as small as one quarter of the task space) recovers strong OOD performance, and finetuning one demonstration per task boosts OOD success from 0.4% to 54.7%, prioritizing dependency coverage over exhaustive expansion.",
+      "highlights_zh": [
+        "分解泛化差距为三类偏移",
+        "微调每任务1演示提升至54.7%",
+        "优先覆盖依赖而非穷举任务"
+      ]
+    },
+    {
+      "id": "2607.29640",
+      "title": "Bootstrapping Self-Supervised Learning of Binary Classification Using Error Bounds: A Case Study on a Robotic Insertion Task",
+      "authors": [
+        "Zebin Duan",
+        "Norbert Krüger",
+        "Juan Heredia",
+        "Thorbjørn Mosekjær Iversen",
+        "Frederik Hagelskjær"
+      ],
+      "abstract": "Flexible manufacturing requires rapid deployment of solutions and minimal setup time to remain competitive. An essential attribute is the ability to control error levels, as failures can range from minor performance degradation to severe equipment damage. However, conventional deployment often involves extensive setup, data collection, model training or parameter tuning, and system testing, resulting in significant delays that hinder commercial feasibility. We propose a data engine which gathers data and improves its performance while executing the task. The data engine consists of two classifiers, a fast model prediction and expensive verification. First, a model prediction is performed and based on the confidence level of the prediction, the expensive verification can be used. By adjusting the confidence level, users can control the level of tolerable error. Our method is implemented on a real-world robotic insertion task, which uses force data for the model prediction. The system applies UMAP dimensionality reduction and uses Wilson-Score to compute the confidence bounds of the prediction. Results demonstrate the ability to learn and reduce the need for expensive verifications over time, while staying within the set error-rate. The results highlight the potential of confidence bounds in self-improving models to enhance reliability in robotic classification task.",
+      "published": "2026-07-31T17:18:05Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2607.29640",
+      "pdf_url": "https://arxiv.org/pdf/2607.29640",
+      "summary_zh": "柔性制造中机器人任务部署需快速且控制错误率，但传统方法耗时且难以保证可靠性。本文提出一种数据引擎，结合快速模型预测与昂贵验证，利用Wilson置信区间动态调整验证频率，实现自举式自监督学习。在真实机器人插装任务中，该方法在设定错误率内持续降低验证需求，展示了置信界限在自改进分类模型中的实用价值。",
+      "summary_en": "Deploying robotic tasks in flexible manufacturing requires rapid setup and controlled error rates, yet conventional methods are time-consuming and unreliable. This paper proposes a data engine combining fast model prediction with expensive verification, using Wilson confidence bounds to adaptively trigger verification, enabling bootstrapped self-supervised learning. On a real robotic insertion task, the method reduces verification needs over time while staying within the error bound, highlighting the potential of confidence bounds for reliable self-improving classifiers.",
+      "highlights_zh": [
+        "置信界限驱动自举学习",
+        "验证率下降且错误率受控",
+        "真实机器人插装任务验证"
+      ]
+    }
+  ]
+}
