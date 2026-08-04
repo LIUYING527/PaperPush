@@ -1,0 +1,310 @@
+{
+  "date": "2026-08-04",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.02599",
+      "title": "Bridging Artificial Intelligence and Power Systems Education Using a Hands-On Executable Framework",
+      "authors": [
+        "Junjie Yin",
+        "Buxin She",
+        "Xinyu Feng",
+        " Fangxing",
+        " Li"
+      ],
+      "abstract": "Artificial intelligence (AI) is increasingly central to power and energy systems, supporting modeling, forecasting, optimization, and control. Yet most existing works emphasize specialized applications and offer little reusable material for newcomers or interdisciplinary learners, who increasingly rely on large language models rather than building their own. This gap points to a need for engineering-grounded AI (EGAI), in which AI workflows follow established engineering and power-system domain rules rather than acting as task-agnostic black boxes. Motivated by a community survey of researchers and practitioners, which shows 92% report at least one barrier before running an AI model and 94% want a power-specific hands-on course. This paper presents a framework consisting of open, executable module library that lowers the entry barrier for AI in power systems. The modules follow a progressive difficulty ladder that maps core AI concepts onto representative power-system tasks: (i) foundational deep neural network (DNN) templates for function approximation and load-curve fitting; (ii) a domain-coupled convolutional neural network (CNN) power-flow surrogate for a 5-bus system; and (iii) frontier modules on DNN-assisted optimization, deep reinforcement learning (DRL) for battery storage control, and physics-informed neural networks (PINNs) for the swing equation. All modules are released as Jupyter notebooks that run locally or on Google Colab and are delivered through an IEEE online course and IEEE Power & Energy Society (PES) webinar series. The webinar drew more than 590 live attendees, which is among the ten most-attended IEEE PES webinars, and over 344 repository visits within two weeks, reinforcing the survey-based motivation.",
+      "published": "2026-08-03T17:59:09Z",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02599",
+      "pdf_url": "https://arxiv.org/pdf/2608.02599",
+      "summary_zh": "电力系统AI教育面临入门门槛高、缺乏可复用教学资源的问题，社区调查显示92%的从业者遇到障碍。本文提出工程导向AI（EGAI）框架，包含渐进式难度的可执行Jupyter模块库，覆盖DNN、CNN、DRL和PINN等核心AI方法在电力系统任务中的应用。该框架通过IEEE在线课程和PES网络研讨会发布，吸引超过590名现场参与者，位居PES网络研讨会前十，验证了其需求与影响力。",
+      "summary_en": "AI education in power systems faces high entry barriers and lacks reusable teaching resources, with 92% of surveyed practitioners reporting obstacles. This paper proposes an engineering-grounded AI (EGAI) framework featuring a progressive executable Jupyter module library covering DNN, CNN, DRL, and PINN for power-system tasks. Released via IEEE online course and PES webinar, it attracted over 590 live attendees (top-10 PES webinar) and 344 repository visits, validating its demand and impact.",
+      "highlights_zh": [
+        "渐进式可执行模块库",
+        "590+现场参会者",
+        "降低AI电力入门门槛"
+      ]
+    },
+    {
+      "id": "2608.02583",
+      "title": "UEmbed: Unified Sparse and Dense Multimodal Embeddings",
+      "authors": [
+        "Tingyu Song",
+        "Mingxin Li",
+        "Yanzhao Zhang",
+        "Dingkun Long",
+        "Pengjun Xie",
+        "Zhijie Nie",
+        "Yilun Zhao",
+        "Shu Wu"
+      ],
+      "abstract": "Sparse retrieval underpins modern search systems, from web search to retrieval-augmented generation. Existing work has introduced Learned Sparse Retrieval (LSR) to push beyond exact lexical matching toward richer semantics. Yet LSR has so far remained tied to encoder-style bidirectional architectures, and its extension to multimodal settings still relies heavily on auxiliary cross-modal modules. To address these limitations, we introduce UEmbed (Unified Embedding), a decoder-only multimodal embedding model that produces both sparse lexical and dense representations in one causal forward pass. UEmbed appends N learnable special tokens to the input and partitions the vocabulary into N disjoint subsets. Each token's causal hidden state predicts sparse weights over its assigned subset, and the N subsets are concatenated into the full sparse vector. Trained on public data, we release UEmbed at 2B, 4B, and 9B scales. UEmbed-9B reaches 71.8 (dense) and 71.0 (sparse) on MMEB-v2, outperforming multimodal embedding models trained on publicly available data (e.g., RzenEmbed). On BEIR, UEmbed also remains competitive with strong dense and sparse baselines. Furthermore, we demonstrate the practical utility of UEmbed across three dimensions: effectiveness, efficiency, and agentic applications. Overall, UEmbed offers a new paradigm: it unifies dense and sparse embeddings in one model, while further extending sparse retrieval to unify text and multimodal inputs.",
+      "published": "2026-08-03T17:54:11Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02583",
+      "pdf_url": "https://arxiv.org/pdf/2608.02583",
+      "summary_zh": "现有学习型稀疏检索局限于编码器架构，且多模态扩展依赖辅助跨模态模块。本文提出UEmbed，一种仅解码器的多模态嵌入模型，通过添加可学习特殊标记并将词汇表划分为不相交子集，在一次因果前向传播中同时生成稀疏词级和稠密表示。UEmbed在MMEB-v2上达到71.8（稠密）和71.0（稀疏）的领先性能，并在BEIR上保持竞争力，为统一稀疏与稠密、文本与多模态嵌入提供了新范式。",
+      "summary_en": "Learned sparse retrieval has been limited to encoder-style architectures and relies on auxiliary cross-modal modules for multimodal extension. UEmbed introduces a decoder-only multimodal embedding model that appends learnable special tokens and partitions the vocabulary into disjoint subsets, producing both sparse lexical and dense representations in a single causal forward pass. UEmbed achieves state-of-the-art results on MMEB-v2 (71.8 dense, 71.0 sparse) and remains competitive on BEIR, offering a new paradigm unifying sparse/dense and text/multimodal embeddings.",
+      "highlights_zh": [
+        "解码器统一稀疏与稠密嵌入",
+        "MMEB-v2稠密71.8稀疏71.0",
+        "支持多模态与智能体应用"
+      ]
+    },
+    {
+      "id": "2608.02595",
+      "title": "onepot-Bench 0: towards lab-aware in silico chemistry benchmarks",
+      "authors": [
+        "Brandon Wang",
+        "Andrei S. Tyrin",
+        "Daniil A. Boiko"
+      ],
+      "abstract": "Language models are playing an increasingly important role in laboratory science, performing tasks such as experiment planning, execution, and post-hoc analysis. However, precisely measuring their abilities is difficult, as scientific capabilities require a mixture of both problem-solving skills and domain-specific intuition. Existing evaluations rarely measure the capabilities required to make reliable decisions in a physical laboratory and often rely on public data that may have appeared in model training corpora. We introduce onepot-Bench 0, a proprietary benchmark suite for evaluating language models on synthetic chemistry capabilities relevant to wet-lab execution. onepot-Bench 0 comprises three complementary evaluations: ChemAbacus measures tool-free cheminformatics literacy and numerical reasoning; SynthRefusal characterizes safety and refusal behavior across a variety of benign, controlled, and designer-drug targets; and SynthBench evaluates reaction-outcome prediction and catalyst selection using private experimental data generated in our laboratory. Together, these evaluations probe basic competency, reliability, and deeper knowledge, all skills which are required for reliable performance in the lab.",
+      "published": "2026-08-03T17:58:27Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02595",
+      "pdf_url": "https://arxiv.org/pdf/2608.02595",
+      "summary_zh": "语言模型在实验室科学中作用日益重要，但现有评估难以衡量其湿实验执行所需的综合能力。本文提出onepot-Bench 0，一个包含ChemAbacus、SynthRefusal和SynthBench三项互补评估的专有基准套件，分别测试化学信息学素养、安全拒绝行为和私有数据上的反应预测能力。该基准全面评估了实验室可靠表现所需的基础能力、可靠性和深层知识，弥补了现有评估依赖公共数据且缺乏湿实验针对性的不足。",
+      "summary_en": "Language models are increasingly used in laboratory science, yet existing evaluations fail to measure the capabilities needed for reliable wet-lab decisions and often rely on public data. We introduce onepot-Bench 0, a proprietary benchmark suite with three complementary evaluations—ChemAbacus, SynthRefusal, and SynthBench—covering cheminformatics literacy, safety refusal, and reaction prediction on private lab data. This benchmark provides a comprehensive assessment of basic competency, reliability, and deeper knowledge, addressing the gap in lab-aware evaluation for synthetic chemistry.",
+      "highlights_zh": [
+        "首个实验室感知的合成化学基准套件",
+        "三项评估覆盖基础、安全与预测能力",
+        "依赖私有数据，避免训练数据污染"
+      ]
+    },
+    {
+      "id": "2608.02588",
+      "title": "The Condition-Number Barrier in Sparse Least Squares",
+      "authors": [
+        "Honghao Lin",
+        "Vahab Mirrokni",
+        "David P. Woodruff"
+      ],
+      "abstract": "In [AS21], Axiotis and Sviridenko conjectured that the linear dependence on the restricted condition number in sparse convex optimization cannot be improved by a polynomial-time algorithm. We establish their conjectured lower bound for least-squares objectives, conditional on the randomized exact-volume Small-Set Expansion Hypothesis in the weighted regular-graph formulation of Raghavendra, Steurer, and Tulsiani [RST12]. Concretely, for every fixed $γ\\in(0,1]$, there is no randomized polynomial-time algorithm that, with probability at least $2/3$, returns a vector $x$ such that, writing $s=\\lVert x\\rVert_0$, \\[ \\lVert Ax-b\\rVert_2^2 \\leq \\min_{\\lVert z\\rVert_0\\leq k}\\lVert Az-b\\rVert_2^2+\\varepsilon \\quad\\text{and}\\quad s=O\\!\\left(k\\,κ_{s+k}^{\\,1-γ}\\right), \\] where $κ_r$ is the restricted condition number at sparsity level $r$. The result holds even on rational instances with $A$ of full column rank. The proof was first obtained using a fully automated Gemini-based agentic system developed internally at Google. The authors have verified the proof and edited it for clarity of presentation.",
+      "published": "2026-08-03T17:57:01Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02588",
+      "pdf_url": "https://arxiv.org/pdf/2608.02588",
+      "summary_zh": "稀疏最小二乘问题中，条件数线性依赖是否可由多项式时间算法改进是一个开放猜想。本文基于随机精确体积小集扩张假设，证明了该猜想的下界，即任何随机多项式时间算法都无法在稀疏度上突破条件数的次线性改进。该结果适用于有理数实例且A满列秩，证明最初由Google内部自动化Gemini系统生成，经作者验证并整理。",
+      "summary_en": "The paper addresses the conjecture that linear dependence on the restricted condition number in sparse convex optimization cannot be improved by polynomial-time algorithms. The authors establish this lower bound for least-squares objectives under the randomized exact-volume Small-Set Expansion Hypothesis, showing no randomized polynomial-time algorithm can achieve sparsity better than O(k κ^{1-γ}). The proof, initially produced by an automated Gemini-based system, is verified and applies to rational instances with full column rank.",
+      "highlights_zh": [
+        "证明条件数下界猜想",
+        "无实验，理论下界结果",
+        "依赖SSEH假设，适用稀疏回归"
+      ]
+    },
+    {
+      "id": "2608.02602",
+      "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling",
+      "authors": [
+        "Jiajun Liang",
+        "Yucheng Liao",
+        "Yukang Cao",
+        "Jiazhe Wei",
+        "Ken Li",
+        "Wende Tan",
+        "Jiankun Zhang",
+        "ZY Cui",
+        "Jingkang Yang",
+        "Liucheng Guo",
+        "Shiqi Yang",
+        "B. Yang",
+        "Caifeng Shan",
+        "Ziwei Liu",
+        "Chenyang Si"
+      ],
+      "abstract": "Language remains an outlier in generative modeling: while images, video, and audio are increasingly modeled in continuous latent spaces, text generation still relies predominantly on discrete tokens. Existing continuous language models either inherit embedding spaces not designed for joint generation and decoding, or compress autoencoded latents to ease diffusion, sacrificing token-level fidelity. Instead of simplifying the representation to suit the generative model, we preserve a high-capacity, decodable text latent and design the diffusion model to learn its distribution directly. We introduce AURORA-LM, a continuous-latent diffusion language model that separates the construction of a decodable text representation from the modeling of its distribution. A Query-based Encoder-Decoder organizes text into a high-capacity, prefix-aligned latent sequence, and a Block-causal Diffusion Transformer learns its distribution through flow matching, generating blocks left to right while denoising positions within each block in parallel. Because such a latent is harder for diffusion to model, AURORA-LM restricts only the noisy-input pathway while retaining the full clean-latent prediction target, accommodating full-width latents without reducing decoder-facing capacity. We further calibrate the noise-level distribution to the latent width, and introduce self-trajectory consistency to bridge independently sampled training noise and iterative denoising at inference. AURORA-LM achieves the strongest performance among evaluated continuous and diffusion-based language models on OpenWebText free generation and XSum summarization. Scaling to 1B parameters with about 1500 EFLOPs of total compute yields further gains, surpassing a larger publicly released latent-diffusion language model under a matched evaluation protocol. All experiments are conducted on Ascend NPUs.",
+      "published": "2026-08-03T17:59:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02602",
+      "pdf_url": "https://arxiv.org/pdf/2608.02602",
+      "summary_zh": "语言生成仍依赖离散token，而图像等领域已转向连续潜空间，现有连续语言模型在表示质量与生成能力间存在权衡。AURORA-LM将可解码文本表示的构建与分布建模分离，采用基于查询的编码器-解码器生成高容量前缀对齐潜序列，并用块因果扩散Transformer通过流匹配学习其分布，同时限制噪声输入路径并保留完整干净潜预测目标。该方法在OpenWebText自由生成和XSum摘要任务上达到最强性能，1B参数规模下超越更大规模的公开潜扩散语言模型，验证了高容量连续潜空间语言建模的可行性。",
+      "summary_eng": "Language generation still relies on discrete tokens while other modalities use continuous latents, and existing continuous language models struggle to balance representation fidelity and generative tractability. AURORA-LM separates decodable text representation construction from distribution modeling, using a query-based encoder-decoder to build high-capacity prefix-aligned latents and a block-causal diffusion transformer with flow matching, while restricting only the noisy-input pathway to preserve full decoder-facing capacity. It achieves state-of-the-art results among continuous and diffusion-based language models on OpenWebText and XSum, and at 1B scale outperforms a larger public latent-diffusion model, demonstrating the viability of high-capacity continuous latent language modeling.",
+      "highlights_zh": [
+        "分离表示构建与分布建模",
+        "OpenWebText和XSum最优性能",
+        "1B超越更大规模潜扩散模型"
+      ]
+    },
+    {
+      "id": "2608.02555",
+      "title": "Romanized Arabic Across Dialects: Views, Usage Patterns, and Linguistic Variation",
+      "authors": [
+        "Amr Keleg",
+        "Ahmed Amine Ben Abdallah",
+        "Taha Yassine",
+        "Chadi Helwe",
+        "Imane Guellil",
+        "Nedjma Ousidhoum"
+      ],
+      "abstract": "Arabizi refers to Arabic written in Latin script. Although previous studies have shown that the prevalence and usage of Arabizi vary by factors such as region and age group, most NLP research on Arabic texts treats it as a temporary phenomenon resulting from limited technological support for the Arabic script. In this work, we engage with Arabic speakers to collect insights on their perceptions and usage of Arabizi. We further examine writing norms among speakers of different dialects, focusing on Algerian, Egyptian, Lebanese, Moroccan, and Tunisian Arabic. To this end, we release two resources. First, a character-level alignment of Arabic words to study inter- and intra-dialectal variation across these five dialects, based on words transliterated by survey participants, finding systematic intra-dialectal regularity and inter-dialectal variation. Second, to study Arabic speakers' ability to identify this stylistic variation at the sentence-level, we build a manually curated parallel corpus of sentences written in Arabic script alongside multiple Arabizi transliterations, collected from speakers of the same five dialects. Our study presents the largest human-centered, cross-dialectal study of Arabizi's perceptions and practices to date.",
+      "published": "2026-08-03T17:39:45Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02555",
+      "pdf_url": "https://arxiv.org/pdf/2608.02555",
+      "summary_zh": "阿拉伯语拉丁化拼写（Arabizi）在不同方言中的使用和认知差异长期被NLP研究忽视，被视为技术限制下的临时现象。本研究通过大规模用户调查和人工构建的平行语料，系统分析了阿尔及利亚、埃及、黎巴嫩、摩洛哥和突尼斯五种方言的Arabizi书写规范及跨方言变异。研究发现方言内存在系统性规律、方言间存在显著差异，并发布了字符级对齐和句子级平行语料资源，为Arabizi的NLP研究提供了首个大规模以人为本的跨方言基准。",
+      "summary_en": "Arabizi (Arabic in Latin script) is often dismissed in NLP as a temporary workaround for technological limitations, yet its usage varies systematically across dialects and user groups. This study engages Arabic speakers from five dialects (Algerian, Egyptian, Lebanese, Moroccan, Tunisian) to collect perceptions and usage patterns, releasing a character-level alignment of transliterated words and a manually curated parallel sentence corpus with multiple Arabizi variants. Results reveal systematic intra-dialectal regularity and inter-dialectal variation, providing the largest human-centered cross-dialectal resource for studying and modeling Arabizi.",
+      "highlights_zh": [
+        "首个大规模跨方言Arabizi用户研究",
+        "方言内规律性强，方言间差异显著",
+        "发布字符级对齐与句子级平行语料"
+      ]
+    },
+    {
+      "id": "2608.02603",
+      "title": "WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity",
+      "authors": [
+        "Yuxue Yang",
+        "Shuyao Shang",
+        "Jiahe Wang",
+        "Zitong Zhou",
+        "Liang Tan",
+        "Junhan Zeng",
+        "Ruizhi Li",
+        "Junyan Li",
+        "Yu Liu",
+        "Xiao Yang",
+        "Yong Li",
+        "Jun Zhu",
+        "Hongsheng Li",
+        "Tieniu Tan",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "Controllable video generation models are increasingly being developed as world models. Accordingly, evaluating them in this role extends beyond the apparent appearance of generated videos to the inherent reactivity of the worlds they depict: the ability to infer from the scene state how the world should react and to generate plausible consequences not explicitly described in the input. Yet existing benchmarks mainly assess visual quality or explicit instruction fulfillment by checking whether requested actions and interaction outcomes are realized, leaving inherent reactivity underexamined. We introduce WorldExam, a hierarchical diagnostic benchmark spanning four levels: Visual Quality, Control Adherence, Spatial Consistency, and World Reactivity. It comprises 1,474 cases across eight dedicated tasks and supports unified evaluation of camera-, action-, and language-driven model paradigms. The World Reactivity level evaluates scene-conditioned reactions and goal-directed behaviors beyond what is explicitly specified in the input. Evaluation of 20 representative models reveals a clear capability split. Camera-driven models excel at camera control, but their interfaces do not support dynamic interaction; action-driven models control subjects more precisely but often leave the world unresponsive; and language-driven models perform better on interaction but follow complex controls less faithfully. No model combines broad task coverage with consistently strong performance, showing that high visual quality and explicit instruction fulfillment do not guarantee inherent reactivity.",
+      "published": "2026-08-03T17:59:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02603",
+      "pdf_url": "https://arxiv.org/pdf/2608.02603",
+      "summary_zh": "现有可控视频生成模型作为世界模型评估时，主要关注视觉质量和显式指令遵循，忽视了从场景状态推断世界应如何反应的内在反应性。本文提出WorldExam，一个四级分层诊断基准（视觉质量、控制遵循、空间一致性、世界反应性），包含1474个案例和八个任务，统一评估相机、动作和语言驱动的模型范式。对20个代表性模型的评估显示，不同驱动范式的模型能力存在明显分化，没有模型能同时具备广泛任务覆盖和稳定强性能，表明高视觉质量和显式指令遵循并不保证内在反应性。",
+      "summary_en": "Existing evaluations of controllable video generation models as world models focus on visual quality and explicit instruction fulfillment, overlooking inherent reactivity—the ability to infer and generate plausible world reactions beyond input specifications. We introduce WorldExam, a hierarchical diagnostic benchmark with four levels (Visual Quality, Control Adherence, Spatial Consistency, World Reactivity) comprising 1,474 cases across eight tasks, enabling unified evaluation of camera-, action-, and language-driven paradigms. Evaluation of 20 models reveals a clear capability split across paradigms with no model excelling universally, demonstrating that high visual quality and instruction adherence do not guarantee inherent reactivity.",
+      "highlights_zh": [
+        "首个评估世界反应性的分层基准",
+        "20模型揭示范式间能力显著分化",
+        "高视觉质量不保证内在反应性"
+      ]
+    },
+    {
+      "id": "2608.02598",
+      "title": "VR3D: View-Robust 3D Representation Learning for Aerial-Ground Person Re-Identification",
+      "authors": [
+        "Chao Ji",
+        "Shiyu Xuan",
+        "Zechao Li"
+      ],
+      "abstract": "Aerial-ground person re-identification is a challenging task due to cross-platform viewpoint variations, which cause severe occlusion and geometric deformation. Existing methods attempt to learn view-invariant representations exclusively within the 2D image space, where drastic viewpoint variations cause the learned features to remain coupled with viewpoint bias. To address this, we propose VR3D, a View-Robust 3D Representation Learning framework that maps images into a unified 3D coordinate space to achieve view-independent feature interaction. Specifically, we introduce View-Robust 3D Representation Interaction, which leverages 3D priors extracted from single 2D observations to lift 2D appearance features into a canonical 3D space. VR3I employs 3D Geometry-Semantic Attention to establish interactions between 2D patches and 3D voxels from corresponding body parts based on their 3D spatial locations, effectively grounding 2D semantics within a 3D framework. In addition, as the reliability of these representations varies across samples due to viewpoint changes and 3D reconstruction errors, we introduce Reliability-Aware Fusion, which estimates sample-specific reliability and adaptively aggregates the multi-source representations. Extensive experiments on three benchmark datasets (CARGO, AG-ReID.v1, and AG-ReID.v2) demonstrate that VR3D outperforms recent methods. For example, it achieves a 5.63% improvement in Rank-1 on CARGO. Our code will be released.",
+      "published": "2026-08-03T17:59:01Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02598",
+      "pdf_url": "https://arxiv.org/pdf/2608.02598",
+      "summary_zh": "空中-地面行人重识别因视角差异导致严重遮挡和几何形变，现有方法在2D图像空间学习视角不变表示仍受视角偏差影响。本文提出VR3D框架，利用3D先验将2D外观特征提升至统一3D规范空间，通过3D几何-语义注意力建立2D补丁与3D体素交互，并引入可靠性感知融合自适应聚合多源表示。在CARGO、AG-ReID.v1和AG-ReID.v2上均超越现有方法，其中CARGO上Rank-1提升5.63%。",
+      "summary_en": "Aerial-ground person re-identification suffers from severe occlusion and geometric deformation caused by cross-platform viewpoint variations, while existing methods learning view-invariant representations in 2D image space remain coupled with viewpoint bias. VR3D proposes a view-robust 3D representation learning framework that lifts 2D appearance features into a canonical 3D space using 3D priors, employs 3D geometry-semantic attention for cross-space interaction, and introduces reliability-aware fusion for adaptive aggregation. Extensive experiments show VR3D outperforms recent methods on three benchmarks, achieving a 5.63% Rank-1 improvement on CARGO.",
+      "highlights_zh": [
+        "3D空间视角鲁棒表示学习",
+        "CARGO Rank-1提升5.63%",
+        "可推广至跨视角检索任务"
+      ]
+    },
+    {
+      "id": "2608.02580",
+      "title": "Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data",
+      "authors": [
+        "Ye Wang",
+        "Pei Lin",
+        "Xiong-Hui Chen",
+        "Haoqi Yuan",
+        "Zhixuan Liang",
+        "Yiyang Huang",
+        "Anzhe Chen",
+        "Zixing Lei",
+        "Jie Zhang",
+        "Tao Zhang",
+        "Haoyang Li",
+        "Tong Zhang",
+        "Chenxi Xiao",
+        "Ziyuan Jiao",
+        "Qin Jin"
+      ],
+      "abstract": "Learning generalizable robot manipulation policies requires large-scale and diverse demonstration data. Egocentric human manipulation videos offer rich scene and task diversity, and prior work has shown that retargeting and rendering such videos into robot-format data can yield effective per-task policies at small scale. However, whether this approach can provide pretraining benefits for vision-language-action models at scale remains unexplored. We present \\textbf{Ego2Robot}, a scalable pipeline that converts egocentric human manipulation videos into robot training data through action retargeting, robot-arm visual synthesis, and multi-level quality curation. Ego2Robot supports both curated datasets and in-the-wild videos, producing 18,561 hours of robot training data spanning 15 robot morphologies, making it the largest ego-to-robot dataset to date. To evaluate generalization, we extend RoboTwin2.0 with disentangled perturbation axes covering visual appearance, scene layout, embodiment morphology, and task semantics. Experiments show that joint pretraining on Ego2Robot-synthesized and robot data consistently improves out-of-distribution generalization across multiple perturbation types, with benefits validated on real-robot deployment. Project page: https://www-ye.github.io/ego2robot_blog/",
+      "published": "2026-08-03T17:52:26Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02580",
+      "pdf_url": "https://arxiv.org/pdf/2608.02580",
+      "summary_zh": "现有方法仅在小规模上验证了将人类视频重定向为机器人数据的可行性，大规模预训练效果尚属空白。Ego2Robot提出可扩展流水线，通过动作重定向、视觉合成和多级质量筛选，将人类视频转化为覆盖15种机器人形态的18,561小时训练数据。联合预训练显著提升多种分布外泛化能力，并已在真实机器人部署中验证。",
+      "summary_en": "Existing methods only validate retargeting human videos to robot data at small scale, leaving large-scale pretraining benefits unexplored. Ego2Robot introduces a scalable pipeline with action retargeting, robot-arm visual synthesis, and multi-level curation, producing 18,561 hours of data across 15 robot morphologies. Joint pretraining consistently improves out-of-distribution generalization across multiple perturbation types, validated on real-robot deployment.",
+      "highlights_zh": [
+        "最大规模人类到机器人数据流水线",
+        "18,561小时数据覆盖15种机器人形态",
+        "联合预训练提升多种分布外泛化"
+      ]
+    },
+    {
+      "id": "2608.02571",
+      "title": "Situation Aware Frontier Prioritization for Quadruped Search and Rescue",
+      "authors": [
+        "Kevin Farias",
+        "Santiago Martin",
+        "Barbara Flores",
+        "Vinicio Melgar",
+        "Igor Nunes",
+        "Hiago Sodre",
+        "Pablo Moraes",
+        "Ricardo B. Grando"
+      ],
+      "abstract": "Quadruped robots are a promising platform for search and rescue missions because they can navigate cluttered indoor environments that may be restrictive for wheeled systems. However, in unknown rescue scenarios, autonomous exploration must balance map expansion with the likelihood of finding victims, which is not explicitly addressed by clas- sical frontier selection strategies. This paper presents a situation aware frontier prioritization method for single robot quadruped search and rescue. The proposed approach preserves the frontier exploration framework, but extends frontier ranking with information gain, observation deficit, rescue relevance, terrain penalty, and travel cost. The method is eval- uated in Gazebo simulation with a quadruped robot in two indoor rescue scenarios with different levels of difficulty. The first scenario is used as a sanity check, while the second introduces stronger clutter and frontier ambiguity. Experimental results show that all methods perform reliably in a simple scenario, whereas in a complex scenario is different. In that setting, the proposed method achieves the highest completion rate and the highest victim recovery among the evaluated approaches. These results indicate that situation aware frontier prioritization is beneficial when frontier choice becomes nontrivial and rescue utility must be balanced against generic exploration objectives.",
+      "published": "2026-08-03T17:48:16Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.02571",
+      "pdf_url": "https://arxiv.org/pdf/2608.02571",
+      "summary_zh": "四足机器人在未知搜救环境中自主探索需平衡地图扩展与受害者发现，而经典前沿选择策略未显式考虑此问题。本文提出一种情境感知的前沿优先级方法，在前沿排序中融合信息增益、观测缺失、救援相关性、地形惩罚和行进成本。在Gazebo仿真中，该方法在复杂场景下取得最高完成率和受害者恢复率，表明情境感知优先级在非平凡前沿选择中具有优势。",
+      "summary_en": "Quadruped robots face the challenge of balancing map expansion with victim discovery in unknown search and rescue scenarios, which classical frontier selection strategies fail to address explicitly. This paper proposes a situation-aware frontier prioritization method that extends frontier ranking with information gain, observation deficit, rescue relevance, terrain penalty, and travel cost. Evaluated in Gazebo simulations, the method achieves the highest completion rate and victim recovery in complex scenarios, demonstrating its benefit when frontier choice becomes nontrivial.",
+      "highlights_zh": [
+        "融合救援相关性的前沿排序",
+        "复杂场景完成率与救援率最高",
+        "适用于四足机器人搜救任务"
+      ]
+    }
+  ]
+}
