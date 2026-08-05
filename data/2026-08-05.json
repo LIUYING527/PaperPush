@@ -1,0 +1,303 @@
+{
+  "date": "2026-08-05",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.04007",
+      "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
+      "authors": [
+        "Changle Qu",
+        "Sunhao Dai",
+        "Hengyi Cai",
+        "Yuqi Zhou",
+        "Xinran Chen",
+        " Simon",
+        "Jun Xu"
+      ],
+      "abstract": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
+      "published": "2026-08-04T17:59:21Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.04007",
+      "pdf_url": "https://arxiv.org/pdf/2608.04007",
+      "summary_zh": "工具集成推理（TIR）中现有强化学习方法依赖轨迹级监督，难以在长程工具交互场景中进行细粒度信用分配。TurnSight提出回合级事后自我蒸馏框架，通过执行条件的事后视角构建多视界监督，并利用跨视界方向一致性筛选可靠信号，再跨兄弟轨迹归一化后自适应调制RL优势。在三个基准上的实验验证了TurnSight的有效性，为TIR提供了一种无需地面真值答案的密集监督新范式。",
+      "summary_en": "Tool-Integrated Reasoning (TIR) suffers from coarse trajectory-level supervision in reinforcement learning, limiting credit assignment in long-horizon tool interactions. TurnSight introduces a turn-level hindsight self-distillation framework that derives supervision from execution-conditioned hindsight views with multiple lookahead horizons, selects reliable signals via cross-horizon directional agreement, and normalizes them across sibling rollouts to adaptively modulate RL advantages. Extensive experiments on three benchmarks demonstrate its effectiveness, offering a dense supervision paradigm for TIR without relying on ground-truth answers.",
+      "highlights_zh": [
+        "回合级事后自我蒸馏新框架",
+        "三基准验证有效性，超越基线",
+        "无需地面真值，适用长程TIR"
+      ]
+    },
+    {
+      "id": "2608.04001",
+      "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+      "authors": [
+        "Mohsen Hariri",
+        "Weicong Chen",
+        "Nahal Shahini",
+        "Vikash Singh",
+        "Kai Ye",
+        "Amirhossein Samandar",
+        "Debargha Ganguly",
+        "Sreehari Sankar",
+        "Yanyan Zhang",
+        "Shouren Wang",
+        "Jerry Peng",
+        "Biyao Zhang",
+        "Michael Hinczewski",
+        "Vipin Chaudhary"
+      ],
+      "abstract": "Large language models can solve substantially harder reasoning problems with more inference-time compute. The term \"test-time scaling,\" however, now covers diverse inference algorithms that extend deliberation along a single trajectory, sample completed candidates and aggregate them through voting or verification, or search over unfinished partial states. These algorithms differ in their statistical structure, compute accounting, and failure modes. Treating these procedures as interchangeable under a single scalar \"budget,\" or reporting accuracy without the inference protocol that produced it, makes results difficult to compare across studies. We develop a systematic account of test-time scaling along three axes. First, we formalize test-time scaling as budgeted inference over the implicit prefix tree of an autoregressive model and distinguish three structural regimes: single-trajectory sequential scaling, leaf-level scaling with terminal reduction, and prefix-level scaling. Second, we treat the evaluated object as the entire inference system and develop evaluation principles that separate end-to-end system performance from candidate-bank diagnostics. We introduce an evaluation profile whose coordinates and simple functionals recover or bound common repeated-sampling metrics, and prescribe protocol-matched reporting of compute and uncertainty. Third, we specify reproducibility requirements for inference protocols, distinguishing exact replay from distributional reproducibility and identifying the artifacts needed to support each. We also organize the open-weight reasoning ecosystem by model-side and interface mechanisms, apply these principles to broad-knowledge, symbolic-reasoning, and competition-mathematics benchmarks, and assemble over 2 billion full reasoning traces for release with progressively richer verifier and token-level signals.",
+      "published": "2026-08-04T17:57:20Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.04001",
+      "pdf_url": "https://arxiv.org/pdf/2608.04001",
+      "summary_zh": "测试时扩展（test-time scaling）在推理大模型中涵盖多种算法，但缺乏统一框架导致结果难以比较。本文沿三条轴系统化该领域：形式化预算推理的三种结构范式、提出区分端到端系统性能与候选库诊断的评估原则、明确推理协议的可复现性要求。研究还组织了开放权重推理生态，发布超过20亿条推理轨迹，为可复现的测试时扩展研究提供基础。",
+      "summary_en": "Test-time scaling in reasoning LLMs encompasses diverse inference algorithms, yet the lack of a unified framework makes results hard to compare across studies. We systematically formalize this field along three axes: distinguishing three structural inference regimes, proposing evaluation principles that separate end-to-end system performance from candidate-bank diagnostics, and specifying reproducibility requirements for inference protocols. We also organize the open-weight reasoning ecosystem and release over 2 billion full reasoning traces, providing a foundation for reproducible test-time scaling research.",
+      "highlights_zh": [
+        "统一测试时扩展三轴框架",
+        "发布20亿条推理轨迹数据",
+        "明确推理协议可复现性要求"
+      ]
+    },
+    {
+      "id": "2608.03990",
+      "title": "Assessment of Conditional Diffusion Model for Synthetic Histopathology Image Generation",
+      "authors": [
+        "Seyed Kahaki",
+        "Shijie Li",
+        "Weijie Chen",
+        "Nicholas Petrick"
+      ],
+      "abstract": "Synthetic histopathology image generation has emerged as an approach that may address data scarcity in computational pathology, yet current evaluation methodologies may not fully assess synthetic data quality for medical applications. This work investigates and addresses limitations in existing evaluation metrics, investigating an approach for assessing synthetic histopathology image quality through domain-specific metrics and downstream task validation. We show that conventional synthetic data evaluation metrics such as Frechet Inception Distance (FID) and Inception Score (IS) may have limitations when applied to histopathology images due to their reliance on ImageNet-pretrained feature extractors. To address these limitations, we propose for consideration modified FID and IS approaches utilizing foundation models pretrained on digital pathology datasets, supplemented by precision-recall based metrics as part of an additional quality assessment. Using conditional denoising diffusion models trained on four benchmark datasets, with a two-step training approach, we generated synthetic datasets with systematically varied quality characteristics. We also measured the correlation between the synthetic data quality metrics with downstream nuclei segmentation performance using common metrics including the aggregated Jaccard index (AJI+) and the Dice coefficient. The study results suggest that pathology-specific metrics may provide improved discriminative power. Specifically, the modified Inception Score indicates higher correlation with downstream task performance (r=0.6096 with AJI+, p=0.0122), compared to the original IS (r=0.0708, p=0.7944). Our observations indicate that increasing the variety of generated training data has a higher positive correlation with segmentation model performance than improving the visual fidelity of individual generated images.",
+      "published": "2026-08-04T17:51:40Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03990",
+      "pdf_url": "https://arxiv.org/pdf/2608.03990",
+      "summary_zh": "合成组织病理学图像生成可缓解计算病理学中的数据稀缺，但现有评估指标（如FID和IS）因依赖ImageNet预训练特征提取器而存在局限。本文提出利用病理学预训练基础模型改进FID和IS，并结合精确率-召回率指标，通过条件扩散模型生成不同质量的数据集进行验证。结果表明病理特异性指标与下游分割性能相关性更高，且增加训练数据多样性比提升单图视觉保真度更有助于模型性能。",
+      "summary_en": "Synthetic histopathology image generation addresses data scarcity in computational pathology, but conventional metrics like FID and IS are limited by ImageNet-pretrained feature extractors. This work proposes pathology-specific modified FID and IS using foundation models pretrained on digital pathology, supplemented by precision-recall metrics, and validates them via conditional diffusion models and downstream nuclei segmentation. Results show pathology-specific metrics correlate better with downstream performance, and increasing data diversity improves segmentation more than visual fidelity.",
+      "highlights_zh": [
+        "提出病理特异性评估指标",
+        "改进IS与AJI+相关性r=0.61",
+        "多样性比视觉保真度更关键"
+      ]
+    },
+    {
+      "id": "2608.03967",
+      "title": "Information-Geometric Forward Policy Training in GFlowNets",
+      "authors": [
+        "Yordan Raykov",
+        "Rodrigo Veiga"
+      ],
+      "abstract": "Generative Flow Networks (GFlowNets) have emerged as a flexible framework for amortised inference over discrete and mixed discrete-continuous objects, requiring only an unnormalised target density specified through a reward. In this work, we formulate forward-policy training in GFlowNets through the information geometry of the induced trajectory sampler. Treating the forward policy as an induced trajectory sampler, we show that its intrinsic first-order geometry is given by the Fisher-Rao metric of the trajectory family, and that the associated natural gradient provides the canonical local update whenever the corresponding Fisher information is computable or accurately approximable. We derive an exact decomposition of the trajectory Fisher into per-step conditional second moments, which clarifies when temporal score interactions vanish and when dense couplings remain under shared parameterisation. This leads to three computational regimes: settings with tractable exact Fisher information, settings where Monte Carlo estimators of the expected Fisher are sufficient, and structure-exploitable settings in which target locality or factorisation yields accurate approximations of the Fisher expectation. In the latter case, graphical-model tools such as exact marginalisation, separator methods, and belief propagation provide principled surrogates for natural-gradient updates. The resulting framework turns target structure into optimisation geometry and yields a tractable route to structure-aware forward-policy training in GFlowNets. We illustrate the framework empirically through examples comparing convergence and exploration behaviour under Riemannian and Euclidean optimisation.",
+      "published": "2026-08-04T17:34:14Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03967",
+      "pdf_url": "https://arxiv.org/pdf/2608.03967",
+      "summary_zh": "GFlowNets作为灵活的摊销推断框架，仅需未归一化奖励密度即可对离散及混合对象进行采样，但其前向策略训练缺乏几何指导。本文通过信息几何视角，将前向策略视为轨迹采样器，揭示其内在Fisher-Rao度量，并推导出自然梯度更新及其精确分解，提出三种计算机制（精确Fisher、蒙特卡洛估计、结构利用）。该框架将目标结构转化为优化几何，实现结构感知的训练，实证表明在收敛性和探索行为上优于欧几里得优化。",
+      "summary_en": "GFlowNets provide a flexible framework for amortized inference over discrete and mixed objects using only unnormalized rewards, yet forward-policy training lacks geometric guidance. This work formulates forward-policy training via information geometry, showing the induced trajectory sampler's intrinsic Fisher-Rao metric and deriving natural-gradient updates with an exact trajectory-Fisher decomposition, yielding three computational regimes from exact to structure-exploitable approximations. The framework turns target structure into optimization geometry, enabling structure-aware training with improved convergence and exploration empirically over Euclidean optimization.",
+      "highlights_zh": [
+        "信息几何视角统一GFlowNet训练",
+        "导出轨迹Fisher精确分解",
+        "结构感知自然梯度提升收敛性"
+      ]
+    },
+    {
+      "id": "2608.04010",
+      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "authors": [
+        "Yang Yang",
+        "Qinyu Zhao",
+        "Mouxiang Chen",
+        "Xiaohui Li",
+        "Lixin Gu",
+        "Wenhai Wang",
+        "Hongjie Zhang",
+        "Wenwei Zhang"
+      ],
+      "abstract": "Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computation allocation between the Vision Transformer and the Large Language Model components, limiting task-specific optimization. To address this, we introduce the Parallel Vision-Language (ParVL) scaling framework for MLLMs, which scales parallel computation by reusing the existing ViT and LLM backbone parameters across multiple vision and language branches. This framework raises a central question: given a fixed backbone parameter budget, how should additional shared-backbone computation be allocated between the vision and language modalities? We instantiate each parallel computational stream with branch-specific prefix parameters over a shared backbone, and train the entire model end-to-end via full-parameter supervised fine-tuning on roughly 13B tokens. We systematically study the computation-allocation trade-off between the ViT encoder and LLM decoder. ParVL improves overall multimodal performance over same-recipe single-branch baselines, and the best evaluated vision--language allocation varies across tasks. Code is available at https://github.com/YangYangGirl/ParVL.",
+      "published": "2026-08-04T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.04010",
+      "pdf_url": "https://arxiv.org/pdf/2608.04010",
+      "summary_zh": "现有MLLM扩展策略通常扩大模型参数或顺序推理计算，导致高内存或延迟，且无法灵活调整视觉与语言组件间的固定计算分配。ParVL框架通过复用现有ViT和LLM骨干参数，在多个视觉和语言分支上并行扩展计算，并用分支特定前缀参数实例化每个并行流，实现端到端全参数微调。ParVL在约13B令牌上训练，优于同配方单分支基线，且最佳视觉-语言计算分配因任务而异，展示了任务特定优化的潜力。",
+      "summary_en": "Existing scaling strategies for MLLMs expand model parameters or sequential inference compute, incurring high memory/latency and failing to adjust the fixed computation allocation between vision and language components. ParVL introduces a parallel scaling framework that reuses ViT and LLM backbone parameters across multiple branches with branch-specific prefixes, trained end-to-end on ~13B tokens. ParVL outperforms same-recipe single-branch baselines, and the optimal vision-language compute allocation varies across tasks, enabling task-specific optimization.",
+      "highlights_zh": [
+        "并行复用骨干参数扩展计算",
+        "优于单分支基线，分配因任务而异",
+        "支持任务特定视觉-语言计算分配"
+      ]
+    },
+    {
+      "id": "2608.04009",
+      "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
+      "authors": [
+        "Zhenran Wang",
+        "Zhonghan Bian",
+        "Jinsong Li",
+        "Zhangyang Qi"
+      ],
+      "abstract": "Large language models (LLMs), and the agents built on top of them, are now benchmarked heavily on whether they can finish a task -- fix a bug, drive a browser, operate a GUI. A complementary social ability, namely how well a model understands and forecasts the way real social events unfold, has barely been measured. We introduce SocietyBench, an end-to-end benchmark that takes a one-line event topic, collects Web news and social-media posts across five platforms, distills them into a date-indexed timeline that keeps factual events and a public-opinion layer separate, and then turns every cutoff date on that timeline into an audited bank of forecasting questions. Questions are scored on two orthogonal 100-point axes: probability calibration and temporal accuracy. Before any model sees a timeline, a three-phase procedure replaces every named entity and shifts every date by a per-event constant, turning a real arc into a counterfactual social world -- structurally identical to what happened, but stripped of the surface labels a model could match against pre-training memory. On five heterogeneous events and 125 prediction points in Chinese and English editions, the strongest of six frontier LLMs reaches only 75.0 out of 100, against a trivial anchor of 50. The two axes come apart: a model can be calibration-strong but time-weak, or the reverse. Three agent frameworks built on a shared base model fail to improve on that base, and two model-free heuristics trail every LLM. Per-event gaps reach 21.4 points on a single axis, which is our main argument for evaluating on several events rather than one. All anonymized timelines, question banks, ground truth, and scoring code are released.",
+      "published": "2026-08-04T17:59:56Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.04009",
+      "pdf_url": "https://arxiv.org/pdf/2608.04009",
+      "summary_zh": "现有LLM基准过度聚焦任务完成能力，缺乏对社会事件动态理解与预测的评估。SocietyBench通过多平台数据构建时间线，并采用实体替换和日期偏移生成反事实社会世界，以双轴评分衡量模型的预测能力。最强模型仅得75分，且校准与时间准确性可分离，多事件评估揭示显著性能差距，为未来研究提供基准。",
+      "summary_en": "Existing LLM benchmarks focus on task completion, neglecting the ability to understand and forecast real-world social dynamics. SocietyBench constructs date-indexed timelines from multi-platform data and applies entity/date perturbation to create counterfactual social worlds, scoring models on probability calibration and temporal accuracy. The best model scores only 75/100, with the two axes dissociating and large per-event gaps, highlighting the need for multi-event evaluation.",
+      "highlights_zh": [
+        "反事实社会世界生成",
+        "最强模型仅75分",
+        "多事件评估必要性"
+      ]
+    },
+    {
+      "id": "2608.03991",
+      "title": "Perceptual Anchoring: Prototype-Guided Text Calibration for Training-free Open-Vocabulary Semantic Segmentation",
+      "authors": [
+        "Wanli Ma",
+        "Jiangwen Lu",
+        "Qinmu Peng",
+        "Xinge You"
+      ],
+      "abstract": "Training-free open-vocabulary semantic segmentation (OVSS) partitions an image into semantically distinct regions based on arbitrary text descriptions, without learning any additional parameters. However, existing methods typically focus on improving visual representations while treating text embeddings that encode only generic category concepts as fixed classification references. The resulting semantic gap between these generic concepts and the visual representations that capture the specific appearances of target instances often causes incomplete masks and erroneous predictions in non-target regions. Inspired by the symbol-percept correspondence underlying perceptual anchoring, we propose Prototype-Guided Text Calibration (PTC) for training-free OVSS. In the Perceiving stage, PTC selects reliable visual evidence based on initial matching scores to construct category-specific visual prototypes. In the Anchoring stage, PTC uses these prototypes to calibrate their corresponding text embeddings, with the calibration strength adaptively adjusted based on the amount of visual evidence. Consequently, the calibrated text embeddings align more accurately with instance-specific visual representations while preserving generic category semantics and open-vocabulary generalization. Moreover, PTC requires neither additional training nor external models and can serve as a plug-and-play module for existing methods. Extensive experiments across eight benchmarks show that PTC significantly enhances the performance of six representative methods and yields more complete and accurate segmentation results. These results validate PTC as a simple and effective approach to improving visual-text alignment.",
+      "published": "2026-08-04T17:52:13Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03991",
+      "pdf_url": "https://arxiv.org/pdf/2608.03991",
+      "summary_zh": "训练-free开放词汇语义分割中，通用文本嵌入与实例视觉特征存在语义鸿沟，导致分割不完整和误判。本文提出原型引导文本校准（PTC），通过感知阶段构建类别视觉原型，并在锚定阶段自适应校准文本嵌入，无需额外训练或外部模型。PTC作为即插即用模块，在八个基准上显著提升六种现有方法性能，生成更完整准确的分割结果。",
+      "summary_en": "Training-free open-vocabulary semantic segmentation suffers from a semantic gap between generic text embeddings and instance-specific visual features, causing incomplete masks and errors. This paper proposes Prototype-Guided Text Calibration (PTC), which constructs visual prototypes in a perceiving stage and adaptively calibrates text embeddings in an anchoring stage, requiring no training or external models. As a plug-and-play module, PTC significantly boosts six existing methods across eight benchmarks, yielding more complete and accurate segmentation results.",
+      "highlights_zh": [
+        "原型引导文本校准，无需训练",
+        "八基准提升六方法性能",
+        "即插即用，保持开放词汇泛化"
+      ]
+    },
+    {
+      "id": "2608.03974",
+      "title": "JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion",
+      "authors": [
+        "Yicheng Xiao",
+        "Wenxun Dai",
+        "Xinran Qin",
+        "Lin Song",
+        "Maoquan Zhang",
+        "Hang Xu",
+        "Yukang Chen",
+        "Yitong Li",
+        "Guohui Zhang",
+        "Yuan Zhang",
+        "Xuying Zhang",
+        "Tommy Zhang",
+        "Jianlong Yuan",
+        "Peihao Li",
+        "Shuai Lu",
+        "Siming Fu",
+        "Chuyang Zhao",
+        "Xin Han",
+        "Jie Huang",
+        "Wenbo Li",
+        "Guoqing Ma",
+        "Wei Huang",
+        "Xiaojuan Qi",
+        "Haoyang Huang",
+        "Nan Duan"
+      ],
+      "abstract": "Real-time video editing requires low-latency causal generation with bounded computational resources while preserving source fidelity and long-term temporal consistency. We present JoyAI-Video-Edit, a 16B-parameter autoregressive diffusion framework for real-time, open-ended video editing without access to future frames or a predefined video duration. Our method combines chunk-wise autoregressive adaptation, Source-Anchored Distribution Matching Distillation (SA-DMD), and Long-Horizon Autoregressive Distillation to reduce train--inference mismatch, preserve source fidelity during two-step generation, and mitigate accumulated temporal drift. Extensive automatic and human evaluations show that JoyAI-Video-Edit substantially outperforms existing streaming editors and remains competitive with strong offline systems on both short and long videos. The complete system achieves end-to-end 720p video editing at approximately 30 FPS on a single Nvidia B200 GPU. Code is available at https://github.com/jd-opensource/JoyAI-Video-Edit.",
+      "published": "2026-08-04T17:40:48Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03974",
+      "pdf_url": "https://arxiv.org/pdf/2608.03974",
+      "summary_zh": "实时视频编辑面临低延迟因果生成与保持源保真度和长期时间一致性的挑战。JoyAI-Video-Edit提出16B参数自回归扩散框架，结合分块自回归适应、源锚定分布匹配蒸馏和长时自回归蒸馏，实现无需未来帧和预定时长的开放式编辑。系统在单块B200 GPU上实现720p约30 FPS的端到端编辑，显著优于现有流式编辑器，并与强离线系统竞争。",
+      "summary_en": "Real-time video editing faces challenges of low-latency causal generation while preserving source fidelity and long-term temporal consistency. JoyAI-Video-Edit introduces a 16B-parameter autoregressive diffusion framework combining chunk-wise autoregressive adaptation, Source-Anchored Distribution Matching Distillation, and Long-Horizon Autoregressive Distillation to enable open-ended editing without future frames. The system achieves 720p editing at ~30 FPS on a single B200 GPU, substantially outperforming streaming editors and remaining competitive with offline systems.",
+      "highlights_zh": [
+        "自回归扩散+三重蒸馏创新",
+        "720p@30FPS单卡实时编辑",
+        "开源代码，支持开放时长编辑"
+      ]
+    },
+    {
+      "id": "2608.03978",
+      "title": "Stochastic Multiple Shooting Trajectory Optimization via Sequential Local Policy Evaluation",
+      "authors": [
+        "Ashwin Gupta",
+        "Joseph Moore"
+      ],
+      "abstract": "Stochastic single shooting trajectory optimization methods such as Model Predictive Path Integral control (MPPI) have been widely adopted in robotics due to their ability to reason about probabilistic dynamics and provide solutions where model gradients are noisy, costly to evaluate, or unavailable. However, satisfaction of terminal constraints when shooting over long action sequences is often sample inefficient, requiring a large number of iterations for convergence. In this paper, we present a stochastic multiple shooting method that optimizes short control action sequences connected via local feedback policies to improve sample efficiency and convergence to a terminal set. Additionally, we show that we are able to synthesize approximate system Jacobians purely from rollouts, making the method suitable for model-based reinforcement learning with black-box dynamics. We demonstrate the algorithm has improved sample efficiency and terminal set convergence for three nonlinear, underactuated optimization problems: a classic cartpole swingup task with analytical dynamics, a cartpole swingup task with learned neural network dynamics, and a VTOL quadplane performing a high angle-of-attack, precision post-stall landing maneuver.",
+      "published": "2026-08-04T17:43:21Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03978",
+      "pdf_url": "https://arxiv.org/pdf/2608.03978",
+      "summary_zh": "随机单点射击轨迹优化方法（如MPPI）在长动作序列下终端约束满足的样本效率低，收敛慢。本文提出随机多点射击方法，通过短控制序列连接局部反馈策略，并利用rollout合成近似系统雅可比矩阵，提升样本效率与终端集收敛。在三个非线性欠驱动问题上验证了改进的样本效率和终端集收敛性，适用于黑箱动力学模型。",
+      "summary_en": "Stochastic single shooting methods like MPPI suffer from sample inefficiency and slow convergence for terminal constraints over long action sequences. This paper introduces a stochastic multiple shooting method that optimizes short control sequences connected via local feedback policies and synthesizes approximate Jacobians from rollouts, improving sample efficiency and terminal set convergence. The approach is validated on three nonlinear underactuated problems, including a post-stall landing maneuver, demonstrating broad applicability to black-box dynamics.",
+      "highlights_zh": [
+        "多点射击+局部反馈策略",
+        "样本效率提升，终端收敛快",
+        "适用于黑箱动力学与强化学习"
+      ]
+    },
+    {
+      "id": "2608.03938",
+      "title": "Bimanual Manipulation Within an 8 GB Budget: Zero-Copy Sensing and Quantized ACT on an Entry-Level Jetson",
+      "authors": [
+        "Ekansh Singh",
+        "Eva Samuel",
+        "Alessandra Reneau",
+        "Ryan Schmeelk",
+        "Yashvi Gandhi"
+      ],
+      "abstract": "Bimanual manipulation policies trained with imitation learning are typically evaluated on workstation or datacenter-class GPUs, leaving the cost of deploying them on embedded hardware largely uncharacterized. We present a bimanual SO-101 system running entirely on an NVIDIA Jetson Orin Nano Super (8 GB), the entry-level tier of NVIDIA's embedded line, using a desktop GPU (RTX 3070) only for offline training, evaluated on pick-and-place of a deformable beanbag. First, we build a GStreamer capture pipeline backed by NVMM buffers that removes redundant host-device copies from three-camera sensing. Contrary to expectation, the conventional path fit the memory budget and dropped no frames; what zero-copy sensing recovers is CPU headroom (peak single-core utilization 98.0% to 77.0%) and worst-case latency (117.31 ms to 101.52 ms). Second, we train ACT and Diffusion Policy on identical demonstrations, each at its own reference budget (100k gradient steps for ACT, 200k for Diffusion Policy). ACT converges to a task-competent policy (19/20 trials) while Diffusion Policy does not converge to a usable one (0/10) even at twice the step count, which we attribute to differing convergence costs rather than an accuracy ceiling. Third, we convert ACT to TensorRT. FP16 reduces mean inference latency from 114.02 ms to 17.93 ms (6.4x) and INT8 to 12.65 ms (9.0x), with task success preserved at all three precisions (19/20, 18/20, 19/20). We report two findings not previously documented for ACT: TensorRT's general-purpose INT8 calibration quantizes the ResNet18 backbone but accepts zero of 145 transformer layers, explaining INT8's negligible size reduction over FP16 (0.9%) despite a further 28% latency gain; and the need for quantization is conditional on ACT's action-chunking configuration, feasible in full precision at n_action_steps = 100 but not at the per-step re-prediction temporal ensembling requires.",
+      "published": "2026-08-04T17:09:41Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.03938",
+      "pdf_url": "https://arxiv.org/pdf/2608.03938",
+      "summary_zh": "双机械臂模仿学习策略通常在高端GPU上评估，其在入门级嵌入式设备上的部署成本尚未被充分研究。本文在Jetson Orin Nano Super (8GB)上构建了零拷贝GStreamer感知流水线，并训练ACT与扩散策略，将ACT转换为TensorRT FP16/INT8精度。ACT在19/20次试验中成功，FP16推理延迟降低6.4倍，INT8降低9.0倍，且发现TensorRT INT8量化仅作用于ResNet18骨干，不量化Transformer层。",
+      "summary_en": "Bimanual manipulation policies trained with imitation learning are typically evaluated on high-end GPUs, leaving deployment costs on embedded hardware uncharacterized. This work builds a zero-copy GStreamer sensing pipeline on an 8GB Jetson Orin Nano Super, trains ACT and Diffusion Policy, and converts ACT to TensorRT FP16/INT8. ACT achieves 19/20 task success, FP16 reduces inference latency 6.4x and INT8 9.0x, with the novel finding that TensorRT INT8 calibration skips all transformer layers.",
+      "highlights_zh": [
+        "零拷贝感知+量化ACT部署",
+        "INT8延迟降9.0倍，成功率19/20",
+        "揭示INT8不量化Transformer层"
+      ]
+    }
+  ]
+}
