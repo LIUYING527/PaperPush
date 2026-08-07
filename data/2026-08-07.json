@@ -1,0 +1,306 @@
+{
+  "date": "2026-08-07",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.06377",
+      "title": "Learning When to Trust via Selective Context Preference Optimization",
+      "authors": [
+        "Xian Sun",
+        "Wei Chow",
+        "Yingshuo Wang",
+        "Junhao Liu",
+        "Wei Gao",
+        "Qing Wu",
+        "Lingdong Kong"
+      ],
+      "abstract": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be judged on selective trust, not on resistance alone.",
+      "published": "2026-08-06T17:59:58Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06377",
+      "pdf_url": "https://arxiv.org/pdf/2608.06377",
+      "summary_zh": "语言模型容易受外部信号误导，但完全忽略上下文又会导致模型在有用场景下失效，因此需要选择性信任。本文提出MIST基准和SC2W指标来量化误导影响，并开发SCOPE方法，通过平衡四类条件的DPO优化来提升模型的选择性信任能力。实验表明SCOPE显著降低SC2W，同时保持模型在干净、正确或无关上下文下的准确性。",
+      "summary_en": "Language models are susceptible to misleading external signals, yet ignoring all context makes them useless when context is trustworthy, motivating selective trust. We introduce MIST benchmark and SC2W metric to quantify this susceptibility, and propose SCOPE which mines failure pairs and optimizes a DPO objective balanced across four conditions. SCOPE substantially reduces SC2W on open-source models while preserving accuracy on clean, correct, or irrelevant contexts.",
+      "highlights_zh": [
+        "提出选择性信任范式与SC2W指标",
+        "SCOPE显著降低SC2W且保持准确率",
+        "MIST基准覆盖四类匹配条件"
+      ]
+    },
+    {
+      "id": "2608.06366",
+      "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+      "authors": [
+        "Soorya Ram Shimgekar",
+        "Michelle Hu",
+        "Dorisa Shehi",
+        "Daniel Kang",
+        "Roy Ka-Wei Lee",
+        "Koustuv Saha",
+        "Christian Poellabauer",
+        "Christopher Lee",
+        "Sajeev Singh",
+        "Piyum Zonooz",
+        "Navin Kumar",
+        "Zeeshan Ahmed",
+        "Priyadarshini Kachroo"
+      ],
+      "abstract": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.",
+      "published": "2026-08-06T17:57:37Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06366",
+      "pdf_url": "https://arxiv.org/pdf/2608.06366",
+      "summary_zh": "电子健康记录（EHR）特征工程在临床研究中耗时巨大，尤其在心力衰竭领域需整合碎片化数据与指南推理。本文提出Nimblemind多智能体系统（nMAS），一种基于证据和评分标准的自动化特征工程流水线，在500条模拟记录上生成132个结构化及70个聚合特征。加入特征后，HFrEF和HFpEF表型识别AUROC分别提升至0.963和0.910，且特征审计得分达81.5%，展示了自动化可审计特征工程的可行性，但需外部验证。",
+      "summary_en": "EHR feature engineering is a major bottleneck in clinical AI, especially for heart failure requiring fragmented data integration and guideline-based reasoning. We developed nMAS, an evidence-linked, rubric-grounded multi-agent pipeline that automatically generates structured and aggregated features with provenance and auditability. On 500 dummy records, it improved HFrEF AUROC from 0.895 to 0.963 and HFpEF from 0.870 to 0.910, with independent rubric scoring at 81.5%, demonstrating feasibility though external validation is needed.",
+      "highlights_zh": [
+        "多智能体证据链接特征工程",
+        "AUROC提升至0.963（HFrEF）",
+        "单中心模拟数据，需外部验证"
+      ]
+    },
+    {
+      "id": "2608.06362",
+      "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+      "authors": [
+        "Boning Li",
+        "Yu Chen",
+        "Longbo Huang"
+      ],
+      "abstract": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.",
+      "published": "2026-08-06T17:57:11Z",
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06362",
+      "pdf_url": "https://arxiv.org/pdf/2608.06362",
+      "summary_zh": "在不完美信息博弈中，评估两个智能体强弱需要大量对局，固定预算或朴素可选停止会导致成本浪费或置信度失效。本文提出AV-AIVAT，将方差缩减工具AIVAT与任意有效置信序列（CS）结合，通过仅基于历史数据的在线价值模型实现可认证的随时停止。实验表明，在95%置信水平下，原始结果所需对局数是AIVAT修正结果的74倍，同时提供精确有限样本认证与高效渐近筛选。",
+      "summary_en": "Evaluating which agent is stronger in imperfect-information games requires many costly games, and fixed-budget or naive optional stopping either wastes resources or invalidates confidence levels. We introduce AV-AIVAT, combining the variance-reduction tool AIVAT with anytime-valid confidence sequences, using an online value model that learns only from past games to enable certified early stopping. Results show a median 74x reduction in required hands at 95% confidence, with exact finite-sample certification via Empirical-Bernstein CS and efficient asymptotic screening via AsympCS.",
+      "highlights_zh": [
+        "任意有效停止+方差缩减",
+        "74倍对局数缩减",
+        "精确认证与渐近筛选分离"
+      ]
+    },
+    {
+      "id": "2608.06370",
+      "title": "The Bitter Lesson of Tool Calling",
+      "authors": [
+        "Ishan Patel",
+        "Sahil Sen",
+        "Elias Lumer",
+        "Vamse Kumar Subbiah"
+      ],
+      "abstract": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool calling across 14 language models on BFCL v4. In the programmatic tool calling paradigm, tools are exposed as typed Python stubs that the model invokes through code, with execution and results handled in a single agent turn. Programmatic tool calling matches or exceeds native JSON tool calling in 11 of 14 models on BFCL v4, with the GPT-5.6 family achieving a 10.6% improvement over the JSON tool calling baseline. Further, it matches or outperforms baseline in 13 of 14 models under parallel fan-out, and holds stable under context rot conditions where baseline degrades 2.3% on average. Our results demonstrate that programmatic tool calling is a viable and robust alternative to JSON tool calling, with performance tracking model capability across release generations.",
+      "published": "2026-08-06T17:58:32Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06370",
+      "pdf_url": "https://arxiv.org/pdf/2608.06370",
+      "summary_zh": "工具调用使LLM成为智能体，但程序化工具调用（PTC）与JSON工具调用在真实任务条件下的系统对比尚未开展。本研究在BFCL v4基准上，将工具暴露为类型化Python存根，通过代码调用并单轮处理执行结果，对14个模型进行实证比较。PTC在11/14模型中匹配或超越JSON基线，GPT-5.6系列提升10.6%，且在并行扇出和上下文退化场景下更稳健，证明其作为可行且鲁棒的替代方案。",
+      "summary_en": "Tool calling enables LLM agents, yet systematic comparison of programmatic tool calling (PTC) with JSON tool calling under real-world conditions is lacking. This work exposes tools as typed Python stubs invoked via code with single-turn execution, empirically benchmarking 14 models on BFCL v4. PTC matches or exceeds JSON baseline in 11/14 models, with GPT-5.6 family improving 10.6%, and remains robust under parallel fan-out and context rot, establishing PTC as a viable alternative.",
+      "highlights_zh": [
+        "代码即工具调用范式",
+        "GPT-5.6提升10.6%",
+        "鲁棒且适配多模型"
+      ]
+    },
+    {
+      "id": "2608.06352",
+      "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+      "authors": [
+        "Fanzhe Meng",
+        "Guoxin Chen",
+        "Jiale Zhao",
+        "Shuang Sun",
+        "Zhiyu Lin",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets disagreement within a heterogeneous solver pool, whereas contrastive solver calibration targets a designated strong-pass/weak-fail relation; both operationalize a solver-relative learnable zone anchored in demonstrated solvability. Using CalibForge, we construct 5,431 calibrated terminal tasks. Our ablations show that both strategies yield more effective supervision than authoring and validation alone or ordinary single-solver feedback. Models trained on the full collection achieve 32.58% and 47.57% on Terminal-Bench 2.0. The largest improvements over the corresponding base model reach 24.71 percentage points on Terminal-Bench 2.0, 27.68 points on SWE-bench Pro, and 30.04 points on Doc2Repo. Together, these results support solver-relative learnability as a practical target for constructing effective and transferable agent training data.",
+      "published": "2026-08-06T17:53:18Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06352",
+      "pdf_url": "https://arxiv.org/pdf/2608.06352",
+      "summary_zh": "训练终端智能体需要既可行又具有适当挑战性的可执行任务，但现有验证方法无法评估任务相对于求解器的难度。CalibForge提出通过多求解器校准和对比校准两种策略，基于求解器的实际行为自动合成并修正任务，使其处于求解器相关的可学习区间。基于该方法构建的5431个校准任务显著提升了模型在Terminal-Bench 2.0等基准上的性能，验证了求解器相对可学习性作为训练数据构建目标的有效性。",
+      "summary_en": "Training terminal agents requires executable tasks that are not only feasible but appropriately challenging, yet existing validation fails to assess task difficulty relative to a solver. CalibForge introduces multi-solver and contrastive solver calibration strategies that revise candidate tasks based on verified solver behavior, operationalizing a solver-relative learnable zone. Using 5,431 calibrated tasks, models achieve substantial gains on Terminal-Bench 2.0, SWE-bench Pro, and Doc2Repo, demonstrating the practical value of solver-relative learnability for agent training data.",
+      "highlights_zh": [
+        "求解器校准合成任务",
+        "Terminal-Bench提升24.71点",
+        "可迁移至多基准训练"
+      ]
+    },
+    {
+      "id": "2608.06311",
+      "title": "Does FLAIR super-resolution erase or hallucinate small white-matter lesions?",
+      "authors": [
+        "Zahra Khodakarami",
+        "Yue Li",
+        "Pulkit Khandelwal",
+        "John Detre",
+        "Sandhitsu Das",
+        "Christopher Brown",
+        "David Wolk",
+        "Paul Yushkevich"
+      ],
+      "abstract": "White matter hyperintensities (WMH), bright regions on Fluid-attenuated Inversion Recovery (FLAIR) scans are associated with cerebrovascular pathology and neurodegeneration. FLAIR is usually acquired with thick slices in clinical settings, giving it poor through-plane resolution. Super-resolution (SR) is a widely used method for recovering an isotropic volume from an anisotropic scan. Yet whether applying it prior to WMH segmentation preserves lesion content remains unknown: a model may erase small real lesions or hallucinate absent ones. We used 1-mm isotropic high-resolution (HR) FLAIR scans from 29 individuals in the ADNI cohort, each manually segmented for WMH by an expert. Then, we degraded each to simulated 3 and 5 mm through-plane acquisitions. Multi-contrast implicit neural representation (INR), a single-contrast self-supervised model (ECLARE), and cubic interpolation were used to upsample them onto the HR grid. WMH segmentation from a simulated thick slice and the original HR FLAIR set the floor and ceiling, respectively, for the per-lesion analysis. Of four WMH segmentation methods (WMH-SynthSeg, segcsvd, MARS-WMH, TrUE-Net), we ran the analysis under the most sensitive one to small lesions on HR (MARS-WMH) with the evaluation metrics of detection sensitivity, erasure rate (HR-detected lesions lost after reconstruction), and hallucination rate (predicted components absent from both the manual and HR segmentation). The dominant effect of SR was erasure of small real lesions, not hallucination, and it increased with slice thickness, though every reconstruction still improved lesion detection over the raw thick slice. ECLARE recovered small lesion signal best at both thicknesses, while the INR was no better than cubic interpolation.",
+      "published": "2026-08-06T17:26:01Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06311",
+      "pdf_url": "https://arxiv.org/pdf/2608.06311",
+      "summary_zh": "白质高信号（WMH）在临床FLAIR扫描中因层厚较厚而受限于平面外分辨率，超分辨率（SR）重建可能影响小病灶的检测。本研究利用ADNI队列的29例高分辨率FLAIR数据，模拟3mm和5mm厚层采集，比较多对比隐式神经表示（INR）、单对比自监督模型ECLARE和三次插值三种SR方法，并结合MARS-WMH分割进行逐病灶分析。结果表明SR的主要效应是消除真实小病灶而非产生幻觉，且随层厚增加而加剧；ECLARE在两种层厚下均最佳恢复小病灶信号，而INR不优于三次插值，提示SR用于WMH分割需谨慎评估病灶保留能力。",
+      "summary_eng": "White matter hyperintensities (WMH) on clinical FLAIR scans suffer from poor through-plane resolution, and super-resolution (SR) may erase or hallucinate small lesions. Using 29 high-resolution FLAIR scans from ADNI, we simulated 3mm and 5mm thick-slice acquisitions and compared multi-contrast INR, single-contrast ECLARE, and cubic interpolation, with per-lesion analysis under MARS-WMH segmentation. The dominant effect was erasure of small real lesions, increasing with slice thickness; ECLARE best preserved lesion signal, while INR was no better than cubic interpolation, highlighting the need for lesion-aware SR evaluation.",
+      "highlights_zh": [
+        "SR主要消除小病灶而非幻觉",
+        "ECLARE最佳恢复小病灶信号",
+        "INR不优于三次插值"
+      ]
+    },
+    {
+      "id": "2608.06307",
+      "title": "UQ-Loc: Uncertainty-Aware LiDAR Scene Coordinate Regression",
+      "authors": [
+        "Jacek Komorowski"
+      ],
+      "abstract": "LiDAR-based Scene Coordinate Regression (SCR) maps point clouds directly to 3D scene coordinates, enabling precise 6-DoF localisation without explicit map retrieval. However, existing methods produce deterministic predictions, discarding aleatoric uncertainty that could improve robustness and downstream decision-making. We present UQ-Loc, which extends the LightLoc architecture with an anisotropic Gaussian covariance head that predicts a full 3x3 positive-definite covariance matrix per voxel. Training uses a Negative Log-Likelihood (NLL) loss augmented with a kNN-based spatial smoothness regulariser, while inference employs a modified SC2-PCR solver with uncertainty-weighted seed scoring and a Mahalanobis-distance inlier test. We adopt Expected Calibration Error (ECE) as a principled metric for evaluating the quality of the predicted uncertainty. Experiments demonstrate that UQ-Loc achieves consistent improvement in 6-DoF localization accuracy while producing well-calibrated covariances.",
+      "published": "2026-08-06T17:23:17Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06307",
+      "pdf_url": "https://arxiv.org/pdf/2608.06307",
+      "summary_zh": "现有基于LiDAR的场景坐标回归方法仅输出确定性预测，忽略了可提升鲁棒性的偶然不确定性。UQ-Loc在LightLoc架构上扩展各向异性高斯协方差头，结合NLL损失与kNN平滑正则化训练，并采用改进的SC2-PCR求解器进行不确定性加权推理。实验表明UQ-Loc在提升6-DoF定位精度的同时，生成了校准良好的协方差预测。",
+      "summary_en": "Existing LiDAR-based scene coordinate regression methods produce deterministic predictions, discarding aleatoric uncertainty that could improve robustness. UQ-Loc extends LightLoc with an anisotropic Gaussian covariance head, trained via NLL loss with kNN smoothness regularization, and uses a modified SC2-PCR solver with uncertainty-weighted scoring and Mahalanobis inlier testing. Experiments show consistent accuracy improvements in 6-DoF localization while yielding well-calibrated covariances.",
+      "highlights_zh": [
+        "各向异性高斯协方差头建模不确定性",
+        "定位精度提升且协方差校准良好",
+        "适用于无地图检索的鲁棒定位"
+      ]
+    },
+    {
+      "id": "2608.06375",
+      "title": "$ω$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
+      "authors": [
+        "Zhe Li",
+        "Zhenzhe Zhang",
+        "Yangyang Wei",
+        "Wenjie Zhang",
+        "Xichen Yuan",
+        "Peiyuan Zhi",
+        "Gen Li",
+        "Xinying Guo",
+        "Fengjie Gao",
+        "Jianfei Yang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-action model for real-world humanoid concurrent loco-manipulation. Given a language instruction, current visual observation, and robot proprioceptive state, $ω$-0 directly predicts controller-compatible whole-body action latents for real-robot execution. Rather than reconstructing future videos, $ω$-0 learns compact future observation embeddings as a lightweight predictive objective, coupling latent visual foresight with diffusion-based whole-body action generation. The model supports egocentric RGB, exocentric RGB, and exocentric depth inputs, and leverages controller-based simulation replay to ground human/public visual-motion priors into robot-executable action latents. We further collect $ω$-HOME, a 40+ hour real-world household humanoid dataset with synchronized multi-view observations, whole-body SMPL motions, robot states, and action latents. Real-world experiments on 11 household tasks demonstrate that a single $ω$-0 model can produce smooth manipulate-while-moving behaviors and consistently outperform representative imitation learning, VLA, humanoid, and WAM baselines.",
+      "published": "2026-08-06T17:59:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06375",
+      "pdf_url": "https://arxiv.org/pdf/2608.06375",
+      "summary_zh": "人形机器人家庭任务常需同时移动与操作，但现有策略多将两者解耦，且世界模型偏向手臂或视频中心。本文提出ω-0，一种潜在预测全身世界动作模型，通过学习紧凑的未来观测嵌入作为轻量预测目标，并结合扩散模型直接生成控制器兼容的全身动作潜在变量，支持多视角输入和仿真回放。在11项真实家庭任务中，单一ω-0模型能生成平滑的边移动边操作行为，并持续优于多种代表性基线，展示了其在实际人形机器人并发移动操作中的有效性与通用性。",
+      "summary_en": "Humanoid household tasks often require concurrent loco-manipulation, yet existing policies typically decouple locomotion and manipulation, and world-action models remain arm-centric or video-centered. We propose ω-0, a latent predictive whole-body world-action model that learns compact future observation embeddings as a lightweight predictive objective and couples latent visual foresight with diffusion-based whole-body action generation, directly predicting controller-compatible action latents from language, vision, and proprioception. Real-world experiments on 11 household tasks show that a single ω-0 model produces smooth manipulate-while-moving behaviors and consistently outperforms representative baselines, demonstrating its effectiveness for real-world concurrent loco-manipulation.",
+      "highlights_zh": [
+        "潜在预测全身世界动作模型",
+        "11项任务中优于所有基线",
+        "支持多视角输入与仿真回放"
+      ]
+    },
+    {
+      "id": "2608.06374",
+      "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
+      "authors": [
+        "Junfeng Li",
+        "Junjie He",
+        "Zhide Zhong",
+        "Yangyang Zheng",
+        "Pingyue Sheng",
+        "Jiayu Dong",
+        "Ruixin Li",
+        "Haodong Yan",
+        "Jiaguan Zhu",
+        "Tianran Zhang",
+        "Runze Yu",
+        "Wen Chen",
+        "Liuqing Yang",
+        "Yuxiang Gao",
+        "Haoang Li"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-Specific control. First, we learn shared dynamics priors by training the vision-language model (VLM) with a future-prediction objective on cross-embodiment data, driving the shared query representation to capture object motion, contact, and interaction-induced scene changes. Second, an embodiment-specific Mixture-of-Experts (MoE) action head translates these shared dynamics priors into executable controls directly in each embodiment's native action space, without manually pre-aligning heterogeneous actions into a common format. This head shares attention layers to capture common temporal action structures, while its embodiment-specific feed-forward experts resolve the unique kinematic constraints and control semantics of distinct embodiments. As a generalist policy, our \\ourmethod achieves state-of-the-art performance across simulation and real-world evaluations, reaching 98.0% success on LIBERO, 59.25% on RoboCasa-GR1, and 89.02% on RoboTwin~2.0.",
+      "published": "2026-08-06T17:59:20Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06374",
+      "pdf_url": "https://arxiv.org/pdf/2608.06374",
+      "summary_zh": "跨具身机器人操作中，现有VLA模型未能充分利用共享动力学先验，且需大量人工预处理统一异构动作空间。本文提出DyPES-VLA，通过未来预测目标学习共享动力学先验，并采用具身专属MoE动作头直接在原生动作空间生成控制指令。该方法在LIBERO、RoboCasa-GR1和RoboTwin基准上均达到最先进性能，验证了跨具身泛化的有效性。",
+      "summary_en": "Cross-embodiment robot manipulation with VLA models suffers from underused dynamics priors and costly action-space alignment. DyPES-VLA learns shared dynamics priors via future prediction and employs an embodiment-specific Mixture-of-Experts action head to generate controls in native action spaces without manual preprocessing. It achieves state-of-the-art results on LIBERO (98.0%), RoboCasa-GR1 (59.25%), and RoboTwin 2.0 (89.02%), demonstrating strong cross-embodiment generalization.",
+      "highlights_zh": [
+        "共享动力学先验+具身专属MoE头",
+        "LIBERO达98.0%成功率",
+        "免人工动作对齐，跨具身泛化"
+      ]
+    },
+    {
+      "id": "2608.06364",
+      "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+      "authors": [
+        "George Grispos",
+        "Sajda Qureshi"
+      ],
+      "abstract": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nigerian mobile applications affects digital sovereignty, examined through platform transparency as a key indicator of user awareness and control. Using an interpretive approach, the research combines the forensic analysis of selected Android applications with contextual document analysis to identify AI features and evaluate disclosure practices. The findings show that AI is widely implemented in the applications, yet transparency about its use remains limited. A socio-economic analysis of Nigeria further shows an increasing dependence on consumer digital platforms, moderate AI awareness, and uneven patterns of interaction. By providing empirical evidence on AI transparency and platform practices, this study advances understanding of individual digital sovereignty and highlights challenges for protecting user control in AI-driven digital environments.",
+      "published": "2026-08-06T17:57:28Z",
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.06364",
+      "pdf_url": "https://arxiv.org/pdf/2608.06364",
+      "summary_zh": "尼日利亚电商移动应用广泛使用AI，但用户对数字技术的控制力下降，引发数字主权担忧。本研究采用解释性方法，结合Android应用取证分析与情境文档分析，以平台透明度为关键指标评估AI功能及其披露实践。研究发现AI应用普遍但透明度有限，揭示了个人数字主权面临的挑战，为保护用户控制权提供了实证依据。",
+      "summary_en": "The expansion of e-commerce mobile apps in Nigeria raises concerns about digital sovereignty due to fraud and reduced user control over AI-driven technologies. This research employs an interpretive approach combining forensic analysis of Android apps with contextual document analysis, using platform transparency as a key indicator to evaluate AI features and disclosure practices. Findings reveal widespread AI implementation but limited transparency, advancing understanding of individual digital sovereignty and highlighting challenges for protecting user control in AI-driven environments.",
+      "highlights_zh": [
+        "AI透明度实证评估",
+        "AI普遍但披露有限",
+        "聚焦尼日利亚数字主权"
+      ]
+    }
+  ]
+}
