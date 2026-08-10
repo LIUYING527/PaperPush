@@ -1,0 +1,282 @@
+{
+  "date": "2026-08-10",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.07460",
+      "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+      "authors": [
+        "Ananya Sahu",
+        "Mohit Bansal",
+        "Elias Stengel-Eskin"
+      ],
+      "abstract": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (RL). We instead propose CreativeInstruct, a scalable instruction-tuning method that teaches LLMs to balance creative, base-model-like generations with the quality of post-trained models, by learning to inject special [StartCreativity] spans that bias generation toward creativity. Furthermore, we introduce a structural diversity metric based on graph edit distance, which captures narrative level variation missed by purely lexical and semantic metrics. On narrative generation, CreativeInstruct matches or exceeds the diversity of both multi-model baselines and distilled variants of their outputs, without sacrificing quality or requiring multiple models at inference time. These results are mirrored in our human evaluation, where we find that annotators rate CreativeInstruct generations as more creative than the post-trained LLMs' generations in 70.3% of cases. We also show the benefits of creative models as a substrate for RL: GRPO applied to a CreativeInstruct checkpoint improves by ~4% on AMC and ~5% points on MATH over the same training applied to the post-trained checkpoint.",
+      "published": "2026-08-07T17:55:48Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07460",
+      "pdf_url": "https://arxiv.org/pdf/2608.07460",
+      "summary_zh": "后训练虽提升了大语言模型的能力，但会降低其输出多样性和创造力，影响需要创造性的任务。为此提出CreativeInstruct，一种可扩展的指令微调方法，通过注入特殊[StartCreativity]标记来平衡创造性与质量，并引入基于图编辑距离的结构多样性度量。该方法在叙事生成中匹配或超越多模型基线的多样性且不牺牲质量，并作为RL基底在AMC和MATH上分别提升约4%和5个百分点。",
+      "summary_en": "Post-training improves LLM capabilities but reduces output diversity and creativity, harming creative tasks. CreativeInstruct proposes a scalable instruction-tuning method that injects special [StartCreativity] spans to balance creativity and quality, plus a graph-edit-distance-based structural diversity metric. It matches or exceeds multi-model baselines in narrative diversity without quality loss, and boosts GRPO performance by ~4% on AMC and ~5% on MATH.",
+      "highlights_zh": [
+        "可扩展平衡质量与创造性的指令微调",
+        "叙事多样性匹配多模型且质量不降",
+        "提升RL性能，AMC+4%，MATH+5%"
+      ]
+    },
+    {
+      "id": "2608.07458",
+      "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+      "authors": [
+        "Gyuwan Kim",
+        "Cheoneum Park",
+        "Tao Yang"
+      ],
+      "abstract": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pareto frontier under low prefill latency constraints while maximizing accuracy by proposing CoinRAG (Contextualized Information Nugget KV Cache Reuse for Long-Context RAG). The name metaphorically reflects our core mechanism: much like assembling small tokens (or \"coins\") to accumulate a larger value, CoinRAG compositionally reuses offline-computed, fine-grained nugget caches to form a learned contextual representation efficiently in a more semantically relevant but compact manner. Specifically, instead of full-chunk encoding, CoinRAG identifies query-relevant semantic units within retrieved chunks through two-stage retrieval and seamlessly assembles their sliced KV representations with a chunk-level context. Extensive evaluations on LongBench multi-hop question answering tasks demonstrate that CoinRAG significantly reduces operational costs and outperforms the other baselines with a new Pareto frontier and an average 5.3% relative improvement in answer quality (F1) under a standard fast prefill latency budget.",
+      "published": "2026-08-07T17:51:49Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07458",
+      "pdf_url": "https://arxiv.org/pdf/2608.07458",
+      "summary_zh": "长上下文RAG中，现有基于块级KV缓存复用的优化方法受粗粒度块中信息冗余和噪声影响，在低预填充延迟约束下难以兼顾效率与准确性。CoinRAG提出通过两阶段检索识别查询相关的细粒度语义单元（信息碎片），并组合复用其离线计算的KV缓存切片，以紧凑且语义相关的方式构建上下文表示。在LongBench多跳问答任务上，CoinRAG在标准快速预填充延迟预算下平均F1相对提升5.3%，实现了新的帕累托前沿，显著降低运营成本。",
+      "summary_en": "Existing chunk-level KV cache reuse in RAG suffers from information redundancy and noise in coarse-grained chunks, limiting accuracy under low prefill latency constraints. CoinRAG introduces a two-stage retrieval to identify query-relevant fine-grained semantic units (information nuggets) and compositionally reuses their sliced KV caches to form a compact contextual representation. Evaluations on LongBench multi-hop QA show CoinRAG achieves a new Pareto frontier with an average 5.3% relative F1 improvement under standard fast prefill latency, reducing operational costs.",
+      "highlights_zh": [
+        "细粒度KV缓存组合复用",
+        "平均F1相对提升5.3%",
+        "降低长上下文RAG运营成本"
+      ]
+    },
+    {
+      "id": "2608.07463",
+      "title": "MirrorWorld: Taming Video Diffusion Models for Mirror Reflection Generation",
+      "authors": [
+        "Youjun Zhao",
+        "Alex Warren",
+        "Gary K. L. Tam",
+        "Rynson W. H. Lau"
+      ],
+      "abstract": "Recent advances in video diffusion models (VDMs) have enabled high-fidelity video synthesis. However, generating mirror reflections remains challenging because the content within a mirror must remain consistent with the surrounding scene. Existing VDMs are not specifically designed to model scene-to-mirror relationships, which can lead to reflections with incorrect content or inconsistent spatial arrangements. We observe that mirror reflection generation involves two complementary challenges: determining what scene content should be reflected and how the reflected content should be spatially arranged within the mirror region. Motivated by this observation, we propose MirrorWorld, a reflection-aware video inpainting framework that models scene-to-mirror relationships during generation. Specifically, we introduce Semantic Relation Distillation (SRD), which transfers relational information from a frozen visual foundation model to encourage semantic associations between visible scene content and mirror regions. We further propose Geometric Transformation Alignment (GTA), which learns a transformation that guides the spatial arrangement of reflected content. The two components play complementary roles, with SRD modeling what should be reflected and GTA modeling how it should be arranged. To facilitate research on this problem, we construct a benchmark for video mirror reflection generation by repurposing four existing video mirror datasets into a unified reflection reconstruction task. Experimental results show that MirrorWorld achieves improved reflection reconstruction quality over representative image-based reflection generation methods and strong video inpainting baselines.",
+      "published": "2026-08-07T17:58:10Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07463",
+      "pdf_url": "https://arxiv.org/pdf/2608.07463",
+      "summary_zh": "视频扩散模型在生成镜面反射时难以保证镜内内容与周围场景的语义一致性和空间布局正确性。本文提出MirrorWorld框架，通过语义关系蒸馏（SRD）和几何变换对齐（GTA）分别建模“反射什么”和“如何排列”，并构建了统一的视频镜面反射重建基准。实验表明该方法在反射重建质量上优于现有图像级反射生成方法和视频修复基线。",
+      "summary_en": "Video diffusion models struggle to generate mirror reflections that remain semantically consistent and spatially coherent with the surrounding scene. MirrorWorld introduces Semantic Relation Distillation (SRD) and Geometric Transformation Alignment (GTA) to separately model what should be reflected and how it should be arranged, along with a unified benchmark for video mirror reflection reconstruction. Experiments demonstrate improved reflection reconstruction quality over image-based reflection methods and strong video inpainting baselines.",
+      "highlights_zh": [
+        "解耦反射内容与空间布局建模",
+        "优于图像反射与视频修复基线",
+        "依赖基准数据，泛化性待验证"
+      ]
+    },
+    {
+      "id": "2608.07444",
+      "title": "RIS-Aided mmWave Localization Under Cross-Link Interference via Beam-Domain ML Fingerprinting",
+      "authors": [
+        "Md Tarek Hassan",
+        "Dmitry Zelenchuk",
+        "Muhammad Ali Babar Abbasi"
+      ],
+      "abstract": "Accurate user equipment (UE) localization is critical for beam management in reconfigurable intelligent surface (RIS)-assisted millimeter-wave (mmWave) based sixth-generation (6G) networks, especially if the direct base-station-UE links are unavailable. This paper proposes a beam-domain fingerprint framework that maps the received signal-to-noise ratio (SNR) across a small set of predefined RIS reflection states to the UE azimuth angle and range, without requiring channel state information (CSI). Crucially, we extend the framework to a realistic interference-impaired scenario in which a nearby cross-link interferer (CLI) corrupts the clean SNR fingerprint, yielding a signal-to-interference-plus-noise ratio (SINR) fingerprint; an interference-to-noise ratio (INR)-constrained calibration strategy keeps the interference level physically interpretable. Four machine-learning (ML) regressors are evaluated under both conditions. Simulation results at 28 GHz with a 20x20 RIS show that k-nearest neighbors (KNN) achieves the lowest angle MAE of 0.37 degrees and range MAE of 4 cm under clean conditions, rising to 1.4 degrees and 7.6 cm under interference. A key finding is that interference degrades angle estimation substantially more than range estimation across all models, a consequence of the asymmetric encoding of location information in the beam-domain fingerprint.",
+      "published": "2026-08-07T17:28:33Z",
+      "primary_category": "eess.SP",
+      "categories": [
+        "eess.SP",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07444",
+      "pdf_url": "https://arxiv.org/pdf/2608.07444",
+      "summary_zh": "在RIS辅助的毫米波6G网络中，当基站与用户间直连链路不可用时，精确的UE定位对波束管理至关重要。本文提出一种无需CSI的波束域指纹框架，通过少量RIS反射状态下的SNR映射到UE方位角和距离，并扩展至存在跨链路干扰的SINR场景，采用INR约束校准保持干扰物理可解释性。在28GHz、20x20 RIS仿真中，KNN在干净条件下达到角度MAE 0.37°和距离MAE 4cm，干扰下升至1.4°和7.6cm，且发现干扰对角度估计的影响远大于距离估计，揭示了波束域指纹中位置信息的不对称编码特性。",
+      "summary_en": "In RIS-assisted mmWave 6G networks, accurate UE localization is critical for beam management when direct base-station-UE links are unavailable. This paper proposes a beam-domain fingerprint framework that maps SNR across predefined RIS reflection states to UE azimuth and range without CSI, extended to SINR fingerprints under cross-link interference with an INR-constrained calibration strategy. At 28 GHz with a 20x20 RIS, KNN achieves 0.37° angle MAE and 4 cm range MAE in clean conditions, degrading to 1.4° and 7.6 cm under interference, revealing that interference impacts angle estimation far more than range due to asymmetric location encoding.",
+      "highlights_zh": [
+        "无需CSI的波束域指纹定位",
+        "KNN角度MAE 0.37°，距离4cm",
+        "干扰下角度退化远大于距离"
+      ]
+    },
+    {
+      "id": "2608.07449",
+      "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+      "authors": [
+        "Mingxuan Zheng",
+        "Yujin Zhou",
+        "Chuxue Cao",
+        "Boqin Yin",
+        "Yuyao Zhang",
+        "Jiapeng Sun",
+        "Shuaishuai Gong",
+        "Sirui Han",
+        "Yike Guo"
+      ],
+      "abstract": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context without weight updates. Recent methods refine skills through iterative task execution, failure diagnosis, and trajectory-guided text-space updates. However, existing frameworks lack explicit diagnosis--outcome feedback and treat deletion as a generic edit operation rather than a dedicated mechanism for consolidating accumulated knowledge. We introduce SkillProx, a proximal-gradient-inspired forward--backward framework that couples closed-loop diagnostic evolution with utility-aware proximal refinement. Motivated by a composite objective balancing task loss and skill complexity, the forward stage re-executes diagnosis-driven edits on the same task batch, rolls back regressions, and feeds measured outcomes into subsequent diagnoses. The backward stage decomposes the resulting skill into auditable knowledge units, estimates their contributions using a frozen leave-one-out utility audit, and applies validation-gated consolidation, demotion, or removal. Experiments on in-distribution and out-of-distribution benchmarks across multiple backbone LLMs show that SkillProx improves average accuracy by 3.0 percentage points over the strongest gradient-based baseline. Component ablations demonstrate the complementary effects of closed-loop diagnosis and proximal refinement.",
+      "published": "2026-08-07T17:40:33Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07449",
+      "pdf_url": "https://arxiv.org/pdf/2608.07449",
+      "summary_zh": "现有LLM智能体技能学习方法缺乏显式诊断反馈，且将删除视为通用编辑操作而非知识整合机制。SkillProx提出基于近端梯度启发的正向-反向框架，正向阶段执行闭环诊断编辑并回滚回归，反向阶段通过留一效用审计对知识单元进行验证门控的整合、降级或移除。在分布内和分布外基准上，SkillProx较最强梯度基线平均准确率提升3.0个百分点，消融实验验证了闭环诊断与近端细化的互补效果。",
+      "summary_en": "Existing LLM agent skill learning methods lack explicit diagnostic feedback and treat deletion as a generic edit rather than a dedicated consolidation mechanism. SkillProx introduces a proximal-gradient-inspired forward-backward framework where the forward stage executes closed-loop diagnostic edits with regression rollback, and the backward stage decomposes skills into auditable units with leave-one-out utility estimation for validation-gated consolidation, demotion, or removal. SkillProx improves average accuracy by 3.0 percentage points over the strongest gradient-based baseline on in-distribution and out-of-distribution benchmarks, with ablations confirming the complementary benefits of closed-loop diagnosis and proximal refinement.",
+      "highlights_zh": [
+        "近端梯度启发的技能演化框架",
+        "平均准确率提升3.0个百分点",
+        "提升智能体技能可审计性与泛化性"
+      ]
+    },
+    {
+      "id": "2608.07439",
+      "title": "An Exploratory Evaluation of LLM-Assisted Rewriting of Moderate-Complexity Financial Sentences for DisCoCat-Based Sentiment Analysis",
+      "authors": [
+        "Brian Llinas",
+        "Nikos Chrisochoides"
+      ],
+      "abstract": "Quantum natural language processing (QNLP) provides a grammar-aware framework for text modeling, and Distributional Compositional Categorical (DisCoCat) is one of its theoretically grounded formulations. Prior work on financial sentiment analysis has identified practical limitations of DisCoCat, including parser sensitivity, high simulation cost, and difficulty handling longer sentences. We study an LLM-assisted preprocessing workflow that uses controlled rewriting to compress, simplify, or decompose moderate-complexity financial sentiment sentences into parser-compatible, circuit-efficient variants while preserving sentiment-bearing meaning. We compare prompting strategies, language models, and filtering configurations with the low-complexity-only DisCoCat baseline of Stein et al. At the circuit level, the strongest compression variants reduce average qubit and gate counts by more than 70 percent relative to the raw moderate-complexity subset. Across repeated training runs, GPT-4.1-mini with Prompt B achieves the highest observed mean accuracy, $0.550 \\pm 0.035$, compared with $0.521 \\pm 0.050$ for the baseline. Larger training splits do not necessarily improve downstream performance; across evaluated configurations, training-split size has a moderately negative association with accuracy (Pearson $r=-0.446$). These results provide exploratory evidence that LLM-assisted rewriting can make some moderate-complexity inputs usable within the evaluated DisCoCat configuration, while highlighting prompt design, filtering, and circuit-aware preprocessing as considerations for more scalable QNLP-based financial sentiment analysis.",
+      "published": "2026-08-07T17:23:01Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "quant-ph"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07439",
+      "pdf_url": "https://arxiv.org/pdf/2608.07439",
+      "summary_zh": "Quantum natural language processing (QNLP) with DisCoCat faces parser sensitivity, high simulation cost, and difficulty with longer sentences in financial sentiment analysis. This work introduces an LLM-assisted controlled rewriting workflow that compresses, simplifies, or decomposes moderate-complexity financial sentences into parser-compatible, circuit-efficient variants while preserving sentiment meaning. The strongest compression reduces qubit and gate counts by over 70%, and GPT-4.1-mini with Prompt B achieves the best mean accuracy of 0.550±0.035, surpassing the baseline, though larger training splits negatively correlate with accuracy.",
+      "highlights_zh": [
+        "LLM重写提升DisCoCat可用性",
+        "压缩降资源70%，准确率0.550",
+        "训练集增大反降性能需注意"
+      ]
+    },
+    {
+      "id": "2608.07468",
+      "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
+      "authors": [
+        "Zongchuang Zhao",
+        "Xin Zhou",
+        "Tianyang Xu",
+        "Zhengyang Sun",
+        "Kaixuan Zhou",
+        "Honglin Li",
+        "Dingkang Liang",
+        "Xiang Bai"
+      ],
+      "abstract": "World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We present SimWAM, a simple yet effective WAM that uses video generation purely as a training signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing the video branch to be discarded after training and leaving a self-contained planner that directly predicts trajectories. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves $91.5$ PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
+      "published": "2026-08-07T17:59:09Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07468",
+      "pdf_url": "https://arxiv.org/pdf/2608.07468",
+      "summary_zh": "现有世界动作模型（WAM）在端到端自动驾驶中依赖推理时的未来帧生成，导致高延迟。SimWAM将视频生成仅作为训练信号，通过联合流匹配协同训练预训练视频专家和轻量动作专家，并采用隔离注意力掩码使动作预测独立于未来帧，从而在推理时丢弃视频分支。SimWAM在NAVSIM上达到91.5 PDMS，超越现有WAM方法且延迟更低，并零样本迁移至nuScenes，为高效自动驾驶提供了简单而坚实的基线。",
+      "summary_en": "Existing World-Action Models (WAMs) for end-to-end autonomous driving require costly future-frame generation at inference, limiting efficiency. SimWAM uses video generation purely as a training signal by co-training a pretrained video expert and a lightweight action expert with joint flow matching, and employs an isolated attention mask to keep action prediction independent of future frames, allowing the video branch to be discarded after training. SimWAM achieves 91.5 PDMS on NAVSIM, surpassing state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes, offering a simple yet solid baseline that can benefit from advances in video generation.",
+      "highlights_zh": [
+        "视频生成仅作训练信号，推理零额外开销",
+        "NAVSIM 91.5 PDMS，超越SOTA且低延迟",
+        "零样本迁移nuScenes，代码开源"
+      ]
+    },
+    {
+      "id": "2608.07435",
+      "title": "SABRE: Scalable and Automated Benchmarking of VLMs under Stress",
+      "authors": [
+        "Zixuan Lan",
+        "Luzhe Sun",
+        "Matthew R. Walter",
+        "Jiawei Zhou"
+      ],
+      "abstract": "Vision-language models (VLMs) are improving rapidly, but benchmark development lags behind, making weaknesses hard to identify. Building stress tests is costly: samples must satisfy controlled conditions, remain answerable, and challenge current models. We present SABRE, a scalable, automated pipeline that converts a Test Primer (a Markdown Task Design with Data Schema) into structured specifications, generated or edited images, and question-answer pairs. Automated filtering removes candidates solved by a Filtering VLM, while human review verifies candidate validity and supports annotation correction and localized image repair. We instantiate SABRE-Prior to test whether VLMs follow visual evidence instead of relying on world priors -- learned expectations about familiar objects and scenes. Its 600 images and 1,000 questions span Context (unexpected entities in familiar scenes), Texture (counterfactual materials), Attribute (noncanonical component counts), and Language Elicitation (answers suggested by language but unsupported by the image). Across six VLMs, macro-average accuracy ranges from 17.8% to 31.3% (22.6% mean). A real-image Attribute control is comparably difficult for the Filtering VLM. SABRE-Counting and SABRE-Spatial pilots show that the workflow supports other stress-test settings. These results establish SABRE as a reusable framework for constructing and refreshing VLM stress tests rather than a single fixed benchmark.",
+      "published": "2026-08-07T17:21:04Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07435",
+      "pdf_url": "https://arxiv.org/pdf/2608.07435",
+      "summary_zh": "视觉语言模型（VLM）性能提升迅速，但现有基准测试开发成本高且难以揭示模型弱点。SABRE提出一种可扩展的自动化流水线，将测试设计转化为结构化规范、生成或编辑的图像及问答对，并通过过滤和人工审核确保样本有效性。在六个VLM上的平均准确率仅22.6%，证明SABRE能有效构建压力测试，且其框架可推广至计数和空间推理等场景。",
+      "summary_en": "VLM benchmarks lag behind model progress, making weaknesses hard to identify. SABRE introduces a scalable automated pipeline that converts task designs into stress-test samples with filtering and human verification, targeting visual-evidence adherence over world priors. Across six VLMs, accuracy ranges 17.8%-31.3%, demonstrating SABRE as a reusable framework for building and refreshing VLM stress tests.",
+      "highlights_zh": [
+        "自动化压力测试生成流水线",
+        "六模型平均准确率仅22.6%",
+        "可扩展至计数与空间推理"
+      ]
+    },
+    {
+      "id": "2608.07361",
+      "title": "Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model",
+      "authors": [
+        "Harisankar Babu",
+        "Benjamin Coors",
+        "Christopher Lang",
+        "Hendrik Berkemeyer",
+        "Tamim Asfour",
+        "Simon Foell"
+      ],
+      "abstract": "Vision-language-action (VLA) models route driving decisions through a deep language model, but it is unclear how much of that depth the action itself requires. We study a representative driving VLA whose entire plan is carried by a single planning token that a generative planner decodes into a trajectory. Borrowing the planner as a trajectory-space logit lens, we decode the planning token from every one of the 32 decoder layers and measure two signals: the linear decodability of the navigation command and trajectory compatibility with the frozen native planner. Our diagnostic shows that semantic intent is linearly decodable early: command-probe accuracy reaches 97.7\\% after the first decoder layer, compared with 16.7\\% chance. In contrast, compatibility with the frozen native planner improves gradually across depth, with open-loop Avg-L2 reaching its minimum of 2.11\\,m only at the final layer. Learned readouts from the first layer recover much of this gap, indicating that planning information is already present early but is not yet represented in the format expected by the deployed planner. Ranking decoder layers by the angular deviation they induce in the planning token permits removal of 8 of 32 layers within an approximately 5\\% relative open-loop error increase and yields a measured 1.33$\\times$ decoder speedup. At the evaluated sample size, no family-specific degradation is statistically resolved. These findings are limited to the evaluated ORION checkpoint and Bench2Drive setup.",
+      "published": "2026-08-07T16:02:34Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07361",
+      "pdf_url": "https://arxiv.org/pdf/2608.07361",
+      "summary_zh": "驾驶VLA模型通过深层语言模型路由决策，但动作本身需要多少深度尚不明确。本研究借用规划器作为轨迹空间logit透镜，从32个解码器层逐一解码规划token，测量导航命令的线性可解码性和与冻结原生规划器的轨迹兼容性。结果显示语义意图在第一层即可线性解码（97.7%），而规划兼容性逐步提升至最终层，且可移除8/32层仅增加约5%误差并获得1.33倍加速。",
+      "summary_en": "Driving VLA models route decisions through deep language models, but the required depth for action planning is unclear. We use the planner as a trajectory-space logit lens to decode the planning token from all 32 decoder layers, measuring command decodability and trajectory compatibility. Semantic intent is linearly decodable early (97.7% at layer 1), while planner compatibility improves gradually, allowing removal of 8/32 layers with ~5% error increase and 1.33x speedup.",
+      "highlights_zh": [
+        "规划token深度诊断新方法",
+        "97.7%命令探针准确率",
+        "可剪8层获1.33倍加速"
+      ]
+    },
+    {
+      "id": "2608.07328",
+      "title": "Learning Fault-Tolerant Locomotion with Adaptive Gait Timing",
+      "authors": [
+        "Giovanbattista Gravina",
+        "Luca Rossini",
+        "Carlo Rizzardo",
+        "Arturo Laurenzi",
+        "Nikos Tsagarakis"
+      ],
+      "abstract": "Hardware failures require legged robots to rapidly reorganize coordination and gait timing to maintain stability and mobility. This is particularly challenging for larger quadrupeds, where increased mass and tighter actuation limits reduce the feasibility of aggressive, high-frequency compensation strategies often observed on smaller platforms. In this work, we propose a deep reinforcement learning approach for fault-tolerant locomotion under actuator power loss. The method employs an asymmetric actor-critic architecture in which the critic has access to privileged information during training, while the actor learns to reconstruct a corresponding latent representation from proprioceptive observations. We introduce a latent-alignment loss that encourages consistency between actor and critic representations. Additionally, we augment the action space with a learnable gait frequency parameter, enabling adaptive gait timing in response to terrain variations and actuator degradation without predefined faulty-leg strategies. The approach is validated in high-fidelity simulation on uneven terrain and real-world experiments on flat ground using a 68 kg quadruped robot.",
+      "published": "2026-08-07T15:27:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.07328",
+      "pdf_url": "https://arxiv.org/pdf/2608.07328",
+      "summary_zh": "大型四足机器人在执行器功率损失故障下，因质量和驱动限制难以快速重组步态以维持稳定。本文提出一种非对称演员-评论家深度强化学习框架，通过潜在对齐损失和可学习的步态频率参数，实现自适应故障容错运动。方法在崎岖地形仿真和68kg四足机器人实物实验中验证，显著提升了故障后的稳定性和移动能力。",
+      "summary_en": "Large quadrupeds face challenges in rapidly reorganizing gait timing under actuator power loss due to mass and actuation limits. This work proposes an asymmetric actor-critic deep RL method with a latent-alignment loss and a learnable gait frequency parameter, enabling adaptive fault-tolerant locomotion without predefined faulty-leg strategies. Validated in high-fidelity simulation on uneven terrain and real-world experiments on a 68kg quadruped, the approach improves stability and mobility under hardware failures.",
+      "highlights_zh": [
+        "非对称AC+潜在对齐损失",
+        "68kg机器人实物验证成功",
+        "无预设故障策略，自适应步频"
+      ]
+    }
+  ]
+}
