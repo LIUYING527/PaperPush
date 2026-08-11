@@ -1,0 +1,351 @@
+{
+  "date": "2026-08-11",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.09930",
+      "title": "Beyond Naturalness: Probing Automated Text-To-Speech Evaluators on Linguistically Grounded Dimensions",
+      "authors": [
+        "Oluwanifemi Bamgbose",
+        "Simon Rosen",
+        "Jash Shah",
+        "Lindsay Devon Brin",
+        "Hoang H Nguyen",
+        "Anke Koelzer",
+        "Rachel Hansen",
+        "Tara Bogavelli",
+        "Fanny Riols"
+      ],
+      "abstract": "Automated Text-to-Speech (TTS) evaluation methods (Mean Opinion Score (MOS) predictors and Audio Large Language Models (Audio-LLM) judges) are expected to reflect human perception, yet it is unclear how well they capture the distinct aspects of speech that listeners actually perceive. We deconstruct \"naturalness\" into a linguistically grounded annotation schema spanning 10 distinct perceptual dimensions, and use it to construct the first dimension-level meta-evaluation benchmark for TTS, comprising 860 utterances annotated by trained linguist raters. Results from benchmarking four MOS predictors and four Audio-LLM judges reveal that MOS predictors collapse onto acoustic signal quality, while Audio-LLM judges show selective, prompt-dependent detection that does not generalise across all dimensions. Neither class reliably captures a breadth of linguistically structured speech errors. Our dataset, annotation schema, and evaluation code are publicly released to support more targeted and interpretable TTS evaluation.",
+      "published": "2026-08-10T17:59:51Z",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09930",
+      "pdf_url": "https://arxiv.org/pdf/2608.09930",
+      "summary_zh": "当前自动语音合成评估方法（如MOS预测器和音频大模型）声称反映人类感知，但尚不清楚它们能否捕捉听者实际感知的不同语音维度。本文提出首个基于语言学标注的维度级TTS评估基准，将“自然度”解构为10个感知维度，并标注860条语音样本。结果显示MOS预测器仅聚焦声学信号质量，音频大模型则选择性依赖提示词检测，两类方法均无法全面捕捉语言学结构错误，该基准支持更精准可解释的TTS评估。",
+      "summary_en": "Automated TTS evaluation methods are expected to reflect human perception, yet it remains unclear how well they capture distinct perceptual aspects of speech. We construct the first dimension-level meta-evaluation benchmark by decomposing naturalness into 10 linguistically grounded dimensions with 860 expert-annotated utterances. Results show MOS predictors collapse onto acoustic quality while Audio-LLMs exhibit prompt-dependent selective detection, neither reliably capturing linguistic errors, enabling more targeted and interpretable TTS evaluation.",
+      "highlights_zh": [
+        "首个维度级TTS评估基准",
+        "MOS预测器仅反映声学质量",
+        "支持可解释TTS评估"
+      ]
+    },
+    {
+      "id": "2608.09928",
+      "title": "Multimodal Model Diffing for Feature Discovery and Control",
+      "authors": [
+        "Hunar Batra",
+        "Lachin Naghashyar",
+        "Ashkan Khakzar",
+        "Philip Torr",
+        "Christian Schroeder de Witt",
+        "Constantin Venhoff",
+        "Ronald Clark"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using sparse autoencoders (SAEs) neither readily isolate which features are changed by multimodal training, nor are they directly useful for targeted control. We introduce MMDiff, a multimodal model-diffing framework that trains multimodal SAEs and turns them into feature-level interfaces for discovering and controlling multimodal behavior. MMDiff supports three uses: (i) feature isolation, by diffing a base-LM SAE against its multimodal-adapted counterpart to identify features altered by multimodal training; (ii) task-specific feature detection, via per-token contrastive firing analysis that isolates causal features; and (iii) feature-level control, by causally removing or steering the discovered feature directions. We train multimodal SAEs for three MLLM families, LLaVA-MORE, PaliGemma 2, and InternVL3.5, and evaluate on visual-spatial understanding, multimodal safety, and OCR. MMDiff discovers sparse, causally specific features whose removal selectively degrades target behaviors by an average of 12% on spatial tasks and 17% on OCR, and reduces attack success rate by 24% on multimodal safety attacks, with no impact on VQA performance. Steering these features improves spatial and OCR accuracy by +3.6% and +1.8% on average over a standard single-layer steering baseline. These results show that multimodal SAEs can serve not only as interpretability tools, but as mechanisms for auditing, steering, and controlling MLLMs behavior toward safer and more capable generations.",
+      "published": "2026-08-10T17:59:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09928",
+      "pdf_url": "https://arxiv.org/pdf/2608.09928",
+      "summary_zh": "多模态大模型内部特征难以识别、审计和控制，现有SAE方法无法隔离多模态训练改变的特征。本文提出MMDiff框架，通过训练多模态SAE并对比基础LM与多模态模型的特征差异，实现特征隔离、任务特定检测和因果控制。实验表明该方法能稀疏且因果地发现特征，定向移除使空间任务性能下降12%、OCR下降17%、攻击成功率降低24%，且不影响VQA性能。",
+      "summary_en": "Multimodal LLMs exhibit strong visual understanding, yet internal features causing these behaviors are difficult to identify, audit, or control. We introduce MMDiff, a multimodal model-diffing framework that trains multimodal SAEs and turns them into feature-level interfaces for discovering and controlling multimodal behavior via feature isolation, task-specific detection, and causal steering. MMDiff discovers sparse, causally specific features whose removal selectively degrades target behaviors (12% on spatial, 17% on OCR, 24% attack success reduction) while steering improves accuracy, demonstrating multimodal SAEs as practical tools for auditing and controlling MLLMs.",
+      "highlights_zh": [
+        "首创多模态SAE特征差异分析框架",
+        "定向移除使攻击成功率降低24%",
+        "支持特征级因果控制与安全审计"
+      ]
+    },
+    {
+      "id": "2608.09899",
+      "title": "Fairness in Link Prediction Beyond Demographic Parity: A Reproducibility Study",
+      "authors": [
+        "Valentijn Oldenburg",
+        "Floris de Kam",
+        "Stef de Wildt",
+        "Jarno Nilson Balk"
+      ],
+      "abstract": "In fair ranked link prediction, demographic parity ($Δ_\\mathrm{DP}$) is a common fairness metric. Yet, Mattos et al. (2025) argue that it fails to detect exposure bias because it ignores where links appear in the ranking. In this study, we reproduce this claim by showing that $Δ_\\mathrm{DP}$ can indicate aggregate parity even when some subgroup-pair links are systematically ranked lower than others. The proposed rank-aware Normalized Discounted KL-divergence (NDKL), however, does detect such disparities. We also reproduce the effectiveness of MORAL, a post-processing method that improves exposure-based fairness while maintaining competitive utility. Beyond reproduction, we assess robustness using synthetic homophily settings, categorical sensitive attributes, and additional fairness and utility metrics, including subgroup-pair-adapted Attention-Weighted Rank Fairness (AWRF). Overall, our results show that exposure-based metrics uncover biases hidden by $Δ_\\mathrm{DP}$ and that MORAL reduces these biases with minimal utility loss across diverse settings and datasets. We release a corrected, reproducible implementation at https://github.com/Floris93100/reproducing-MORAL.",
+      "published": "2026-08-10T17:47:19Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.SI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09899",
+      "pdf_url": "https://arxiv.org/pdf/2608.09899",
+      "summary_zh": "公平链接预测中，人口统计均等（Δ_DP）指标因忽略排名位置而无法检测曝光偏差。本研究复现了该问题，并验证了排名感知的NDKL指标能有效识别此类偏差，同时复现了后处理方法MORAL在保持效用的同时改善曝光公平性。通过合成同质性、分类敏感属性及额外指标（如AWRF）的鲁棒性测试，证实曝光类指标能揭示Δ_DP隐藏的偏差，且MORAL在多种设置下以极小效用损失降低偏差。",
+      "summary_en": "Demographic parity (Δ_DP) in fair link prediction fails to detect exposure bias because it ignores ranking positions. This study reproduces this claim, validates the rank-aware NDKL metric for detecting such disparities, and confirms MORAL's effectiveness in improving exposure fairness with minimal utility loss. Robustness tests with synthetic homophily, categorical attributes, and additional metrics (e.g., AWRF) show exposure-based metrics uncover hidden biases and MORAL generalizes across diverse settings.",
+      "highlights_zh": [
+        "NDKL揭示Δ_DP隐藏的排名偏差",
+        "MORAL以极小效用损失改善曝光公平",
+        "鲁棒性验证覆盖同质性及多属性场景"
+      ]
+    },
+    {
+      "id": "2608.09898",
+      "title": "Consilience for Verifier-Free Test-Time Scaling",
+      "authors": [
+        "Lecheng Kong",
+        "Like Hui",
+        "Haitao Mao",
+        "Jun Huan"
+      ],
+      "abstract": "Test-time scaling often uses an external verifier, such as compilers and test cases in coding or trained value functions in robotics applications, to obtain high-quality rollouts. Verifier-free test-time scaling (or VF-TTS) is gaining extensive attention as a mechanism to enhance Large Language Model (LLM) reasoning, primarily because we do not have access to such high-quality verifiers in many real-world applications. Among existing VF-TTS methods, confidence-based VF-TTS methods, which compute and rank rollouts solely by confidence, are particularly promising. Such methods introduce near-zero overhead for sample evaluation and require minimal access to internal model states, making the methods highly flexible across models and tasks. In this paper, we demonstrate a critical limitation of existing confidence-based VF-TTS methods by showing that such methods catastrophically break down on complex tasks. We observe a very interesting phenomenon: uniformly high confidence frequently indicates a failure to explore, favoring confidently wrong answers. To address this, our core insight is that robust cognitive search requires a specific confidence trajectory pattern: such methods perform exploratory branching at the beginning, as manifested by low initial confidence, and converge to a high final confidence solution. To implement this insight, we introduce consilience, a novel selection framework that explicitly evaluates the temporal asymmetry of confidence in reasoning. We operationalize this via a combinatorial metric that actively penalizes high initial confidence while strictly demanding final certainty. Extensive experiments covering both graduate-level mathematics problems and free-form code generation demonstrate that consilience effectively outperforms existing baselines, validating our novel perspective on completion confidence.",
+      "published": "2026-08-10T17:45:44Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09898",
+      "pdf_url": "https://arxiv.org/pdf/2608.09898",
+      "summary_zh": "现有基于置信度的无验证器测试时扩展方法在复杂任务上会因高置信度导致探索失败而崩溃。本文提出consilience框架，通过评估推理中置信度的时间不对称性，惩罚初始高置信度并严格要求最终确定性。实验表明该方法在研究生级数学和自由形式代码生成任务上优于现有基线。",
+      "summary_en": "Existing confidence-based verifier-free test-time scaling methods catastrophically fail on complex tasks due to uniformly high confidence indicating poor exploration. This paper introduces consilience, a selection framework that evaluates temporal asymmetry of confidence, penalizing high initial confidence while demanding final certainty. Extensive experiments on graduate-level math and free-form code generation show consilience outperforms existing baselines.",
+      "highlights_zh": [
+        "置信度时间不对称评估",
+        "超越现有基线性能",
+        "适用于数学与代码任务"
+      ]
+    },
+    {
+      "id": "2608.09900",
+      "title": "Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness",
+      "authors": [
+        "Tadanobu Chuyo Kamijo",
+        "Ori Rottenstreich",
+        "Javier Conde",
+        "Gonzalo Martínez",
+        "Pedro Reviriego"
+      ],
+      "abstract": "Large language model evaluations typically focus on performance under nominal conditions, creating an illusion of capability where models comfortably walk a narrow, highly optimized generation corridor. In real-world deployments, however, complex system prompts, safety guardrails, and structural constraints continuously force models off this nominal path, driving a divergence between benchmark scores and deployment performance. To address this issue, we introduce Decoding-Level Taboo, a zero-prompt diagnostic stress test that intervenes directly in logit space at runtime, forcing models out of their nominal paths. By dynamically masking primary candidate tokens at word boundaries, Taboo forces machine circumlocution. Evaluating Taboo across several open-weight model families reveals that off-path robustness is heavily influenced by both parameter scale and post-training instruction alignment, with robustness generally improving with model size and alignment. Beyond the results presented in this paper, Taboo provides a novel primitive for generating diverse synthetic datasets, stress-testing runtime safety guardrails, and auditing model reliability prior to real-world deployment.",
+      "published": "2026-08-10T17:47:24Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09900",
+      "pdf_url": "https://arxiv.org/pdf/2608.09900",
+      "summary_zh": "大语言模型评估通常只关注标称条件下的性能，导致基准分数与实际部署表现存在偏差。本文提出Decoding-Level Taboo，一种零提示的诊断压力测试方法，通过在运行时动态屏蔽logit空间中的主要候选词，强制模型偏离标称路径进行迂回表达。实验表明，模型的离路径鲁棒性受参数规模和指令对齐影响显著，且该方法可用于生成合成数据集、测试安全护栏和审计模型可靠性。",
+      "summary_en": "LLM evaluations typically focus on nominal-condition performance, creating a gap between benchmark scores and real-world deployment. This paper introduces Decoding-Level Taboo, a zero-prompt diagnostic stress test that dynamically masks primary candidate tokens in logit space to force models off their nominal paths. Results show off-path robustness improves with model scale and alignment, and Taboo offers a novel primitive for synthetic data generation, safety guardrail testing, and pre-deployment reliability auditing.",
+      "highlights_zh": [
+        "零提示logit空间干预压力测试",
+        "鲁棒性随模型规模和指令对齐提升",
+        "可用于合成数据与安全审计"
+      ]
+    },
+    {
+      "id": "2608.09931",
+      "title": "Perception Before Supervision: Self-Contained Visual Distillation from Counterfactual Blind Spots",
+      "authors": [
+        "Shravan Venkatraman",
+        "Omkar Thawakar",
+        "Ritesh Thawkar",
+        "Abdelrahman Shaker",
+        "Rao Muhammad Anwer"
+      ],
+      "abstract": "Self-improvement for multimodal large language models (MLLMs) is typically driven by reward-based methods that provide only coarse scalar feedback. Distillation offers a richer alternative through dense token-level supervision, but in the visual domain it usually depends on privileged context constructed using external annotations and tools, or stronger models. We introduce \\textbf{CVPD} (Contrastive Counterfactual Visual Process Distillation), which, to the best of our knowledge, is the first fully self-contained framework for dense, on-policy, token-level visual self-distillation for MLLMs. CVPD identifies visual blind spots where zooming into a region changes and sharpens the model's answer distribution, while removing the same region leaves the full-image behavior largely unchanged. Such regions reveal perceptual information that the model can encode but fails to consistently utilize under full-image conditioning. We propose a three-gate Counterfactual Criterion that identifies these regions directly from the model's own responses and converts them into dense contrastive supervision for self-distillation. On Qwen3-VL-8B-Instruct, CVPD outperforms six self-evolving baselines across twelve benchmarks, including methods that rely on external GPT-4o supervision, without a single regression. It achieves gains of $+3.60$ on OCRBench, $+3.38$ on MMStar Fine-Grained Perception, and $+3.08$ on MMStar Logical Reasoning, while maintaining or improving performance on broader multimodal benchmarks.",
+      "published": "2026-08-10T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09931",
+      "pdf_url": "https://arxiv.org/pdf/2608.09931",
+      "summary_zh": "多模态大语言模型的自提升通常依赖粗粒度的奖励信号，而视觉蒸馏虽能提供密集监督，却往往需要外部标注或更强模型。本文提出CVPD，一种完全自包含的框架，通过对比反事实视觉盲区识别模型能编码但未充分利用的感知信息，并将其转化为密集的token级对比监督。CVPD在Qwen3-VL-8B-Instruct上超越六种自进化基线，包括依赖GPT-4o监督的方法，在OCRBench、MMStar细粒度感知和逻辑推理上分别提升+3.60、+3.38和+3.08，且无任何性能回退。",
+      "summary_en": "Self-improvement for multimodal large language models often relies on coarse reward signals, while visual distillation typically depends on external annotations or stronger models. This paper introduces CVPD, the first fully self-contained framework for dense, on-policy, token-level visual self-distillation, which identifies counterfactual blind spots where zooming into a region sharpens the model's answer distribution but removing it leaves full-image behavior unchanged, converting them into contrastive supervision. CVPD outperforms six self-evolving baselines, including those using GPT-4o supervision, across twelve benchmarks with gains of +3.60 on OCRBench, +3.38 on MMStar Fine-Grained Perception, and +3.08 on MMStar Logical Reasoning, without a single regression.",
+      "highlights_zh": [
+        "首个全自包含视觉自蒸馏框架",
+        "OCRBench提升+3.60，零回退",
+        "无需外部标注，可扩展至任意MLLM"
+      ]
+    },
+    {
+      "id": "2608.09926",
+      "title": "Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning",
+      "authors": [
+        "Haodong Li",
+        "Shaoteng Liu",
+        "Tianyu Wang",
+        "Chongjian Ge",
+        "Sihui Ji",
+        "Jiahan Zhang",
+        "Xin Lin",
+        "Haolin Lu",
+        "Zhe Lin",
+        "Manmohan Chandraker"
+      ],
+      "abstract": "The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models largely fit the pixels without modeling how the pixels transit over time. Thus, they render visually plausible frames but may not accurately obey the laws. To capture the dynamics purely from pixels, we introduce Latent Dynamics Reasoning (LDR). LDR casts the latent transition as an explicit kinematic integration, where the lower-order dynamics are integrated numerically and the model regresses only the third- and higher-order residual that drives the rollout. For this integration to extrapolate better, LDR runs it on a structured latent rather than dense convolutional features. Following PhyWorld, we validate LDR on a controlled white-box physics benchmark spanning five tasks (uniform motion, parabola, collision, bouncing, looming), focusing on out-of-distribution scenarios that reveal whether a model has truly learned the underlying dynamics. LDR extrapolates the learned dynamics far better: the gap between its in- and out-of-distribution error is over 20$\\times$ smaller than the video diffusion baseline's, under both single- and joint-task training at 256$^2$ resolution, while using 26$\\times$ fewer parameters and running 143$\\times$ faster. LDR can even generalize under severe shift: for example, trained only on red balls moving left-to-right, it correctly predicts the motion of a blue square moving right-to-left. To our knowledge, this is the first video world model that extrapolates learned dynamics beyond its training distribution. Project page: https://lat-dyn-reason.github.io/",
+      "published": "2026-08-10T17:59:19Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09926",
+      "pdf_url": "https://arxiv.org/pdf/2608.09926",
+      "summary_zh": "现有视频扩散模型主要拟合像素分布，未能显式建模时间维度的动态演化，导致生成结果在分布外场景下不符合物理规律。本文提出潜变量动力学推理（LDR）方法，将潜空间状态转移建模为显式运动学积分，仅回归三阶及以上残差项，并在结构化潜变量上执行推理以提升外推能力。在PhyWorld基准上，LDR在分布外误差上比视频扩散基线降低20倍以上，参数减少26倍，速度提升143倍，并能泛化到颜色、形状和运动方向均改变的严重分布偏移场景。",
+      "summary_en": "Existing video diffusion models fit pixels without explicitly modeling temporal dynamics, leading to poor extrapolation under out-of-distribution conditions. This paper introduces Latent Dynamics Reasoning (LDR), which casts latent transitions as explicit kinematic integration and regresses only high-order residuals on a structured latent space. LDR reduces out-of-distribution error by over 20x compared to video diffusion baselines, uses 26x fewer parameters, runs 143x faster, and generalizes to severe distribution shifts such as color, shape, and direction changes.",
+      "highlights_zh": [
+        "显式运动学积分建模潜变量动态",
+        "分布外误差降低20倍以上",
+        "首个可外推的视频世界模型"
+      ]
+    },
+    {
+      "id": "2608.09892",
+      "title": "XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment",
+      "authors": [
+        "XPolicyLab Community",
+        "Tianxing Chen",
+        "Yue Chen",
+        "Tian Nian",
+        "Zijian Cai",
+        "Guangyu Chen",
+        "Wenwei Lin",
+        "Qiwei Liang",
+        "Peicheng Xiang",
+        "Kailun Su",
+        "Zixuan Li",
+        "Junyuan Tang",
+        "Yan Qin",
+        "Qiangyu Chen",
+        "Shaolong Zhu",
+        "Xiang Li",
+        "Jiahao Zhang",
+        "Weijie Wan",
+        "Baijun Chen",
+        "Honghao Su",
+        "Kehe Ye",
+        "Shujia Liu",
+        "Kaixuan Wang",
+        "Haotian Liang",
+        "Yunze Liu",
+        "Mingleyang Li",
+        "Yuran Wang",
+        "Boyu Chen",
+        "Hongzhe Bi",
+        "Shuhe Huang",
+        "Hengkai Tan",
+        "Jisong Cai",
+        "Yao Mu",
+        "Jun Guo",
+        "Xiaofeng Wang",
+        "Zheng Zhu",
+        "Weijie Ke",
+        "Hengtao Li",
+        "Yuhang Tang",
+        "Xiaofan Li",
+        "Ganlin Yang",
+        "Zhangzheng Tu",
+        "Shuai Yang",
+        "Wenxuan Song",
+        "Pengxiang Ding",
+        "Kaidong Zhang",
+        "Yu Sun",
+        "Junliang Guo",
+        "Tong Zhang",
+        "Yixing Chen",
+        "Rongxu Cui",
+        "Zongzheng Zhang",
+        "Haoxiang Ma",
+        "Junhao Cai",
+        "Haoyu Zhang",
+        "Senqiao Yang",
+        "Jinhui Ye",
+        "Pengguang Chen",
+        "Shu Liu",
+        "Xiu Su",
+        "Wenhan Fang",
+        "Wenhao Li",
+        "Yichao Cao",
+        "Chengyao Wang",
+        "Qiang Chen",
+        "Ping Luo",
+        "Wenbo Ding"
+      ],
+      "abstract": "Robot policy evaluation and deployment remain fragmented by model-specific software dependencies, data representations, and runtime interfaces, so that connecting N policies to M evaluation environments requires O(NM) separate integrations. We present XPolicyLab, a unified standard and open ecosystem that reduces this cost to O(N+M). XPolicyLab specifies common observation, action, and trajectory schemas together with a minimal adapter interface for observation updates, action prediction, batched execution, and episode reset, while a dependency-isolated client/server architecture separates policy inference from environment execution, so that each side retains its native software stack and may run locally or remotely. The ecosystem integrates 42 robot policies and standardizes their installation, debugging, serving, and evaluation workflows. Across these adapters, model-specific code varies by an order of magnitude while the environment-facing loop stays within a few lines of a fixed reference, confirming that the contract confines heterogeneity to the policy side. In a controlled study, conforming to the standard reduces the integration effort of a representative policy from over five hours to two hours, and packaged agent skills reduce it further to thirty minutes. The same adapters serve RoboTwin, RoboDojo simulation, and standardized real-robot evaluation through one interface. XPolicyLab is released as shared infrastructure for reproducible policy comparison and standardized deployment across simulation and physical platforms. Project website: https://xpolicylab.github.io/.",
+      "published": "2026-08-10T17:41:04Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09892",
+      "pdf_url": "https://arxiv.org/pdf/2608.09892",
+      "summary_zh": "机器人策略评估与部署因软件依赖、数据表示和运行时接口的碎片化，导致N个策略对接M个环境需要O(NM)次集成。XPolicyLab提出统一标准与开放生态系统，通过通用模式定义和最小适配器接口，结合依赖隔离的客户端/服务器架构，将集成成本降至O(N+M)。该系统已集成42个机器人策略，将代表性策略的集成时间从5小时以上降至2小时，并通过打包技能进一步缩短至30分钟，支持仿真与真实机器人统一评估。",
+      "summary_en": "Robot policy evaluation and deployment are fragmented by model-specific dependencies, data formats, and runtime interfaces, requiring O(NM) integrations for N policies and M environments. XPolicyLab introduces a unified standard and open ecosystem with common schemas and a minimal adapter interface, plus a dependency-isolated client/server architecture, reducing the cost to O(N+M). It integrates 42 policies, cuts integration time for a representative policy from over five hours to two hours (or 30 minutes with packaged skills), and supports unified evaluation across simulation and real robots.",
+      "highlights_zh": [
+        "统一标准降低集成成本至O(N+M)",
+        "集成时间从5小时降至30分钟",
+        "支持仿真与真实机器人统一评估"
+      ]
+    },
+    {
+      "id": "2608.09891",
+      "title": "RoSE: A Robotic Soft Esophagus for Endoprosthetic Stent Testing",
+      "authors": [
+        "Dipankar Bhattacharya",
+        "Sherine Jesna V. A.",
+        "Leo K. Cheng",
+        "Weiliang Xu"
+      ],
+      "abstract": "Soft robotic systems are well suited for developing devices for biomedical applications. A bio-mimicking robotic soft esophagus (RoSE) is developed as an in vitro testing device of endoprosthetic stents for dysphagia management. Endoprosthetic stent placement is an immediate and cost-effective therapy for dysphagia caused by malignant esophageal strictures from esophageal cancer. However, later stage complications, like stent migration, could weaken swallow efficacy in the esophagus. The stent radial force (RF) on the esophageal wall is pivotal in avoiding stent migration. Due to limited randomized controlled trials in patients, stent design and stenting guidelines remain incomplete. To address this knowledge deficit, we investigate RoSE by implanting two stents (A and B) of different radial stiffness characteristics, to measure stent RF and its effect on migration. Endoscopic manometry under peristalsis is also performed to study the impact of stenting and stent dysfunction on intra-bolus pressure signatures (IBPSs) and swallowing efficacy. Each implanted stent undergoes experiments with varied peristalsis velocity, wavelength, and bolus concentrations. The results show that stiffer stent B has a higher RF, whereas stent A maintains a lower RF profile due to lesser stiffness. High RF is necessary to minimize migration under prolonged peristaltic contractions in RoSE. For manometry, stent A slightly increases IBPS, but stiffer stent B significantly decreases IBPS, especially for higher-concentration boluses. If a stiffer stent buckles, it can reduce swallow efficacy and cause recurrent dysphagia. RoSE is therefore an innovative soft robotic platform for testing endoprosthetic stents and addressing clinical challenges in stent evaluation.",
+      "published": "2026-08-10T17:40:17Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09891",
+      "pdf_url": "https://arxiv.org/pdf/2608.09891",
+      "summary_zh": "食管支架置入是缓解恶性食管狭窄吞咽困难的有效方法，但支架迁移等并发症影响疗效，且缺乏系统测试手段。本文开发了仿生软体机器人食管（RoSE）平台，通过植入不同径向刚度支架并结合测压技术，系统研究支架径向力、蠕动参数和食团浓度对迁移及吞咽功能的影响。结果表明高径向力可减少支架迁移，但过刚支架屈曲会降低吞咽效能，RoSE为支架评估提供了创新性体外测试平台。",
+      "summary_en": "Endoprosthetic stents are effective for dysphagia caused by malignant esophageal strictures, yet stent migration remains a clinical challenge lacking systematic testing. This paper introduces RoSE, a bio-mimicking soft robotic esophagus that enables in vitro implantation of stents with different radial stiffness, combined with endoscopic manometry to evaluate stent radial force, migration, and intra-bolus pressure under varied peristaltic conditions. Results show stiffer stents provide higher radial force to prevent migration but may buckle and reduce swallowing efficacy, demonstrating RoSE as a valuable platform for stent evaluation and clinical guideline development.",
+      "highlights_zh": [
+        "仿生软体机器人食管测试平台",
+        "高刚度支架径向力高但易屈曲降效能",
+        "为支架设计提供体外评估新方法"
+      ]
+    },
+    {
+      "id": "2608.09925",
+      "title": "From Values to Benchmarks: Evaluating Large Language Models for Governmental Use in Dutch",
+      "authors": [
+        "Laurens Samson",
+        "Iva Gornishka",
+        "Gossa Lô",
+        "Yuki M. Asano",
+        "Sennay Ghebreab"
+      ],
+      "abstract": "Large language models are increasingly being deployed in governmental settings, yet few existing evaluation frameworks jointly reflect the values of public administration and the linguistic requirements of non-English contexts. We present the \"Grip on LLMs\" framework, a systematic evaluation suite for Dutch governmental use developed in collaboration with domain experts from a major Dutch municipal organisation. Through an advisory board process, user research, and a survey of the users of a civil-servant chatbot, we identify six evaluation dimensions (factuality, honesty, social bias, energy consumption, cost, and training data transparency) and operationalise them into a benchmark suite covering more than 30 multilingual and Dutch-specific models. Our results reveal that no single model excels across all dimensions, and that trade-offs are unavoidable: higher quality consistently comes at greater environmental impact and financial cost, while bias remains largely independent of both. We further find that factuality (whether a model answers correctly) and honesty (whether a model acknowledges what it does not know) are governed by distinct properties, with high factuality not implying high honesty. To make these findings actionable for non-technical audiences, we release a publicly accessible, user-friendly model overview designed for the full range of stakeholders involved in governmental LLM selection, from engineers to policymakers.",
+      "published": "2026-08-10T17:59:05Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.09925",
+      "pdf_url": "https://arxiv.org/pdf/2608.09925",
+      "summary_zh": "大型语言模型在政府场景中应用日益增多，但现有评估框架缺乏对公共行政价值观和非英语语言环境的关注。本文提出“Grip on LLMs”框架，通过与荷兰市政组织专家协作，识别出六个评估维度并构建覆盖30多个多语言及荷兰语专属模型的基准套件。结果表明没有模型在所有维度上表现最优，且质量与能耗、成本之间存在权衡，事实性与诚实性由不同属性决定，并发布了面向非技术用户的模型概览。",
+      "summary_en": "Large language models are increasingly used in governmental settings, yet existing evaluation frameworks rarely reflect public administration values and non-English linguistic requirements. We present the 'Grip on LLMs' framework, developed with Dutch municipal experts, identifying six evaluation dimensions and operationalizing them into a benchmark suite covering over 30 multilingual and Dutch-specific models. Results show no single model excels across all dimensions, with trade-offs between quality and environmental/financial costs, and factuality not implying honesty, leading to a user-friendly model overview for diverse stakeholders.",
+      "highlights_zh": [
+        "六维评估框架，覆盖30+模型",
+        "无模型全维度最优，存在权衡",
+        "发布非技术用户友好的模型概览"
+      ]
+    }
+  ]
+}
