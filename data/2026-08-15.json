@@ -1,0 +1,305 @@
+{
+  "date": "2026-08-15",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.13560",
+      "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+      "authors": [
+        "Yaxin Luo",
+        "Haobin Jiang",
+        "Jialv Zou",
+        "Xu Huang",
+        "Wenhao Yan",
+        "Haodong Li",
+        "Zhengrong Yue",
+        "Jing Li",
+        "Xiaofu Chen",
+        "Xiaohan Zhao",
+        "Jiacheng Liu",
+        "Jiacheng Cui",
+        "Zhiqiang Shen",
+        "Xiaotong Li"
+      ],
+      "abstract": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal harness system should align with human design priors and accumulate reusable experience through empirical exploration to drive recursive self-improvement, existing paradigms remain static and fall short of this capability. In this paper, we present AutoDesign, a framework that aligns with human design priors, where a meta-harness optimizer guides a code agent to recursively improve harness based on rollout feedback. To instantiate and evaluate this framework, we focus on the academic paper-to-poster generation task and introduce PosterBench, comprising a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset for controlled evaluation. On the PosterBench Main Track, AutoDesign achieves the highest score of 78.32, surpassing the closed-source commercial system Claude Design by 7.45 points. Across seven controlled code-agent-model configurations, integrating the learned DesignHarness consistently improves performance, increasing the average PosterBench Score from 54.99 to 67.39 (+12.4%). In a fully autonomous long-horizon loop, it executes 253 tool calls and 11 editing turns within 40 minutes for under $3, reaching average conference-poster quality in human evaluation. A system-blind human study further demonstrates that AutoDesign achieves the highest human preference among evaluated systems.",
+      "published": "2026-08-13T17:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13560",
+      "pdf_url": "https://arxiv.org/pdf/2608.13560",
+      "summary_zh": "长时程智能体设计任务中，现有模型-工具系统范式静态，缺乏人类先验与经验积累能力。AutoDesign提出元工具优化器，通过代码智能体依据反馈递归改进工具系统，实现自举式自我提升。在论文转海报任务上，AutoDesign超越商业系统，且学习到的工具系统可跨配置迁移，显著提升性能。",
+      "summary_en": "Existing model-harness systems for long-horizon agentic design are static and lack alignment with human priors or experience accumulation. AutoDesign introduces a meta-harness optimizer that guides a code agent to recursively improve the harness based on rollout feedback, enabling self-improvement. It outperforms commercial systems on poster generation, and the learned harness consistently boosts performance across configurations, achieving high human preference.",
+      "highlights_zh": [
+        "元工具优化实现递归自改进",
+        "超越Claude Design 7.45分",
+        "跨配置迁移，成本低于3美元"
+      ]
+    },
+    {
+      "id": "2608.13558",
+      "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+      "authors": [
+        "Bobo Li",
+        "Hao Fei",
+        "Tianjie Ju",
+        "Mong-Li Lee",
+        "Wynne Hsu"
+      ],
+      "abstract": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the agent. We introduce OmniScientist, an end-to-end, omni-modal AI scientist that conducts multidisciplinary research directly from heterogeneous raw evidence. A perception layer and 3 autonomous agents for ideation, experiment, and writeup operate within a deterministic pipeline, allowing observations to shape research questions, experimental decisions, and final claims throughout the research lifecycle. By running idea, rigour, and claim checks in code, the system enforces novelty screening, statistical validity, execution provenance, and numerical traceability. We evaluate OmniScientist on 36 real-data cases spanning 5 discipline families, 4 families of scientific evidence, and modalities including images, signals, audio, video, 3-D structures, trajectories, tables, formulae, and graphs. The system completes the full path from raw data to a compiled manuscript in all 36 cases and achieves a mean overall paper score of 6.3 with the reference reasoning backbone. In paired comparisons against a blind variant that receives only precomputed scalar features, direct perception improves all 7 evaluation dimensions and wins 85% of head-to-head judgments. These results show that lifecycle-wide perception is essential for evidence-grounded scientific discovery and provides a practical path toward broadly capable AI scientists.",
+      "published": "2026-08-13T17:59:52Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13558",
+      "pdf_url": "https://arxiv.org/pdf/2608.13558",
+      "summary_zh": "现有AI科学家系统通常只能处理文本、代码或预计算摘要，无法访问科学发现所依赖的完整异构原始证据，如空间、时间、跨通道和过程性关系。OmniScientist提出了一种端到端的全模态AI科学家框架，通过感知层和三个自主智能体（构思、实验、写作）在确定性流程中直接处理多模态原始数据，并在代码中强制执行新颖性、统计有效性和数值可追溯性检查。在36个跨5个学科家族的真实数据案例中，该系统全部完成从原始数据到论文的完整流程，平均论文得分6.3，且直接感知相比盲变体在全部7个评估维度上胜出85%的对比，证明了全生命周期感知对证据驱动科学发现的关键作用。",
+      "summary_enh": "Existing AI scientist systems typically reason over text, code, labels, or precomputed summaries, failing to access the full heterogeneous raw evidence—such as spatial, temporal, cross-channel, and procedural relations—that scientific discovery depends on. OmniScientist introduces an end-to-end, omni-modal AI scientist with a perception layer and three autonomous agents (ideation, experiment, writeup) operating in a deterministic pipeline, directly processing raw multimodal data while enforcing novelty, statistical validity, and numerical traceability checks in code. Evaluated on 36 real-data cases across 5 discipline families, it completes the full raw-data-to-manuscript path in all cases with a mean paper score of 6.3, and direct perception outperforms a blind variant across all 7 evaluation dimensions, winning 85% of head-to-head judgments—demonstrating that lifecycle-wide perception is essential for evidence-grounded discovery.",
+      "highlights_zh": [
+        "全模态感知驱动科学发现",
+        "36案例全完成，均分6.3",
+        "感知胜盲基线85%对比"
+      ]
+    },
+    {
+      "id": "2608.13554",
+      "title": "Defensive Boosting for Online Probabilistic Forecasting",
+      "authors": [
+        "Georgy Noarov",
+        "Aaron Roth"
+      ],
+      "abstract": "We study online probabilistic forecasting of binary outcomes chosen by an adaptive adversary. Given an online learning algorithm for a weak hypothesis class $H$, we would like to efficiently obtain two incomparable guarantees that existing online boosting techniques provide separately. Online gradient boosting competes in Brier score with the best predictor induced by the span of $H$ on every sequence, but promises nothing when the span does not contain an accurate predictor. Online weak-to-strong boosting drives classification error to zero under a weak-learning condition, but promises little when that condition fails. We give a simple defensive forecasting algorithm, the Defensive Booster, that obtains both guarantees. On every adaptive sequence, its Brier score is competitive with the best prediction induced by the span of $H$ at the same rate as online gradient boosting; simultaneously, whenever the realized transcript satisfies the smooth weak-learning condition, its Brier score and randomized classification error satisfy the same rate guarantee as online classification boosting. This is achieved by operationalizing the \"dual view\" of boosting: When the algorithm's randomized classification error is persistently high, its mistake weights form a smooth reweighting on which every weak hypothesis has low edge, yielding an ex-post hard-core certificate that the weak-learning condition fails. We also develop a strongly adaptive variant, which satisfies both guarantees on every time interval. The Defensive Booster is very efficient: it accesses just one weak-class learner, whereas the prior online boosting methods we compare against maintain large weak-learner ensembles. Experiments on synthetic and real data streams demonstrate its strong predictive performance (sometimes substantially improving over all prior baselines) coupled with orders-of-magnitude faster runtime.",
+      "published": "2026-08-13T17:59:35Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CC",
+        "cs.DS",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13554",
+      "pdf_url": "https://arxiv.org/pdf/2608.13554",
+      "summary_zh": "在线概率预测中，现有提升方法分别提供Brier分数竞争性或弱学习条件下的误差收敛保证，但无法同时获得。本文提出Defensive Booster算法，通过操作化提升的“对偶视角”，在单一弱学习器上同时实现两种保证，并支持强自适应变体。实验表明其预测性能优于现有基线，且运行速度快数个数量级。",
+      "summary_en": "Online probabilistic forecasting faces a trade-off between Brier-score competitiveness and weak-to-strong boosting guarantees. The Defensive Booster achieves both simultaneously by operationalizing the dual view of boosting with a single weak learner, and extends to a strongly adaptive variant. Experiments show superior predictive performance and orders-of-magnitude faster runtime compared to prior methods.",
+      "highlights_zh": [
+        "双保证单学习器提升",
+        "性能优于基线且快数倍",
+        "适用于自适应对抗序列"
+      ]
+    },
+    {
+      "id": "2608.13549",
+      "title": "Exponential Convex Calibration Dimension for the Multi-Label Jaccard Measure",
+      "authors": [
+        "Mingyuan Zhang"
+      ],
+      "abstract": "The per-instance Jaccard score, or intersection over union (IoU), is standard in multi-label classification and binary segmentation. With $s$ labels, its loss matrix has $2^s$ outcomes and reports. Under the convention $\\mathrm{Jac}(\\varnothing,\\varnothing)=1$, we prove that the Jaccard score, shifted-loss, and ordinary loss matrices are nonsingular and that the loss columns have affine dimension $2^s-1$. The proof combines a finite MinHash Gram representation with Boolean Möbius inversion. For exact calibration, we prove $2^{s-1} \\leq \\mathrm{CCdim}(L^{\\mathrm{Jac}}) \\leq 2^s-1$. The lower bound uses a factorially weighted distribution with $2^{s-1}+1$ supported outcomes and Bayes-optimal reports. Consequently, every exactly calibrated convex surrogate requires exponentially many prediction coordinates. We also give two polynomial-dimensional approximation guarantees with explicit regret transfers. A new $F_1$-to-Jaccard transfer turns an existing $(s^2+1)$-dimensional $F_1$ surrogate into a polynomial-time rule with asymptotic Jaccard regret at most $3-2\\sqrt{2}$. For any $α>0$ and $0<ρ<1$, a MinHash square-loss surrogate attains Jaccard-regret floor $α$ uniformly over arbitrary conditional label distributions. With probability at least $1-ρ$, the direct construction has dimension $O((s^2+s\\log(1/ρ))/α^2)$, while a signed variant has dimension $O((s+\\log(1/ρ))/α^2)$. Thus zero-regret calibration requires exponential dimension, whereas every fixed additive regret tolerance admits polynomial prediction dimension.",
+      "published": "2026-08-13T17:59:17Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13549",
+      "pdf_url": "https://arxiv.org/pdf/2608.13549",
+      "summary_zh": "多标签分类中Jaccard度量的逐实例校准维度问题被研究，其损失矩阵在空集约定下被证明非奇异且列仿射维度为2^s-1。通过有限MinHash Gram表示与布尔Möbius反演，证明了精确校准维度介于2^{s-1}和2^s-1之间，并给出两个多项式维度的近似保证。结果表明零遗憾校准需指数维度，而固定加性遗憾容忍度可多项式维度实现，为凸代理设计提供了理论界限。",
+      "summary_en": "The calibration dimension of the multi-label Jaccard measure is analyzed, proving the loss matrix nonsingular with affine column dimension 2^s-1 under the empty-set convention. Using finite MinHash Gram representations and Boolean Möbius inversion, exact calibration dimension is bounded between 2^{s-1} and 2^s-1, with two polynomial-dimensional approximation guarantees. Zero-regret calibration requires exponential dimension, while fixed additive regret tolerances admit polynomial prediction dimensions, guiding convex surrogate design.",
+      "highlights_zh": [
+        "精确校准维度指数下界",
+        "多项式维度近似保证",
+        "F1到Jaccard遗憾转移"
+      ]
+    },
+    {
+      "id": "2608.13538",
+      "title": "SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization",
+      "authors": [
+        "Weihan Meng",
+        "Hongzhu Guo",
+        "Yi Jing",
+        "Dewen Liu",
+        "Zijun Yao",
+        "Xiaozhi Wang",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "abstract": "Sparse autoencoders (SAEs) are proposed to extract numerous features from large language model (LLM) representations, yet explaining these features still relies primarily on external observation. This reliance leads to superficial explanations inferred from observed model behavior and computational inefficiency from collecting such behavioral evidence at scale. We introduce SAEVerbalizer, a framework that injects SAE decoder directions into an LLM's representations and fine-tunes the LLM's downstream layers to generate natural-language explanations of the injected features. Once trained, the resulting verbalizer explains SAE features directly from decoder directions, addressing both limitations. Our experiments show that the learned verbalization capability generalizes to unseen features, transfers across separately trained SAE dictionaries, and, with a lightweight adapter, extends to SAE features from different LLMs. Intervention experiments show that injecting multiple directions yields an explanation combining their meanings, while reversing individual directions produces corresponding meaning shifts.",
+      "published": "2026-08-13T17:54:11Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13538",
+      "pdf_url": "https://arxiv.org/pdf/2608.13538",
+      "summary_zh": "稀疏自编码器（SAE）特征解释依赖外部观察，导致解释浅层且计算低效。SAEVerbalizer通过将SAE解码方向注入LLM表示并微调下游层，直接生成自然语言解释。该方法泛化到未见特征、跨字典和跨模型，且多方向注入产生组合语义。",
+      "summary_en": "Explaining SAE features relies on external observation, yielding shallow explanations and computational inefficiency. SAEVerbalizer injects SAE decoder directions into LLM representations and fine-tunes downstream layers to directly generate natural-language explanations. It generalizes to unseen features, transfers across dictionaries and models, and supports compositional semantics via multi-direction injection.",
+      "highlights_zh": [
+        "直接由解码方向生成解释",
+        "泛化至未见特征及跨字典/模型",
+        "多方向注入实现组合语义解释"
+      ]
+    },
+    {
+      "id": "2608.13556",
+      "title": "V-RAE: Rethinking Video Latent Spaces for Generation",
+      "authors": [
+        "Minghui Guo",
+        "Shengqiong Wu",
+        "Hao Fei"
+      ],
+      "abstract": "Latent video generation relies on autoencoders to define a compact space in which generative models operate. Although video autoencoder architectures have evolved substantially, their latent spaces are still optimized primarily for pixel-level reconstruction and provide limited high-level semantic organization. A reconstruction-optimal latent space, however, need not be well suited to generative modeling. We propose V-RAE, a video representation autoencoder that builds compact generative latents on top of frozen vision foundation model representations. A lightweight temporal pooling module removes temporal redundancy while preserving semantic structure, and a video decoder reconstructs continuous motion from the compressed features. We evaluate V-RAE with four representative frozen encoders on video reconstruction, semantic probing, and class-conditional generation. V-RAE achieves 2.13 rFVD on K600, outperforming all evaluated large-scale pretrained video VAEs. Its latents retain substantially more semantic information than conventional video tokenizer latents. Under matched generation settings, our best variant achieves gFVD scores of 117.86 and 19.16 on UCF101 and K600, respectively, while converging up to 6x faster}. We further show that reconstruction quality alone is insufficient to characterize generative utility and introduce tFVD, a temporal-coherence diagnostic that correlates more reliably with downstream generation quality. Beyond video generation, V-RAE also improves future video prediction on Cityscapes over the Wan 2.2 VAE latent space under matched prediction settings. Taken together, the experiments show that frozen semantic representations can support video reconstruction, generation, and predictive modeling. The project page: https://v-rae.github.io/.",
+      "published": "2026-08-13T17:59:43Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13556",
+      "pdf_url": "https://arxiv.org/pdf/2608.13556",
+      "summary_zh": "现有视频自编码器的潜空间主要针对像素级重建优化，缺乏高层语义组织，未必适合生成任务。V-RAE在冻结的视觉基础模型表示之上构建紧凑生成潜空间，通过轻量时间池化模块去除冗余并保留语义结构，再由视频解码器重建连续运动。V-RAE在K600上取得2.13 rFVD，优于所有大规模预训练视频VAE，生成质量与收敛速度显著提升，并引入tFVD诊断指标揭示重建质量不足以表征生成效用。",
+      "summary_en": "Existing video autoencoders optimize latent spaces for pixel-level reconstruction, which may not suit generative modeling due to limited semantic organization. V-RAE builds compact generative latents on frozen vision foundation model representations, using a lightweight temporal pooling module to remove redundancy while preserving semantics and a decoder to reconstruct motion. It achieves 2.13 rFVD on K600, outperforming large-scale pretrained video VAEs, with up to 6x faster convergence and introduces tFVD as a more reliable temporal-coherence diagnostic for generation quality.",
+      "highlights_zh": [
+        "冻结语义表示构建生成潜空间",
+        "K600 rFVD 2.13，收敛快6倍",
+        "tFVD诊断指标，提升预测建模"
+      ]
+    },
+    {
+      "id": "2608.13552",
+      "title": "PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives",
+      "authors": [
+        "Kaixin Ding",
+        "Xi Chen",
+        "Minghong Cai",
+        "Zhiyuan Xu",
+        "Yiyang Wang",
+        "Yuxiang Lu",
+        "Junyi Li",
+        "Shuyang Chen",
+        "Yuan Gao",
+        "Xin Tao",
+        "Pengfei Wan",
+        "Hengshuang Zhao"
+      ],
+      "abstract": "Video world models simulate future states conditioned on current observations and user actions. Recent systems have demonstrated impressive video consistency and action controllability over long sequences. However, fairly comparing these interactive models remains challenging. In practice, a human player typically evaluates a world model by pursuing long-horizon objectives through interaction. For example, a user may turn around 360 degrees to see whether the environment remains consistent, or walk into the water and inspect whether realistic water ripples are generated. The action sequence required to achieve the same objective may vary substantially between models, making fixed action-conditioned evaluation unsuitable for cross-model comparison. To address this, we employ multi-modal Agent Players to interact with world models toward specified long-horizon objectives. Building on this paradigm, we introduce PlayWorld, a benchmark providing 171 scenarios, each with a specified objective. To evaluate performance thoroughly, we assess models along four core dimensions: geometry consistency, interaction fidelity, out-of-sight evolution, and insight evolution. In addition, we incorporate basic ability metrics for video quality and controllability. Experiments across nine state-of-the-art world models reveal that current models remain unreliable on long-horizon interactive objectives, particularly in maintaining spatial consistency and persistent state evolution. Code and data are available at https://github.com/kxding/PlayWorld.",
+      "published": "2026-08-13T17:59:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13552",
+      "pdf_url": "https://arxiv.org/pdf/2608.13552",
+      "summary_zh": "视频世界模型在长序列交互中难以公平比较，因为实现相同目标所需的动作序列因模型而异。为此，我们提出PlayWorld基准，利用多模态Agent Players与模型交互以完成指定的长时目标，并从几何一致性、交互保真度、视野外演化、洞察演化四个维度评估。实验表明，当前九种先进世界模型在长时交互目标上仍不可靠，尤其在空间一致性和状态持续演化方面存在明显不足。",
+      "summary_en": "Video world models are hard to compare fairly because action sequences for the same objective vary across models. We introduce PlayWorld, a benchmark using multimodal Agent Players to interact with models toward long-horizon objectives, evaluating geometry consistency, interaction fidelity, out-of-sight evolution, and insight evolution. Experiments on nine state-of-the-art models reveal persistent unreliability in long-horizon interactive tasks, especially in spatial consistency and state evolution.",
+      "highlights_zh": [
+        "多模态Agent驱动的世界模型基准",
+        "九模型在长时交互中均不可靠",
+        "空间一致性与状态演化是主要短板"
+      ]
+    },
+    {
+      "id": "2608.13511",
+      "title": "A Browser-Native Digital Test Range for Benchmarking 4D Ocean-Glider Planning Algorithms",
+      "authors": [
+        "Edward Holmberg",
+        "Elias Ioup",
+        "Mahdi Abdelguerfi"
+      ],
+      "abstract": "Repeated in-situ evaluation of ocean-glider planners requires scarce vehicles, operators, deployment and recovery resources, and ocean conditions that cannot be reset for competing algorithms. We present a guided, installation-free browser-native digital test range that transforms a selected region into a reproducible four-dimensional experiment. The system leads users from regional domain selection through mission-scoped bathymetry, time/depth forcing, science objectives, optional task decomposition, route specification, current-advected execution, observation generation, and scoring. Its primary contribution is a common plan-to-observation contract unifying vehicle, sensing, and evaluator assumptions across manual routes, transparent built-in algorithms, and imported classical or learned-planner outputs, while exported artifacts form dataset-ready records. A controlled Observing System Simulation Experiment (OSSE) evaluates five classical planners in two episodes, three deterministic seeds, and a calibrated 60-hour horizon. All 54 missions completed and recovered without hard violations, while planner rankings and dive-policy effects revealed operational-scientific tradeoffs. An authentic public deployment supplied a field-referenced audit to scope current kinematic boundaries. Separately, source-locked GliderFlight 1.2.0 achieved native-to-browser parity through Pyodide/WebAssembly, establishing a pathway for high-fidelity multi-tier simulation. The resulting operational space is scientifically traceable and component-qualified for mission-scale pre-deployment experimentation.",
+      "published": "2026-08-13T17:34:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13511",
+      "pdf_url": "https://arxiv.org/pdf/2608.13511",
+      "summary_zh": "海洋滑翔机规划算法的实地评估受限于稀缺资源和不可重置的海洋条件，缺乏可复现的测试环境。本文提出一个免安装的浏览器原生数字试验场，通过统一的计划到观测契约，将区域选择、任务规划、执行与评分整合为可复现的四维实验。系统成功评估了五种经典规划器，并实现了原生与浏览器仿真的一致性，为任务级预部署实验提供了科学可追溯的测试平台。",
+      "summary_en": "Repeated in-situ evaluation of ocean-glider planners is hindered by scarce resources and non-resettable ocean conditions. This paper presents a browser-native digital test range with a common plan-to-observation contract, enabling reproducible 4D experiments from domain selection to scoring. It benchmarked five classical planners across 54 missions and achieved native-to-browser parity via Pyodide, offering a traceable and component-qualified platform for pre-deployment testing.",
+      "highlights_zh": [
+        "浏览器原生可复现4D测试场",
+        "54次任务全部完成无硬性违规",
+        "支持经典与学习型规划器导入"
+      ]
+    },
+    {
+      "id": "2608.13489",
+      "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+      "authors": [
+        " DreamX Team",
+        "Rui Chen",
+        "Xiangxiang Chu",
+        "Geng Li",
+        "Jifan Li",
+        "Qingfeng Shi",
+        "Datao Tang",
+        "Jing Tang",
+        "Jun Wang",
+        "Pengfei Zhang"
+      ],
+      "abstract": "We present \\textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\\mathrm{SE}(3)$ transformations into attention via \\textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \\textbf{depth branch} for scene-level geometry and use \\textbf{SAM3 masks} with a frozen \\textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \\model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.",
+      "published": "2026-08-13T17:18:09Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13489",
+      "pdf_url": "https://arxiv.org/pdf/2608.13489",
+      "summary_zh": "机器人操作需要根据观测、语言指令和动作序列预测未来视频，但现有世界模型生成的视频虽逼真却可能不遵循动作指令或丢失操作对象。为此，我们提出DreamX-Phi 1.0，通过PRoPE式几何编码注入每臂SE(3)变换以保证动作忠实性，并引入深度分支和SAM3掩码+V-JEPA教师来增强几何与物体一致性，同时用分布匹配蒸馏实现高效部署。该方法在WorldArena 2.0挑战赛Track 1和Track 2分别获得第一名和第二名，验证了其有效性和实用性。",
+      "summary_en": "Robotic manipulation requires predicting future videos from observations, language instructions, and action sequences, yet existing world models often produce realistic but unfaithful rollouts that ignore commanded actions or lose manipulated objects. We propose DreamX-Phi 1.0, which injects per-arm SE(3) transformations via PRoPE-style geometric encoding for action faithfulness, adds a depth branch and SAM3 masks with a frozen V-JEPA teacher for geometry and object consistency, and employs distribution-matching distillation for efficient few-step deployment. The model achieves first place on Track 1 and second place on Track 2 of the WorldArena 2.0 Challenge, demonstrating strong performance and practical value.",
+      "highlights_zh": [
+        "PRoPE式几何编码保证动作忠实性",
+        "WorldArena 2.0 Track 1第一、Track 2第二",
+        "蒸馏加速部署，代码模型将开源"
+      ]
+    },
+    {
+      "id": "2608.13555",
+      "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+      "authors": [
+        "Dairu Liu",
+        "Zekun Qi",
+        "Jiayu Zeng",
+        "Ruixi Yu",
+        "Yu Guan",
+        "Yintianrun Zhang",
+        "Xuchuan Chen",
+        "Sikai Liang",
+        "Zekai Li",
+        "Chenghuai Lin",
+        "Xinqiang Yu",
+        "Wenyao Zhang",
+        "He Wang",
+        "Li Yi"
+      ],
+      "abstract": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contacts such as foot skating and mistimed touch-downs. Meanwhile, widely used test suites are small and lack the diversity needed to stress contact-rich, long-horizon behaviors. We introduce HumanTracker to make humanoid tracking evaluation both perceptually aligned and scalable. The HumanTracker benchmark contains approximately 153 hours of optical motion trajectories from multiple professional performers, organized into four motion families with text labels for fine-grained diagnosis. We further propose HumanScore, a preference-aligned metric trained on 12K motion pairs containing 24K motions. Across representative state-of-the-art trackers, HumanScore better predicts human preferences and reveals contact and stability failures that kinematic metrics often miss.",
+      "published": "2026-08-13T17:59:40Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.13555",
+      "pdf_url": "https://arxiv.org/pdf/2608.13555",
+      "summary_zh": "现有类人运动跟踪评估依赖逐帧运动学误差，忽略了足部滑动、触地时机等物理伪影，且测试集规模小、缺乏多样性。本文提出HumanTracker基准，包含约153小时多表演者光学运动轨迹和文本标签，并训练了偏好对齐的HumanScore指标。HumanScore能更好预测人类偏好，揭示运动学指标常遗漏的接触与稳定性问题。",
+      "summary_en": "Existing humanoid motion tracking evaluation relies on per-frame kinematic errors, missing physical artifacts like foot skating and mistimed contacts, and suffers from small, less diverse test suites. We introduce HumanTracker, a benchmark with ~153 hours of optical motion trajectories from multiple performers and text labels, plus HumanScore, a preference-aligned metric trained on 12K motion pairs. HumanScore better predicts human preferences and exposes contact and stability failures that kinematic metrics overlook.",
+      "highlights_zh": [
+        "偏好对齐的评估指标",
+        "153小时多表演者基准",
+        "揭示接触与稳定性缺陷"
+      ]
+    }
+  ]
+}
