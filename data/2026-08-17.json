@@ -1,0 +1,290 @@
+{
+  "date": "2026-08-17",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.14539",
+      "title": "Decoding the Past: An Uncertainty-Aware Deep Learning Framework for Sex Attribution in Prehistoric Hand Stencils",
+      "authors": [
+        "Karel Becerra",
+        "Boris Mederos",
+        "Dean Snow",
+        "Ramón A. Mollineda"
+      ],
+      "abstract": "Determining the biological sex of the individuals who created Upper Paleolithic hand stencils remains a challenging problem due to the absence of ground truth, population differences between contemporary and prehistoric groups, and the uncertainty introduced by image degradation. Traditional morphometric methods suffer from high structural overlap across sexes, poor cross-population generalizability, and subjective feature engineering. This study presents an uncertainty-aware deep learning framework for sex attribution in prehistoric hand stencils that explicitly models, propagates, and aggregates uncertainty throughout the analytical pipeline. The methodology combines dual image processing, dual contour extraction, structured silhouette augmentation, model architectural diversity, and ensemble-based decision aggregation. The pipeline generates twelve plausible silhouette realizations per stencil to capture boundary uncertainties, which are processed by two ensembles of ten deep neural networks each (EfficientNet-B3 and MobileViT-S) trained on 14,036 contemporary hand samples. Furthermore, a triangulated validation scheme integrates ensemble predictions with unsupervised 2D latent-space manifold mapping (UMAP + k-NN) and explainable AI spatial attributions (LayerCAM) to ensure anatomical consistency. On contemporary data, ensemble models achieve strong classification performance, with accuracies exceeding 88% in older age groups. When applied to prehistoric stencils, the framework produces both sex predictions and confidence measures of internal agreement, enabling the distinction between morphologically stable and ambiguous cases. Convergence across ensemble predictions, latent-space structure, and interpretability analyses shows that uncertainty can become a measurable component of archaeological inference, enabling robust and reproducible decoding of ancient rock art.",
+      "published": "2026-08-14T17:51:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14539",
+      "pdf_url": "https://arxiv.org/pdf/2608.14539",
+      "summary_zh": "史前手印模板的性别鉴定因缺乏真实标签、跨种群差异和图像退化而极具挑战。本文提出一种不确定性感知的深度学习框架，通过双图像处理、轮廓提取、结构化增强、模型集成及三角验证（集成预测、UMAP流形和LayerCAM解释）显式建模和聚合不确定性。在当代数据上准确率超88%，应用于史前手印时能输出性别预测和内部一致性置信度，使不确定性成为可测量的考古推断指标。",
+      "summary_en": "Determining the sex of Upper Paleolithic hand stencil creators is challenging due to missing ground truth, population differences, and image degradation. This work introduces an uncertainty-aware deep learning framework that combines dual processing, contour extraction, silhouette augmentation, model diversity, and ensemble aggregation, validated via triangulated ensemble, unsupervised manifold, and explainable AI analyses. On contemporary data, accuracy exceeds 88%, and for prehistoric stencils it yields predictions with confidence measures, turning uncertainty into a measurable component of archaeological inference.",
+      "highlights_zh": [
+        "不确定性感知的集成深度学习框架",
+        "当代数据准确率超88%",
+        "可区分形态稳定与模糊样本"
+      ]
+    },
+    {
+      "id": "2608.14530",
+      "title": "Marionette: Predicting World States, Rendering Geometry, Painting Appearance",
+      "authors": [
+        "Zian Meng",
+        "Zhen Li",
+        "Chuanhao Li",
+        "Qiang Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Interactive game world models typically autoregress visual observations directly in pixel or latent space, forcing structured properties such as pose, geometry, and occlusion to be implicitly maintained by the same generative sequence. Over long horizons, errors in these latent world properties accumulate, making consistency and controllability fragile. We explicitly model the evolving world state, delegate exact geometric computation to a fixed, zero-parameter renderer, and leave the neural model to synthesize appearance. We instantiate this idea as Marionette, a world model for interactive games with articulated characters. First, a two-stage autoregressive dynamics model predicts an explicit and interpretable 276-dimensional 3D world state comprising multi-entity articulated skeletons, metric root trajectories, and rotations. Second, a zero-parameter graphics bridge converts the predicted state into pose-control videos, computing world-space geometry and occlusion in closed form. Third, a control-conditioned video-diffusion observation model synthesizes photorealistic RGB observations from the resulting structured controls. Our experiments establish two properties of Marionette. First, the predicted world state is directly controllable. Forcing a mismatched action stream changes root-aligned joint error by 31% across 48 held-out segments. Second, long-horizon behaviour is determined in the state, and can be repaired there. Left free, the two generated characters drift to 21.2 m apart (recorded sessions stay near 5 m) and a third of frames show ground penetration. Two rules imposed on the explicit state, a terrain collider and a separation cap, cut penetration by 66% and keep the pair engaged, with no change to the observation model. Routing appearance through the predicted state costs no fidelity we can detect, at an FVD of 831 against 799 for recorded pose.",
+      "published": "2026-08-14T17:48:16Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14530",
+      "pdf_url": "https://arxiv.org/pdf/2608.14530",
+      "summary_zh": "交互式游戏世界模型通常直接在像素或潜空间自回归预测视觉观测，导致姿态、几何和遮挡等结构化属性隐式维护，长期推理中误差累积使一致性和可控性脆弱。Marionette提出显式建模可解释的276维3D世界状态，通过零参数渲染器精确计算几何与遮挡，仅让神经模型合成外观。实验表明预测状态可直接控制，施加规则可修复长期行为（穿透减少66%），且外观保真度与记录姿态相当（FVD 831对799）。",
+      "summary_en": "Interactive game world models typically autoregress visual observations in pixel or latent space, forcing structured properties like pose and geometry to be implicitly maintained, causing error accumulation over long horizons. Marionette explicitly predicts an interpretable 276-dimensional 3D world state, delegates exact geometric computation to a zero-parameter renderer, and uses a video-diffusion model only for appearance synthesis. The predicted state is directly controllable (31% joint error change under mismatched actions), long-horizon behavior can be repaired via simple rules (66% penetration reduction), and appearance fidelity matches recorded pose (FVD 831 vs 799).",
+      "highlights_zh": [
+        "显式状态+零参数渲染解耦几何与外观",
+        "状态可控性：错配动作改变关节误差31%",
+        "规则修复长期行为，穿透减少66%"
+      ]
+    },
+    {
+      "id": "2608.14509",
+      "title": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
+      "authors": [
+        "Zhelun Wu"
+      ],
+      "abstract": "Systems that ask a language model to reach a conclusion from many sources usually concatenate them into one prompt. This conflates two operations with different requirements. Interpreting a source rewards capacity and context. Combining interpretations rewards fixed arithmetic, comparability across instances, and the option to return nothing. Once separated, the design problem becomes the interface between them. We propose a four-field evidence tuple (hypothesis, reliability bucket, rationale, provenance) and show that fixing it determines both halves. The separation also reveals a failure mode in how such systems combine, which we call count-scale drift. Thresholding a sum of unnormalized weights is exactly posterior thresholding, but at an operating point that slides with the number of sources consulted. The slide grows with reader reliability. When source reliabilities differ, the vote rule and the posterior order instances differently, and no threshold reconciles them. Pooling calibrated log-likelihood ratios addresses both problems. The fix is arithmetic rather than architectural, and applies to a class of rules beyond language models: score-summing triage engines, diagnostic panels scored by counting positives, and additive multi-signal detectors. We then instantiate the principle twice on one longitudinal corpus, once after outcomes resolve and once before. The same partition helps in both, at different granularities: over reading in the first, over learning capacity in the second. There, a small sequence encoder on an easy auxiliary objective plus a tree ensemble carrying the censored survival loss reaches 0.921 AUPRC against 0.805 for a hand-crafted baseline. We separate what transfers from what must be re-estimated per domain, and state five predictions that would falsify the framework, three negative results, and which comparisons remain confounded.",
+      "published": "2026-08-14T17:24:55Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14509",
+      "pdf_url": "https://arxiv.org/pdf/2608.14509",
+      "summary_zh": "论文指出将多源证据拼接进单一提示词的做法混淆了证据解释与决策聚合两种不同需求，导致计数尺度漂移和投票规则与后验排序不一致等问题。作者提出分离两者，并用四字段证据元组（假设、可靠性桶、理由、来源）作为接口，通过池化校准的对数似然比解决上述问题。在纵向语料库上的两次实例化验证了该框架，其中在结果未知场景下结合小序列编码器与树集成达到0.921 AUPRC，显著优于手工基线0.805。",
+      "summary_en": "The paper identifies that concatenating multiple sources into one prompt conflates evidence interpretation with decision aggregation, causing count-scale drift and inconsistency between vote rules and posterior ordering. The authors propose separating these two operations and using a four-field evidence tuple as the interface, fixing both halves, and addressing the issues by pooling calibrated log-likelihood ratios. Two instantiations on a longitudinal corpus validate the framework, achieving 0.921 AUPRC versus 0.805 baseline in the pre-outcome setting, and the separation principle generalizes beyond LLMs to score-summing triage engines and diagnostic panels.",
+      "highlights_zh": [
+        "分离解释与聚合，四字段元组接口",
+        "AUPRC 0.921 vs 0.805 基线提升",
+        "适用于LLM及非LLM评分聚合系统"
+      ]
+    },
+    {
+      "id": "2608.14505",
+      "title": "RecipeNet: A Hierarchical Transformer for Recipe Data",
+      "authors": [
+        "Pin-Yen Huang",
+        "Sachin Chhabra",
+        "Prasanth Sai Gouripeddi",
+        "Abhinav Kumar",
+        "Baoxin Li"
+      ],
+      "abstract": "Recipe data arises in domains such as materials synthesis, pharmaceutical formulation, and industrial manufacturing, where procedures are represented as ordered sequences of steps containing heterogeneous structured fields. Existing tabular learning methods typically flatten this structure into fixed-schema representations, limiting their ability to capture hierarchical field interactions and procedural dependencies. We propose RecipeNet, a hierarchical Transformer architecture that encodes field-level interactions within each step and sequential dependencies across steps through stacked Transformer encoders. Experiments on multiple recipe datasets and tasks demonstrate that RecipeNet consistently outperforms existing tabular models, highlighting the value of hierarchical and sequential modeling for recipe representation learning.",
+      "published": "2026-08-14T17:18:36Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14505",
+      "pdf_url": "https://arxiv.org/pdf/2608.14505",
+      "summary_zh": "配方数据（如材料合成、制药配方）具有层次化结构和顺序依赖，现有表格学习方法将其扁平化，难以捕捉字段交互和过程依赖。RecipeNet提出层次化Transformer架构，通过堆叠编码器分别建模步骤内字段交互和步骤间序列依赖。在多个配方数据集和任务上，RecipeNet持续优于现有表格模型，验证了层次化与序列化建模对配方表示学习的价值。",
+      "summary_en": "Recipe data in domains like materials synthesis and pharmaceutical formulation involves hierarchical structured fields and procedural dependencies, which existing tabular learning methods fail to capture due to flat representations. RecipeNet introduces a hierarchical Transformer with stacked encoders to model field-level interactions within steps and sequential dependencies across steps. Experiments on multiple recipe datasets show consistent improvements over tabular baselines, demonstrating the importance of hierarchical and sequential modeling for recipe representation learning.",
+      "highlights_zh": [
+        "层次化Transformer建模配方结构",
+        "多数据集上优于现有表格模型",
+        "适用于材料、制药等配方领域"
+      ]
+    },
+    {
+      "id": "2608.14465",
+      "title": "You Only Pass Once: Answering and Abstaining Together in a Single Forward Pass of a Frozen Language Model",
+      "authors": [
+        "Ziyang Luo",
+        "Zhongyao Chu",
+        "Xinjie He",
+        "Youting Wang",
+        "Xukui Qin",
+        "Runxiong Wu",
+        "Yan-Syuan Chen"
+      ],
+      "abstract": "A frozen language model on reasoning tasks has two coupled weaknesses: it under-uses evidence its own residual stream already encodes, and it fails to detect when the input is insufficient to answer, so it confabulates. This paper consolidates two research lines that address these on the same residual stream: a conditional steering probe writes the stream at mid-stack layers and recovers reasoning accuracy from a frozen backbone, and a zero-shot sufficiency direction reads the stream and abstains when information is insufficient. Deployed in one forward pass they interfere: the steering write shifts the state the direction reads, costing up to 8 AUROC points of cross-domain transfer on small models; a separate clean pass doubles inference cost. We keep the direction fixed and train a small network to reconstruct the pre-steering residual from the steered one -- mean-squared error on (steered, clean) pairs, no sufficiency labels -- and read the direction on the reconstruction. The resulting system, YOPO (You Only Pass Once), answers, steers, and abstains in one forward pass of a frozen Qwen2.5 backbone (1.5B/3B/7B). End to end, three-way accuracy more than doubles the frozen baseline (0.375->0.798 on 1.5B alphaNLI) and one pass beats the two-pass reference at every scale (0.798/0.830/0.893 vs 0.753/0.790/0.863) and on ten backbones across six model families. We chart the capacity-transfer frontier quantifying the principle that abstention should not be trained in; a source-side audit catches our own alphaNLI construction leaking a surface artifact, so architectural claims are anchored on native-label replications (SQuAD2, RepLiQA, MuSiQue); and on the standard four-domain suite we contribute, to our knowledge, the first answer-or-abstain benchmark, where our gate tops every in-domain dataset and the label-free direction is the only gate family to survive domain transfer.",
+      "published": "2026-08-14T16:44:35Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14465",
+      "pdf_url": "https://arxiv.org/pdf/2608.14465",
+      "summary_zh": "冻结语言模型在推理任务中既未充分利用自身残差流中的证据，又无法检测输入信息不足而容易产生幻觉。本文提出YOPO系统，通过条件引导探针写入残差流并训练小型网络重建被引导前的残差，使回答、引导和弃权在一次前向传播中同时完成。YOPO在多个模型和基准上将三路准确率提升至冻结基线的两倍以上，且单次前向传播优于两次前向传播的参考方法。",
+      "summary_en": "Frozen language models underuse their own residual stream evidence and fail to abstain when input is insufficient, leading to confabulation. YOPO consolidates a steering probe and a zero-shot sufficiency direction in one forward pass by training a small network to reconstruct pre-steering residuals, avoiding interference between writing and reading. It more than doubles three-way accuracy over frozen baselines, beats two-pass references at every scale, and introduces the first answer-or-abstain benchmark across four domains.",
+      "highlights_zh": [
+        "单次前向传播实现回答与弃权",
+        "三路准确率0.375->0.798（1.5B）",
+        "首个四域answer-or-abstain基准"
+      ]
+    },
+    {
+      "id": "2608.14457",
+      "title": "Information Satisfaction: A Reader-Centered Axis for Summarization Evaluation",
+      "authors": [
+        "Isabel Cachola",
+        "William Walden",
+        "Reno Kriz",
+        "Mark Dredze"
+      ],
+      "abstract": "The majority of work on summarization evaluation focuses on general summary quality (e.g., ROUGE, BERTScore) or specific desired properties (e.g., readability, factuality). However, these metrics fail to measure the utility of a summary to an individual user. For example, a biomedical researcher learning about the latest vaccine research will have different informational needs from a family doctor. Query-focused summarization captures part of this need, but in practice, users rarely state everything relevant in a query: a single short query is likely inadequate to distinguish the needs of a researcher from those of a physician. By contrast, a reader's background or persona (their role and expertise) is comparatively stable across queries and recovers much of this missing context, which makes it a practical signal for assessing whether a summary satisfies that reader's needs. In this work, we assess how sensitive popular summarization metrics are to both informational and persona differences, and find that many popular metrics, including strong LLM-as-judge metrics, fail basic perturbation tests of informational content. We additionally conduct an expert human evaluation, measuring summary preferences based on information satisfaction given a specific person's background and use case. We find that both traditional and LLM-based metrics are insufficient measures of information satisfaction and agree poorly with human judgment.",
+      "published": "2026-08-14T16:41:23Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14457",
+      "pdf_url": "https://arxiv.org/pdf/2608.14457",
+      "summary_zh": "现有摘要评估指标主要关注通用质量或特定属性，未能衡量摘要对个体用户的信息效用，而查询式摘要因用户查询简短也无法充分区分不同读者（如研究员与医生）的需求。本文提出以读者背景/角色作为稳定信号来评估信息满意度，并系统测试了流行指标对信息内容和读者角色差异的敏感性。研究发现包括强LLM评判在内的多数指标无法通过基础扰动测试，且与传统及LLM指标相比，专家人工评估显示这些指标与人类判断一致性差，不足以衡量信息满意度。",
+      "summary_en": "Existing summarization metrics focus on general quality or specific properties, failing to measure utility for individual users, while query-focused summarization is limited because short queries cannot distinguish readers with different backgrounds. This work proposes using reader persona as a stable signal for assessing information satisfaction and tests metric sensitivity to informational and persona differences. Results show that popular metrics, including LLM-as-judge, fail basic perturbation tests and agree poorly with expert human judgments, highlighting their inadequacy for measuring information satisfaction.",
+      "highlights_zh": [
+        "提出读者中心的信息满意度评估轴",
+        "多数指标无法通过信息扰动测试",
+        "LLM指标与专家判断一致性差"
+      ]
+    },
+    {
+      "id": "2608.14546",
+      "title": "CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing",
+      "authors": [
+        "Qinye Zhou",
+        "Jun Zheng",
+        "Yongchao Du",
+        "Yuan Wang",
+        "Zhengrui Chen",
+        "Zuan Gao",
+        "Taihang Hu",
+        "Chao Lin",
+        "Yefeng Shen",
+        "Xingjian Wang",
+        "Zhao Wang",
+        "Zhengtao Wu",
+        "Xiaoli Xu",
+        "Zhengze Xu",
+        "Hao Yan",
+        "Denghui Yang",
+        "Yuhang Yu",
+        "Huayu Zhang",
+        "Mingzhou Zhang",
+        "Mengting Chen"
+      ],
+      "abstract": "With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-world scenarios. However, existing benchmarks remain confined to simple single-image tasks, suffering from limited coverage dimensions and an inability to effectively differentiate performance among diverse models. Consequently, they fail to reliably evaluate model performance in complex multi-image editing, highly demanding reasoning instructions, and practical deployment settings. To address these limitations, we propose CPI-Bench, a Comprehensive, Practical andIntelligent benchmark for real-world image editing. CPI-Bench comprises three core subsets: CPI-General-Bench, which comprehensively covers diverse editing tasks and pioneers the inclusion of multi-image editing evaluation; CPI-Practical-Bench, which focuses on high-frequency real-user application scenarios; and CPI-Intelligent-Bench, which is dedicated to evaluating capabilities in highly demanding reasoning-based editing. Evaluation results of mainstream image editing models based on CPI-Bench demonstrate that CPI-Bench enhances performance differentiation among models. It provides a comprehensive and reliable quantification of gaps in general editing capabilities, practical deployment efficacy, and advanced reasoning-based editing, offering invaluable guidance for the future optimization of image editing models. Crucially, our ranking analysis reveals that CPI-Bench achieves the highest alignment with the Arena Image Edit Leaderboard, indicating it faithfully captures the preferences and perceptual judgments of human evaluators, serving as a robust proxy for real-world user experience.",
+      "published": "2026-08-14T17:59:01Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14546",
+      "pdf_url": "https://arxiv.org/pdf/2608.14546",
+      "summary_zh": "现有图像编辑基准局限于简单单图任务，覆盖维度有限且难以区分模型性能。为此提出CPI-Bench，包含通用、实用和智能三个子集，首创多图编辑评估并覆盖高推理需求场景。实验表明该基准显著增强模型区分度，且与人类评估排名高度一致，可作为真实用户体验的可靠代理。",
+      "summary_en": "Existing image editing benchmarks are limited to simple single-image tasks with narrow coverage and poor model differentiation. We propose CPI-Bench, comprising three subsets for general, practical, and intelligent editing, which pioneers multi-image evaluation and reasoning-intensive scenarios. Results show it enhances model discrimination and achieves the highest alignment with human preference rankings, serving as a robust proxy for real-world user experience.",
+      "highlights_zh": [
+        "首创多图编辑评估基准",
+        "与人类偏好排名对齐最高",
+        "覆盖高频真实应用场景"
+      ]
+    },
+    {
+      "id": "2608.14543",
+      "title": "MagnifiQ: Patch-aware Text Guided Progressive Upscaling for High-Resolution Image Restoration",
+      "authors": [
+        "Mahesh Reddy",
+        "Yashesh Savani",
+        "Antoine Mercier",
+        "Hong Cai",
+        "Fatih Porikli",
+        "Guillaume Berger"
+      ],
+      "abstract": "High-resolution image restoration from degraded inputs is challenging because it must preserve global structural consistency while recovering fine-grained local details, especially at 4K resolution where direct diffusion-based restoration is computationally expensive and prone to repeated or inconsistent textures. In this work, we introduce MagnifiQ, an image restoration framework that progressively upscales and restores images across resolutions, e.g., from 1024x1024 to 4096x4096. Our approach leverages a pre-trained text-to-image diffusion model such as SDXL and adapts it for more scalable high-resolution inference by replacing its original self-attention layers with convolutional operations whose computational cost grows linearly with image resolution. We further propose a progressive upscaling strategy that iteratively restores images over multiple resolution stages, refining each intermediate output rather than directly hallucinating the final 4K image, thereby improving global coherence and reducing high-resolution artifacts. To enhance local details while controlling content drift, MagnifiQ uses patch-specific text prompts that provide spatially localized semantic guidance during restoration. Extensive experiments on synthetic and real-world degraded images show that MagnifiQ outperforms prior diffusion-based restoration methods in perceptual quality and human preference, producing sharper textures and more coherent 4K results while offering practical speed--quality trade-offs through its scalable backbone and progressive design.",
+      "published": "2026-08-14T17:56:04Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14543",
+      "pdf_url": "https://arxiv.org/pdf/2608.14543",
+      "summary_zh": "高分辨率图像修复面临全局一致性与局部细节恢复的挑战，尤其在4K分辨率下直接扩散修复计算昂贵且易产生伪影。MagnifiQ提出渐进式超分辨率框架，将SDXL的自注意力替换为线性复杂度卷积，并通过多阶段迭代和补丁级文本提示增强局部细节与全局连贯性。实验表明该方法在感知质量和人类偏好上优于现有扩散修复方法，生成更锐利纹理和更连贯的4K结果，同时提供实用的速度-质量权衡。",
+      "summary_en": "High-resolution image restoration struggles with balancing global coherence and fine local details, especially at 4K where direct diffusion-based methods are computationally expensive and prone to artifacts. MagnifiQ introduces a progressive upscaling framework that replaces self-attention with linear-complexity convolutions in SDXL, iteratively refining across resolution stages with patch-specific text prompts. Experiments show superior perceptual quality and human preference over prior diffusion methods, producing sharper textures and coherent 4K outputs with practical speed-quality trade-offs.",
+      "highlights_zh": [
+        "线性复杂度卷积替换自注意力",
+        "感知质量与人类偏好均最优",
+        "支持4K修复且速度可调"
+      ]
+    },
+    {
+      "id": "2608.14531",
+      "title": "Spatiotemporal Tube-Based Safety-Certificate for Autonomous Navigation of Articulated Vehicles",
+      "authors": [
+        "Mohd. Faizuddin Faruqui",
+        "Ratnangshu Das",
+        "Ravi Kumar L",
+        "Pushpak Jagtap"
+      ],
+      "abstract": "Articulated vehicles are the workhorses of freight transportation, and their autonomous navigation is challenging. Their physical characteristics and motion constraints pose significant challenges in manoeuvring these vehicles on narrow routes. This paper presents a spatiotemporal tube-based approach to plan autonomous navigation of vehicles like tractor semi-trailers, truck/ tractor trailers, towing Automated Guided Vehicles (AGVs), and road trains. This planning approach provides a certified path plan for the truck or tractor, ensuring that the towed series of trailers always remains within the road corridor, limited by permissible corrections. The planning leverages the kinematics of the linked elements along with sway constraints to arrive at a safe tube for the actuated prime mover. We modify the spatiotemporal tube using permissible corrections to provide a route safety certificate to the vehicle for the given route. The proposed planning method is verified on a truck-trailer navigation simulation for a complex route.",
+      "published": "2026-08-14T17:48:28Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14531",
+      "pdf_url": "https://arxiv.org/pdf/2608.14531",
+      "summary_zh": "铰接式车辆（如卡车-拖挂）在狭窄路线上自主导航面临运动约束和物理特性的挑战。本文提出一种基于时空管道的规划方法，利用链接运动学和摆动约束为牵引车生成安全管道，并通过允许修正提供路线安全证书。仿真验证表明该方法能在复杂路线上确保拖挂系列始终保持在道路走廊内，提升导航安全性。",
+      "summary_en": "Autonomous navigation of articulated vehicles like tractor-semitrailers on narrow routes is challenging due to their physical characteristics and motion constraints. This paper introduces a spatiotemporal tube-based planning approach that leverages linked-element kinematics and sway constraints to construct a safe tube for the actuated prime mover, modified with permissible corrections to provide a route safety certificate. Verified on a truck-trailer simulation for a complex route, the method ensures the towed trailers remain within the road corridor, enhancing navigation safety.",
+      "highlights_zh": [
+        "时空管道安全证书规划",
+        "复杂路线仿真验证安全",
+        "适用于多类铰接车辆"
+      ]
+    },
+    {
+      "id": "2608.14481",
+      "title": "Ensuring Safe Physical AI in Urban Mobility via Hazard-Informed Synthesized Envelopes",
+      "authors": [
+        "Alexei Odinokov",
+        "Rostislav Yavorskiy"
+      ],
+      "abstract": "As heterogeneous robotic systems deploy across diverse urban zones, maintaining safety amid complex human-robot interactions remains a critical challenge. We present a unified framework that bridges systematic hazard analysis and runtime enforcement using hazard-informed safety envelopes. Rather than treating safety as a static constraint isolated within individual software modules, we introduce a cross-layer safety transformation process spanning symbolic, spatial, and dynamic world models. We show how this representation naturally interfaces with physical AI runtime harnesses to guarantee safe urban mobility.",
+      "published": "2026-08-14T16:57:54Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.14481",
+      "pdf_url": "https://arxiv.org/pdf/2608.14481",
+      "summary_zh": "异构机器人系统在城市环境中部署时，人机交互复杂，确保安全是重大挑战。本文提出一个统一框架，通过跨层安全转换过程将系统性危险分析与运行时执行相结合，生成危险感知的安全包络。该框架与物理AI运行时工具自然接口，为城市移动安全提供了可保证的解决方案。",
+      "summary_en": "Ensuring safety in heterogeneous robotic systems deployed across urban zones with complex human-robot interactions remains a critical challenge. This paper introduces a unified framework that bridges systematic hazard analysis and runtime enforcement via hazard-informed safety envelopes, enabled by a cross-layer safety transformation spanning symbolic, spatial, and dynamic world models. The framework naturally interfaces with physical AI runtime harnesses, guaranteeing safe urban mobility and offering a scalable solution for real-world deployment.",
+      "highlights_zh": [
+        "跨层安全包络统一框架",
+        "与运行时工具自然接口",
+        "保障城市移动安全部署"
+      ]
+    }
+  ]
+}
