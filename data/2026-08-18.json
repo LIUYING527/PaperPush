@@ -1,0 +1,327 @@
+{
+  "date": "2026-08-18",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.16889",
+      "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Emilio Ferrara"
+      ],
+      "abstract": "Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next. A promising recipe freezes the VLA and puts an LLM agent in charge: it plans in language, moves in free space with analytic primitives, invokes the VLA only for contact-rich segments, and writes adaptation into language memory. Applied to long horizons, it breaks twice. (1) Competence comes from whole-task exploration at test time, whose cost is multiplicative in stages: if one stage needs T episodes, a K-stage task needs about T^K, and a failure does not reveal which stage caused it. (2) It has no representation of transitions: the VLA primitive carries an exit but no entry condition, so a subtask can succeed in a form its successor cannot use. We present BATON. Against (1), BATON makes the subtask the unit of exploration: each is explored in the cheap short-horizon regime and its solution stored in memory; a long-horizon trajectory is then composed from these solutions rather than discovered whole. Cost becomes additive (T*K) and every failure is attributed to a single stage. Against (2), BATON equips exploration with a transition-aware memory. Within a subtask, a verifier agent governs the invocation transition: the VLA is called only after the wrist view confirms the scene is ready. Across subtasks, a handoff transition restores an entry state disturbed by the predecessor's residue, and a lookahead transition selects the strategy whose outcome the successor can inherit. No parameters are updated. On the long-horizon benchmark RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over the SoTA.",
+      "published": "2026-08-17T17:59:57Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16889",
+      "pdf_url": "https://arxiv.org/pdf/2608.16889",
+      "summary_zh": "长时程机器人操作中，视觉-语言-动作模型在组合多阶段接触丰富技能时，因错误累积和子任务间状态不兼容而失败，且现有LLM代理方案面临探索成本随阶段数指数增长的问题。BATON将子任务作为探索单元，在短时程场景中独立探索并存储解决方案，使成本变为线性增长，并通过过渡感知记忆管理调用、交接和前瞻三种转换，确保子任务间的状态兼容。在RoboMemArena基准上，BATON将任务成功率提升11.6%，累计成功率提升14.9%，且无需更新任何参数。",
+      "summary_en": "Long-horizon robot manipulation fails when chaining contact-rich skills due to error compounding and incompatible subtask states, with existing LLM-agent approaches suffering from multiplicative exploration costs. BATON makes the subtask the unit of exploration, reducing cost from exponential to additive, and introduces transition-aware memory with invocation, handoff, and lookahead transitions to ensure state compatibility across subtasks. On RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over the state-of-the-art without updating any parameters.",
+      "highlights_zh": [
+        "子任务探索+过渡感知记忆",
+        "成功率+11.6%，累计+14.9%",
+        "无需参数更新，可即插即用"
+      ]
+    },
+    {
+      "id": "2608.16884",
+      "title": "Improving the matrix multiplication exponent with modern optimization and AlphaEvolve",
+      "authors": [
+        "Emilien Dupont",
+        "Marvin Eisenberger",
+        "Borislav Kozlovskii",
+        "Abbas Mehrabian",
+        "Francisco J. R. Ruiz",
+        "Abigail See",
+        "Renfei Zhou",
+        "Josh Alman",
+        "Virginia Vassilevska Williams",
+        "Matej Balog"
+      ],
+      "abstract": "The current best bounds on the matrix multiplication exponent $ω$ are obtained through a refinement of the laser method called combination loss analysis (Duan et al., 2022; Williams et al., 2024; Alman et al., 2025). In this note, we address the optimization problem at the core of this approach and propose several improvements. First, we reformulate the optimization problem allowing us to solve it in a larger setting than was previously possible. Second, we leverage recent advances in machine learning to design a new optimization algorithm for this problem. Finally, we refine the resulting optimization algorithm with AlphaEvolve. Our combined approach yields an upper bound of $ω$ < 2.371177, improving the previous best bound of 2.371339.",
+      "published": "2026-08-17T17:59:05Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.AI",
+        "cs.CC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16884",
+      "pdf_url": "https://arxiv.org/pdf/2608.16884",
+      "summary_zh": "矩阵乘法指数ω的当前最优上界依赖于激光法的组合损失分析，其核心优化问题限制了进一步改进。本文重新表述了该优化问题以扩大求解范围，并利用现代机器学习技术设计新优化算法，再通过AlphaEvolve进行精炼。最终将ω的上界从2.371339改进至2.371177，刷新了历史最优记录。",
+      "summary_en": "The best known upper bounds on the matrix multiplication exponent ω rely on combination loss analysis within the laser method, whose core optimization problem limits further progress. This work reformulates the optimization problem to enable a larger solution space, designs a new optimization algorithm using modern machine learning, and refines it with AlphaEvolve. The combined approach achieves ω < 2.371177, improving the previous best bound of 2.371339.",
+      "highlights_zh": [
+        "重构优化问题并引入ML算法",
+        "ω上界降至2.371177",
+        "改进算法可复用于其他张量优化"
+      ]
+    },
+    {
+      "id": "2608.16888",
+      "title": "Q-based Variational Inverse Reinforcement Learning",
+      "authors": [
+        "Ondrej Bajgar",
+        "Peter Tisnikar",
+        "Alessandro Abate",
+        "Konstantinos Gatsis",
+        "Maike Osborne"
+      ],
+      "abstract": "The development of safe and beneficial AI requires that systems can learn and act in accordance with human preferences. However, explicitly specifying these preferences by hand is often infeasible. Inverse reinforcement learning (IRL) addresses this challenge by inferring preferences, represented as reward functions, from expert behaviour. We introduce Q-based Variational IRL (QVIRL), a novel Bayesian IRL method that recovers a posterior distribution over rewards from expert demonstrations via primarily learning a variational distribution over optimal Q-values. Unlike previous approaches, QVIRL combines scalability with uncertainty quantification, important for safety-critical applications as well as active learning. We demonstrate QVIRL's strong performance in apprenticeship learning across various tasks, including gridworlds, Lunar Lander, the Highway Environment, and two ATARI games both with static expert data and with active learning. It is the first method for Bayesian IRL that demonstrates training from raw pixel observations.",
+      "published": "2026-08-17T17:59:55Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16888",
+      "pdf_url": "https://arxiv.org/pdf/2608.16888",
+      "summary_zh": "逆强化学习旨在从专家行为中推断人类偏好，但现有方法在可扩展性和不确定性量化上难以兼顾。QVIRL通过变分推断学习最优Q值的后验分布，从而间接获得奖励的后验分布，实现了两者的结合。该方法在多个任务上表现优异，且是首个能从原始像素观测中训练的贝叶斯逆强化学习方法。",
+      "summary_en": "Inverse reinforcement learning aims to infer human preferences from expert behavior, but existing methods struggle to balance scalability and uncertainty quantification. QVIRL introduces a novel Bayesian approach that learns a variational distribution over optimal Q-values to recover the reward posterior, achieving both scalability and uncertainty awareness. It demonstrates strong performance across various tasks and is the first Bayesian IRL method to train from raw pixel observations.",
+      "highlights_zh": [
+        "变分Q值推断实现贝叶斯IRL",
+        "首个像素级贝叶斯IRL方法",
+        "支持主动学习，适用于安全关键场景"
+      ]
+    },
+    {
+      "id": "2608.16878",
+      "title": "Spectral Gaps of Hit-and-Run and Coordinate Hit-and-Run",
+      "authors": [
+        "Yunbum Kook",
+        "Santosh S. Vempala"
+      ],
+      "abstract": "For any convex body $\\mathcal{K}\\subset\\mathbb{R}^{n}$ containing a unit ball, the spectral gap of Hit-and-Run is $Ω(1/(n^2 C_{\\mathsf{PI}}))$, where $C_{\\mathsf{PI}}$ is the Poincaré constant of the uniform distribution $π$ over $\\mathcal{K}$. This implies that Hit-and-Run converges to a distribution within $χ^2$-divergence $\\varepsilon$ of the uniform distribution $π$ in $O(n^2 C_{\\mathsf{PI}}\\log(M/\\varepsilon))$ steps from any starting distribution $π_0$ with $M=χ^2(π_{0}\\,\\|\\,π)$, thus refining the known bound of $O(n^2 R^2 \\log(M/\\varepsilon))$ by Lovász and Vempala (2004) in terms of the outer radius $R$; for nearly isotropic bodies, together with progress on the KLS conjecture, the complexity is $O(n^2\\log n\\log(M/\\varepsilon))$, improving the dimension dependence from cubic to nearly quadratic while maintaining logarithmic dependence on the initial distance. It was an open problem to connect the convergence of Hit-and-Run to Poincaré/KLS constants as was done for the Ball walk by Kannan, Lovász and Simonovits (1997). Unlike Hit-and-Run, the Ball walk has an unavoidable linear dependence on (a stronger notion) of the initial warmness. We directly bound the spectral gap of the Hit-and-Run Markov chain by connecting it to functional isoperimetric constants, inspired by the recent analysis of In-and-Out. Rewriting the spectral gap in terms of dual certificates leads to the Babuška--Aziz constant studied in the analysis of PDEs; it is asymptotically bounded by the improved Poincaré constant, which we show can be bounded in terms of the usual Poincaré constant. The proof is based on duality and calculus, unlike known proofs of convergence for Hit-and-Run which are based on bounding the conductance. The same technique can be applied to Coordinate Hit-and-Run, resulting in a much improved mixing time of $O(n^3C_{\\mathsf{PI}}\\log(M/\\varepsilon))$.",
+      "published": "2026-08-17T17:57:11Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.LG",
+        "math.PR",
+        "math.ST"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16878",
+      "pdf_url": "https://arxiv.org/pdf/2608.16878",
+      "summary_zh": "本文针对凸体上Hit-and-Run马尔可夫链的谱隙问题，将其收敛速度与Poincaré常数联系起来，填补了此前仅与几何参数相关的空白。方法上通过将谱隙转化为对偶证书并关联到PDE中的Babuška--Aziz常数，利用对偶与微积分而非传统的conductance界进行证明。结果将混合时间改进为O(n^2 C_PI log(M/ε))，近各向同性体下为O(n^2 log n log(M/ε))，并将坐标Hit-and-Run的混合时间提升至O(n^3 C_PI log(M/ε))。",
+      "summary_eng": "This paper addresses the spectral gap of Hit-and-Run Markov chains on convex bodies, connecting its convergence rate to the Poincaré constant, a gap left open since the Ball walk analysis. The novelty lies in rewriting the spectral gap via dual certificates linked to the Babuška--Aziz constant from PDE theory, enabling a duality/calculus-based proof instead of conductance bounds. Results improve mixing time to O(n^2 C_PI log(M/ε)), nearly quadratic in dimension for nearly isotropic bodies, and yield O(n^3 C_PI log(M/ε)) for Coordinate Hit-and-Run.",
+      "highlights_zh": [
+        "谱隙与Poincaré常数直接关联",
+        "混合时间改进至O(n^2 C_PI log(M/ε))",
+        "对偶证书方法替代conductance证明"
+      ]
+    },
+    {
+      "id": "2608.16844",
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "authors": [
+        "Reza Bayat",
+        "Ali Behrouz",
+        "Vahab Mirrokni",
+        "Aaron Courville"
+      ],
+      "abstract": "The quadratic cost of attention-based sequence models for long contexts has motivated a growing line of research on memory-based models that can compress context into a compact state. However, most existing memory models expose a static memory throughout the entire sequence. Because early tokens face no compression pressure, they occupy too many degrees of freedom and \"pollute\" the memory state, leaving little capacity for later context and increasing interference between what is stored and what arrives next. We study a new paradigm of incremental memory activation, where the effective capacity of memory is progressively expanded as the context grows. Imposing an early bottleneck forces the model to compress history more effectively, while unlocking fresh capacity over time reduces interference and improves retention of later context. We instantiate this paradigm in Proteus, a straightforward mechanism that can be incorporated into a broad class of neural memory architectures at no additional cost. We apply Proteus to state-of-the-art models, including SWLA, Comba, Titans, and Hope-Attention, and observe consistent improvements on standard language modeling and reasoning, as well as on long-context retrieval and understanding, with gains that grow at longer context lengths. Overall, our results show that static memory is suboptimal and that scheduling effective capacity is a simple and broadly applicable tool for sequence modeling.",
+      "published": "2026-08-17T17:30:43Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16844",
+      "pdf_url": "https://arxiv.org/pdf/2608.16844",
+      "summary_zh": "现有记忆模型在整个序列中暴露静态记忆，早期token占用过多自由度导致记忆污染，限制了长上下文建模能力。本文提出增量记忆激活范式，随上下文增长逐步扩展记忆容量，通过早期瓶颈强制压缩历史并减少干扰，并实例化为Proteus机制。Proteus可无缝集成到多种先进模型，在语言建模、推理及长上下文检索任务上持续提升性能，且增益随序列长度增加而增大。",
+      "summary_en": "Existing memory models expose a static memory throughout the sequence, where early tokens occupy excessive degrees of freedom and pollute the memory state, limiting long-context modeling. This paper proposes incremental memory activation, progressively expanding effective memory capacity as context grows, imposing an early bottleneck for better compression and reducing interference, instantiated as Proteus. Proteus integrates seamlessly into state-of-the-art models like SWLA, Comba, Titans, and Hope-Attention, yielding consistent gains in language modeling, reasoning, and long-context retrieval, with improvements growing at longer lengths.",
+      "highlights_zh": [
+        "增量记忆激活新范式",
+        "长上下文任务增益随长度增大",
+        "可无成本集成多种记忆模型"
+      ]
+    },
+    {
+      "id": "2608.16834",
+      "title": "Model Hypnosis: Strong control of AI via additive subliminal effects",
+      "authors": [
+        "Enric Boix-Adsera",
+        "Benedict Tessler"
+      ],
+      "abstract": "We demonstrate that AI models are broadly susceptible to a phenomenon we call model hypnosis, in which individually weak and seemingly irrelevant cues in the prompt can be systematically combined to strongly control model behavior. Model hypnosis occurs across model families and scales, including in frontier reasoning models, and hypnotic prompts can transfer between models. Because the model is controlled by inconspicuous textual choices, such as paraphrases and typos, model hypnosis presents new challenges and avenues for AI safety, and is a major hurdle for AI interpretability.",
+      "published": "2026-08-17T17:20:10Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16834",
+      "pdf_url": "https://arxiv.org/pdf/2608.16834",
+      "summary_zh": "AI模型对提示中看似无关的微弱线索高度敏感，这些线索可被系统组合以强烈控制模型行为。本文提出“模型催眠”现象，证明其跨模型家族和规模普遍存在，且催眠提示可在模型间迁移。该现象对AI安全构成新挑战，并严重阻碍可解释性研究。",
+      "summary_en": "AI models are broadly susceptible to individually weak and seemingly irrelevant prompt cues that can be systematically combined to strongly control behavior. We introduce \"model hypnosis,\" demonstrating its prevalence across model families and scales, including frontier reasoning models, with hypnotic prompts transferring between models. This phenomenon poses new challenges for AI safety and represents a major hurdle for interpretability.",
+      "highlights_zh": [
+        "提出模型催眠新现象",
+        "跨模型家族与规模有效",
+        "威胁AI安全与可解释性"
+      ]
+    },
+    {
+      "id": "2608.16887",
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "authors": [
+        "Dengyang Jiang",
+        "Ruoyi Du",
+        "Zhennan Chen",
+        "Dongyang Liu",
+        "Zanyi Wang",
+        "Mingzhe Zheng",
+        "Xiangpeng Yang",
+        "Huanqia Cai",
+        "Aiming Hao",
+        "Yuming Jiang",
+        "Peng Gao",
+        "Harry Yang",
+        "Steven Hoi"
+      ],
+      "abstract": "This paper investigates an increasingly important topic in generative modeling: pixel-space diffusion models. Although numerous studies have explored this topic, most focus on small-scale or class-conditional settings. Consequently, a practical recipe for training pixel-space models that rival or exceed well-established latent-space counterparts remains elusive. Through a comprehensive empirical study, we first observe that direct large-scale pre-training in pixel space converges substantially more slowly than in latent space. This observation motivates a latent-to-pixel strategy that acquires generative priors efficiently in latent space and transitions to pixel space during post-training. We then systematically investigate the key design choices governing this transition, including weight initialization, data composition, prediction target, decoder architecture, and noise schedule, and identify a practical recipe that makes the resulting pixel-space models match or outperform their latent-space counterparts while delivering 3.18 to 4.75 times end-to-end inference speedups. We hope that our findings provide useful empirical insights and practical guidelines for future research on pixel-space generation.",
+      "published": "2026-08-17T17:59:25Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16887",
+      "pdf_url": "https://arxiv.org/pdf/2608.16887",
+      "summary_zh": "像素空间扩散模型在大规模训练中收敛速度远慢于潜空间模型，缺乏实用训练方案。本文提出潜空间预训练后迁移至像素空间的latent-to-pixel策略，并系统研究了权重初始化、数据组成、预测目标、解码器架构和噪声调度等关键设计。该策略使像素空间模型在匹配或超越潜空间模型性能的同时，实现3.18至4.75倍的端到端推理加速。",
+      "summary_en": "Pixel-space diffusion models converge substantially slower than latent-space counterparts during large-scale pre-training, lacking a practical training recipe. This paper proposes a latent-to-pixel strategy that efficiently acquires generative priors in latent space and transitions to pixel space during post-training, systematically investigating key design choices such as weight initialization, data composition, prediction target, decoder architecture, and noise schedule. The resulting pixel-space models match or outperform latent-space counterparts while delivering 3.18 to 4.75 times end-to-end inference speedups.",
+      "highlights_zh": [
+        "提出潜空间到像素空间迁移策略",
+        "推理速度提升3.18至4.75倍",
+        "为像素空间生成提供实用指南"
+      ]
+    },
+    {
+      "id": "2608.16863",
+      "title": "SplatGuide: Geometric Priors from 3D Gaussians for Pose-Free Novel View Synthesis",
+      "authors": [
+        "Yejun Zhang",
+        "Zihan Wang",
+        "Xu Ji",
+        "Yihao Wang",
+        "Yuxin Hou",
+        "Junyuan Fang",
+        "Juho-Matti Kilpeläinen",
+        "Arno Solin",
+        "Hamed Rezazadegan Tavakoli",
+        "Esa Rahtu",
+        "Juho Kannala"
+      ],
+      "abstract": "Generating photorealistic novel views from unposed images requires both 3D geometric understanding and the ability to synthesize unseen content. A natural strategy combines feed-forward 3DGS reconstruction with multi-view diffusion. Yet prior pipelines extract at most one signal from the reconstruction, either pixel rendering or learned features, while none exploits per-Gaussian visibility for occlusion-aware reference selection. This *information disconnect* leaves renderable geometry, visibility cues, and learned features unused. SplatGuide closes this disconnect by reusing a single 3DGS scene across three complementary roles. Rendered images provide pixel-aligned geometric conditioning. Per-Gaussian source-view indices are rendered into a target-view voting map for occlusion-aware reference selection. Reconstruction tokens supply feature-level guidance via cross-attention. All three signals derive from the same reconstruction forward pass. Across RealEstate10K, DL3DV, Tanks-and-Temples, and Mip-NeRF 360, SplatGuide achieves state-of-the-art pose-free novel view synthesis. On RealEstate10K, with a moderate number of input views, it surpasses the ground-truth-pose baseline.",
+      "published": "2026-08-17T17:45:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16863",
+      "pdf_url": "https://arxiv.org/pdf/2608.16863",
+      "summary_zh": "无位姿新视角合成需要同时处理3D几何理解与未知内容生成，现有方法仅从3DGS重建中提取单一信号，忽略了逐高斯可见性等关键信息。SplatGuide通过复用同一3DGS场景，同时提供渲染图像、逐高斯投票图和重建token三种互补信号，分别用于几何条件、遮挡感知参考选择和特征级跨注意力引导。该方法在多个基准上达到最先进性能，并在RealEstate10K上以中等输入视图数超越使用真实位姿的基线。",
+      "summary_en": "Pose-free novel view synthesis requires both 3D geometric understanding and unseen content generation, yet prior pipelines extract only one signal from 3DGS reconstruction, ignoring per-Gaussian visibility. SplatGuide reuses a single 3DGS scene for three complementary roles: rendered images for pixel-aligned conditioning, per-Gaussian voting maps for occlusion-aware reference selection, and reconstruction tokens for feature-level cross-attention. It achieves state-of-the-art results across RealEstate10K, DL3DV, Tanks-and-Temples, and Mip-NeRF 360, surpassing the ground-truth-pose baseline on RealEstate10K with moderate input views.",
+      "highlights_zh": [
+        "复用3DGS实现三重信号协同",
+        "RE10K上超越真实位姿基线",
+        "无位姿合成新视角SOTA"
+      ]
+    },
+    {
+      "id": "2608.16885",
+      "title": "$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
+      "authors": [
+        "Xiaowei Cai",
+        "Yunuo Cai",
+        "Bingao Chen",
+        "Jingxiao Chen",
+        "Zhi Chen",
+        "Siyuan Feng",
+        "Tengyu Hou",
+        "Jingshun Huang",
+        "Han Jiang",
+        "Runkun Ju",
+        "Dong Li",
+        "Mingxiang Li",
+        "Shaowei Li",
+        "Xinchen Li",
+        "Yifan Li",
+        "Yi Liu",
+        "Zhongyuan Liu",
+        "Jianlan Luo",
+        "Junwen Miao",
+        "Ruiqi Ni",
+        "Buqing Nie",
+        "Mingjie Pan",
+        "Xinlin Ren",
+        "Jianheng Song",
+        "Jiaxu Wang",
+        "Peiqi Wang",
+        "Sen Wang",
+        "Xiaoyan Wang",
+        "Dafeng Wei",
+        "Dongming Wu",
+        "Pengwei Xie",
+        "Pu Yang",
+        "Hangjian Ye",
+        "Xiangyu Yue",
+        "Jinyu Zhang",
+        "Qinglin Zhang",
+        "Xueyong Zhao",
+        "Pengfei Zhou",
+        "Yue Zhou"
+      ],
+      "abstract": "Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $τ_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.",
+      "published": "2026-08-17T17:59:11Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16885",
+      "pdf_url": "https://arxiv.org/pdf/2608.16885",
+      "summary_zh": "长时程机器人操作需要同时保证技能执行可靠性和任务序列连贯性，但现有分层VLA模型每次决策仅单次前向传播，无法为困难决策分配额外计算。本文提出τ0-VLA，通过世界模型引导的测试时计算将高层子任务生成转化为可扩展计算量的推理问题，并利用执行记忆搜索替代方案。在40,115小时异构真实数据上训练后，额外测试时计算显著提升子任务预测精度和长时程操作闭环成功率。",
+      "summary_en": "Long-horizon robot manipulation requires both reliable skill execution and coherent task sequencing, yet existing hierarchical VLA models make each decision with a single forward pass, lacking mechanisms for allocating extra computation to difficult choices. We introduce τ0-VLA, which formulates high-level subtask generation as a compute-scalable inference problem via world-model-guided test-time computation, using execution memory to search over alternatives before committing. Trained on 40,115 hours of heterogeneous real-world data, additional test-time computation substantially improves next-subtask prediction accuracy and closed-loop success on long-horizon tasks.",
+      "highlights_zh": [
+        "世界模型引导测试时计算",
+        "子任务预测精度显著提升",
+        "长时程操作闭环成功率提升"
+      ]
+    },
+    {
+      "id": "2608.16853",
+      "title": "FlexWorm: Primitive-augmented Hybrid Contact-motion Planning for Suction-based Multi-segment Deformable Robots",
+      "authors": [
+        "Zili Tang",
+        "Tiecheng Guo",
+        "Qinyue Zhang",
+        "Meng Guo"
+      ],
+      "abstract": "Multi-segment suction-based soft robots are promising for inspection and maintenance in confined or fragile environments, but existing approaches still depend heavily on manually designed gaits and environment-specific motion scripts. This work presents a planning framework for serial multi-segment soft robots with deformable body segments and boundary suction pads. The formulation targets full 3D navigation on complex surfaces and explicitly handles discrete adhesion switching and continuous body deformation under geometric, collision, and quasi-static feasibility constraints, while remaining agnostic to the specific actuation realization used to produce segment deformation. Its core, block-wise IK hybrid search (IKHS), performs best-first search over feasible adhesion transitions while solving inverse kinematics only on induced free blocks. On top of IKHS, primitive-augmented hybrid search (PaHS) uses a learned observation--primitive embedding to retrieve short validated motion segments for fast local proposal, with fallback to standard IKHS branching when retrieval fails. In simulation, the framework consistently outperforms controlled baselines in planning success, transition quality, and efficiency across diverse terrains. PaHS matches IKHS in success rate while substantially reducing planning time. Repeated hardware experiments on a pneumatic multi-segment soft robot further demonstrate executability and online recovery under actuation and adhesion uncertainty.",
+      "published": "2026-08-17T17:37:13Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.16853",
+      "pdf_url": "https://arxiv.org/pdf/2608.16853",
+      "summary_zh": "多段吸盘软体机器人在复杂表面上的3D导航规划仍依赖人工设计的步态和环境特定脚本。本文提出FlexWorm框架，通过块式逆运动学混合搜索（IKHS）和基于学习原语的增强混合搜索（PaHS），在准静态可行性约束下联合处理离散粘附切换与连续体变形。仿真和硬件实验表明该框架在规划成功率、质量和效率上均优于基线，且PaHS在保持成功率的同时大幅缩短规划时间。",
+      "summary_en": "Multi-segment suction-based soft robots still rely on manually designed gaits and environment-specific scripts for navigation. This work introduces FlexWorm, a planning framework combining block-wise IK hybrid search (IKHS) and primitive-augmented hybrid search (PaHS) to jointly handle discrete adhesion switching and continuous body deformation under quasi-static feasibility constraints. Simulations and hardware experiments demonstrate superior planning success, transition quality, and efficiency, with PaHS matching IKHS success rates while substantially reducing planning time.",
+      "highlights_zh": [
+        "混合搜索+学习原语规划",
+        "PaHS规划时间大幅缩短",
+        "复杂表面3D导航通用框架"
+      ]
+    }
+  ]
+}
