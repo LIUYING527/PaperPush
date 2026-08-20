@@ -1,0 +1,296 @@
+{
+  "date": "2026-08-20",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.19197",
+      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+      "authors": [
+        "Bo Liu",
+        "Simon Yu",
+        "Yiding Jiang",
+        "Ao Qu",
+        "Andrew Zhao",
+        "Zichen Liu",
+        "Junsu Kim",
+        "Zijian Zhou",
+        "Seungone Kim",
+        "Tongzheng Ren",
+        "Mickel Liu",
+        "Hanfei Yu",
+        "Zhaorun Chen",
+        "Weiyan Shi",
+        "Paul Pu Liang",
+        "Luke Zettlemoyer",
+        "Yejin Choi",
+        "Natasha Jaques"
+      ],
+      "abstract": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the strongest baseline grows with model scale. By making environment design itself a learnable component, SPADE takes a concrete step toward open-ended self-improvement.",
+      "published": "2026-08-19T17:58:56Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19197",
+      "pdf_url": "https://arxiv.org/pdf/2608.19197",
+      "summary_zh": "现有语言智能体的训练环境池在模型扩展时目标分布固定，限制了持续自我改进。SPADE提出自博弈框架，让单个LLM同时作为环境设计者（生成可执行Gym风格环境）和推理智能体（在其中学习），通过特权提示的遗憾信号驱动环境设计者生成能力边缘的可行环境。在八个基准上平均提升5.3分，工具使用提升5.7分，游戏场景优势随规模增长，推动开放式自我改进。",
+      "highlights_zh": [
+        "自博弈环境设计与智能体学习",
+        "八基准平均+5.3分",
+        "工具使用+5.7，游戏随规模增长"
+      ]
+    },
+    {
+      "id": "2608.19182",
+      "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
+      "authors": [
+        "Jayjun Lee",
+        "Jessica Yin",
+        "Asif Rana",
+        "Nicholas Blauch",
+        "Sam Mady",
+        "Mohak Bhardwaj",
+        "Nima Fazeli",
+        "Nathan Ratliff",
+        "Karl Van Wyk",
+        "Ankur Handa"
+      ],
+      "abstract": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can solve long-horizon tasks directly from raw visuo-tactile perception. ADEPT pretrains a dexterous policy on a generic object reposing task, then post-trains downstream policies with this pretrained behavior as a prior. ADEPT enables learning new behaviors that are otherwise difficult to discover from scratch on multi-fingered robots and avoids learning the same set of skills over again for every new downstream task. The pretrained policy zero-shots the reposing phase of downstream tasks, but naïve RL fine-tuning rapidly degrades this capability during transfer. We address this with a stable post-training recipe combining behavior-cloning distillation, critic warm-up, and conservative on-policy updates. To safely exploit the full kinematic dexterity, we introduce a joint-space Geometric Fabric that mediates between the RL policy and the robot. We distill post-trained teachers into perceptive students that zero-shot sim-to-real transfer on two embodiments: a 23 DoF Kuka-Allegro with two RGB cameras, and a 29 DoF Flexiv-Sharpa with two RGB cameras and five vision-based tactile sensors, and can solve long-horizon tasks from challenging initial states with dexterity at human-level speed.",
+      "published": "2026-08-19T17:55:06Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19182",
+      "pdf_url": "https://arxiv.org/pdf/2608.19182",
+      "summary_zh": "高自由度多指机器人的灵巧操作任务难以从零开始学习，且模拟到现实迁移面临挑战。ADEPT提出一种大规模强化学习框架，通过通用物体重定位任务的预训练和稳定的后训练流程（行为克隆蒸馏、评论家预热、保守策略更新），并引入关节空间几何织物来安全利用灵巧性。该方法在两个高自由度机器人上实现了从原始视觉触觉感知到长时程任务的零样本模拟到现实迁移，速度达到人类水平。",
+      "summary_en": "Learning dexterous manipulation on high-DoF multi-fingered robots from scratch is difficult and sim-to-real transfer remains challenging. ADEPT introduces a large-scale RL framework with pre-training on a generic reposing task and a stable post-training recipe (behavior-cloning distillation, critic warm-up, conservative updates), plus a joint-space Geometric Fabric for safe dexterity exploitation. It achieves zero-shot sim-to-real transfer on two embodiments (23-DoF and 29-DoF) for long-horizon tasks from raw visuo-tactile perception at human-level speed.",
+      "highlights_zh": [
+        "预训练+稳定后训练实现灵巧迁移",
+        "零样本sim-to-real，人类级速度",
+        "适用于高DoF多指机器人长时程任务"
+      ]
+    },
+    {
+      "id": "2608.19171",
+      "title": "Lévy Attention: Single-Pass Predictive Uncertainty for Continuous-Time Attention",
+      "authors": [
+        "Sotirios P. Chatzis",
+        "Loukas Papadoulas"
+      ],
+      "abstract": "Deep models for irregularly-sampled time series answer queries at arbitrary continuous timestamps, yet report nothing about how far each answer should be trusted. We show the attention layer itself can close that gap: with the right stochastic formulation, the pass that makes each prediction also reports, in closed form and at no extra cost, how far it should be trusted. We introduce Lévy Attention, a cross-attention operator whose output is a stochastic integral against an inhomogeneous Poisson random measure: query-key compatibilities assemble an intensity over a continuous (time x channel) index space, the measure scatters atoms under it, and the output averages an interpolated value field at those atoms. In expectation it reduces to a mollified cosine-kernel attention, so it replaces a softmax layer and trains with exact gradients. What softmax discards, the Poisson construction preserves in closed form: the evidence $Λ_q$ (total compatibility mass) and the disagreement $\\mathrm{tr}\\,Σ_V(q)$ (value spread). An exact variance identity makes their combination $\\hatσ(q)=\\sqrt{\\mathrm{tr}\\,Σ_V(q)\\,\\varphi(Λ_q)}$ the root-mean-square deviation of the sampled operator, emitted by the deterministic pass with no trained head. Empirically, disagreement carries the signal, while the evidence factor swings from uninformative on dense data to strongly informative on sparse. On t-PatchGNN the operator swap costs at most 5.6% accuracy against a matched control and nothing on the sparsest dataset. The free disagreement signal improves on 20-pass MC dropout across matched five-seed suites, and $\\hatσ$ scales a calibrated Gaussian whose zero-sample CRPS beats a fifty-draw sampler; a split-conformal wrapper reaches nominal coverage at every level, and one pass ranks 3,383 unseen patients by trust in 1.4 seconds.",
+      "published": "2026-08-19T17:50:16Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19171",
+      "pdf_url": "https://arxiv.org/pdf/2608.19171",
+      "summary_zh": "不规则采样时间序列的深度模型在任意连续时间戳上做预测，但无法报告预测的不确定性。本文提出Lévy Attention，一种基于非齐次泊松随机测度的随机积分交叉注意力算子，在单次前向传播中闭式输出证据和值分歧，从而得到零额外成本的预测不确定性估计。实验表明该免费的不确定性信号在稀疏数据上优于20次MC dropout，且校准的CRPS优于50次采样，单次前向在1.4秒内对3383名患者进行信任排序。",
+      "summary_en": "Deep models for irregularly-sampled time series predict at arbitrary timestamps but lack uncertainty estimates. Lévy Attention formulates cross-attention as a stochastic integral against an inhomogeneous Poisson random measure, yielding closed-form evidence and value disagreement that compose an exact variance identity for predictive uncertainty in a single pass. The free uncertainty signal outperforms 20-pass MC dropout on sparse data, achieves better CRPS than a fifty-draw sampler, and ranks 3,383 patients in 1.4 seconds.",
+      "highlights_zh": [
+        "单次前向闭式不确定性估计",
+        "稀疏数据上优于20次MC dropout",
+        "1.4秒排序3383名患者信任度"
+      ]
+    },
+    {
+      "id": "2608.19168",
+      "title": "Learned, Then Lost: A Measured Single-Example Counterfactual in Pre-training",
+      "authors": [
+        "Zachary Speck",
+        "Asa Shepard"
+      ],
+      "abstract": "A single training example's contribution to a finished model is normally estimated rather than measured, because measuring it takes two expensive full pre-training runs that differ in one row of one batch. We ran that counterfactual 24 times at a small scale. We trained 32 GPT-2 models at 124M parameters from scratch on OpenWebText, over four conditions and eight seeds. At step 200 of 9,536, at peak learning rate, we replaced one row of a 256-row batch with a fixed context injection carrying a 194-token passage. The three injected conditions are: 1. fluent prose with a corpus-attested subject, 2. fluent prose with a fabricated subject matched to it within 0.14% on full-batch gradient delta, and 3. random keyboard characters. The fourth condition is an uninjected twin. The passage is learned from one exposure and then decays. Fifty steps after injection, the arm that saw a passage predicts it better than the arm that did not by 0.039 and 0.044 nats of cross-entropy on the passage, at eight of eight seeds with p < $10^{-4}$. At the final step we do not detect that difference for either passage, at p = 0.25 and p = 0.71, against minimum detectable effects of 0.025 and 0.079 nats, nor between the two passages, at p=0.54. Every geometric measure we report is taken after that decay. Our pre-registered contrast on interpolation loss barrier is +0.0068 with p = 0.509, against a minimum detectable effect of 0.032 barrier units. Held-out cross-entropy is $-0.00044$ with p = 0.310. Per-layer centered kernel alignment does not detectably separate any condition at any layer. Weight displacement reaches 44.1% of the seed-to-seed Euclidean distance and is 92% settled by the midpoint of training, while the barrier reaches 3.0% of the seed-to-seed barrier. Those two figures sit roughly 15 times apart, and that is a lower bound. The injection relocates the model within its basin without moving it out.",
+      "published": "2026-08-19T17:46:08Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19168",
+      "pdf_url": "https://arxiv.org/pdf/2608.19168",
+      "summary_zh": "预训练模型中单个训练样本的贡献通常只能估计而无法直接测量，因为需要两次昂贵的完整预训练。本研究通过24次小规模反事实实验，在124M参数的GPT-2模型上注入单个固定样本，直接测量其影响。结果显示样本影响在50步后显著但最终衰减，模型在损失景观的盆地内被移动但未跨出，揭示了单样本影响的有限性和可测量性。",
+      "summary_en": "Measuring a single training example's contribution to a finished model normally requires two expensive full pre-training runs. This study performed 24 counterfactual experiments on 124M-parameter GPT-2 models, injecting one fixed passage into a single batch during training. The injected passage's influence is detectable at 50 steps but decays by the end, relocating the model within its basin without leaving it, providing the first direct measurement of single-example impact.",
+      "highlights_zh": [
+        "单样本反事实直接测量",
+        "影响50步后衰减至不可检测",
+        "模型在盆地内移动未跨出"
+      ]
+    },
+    {
+      "id": "2608.19165",
+      "title": "ChildSafeAds Shared Task 2026: Commercial Content in Child-Facing YouTube Videos",
+      "authors": [
+        "Thales Bertaglia",
+        "Catalina Goanta",
+        "Gerasimos Spanakis",
+        "Gunes Acar"
+      ],
+      "abstract": "ChildSafeAds is a shared task on commercial content in YouTube videos likely to reach children and teenagers. It contains 3,360 videos from 939 channels. Each instance begins with a segment submitted to SponsorBlock, an open-source crowdsourced browser extension whose users mark sponsor segments so that others can skip them. We pair the segment with its available transcript, video and channel information, and a sales or service page linked from the video description. Systems determine what kind of offer is being promoted (ST1), assign product categories (ST2), and identify legal risk flags (ST3). The evidence is divided into four cumulative access levels, from the transcript to the linked page, so results can be compared against the cost of collecting the data. 45.5\\% of videos in our data failed to properly use the in-platform ad disclosure method (the ``Includes paid promotion'' label). GPT-5.4 produced the labels after the expert organiser team reviewed samples and iterated on the taxonomy, prompts and model choices. GPT-5.6-luna independently labelled the development set. This report describes the task, data and evaluation. An updated version will add participating systems and shared-task results.",
+      "published": "2026-08-19T17:44:58Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19165",
+      "pdf_url": "https://arxiv.org/pdf/2608.19165",
+      "summary_zh": "儿童与青少年观看的YouTube视频中存在大量商业内容，且许多视频未正确使用平台广告披露标签，构成监管与伦理挑战。该任务构建了包含3360个视频的数据集，通过SponsorBlock分段、字幕、视频信息及链接页面等多源证据，并设计四个累积访问级别，利用GPT-5.4和GPT-5.6-luna生成标注，支持三个子任务：推广类型识别、产品分类和法律风险标记。45.5%的视频未正确使用广告披露方法，该数据集和任务设计为自动检测儿童视频中的商业内容提供了基准，有助于保护未成年人免受隐性广告影响。",
+      "summary_en": "Commercial content in child-facing YouTube videos is prevalent, yet many videos fail to properly disclose paid promotions, posing regulatory and ethical concerns. The task introduces a dataset of 3,360 videos with multi-source evidence (SponsorBlock segments, transcripts, video/channel info, linked pages) across four cumulative access levels, and uses GPT-5.4 and GPT-5.6-luna to generate labels for three subtasks: promotion type, product category, and legal risk flags. With 45.5% of videos lacking proper ad disclosure, this benchmark enables systematic evaluation of automated commercial content detection, supporting child protection and advertising regulation efforts.",
+      "highlights_zh": [
+        "多源证据与四级访问设计",
+        "45.5%视频未正确披露广告",
+        "提供儿童广告检测基准"
+      ]
+    },
+    {
+      "id": "2608.19133",
+      "title": "Comment-level Topic Drift Analysis in the Reddit Corpus",
+      "authors": [
+        "Steven Morse",
+        "Daniel Runfola",
+        "Trenton W. Ford"
+      ],
+      "abstract": "We present a novel application of embedding-based dynamic topic modeling techniques to detect and quantify topic drift at the comment level in a massive corpus. By leveraging pretrained language models to generate contextualized semantic embeddings for short text, we analyzed 12.7 billion Reddit comments spanning 2006 to 2022. Using unsupervised methods on these embeddings, we identify dynamically evolving topic clusters over time. Our primary contribution is a methodology for analysis of semantic drift and discourse evolution in the embedding space itself. We also demonstrate modifications to existing methods that enable this analysis at scale, and we propose and demonstrate a null model comparison test to filter spurious dynamics. Key findings suggest that politically and socially contentious topics exhibit significant directional drift in embedding space, with inter-topic distances changing systematically over time beyond what the null model can explain, whereas domains such as music and sports remain comparatively stable.",
+      "published": "2026-08-19T17:27:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19133",
+      "pdf_url": "https://arxiv.org/pdf/2608.19133",
+      "summary_zh": "社交媒体大规模语料中，评论级话题随时间漂移的检测与量化问题亟待解决。本文利用预训练语言模型生成上下文嵌入，结合无监督动态主题建模，并引入零模型对比检验以过滤虚假动态。研究发现政治社会类话题在嵌入空间中呈现显著方向性漂移，而音乐体育等领域相对稳定。",
+      "summary_en": "Detecting topic drift in massive social media corpora is challenging due to scale and short-text noise. We propose embedding-based dynamic topic modeling with pretrained language models and a null-model comparison test to analyze 12.7 billion Reddit comments at scale. Results show significant directional drift in contentious political/social topics, while stable domains like music and sports remain unchanged, offering a scalable methodology for discourse evolution analysis.",
+      "highlights_zh": [
+        "嵌入空间动态主题建模",
+        "12.7B评论规模分析",
+        "零模型检验过滤虚假漂移"
+      ]
+    },
+    {
+      "id": "2608.19177",
+      "title": "Image-Guided Pavement Defect Recognition in GPR Data with novel 3D Deep Learning Architecture",
+      "authors": [
+        "Yuandong Pan",
+        "Linjun Lu",
+        "Mudan Wang",
+        "Florian Noichl",
+        "Fan Xue",
+        "Brian Sheil",
+        "Lavindra de Silva",
+        "André Borrmann",
+        "Ioannis Brilakis"
+      ],
+      "abstract": "Ground Penetrating Radar (GPR) is a widely adopted non-destructive sensing technology for subsurface inspection in civil and transportation engineering. Despite its potential for pavement condition assessment, the large-scale application of GPR in automated inspection has two key challenges: the scarcity of annotated real-world datasets and the lack of deep learning models designed for the unique characteristics of 3-Dimensional (3D) GPR data. This study addresses these limitations by firstly introducing a cost-effective data preparation pipeline that integrates orthomosaic Red Green Blue (RGB) imagery with 3D GPR scans to generate annotated 3D GPR datasets. The proposed method uses the aligned segments of RGB and GPR data, using pavement surface images as a reference to transfer labels of surface-visible defects to corresponding GPR segments, enabling efficient large-scale annotation in a real-world dataset collected on a highway section under operation. In addition to the dataset contribution, we propose a specialised 3D Convolutional Neural Network (CNN) architecture incorporating residual connections, mixed convolutional kernel sizes, and both depthwise and channelwise attention mechanisms to enhance feature representation and defect classification. The model is evaluated on binary classification tasks for detecting patch and crack defects in pavement structures. Experimental results demonstrate that the proposed network outperforms baseline architectures across multiple evaluation metrics. Ablation studies further confirm the effectiveness of the designed architectural components. This work contributes a scalable and practical method for real-world dataset generation, along with a novel deep learning framework.",
+      "published": "2026-08-19T17:53:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19177",
+      "pdf_url": "https://arxiv.org/pdf/2608.19177",
+      "summary_zh": "地面穿透雷达（GPR）在路面病害自动检测中面临标注数据稀缺和缺乏适配3D数据深度学习模型两大挑战。本文提出一种结合正射RGB影像与3D GPR扫描的低成本数据标注流程，并设计了一种融合残差连接、混合卷积核及深度/通道注意力的3D CNN架构。实验表明该模型在路面修补和裂缝二分类任务上优于基线，消融实验验证了各组件有效性，为大规模实际应用提供了可扩展方案。",
+      "summary_eng": "GPR-based pavement inspection faces challenges of scarce annotated real-world data and lack of deep learning models tailored for 3D GPR characteristics. This work introduces a cost-effective data preparation pipeline integrating orthomosaic RGB imagery with 3D GPR scans for efficient large-scale annotation, and proposes a specialized 3D CNN with residual connections, mixed kernel sizes, and dual attention mechanisms. The model outperforms baselines in binary classification of patch and crack defects, with ablation studies confirming component effectiveness, offering a scalable practical solution.",
+      "highlights_zh": [
+        "RGB引导的3D GPR自动标注流程",
+        "3D CNN融合残差与双重注意力机制",
+        "优于基线，适用于实际路面检测"
+      ]
+    },
+    {
+      "id": "2608.19088",
+      "title": "Detecting Backdoors in Object Detection via Pre-NMS Prediction Distribution Shift",
+      "authors": [
+        "Longtian Wang",
+        "Zhengyu Zhao",
+        "Chenhao Lin",
+        "Le Yang",
+        "Shiwei Wang",
+        "Yuhan Zhi",
+        "Xiaofei Xie",
+        "Chao Shen"
+      ],
+      "abstract": "Object detection models deployed in safety-critical applications remain vulnerable to backdoor attacks that cause targeted misbehaviors when a hidden trigger is present. Existing detection methods either rely on trigger inversion or exploit architecture-specific assumptions, and critically, representative existing methods fail to generalize reliably to scene-level attacks, where a single trigger induces anomalous behavior across all objects in the scene simultaneously. We present DistScan, a backdoor detection framework based on a simple but previously unexploited observation: backdoor injection systematically shifts a model's pre-NMS prediction class distribution away from its training class frequencies, even on clean inputs without any trigger present. DistScan aggregates intermediate class predictions over a clean validation set and flags a model as backdoored if the resulting distribution deviates significantly from the training class frequencies, requiring no model weight access, no trigger knowledge, and no additional training. Extensive experiments on MS-COCO and PASCAL VOC across two architectures and three scene-level attack scenarios demonstrate that DistScan substantially outperforms existing methods, improving average detection accuracy over the best-performing applicable baseline by 27.32 percentage points.",
+      "published": "2026-08-19T16:38:39Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19088",
+      "pdf_url": "https://arxiv.org/pdf/2608.19088",
+      "summary_zh": "目标检测模型易受后门攻击，现有检测方法在场景级攻击下泛化能力差。DistScan利用后门注入导致模型预NMS预测类别分布偏离训练类别频率这一观察，无需权重访问、触发器知识或额外训练即可检测后门。在MS-COCO和PASCAL VOC上，DistScan平均检测准确率比最优基线提升27.32个百分点，显著优于现有方法。",
+      "summary_en": "Object detection models are vulnerable to backdoor attacks, and existing detection methods fail to generalize to scene-level attacks. DistScan detects backdoors by observing that backdoor injection systematically shifts the pre-NMS prediction class distribution away from training class frequencies, requiring no weight access, trigger knowledge, or extra training. Extensive experiments show DistScan outperforms existing methods by 27.32 percentage points in average detection accuracy, demonstrating strong generalization across architectures and attack scenarios.",
+      "highlights_zh": [
+        "利用预NMS分布偏移检测后门",
+        "平均检测准确率提升27.32%",
+        "无需权重访问，适用于黑盒场景"
+      ]
+    },
+    {
+      "id": "2608.19188",
+      "title": "PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views",
+      "authors": [
+        "Ayush Kaura",
+        "Vignesh Vembar",
+        "Md Faizal Karim",
+        "Keshab Patra",
+        "K Madhava Krishna"
+      ],
+      "abstract": "Dual-arm robotic grasping is essential for manipulating large, heavy, and geometrically complex objects that cannot be reliably handled using a single manipulator. These large objects often contain only sparse graspable regions determined by local geometric properties such as thickness, edge structure, and gripper clearance. Prior bimanual grasping methods assume access to a full point cloud of the object which inherently contains this geometric information, but may not be accessible in real scenarios. This work proposes PartialBiGrasp, a dual-arm grasp generation framework that operates directly on partial point cloud observations. Our model learns geometric features implicitly through convolutional occupancy networks, enabling local reasoning about graspability, collision-free contact regions, and object thickness. We leverage this understanding to generate force-closure compliant grasp pairs, which are further refined using a sampling-based optimization to correct for ambiguity caused by incomplete geometry. We evaluate our approach using analytical force-closure metrics, large-scale simulation experiments, and real-world robot evaluations on noisy partial point clouds of novel objects, demonstrating robust and physically stable dual-arm grasp generation.",
+      "published": "2026-08-19T17:56:11Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19188",
+      "pdf_url": "https://arxiv.org/pdf/2608.19188",
+      "summary_zh": "双机械臂抓取大型复杂物体时，现有方法依赖完整点云，但实际场景中只能获得部分观测。本文提出PartialBiGrasp框架，通过卷积占用网络隐式学习局部几何特征，结合采样优化生成力闭合的双手抓取对。在解析指标、大规模仿真和真实机器人实验中验证了该方法对噪声部分点云的鲁棒性和物理稳定性。",
+      "summary_en": "Bimanual grasping of large objects typically assumes full point clouds, which are unavailable in real scenarios. This work proposes PartialBiGrasp, which learns implicit local geometry via convolutional occupancy networks and refines force-closure grasp pairs with sampling-based optimization from partial views. Extensive analytical, simulated, and real-robot experiments demonstrate robust and stable dual-arm grasping on noisy partial observations of novel objects.",
+      "highlights_zh": [
+        "隐式几何学习实现部分点云抓取",
+        "仿真与真实实验均验证物理稳定性",
+        "依赖部分观测，适用于遮挡场景"
+      ]
+    },
+    {
+      "id": "2608.19085",
+      "title": "DA-WAM: Decision-Aligned Future Latents for Driving World Models",
+      "authors": [
+        "Ruiguo Zhong",
+        "Benshan Ma",
+        "Xiaolong Chen",
+        "Lang Zhang",
+        "Mingyue Feng",
+        "Yaonong Wang",
+        "Pei Liu",
+        "Jun Ma"
+      ],
+      "abstract": "Anticipating how scenes evolve under ego actions is fundamental to safe autonomous driving, yet the full potential of world models for decision-making remains unrealized. The critical challenge lies in ensuring that future modeling is not merely predictive, but decision-informative: the predicted future must directly shape which trajectory is selected. Existing approaches decouple future representation learning from planning optimization, or share predicted states across trajectory candidates, thereby diluting the action-specific consequences that ought to guide selection. To bridge this gap, we propose DA-WAM, a framework that unifies predictive representation learning, action-conditioned future modeling, and trajectory scoring under a single decision-making objective. DA-WAM maintains predictive supervision throughout planner optimization via an online encoder and a stable momentum target, allowing future representations to co-evolve with the driving task. An action-conditioned predictor generates a distinct future latent state per trajectory candidate, which is then evaluated by a future-latent-conditioned factorized scorer. For the expert-matched trajectory, the predicted future latent is supervised by the observed future representation, while safety-critical hard negatives provide additional supervision near planning boundaries. Extensive experiments on NAVSIM-v1 and NAVSIM-v2 demonstrate state-of-the-art performance, while ablations and diagnostic analyses validate the key components.",
+      "published": "2026-08-19T16:33:02Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.19085",
+      "pdf_url": "https://arxiv.org/pdf/2608.19085",
+      "summary_zh": "现有驾驶世界模型在预测未来时未与决策目标对齐，导致预测结果难以直接指导轨迹选择。DA-WAM提出统一框架，通过在线编码器与动量目标保持预测监督，并生成每个轨迹候选独有的未来潜变量，由因子化评分器评估。在NAVSIM-v1和v2上取得最优性能，验证了决策对齐的未来建模能显著提升规划质量。",
+      "summary_en": "Existing driving world models often decouple future representation learning from planning, diluting action-specific consequences for trajectory selection. DA-WAM unifies predictive learning, action-conditioned future modeling, and trajectory scoring under a single decision objective, using online/momentum encoders and candidate-specific future latents. It achieves state-of-the-art results on NAVSIM-v1 and v2, demonstrating that decision-aligned future modeling improves planning performance.",
+      "highlights_zh": [
+        "决策对齐的未来潜变量建模",
+        "NAVSIM-v1/v2最优性能",
+        "提升规划安全性，依赖仿真环境"
+      ]
+    }
+  ]
+}
