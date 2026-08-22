@@ -1,0 +1,289 @@
+{
+  "date": "2026-08-22",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.20331",
+      "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
+      "authors": [
+        "Shiao Xie",
+        "Siyu Chen",
+        "Jianwei Lv",
+        "Bo Yuan",
+        "Yujin Wang",
+        "Xiandong Li"
+      ],
+      "abstract": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-dependent patient communication, yet existing medical vision-language tasks do not adequately capture these dual requirements. To bridge this gap, we introduce Patient-oriented Medical Report Interpretation (PMRI), a novel open-ended multimodal generation task that requires models to explain medical reports in accurate and accessible language based on a user's query and dialogue history. These two objectives differ fundamentally in their verifiability, yet remain tightly coupled, making them difficult to optimize jointly under conventional supervised fine-tuning and holistic reinforcement learning paradigms. To address this challenge, we propose G-CARL, a grounded, checklist-aligned reinforcement learning framework that combines multi-source retrieval for atomic claim verification with context-aware, instance-specific weighted checklists for response coverage, providing structured supervision for factuality, user-demand satisfaction, and expression quality without constraining response diversity. We further construct MMedReport, a real-world PMRI benchmark, along with a clinician-designed three-dimensional evaluation protocol. Extensive experiments demonstrate that G-CARL consistently outperforms existing post-training baselines in overall quality, claim-level precision, and checklist recall. Pairwise preference evaluation by clinicians further confirms that G-CARL produces interpretations that are more accurate and better aligned with patient needs.",
+      "published": "2026-08-20T17:59:46Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20331",
+      "pdf_url": "https://arxiv.org/pdf/2608.20331",
+      "summary_zh": "现有医学视觉语言任务难以同时满足报告解读中的事实准确性和患者沟通需求。为此，本文提出患者导向医学报告解读任务及G-CARL框架，通过多源检索验证原子声明并结合上下文感知的加权检查表提供结构化奖励。实验表明G-CARL在整体质量、声明级精确率和检查表召回率上均优于现有基线，且临床医生偏好评估确认其更准确且更贴合患者需求。",
+      "summary_en": "Existing medical vision-language tasks fail to jointly address evidence-grounded factuality and context-dependent patient communication in report interpretation. We introduce the Patient-oriented Medical Report Interpretation task and G-CARL, a grounded checklist-aligned reinforcement learning framework that combines multi-source retrieval for atomic claim verification with context-aware instance-specific weighted checklists. Extensive experiments show G-CARL outperforms post-training baselines in overall quality, claim-level precision, and checklist recall, with clinician preference evaluation confirming more accurate and patient-aligned interpretations.",
+      "highlights_zh": [
+        "首个患者导向报告解读任务与框架",
+        "整体质量与声明精确率全面领先",
+        "临床验证更贴合患者实际需求"
+      ]
+    },
+    {
+      "id": "2608.20320",
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "authors": [
+        "Narges Ahmadi",
+        "Yubo Jiao",
+        "Jônatas Augusto Manzolli",
+        "Jiangbo Yu",
+        "Luis Miranda-Moreno"
+      ],
+      "abstract": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction. A chatbot-administered, image-augmented stated-preference survey collected mode choices from student commuters across five predefined weather scenarios, yielding 454 respondent-scenario observations. Weather-related associations were analyzed using a multinomial logit model, while logistic regression and random forest provided machine-learning benchmarks. Nine locally deployed large language models (LLMs), ranging from 2 to 35 billion parameters, were evaluated across four zero-shot prompt-and-context conditions and extended through persona, few-shot, and vision-based configurations. Random forest achieved 69.6% five-class accuracy, while the best text-only zero-shot LLM reached 69.9% without task-specific fitting. Habitual travel information produced the most consistent gains, Expert framing generally outperformed Role-Play, and persona information was most useful when habitual travel information was unavailable. Few-shot prompting improved prediction for several models, with gains stabilizing after a small number of examples. Using the same weather images shown to respondents, the best vision-based configuration reached 71.5% five-class accuracy, indicating that visual context may provide additional predictive information for selected models. Overall, the study shows how conversational surveys, structured data processing, conventional behavioral modeling, machine learning, and multimodal LLM prediction can be coordinated within an auditable multi-agent workflow.",
+      "published": "2026-08-20T17:57:42Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20320",
+      "pdf_url": "https://arxiv.org/pdf/2608.20320",
+      "summary_zh": "出行行为研究常将数据收集与预测建模分离，缺乏端到端整合。本文提出一个三智能体工作流，结合对话式调查、结构化数据处理和基于多模态大语言模型的天气敏感出行需求预测。实验表明，视觉上下文和习惯性出行信息能提升预测准确率，验证了多智能体框架在可审计出行行为建模中的有效性。",
+      "summary_en": "Travel behavior research often separates data collection from predictive modeling, limiting end-to-end integration. This study proposes a three-agent workflow combining conversational surveys, structured processing, and multimodal LLM-based weather-sensitive demand prediction, evaluated on a stated-preference dataset. Results show that visual context and habitual travel information improve accuracy, demonstrating the value of an auditable multi-agent framework for travel behavior modeling.",
+      "highlights_zh": [
+        "三智能体端到端工作流整合数据与建模",
+        "最佳视觉配置达71.5%五类准确率",
+        "可审计框架支持多模态预测与决策"
+      ]
+    },
+    {
+      "id": "2608.20337",
+      "title": "Information on trajectories: martingales and random times",
+      "authors": [
+        "Akshay Balsubramani"
+      ],
+      "abstract": "Accounting for information flow on the path space of trajectories of a nonnegative martingale yields exact variational identities for it, even at arbitrary random times. This recovers the widely used classical concentration inequalities, from Ville to PAC-Bayes, and measures what each one discards. The tail a bound controls is itself a relative entropy, resolved by the chain rule into per-step conditional divergences. The discarded slack has an exact form in each of three geometries: a Gibbs tilt for the Azuma-Hoeffding and PAC-Bayes bounds, the crossing itself for Ville's and for pooled tests, and a dominating certificate for the $L^p$ maximal bound. That certificate's optional-stopping deficit resolves per step into Bregman divergences of the running maximum. On a path-time space, the same identity gains one factor that prices anticipation: an arbitrary random time carries an e-process ``peeking penalty.'' The partition function can be read as a coalescent--a prefix-sharing probability of independent copies--and geometric mixtures of test martingales gain a pooling benefit for multi-model safe testing.",
+      "published": "2026-08-20T17:59:57Z",
+      "primary_category": "math.PR",
+      "categories": [
+        "math.PR",
+        "cs.IT",
+        "cs.LG",
+        "math.ST"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20337",
+      "pdf_url": "https://arxiv.org/pdf/2608.20337",
+      "summary_zh": "本文研究非负鞅轨迹空间上的信息流，旨在统一并精确刻画各类经典浓度不等式在任意随机时刻的界。作者通过鞅与随机时间的变分恒等式，将尾部概率控制分解为相对熵与逐步骤条件散度，并在三种几何（Gibbs倾斜、穿越、支配证书）下给出丢弃松弛项的精确形式。该工作恢复了从Ville到PAC-Bayes的经典不等式，并揭示了随机时间带来的“偷看惩罚”与多模型安全测试的池化收益，为信息论与概率不等式提供了统一视角。",
+      "summary_en": "This paper studies information flow on the path space of nonnegative martingales to derive exact variational identities at arbitrary random times, unifying classical concentration inequalities. The novelty lies in resolving tail bounds into relative entropy via chain rule and providing exact slack forms in three geometries, plus a peeking penalty for random times on path-time space. The results recover Ville to PAC-Bayes inequalities, quantify their discarded slack, and reveal pooling benefits for multi-model safe testing, offering a unified information-theoretic framework.",
+      "highlights_zh": [
+        "统一浓度不等式的变分恒等式",
+        "随机时间偷看惩罚的精确刻画",
+        "多模型测试的池化收益分析"
+      ]
+    },
+    {
+      "id": "2608.20326",
+      "title": "$TCP_α$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
+      "authors": [
+        "Parampreet Singh",
+        "Anushka Singh",
+        "Sumit Kumar",
+        "Vipul Arora"
+      ],
+      "abstract": "Deep neural networks are often overconfident, assigning high confidence even to incorrect predictions. Consequently, users lack a reliable signal for deciding when a prediction can be trusted. Post-hoc confidence estimation addresses this by training a lightweight auxiliary head over a frozen classifier. Existing targets, however, suffer from inherent ambiguity: they assign overlapping confidence values to correct and incorrect predictions, while errors near the decision boundary receive confidence scores indistinguishable from correct predictions. In this work, we propose $TCP_α$, a novel confidence target that resolves these limitations by introducing a margin-controlled penalty for misclassified samples. We prove that $TCP_α$ guarantees complete separation between the target values of correct and incorrect predictions, with a separation margin that is independent of the number of classes and increases monotonically with the penalty parameter. Since accurate classifiers naturally produce very few errors, learning these targets results in a severely imbalanced regression problem. We therefore present a systematic study of training strategies for learning under this imbalance and identify an effective training configuration through extensive ablation studies. We evaluate the proposed approach on rāga identification, investigate its robustness under domain shift, and further validate it on frame-wise ornamentation detection without modifying the selected configuration. Across all settings, $TCP_α$ consistently outperforms existing confidence targets for failure prediction. Rejecting only the least-confident 8\\% of predictions improves the base model's macro-F1 from 0.89 to 0.98, while fine-tuning the confidence head with only 5\\% labeled samples from a new corpus effectively restores performance under domain shift.",
+      "published": "2026-08-20T17:58:50Z",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20326",
+      "pdf_url": "https://arxiv.org/pdf/2608.20326",
+      "summary_zh": "深度神经网络常过度自信，现有置信度估计目标在决策边界附近无法区分正确与错误预测。本文提出TCP_α置信度目标，通过引入边界控制惩罚确保正确与错误预测目标值完全分离，并系统研究了不平衡回归下的训练策略。该方法在拉格识别和装饰音检测中显著提升失败预测性能，仅拒绝8%低置信度预测即可将宏F1从0.89提升至0.98，且对域偏移具有鲁棒性。",
+      "summary_en": "Deep neural networks are often overconfident, and existing confidence targets fail to distinguish correct from incorrect predictions near decision boundaries. We propose TCP_α, a margin-controlled penalty that guarantees complete separation between target values of correct and incorrect predictions, along with a systematic study of training strategies for the resulting imbalanced regression. The method consistently outperforms existing confidence targets in failure prediction, improving macro-F1 from 0.89 to 0.98 by rejecting only 8% least-confident predictions, and remains robust under domain shift.",
+      "highlights_zh": [
+        "边界控制惩罚实现置信度完全分离",
+        "拒绝8%预测使宏F1从0.89升至0.98",
+        "域偏移下仅需5%标注即可恢复性能"
+      ]
+    },
+    {
+      "id": "2608.20338",
+      "title": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
+      "authors": [
+        "Sahil Kale",
+        "Ian Harris"
+      ],
+      "abstract": "Large Language Models (LLMs) increasingly require selective removal of harmful or sensitive knowledge, called unlearning, yet existing methods and benchmarks fail to evaluate this capability completely. Current approaches rely on disjoint forget and retain sets composed of independent facts, and measure success using simple and direct factual recall. This framing fails to capture a key requirement of unlearning, namely the ability to eliminate harmful behaviors while preserving benign and beneficial knowledge. We argue that effective unlearning must operate at the level of concepts, ensuring complete removal of unsafe applications while maintaining their correct and useful usage, thereby achieving conceptually meaningful and complete unlearning. To better evaluate unlearning techniques from such a practical viewpoint, we introduce the notion of dual-use concepts: concepts that can be used in both harmful and benign contexts. Building on these concepts, we construct a benchmark called ConceptGuard where forget and retain sets are explicitly complementary in concept usage. Our benchmark uniquely enables unlearning to be explored and gauged at the level of concepts, instead of sparse facts, and evaluation is intent-sensitive with the goal of maximizing contextual separation to promote safer behavior. We demonstrate that current unlearning techniques perform poorly under this setting, showing weak contextual separation alongside poor performance in ROUGE and concept-level metrics. Our results reveal strong forgetting-utility trade-offs, limited gains in contextual sensitivity, and poor consistency in concept-level control across methods, and provide ideas for unlearning approaches that better align with real-world safety requirements. Our dataset is publicly available.",
+      "published": "2026-08-20T17:59:57Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20338",
+      "pdf_url": "https://arxiv.org/pdf/2608.20338",
+      "summary_zh": "现有大模型遗忘评估依赖独立事实的简单记忆测试，无法捕捉有害与良性知识共存的现实需求。本文提出双用途概念与ConceptGuard基准，以概念互补的遗忘/保留集实现意图敏感的情境分离评估。实验表明现有遗忘方法在情境分离、ROUGE及概念指标上表现差，揭示强遗忘-效用权衡并指引更符合安全需求的遗忘方向。",
+      "summary_en": "Current unlearning benchmarks rely on disjoint facts and direct recall, failing to capture the coexistence of harmful and benign uses of knowledge. We introduce dual-use concepts and the ConceptGuard benchmark, where forget and retain sets are complementary in concept usage, enabling intent-sensitive evaluation of contextual separation. Results show existing unlearning methods perform poorly, revealing strong forgetting-utility trade-offs and poor concept-level consistency, offering insights for safer unlearning approaches.",
+      "highlights_zh": [
+        "提出双用途概念与情境敏感遗忘基准",
+        "现有方法情境分离弱，ROUGE与概念指标差",
+        "揭示遗忘-效用权衡，指导安全对齐研究"
+      ]
+    },
+    {
+      "id": "2608.20335",
+      "title": "4DAnyone: Create Anyone in 4D from a Casual Monocular Video",
+      "authors": [
+        "Yudong Jin",
+        "Tao Xie",
+        "Qihang Zhang",
+        "Zehong Shen",
+        "Zhen Xu",
+        "Yujun Shen",
+        "Hujun Bao",
+        "Xiaowei Zhou",
+        "Yinghao Xu"
+      ],
+      "abstract": "We present 4DAnyone, a framework for reconstructing 4D humans from an uncalibrated monocular video by generating reconstruction-grade multiview-consistent videos and lifting them into 4D Gaussian Splatting (4DGS). Existing camera-controlled video diffusion models synthesize plausible novel-view videos but fail to maintain consistency when scaled to the tens of target views required for 4DGS reconstruction. We identify this failure as a bounded-attention-context problem: when target views exceed the capacity of a single DiT forward pass, they must be split into groups, exposing two coupled bottlenecks. On the reference-context side, conditioning on all previously generated views grows as $O(N)$, weakening cross-view appearance guidance. On the target-context side, disjoint groups cannot directly exchange information, causing global structural drift. 4DAnyone addresses both bottlenecks with two complementary designs: Reference Context Packing (RCP) compresses growing reference views into a fixed-length mixed-resolution context with $O(1)$ reference-context complexity, while Target Context Routing (TCR) rotates target-view groupings during denoising to share context across groups at high-noise steps and stabilize details at low-noise steps. We further build the MVGameHuman dataset using our in-house game engine and combine it with light-stage and in-the-wild video datasets for training. Experiments on DNA-Rendering and DyMVHumans show that 4DAnyone outperforms prior methods in both novel-view video quality and downstream 4DGS reconstruction, with robust in-the-wild generalization. See our project page for video results and source code: https://4danyone.github.io.",
+      "published": "2026-08-20T17:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20335",
+      "pdf_url": "https://arxiv.org/pdf/2608.20335",
+      "summary_zh": "现有相机控制视频扩散模型在生成数十个目标视角时因注意力上下文受限而无法保持多视角一致性，导致4D重建失败。4DAnyone提出参考上下文打包（RCP）和目标上下文路由（TCR）两种互补设计，分别以O(1)复杂度压缩参考视角并跨组共享去噪上下文，从而生成重建级多视角一致视频并提升为4D高斯泼溅。在DNA-Rendering和DyMVHumans数据集上，4DAnyone在新颖视角视频质量和下游4DGS重建上均优于现有方法，并具备鲁棒的野外泛化能力。",
+      "summary_en": "Existing camera-controlled video diffusion models fail to maintain multiview consistency when scaled to tens of target views required for 4DGS reconstruction, due to bounded attention context. 4DAnyone introduces Reference Context Packing (RCP) to compress growing reference views into fixed-length context with O(1) complexity, and Target Context Routing (TCR) to rotate target-view groupings during denoising for cross-group context sharing. Experiments show superior novel-view video quality and 4DGS reconstruction on DNA-Rendering and DyMVHumans, with robust in-the-wild generalization.",
+      "highlights_zh": [
+        "RCP+TCR解决注意力上下文瓶颈",
+        "优于DNA-Rendering和DyMVHumans基线",
+        "支持野外视频4D人体重建"
+      ]
+    },
+    {
+      "id": "2608.20336",
+      "title": "WithEveryone: Unified Planning and Identity Grounding for Group Image Generation",
+      "authors": [
+        "Hengyuan Xu",
+        "Qixun Wang",
+        "Yiji Cheng",
+        "Miles Yang",
+        "Zhao Zhong",
+        "Wei Cheng",
+        "Xingjun Ma",
+        "Yu-gang Jiang"
+      ],
+      "abstract": "Identity-preserving image generation becomes increasingly unreliable when a scene must contain many specified people. Beyond retaining each identity, the model must bind every reference to a distinct person and location, while training-time identity losses must establish correspondence among several noisy predicted faces. We introduce WithEveryone, a unified framework for generating group images up to ten reference identities. WithEveryone injects each selected identity as an addressed token, predicts a structured identity--layout plan, and renders the plan as a visual condition. Its key objective, Layout-Grounded ID Loss, uses annotated face regions to supervise the intended identities directly, avoiding unstable embedding-based face matching; ID Representation Forcing additionally trains a prediction for each identity before image synthesis. On an identity-disjoint benchmark, WithEveryone achieves the highest target-context identity similarity, improving face similarity from 0.462 for GPT-Image-2 to 0.499, while reducing copy-paste artifacts from 0.169 to 0.055. It further covers 97.3\\% of the requested identities with a duplicate rate of only 2.8\\%. These results show that explicit identity--layout grounding enables identity-preserving generation to scale to larger groups without relying on direct reference-face copying.",
+      "published": "2026-08-20T17:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20336",
+      "pdf_url": "https://arxiv.org/pdf/2608.20336",
+      "summary_zh": "现有身份保持生成方法在包含多个指定人物的群像场景中，难以同时保持身份并正确绑定每个人物到特定位置。WithEveryone提出统一框架，通过注入寻址令牌、预测结构化身份-布局计划并作为视觉条件，结合布局锚定身份损失和身份表示强制训练，实现最多十人的群像生成。在身份不相交基准上，该方法将人脸相似度从0.462提升至0.499，复制粘贴伪影从0.169降至0.055，身份覆盖率达97.3%，重复率仅2.8%，证明显式身份-布局锚定可扩展至更大群体。",
+      "summary_en": "Existing identity-preserving generation struggles to retain and bind multiple specified identities to distinct locations in group images. WithEveryone introduces a unified framework that injects addressed tokens, predicts a structured identity-layout plan, and uses Layout-Grounded ID Loss with ID Representation Forcing to supervise identities via annotated face regions. It achieves the highest face similarity (0.499 vs 0.462 for GPT-Image-2), reduces copy-paste artifacts from 0.169 to 0.055, and covers 97.3% identities with only 2.8% duplicates, showing explicit layout grounding scales identity-preserving generation to larger groups.",
+      "highlights_zh": [
+        "统一身份-布局规划框架",
+        "相似度0.499，伪影降至0.055",
+        "支持十人群像，覆盖97.3%"
+      ]
+    },
+    {
+      "id": "2608.20284",
+      "title": "Towards Surgical World-Action Modeling: A Preliminary Joint Visual-Trajectory Forecasting for Surgical Motion Planning",
+      "authors": [
+        "Weiliang Huang",
+        "Huanrong Liu",
+        "Bob Zhang",
+        "Qi Dou",
+        "Zhen Chen",
+        "Yun Gu",
+        "Guy Rosman",
+        "Qingbiao Li"
+      ],
+      "abstract": "Reliable surgical planning requires models to anticipate not only how instruments will move, but also how the operative visual state will evolve together with such motion. Existing approaches typically treat future scene generation and instrument trajectory prediction as two separate tasks. Scene-only models cannot directly evaluate the accuracy of future instrument motion at the trajectory level, while trajectory-only models fail to capture the visual consequences of instrument movement, leaving the consistency between predicted trajectories and future scene evolution unaddressed. Jointly forecasting both provides a more complete account of surgical action-scene dynamics by enabling explicit trajectory-level evaluation while simultaneously modeling the corresponding visual evolution. To bridge this gap, we present a preliminary joint visual-trajectory world-action model that simultaneously forecasts future visual states and instrument trajectories from historical surgical observations. Specifically, we encode historical video frames and tool trajectories into latent representations, which are processed by a temporal-spatial encoder and subsequently decoded through separate visual-state and trajectory prediction heads. Based on this preliminary architecture, a chunked autoregressive rollout is repeatedly applied to predict fifteen future steps. The chunked strategy consistently outperforms direct one-shot prediction across all evaluated horizons, improving first-segment PSNR from 18.86 to 23.11 dB and reducing ADE from 45.77 to 22.22 pixels. These results demonstrate the initial feasibility of joint visual-motion forecasting. However, we observe progressive visual degradation and accumulated trajectory errors over longer prediction horizons, which remain important challenges for future surgical world-action modeling.",
+      "published": "2026-08-20T17:18:02Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20284",
+      "pdf_url": "https://arxiv.org/pdf/2608.20284",
+      "summary_zh": "现有手术规划方法将未来场景生成与器械轨迹预测分离，无法评估轨迹与视觉演变的关联。本文提出联合视觉-轨迹世界动作模型，通过时序-空间编码器和分块自回归滚动预测同时生成未来视觉状态与器械轨迹。分块策略显著提升预测精度（PSNR从18.86升至23.11 dB，ADE从45.77降至22.22像素），但长时预测仍存在视觉退化与轨迹累积误差。",
+      "summary_en": "Existing surgical planning methods treat future scene generation and instrument trajectory prediction as separate tasks, failing to capture their consistency. This paper proposes a joint visual-trajectory world-action model that simultaneously forecasts future visual states and instrument trajectories via a temporal-spatial encoder and chunked autoregressive rollout. The chunked strategy improves first-segment PSNR from 18.86 to 23.11 dB and reduces ADE from 45.77 to 22.22 pixels, demonstrating initial feasibility, though long-horizon prediction still suffers from visual degradation and accumulated errors.",
+      "highlights_zh": [
+        "联合视觉-轨迹预测架构",
+        "PSNR提升至23.11 dB，ADE降至22.22像素",
+        "长时预测仍有退化与误差累积"
+      ]
+    },
+    {
+      "id": "2608.20275",
+      "title": "DART-S: Reachability-Audited Active-Suspension Preconditioning for Off-Road Vehicle Jumps",
+      "authors": [
+        "Yu Hu",
+        "Fangzhou Zhao",
+        "Liang Chen",
+        "Chen Min",
+        "Wei Li",
+        "Mingyuan Sang",
+        "Jiajia Ma",
+        "Shican Chen",
+        "Di Pang",
+        "Baolei Chen"
+      ],
+      "abstract": "Airborne torque reaction cannot recover takeoff errors beyond the wheel angular-momentum budget. DART-S applies ramp-face suspension preconditioning to change pitch, pitch rate, and wheel spin before liftoff, thereby shifting the queried state and altering the remaining authority budget. To predict how each suspension action reshapes this state-budget pair, DART-S employs a local calibration map. A support-aware selector combines the predicted shift with local outcome evidence and an interval-reachability screen; an exact-pair audit reports residual authority. Across 600 new runs in 72 independent BeamNG sessions, every positive, negative, and boundary query follows its prespecified branch. At the confirmed 40°/13 m/s boundary, DART-S attains 24/24 post-touchdown attitude-criterion successes versus 0/24 for DART (session-level Holm-adjusted p=0.0234). At 11.5 m/s, a 0.35 s timing action attains 23/24 versus 0/24 for the static preset (p=0.0156). The 200 rad/s command guard keeps drivetrain hard-limit exceedance at zero across all 600 runs. The source code will be available at https://github.com/MeridianCAS/DART-S",
+      "published": "2026-08-20T17:12:27Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20275",
+      "pdf_url": "https://arxiv.org/pdf/2608.20275",
+      "summary_zh": "越野车辆跳跃后空中扭矩无法完全修正起飞误差，受限于车轮角动量预算。DART-S通过起跳前在坡面施加主动悬架预调节，改变俯仰角、俯仰率和车轮转速，并利用局部校准图和支持感知选择器预测与筛选状态-预算对。在600次BeamNG仿真中，DART-S在40°/13 m/s边界达到24/24姿态成功率，远超DART的0/24，且未触发传动系统硬限位。",
+      "summary_en": "Airborne torque reaction cannot fully correct takeoff errors due to limited wheel angular-momentum budget. DART-S applies ramp-face suspension preconditioning before liftoff to alter pitch, pitch rate, and wheel spin, using a local calibration map and support-aware selector with interval-reachability audit. Across 600 runs, DART-S achieves 24/24 attitude successes at the 40°/13 m/s boundary versus 0/24 for DART, with zero drivetrain limit violations.",
+      "highlights_zh": [
+        "悬架预调节+可达性审计",
+        "边界成功率24/24 vs 0/24",
+        "仅限仿真，待实车验证"
+      ]
+    },
+    {
+      "id": "2608.20319",
+      "title": "Inducing Task Models from Computer-Use Traces",
+      "authors": [
+        "Yucheng Jiang",
+        "Zora Zhiruo Wang",
+        "Ruishi Chen",
+        "Diyi Yang"
+      ],
+      "abstract": "Naturalistic computer-use traces, passively recorded screenshots and mouse or keyboard actions, are a valuable resource for deriving symbolic, auditable, and reusable models of how everyday work is done. Such models matter as computer-use agents enter real work, where agents need to learn how tasks are actually performed, and organizations need to audit and reuse that knowledge. However, inducing such task models is challenging, as activity is observed only as low-level events and real-world work is multi-threaded with interleaved goals. Existing methods assume a given task or a single workflow, and produce step-level summaries rather than structured task models. We introduce Task Model Induction (TMI), which (i) discovers the latent tasks in an unconstrained trace, disentangling concurrent activity, and (ii) for each latent task, induces a task model pairing a hierarchical objective model of recursive goal decomposition with a procedure model of the control flow that organized the execution. Intrinsically, on controlled human and agent trajectories, TMI recovers interleaved tasks with 0.974 agreement against ground-truth groupings and reconstructs 74.9% of the observed execution steps, far more than the strongest workflow induction baseline. Extrinsically, skills derived from TMI's task models improve held-out task accuracy by 30.0% over the strongest baseline.",
+      "published": "2026-08-20T17:57:00Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.20319",
+      "pdf_url": "https://arxiv.org/pdf/2608.20319",
+      "summary_zh": "自然计算机使用轨迹仅提供低层事件且真实工作多线程交织，现有方法无法从中归纳结构化任务模型。本文提出任务模型归纳方法TMI，同时发现潜在任务并为其归纳结合层级目标模型与程序控制流模型的任务模型。在受控轨迹上TMI对交织任务的分组一致性达0.974，重构74.9%执行步骤，且派生技能使保留任务准确率提升30.0%。",
+      "summary_en": "Naturalistic computer-use traces contain only low-level events and real-world work is multi-threaded with interleaved goals, making it challenging to induce structured task models. We introduce Task Model Induction (TMI), which discovers latent tasks in unconstrained traces and induces for each a task model pairing a hierarchical objective model with a procedure model of control flow. TMI achieves 0.974 agreement on interleaved task grouping, reconstructs 74.9% of execution steps, and improves held-out task accuracy by 30.0% over the strongest baseline.",
+      "highlights_zh": [
+        "发现交织任务并归纳层级任务模型",
+        "分组一致性0.974，重构74.9%步骤",
+        "提升下游任务准确率30.0%"
+      ]
+    }
+  ]
+}
