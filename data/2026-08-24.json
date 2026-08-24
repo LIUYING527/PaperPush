@@ -1,0 +1,286 @@
+{
+  "date": "2026-08-24",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.21359",
+      "title": "Primal Acceleration of Newton's Method",
+      "authors": [
+        "Nikita Doikov"
+      ],
+      "abstract": "We develop a new direct accelerated Newton method for minimizing convex functions with Lipschitz continuous Hessian. The algorithm uses only primal variables and performs just one linear solve per iteration. With a simple predetermined choice of parameters, it achieves the global convergence rate of $O(1/k^3)$ in terms of the functional residual. To the best of our knowledge, this is the first second-order method for this problem class attaining this rate while relying solely on one linear system solve per iteration (without solving auxiliary nonlinear regularized subproblems, such as cubic regularization, performing nonlinear parameter searches, or using dual extragradient corrections). Our method can be implemented in a Hessian-free way, using an inexact linear system solver, while preserving the fast global rate. We further extend our construction to arbitrary geometry through Bregman divergence, and to composite optimization problems.",
+      "published": "2026-08-21T17:59:37Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21359",
+      "pdf_url": "https://arxiv.org/pdf/2608.21359",
+      "summary_zh": "本文针对具有Lipschitz连续Hessian的凸函数最小化问题，提出了一种新的直接加速牛顿法。该方法仅使用原始变量，每次迭代只需一次线性求解，无需求解非线性正则化子问题或进行参数搜索。算法以简单的预定参数实现了O(1/k^3)的全局收敛率，并支持Hessian-free实现及扩展到Bregman几何和复合优化。",
+      "summary_en": "This paper addresses the minimization of convex functions with Lipschitz continuous Hessian by developing a new direct accelerated Newton method. The algorithm uses only primal variables and performs a single linear solve per iteration, avoiding nonlinear regularized subproblems or parameter searches. It achieves the first O(1/k^3) global rate for this problem class with such simplicity, supports Hessian-free implementation, and extends to Bregman geometry and composite optimization.",
+      "highlights_zh": [
+        "首次单线性求解达O(1/k^3)",
+        "无需子问题，仅一次线性求解",
+        "支持Hessian-free与复合优化"
+      ]
+    },
+    {
+      "id": "2608.21357",
+      "title": "VIALS: A Benchmark for Visual Interpretation of Artifacts in the Life Sciences",
+      "authors": [
+        "Elaine Lau",
+        "Thanuka Udumulla",
+        "Lee Izhaki-Tavor",
+        "Francisco Guzmán",
+        "Nicholas Magazine",
+        "Jonas Mueller"
+      ],
+      "abstract": "In professional life sciences workflows, scientists routinely interpret visual artifacts (gel blots, microscopy images, plasmid maps, flow cytometry plots, molecular structures, ...) to inform research decisions. We introduce VIALS, a visual question-answering benchmark with 161 such interpretation tasks, spanning the types of artifacts examined throughout experimental workflows in the biotech industry (rather than polished figures from publications and textbooks). While frontier vision-language models can now fluently describe natural images, we find that they are unable to accurately interpret these scientific images, reflecting limitations in domain knowledge and domain-specific visual reasoning capabilities. In contrast, scientists with relevant domain expertise find these visual interpretation tasks straightforward. AI that cannot similarly interpret such images will have limited utility in professional life sciences workflows, where such artifacts are central to how scientists reason, communicate, and make decisions.",
+      "published": "2026-08-21T17:59:26Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21357",
+      "pdf_url": "https://arxiv.org/pdf/2608.21357",
+      "summary_zh": "生命科学工作流中科学家常需解读各类视觉实验产物，但现有视觉语言模型在此类专业图像上表现不佳。为此，我们提出了VIALS基准，包含161个覆盖生物技术行业实验流程中真实视觉产物的视觉问答任务。实验表明，前沿模型在这些任务上准确率低，而领域专家却能轻松完成，凸显了当前模型在领域知识与专业视觉推理上的不足。",
+      "summary_en": "Professional life science workflows rely on interpreting visual artifacts like gels and microscopy images, yet frontier vision-language models fail at these tasks. We introduce VIALS, a benchmark of 161 visual QA tasks spanning real-world biotech artifacts rather than polished publication figures. Results show models significantly underperform domain experts, highlighting critical gaps in domain-specific visual reasoning for practical scientific use.",
+      "highlights_zh": [
+        "首个真实实验流程视觉问答基准",
+        "前沿模型准确率显著低于领域专家",
+        "覆盖生物技术全流程161类任务"
+      ]
+    },
+    {
+      "id": "2608.21349",
+      "title": "PerturbRx: Learning Treatment-Conditioned Latent Transitions for Patient Drug Response Prediction",
+      "authors": [
+        "Yoshitaka Inoue",
+        "Minoh Jeong",
+        "Alfred Hero",
+        "Rui Kuang",
+        "Augustin Luna"
+      ],
+      "abstract": "Scarce data and tumor heterogeneity limit patient-level cancer treatment-response prediction. Existing approaches predict response from pretreatment molecular profiles and drug representations, without explicitly modeling the molecular changes expected under treatment. We propose PerturbRx, a treatment-conditioned representation learning framework that learns intervention-induced latent transitions and uses them as patient-drug response features. PerturbRx trains a drug- and dose-conditioned transition predictor from context-matched but cell-unpaired control and treated single-cell populations, then freezes and transfers the predictor to pretreatment patient profiles without requiring post-treatment measurements. The transition is combined with patient and drug representations to predict response. Across TCGA and patient-derived xenograft benchmarks, PerturbRx achieves the strongest aggregate predictive performance among the evaluated methods. These results support perturbation-pretrained latent transitions as useful representations for patient-level drug-response prediction.",
+      "published": "2026-08-21T17:54:48Z",
+      "primary_category": "q-bio.QM",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21349",
+      "pdf_url": "https://arxiv.org/pdf/2608.21349",
+      "summary_zh": "癌症治疗反应预测面临数据稀缺和肿瘤异质性问题，现有方法未显式建模治疗诱导的分子变化。PerturbRx提出治疗条件化的潜在转移学习框架，利用未配对单细胞数据训练药物和剂量条件转移预测器，并将其迁移至患者预处理特征。在TCGA和PDX基准上取得最佳综合预测性能，验证了扰动预训练潜在转移作为患者级药物反应表征的有效性。",
+      "summary_en": "Cancer treatment response prediction is challenged by scarce data and tumor heterogeneity, while existing methods ignore treatment-induced molecular changes. PerturbRx introduces a treatment-conditioned latent transition framework that learns intervention-induced transitions from unpaired single-cell populations and transfers the frozen predictor to patient profiles. It achieves the strongest aggregate predictive performance on TCGA and PDX benchmarks, demonstrating perturbation-pretrained transitions as useful representations for patient-level drug response prediction.",
+      "highlights_zh": [
+        "创新：治疗条件化潜在转移学习",
+        "结果：TCGA和PDX基准综合最优",
+        "价值：无需治疗后测量即可预测"
+      ]
+    },
+    {
+      "id": "2608.21348",
+      "title": "Truthful Calibration Measures for Sequential Prediction",
+      "authors": [
+        "Anagha Gokul",
+        "Jason Hartline",
+        "Lunjia Hu",
+        "Jonathan Ullman",
+        "Yifan Wu"
+      ],
+      "abstract": "Calibration requires probabilistic reports to be conditionally unbiased and reliably interpretable as probabilities. A calibration measure assigns numerical error to miscalibrated reports. Haghtalab et al. (2024) proposed an approximately truthful calibration measure for online prediction, leaving open whether exact truthfulness is compatible with completeness and soundness. We resolve this question negatively for sequential binary prediction: exact truthfulness is incompatible with completeness and soundness, even for independent outcomes. We then show that this impossibility is specific to exact truthfulness. We give two general reductions from a base calibration measure, producing additively and multiplicatively approximately truthful calibration measures, respectively. Applying the multiplicative reduction, for every $0 < \\varepsilon < 1$ we construct a sound and complete calibration measure that is $(1+\\exp(-T^{(1-\\varepsilon)/2}/2))$-multiplicatively truthful. This improves the approximate-truthfulness guarantee of Haghtalab et al. (2024).",
+      "published": "2026-08-21T17:54:05Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.GT",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21348",
+      "pdf_url": "https://arxiv.org/pdf/2608.21348",
+      "summary_zh": "本文研究序列预测中校准度量的精确真实性是否与完备性和可靠性相容，并证明在二元序列预测中即使结果独立，精确真实性也与完备性和可靠性不相容。作者提出两种从基础校准度量出发的通用归约方法，分别构造加性和乘性近似真实的校准度量，其中乘性归约构造的度量在任意0<ε<1下具有(1+exp(-T^(1-ε)/2/2))-乘性真实性，优于现有结果。",
+      "summary_en": "This paper investigates whether exact truthfulness is compatible with completeness and soundness in calibration measures for sequential prediction, and proves impossibility even for independent binary outcomes. The authors propose two general reductions from a base calibration measure, yielding additively and multiplicatively approximately truthful measures, with the multiplicative one achieving (1+exp(-T^(1-ε)/2/2))-multiplicative truthfulness for any 0<ε<1, improving prior guarantees.",
+      "highlights_zh": [
+        "证明精确真实性与完备可靠性不相容",
+        "构造乘性近似真实度量，误差指数级衰减",
+        "改进Haghtalab等2024年的近似真实性保证"
+      ]
+    },
+    {
+      "id": "2608.21325",
+      "title": "Move by Move: Measuring and Steering How LLMs Conduct Psychotherapy",
+      "authors": [
+        "Afonso Baldo",
+        "Hugo Pitorro",
+        "Areti Vassilopoulos",
+        "Anabela C. Areias",
+        "Maya D'Eon",
+        "Fabíola Costa",
+        "Ricardo Rei",
+        "Nuno M. Guerreiro"
+      ],
+      "abstract": "Users increasingly turn to large language models for emotional support, yet little is known about how these models actually conduct a psychotherapy interaction. We introduce an ontology of ten therapeutic moves: compact, function-based categories grounded in the MULTI-60 inventory, validated through an annotation campaign with five licensed psychologists, and scaled with a judge-based approach that matches expert agreement. Applying it to real counseling transcripts and model-led sessions, we compare the move distributions between human clinicians and a panel of frontier models. Models over-use inquiry at up to three times the human rate, neglect psychoeducation, and are strongly context-anchored: they carry forward strategies initiated by a human clinician but rarely initiate them themselves. Exposing the ontology as a set of tools roughly halves the mean deviation from the human move distribution and improves turn-level alignment with human therapist by 7-9 percentage points, without any fine-tuning.",
+      "published": "2026-08-21T17:32:38Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21325",
+      "pdf_url": "https://arxiv.org/pdf/2608.21325",
+      "summary_zh": "大型语言模型越来越多地被用于提供情感支持，但其心理治疗互动方式尚不明确。本文提出了一个基于MULTI-60清单的十类治疗动作本体，并通过专家标注和法官模型进行验证与扩展。研究发现模型过度使用询问、忽视心理教育，而将该本体作为工具暴露给模型可显著缩小与人类治疗师的分布差距。",
+      "summary_en": "Large language models are increasingly used for emotional support, yet how they conduct psychotherapy remains unclear. We introduce an ontology of ten therapeutic moves grounded in the MULTI-60 inventory, validated by licensed psychologists and scaled via a judge-based approach. Results show models over-use inquiry and neglect psychoeducation, but exposing the ontology as tools nearly halves deviation from human move distributions and improves turn-level alignment by 7-9 points without fine-tuning.",
+      "highlights_zh": [
+        "提出十类治疗动作本体",
+        "偏差减半，对齐提升7-9%",
+        "无需微调，可即插即用"
+      ]
+    },
+    {
+      "id": "2608.21315",
+      "title": "Prompt-Model Interaction Reaches the Fixed Points: A deterministic, task-free structural readout -- and the factorizations of it that failed",
+      "authors": [
+        "Nicolás Vera Zúñiga"
+      ],
+      "abstract": "That a prompt's effect is not a property of the prompt is established: prompts optimised for one model degrade on another, and rankings reorder under neutral reformatting. That evidence is about task accuracy, which cannot say whether the interaction is a fact about task machinery or about the conditional distribution itself. We ask on a readout with no task in it: the fixed-point structure of the short-window argmax map x_{t+1} = argmax_x p(x | x_{t-1}, x_t), censused from 96 starts. It is deterministic, so nothing can be helped or hurt, and it exists only at short windows -- four of six models lose it entirely by window 16 -- so everything here concerns how a model reads a fragment. Two results. First, the interaction reaches this readout at full magnitude: nine tokens of conditioning move the fixed-point fraction across most of its range, change a four-way structural class, and reorder models, while instruction tuning worth 60.5 IFEval points moves the class by zero. Second, nothing we proposed carries it. Prefix length fails: the effect is not monotone. Four phenomenological factors -- prose-versus-markup, a universal direction, bidirectionality, instruct-resistance -- were each withdrawn within one run of being proposed, dissolved by widening the sample. And the nearest mechanistic account, attention-sink dominance of early tokens, predicts the sign of the shift on 2 of 5 models -- chance -- while a length-by-content cross shows it holds on real text and fails on our probe's uniformly random input, so we are outside its regime, not against it. One fixed nine-token prefix drives four models toward 0 and two toward 1; the bidirectionality survives in-distribution starts. On this readout the unit of explanation is the prompt-model pair. The recurring error it caught in us has a name: a criterion with a shape applied to a quantity with no room to vary.",
+      "published": "2026-08-21T17:25:18Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21315",
+      "pdf_url": "https://arxiv.org/pdf/2608.21315",
+      "summary_zh": "提示词与模型间的交互是否独立于任务本身，现有证据仅基于任务准确率，无法区分其源于任务机制还是条件分布。本文提出一种无任务的确定性读出方法——短窗口argmax映射的固定点结构，从96个起点普查该结构。结果发现交互在该读出上达到完整强度，但所有提出的机制性解释均失败，说明解释单元是提示词-模型对。",
+      "summary_en": "Whether prompt-model interaction is task-independent remains unclear from accuracy-based evidence. We propose a task-free deterministic readout based on fixed-point structure of short-window argmax maps, censused from 96 starts. The interaction fully manifests on this readout, yet all proposed mechanistic factors fail, indicating the explanatory unit is the prompt-model pair.",
+      "highlights_zh": [
+        "无任务固定点读出方法",
+        "九词前缀改变结构类并重排模型",
+        "所有机制因子均被证伪"
+      ]
+    },
+    {
+      "id": "2608.21360",
+      "title": "OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs",
+      "authors": [
+        "Xianyun Sun",
+        "Chaoyou Fu",
+        "Zhengye Zhang",
+        "Feiyang Duan",
+        "Qingyuan Cao",
+        "Yonghui Niu",
+        "Sihang Yuan",
+        "Ge Zhang",
+        "Caifeng Shan"
+      ],
+      "abstract": "Recent omni-modal large language models (Omni-LLMs) show great potential as real-time video assistants, which continuously perceive environments and guide users to achieve specific goals. Unlike traditional passive video understanding, interactive assistants should actively combine visual states, user goals, and prior knowledge to provide effective help. Evaluating this is rather challenging, as the model's unpredictable response dynamically changes the user's subsequent actions, which static offline datasets cannot accommodate. To address this bottleneck, we introduce OmniAssistBench. To solve the issue of diverging interaction paths where the same user goal can be achieved through various methods, we provide models with predefined priors derived from the source video, requiring them to guide users along the exact same routes. Since real interaction videos are rare, we construct the dataset by reverse-engineering existing Internet videos. We deduce logical user goals and segment the videos into multi-turn clips to simulate continuous interactions. This rigorous pipeline required over 1000 expert person-hours to build the dataset. Results show that the proprietary Gemini-3-Pro reaches 66.4 out of the max point of 100, while the open-source Qwen3-Omni-Instruct achieves 51.2. Although current models generally understand user inputs, they frequently provide incorrect or incomplete answers. Specifically, they struggle with visual prompts (e.g., hand gestures), fail to maintain historical context during multi-turn interactions, and fail to delay response until the target event. Results indicate substantial room for improvement before models can become reliable assistants.",
+      "published": "2026-08-21T17:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21360",
+      "pdf_url": "https://arxiv.org/pdf/2608.21360",
+      "summary_zh": "现有Omni-LLM评估依赖静态离线数据集，无法适应交互式助手中模型响应动态改变用户后续行为的场景。本文提出OmniAssistBench，通过逆向工程互联网视频构建多轮交互数据集，并利用视频预定义先验约束交互路径以解决路径发散问题。实验显示最强模型Gemini-3-Pro仅得66.4分，模型在视觉提示理解、多轮上下文保持和响应时机控制上存在显著不足，表明其距可靠助手仍有较大差距。",
+      "summary_en": "Evaluating omni-modal LLMs as interactive assistants is challenging because static offline datasets cannot accommodate the dynamic nature of interactions where model responses alter user actions. We introduce OmniAssistBench, which reverse-engineers internet videos into multi-turn interaction clips with predefined priors to constrain interaction paths, enabling rigorous evaluation. Results show the best model Gemini-3-Pro scores only 66.4/100, revealing major weaknesses in visual prompt understanding, multi-turn context retention, and response timing, highlighting substantial room for improvement.",
+      "highlights_zh": [
+        "逆向工程视频构建交互基准",
+        "最佳模型仅得66.4/100分",
+        "揭示视觉提示与多轮上下文短板"
+      ]
+    },
+    {
+      "id": "2608.21332",
+      "title": "Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation",
+      "authors": [
+        "David P. Stonko"
+      ],
+      "abstract": "Deep-learning models of anatomy can be numerically plausible yet anatomically impossible, and they generalize poorly when data are scarce. We introduce Anatomy-Informed Neural Networks (AINN), in which soft anatomic priors enter as penalty terms in the loss (e.g., a branching penalty that treats a renal transplant artery off the iliac instead of the aorta as unexpected rather than impossible), in direct analogy to a physics-informed neural network, and hard anatomic priors (e.g., continuity of the vessel) are built into the architecture and state representation, making such invalid predictions impossible by construction wherever the prior admits architectural enforcement. We develop it on a clinical test case with limited data: how the aortoiliac tree deforms when a stiff wire is introduced endoluminally. This is important to contemporary aortic surgery and will matter to autonomous endovascular navigation. We lift the vessel centerline and the wire path from R^3 to curves of frames in the Lie group SE(3), and couple a Cosserat-rod wire to a tortuosity-modulated, anatomically anchored vessel through a unilateral lumen-contact inequality. The prediction is a constrained minimizer of the coupled elastic energy, with contact forces as its Lagrange multipliers. Supervision is a Wasserstein-2 optimal-transport loss between the predicted projection through the C-arm geometry and the observed angiogram, so a 2D angiogram can train a 3D prediction. The kinematics, loss and projection are verified against known ground truth; the mechanics solver only against its own optimality conditions, and predicted displacement is not yet mesh-converged. Here, no network is trained. Future work will transfer this in silico model to real CT scans and test whether it improves predictive accuracy and reduces the training data required.",
+      "published": "2026-08-21T17:38:42Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21332",
+      "pdf_url": "https://arxiv.org/pdf/2608.21332",
+      "summary_zh": "解剖学先验在深度学习中常被忽视，导致模型预测在解剖上不可能且数据稀缺时泛化差。本文提出解剖信息神经网络（AINN），将软先验作为损失惩罚项、硬先验嵌入架构和状态表示，并将血管中心线和导丝路径提升至SE(3)李群，结合Cosserat杆与单侧接触约束，以Wasserstein-2最优传输损失从2D血管造影训练3D预测。模型在导丝诱导的主动脉髂动脉变形测试中验证了运动学、损失和投影，但力学求解器仅验证最优性条件，预测位移未网格收敛，且尚未训练网络。",
+      "summary_enh": "Deep-learning models of anatomy often produce numerically plausible yet anatomically impossible predictions and generalize poorly with scarce data. This paper introduces Anatomy-Informed Neural Networks (AINN), encoding soft anatomic priors as loss penalties and hard priors in architecture/state representation, while lifting vessel centerlines and wire paths to SE(3) frame curves with a Cosserat-rod wire coupled to a vessel via unilateral contact, trained by a Wasserstein-2 optimal-transport loss between predicted and observed 2D angiograms. Kinematics, loss, and projection are verified against ground truth, but the mechanics solver is only checked against optimality conditions and predictions are not mesh-converged; no network is trained yet, with future work on real CT transfer.",
+      "highlights_zh": [
+        "软硬解剖先验编码进损失与架构",
+        "SE(3)提升+Wasserstein-2损失训练3D",
+        "未训练网络，力学未网格收敛"
+      ]
+    },
+    {
+      "id": "2608.21358",
+      "title": "Mining beyond Earth with Space Robots: Exploration, Sampling, and Extraction",
+      "authors": [
+        "Dong Li",
+        "Dujun Nie",
+        "Xiaotong Zhang",
+        "Ruilin Wang",
+        "Yuchen Li",
+        "Chang Ge",
+        "Chao Xiong",
+        "Kaichang Di",
+        "Andreas Nüchter",
+        "Levente Kovács",
+        "Qingquan Li",
+        "Shirong Ge",
+        "Fei-Yue Wang",
+        "Long Chen"
+      ],
+      "abstract": "Space resource acquisition and utilization, commonly referred to as Space Mining, represent critical pathways for enabling sustained human exploration and unlocking commercial opportunities in space. These resources mainly include helium-3, water, mineral resources on the Moon and Mars, and abundant mineral deposits on asteroids. Due to the harsh conditions of space, communication delays, and high launch costs, the development of autonomous robotic systems is critical to achieving efficient, cost-effective space mining. This paper provides a comprehensive overview of space mining robotics and associated technologies. First, we review the background of space mining, including international policies, commercial entities, and recent advancements. We define a systematic six-stage architecture for space mining: Exploration is initiated by (1) remote sensing for target identification and (2) precise in situ robotic detection; Sampling progresses from (3) single-robot small-scale sampling to (4) multi-robot large-scale excavation; and Extraction integrates (5) autonomous resource extraction and (6) final integration into in situ construction or terrestrial transport. Additionally, we review and curate existing resources for space mining research, including real-world mission data, terrestrial analog datasets, and high-fidelity simulation environments. Finally, we identify critical open challenges in autonomous space mining and delineate a strategic research roadmap to bridge current technological gaps, fostering the transition toward a sustainable off-world economy. To track ongoing developments in space mining, we maintain an updated project page: https://github.com/OpenSpace-Lab/Space-Mining-with-Robotics-List.",
+      "published": "2026-08-21T17:59:30Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21358",
+      "pdf_url": "https://arxiv.org/pdf/2608.21358",
+      "summary_zh": "太空采矿面临恶劣环境、通信延迟和高发射成本等挑战，亟需自主机器人系统。本文系统提出太空采矿六阶段架构，涵盖遥感探测、原位检测、单/多机器人采样挖掘及自主提取与集成，并整理了相关数据集和仿真环境。该综述为自主太空采矿技术发展提供了清晰路线图，有助于推动可持续地外经济的实现。",
+      "summary_en": "Space mining faces harsh conditions, communication delays, and high launch costs, necessitating autonomous robotic systems. This paper proposes a systematic six-stage architecture for space mining, from remote sensing and in-situ detection to multi-robot excavation and autonomous extraction, while curating datasets and simulation environments. The review provides a strategic roadmap to bridge technological gaps, fostering the transition toward a sustainable off-world economy.",
+      "highlights_zh": [
+        "提出六阶段太空采矿架构",
+        "系统梳理数据集与仿真环境",
+        "为自主采矿提供技术路线图"
+      ]
+    },
+    {
+      "id": "2608.21355",
+      "title": "ViTacPhys: Physical Property-Aware Grasping from Human Visual-Tactile Demonstrations",
+      "authors": [
+        "Yiwen Liu",
+        "Yujun Zhu",
+        "Kui Jia",
+        "Zhao Liao",
+        "Yangwei You",
+        "Shuaijun Wang"
+      ],
+      "abstract": "Recent vision-based action models have demonstrated strong capabilities in complex manipulation, but they rarely leverage explicit object physical properties to adapt their policies. We introduce ViTacPhys, a visual-tactile framework and data acquisition system that estimates object mass and friction-coefficient classes, together with continuous stiffness, from human manipulation demonstrations. Trained on data from 60 rigid and deformable objects, ViTacPhys combines temporal visual-tactile modeling, cross-attention multimodal fusion, and a semantic prior derived from a vision-language model. On seen objects, it achieves 97.2% mass classification accuracy, 98.8% friction-coefficient classification accuracy, and a stiffness mean absolute percentage error (MAPE) of 5.51%. On held-out objects from known categories, it achieves 87.5% mass accuracy, 97.5% friction-coefficient accuracy, and a stiffness MAPE of 9.08%. We transfer ViTacPhys from the human domain to the robot domain using limited robot teleoperation data, robot-style video augmentation, and human demonstrations with matched actions, and deploy it as an online module for adaptive grasping. The resulting physical-property-conditioned policy achieves total grasping success rates of 95.0% on in-distribution objects and 83.4% on out-of-distribution objects. For out-of-distribution objects successfully grasped by both methods, its force profiles are more consistent with human teleoperation than those produced by ACT. These results demonstrate the feasibility of explicitly estimating and conditioning on object physical properties for real-world adaptive grasping.",
+      "published": "2026-08-21T17:58:10Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.21355",
+      "pdf_url": "https://arxiv.org/pdf/2608.21355",
+      "summary_zh": "现有视觉动作模型在复杂操作中很少利用物体显式物理属性来适应策略。本文提出ViTacPhys框架，结合视觉-触觉时序建模、交叉注意力多模态融合和视觉语言模型语义先验，从人类操作演示中估计物体质量、摩擦系数和刚度。在60个刚性和可变形物体上训练后，该框架在已知物体上达到97.2%质量分类准确率，并成功迁移到机器人域实现自适应抓取，总成功率达95.0%。",
+      "summary_en": "Vision-based action models rarely leverage explicit object physical properties for adaptive manipulation. We introduce ViTacPhys, a visual-tactile framework that estimates mass, friction-coefficient, and stiffness from human demonstrations using temporal modeling, cross-attention fusion, and semantic priors. It achieves high estimation accuracy and improves robot grasping success rates to 95.0% on in-distribution objects, demonstrating the feasibility of physical-property-conditioned adaptive grasping.",
+      "highlights_zh": [
+        "视觉-触觉物理属性估计框架",
+        "质量分类准确率97.2%",
+        "机器人抓取成功率95.0%"
+      ]
+    }
+  ]
+}
