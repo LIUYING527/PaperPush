@@ -1,0 +1,305 @@
+{
+  "date": "2026-08-25",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.23566",
+      "title": "How to Train a Critic Stably and Efficiently",
+      "authors": [
+        "Penghui Qi",
+        "Xiangxin Zhou",
+        "Wee Sun Lee"
+      ],
+      "abstract": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instability and develop \\textbf{Best-Practice Critic Optimization (BPCO)}, a recipe that combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation. Because the critic is used only during training, BPCO can also condition it on reward-defining information, such as a reference answer or grading rubric, that is hidden from the policy. Controlled experiments isolate the effect of each design choice. Across mathematical reasoning tasks with models ranging from 1.5B parameters to 30B-A3B mixtures of experts, BPCO improves a strong critic-based baseline consistently, and matches or exceeds a group-based baseline while sampling one response per prompt. The same recipe also improves learning with rubric-based rewards. These results show that a carefully designed critic provides a reliable alternative to group-relative advantage estimation. Code is available at https://github.com/QPHutu/golden_critic",
+      "published": "2026-08-24T17:59:39Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23566",
+      "pdf_url": "https://arxiv.org/pdf/2608.23566",
+      "summary_zh": "基于组的方法如GRPO通过采样多个响应避免训练评论家，但标准评论家训练不稳定。本文提出最佳实践评论家优化（BPCO），结合DPPO、值预测界、蒙特卡洛目标、未归一化优势及长度自适应GAE，并允许评论家利用策略隐藏的奖励信息。在1.5B至30B-A3B模型上，BPCO稳定提升评论家基线，匹配或超越组基方法，且仅需每提示一个响应。",
+      "summary_en": "Group-based RL methods like GRPO avoid critic training by sampling multiple responses, but standard critic-based training is often unstable. We propose Best-Practice Critic Optimization (BPCO), combining DPPO, bounded value predictions, Monte Carlo targets, unnormalized advantages, and length-adaptive GAE, while conditioning the critic on reward-defining information hidden from the policy. Across 1.5B to 30B-A3B models, BPCO consistently improves critic baselines and matches or exceeds group-based methods with one response per prompt.",
+      "highlights_zh": [
+        "稳定评论家训练新配方",
+        "匹配或超越GRPO基线",
+        "支持基于评分标准的奖励"
+      ]
+    },
+    {
+      "id": "2608.23565",
+      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
+      "authors": [
+        "Zhifei Chen",
+        "Luozhou Wang",
+        "Guibao Shen",
+        "Dongyu Yan",
+        "Shuai Yang",
+        "Tianshuo Xu",
+        "Yihua Du",
+        "Wei Wang",
+        "Tianyi Gui",
+        "Lianghua Huang",
+        "Yingcong Chen"
+      ],
+      "abstract": "An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounded one. ReWorld separates the two during training and bounds them at inference. Mixed per-head attention windows confine most heads to the recent past while a small set of global heads attends over the entire history, and random head routing keeps either capability from binding to particular heads; random chunk dropping makes sparse histories in-distribution. At inference the whole past lives under a fixed budget: a bounded KV cache backed by a pose-indexed landmark bank, from which the model retrieves the landmarks nearest the current pose. A metric-scale-aligned data engine places eight sources -- Unreal-rendered fly-throughs, game roaming, and real-world footage -- on one physical action scale, so the same key press moves the camera the same distance in every source, and palindrome trajectories supply the revisit evidence that memory training needs. Distribution-matching distillation confined to a LoRA adapter then compresses sampling to four steps: one backbone serves both a high-fidelity multi-step mode and a real-time interactive one, streaming 704x1280 video across photorealistic, game-style, and stylized worlds. Under a three-axis protocol covering action following, long-horizon recall, and video quality, against six recent interactive world models it attains the best control fidelity ($11.95^\\circ$ rotation error and the best camera-motion consistency) and the best generation quality; and on minute-long out-and-back rollouts ($64$\\,s, $384$ latents), its fixed 12-chunk cache still regenerates the starting view -- at rollout lengths where a sliding window has long evicted the evidence and full-KV attention runs out of memory.",
+      "published": "2026-08-24T17:59:05Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23565",
+      "pdf_url": "https://arxiv.org/pdf/2608.23565",
+      "summary_zh": "交互式世界模型面临控制需短时记忆与记忆需长时程的结构性矛盾。ReWorld通过混合逐头注意力窗口、随机头路由和随机块丢弃分离训练与推理时的记忆机制，并采用有界KV缓存和姿态索引地标库实现固定预算下的长时记忆。在动作跟随、长时回忆和视频质量三轴测试中，ReWorld在控制保真度和生成质量上均优于六种现有模型，且能在64秒往返轨迹中保持起始视图。",
+      "summary_en": "Interactive world models face a structural tension between short-horizon control and unbounded memory. ReWorld separates these during training via mixed per-head attention windows, random head routing, and random chunk dropping, while bounding memory at inference with a pose-indexed landmark bank and fixed-budget KV cache. It achieves state-of-the-art control fidelity and generation quality across six baselines, maintaining starting-view regeneration over 64-second rollouts where sliding windows fail and full-KV attention exhausts memory.",
+      "highlights_zh": [
+        "分离训练与推理的混合注意力记忆机制",
+        "控制误差11.95°且视频质量最优",
+        "固定缓存支持64秒长时程回忆"
+      ]
+    },
+    {
+      "id": "2608.23554",
+      "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models",
+      "authors": [
+        "Daniil Dmitriev",
+        "Zhihan Huang",
+        "Yuting Wei"
+      ],
+      "abstract": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for the standard $τ$-leaping sampler scale linearly with the ambient dimension $d$, raising the question of whether this dependence is intrinsic to the forward process. We answer this question in the negative. We consider a first-order sampler based on the leave-one-out denoiser for uniform and remasking processes whose coordinate updates can be performed in parallel. In both cases, the sampler can correct denoising mistakes during the sampling process, which becomes necessary when many coordinates are updated together. Our main result establishes an adaptive sampling guarantee: up to logarithmic factors, $N = O(\\mathrm{DTC}(X_0) / \\varepsilon)$ discretization steps suffice to achieve sampling error $O(\\varepsilon_{\\mathrm{score}}+\\varepsilon)$, where $\\varepsilon_{\\mathrm{score}}$ is the error in score estimation. Thus, the sampling complexity is governed by the intrinsic dependence structure of the target distribution, as measured by its dual total correlation $\\mathrm{DTC}(X_0)$, rather than directly by the ambient dimension $d$. Our analysis proceeds through a Bayes-optimal auxiliary sampler that separates discretization error from score-estimation error. We also derive an exact information-theoretic representation of the discretization error in terms of the mutual information between different coordinates of the forward process at different times. This representation applies to general forward processes and, in the uniform and remasking cases, can be controlled by $\\mathrm{DTC}(X_0)$. Numerical experiments on structured synthetic distributions illustrate the predicted dimension-adaptive behavior.",
+      "published": "2026-08-24T17:54:51Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.IT",
+        "math.ST",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23554",
+      "pdf_url": "https://arxiv.org/pdf/2608.23554",
+      "summary_zh": "离散扩散模型的采样效率常受限于环境维度，现有均匀前向过程的τ-leaping采样器下界随维度线性增长。本文提出基于leave-one-out去噪器的一阶并行采样器，适用于均匀和remasking过程，能纠正采样中的去噪错误。理论证明采样步数仅由目标分布的内在依赖结构（双全相关DTC）决定，而非环境维度，实现了自适应采样保证。",
+      "summary_en": "Discrete diffusion models face sampling efficiency challenges that often scale with ambient dimension. This paper introduces a first-order parallel sampler based on leave-one-out denoisers for uniform and remasking processes, capable of correcting denoising mistakes. The main result shows sampling complexity depends on the intrinsic dependence structure (dual total correlation) rather than dimension, achieving provably adaptive sampling guarantees.",
+      "highlights_zh": [
+        "采样复杂度由DTC而非维度决定",
+        "步数O(DTC/ε)达误差O(ε_score+ε)",
+        "适用于并行采样与结构化分布"
+      ]
+    },
+    {
+      "id": "2608.23551",
+      "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
+      "authors": [
+        "Na Li",
+        "Yuchen Jiao",
+        "Changxiao Cai",
+        "Gen Li"
+      ],
+      "abstract": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed to terminate at valid token embeddings. Motivated by this limitation, we introduce \\textbf{ConvergeFlow}, an embedding-space flow-based LM, which constrains the data predictor to the convex hull of token embeddings and trains it solely with the mean squared error objective induced by flow matching. Under suitable regularity conditions, we prove that the resulting flow converges to valid token embeddings despite errors in the data predictor, enabling direct token prediction without a CE-supervised decoder. We further develop three sampling mechanisms for controlling the trade-off between the generative perplexity and entropy. Experiments on OpenWebText demonstrate that ConvergeFlow achieves performance competitive with existing continuous and discrete diffusion LMs. These findings demonstrate the potential of the flow-based paradigm for language modeling. Our code is available at https://github.com/Na-Li66/ConvergeFlow.",
+      "published": "2026-08-24T17:54:14Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23551",
+      "pdf_url": "https://arxiv.org/pdf/2608.23551",
+      "summary_zh": "连续扩散和流式语言模型虽性能优异，但其流轨迹无法保证收敛到有效词元嵌入，仍需交叉熵解码器。本文提出ConvergeFlow，将数据预测器约束在词元嵌入的凸包内，并仅用流匹配的均方误差训练，理论上证明其能收敛到有效嵌入。在OpenWebText上性能与现有模型相当，展示了流式语言建模的潜力。",
+      "summary_en": "Continuous diffusion and flow-based language models achieve competitive performance but lack guarantees that flow trajectories terminate at valid token embeddings, necessitating cross-entropy decoders. ConvergeFlow constrains the data predictor to the convex hull of token embeddings and trains solely with flow-matching MSE, with theoretical proof of convergence to valid embeddings under regularity conditions. Experiments on OpenWebText show competitive performance, demonstrating the potential of flow-based language modeling.",
+      "highlights_zh": [
+        "证明流收敛到有效词元嵌入",
+        "OpenWebText上性能与现有模型相当",
+        "提供三种采样机制控制生成质量"
+      ]
+    },
+    {
+      "id": "2608.23552",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "authors": [
+        "Seth Karten",
+        "Alex L. Zhang",
+        "Kevin Thomas",
+        "Sebastian Müller",
+        "Elie Bakouch",
+        "Daniel Auras",
+        "Mika Senghaas",
+        "Fares Obeid",
+        "Konstantin Dunas",
+        "Johannes Hagemann",
+        "Sami Jaghouar"
+      ],
+      "abstract": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstraction for programmatic context processing and test-time compute, while Continual Harness preserves histories, memories, skills, prompts, and subagent specifications across trajectories. Recursive subagents coordinate through direct agent-to-agent communication, and the Agents View lets humans inspect and manage daemon-backed sessions. Prime Agent standardizes execution, recovery, verification, and resource accounting while leaving strategy construction to the model. This low-friction, expressive membrane prevents harness failures from becoming model failures and pushes measurement toward the model's true maximal underlying capability. Prime Agent raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns. On Factorio, we find refinement allows for continuous technology progression and dedicated subagents enable parallelized work. Code is available at https://github.com/PrimeIntellect-ai/prime-agent.",
+      "published": "2026-08-24T17:54:19Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23552",
+      "pdf_url": "https://arxiv.org/pdf/2608.23552",
+      "summary_zh": "语言模型本质上是顺序处理器，但长期自主任务需要超越模型权重和上下文的持久化外部信息与计算能力。Prime Agent提出了一种开源的自改进RLM框架，通过持久化IPython REPL、持续记忆管理和递归子代理通信，将执行、恢复、验证与资源管理标准化，同时将策略构建完全留给模型。该方法在ARC-AGI-3上实现Best@1从30%到95.5%的显著提升，并在长上下文编码、GPU内核生成、模拟器构建和自主nanoGPT加速等任务上匹配或超越现有主流框架，展示了其作为通用长期智能评估与代理工作流基础设施的潜力。",
+      "summary_en": "Language models are inherently sequential processors, yet long-horizon agency demands external information and computation beyond model weights and active context. Prime Agent introduces an open-source self-improving RLM harness that combines a persistent IPython REPL, continual memory management, and recursive subagent communication to standardize execution, recovery, verification, and resource accounting while leaving strategy construction to the model. It raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns, demonstrating its value as a low-friction, expressive membrane for measuring true model capability.",
+      "highlights_zh": [
+        "持久化REPL+递归子代理架构",
+        "ARC-AGI-3 Best@1从30%升至95.5%",
+        "开源框架，需验证跨任务泛化性"
+      ]
+    },
+    {
+      "id": "2608.23549",
+      "title": "FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors",
+      "authors": [
+        "Khiem Vuong",
+        "Deva Ramanan",
+        "Srinivasa Narasimhan"
+      ],
+      "abstract": "Rendering views using 3D scene representations such as Gaussian Splatting (3DGS), Neural Radiance Fields (NeRF), meshes, or even point clouds produces artifacts when input views are sparse or target views lie far from the input. Recent work mitigates these artifacts using diffusion-based generative priors, but is specialized to individual representations and require custom architectures or extensive retraining. We present FixAnything, a single model for fixing a wide range of rendering artifacts. It does so by repurposing a pretrained video generative model, leveraging its implicit multi-view priors with only minimal modification and lightweight finetuning. Our key insight is that even noisily-rendered sequences preserve camera motion and coarse scene structure, allowing cleanup to be formulated as video-to-video translation. To control what scene structure should be preserved, we introduce a binary mask denoting the clean pixels, enabling the model to anchor its output to high-quality inputs (e.g. training views) while refining the rest. To encourage FixAnything to produce 3D-consistent renderings that support downstream reconstruction, we use camera pose accuracy (recovered via structure-from-motion) as a reward signal for direct preference optimization (DPO). Across four distinct 3D representations, FixAnything consistently improves rendering quality with lightweight finetuning, demonstrating that a single generalist video prior can replace multiple specialist refinement pipelines. The simplicity of the framework enables immediate adoption of stronger future video models without architectural redesign.",
+      "published": "2026-08-24T17:51:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23549",
+      "pdf_url": "https://arxiv.org/pdf/2608.23549",
+      "summary_zh": "3D渲染在稀疏视图或远视点下会产生伪影，现有扩散修复方法针对单一表示需定制架构。FixAnything通过微调预训练视频生成模型，将渲染修复转化为视频到视频翻译，并用二进制掩码锚定干净像素、以相机位姿精度作为DPO奖励保证3D一致性。单一通用模型在四种3D表示上均提升渲染质量，可即插即用替代多个专用修复流程。",
+      "summary_en": "Rendering artifacts arise from sparse views or distant viewpoints across 3D representations. FixAnything repurposes a pretrained video generative model with minimal finetuning, using binary masks to anchor clean pixels and camera-pose-based DPO for 3D consistency. It consistently improves rendering quality across four representations, replacing specialized pipelines with one generalist prior.",
+      "highlights_zh": [
+        "通用视频先验统一修复多表示",
+        "跨4种表示质量提升且轻量微调",
+        "可适配未来更强视频模型"
+      ]
+    },
+    {
+      "id": "2608.23531",
+      "title": "Predicting Multiple Clinical Outcomes Related to Functional Recovery and Social Isolation Among Older Adults After Lower-Limb Fracture or Hip Replacement",
+      "authors": [
+        "Santosh Ray",
+        "Pratik K. Mishra",
+        "Ali Abedi",
+        "Charlene H. Chu",
+        "Amir Ahmad",
+        "Shehroz S. Khan"
+      ],
+      "abstract": "Older adults recovering after lower-limb fracture or hip replacement may experience complex recovery trajectories. Most of the time, these clinical aspects are studied in isolation, masking their joint impact on recovery. This study used the MAISON-LLF dataset, which contains multimodal sensor and clinical assessment data from 18 older adults recovering in the community after lower-limb fracture or hip replacement. Participants were monitored for up to eight weeks, corresponding to a maximum of 1,008 participant-days of sensor monitoring. Forty-six daily features were extracted from indoor motion, acceleration, step count, heart rate, out-of-home mobility, and sleep data. Five clinical outcomes were assessed every two weeks: the Social Isolation Scale, Oxford Hip Score, Oxford Knee Score, Timed Up and Go test, and 30-second Chair Stand test. We utilize an inherent relationship between multi-modal sensor data and different clinical scores and formulate it as a multi-output regression problem. We tested various machine learning and deep learning single- and multi-output regression algorithms to predict these scores simultaneously. The results showed that predicting clinical scores jointly was better than separately. The tabular DL multi-output regressor, NODE, gave a remarkable performance of MSE=3.96 and MAE=1.02 in comparison to other multi- and single-output regressors. The SHAP feature analysis further showed the importance of including multimodal sensors to provide a good estimate of patients' recovery trajectory. This work may support the simultaneous assessment of functional recovery and social engagement among community-dwelling older adults and ultimately help improve their care and quality of life.",
+      "published": "2026-08-24T17:33:17Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23531",
+      "pdf_url": "https://arxiv.org/pdf/2608.23531",
+      "summary_zh": "老年人下肢骨折或髋关节置换术后恢复轨迹复杂，现有研究多孤立评估各临床结局，忽视了其联合影响。本研究利用MAISON-LLF多模态传感器数据集，将五种临床结局的预测建模为多输出回归问题，并测试多种单/多输出机器学习与深度学习算法。结果表明联合预测优于单独预测，NODE模型表现最佳（MSE=3.96, MAE=1.02），SHAP分析证实多模态传感器特征的重要性，有助于同时评估功能恢复与社会参与。",
+      "summary_en": "Older adults after lower-limb fracture or hip replacement face complex recovery trajectories, yet clinical outcomes are typically studied in isolation. This study leverages the multimodal MAISON-LLF dataset and formulates the prediction of five clinical outcomes as a multi-output regression problem, comparing various machine learning and deep learning models. Joint prediction outperformed separate prediction, with the NODE model achieving the best performance (MSE=3.96, MAE=1.02), and SHAP analysis highlighted the value of multimodal sensor data for estimating recovery trajectories.",
+      "highlights_zh": [
+        "多输出联合预测优于单输出",
+        "NODE模型MSE=3.96, MAE=1.02",
+        "多模态传感器数据重要性验证"
+      ]
+    },
+    {
+      "id": "2608.23486",
+      "title": "GeoWAM: Visual Geometry World Action Models for Autonomous Driving",
+      "authors": [
+        "Yiren Lu",
+        "Xin Ye",
+        "Jiaming Liu",
+        "Jin Yao",
+        "Yi-chung Chen",
+        "Liam Merino",
+        "Dhruva Dixith Kurra",
+        "Min Cai",
+        "Tom Lampo",
+        "Yu Yin",
+        "Danhua Guo",
+        "Burhan Yaman"
+      ],
+      "abstract": "World action models (WAMs) have recently gained increasing attention as a framework for jointly modeling scene evolution and ego actions in autonomous driving. Most existing WAMs learn scene dynamics in pixel space by combining a video-generation backbone for future-observation prediction with an action head for ego-trajectory prediction. Pixels, however, provide only an indirect representation of these dynamics: they entangle geometry and motion with appearance, texture, and illumination, forcing the model to infer three-dimensional transformations from two-dimensional observations. We argue that geometry, represented by point clouds, offers a more natural state space for driving because it explicitly captures spatial structure and the rigid and non-rigid transformations that govern scene evolution while directly aligning with the space in which driving actions are executed. Building on this insight, we introduce \\textbf{GeoWAM}, a visual geometry world action model for autonomous driving. Rather than predicting future images, GeoWAM is pretrained to forecast future scene geometry, yielding representations that jointly encode spatial structure and temporal evolution. A geometry-conditioned action head then leverages these learned geometric dynamics to predict future ego trajectories. Extensive open-loop and closed-loop evaluations show that visual geometry world modeling yields substantially stronger driving policies than image-based alternatives, establishing future-geometry prediction as an effective pretraining objective for autonomous driving.",
+      "published": "2026-08-24T16:49:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23486",
+      "pdf_url": "https://arxiv.org/pdf/2608.23486",
+      "summary_zh": "现有世界动作模型多在像素空间预测未来观测，但像素间接且纠缠几何、运动与外观，难以直接建模驾驶中的三维变换。GeoWAM提出以点云几何作为状态空间，预训练预测未来场景几何，并用几何条件动作头预测自车轨迹。实验表明，几何世界建模显著优于基于图像的方法，验证了未来几何预测作为自动驾驶预训练目标的有效性。",
+      "summary_en": "Existing world action models predict future observations in pixel space, which indirectly entangles geometry and motion with appearance, making 3D transformation modeling difficult. GeoWAM proposes point-cloud geometry as a natural state space, pretraining to forecast future scene geometry and using a geometry-conditioned action head for ego-trajectory prediction. Extensive evaluations show that geometric world modeling substantially outperforms image-based alternatives, establishing future-geometry prediction as an effective pretraining objective for autonomous driving.",
+      "highlights_zh": [
+        "以点云几何为状态空间",
+        "开环闭环均优于图像方法",
+        "可作为自动驾驶预训练目标"
+      ]
+    },
+    {
+      "id": "2608.23478",
+      "title": "Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models",
+      "authors": [
+        "Sangoh Lee",
+        "Sangwoo Mo",
+        "Wook-Shin Han"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on $π_{0.5}$ across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.",
+      "published": "2026-08-24T16:42:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23478",
+      "pdf_url": "https://arxiv.org/pdf/2608.23478",
+      "summary_zh": "视觉-语言-动作模型（VLA）的动作解码器通常仅通过行为克隆训练，忽略了行为背后的语义目标。本文提出意图蒸馏（INDI），利用冻结的教师VLM从演示片段中提取行为级意图表示，并在部署时于中间解码层恢复该表示以组织动作预测。INDI在多个基准和真实任务上显著提升成功率，表明显式建模行为语义目标能有效增强动作解码器。",
+      "summary_en": "Vision-Language-Action (VLA) models train action decoders via behavior cloning, which overlooks the semantic objective behind demonstrated behaviors. We propose Intention Distillation (INDI), which uses a frozen teacher VLM to distill behavior-level intent representations from demonstration segments and recovers them at an intermediate decoder layer during deployment to organize action prediction. INDI substantially improves success rates across SimplerEnv, RoboCasa, and real-world tasks, demonstrating that explicitly modeling behavior objectives benefits action decoding.",
+      "highlights_zh": [
+        "蒸馏行为意图到动作解码器",
+        "SimplerEnv提升20.4个百分点",
+        "真实长时任务提升12个百分点"
+      ]
+    },
+    {
+      "id": "2608.23564",
+      "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?",
+      "authors": [
+        "Deyao Hong",
+        "Yizhe Chi",
+        "Wenyi Li",
+        "Xiaoqiu Wang",
+        "Mingju Gao",
+        "Kaisen Yang",
+        "Bingxiang He",
+        "Youjie Zheng",
+        "Calvin Xiao",
+        "Qinhuai Na"
+      ],
+      "abstract": "Modern software systems accumulate technical debt over decades of development, which makes migration expensive and largely manual. As coding agents become increasingly capable at bug fixing, can they autonomously perform such migrations? Existing benchmarks cannot answer this question because they evaluate only behavioural correctness, not whether the migration actually occurred. This leads an easy hack: agents copy the original implementation to make tests pass. We call this Blindness. To address this problem, we introduce SWE Refactor Bench, a benchmark comprising 20 whole-repository migrations, covering 4 kinds of technical debt. A three-stage evaluation protocol measures both migration completeness and behavioural correctness. (1) Migration Audit verifies that the migration occurred. (2) Behavioural Tests measure correctness with a fixed test suite. (3) Agentic Verification uses 6 independent coding agents to generate targeted tests for hidden behavioural differences. Across 520 runs from 8 frontier models and 26 model-effort configurations, only 28 of 520 runs ($5.4\\%$) pass all three stages, 13 of the 20 tasks receive no accepted solution, and the best model (claude-opus-5) scores $47.0/100$. Migration completeness and behavioural correctness are distinct abilities: a few runs preserve behaviour by skipping the migration and are stopped at Migration Audit; most attempt it and break behaviour, and are stopped at Behavioural Tests. Agents cannot deliver a perfect migration: among the 340 runs that pass Migration Audit, $58\\%$ reach $99\\%$ of the fixed checks, yet only $26\\%$ reach $100\\%$. Agent capability differs across migration categories: agents score $31.4$ on build toolchain rewrites but only $5.6$ on language rewrites. Together, these findings position SWE Refactor Bench as a rigorous testbed for developing coding agents for reliable whole-repository migrations.",
+      "published": "2026-08-24T17:59:04Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.23564",
+      "pdf_url": "https://arxiv.org/pdf/2608.23564",
+      "summary_zh": "现有基准仅测试行为正确性，导致编码代理可通过复制原实现作弊，无法评估真实仓库迁移能力。SWE Refactor Bench提出包含20个全仓库迁移任务和三级评估协议（迁移审计、行为测试、代理验证）的基准，以同时衡量迁移完整性与行为正确性。在520次运行中仅5.4%通过全部评估，最佳模型得分47.0/100，表明当前代理无法可靠完成复杂迁移，该基准为开发可靠迁移代理提供了严格测试平台。",
+      "summary_en": "Existing benchmarks only test behavioral correctness, allowing coding agents to cheat by copying original implementations, thus failing to assess real repository migration ability. SWE Refactor Bench introduces a benchmark with 20 whole-repository migration tasks and a three-stage evaluation protocol (migration audit, behavioral tests, agentic verification) to measure both migration completeness and behavioral correctness. Across 520 runs, only 5.4% pass all stages, with the best model scoring 47.0/100, demonstrating that current agents cannot reliably perform complex migrations and providing a rigorous testbed for developing reliable migration agents.",
+      "highlights_zh": [
+        "首个全仓库迁移基准",
+        "仅5.4%运行通过全部评估",
+        "语言重写任务得分仅5.6"
+      ]
+    }
+  ]
+}
