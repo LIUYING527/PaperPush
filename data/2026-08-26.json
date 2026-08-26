@@ -1,0 +1,297 @@
+{
+  "date": "2026-08-26",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.24876",
+      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+      "authors": [
+        "Zhaochen Yu",
+        "Yingcheng Wu",
+        "Zhenfei Yin",
+        "Kaiyuan Chen",
+        "Zhe Zhao",
+        "Mengdi Wang",
+        "Shuicheng Yan",
+        "Ling Yang"
+      ],
+      "abstract": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+      "published": "2026-08-25T17:56:35Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24876",
+      "pdf_url": "https://arxiv.org/pdf/2608.24876",
+      "summary_zh": "长时程任务中，历史记录增长会模糊任务状态并导致技能调用错位，递归自我改进（RSI）难以实现。Recuris提出递归经验-工作记忆架构，用工作记忆跟踪任务进度并指导从经验记忆中选择技能，同时将执行转化为结构化证据，通过固定元代理进行局部化、验证门控的记忆更新，形成有界的递归记忆进化循环。在四个长时程基准和十个模型上，Recuris在37个模型-基准组合中提升了35个，将前沿模型推至SOTA水平，最长任务上提升达+32.2点，常见长时程失败减少80%，表明递归进化记忆可作为RSI的可扩展基础。",
+      "summary_en": "Long-horizon tasks suffer from growing histories that obscure task state and misalign skill invocation, making recursive self-improvement (RSI) difficult. Recuris introduces a recursive Experiential-Working Memory architecture where working memory tracks progress and guides skill selection from experiential memory, while execution becomes structured evidence enabling a fixed Meta-Agent to perform localized, validation-gated memory updates, forming a bounded recursive evolution loop. Across four benchmarks and ten models, Recuris improves task success in 35 of 37 pairs, achieving SOTA results (e.g., +17.8 on GPT-5.6 Sol, +32.2 on longest tasks) and reducing common failures by up to 80%, positioning recursive memory evolution as a scalable foundation for RSI.",
+      "highlights_zh": [
+        "递归记忆进化架构",
+        "最长任务+32.2点，35/37提升",
+        "可扩展RSI基础，依赖验证门控"
+      ]
+    },
+    {
+      "id": "2608.24870",
+      "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Qianshan Wei",
+        "Ziqi Zhou",
+        "Zihe Huang"
+      ],
+      "abstract": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing terminal-outcome advantages under the action-token measure. We additionally organize prompt evidence by the policy event that generated it rather than learner receipt order. Across matched runs on ALFWorld at two model scales and on Math-TIR, SPO++ improves online learning efficiency over SPO. A paired ablation identifies action-token-measure normalization as the strongest tested component.",
+      "published": "2026-08-25T17:52:19Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24870",
+      "pdf_url": "https://arxiv.org/pdf/2608.24870",
+      "summary_zh": "异步智能体强化学习中的组相对策略优化因等待同提示的兄弟轨迹而成本高昂，单流策略优化虽用持久值估计去除该依赖，但其轨迹级白化与行动者实际使用的token加权目标不匹配。SPO++通过行动token度量下的终端结果优势标准化修复此错配，并按策略事件而非接收顺序组织提示证据。在ALFWorld两个模型规模和Math-TIR上的匹配运行中，SPO++优于SPO，消融实验表明行动token度量归一化是最强组件。",
+      "summary_en": "Group-relative RL waits for sibling rollouts, which is costly for long tool-use trajectories; SPO removes this via persistent value estimates but its trajectory-level centering mismatches the token-weighted actor objective. SPO++ fixes this by standardizing terminal-outcome advantages under the action-token measure and organizing prompt evidence by policy event order. Across ALFWorld at two scales and Math-TIR, SPO++ improves online learning efficiency over SPO, with action-token-measure normalization identified as the strongest component.",
+      "highlights_zh": [
+        "行动token度量优势标准化",
+        "ALFWorld和Math-TIR上优于SPO",
+        "提升异步智能体RL效率"
+      ]
+    },
+    {
+      "id": "2608.24881",
+      "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation",
+      "authors": [
+        "Hao Chen"
+      ],
+      "abstract": "Generative models are commonly ranked by Fréchet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment restriction has concrete consequences: on ImageNet, visually unrecognizable images optimized only to match the reference Inception mean and covariance obtain FID $24.7$ versus $58.6$ for held-out real images (lower is better). Moreover, FID and KID are scalar discrepancies that are unchanged when the two samples are exchanged and therefore do not encode the direction of a dispersion change: under-dispersion, as can occur in mode collapse, versus over-dispersion. We introduce \\textbf{ZID} (\\emph{Z-resolved Integrated Diagnostic}), which combines six standardized location- and dispersion-sensitive arms from a rank graph (RISE) and Gaussian kernels (GPK at two bandwidths). Rather than asking one scalar to serve incompatible roles, ZID reports three linked outputs: an index for ranking departure magnitude, a permutation $p$-value for testing distributional equality, and a signed dispersion readout for diagnosis. In controlled experiments, ZID detects a broad range of departures, and its score tracks increasing severity along the corresponding sweeps, including cases in which FID is flat or reversed. On DiT-XL/2 and SiT-XL/2 guidance sweeps, ZID detects departure from real data, and its signed readout labels the high-guidance diversity collapse as under-dispersion.",
+      "published": "2026-08-25T17:58:46Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24881",
+      "pdf_url": "https://arxiv.org/pdf/2608.24881",
+      "summary_zh": "生成模型常用FID/KID评估，但FID仅匹配前两阶矩会遗漏分布差异且无法检测方向性偏差。本文提出ZID方法，结合RISE秩图和双带宽高斯核的六个标准化指标，输出排名指数、置换检验p值和有符号离散度读数。实验表明ZID能检测FID失效的多种偏差，并正确识别高引导扩散模型中的模式坍缩为欠离散。",
+      "summary_en": "FID/KID scalar metrics miss distributional differences and direction of dispersion changes in generative evaluation. We propose ZID, combining six standardized location- and dispersion-sensitive arms from RISE rank graphs and Gaussian kernels, outputting a ranking index, permutation p-value, and signed dispersion readout. ZID detects broad departures where FID is flat or reversed, and correctly labels high-guidance diversity collapse as under-dispersion in DiT/SiT models.",
+      "highlights_zh": [
+        "多指标融合诊断生成偏差",
+        "检测FID失效的偏差类型",
+        "识别模式坍缩方向性信号"
+      ]
+    },
+    {
+      "id": "2608.24865",
+      "title": "Parameterized Complexity of $L_p$-Lipschitz Constants for Input Convex Neural Networks and $L_p$-Norm Maximization over Zonotopes",
+      "authors": [
+        "Aritra Das",
+        "Vincent Froese",
+        "Moritz Grillo",
+        "Debayan Gupta",
+        "Christoph Hertrich",
+        "Tharrshann Jayan Logarajah",
+        "Georg Loho",
+        "Mihir More",
+        "Moritz Stargalla"
+      ],
+      "abstract": "Lipschitz constants are a standard way to quantify the sensitivity of neural networks to small input perturbations, but computing them is difficult even for shallow ReLU networks. We study this problem for two-layer input-convex neural networks (ICNNs), a restricted architecture where nonnegative output weights enforce convexity. Computing the $L_p$-Lipschitz constant for these networks is equivalent to maximizing the dual norm over a zonotope. While $L_1$- and $L_\\infty$-norm maximization on zonotopes admit fixed-parameter and polynomial-time algorithms, respectively, the parameterized complexity of the remaining $L_p$-norms was open. We prove that, for every fixed $p\\in (1,\\infty)\\cap \\mathbb{Q}$, maximizing the $L_p$-norm over a zonotope in $\\mathbb{R}^d$ is W[1]-hard with respect to the dimension $d$. Moreover, our hardness results imply that brute-force enumeration algorithms are essentially optimal for this problem under the Exponential Time Hypothesis. By duality, the same hardness results hold for computing the $L_p$-Lipschitz constant of two-layer ReLU ICNNs. Our proof first establishes the result for the $L_2$-norm and then transfers the construction to arbitrary fixed $p\\in (1,\\infty)\\cap\\mathbb{Q}$ using a suitable Taylor approximation. These results resolve the corresponding questions regarding the parameterized complexity status for zonotope norm maximization and two-layer ICNN Lipschitz constants. Our paper resolves an open problem posted at COLT'25. There are several independent concurrent papers resolving the same problem. Our paper prioritizes a clear exposition of the underlying mathematics and conceptual intuitions behind the proof. Additionally, we explicitly describe our research process including the use of LLMs.",
+      "published": "2026-08-25T17:47:37Z",
+      "primary_category": "cs.CC",
+      "categories": [
+        "cs.CC",
+        "cs.DM",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24865",
+      "pdf_url": "https://arxiv.org/pdf/2608.24865",
+      "summary_zh": "本文研究两层输入凸神经网络（ICNN）的Lp-Lipschitz常数计算问题，其等价于在zonotope上最大化Lp范数。作者通过先证明L2范数情形的W[1]-hardness，再利用泰勒近似将构造推广到任意固定有理数p∈(1,∞)，从而解决了该问题的参数复杂度开放难题。结果表明该问题在维度d下是W[1]-难的，且暴力枚举算法在指数时间假设下本质最优，同时该结论对两层ReLU ICNN的Lipschitz常数计算同样成立。",
+      "summary_en": "This paper studies the parameterized complexity of computing Lp-Lipschitz constants for two-layer input-convex neural networks (ICNNs), which is equivalent to maximizing the Lp-norm over a zonotope. The authors prove W[1]-hardness with respect to dimension d for every fixed rational p∈(1,∞), first establishing the result for L2 and then transferring it to general p via a Taylor approximation argument. These hardness results imply that brute-force enumeration is essentially optimal under ETH, resolving an open problem from COLT'25 and settling the complexity status for both zonotope norm maximization and two-layer ICNN Lipschitz constants.",
+      "highlights_zh": [
+        "解决COLT'25开放问题",
+        "证明W[1]-hard并最优性",
+        "适用于两层ReLU ICNN"
+      ]
+    },
+    {
+      "id": "2608.24848",
+      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+      "authors": [
+        "Fei Tang",
+        "Huawen Shen",
+        "Zhiqiong Lu",
+        "Zhengxi Lu",
+        "Pengyuan Lyu",
+        "Chengquan Zhang",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Yongliang Shen"
+      ],
+      "abstract": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such data at scale remains an open problem. Public datasets typically contain only a few thousand trajectories drawn from a fixed and narrow set of websites, and even recent automated synthesis pipelines stay bound to predefined site lists or tutorial sources, so the number of distinct websites the agent ever sees barely grows. We present BrowserForge, a framework that generates web interaction data at scale by driving many browser sandboxes in parallel over the open web. BrowserForge couples three components: an open-web sourcing stage that exposes the agent to hundreds of thousands of real, openly reachable websites; a sandbox cluster manager that schedules hundreds of concurrent browsers with high utilization; and a Proposer-Solver dual-agent loop that turns a raw page into an executable task and then collects a verified trajectory for it. A rule-plus-model cleaning pipeline removes failed runs and rewrites the surviving reasoning into a single unified chain-of-thought style. Page structure such as the accessibility tree is used only as a synthesis-time signal; the agent we train and release acts purely from the screenshot. The resulting corpus contains 203,238 trajectories, each collected from a distinct website, larger and more diverse than prior trajectory datasets. Fine-tuning a compact multimodal model on this corpus raises its success rate on the live Online-Mind2Web from 25.66% to 33.33% and consistently improves step accuracy on the static Multimodal-Mind2Web, with the gain growing as the corpus scales. Controlled analyses further confirm that open-web sourcing and broad website coverage are key contributors to the observed improvement.",
+      "published": "2026-08-25T17:35:42Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24848",
+      "pdf_url": "https://arxiv.org/pdf/2608.24848",
+      "summary_zh": "当前网页智能体训练依赖高质量交互轨迹，但现有数据集规模小且网站覆盖窄，难以支撑大规模训练。BrowserForge通过并行浏览器沙箱在开放网页上大规模生成数据，结合开放网页采集、沙箱集群管理和Proposer-Solver双智能体循环，产出20万条来自不同网站的轨迹。训练后的模型在在线Mind2Web上成功率从25.66%提升至33.33%，验证了开放网页来源和广泛网站覆盖对性能提升的关键作用。",
+      "summary_en": "Training web agents from pixels requires large-scale interaction data, yet existing datasets are limited to a few thousand trajectories from narrow website sets. BrowserForge addresses this by driving parallel browser sandboxes over the open web, combining open-web sourcing, cluster management, and a Proposer-Solver loop to produce 203,238 verified trajectories from distinct websites. Fine-tuning a compact multimodal model on this corpus improves live Online-Mind2Web success from 25.66% to 33.33%, with controlled analyses confirming open-web sourcing and broad coverage as key contributors.",
+      "highlights_zh": [
+        "并行沙盒生成20万条开放网页轨迹",
+        "在线任务成功率提升7.67个百分点",
+        "仅依赖截图推理，降低HTML依赖"
+      ]
+    },
+    {
+      "id": "2608.24842",
+      "title": "Reading Is Not Using: Retrieval, Judgment, and the Design of AI Financial Research Workflows",
+      "authors": [
+        "Miao Liu",
+        "Zhizhe Liu"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed as AI analysts to process financial disclosures and support AI-assisted investment decisions. Yet such systems are usually evaluated by what they can retrieve, not whether retrieved information affects their judgments. We identify a retrieval-integration gap in long-context financial analysis. Holding focal-firm information fixed and varying only unrelated context from 2,000 to 128,000 tokens, we find that a risk disclosure's influence on investment judgments falls to the experimental noise floor even as direct retrieval remains accurate. The pattern replicates across model families and judgment tasks and in experiments removing real disclosures from actual 10-K filings. More capable models postpone but do not eliminate the gap. Causal memory interventions show that compressed summaries and source-text lookup jointly transmit disclosures into judgments. Workflow architecture determines whether this transmission succeeds: chunk-and-summarize pipelines evict relevant information, whereas a targeted, structured restatement adjacent to the decision restores its influence. AI analyst performance is therefore jointly determined by model capability and workflow architecture. Retrieval-based evaluations can certify systems whose investment judgments ignore information they demonstrably retrieved.",
+      "published": "2026-08-25T17:31:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24842",
+      "pdf_url": "https://arxiv.org/pdf/2608.24842",
+      "summary_zh": "大型语言模型在金融分析中的评估常基于信息检索能力，而非检索信息是否真正影响判断，存在检索-整合缺口。研究通过固定焦点信息、变化无关上下文长度，并采用因果记忆干预和不同工作流架构，系统验证了该缺口及其成因。结果表明，即使检索准确，风险披露对投资判断的影响也会随上下文增长而消失，而结构化重述工作流可恢复其影响，强调模型能力与工作流架构共同决定AI分析师表现。",
+      "summary_en": "LLM-based financial analysts are typically evaluated by retrieval accuracy, not by whether retrieved information influences their judgments, revealing a retrieval-integration gap. Holding focal information fixed while varying irrelevant context length, the study uses causal memory interventions and workflow manipulations to show that disclosure influence decays to noise even when retrieval remains accurate. More capable models postpone but do not eliminate the gap, while targeted structured restatement workflows restore influence, demonstrating that workflow architecture jointly determines AI analyst performance.",
+      "highlights_zh": [
+        "揭示检索-整合缺口",
+        "上下文增长致判断失效",
+        "结构化重述可恢复影响"
+      ]
+    },
+    {
+      "id": "2608.24885",
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+      "authors": [
+        "Sixiang Chen",
+        "Jiaming Liu",
+        "Jixian Wu",
+        "Yichen Guo",
+        "Tinghao Wang",
+        "Siyuan Qian",
+        "Hao Chen",
+        "Jiajun Cao",
+        "Jian Tang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Action-conditioned world models are increasingly used as learned simulators for policy evaluation and improvement, yet their effectiveness rests on an unverified assumption: generated futures faithfully reflect arbitrary valid actions. Existing benchmarks are typically confined to expert demonstrations, leaving off-expert action following inadequately evaluated. To address this gap, we introduce WorldEcho, which probes action following over a broader action distribution using visual integrity and SE(3) trajectory alignment. Our diagnosis shows that current world models reasonably execute expert actions but struggle with diverse off-expert trajectories, either ignoring the commanded actions or producing visually invalid rollouts. We further propose WorldSync, which strengthens action following along three complementary axes: distributional coverage, representational grounding, and intervention-effect alignment. It broadens the training distribution over action consequences, grounds intermediate video representations in action-induced robot dynamics through an Action-Forcing Expert, and aligns predicted changes under action interventions with the corresponding changes in ground-truth futures. Experiments on RoboTwin benchmarks and real-robot tasks show that WorldSync improves WorldEcho metrics and serves as a more reliable simulator for iterative policy improvement, enabling policies to achieve higher success rates.",
+      "published": "2026-08-25T17:59:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24885",
+      "pdf_url": "https://arxiv.org/pdf/2608.24885",
+      "summary_zh": "当前动作条件世界模型在策略学习中假设生成未来能忠实反映任意有效动作，但现有基准局限于专家演示，导致对离专家动作的遵循能力评估不足。本文提出WorldEcho诊断框架，通过视觉完整性和SE(3)轨迹对齐在更广动作分布上探测动作遵循，并进一步提出WorldSync方法，从分布覆盖、表征基础和干预效果对齐三个维度增强动作遵循。实验表明WorldSync在RoboTwin基准和真实机器人任务上显著提升WorldEcho指标，并作为更可靠的模拟器支持迭代策略改进，提高策略成功率。",
+      "summary_en": "Action-conditioned world models assume generated futures faithfully reflect arbitrary valid actions, but existing benchmarks are confined to expert demonstrations, leaving off-expert action following inadequately evaluated. We introduce WorldEcho to probe action following over broader action distributions via visual integrity and SE(3) trajectory alignment, and propose WorldSync which strengthens action following through distributional coverage, representational grounding, and intervention-effect alignment. Experiments on RoboTwin and real-robot tasks show WorldSync improves WorldEcho metrics and serves as a more reliable simulator for iterative policy improvement, yielding higher success rates.",
+      "highlights_zh": [
+        "提出动作遵循诊断与对齐新框架",
+        "WorldSync提升WorldEcho指标并提高策略成功率",
+        "适用于模拟器策略迭代，但真实泛化待验证"
+      ]
+    },
+    {
+      "id": "2608.24877",
+      "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
+      "authors": [
+        "Jiangning Zhang",
+        "Haojun Chen",
+        "Yong Liu"
+      ],
+      "abstract": "Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-body viewpoint aligns with the wearer's vision, audition, motion, and hand-object interaction, but must operate under tight energy, thermal, privacy, and feedback constraints. Despite rapid progress in augmented reality, egocentric vision, multimodal models, human-computer interaction, and embodied intelligence, the literature remains fragmented across devices, tasks, and benchmarks. \\textit{The key challenge is not whether a model can recognize, answer, remember, or act in isolation, but whether a complete system can sustain a reliable, temporally valid, correctable, and governable perception-state-interaction-action loop.} This survey is \\textit{the \\textbf{first} to systematically study smart glasses through such a unified framework}. We formalize first-person data flow and constrained task utility, characterize devices along eight verifiable hardware capability axes, organize the literature around seven interdependent foundational capabilities, and introduce an L0-L5 framework spanning capture, reactive perception, contextual assistance, persistent state, governed action, and embodied coupling. Across nine application scenes, we connect tasks with datasets, systems, products, stakeholders, failure consequences, and evidence gaps. We further present a nine-dimensional deployment framework, a claim-conditioned evaluation protocol, and an evidence ladder from controlled measurement to longitudinal field validation and audit. Together, these elements make smart glasses more comparable, deployable, and reproducibly evaluated, while outlining a roadmap toward trustworthy first-person intelligence.",
+      "published": "2026-08-25T17:56:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24877",
+      "pdf_url": "https://arxiv.org/pdf/2608.24877",
+      "summary_zh": "智能眼镜正从采集显示配件演变为第一人称智能平台，但面临能耗、隐私和反馈约束，且现有研究碎片化，缺乏统一框架。该综述首次提出感知-状态-交互-行动闭环的统一框架，形式化数据流与任务效用，并引入L0-L5分级和九维部署框架。该工作使智能眼镜系统更具可比性、可部署性和可复现性，为可信第一人称智能提供了路线图。",
+      "summary_en": "Smart glasses are evolving into first-person intelligence platforms but face tight energy, privacy, and feedback constraints, with fragmented literature across devices and tasks. This survey is the first to unify the field via a perception-state-interaction-action loop, formalizing data flow, hardware axes, and an L0-L5 capability framework. It provides a nine-dimensional deployment framework and evidence ladder, making systems more comparable, deployable, and reproducibly evaluated toward trustworthy first-person intelligence.",
+      "highlights_zh": [
+        "首创统一闭环框架",
+        "提出L0-L5分级体系",
+        "提供九维部署与评估协议"
+      ]
+    },
+    {
+      "id": "2608.24882",
+      "title": "Latent Action as Intention Enables Efficient Future Imagination for World Action Models",
+      "authors": [
+        "Xiang Li",
+        "Yupeng Zheng",
+        "Songen Gu",
+        "Huailiang Ma",
+        "Feng Yu",
+        "Xian Nie",
+        "Shanshuai Yuan",
+        "Yujie Zang",
+        "Weize Li",
+        "Shuai Tian",
+        "Moyang Liu",
+        "Ya-Qin Zhang",
+        "Wenchao Ding"
+      ],
+      "abstract": "World action models (WAMs) improve robot control by modeling how observations evolve, but generating future observations at test time incurs substantial latency. Fast-WAM removes this process for efficiency; however, our matched implementations show lower generalization for Fast-WAM than for future-aware alternatives, especially with scarce robot demonstrations and in out-of-distribution scenarios. To bridge this gap, we introduce **LAWA**, a WAM architecture that uses compact latent actions as an operational representation of future intentions, enabling efficient test-time future imagination without generating future observations. Specifically, a discrete tokenizer enhanced by action-free pre-training produces manipulation-centric codebook targets. LAWA jointly denoises a continuous latent state anchored to these targets with executable action chunks while omitting the future-video branch at inference. On RoboCasa, LAWA achieves state-of-the-art average success rates of 65.6% and 80.8% in the few-shot and full data settings, improving over the matched Fast-WAM baseline by 9.6 and 4.5 points, respectively. It also preserves the performance level of the matched Joint-WAM variant while requiring 42.9% lower inference latency. LAWA also demonstrates competitive zero-shot robustness on LIBERO-Plus and superior performance on real-world tasks. These results show that future imagination need not be discarded: retaining it with compact latent actions yields an effective trade-off among performance, generalization, and latency. Code and models will be released.",
+      "published": "2026-08-25T17:59:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24882",
+      "pdf_url": "https://arxiv.org/pdf/2608.24882",
+      "summary_zh": "世界动作模型（WAMs）通过预测未来观测提升机器人控制，但测试时生成未来观测带来高延迟，而移除该过程的Fast-WAM在少样本和分布外场景下泛化能力下降。本文提出LAWA架构，利用离散潜在动作作为未来意图的紧凑表征，在训练时联合去噪潜在状态与可执行动作块，推理时省略未来视频分支，实现高效未来想象。LAWA在RoboCasa上达到65.6%和80.8%的平均成功率，较Fast-WAM分别提升9.6和4.5个百分点，同时保持Joint-WAM性能且推理延迟降低42.9%，并在真实任务中表现优异。",
+      "summary_en": "World action models improve robot control by predicting future observations, but test-time future generation incurs high latency, while removing it (Fast-WAM) hurts generalization in few-shot and out-of-distribution settings. LAWA introduces compact latent actions as future intentions, jointly denoising a continuous latent state anchored to manipulation-centric codebook targets with executable action chunks, while omitting the future-video branch at inference. LAWA achieves state-of-the-art success rates of 65.6% and 80.8% on RoboCasa, improving over Fast-WAM by 9.6 and 4.5 points, matching Joint-WAM performance with 42.9% lower latency, and shows competitive zero-shot robustness and real-world performance.",
+      "highlights_zh": [
+        "潜在动作作为意图实现高效未来想象",
+        "少样本成功率65.6%，提升9.6点",
+        "延迟降低42.9%，保持性能与泛化"
+      ]
+    },
+    {
+      "id": "2608.24743",
+      "title": "$(\\text{DNN})^2$: Doubly Non-Negative Relaxations for Deep Neural Networks",
+      "authors": [
+        "Hanna Jiamei Zhang",
+        "Alan Papalia",
+        "Michael Everett",
+        "David M. Rosen"
+      ],
+      "abstract": "Existing linear program (LP) and semidefinite program (SDP) relaxations for rectified linear unit (ReLU) neural network (NN) verification yield overly-conservative safety guarantees due to significant relaxation gaps. While the completely positive program (CPP) formulation closes this gap, it is NP-hard to solve. Its cheapest tractable relaxation, the doubly non-negative program (DNN), retains critical constraints as an SDP, but one whose size exceeds the reach of interior-point methods at practical scale. While Burer-Monteiro (BM) factorization has been applied to make SDP-based verification scalable, no such result exists for the strictly tighter DNN formulation. A key obstacle is that additional non-negativity constraints in the DNN cause dual multipliers for optimality certification to be non-unique, making standard certification methods inapplicable. We propose a novel eigenvalue maximization procedure that searches the non-unique multiplier space for a valid certificate, i.e. a global optimality guarantee. Experiments demonstrate that our approach $(\\text{DNN})^2$ produces bounds consistently tighter than the standard SDP method, often matching the exact solution, and that our certification procedure confirms global optimality when a valid certificate exists. These results are a key step toward providing tight, certifiable, and computationally scalable verification guarantees needed to deploy neural network controllers and perception modules in safety-critical autonomous systems.",
+      "published": "2026-08-25T15:48:32Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.24743",
+      "pdf_url": "https://arxiv.org/pdf/2608.24743",
+      "summary_zh": "现有LP和SDP松弛在ReLU神经网络验证中因松弛间隙过大而给出过于保守的安全保证，而精确的CPP公式虽能消除间隙但NP难解。本文提出一种针对严格更紧的DNN松弛的BM分解方法，并通过新颖的特征值最大化过程在非唯一乘子空间中搜索全局最优性证书。实验表明该方法产生的界一致优于标准SDP方法且常接近精确解，为安全关键系统提供紧致、可验证且可扩展的验证保障。",
+      "summary_en": "Existing LP and SDP relaxations for ReLU neural network verification suffer from overly conservative safety guarantees due to large relaxation gaps, while the exact CPP formulation is NP-hard. We propose a Burer-Monteiro factorization for the strictly tighter doubly non-negative (DNN) relaxation, addressing the non-uniqueness of dual multipliers via a novel eigenvalue maximization procedure to certify global optimality. Experiments show our method consistently produces tighter bounds than standard SDP, often matching the exact solution, marking a key step toward scalable and certifiable verification for safety-critical systems.",
+      "highlights_zh": [
+        "首创DNN松弛的BM分解与全局最优性证书",
+        "界一致优于SDP且常匹配精确解",
+        "为安全关键系统提供可扩展紧致验证"
+      ]
+    }
+  ]
+}
