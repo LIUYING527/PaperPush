@@ -1,0 +1,318 @@
+{
+  "date": "2026-08-30",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.27454",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "authors": [
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
+        "Andrew Tomkins",
+        "Da-Cheng Juan",
+        "Tu Vu"
+      ],
+      "abstract": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
+      "published": "2026-08-27T17:59:11Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27454",
+      "pdf_url": "https://arxiv.org/pdf/2608.27454",
+      "summary_zh": "现有技能进化方法未能系统复用优化历史中的洞察，限制了技能的迭代改进。WikiSkill提出将原始执行经验、累积知识与可执行技能分离，并通过持续整合经验到持久知识库（wiki）来协同进化技能。实验表明WikiSkill在多个基准和模型上优于现有方法，且技能进化与模型规模互补，知识积累对技能进化至关重要。",
+      "summary_en": "Existing skill evolution methods fail to systematically reuse insights from optimization histories, limiting iterative skill improvement. WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, continuously consolidating experience into a persistent wiki that guides subsequent skill updates. Results show consistent outperformance over state-of-the-art methods, with skill evolution complementing model scaling and knowledge accumulation being critical for effective evolution.",
+      "highlights_zh": [
+        "分离经验-知识-技能并持续沉淀",
+        "优于SOTA方法且跨模型可迁移",
+        "知识库积累对技能进化至关重要"
+      ]
+    },
+    {
+      "id": "2608.27449",
+      "title": "SWE-Prime: Fewer Trajectories, Better Performance",
+      "authors": [
+        "Dewu Zheng",
+        "Ruizhe Ye",
+        "Yanlin Wang",
+        "Yang Ye",
+        "Hongyu Zhang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jianxing Yu",
+        "Zibin Zheng"
+      ],
+      "abstract": "To improve large language models' ability to resolve real-world software issues, prior work has focused on constructing large-scale agent trajectory datasets and performing supervised fine-tuning (SFT) on successful trajectories. However, task success does not guarantee high-quality supervision: successful trajectories may still contain ineffective, redundant, or risky steps. Directly using such trajectories for SFT can introduce noisy supervision and encourage models to imitate undesirable problem-solving behaviors. Therefore, we propose SWE-Prime, a multi-granularity, two-stage SFT data selection method that progressively filters training data at the trajectory and segment levels. Specifically, the first stage performs trajectory-level screening based on process quality, result quality, and data representativeness, selecting a high-quality and representative subset of successful trajectories. The second stage performs segment-level selection by grouping consecutive steps into semantic segments and assessing each segment based on its contribution to the final solution, learnability, and potential risks. During SFT, all segments remain in the sequence to preserve context, while only selected segments contribute to the loss computation. Experiments on SWE-Bench Pro and SWE-Bench Verified show that training on the 10% trajectory subset selected by SWE-Prime outperforms training on the full resolved dataset, yielding relative performance gains of up to 12.2% and 24.2%, respectively.",
+      "published": "2026-08-27T17:58:10Z",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27449",
+      "pdf_url": "https://arxiv.org/pdf/2608.27449",
+      "summary_zh": "现有方法直接使用成功轨迹进行监督微调，但成功轨迹可能包含低质量步骤，导致模型学习到不良行为。为此，提出SWE-Prime，一种多粒度两阶段数据选择方法，在轨迹和片段层面逐步筛选高质量训练数据。实验表明，仅用10%的精选轨迹训练即可超越全量数据，在SWE-Bench Pro和Verified上分别提升12.2%和24.2%。",
+      "summary_en": "Existing methods directly fine-tune on successful trajectories, but success does not guarantee high-quality supervision due to noisy or redundant steps. We propose SWE-Prime, a multi-granularity two-stage selection method that filters data at trajectory and segment levels, only computing loss on selected segments. Training on only 10% of selected trajectories outperforms full-data training, achieving relative gains of 12.2% and 24.2% on SWE-Bench Pro and Verified.",
+      "highlights_zh": [
+        "多粒度两阶段数据筛选",
+        "10%数据提升24.2%性能",
+        "减少噪声监督，提升训练效率"
+      ]
+    },
+    {
+      "id": "2608.27421",
+      "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+      "authors": [
+        "Kevin Zhu",
+        "Ryan Zhang",
+        "Baraa Abed",
+        "Tilendra Choudhary",
+        "Malvern Madondo",
+        "Mehak Arora",
+        "Yixuan Yang",
+        "Alasdair Gent",
+        "Aditya Nagori",
+        "Omer T. Inan",
+        "Krista L. Haines",
+        "Patrick Georgoff",
+        "Suresh M. Agarwal",
+        "Vijay Krishnamoorthy",
+        "Tetsu Ohnuma",
+        "Mihai V. Podgoreanu",
+        "Michael R. Pinsky",
+        "Gilles Clermont",
+        "Craig M. Coopersmith",
+        "Craig S. Jabaley",
+        "Rishikesan Kamaleswaran"
+      ],
+      "abstract": "Currently used sepsis severity indices rely on fixed variables and weights established decades ago, which are coarsely discretized and calibrated to a cohort that no longer reflects contemporary critical care. No alternative learned directly from patient trajectories is in routine use. We conducted a retrospective two-cohort study on a total of 29,116 and 7,691 adult patients meeting Sepsis-3 criteria from two hospital systems in Massachusetts and Georgie, respectively. We developed a sepsis index using 43 routinely charted variables over a 72-hour treatment window. Unlike previous studies, we use mortality as a treatment-level ranking signal rather than a per-state target, allowing credit to be redistributed non-uniformly across timesteps. Evaluation was done on a permanent 20% test holdout, using clinical vignettes and Spearman correlation. Uncertainty intervals were obtained by bootstrap resampling of whole patients. Under this ranking scheme, non-survivors scored 1.19-1.64 points higher than survivors on a 0-10 scale within all strata of baseline SOFA-2, with similar results stratifying within lactate, mean arterial pressure (MAP), and creatinine. Within-patient change in the index correlated with change in lactate (Spearman rho = 0.39; n = 1,854). Similar, weaker correlations were found for MAP and creatinine. On a cohort level, cross-institutional agreement measured by Spearman correlation between models trained on different sites, were 70-77% of same-site correlation. External within-patient correlations were 0.54 and 0.59 against ceilings of 0.92 and 0.90. Our index also correlated with established indices, while null controls stayed near zero. Our index demonstrated hourly prognostic information that meaningfully separates patient outcomes and is consistent with clinical expectation, indicating potential as a decision support tool complementing clinical judgement.",
+      "published": "2026-08-27T17:46:21Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27421",
+      "pdf_url": "https://arxiv.org/pdf/2608.27421",
+      "summary_zh": "现有脓毒症严重程度评分依赖固定变量和权重，且基于过时队列校准，缺乏直接从患者轨迹学习的方法。本研究利用两个医院系统共3.6万余名患者的43项常规记录变量，提出以死亡率为治疗层面排序信号而非逐状态目标的新型脓毒症指数，实现非均匀时间步信用分配。该指数在0-10尺度上显著区分存活与非存活患者，与临床指标相关且跨机构一致性良好，有望作为临床决策支持工具。",
+      "summary_en": "Existing sepsis severity scores rely on fixed variables and weights calibrated to outdated cohorts, lacking methods learned directly from patient trajectories. We developed a sepsis index using 43 routinely charted variables over a 72-hour window, employing mortality as a treatment-level ranking signal rather than a per-state target to redistribute credit non-uniformly across timesteps. The index significantly separated survivors from non-survivors, correlated with clinical indicators, and showed good cross-institutional consistency, demonstrating potential as a decision support tool.",
+      "highlights_zh": [
+        "死亡率作为排序信号创新",
+        "非幸存者评分高1.19-1.64分",
+        "跨机构相关性达70-77%"
+      ]
+    },
+    {
+      "id": "2608.27413",
+      "title": "Scaling Graph Neural Networks for Friend Recommendation: Multi-Hash User Embeddings and Temporal Neighbor Sampling",
+      "authors": [
+        "Maksim Utushkin",
+        "Andrei Ovsiannikov",
+        "Alexander D'yakonov"
+      ],
+      "abstract": "Friend recommendation is inherently graph-structured: the relevance of a potential connection depends on multi-hop social context rather than user attributes alone. However, deploying message-passing GNNs on a production-scale social graph with hundreds of millions of users and tens of billions of edges requires addressing numerous modeling and systems challenges. We present a scalable end-to-end GNN ranking system for production social graphs, focusing on two design choices that are critical in this setting: multi-hash ID embeddings and temporal neighbor sampling. Multi-hash embeddings are common for high-cardinality features, but industrial GNN systems typically either ignore trainable IDs or accept full embedding tables, exceeding 200 GB for our graph. We integrate multi-hash as the primary node representation, reducing the ID-embedding table size by more than 98 percent while preserving ranking quality. Temporal neighbor sampling is well understood in principle, but existing implementations scan full adjacency lists, which is a non-starter for users with tens of thousands of friends. We implement timestamp-sorted CSR storage with binary search, reducing the per-node temporal sampling cost from $O(deg(v) + k)$ to $O(\\log(deg(v)) + k)$. Beyond these components, we show that this combination scales and yields measurable production impact. On a graph with 194M users and 28B edges, offline ablations isolate each design choice's contribution. In an online A/B test, our system increases friend additions from recommendations by 16 percent and unique friend adders by 11.5 percent over a strong production baseline. We release our framework for distributed training and inference on large temporal graphs.",
+      "published": "2026-08-27T17:41:33Z",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.LG",
+        "cs.SI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27413",
+      "pdf_url": "https://arxiv.org/pdf/2608.27413",
+      "summary_zh": "社交图上的好友推荐需要多跳上下文，但生产级图规模带来建模和系统挑战。我们提出多哈希ID嵌入和基于时间戳排序CSR的时序邻居采样，分别将嵌入表缩减98%以上并将采样成本降至对数级。在1.94亿用户和280亿边的图上，在线A/B测试显示好友添加量提升16%，唯一添加者提升11.5%。",
+      "summary_en": "Friend recommendation on social graphs requires multi-hop context, but production-scale graphs pose modeling and system challenges. We introduce multi-hash ID embeddings and timestamp-sorted CSR with binary search for temporal neighbor sampling, reducing embedding table size by over 98% and sampling cost to logarithmic. On a graph with 194M users and 28B edges, online A/B tests show a 16% increase in friend additions and 11.5% in unique adders.",
+      "highlights_zh": [
+        "多哈希嵌入+时序采样",
+        "好友添加+16%，唯一添加者+11.5%",
+        "生产级图推荐系统，可扩展"
+      ]
+    },
+    {
+      "id": "2608.27455",
+      "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+      "authors": [
+        "Yufan Wu",
+        "Yinghui He",
+        "Zhengyi Hu",
+        "Lang Wei",
+        "Ruichen Li",
+        "Qifan Yang",
+        "Ting Zhu"
+      ],
+      "abstract": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
+      "published": "2026-08-27T17:59:30Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27455",
+      "pdf_url": "https://arxiv.org/pdf/2608.27455",
+      "summary_zh": "推理时扩展方法虽提升了大模型推理性能，但通常依赖重复生成或外部验证，效率较低。CritICL利用同族模型间失败模式的结构化规律，将弱模型失败模式转化为基于批判的上下文示例，提出动态与静态两种变体以引导强模型推理。实验表明CritICL持续优于标准上下文学习，性能媲美或超越测试时扩展方法，同时显著降低生成次数与token成本。",
+      "summary_en": "Inference-time scaling improves LLM reasoning but often relies on repeated generation or external verification, limiting efficiency. CritICL exploits structured failure modes across model scales within the same family, converting weak-model failures into critique-based in-context examples via dynamic and static variants. It consistently outperforms standard in-context learning and matches or exceeds test-time scaling methods while requiring far fewer generations and lower token cost.",
+      "highlights_zh": [
+        "利用弱模型失败模式引导强模型",
+        "性能媲美测试时扩展且成本更低",
+        "适用于高效推理，依赖同族模型"
+      ]
+    },
+    {
+      "id": "2608.27448",
+      "title": "TTPO: Test-Time Policy Optimization",
+      "authors": [
+        "Aozhe Wang",
+        "Zhengxi Lu",
+        "Jianze Wang",
+        "Shangke Lv",
+        "Ying Liu",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Hua Yang",
+        "Qianglong Chen",
+        "Yongliang Shen"
+      ],
+      "abstract": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
+      "published": "2026-08-27T17:58:10Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27448",
+      "pdf_url": "https://arxiv.org/pdf/2608.27448",
+      "summary_zh": "现有后训练方法依赖真实标签，无法在测试时训练，而用多数投票伪标签替代又易受错误投票误导。TTPO提出非对称目标，对一致rollout用OPSD蒸馏、对不一致rollout用分组RL惩罚，并通过token级选择细化，实现无标签测试时策略优化。TTPO在五个竞赛级基准上匹配有监督OPSD，将Qwen3-1.7B从38.0%提升至45.2%，且具备强跨任务泛化能力。",
+      "summary_en": "Existing post-training methods rely on ground-truth labels, preventing test-time training, while majority-vote pseudo-labels are fragile to incorrect votes. TTPO introduces an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing ones with grouped RL, refined by token-level selection, enabling label-free test-time policy optimization. TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, and shows strong cross-task generalization.",
+      "highlights_zh": [
+        "非对称目标+多数投票路由",
+        "Qwen3-1.7B TTT提升7.2%",
+        "无需标签，跨任务泛化强"
+      ]
+    },
+    {
+      "id": "2608.27456",
+      "title": "UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City",
+      "authors": [
+        "Tianjie Ju",
+        "Zheng Wu",
+        "Yueqing Sun",
+        "Yuhan Cui",
+        "Bobo Li",
+        "Shengqiong Wu",
+        "Pengzhou Cheng",
+        "Haodong Zhao",
+        "Zongru Wu",
+        "Xinbei Ma",
+        "Doris Zhang",
+        "Kunling Li",
+        "Mong-Li Lee",
+        "Wynne Hsu",
+        "Hao Fei",
+        "Qi Gu",
+        "Gongshen Liu",
+        "Zhuosheng Zhang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) can interpret a street view, but urban agency depends on whether such local evidence remains useful after the agent starts to move. In this paper, we investigate how far current MLLM agents can turn local urban perception into reliable action in a complicated real-scale city. We propose UrbanGround, the first sandbox to make this question testable in a physically constrained replica of Hong Kong built from territory-wide 3D geospatial data. UrbanGround supports closed-loop interaction from a first-person view and provides an interactive map for navigation. Agents can directly enter the 3D city and explore from a first-person view. Our analysis follows the growth of the spatial problem through three research questions. We first test whether an agent can ground a local scene well enough to answer spatial questions after active observation. Then we ask whether that grounding supports navigation as destinations become farther away and less explicit. Finally, we examine whether the resulting behavior survives changes in route availability and pedestrian motion. Contemporary MLLM agents usually show useful atomic abilities in visual recognition and short-range spatial reasoning, while orientation and pedestrian-aware movement remain unreliable. Their central failure emerges over extended exploration, where local abilities do not compose into sustained goal-directed behavior and errors accumulate without effective correction. We hope UrbanGround will support broader study of how far current MLLM agents can explore reliably in complex, open-ended urban environments.",
+      "published": "2026-08-27T17:59:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27456",
+      "pdf_url": "https://arxiv.org/pdf/2608.27456",
+      "summary_zh": "多模态大语言模型（MLLMs）在静态街景理解上表现良好，但其能否将局部感知转化为真实城市中的可靠行动仍未知。为此，我们提出UrbanGround，一个基于香港三维地理空间数据构建的物理约束沙盒，支持第一人称闭环交互和地图导航，用于系统测试智能体的空间推理与导航能力。实验发现，当前MLLM智能体在原子级视觉识别和短距离空间推理上有效，但方向感与行人感知不可靠，长期探索中局部能力无法组合成持续目标导向行为，错误累积且缺乏有效纠正。",
+      "summary_en": "Multimodal large language models (MLLMs) can interpret street views, but whether such local perception translates into reliable action in real-scale cities remains untested. We introduce UrbanGround, the first sandbox built from territory-wide 3D geospatial data of Hong Kong, enabling closed-loop first-person interaction and map-based navigation to systematically evaluate spatial grounding and goal-directed behavior. Results show that current MLLM agents excel at atomic visual recognition and short-range reasoning, yet fail in orientation and pedestrian-aware movement, with errors accumulating over extended exploration—highlighting a critical gap between local abilities and sustained urban agency.",
+      "highlights_zh": [
+        "首个真实尺度城市沙盒",
+        "局部能力无法组合成持续导航",
+        "支持闭环交互与地图导航"
+      ]
+    },
+    {
+      "id": "2608.27417",
+      "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information",
+      "authors": [
+        "Chanho Park",
+        "Daehyeon Choi",
+        "Jihyun Lee",
+        "Minhyuk Sung"
+      ],
+      "abstract": "Vision-language models (VLMs) can locate an image region referred to by a text prompt and route the corresponding visual evidence to the output, yet the internal mechanism behind this behavior is not understood. Inspired by retrieval heads in large language models, we ask whether VLMs contain an analogous mechanism for visual retrieval. We answer affirmatively by introducing Visual Retrieval Heads (VRHs), a small subset of attention heads (about 1.7-2.6%) that are causally responsible for grounding text descriptions to image regions. To find them, we recast existing head-scoring methods under a unified design space over query tokens, key aggregation, and cross-sample aggregation. We then show that scoring attention from output prediction tokens with a sum over the ground-truth referent region most reliably identifies causal heads. Across eleven VLMs and five referring-expression benchmarks, masking only the top 20 VRHs reduces grounding accuracy by up to 80 percentage points, while masking the same number of random heads has little effect. Beyond replicating the causal-sparse-universal triad established for text retrieval heads, VRHs exhibit several properties not previously reported: they generalize across visual reference tasks, remaining causal on attribute, spatial, counting, and visual-math benchmarks despite being discovered through bounding-box prediction; they are functionally specific, preserving output format while corrupting localization; and they are architecturally shared, transferring causally across VLMs that share an LLM backbone but differ in vision encoder, projector, and instruction tuning.",
+      "published": "2026-08-27T17:43:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27417",
+      "pdf_url": "https://arxiv.org/pdf/2608.27417",
+      "summary_zh": "视觉语言模型虽能将文本定位到图像区域，但其内部机制尚不明确。本文受文本检索头启发，提出视觉检索头（VRHs）概念，并通过统一设计空间下的注意力评分方法识别出少量因果注意力头。实验表明，仅遮蔽20个VRHs即可使定位准确率下降高达80个百分点，且这些头具有跨任务泛化、功能特异和架构共享等新特性。",
+      "summary_en": "Vision-language models can ground text to image regions, but the underlying mechanism is unknown. Inspired by text retrieval heads, this paper introduces Visual Retrieval Heads (VRHs), a small set of causal attention heads identified via a unified scoring design space. Masking only 20 VRHs drops grounding accuracy by up to 80 points, and these heads generalize across tasks, show functional specificity, and transfer across VLMs sharing an LLM backbone.",
+      "highlights_zh": [
+        "提出视觉检索头新概念",
+        "遮蔽20头降准确率80%",
+        "跨任务泛化且架构共享"
+      ]
+    },
+    {
+      "id": "2608.27384",
+      "title": "FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference",
+      "authors": [
+        "Zekai Li",
+        "Jiaming Tang",
+        "Zhijian Liu"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are increasingly promising for robotic manipulation, yet their real-world deployment remains bottlenecked by high inference latency and unstable asynchronous execution. This challenge is particularly pronounced in flow-matching-based VLA models, where action decoding requires multiple iterative steps conditioned on the VLM context. While efficient inference methods improve control frequency and asynchronous methods reduce execution idle time, existing approaches often fail to jointly achieve low-latency inference and accurate, temporally consistent asynchronous execution. We introduce \\textbf{FlashVLA}, a streaming action decoding framework that addresses both challenges in a unified formulation. FlashVLA maintains a streaming action buffer with multiple chunks at different noise levels and decodes them using chunk-wise causal attention. This design allows FlashVLA to produce one executable action chunk per inference step. Moreover, its chunk-wise autoregressive formulation implicitly preserves action continuity, enabling smooth asynchronous execution without extra future-state conditioning. Across extensive simulated and real-world experiments, FlashVLA substantially improves inference speed while maintaining strong task performance. It can achieve $\\geq$30\\,Hz control frequency on a single GPU with smooth asynchronous inference in real-world deployment.",
+      "published": "2026-08-27T17:19:29Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27384",
+      "pdf_url": "https://arxiv.org/pdf/2608.27384",
+      "summary_zh": "视觉-语言-动作（VLA）模型在机器人操作中受限于高推理延迟和不稳定的异步执行，尤其是基于流匹配的模型需多步迭代解码动作。FlashVLA提出流式动作解码框架，通过维护多噪声级别的动作缓冲块并采用块级因果注意力，实现每步推理生成一个可执行动作块，同时保持动作连续性。实验表明FlashVLA在单GPU上达到≥30Hz控制频率，显著提升推理速度并保持任务性能，支持平滑异步部署。",
+      "summary_en": "Vision-Language-Action (VLA) models face high inference latency and unstable asynchronous execution in real-world robotics, especially flow-matching-based variants requiring iterative action decoding. FlashVLA introduces a streaming action decoding framework with a multi-chunk noise-level buffer and chunk-wise causal attention, producing one executable action chunk per inference step while preserving action continuity. Extensive experiments show FlashVLA achieves ≥30Hz control frequency on a single GPU with smooth asynchronous inference, substantially improving speed without sacrificing task performance.",
+      "highlights_zh": [
+        "流式动作解码+块级因果注意力",
+        "单GPU≥30Hz控制频率",
+        "提升实时部署稳定性与速度"
+      ]
+    },
+    {
+      "id": "2608.27371",
+      "title": "Embodied Scene Rearrangement Planning",
+      "authors": [
+        "Canzhi Chen",
+        "Zan Wang",
+        "Siqi Zhu",
+        "Qi Wu",
+        "Yixuan Li",
+        "Wei Liang"
+      ],
+      "abstract": "This paper introduces Embodied Scene Rearrangement Planning (ESRP), a novel task requiring embodied agents to rearrange furniture in 3D scenes to match a target configuration using only egocentric observations and a top-down target layout. Unlike prior rearrangement tasks, ESRP precludes global state access and introduces mutual object occlusions, reflecting the practical constraints of real-world robotic deployment. These factors make aligning partial egocentric observations with the global target layout particularly challenging for long-horizon planning. To facilitate research, we present ESRP-Bench, a comprehensive benchmark built on OmniGibson featuring over 5,400 scene pairs and 8,200 objects. We define three multi-level metrics to evaluate rearrangement quality and provide four baselines: a hierarchical task-and-motion planning method, a vision-language-model-based method, and two learning-based approaches (IL and RL). Experimental results demonstrate that current methods struggle to complete the task efficiently, highlighting ESRP as a challenging frontier for embodied agents in scene understanding and long-horizon task planning. This work serves as a stepping stone toward deploying intelligent agents in real-world scenarios. Project page: https://pie-lab.cn/ESRP/.",
+      "published": "2026-08-27T17:08:40Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.27371",
+      "pdf_url": "https://arxiv.org/pdf/2608.27371",
+      "summary_zh": "现有场景重排任务通常假设可访问全局状态，忽视了真实机器人部署中仅依赖第一视角观测和物体相互遮挡的约束。本文提出具身场景重排规划（ESRP）任务，并构建基于OmniGibson的ESRP-Bench基准，包含5400余场景对和8200物体，同时提出分层任务与运动规划、VLM、IL和RL四种基线方法。实验表明现有方法难以高效完成该任务，凸显了ESRP在场景理解与长时程规划方面的挑战性，为真实世界智能体部署提供了研究基础。",
+      "summary_en": "Existing rearrangement tasks often assume global state access, ignoring real-world constraints like egocentric observations and mutual occlusions. This paper introduces Embodied Scene Rearrangement Planning (ESRP) with a comprehensive benchmark ESRP-Bench on OmniGibson, featuring over 5,400 scene pairs and 8,200 objects, along with four baselines including hierarchical TAMP, VLM, IL, and RL methods. Experimental results show current methods struggle to complete the task efficiently, highlighting ESRP as a challenging frontier for embodied agents in scene understanding and long-horizon planning, serving as a stepping stone toward real-world deployment.",
+      "highlights_zh": [
+        "首个仅依赖第一视角的家具重排任务",
+        "现有方法均难以高效完成ESRP任务",
+        "为真实机器人部署提供基准与挑战"
+      ]
+    }
+  ]
+}
