@@ -1,0 +1,266 @@
+{
+  "date": "2026-08-31",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.28578",
+      "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+      "authors": [
+        "Nan Wang",
+        "Mohit Yadav",
+        "Jonathan Wulff",
+        "Aidan Rosenbaum",
+        "Kezhou Chen",
+        "Yuvan Sharma",
+        "Xu Dong",
+        "Yiwei Tao"
+      ],
+      "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
+      "published": "2026-08-28T17:53:48Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28578",
+      "pdf_url": "https://arxiv.org/pdf/2608.28578",
+      "summary_zh": "腱驱动手成本低但难以在仿真中学习和控制，其欠驱动传动机制难以建模且关节耦合。本文提出Aero Hand Open，发布了包含电缆传动仿真模型、双向驱动映射和强化学习训练包的完整仿真就绪方案。策略可完全在仿真中训练并零微调部署到实体手，无需状态估计。",
+      "summary_en": "Tendon-driven hands are affordable but difficult to learn on due to underactuated transmissions that are hard to simulate and control. This paper presents Aero Hand Open, releasing a simulation-ready hand with a cable transmission model, an identified actuation map including thumb coupling, and a reinforcement learning package. Policies trained entirely in simulation deploy to the real hand with zero fine-tuning and no state estimation.",
+      "highlights_zh": [
+        "仿真就绪的腱驱动手及完整工具链",
+        "零微调仿真到实体部署，无需状态估计",
+        "开源机械设计，促进灵巧操作研究"
+      ]
+    },
+    {
+      "id": "2608.28576",
+      "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+      "authors": [
+        "Chengpiao Huang",
+        "Kaizheng Wang"
+      ],
+      "abstract": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
+      "published": "2026-08-28T17:52:33Z",
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28576",
+      "pdf_url": "https://arxiv.org/pdf/2608.28576",
+      "summary_zh": "真实数据稀缺时，合成数据虽可增强统计推断，但直接混用会引入偏差并导致不可靠的推断。我们提出一个跨相关任务总体的通用框架，通过合成观测数量与权重刻画增强过程，并学习一个“规模-权重前沿”来界定所有可保证任务级边际覆盖的配置。基于历史任务估计该前沿，我们为前沿上或以下的全部配置提供有限样本覆盖保证，在LLM增强民意调查实验中实现目标覆盖并显著缩窄置信区间。",
+      "summary_en": "When real data are scarce, synthetic data can improve statistical inference, but naive augmentation introduces bias and unreliable results. We develop a general framework for synthetic-augmented inference across related tasks, characterized by a size-weight frontier that specifies the largest synthetic sample size for each weight while maintaining target task-marginal coverage. Estimated from historical tasks, our method provides finite-sample coverage guarantees for all configurations on or below the frontier, achieving target coverage and substantially narrower confidence intervals in LLM-augmented survey experiments.",
+      "highlights_zh": [
+        "提出规模-权重前沿新概念",
+        "LLM增强调查达目标覆盖且区间窄",
+        "适用于多任务稀缺数据推断"
+      ]
+    },
+    {
+      "id": "2608.28589",
+      "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
+      "authors": [
+        "Vaibhav Mehandiratta",
+        "Saket Ramchandra"
+      ],
+      "abstract": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the graph is approximated by a neural network, while a unified graph-based loss function enforces the governing equations together with initial, boundary, and vertex transmission conditions. In particular, the formulation incorporates standard continuity and Kirchhoff-Neumann vertex conditions and Dirichlet boundary conditions into the learning process to couple the local edge-wise neural approximations into a global solution on the graph. The framework is developed for two representative classes of nonlinear models: multi-order fractional elliptic problems and time-fractional evolution equations on quantum graphs. To improve accuracy and training stability, QGPINNs integrates several graph-adapted learning strategies, including soft and hard constraint enforcement, dynamic loss balancing, Fourier feature embeddings, and a learnable singularity-capturing feature for weakly singular solutions arising in the considered problems. The framework also extends naturally to inverse problems, including the identification of the orders of fractional operators and physical parameters from noisy observational data. We validate the accuracy, computational efficiency, and physical consistency of the proposed framework through numerical experiments on benchmark graph structures and real-world networks, including the IEEE 14-bus system and an open-channel agricultural drainage network.",
+      "published": "2026-08-28T17:59:47Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.NA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28589",
+      "pdf_url": "https://arxiv.org/pdf/2608.28589",
+      "summary_zh": "量子图上的非局部微分方程数值求解面临挑战，现有方法难以处理复杂图结构和弱奇异解。本文提出QGPINNs框架，用逐边神经网络逼近解，通过统一图损失函数施加方程及初边值和顶点传输条件，并集成软硬约束、动态损失平衡、傅里叶特征和可学习奇异性捕捉策略。实验表明该框架在基准图和真实网络（IEEE 14节点系统、农业排水网络）上具有高精度、计算效率和物理一致性，并支持反问题识别。",
+      "summary_en": "Solving nonlocal differential equations on quantum graphs is challenging due to complex topologies and weakly singular solutions. We propose QGPINNs, a PyTorch-based physics-informed neural network framework that approximates solutions edge-wise and enforces governing equations, initial/boundary/vertex conditions via a unified graph loss, integrating soft/hard constraints, dynamic loss balancing, Fourier features, and a learnable singularity-capturing mechanism. Numerical experiments on benchmark and real-world networks (IEEE 14-bus, agricultural drainage) demonstrate high accuracy, efficiency, and physical consistency, with natural extension to inverse problems.",
+      "highlights_zh": [
+        "量子图非局部PDE的PINN框架",
+        "IEEE 14节点系统验证高精度",
+        "支持反问题与弱奇异解捕捉"
+      ]
+    },
+    {
+      "id": "2608.28566",
+      "title": "On two proofs of $d^2$ mixing of weighted Dikin walks",
+      "authors": [
+        "Yuansi Chen",
+        "Yunbum Kook"
+      ],
+      "abstract": "We study the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated positive-semidefinite (PSD) cones. Our first result gives a general total-variation mixing bound under strong self-concordance, $\\barν$-symmetry, and mixed-trace regularity on the local metric. The key idea is to control the Metropolis--Hastings acceptance probability on a high-probability region rather than at every point. Applying this framework to the Lee--Sidford, Lewis-weight, and John metrics yields an $\\widetilde O(d^2)$ mixing bound for sampling from polytopes, while applying it to a hybrid barrier yields an $\\widetilde O(d^4)$ mixing bound for sampling from truncated PSD cones. Our second result establishes stronger $χ^2$-divergence guarantees and pointwise acceptance control using a new fourth-order bootstrap condition. For a suitably scaled Lee--Sidford metric, this yields an $\\widetilde O(d^2)$ mixing bound in $χ^2$-divergence, improving on the previous $\\widetilde O(d^{9/4})$ bound.",
+      "published": "2026-08-28T17:43:58Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.LG",
+        "math.OC",
+        "math.PR",
+        "stat.CO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28566",
+      "pdf_url": "https://arxiv.org/pdf/2608.28566",
+      "summary_zh": "本文研究加权Dikin游走从多面体和截断PSD锥上的指数分布采样的混合时间问题。方法上提出在大概率区域控制Metropolis-Hastings接受概率的通用框架，并引入新的四阶bootstrap条件以增强χ²散度保证。结果对多面体采样获得Õ(d²)混合界，对截断PSD锥获得Õ(d⁴)界，并将χ²散度下的混合界从Õ(d^{9/4})改进至Õ(d²)。",
+      "summary_en": "This paper studies the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated PSD cones. The method introduces a general framework controlling Metropolis-Hastings acceptance probability on a high-probability region and a new fourth-order bootstrap condition for stronger χ²-divergence guarantees. Results achieve Õ(d²) mixing for polytopes, Õ(d⁴) for truncated PSD cones, and improve the χ²-divergence bound from Õ(d^{9/4}) to Õ(d²).",
+      "highlights_zh": [
+        "大概率区域接受概率控制",
+        "χ²混合界改进至Õ(d²)",
+        "适用于多面体与PSD锥采样"
+      ]
+    },
+    {
+      "id": "2608.28560",
+      "title": "A Formal Limitation on Learning Human Language From Textual Corpora",
+      "authors": [
+        "Emily Cheng",
+        "Ryan Cotterell"
+      ],
+      "abstract": "Can a listener recover what a speaker means from the form of an utterance alone? We answer this question information-theoretically, and for a listener given by any featurizer of text, including the hidden states of contemporary large language models. Modeling language use as a joint distribution over meanings, contexts, and utterances, we derive upper bounds on the probability that a decoder recovers a speaker's intended meaning from a representation of the utterance. The bounds are governed by the uncertainty that form leaves about meaning, which splits into an irreducible part and a part that only (extralinguistic) context, but never the utterance alone, can resolve. Because these quantities are intrinsic to language, no representation, however much text or supervision produced it, can surpass them; the bounds hold whether the space of meanings is discrete or continuous. Experiments on artificial languages, Mandarin zero-pronoun resolution, and color reference provide empirical evidence in support of the theory.",
+      "published": "2026-08-28T17:38:24Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28560",
+      "pdf_url": "https://arxiv.org/pdf/2608.28560",
+      "summary_zh": "该论文研究仅凭话语形式能否恢复说话者意图的问题，从信息论角度建模语言使用为意义、语境和话语的联合分布。创新在于推导出任何文本特征化器（包括大语言模型隐藏状态）解码器恢复意义概率的上界，该上界由形式对意义的不确定性决定，且不可被任何表示超越。实验在人工语言、中文零代词消解和颜色指称上验证了理论，表明仅靠文本无法完全消除意义不确定性，需依赖外部语境。",
+      "summary_en": "This paper asks whether a listener can recover speaker meaning from utterance form alone, modeling language use as a joint distribution over meanings, contexts, and utterances. The novelty is deriving information-theoretic upper bounds on decoding success for any featurizer of text, including LLM hidden states, showing these bounds are intrinsic and unsurpassable. Experiments on artificial languages, Mandarin zero-pronoun resolution, and color reference confirm that utterance alone leaves irreducible uncertainty, requiring extralinguistic context.",
+      "highlights_zh": [
+        "形式对意义不确定性上界",
+        "人工语言与真实语言验证",
+        "仅文本无法完全消解歧义"
+      ]
+    },
+    {
+      "id": "2608.28518",
+      "title": "When Robots Mishear Us: Mapping the Safety Risks of Voice-Controlled Embodied AI",
+      "authors": [
+        "Sihan Jia",
+        "Oliver Lemon"
+      ],
+      "abstract": "We investigate whether automatic speech recognition (ASR) errors in user input can lead to unsafe outputs from Embodied AI (EAI) models. We find that ASR errors can lead to harmful instructions being accepted and executed by EAI models, thereby reducing safety. We simulate ASR errors and combine them with existing safety benchmarks (SafeAgentBench and POEX) to evaluate how different errors affect embodied AI safety. We find that some of them preserve semantic structure but increase harmful ambiguity, while others weaken the model refusal behaviour and allow unsafe plans to be generated and executed. We show that in some cases automatic correction of ASR errors can reduce the risk, but this is not always effective. Overall, we show that ASR errors lead to significant safety risks for embodied AI.",
+      "published": "2026-08-28T16:55:32Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28518",
+      "pdf_url": "https://arxiv.org/pdf/2608.28518",
+      "summary_zh": "语音识别（ASR）错误可能导致具身AI（EAI）模型接受并执行有害指令，带来严重安全风险。我们通过模拟ASR错误并结合SafeAgentBench和POEX安全基准，系统评估了不同类型错误对EAI安全性的影响。研究发现部分错误保留语义结构但增加有害歧义，另一些则削弱模型拒绝行为，而自动纠错并非总能降低风险。",
+      "summary_en": "ASR errors in user input can lead embodied AI models to accept and execute harmful instructions, posing significant safety risks. We simulate ASR errors and combine them with existing safety benchmarks (SafeAgentBench and POEX) to systematically evaluate how different error types affect EAI safety. Results show some errors preserve semantic structure but increase harmful ambiguity, while others weaken refusal behavior, and automatic correction is not always effective in mitigating risks.",
+      "highlights_zh": [
+        "首次系统评估ASR错误对EAI安全影响",
+        "发现ASR错误可削弱模型拒绝有害指令",
+        "自动纠错不能完全消除安全风险"
+      ]
+    },
+    {
+      "id": "2608.28568",
+      "title": "SignRR: Retrieve and Refine Real Motion for Sign Language Production",
+      "authors": [
+        "Fidel Omar Tito Cruz",
+        "Angie Sanchez Marquina",
+        "Summy Farfan",
+        "Gissella Bejarano"
+      ],
+      "abstract": "Sign language production (SLP) aims to generate continuous signing motion from spoken language, often through gloss-to-pose generation. Prior work mainly follows two paradigms. Generative models synthesize motion from a learned prior or from noise, without reference to an observed signing instance, making rare hand configurations and signer-specific articulation difficult to preserve. Retrieval-based methods reuse real, well-articulated motion segments, but concatenating segments from different signers and co-articulation contexts can introduce rhythm and style inconsistencies across the full sequence, not only at segment boundaries. These limitations suggest a complementary solution: use retrieval to provide realistic articulation, and use learned refinement to impose the global coherence that retrieval alone lacks. We therefore propose retrieve-and-refine, a paradigm that starts from real retrieved motion and refines it into a globally coherent signing sequence rather than generating motion from scratch. Our framework, SignRR, initializes motion from a dictionary of real sign segments and refines the full sequence with a part-aware Residual VQ-VAE, where residual quantization preserves fine hand articulation and temporal length differences are handled in the latent space. Experiments on PHOENIX14T and CSL-Daily show that SignRR achieves state-of-the-art back-translation performance while maintaining competitive pose quality.",
+      "published": "2026-08-28T17:45:14Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28568",
+      "pdf_url": "https://arxiv.org/pdf/2608.28568",
+      "summary_zh": "手语生成任务中，生成式模型难以保留罕见手型和个体动作细节，而检索式方法拼接不同来源片段会导致节奏和风格不一致。为此提出SignRR框架，采用检索-精炼范式，从真实手语片段字典初始化动作，并通过部分感知的残差VQ-VAE在潜空间精炼全局序列。在PHOENIX14T和CSL-Daily上，SignRR在反向翻译指标上达到最优，同时保持有竞争力的姿态质量。",
+      "summary_en": "Sign language production faces challenges where generative models struggle to preserve rare hand configurations and signer-specific articulation, while retrieval-based methods introduce rhythm and style inconsistencies when concatenating segments from different sources. We propose SignRR, a retrieve-and-refine paradigm that initializes motion from a dictionary of real sign segments and refines the full sequence using a part-aware Residual VQ-VAE, handling temporal length differences in latent space. Experiments on PHOENIX14T and CSL-Daily show SignRR achieves state-of-the-art back-translation performance while maintaining competitive pose quality.",
+      "highlights_zh": [
+        "检索+精炼新范式",
+        "SOTA反向翻译性能",
+        "提升手语生成真实感"
+      ]
+    },
+    {
+      "id": "2608.28567",
+      "title": "GeBDA: Building Damage Assessment as Text-Based Sequence Prediction",
+      "authors": [
+        "Olivier Dietrich",
+        "Krishna Sapkota",
+        "Konrad Schindler",
+        "Genady Beryozkin"
+      ],
+      "abstract": "Conventionally, Building Damage Assessment (BDA) is tackled either with dedicated network architectures or by fine-tuning geospatial image foundation models. In this work, we ask whether a general-purpose Vision-Language Model (VLM) can localize buildings and grade their damage through autoregressive sequence generation alone. We cast BDA as predicting a variable-length set of bounding boxes, each specified by its coordinates and a damage label. Our preliminary implementation, based on the open Gemma model, achieves promising damage mapping results from only bi-temporal satellite images and a suitable text prompt.",
+      "published": "2026-08-28T17:44:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28567",
+      "pdf_url": "https://arxiv.org/pdf/2608.28567",
+      "summary_zh": "传统建筑损毁评估依赖专用网络或微调地理空间基础模型，本文探索通用视觉语言模型能否仅通过自回归序列生成完成建筑定位与损毁分级。方法将BDA转化为预测可变长度的边界框集合（坐标+损毁标签），基于开源Gemma模型实现双时相卫星图像与文本提示的端到端生成。初步实验展示了有前景的损毁制图结果，验证了通用VLM在遥感任务中的潜力，为BDA提供了新范式。",
+      "summary_en": "Traditional Building Damage Assessment (BDA) relies on dedicated architectures or fine-tuned geospatial foundation models. This work proposes casting BDA as autoregressive sequence prediction of variable-length bounding boxes with damage labels, using a general-purpose VLM (Gemma) on bi-temporal satellite images. Preliminary results show promising damage mapping, demonstrating that general VLMs can handle localization and grading without task-specific designs.",
+      "highlights_zh": [
+        "通用VLM序列生成实现BDA",
+        "初步结果损毁制图有前景",
+        "仅需双时相图像与文本提示"
+      ]
+    },
+    {
+      "id": "2608.28570",
+      "title": "ChainSplat: A Physics-Inspired Screw-Theoretic Model for Learning Deformable Linear Object Dynamics from Multi-View RGB Videos",
+      "authors": [
+        "Seungyeon Kim",
+        "Noémie Jaquier"
+      ],
+      "abstract": "Identifying the underlying dynamics and 3D geometry of deformable linear objects (DLOs), such as cables, ropes, and hoses, is essential for accurate robotic manipulation, but remains challenging due to their high-dimensional configuration spaces and diverse behaviors arising from varying material properties. Existing methods often rely on multi-stage pipelines and auxiliary depth inputs, which are prone to errors under dynamic interactions, while their high-dimensional state representations make model-based control computationally expensive. In this paper, we introduce ChainSplat, a physics-inspired framework that jointly learns the 3D geometry, appearance, kinematics, and dynamics of DLOs solely from multi-view RGB videos. ChainSplat represents a DLO as an open-chain structure of rigid links connected by revolute joints, yielding an analytic, screw-theoretic model with a compact state representation parameterized by joint configurations. By integrating this formulation with Gaussian splatting, ChainSplat jointly recovers DLO dynamics, kinematics-aware 3D geometry, and appearance, while enabling high-fidelity RGB rendering from arbitrary states. Through real-world experiments, we demonstrate that ChainSplat achieves state-of-the-art performance in dynamics predictions, 3D geometry reconstruction, and RGB rendering across dynamic interactions. ChainSplat further enables real-time state and force estimation, as well as accurate model-based trajectory optimization, highlighting its practical utility for real-world robotic manipulation of DLOs. Accompanying source code and video are available at: https://chainsplat.github.io.",
+      "published": "2026-08-28T17:46:38Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28570",
+      "pdf_url": "https://arxiv.org/pdf/2608.28570",
+      "summary_zh": "可变形线性物体（如线缆）的动力学与3D几何建模对机器人操作至关重要，但现有方法依赖多阶段流程和深度输入，且状态表示高维导致控制计算昂贵。ChainSplat提出一种物理启发的螺旋理论框架，将DLO表示为刚性连杆通过旋转关节连接的开链结构，并结合高斯泼溅，仅从多视角RGB视频联合学习其3D几何、外观、运动学和动力学。实验表明，ChainSplat在动力学预测、3D几何重建和RGB渲染上达到最先进水平，并支持实时状态/力估计和基于模型的轨迹优化，为真实机器人操作提供了实用工具。",
+      "summary_en": "Modeling the dynamics and 3D geometry of deformable linear objects (DLOs) is crucial for robotic manipulation, yet existing methods rely on multi-stage pipelines and depth inputs with high-dimensional state representations. ChainSplat introduces a physics-inspired screw-theoretic framework that represents a DLO as an open chain of rigid links connected by revolute joints, integrated with Gaussian splatting to jointly learn dynamics, geometry, and appearance from multi-view RGB videos alone. Experiments demonstrate state-of-the-art performance in dynamics prediction, 3D reconstruction, and rendering, enabling real-time state/force estimation and model-based trajectory optimization for practical robotic manipulation.",
+      "highlights_zh": [
+        "螺旋理论+高斯泼溅联合建模",
+        "动力学预测/重建/渲染SOTA",
+        "支持实时力估计与轨迹优化"
+      ]
+    },
+    {
+      "id": "2608.28491",
+      "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
+      "authors": [
+        "Yafei Zhang",
+        "Nan Wu"
+      ],
+      "abstract": "Predicting robot videos requires both precise motion reasoning and preservation of high-frequency appearance, yet monolithic pixel models entangle these objectives and often conceal their progress behind a strong last-frame baseline. We present AcrossVAM1.0, a lightweight, text-assisted video action model that factorizes future prediction into object-centric motion and dense appearance. A frozen SAM3-DLP codec decomposes four context frames into semantic particles for the robot, arm, and gripper, together with a background latent. A 0.28M-parameter spatio-temporal Transformer aligns particle identities, rolls their states forward, and is modulated by a frozen OpenCLIP instruction embedding through FiLM. A causal dual-stream decoder combines particle-rendered motion with appearance encoded exclusively from the last observed frame; a residual refiner and learned delivery mask produce five future frames without access to future appearance. On our VRS benchmark constructed from diverse real-robot trajectories, particle dynamics reduce trajectory error by 21.0\\% over persistence. Across three delivery-mask seeds, AcrossVAM1.0 improves future-frame PSNR/SSIM from 19.97/0.796 to 20.573/0.8004, while raw particle generation improves motion-region PSNR from 11.89 to 13.23. The delivered model does not yet beat persistence in LPIPS, and correct-versus- shuffled language changes trajectory error by only 2.8--3.1%. We report these limitations alongside oracle, negative-control, multi-seed, and per-robot analyses. The results show that explicit particle dynamics are a promising low-dimensional interface for robot video prediction, while robust language grounding and appearance delivery remain the principal open challenges.",
+      "published": "2026-08-28T16:19:24Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.28491",
+      "pdf_url": "https://arxiv.org/pdf/2608.28491",
+      "summary_zh": "机器人视频预测面临运动推理与高频外观保持相互纠缠的问题，且现有模型常被强基线掩盖进展。AcrossVAM1.0将预测分解为基于语义粒子的目标中心运动建模与仅依赖末帧的外观编码，通过0.28M参数的时空Transformer和因果双流解码器实现轻量级文本辅助预测。在VRS基准上粒子动力学将轨迹误差降低21.0%，未来帧PSNR/SSIM提升至20.573/0.8004，但LPIPS未超越持久性基线且语言条件作用微弱，表明显式粒子动力学是有效低维接口但外观传递与语言接地仍是挑战。",
+      "summary_en": "Robot video prediction struggles with entangled motion reasoning and high-frequency appearance preservation, often obscured by strong last-frame baselines. AcrossVAM1.0 factorizes prediction into object-centric particle dynamics via a 0.28M-parameter spatio-temporal Transformer with FiLM-modulated text embeddings, and a causal dual-stream decoder combining particle-rendered motion with last-frame appearance. On the VRS benchmark, particle dynamics reduce trajectory error by 21.0% and improve PSNR/SSIM to 20.573/0.8004, yet LPIPS lags persistence and language conditioning shows minimal effect, highlighting explicit particles as a promising low-dimensional interface with open challenges in appearance delivery and language grounding.",
+      "highlights_zh": [
+        "粒子分解+因果双流解码",
+        "轨迹误差降21.0%，PSNR达20.573",
+        "LPIPS未超基线，语言接地弱"
+      ]
+    }
+  ]
+}
