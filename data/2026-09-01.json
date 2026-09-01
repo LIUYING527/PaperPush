@@ -1,0 +1,275 @@
+{
+  "date": "2026-09-01",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2608.31167",
+      "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
+      "authors": [
+        "Weiqi Wang",
+        "Zhi Li",
+        "Yudong Lei",
+        "David Martinez",
+        "Xiaofeng Gao",
+        "Yuxin Jiang",
+        "Chenfanfu Jiang",
+        "Yingnian Wu",
+        "Demetri Terzopoulos",
+        "Ran Gong"
+      ],
+      "abstract": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-crafted and behavior drifting from what control verified.We introduce Semantically UNified (SUN) Programs, typed executables where geometric and contact relations are defined once and compiled into aligned Model Predictive Control (MPC) costs, satisfaction predicates, RL rewards, transition guards, and diagnostics. Our system, Kuafu, driven by large vision language systems, automatically synthesizes SUN Programs from language and scene semantics, screens feasibility via MPC, and retains semantics while training stage-conditioned policies. Across nine tasks, Kuafu achieves 82.03% macro-success, outperforming sparse-reward (35.67%) and Stage-BC (24.75%) baselines. At 8192-way scale, it generates 10.57x the successful trajectory time per hour of human teleoperation. With 500 trajectories per task, Kuafu data trains DP3 policies to 46.0% simulation success (vs. 22.4% for alternatives) and 34.7% on physical Franka and Kinova robots. These results establish that simulation-screened task semantics can effectively amortize control into robust policies, without demonstrations or manual dense rewards, unifying symbolic planning and data-driven execution.",
+      "published": "2026-08-31T17:59:16Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31167",
+      "pdf_url": "https://arxiv.org/pdf/2608.31167",
+      "summary_zh": "长期操作任务中，模型预测控制与学习策略之间存在语义断层，导致奖励需手工设计且行为偏离控制验证。本文提出语义统一（SUN）程序，将几何与接触关系定义为可执行类型，并编译为对齐的MPC成本、奖励、转移条件等，由大视觉语言系统自动合成。在九项任务中，Kuafu系统实现82.03%宏成功率，并显著提升数据效率与真实机器人部署性能，统一了符号规划与数据驱动执行。",
+      "summary_en": "Long-horizon manipulation suffers from a semantic gap between model-based control and learned policies, causing hand-crafted rewards and behavior drift. We introduce Semantically Unified (SUN) Programs, typed executables that define geometric and contact relations once and compile them into aligned MPC costs, rewards, and guards, synthesized automatically by large vision-language systems. Across nine tasks, Kuafu achieves 82.03% macro-success, 10.57x data efficiency, and strong sim-to-real transfer on Franka and Kinova robots, unifying symbolic planning with data-driven execution.",
+      "highlights_zh": [
+        "语义统一程序编译多目标",
+        "82.03%宏成功率领先基线",
+        "无需演示，支持真实机器人"
+      ]
+    },
+    {
+      "id": "2608.31142",
+      "title": "Auditing Anonymous AI Models: A Four-Stage Protocol for Black-Box Identity Verification",
+      "authors": [
+        "Yisen Xi"
+      ],
+      "abstract": "The 2025--2026 AI market has seen a wave of stealth releases: frontier models launched anonymously on developer platforms under codenames. For their users, identity determines data-handling terms, supply-chain risk, and capability expectations. No validated methodology exists for black-box identity verification of anonymous models: practitioner checklists lack accuracy evidence, and self-identification is untrustworthy by design. We propose a four-stage forensic audit protocol for API-served models. Stage 0 reconstructs launch-time configuration from archived platform snapshots (Internet Archive), exposing preview--production drift. Stage 1 fingerprints configuration (context, output ceiling, reasoning, modality) against the platform catalog. Stage 2 tests tokenizer identity with a cross-length differential that rejects short-prompt collisions. Stage 3 corroborates with behavioral probes. We test declaration consistency on 10 known-identity releases (7 exact, 2 precision-differences, 1 partial, 0 counter-directional), not end-to-end identification under anonymity. Identification is validated prospectively on a flagship case whose 2026-08-23 analysis pointed to the GLM-5.3 version line and whose official reveal confirmed those family and version-line inferences (deployment variant was not pre-asserted; Flash was consistent post-reveal), and on three Stage-0-only cases where the protocol produced a graded hypothesis or declined rather than guessed. A standard-library-only implementation is provided as supplementary material.",
+      "published": "2026-08-31T17:48:24Z",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31142",
+      "pdf_url": "https://arxiv.org/pdf/2608.31142",
+      "summary_zh": "2025-2026年AI市场出现大量匿名发布的模型，但缺乏有效的黑盒身份验证方法。本文提出一个四阶段取证审计协议，通过配置指纹、分词器差分测试和行为探针等手段验证API模型身份。在10个已知身份案例中验证了声明一致性，并在旗舰案例中前瞻性确认了GLM-5.3版本线推断。",
+      "summary_en": "The 2025-2026 AI market has seen a wave of anonymous model releases, yet no validated black-box identity verification methodology exists. This paper proposes a four-stage forensic audit protocol that fingerprints configuration, tests tokenizer identity via cross-length differentials, and corroborates with behavioral probes. The protocol achieved consistent declarations on 10 known-identity cases and prospectively confirmed GLM-5.3 family/version-line inferences on a flagship case.",
+      "highlights_zh": [
+        "四阶段黑盒身份审计协议",
+        "10案例声明一致性验证",
+        "前瞻性确认GLM-5.3版本线"
+      ]
+    },
+    {
+      "id": "2608.31166",
+      "title": "Constant Individual Regret in General Games",
+      "authors": [
+        "Mingyang Liu",
+        "Gabriele Farina",
+        "Asuman Ozdaglar"
+      ],
+      "abstract": "Uncoupled no-regret dynamics provide a decentralized route to equilibrium, but prior guarantees for individual regret retain a polylogarithmic dependence on the horizon. We remove this dependence for every finite $N$-player normal-form game under full-information feedback. We introduce \\emph{ECHO-OFTRL}: optimistic follow-the-regularized-leader (OFTRL) equipped with an EMA cascade for high-order optimism (ECHO), where EMA denotes exponential moving average. The algorithm is deterministic and fully uncoupled. If $m_{\\max}$ denotes the largest action-set size, then, simultaneously for every horizon $T\\geq1$, it guarantees that each of the $N$ players in the game incurs regret upper bounded by $O(\\textrm{poly}(N, \\log m_{\\max}))$. Our algorithm leverages a new form of optimism inspired by modern filter design.",
+      "published": "2026-08-31T17:59:16Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.GT"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31166",
+      "pdf_url": "https://arxiv.org/pdf/2608.31166",
+      "summary_zh": "非耦合无遗憾动态是去中心化均衡的经典途径，但现有个体遗憾界对时间跨度有对数依赖。本文提出ECHO-OFTRL算法，将EMA级联用于高阶乐观估计，灵感来自现代滤波器设计。该算法在任意有限N人博弈中实现常数个体遗憾，与时间跨度无关，仅依赖玩家数和动作集大小。",
+      "summary_en": "Uncoupled no-regret dynamics offer a decentralized route to equilibrium, but prior individual regret bounds had polylogarithmic dependence on the horizon. This paper introduces ECHO-OFTRL, which equips optimistic FTRL with an EMA cascade for high-order optimism inspired by modern filter design. The algorithm achieves constant individual regret for every finite N-player game, independent of the horizon, with bounds depending only on N and action-set sizes.",
+      "highlights_zh": [
+        "常数个体遗憾，突破对数依赖",
+        "遗憾界O(poly(N, log m_max))",
+        "确定性全解耦，适用一般博弈"
+      ]
+    },
+    {
+      "id": "2608.31157",
+      "title": "Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations",
+      "authors": [
+        "Shijun Zhang"
+      ],
+      "abstract": "Many parameter-efficient methods generate the parameters of a large neural network from a low-dimensional latent representation. Given an architecture $Φ$ with $P_Φ$ parameter slots, we write $\\boldsymbolθ_f=\\mathcal{G}(\\boldsymbolξ_f)$, where $\\mathcal{G}\\colon\\mathbb{R}^M\\to\\mathbb{R}^{P_Φ}$ is a parameter generator and $\\boldsymbolξ_f\\in\\mathbb{R}^M$ is a latent representation of the target function $f$. The architecture $Φ$ and the generator $\\mathcal{G}$ are shared across the entire target class, while each target $f$ is represented by its own latent vector $\\boldsymbolξ_f$, with $Φ_{\\mathcal{G}(\\boldsymbolξ_f)}$ approximating $f$. This framework encompasses hypernetworks, low-dimensional parameterizations, parameter-efficient adaptation, and model compression. Understanding the tradeoff between the latent dimension $M$ and the network budget $P$ is therefore fundamental to characterizing the expressive efficiency of these methods. We study this tradeoff for affine generators and fully connected ReLU architectures. More precisely, optimizing jointly over architectures $Φ$ satisfying $P_Φ\\leq P$ and affine generators $\\mathcal{G}:\\mathbb{R}^M\\to \\mathbb{R}^{P_Φ}$, we prove that the optimal worst-case uniform approximation error over the unit ball of $α$-Hölder functions on $[0,1]^d$, where $0<α\\leq1$, has the sharp order $ \\bigl(P\\min\\{M,P\\}\\bigr)^{-α/d}. $ In particular, our result shows that even a fixed-dimensional latent space suffices to achieve vanishing approximation error as the network budget increases.",
+      "published": "2026-08-31T17:55:51Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31157",
+      "pdf_url": "https://arxiv.org/pdf/2608.31157",
+      "summary_zh": "该论文研究从低维潜在表示生成大神经网络参数的参数高效方法，并分析潜在维度M与网络预算P之间的权衡。作者针对仿射生成器和全连接ReLU架构，联合优化架构与生成器，推导出α-Hölder函数类上最坏情况均匀逼近误差的精确阶。结果表明误差阶为(P min{M,P})^{-α/d}，且固定维度的潜在空间足以随网络预算增加实现逼近误差趋于零。",
+      "summary_en": "This paper studies parameter-efficient methods that generate large network parameters from low-dimensional latent representations, analyzing the tradeoff between latent dimension M and network budget P. The authors jointly optimize over fully connected ReLU architectures and affine generators, deriving the sharp worst-case uniform approximation error for α-Hölder functions. The result shows the error order is (P min{M,P})^{-α/d}, and even a fixed latent dimension suffices for vanishing error as the budget grows.",
+      "highlights_zh": [
+        "精确刻画潜在维度与网络预算权衡",
+        "误差阶(P min{M,P})^{-α/d}",
+        "固定潜在维度即可实现零误差逼近"
+      ]
+    },
+    {
+      "id": "2608.31170",
+      "title": "Context-Aware Interleaved Batching for WhisperX",
+      "authors": [
+        "Carlos Bain",
+        "Max Bain"
+      ],
+      "abstract": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whisper retains context sequentially but suffers from slow inference and hallucination loops. To achieve the best of both worlds, we propose Context-Aware Interleaved Batching. By using VAD-derived segment boundaries, our algorithm stabilizes Whisper's text conditioning, allowing us to safely maintain continuous historical context across batched audio segments. As demonstrated on long-form audio benchmarks, this approach reduces Word Error Rate (WER) and improves proper noun transcription, all while maintaining high-throughput inference speeds.",
+      "published": "2026-08-31T17:59:46Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31170",
+      "pdf_url": "https://arxiv.org/pdf/2608.31170",
+      "summary_zh": "WhisperX通过音频内批处理加速转录，但隔离音频片段，丢失了连贯标点和术语转录所需的历史上下文；标准Whisper虽保留顺序上下文但推理慢且易产生幻觉循环。我们提出上下文感知交错批处理算法，利用VAD导出的片段边界稳定Whisper的文本条件，在批处理音频片段间安全维持连续历史上下文。在长音频基准上，该方法降低了词错误率并改善专有名词转录，同时保持高吞吐推理速度。",
+      "summary_en": "WhisperX accelerates transcription via intra-audio batching but isolates segments, losing historical context for coherent punctuation and terminology; standard Whisper retains context but suffers from slow inference and hallucination loops. We propose Context-Aware Interleaved Batching, which uses VAD-derived segment boundaries to stabilize Whisper's text conditioning, enabling continuous historical context across batched segments. On long-form benchmarks, this reduces WER and improves proper noun transcription while maintaining high-throughput inference.",
+      "highlights_zh": [
+        "交错批处理保留历史上下文",
+        "WER降低且专有名词改善",
+        "保持高吞吐，适用于长音频"
+      ]
+    },
+    {
+      "id": "2608.31139",
+      "title": "Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation",
+      "authors": [
+        "Riya Ahuja",
+        "Tim Kacprowski",
+        "Roya Shiasi Sardoabi"
+      ],
+      "abstract": "BioMedRAG introduced retrieval-augmented generation with a learned chunk scorer for biomedical information extraction. However, it relies on fixed-size chunking which can fragment semantic evidence. We propose a configurable semantic chunking framework that addresses this limitation by combining entity-preserving windows, trigger-centered chunking, proposition-first extraction, tiered trigger prioritization, and hierarchical relation resolution. The framework integrates with BioMedRAG by replacing only the chunk construction stage while preserving the embedding model, learned chunk scorer, generator, and evaluation protocol. We evaluate the framework on biomedical relation extraction benchmarks (GM-CIHT, DDI, ChemProt) and adverse event classification (ADE). On GM-CIHT, the full hybrid configuration achieves 82.6% F1, improving over the fixed-size baseline (74.2% F1) by 8.4 points under our experimental setup. Cross-dataset analysis shows that semantic chunking improves extraction datasets with explicit relation cues, such as GM-CIHT and DDI, while fixed chunking remains competitive or stronger for dense biochemical extraction and binary classification settings such as ChemProt and ADE. By externalizing chunking logic into configuration files, the framework provides an interpretable and adaptable alternative to rigid fixed-size chunking for biomedical RAG pipelines.",
+      "published": "2026-08-31T17:44:54Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31139",
+      "pdf_url": "https://arxiv.org/pdf/2608.31139",
+      "summary_zh": "生物医学RAG系统（如BioMedRAG）依赖固定大小分块，可能割裂语义证据，影响信息抽取性能。本文提出可配置语义分块框架，结合实体保留窗口、触发词中心分块、命题优先提取、分层触发词优先级及层级关系解析，仅替换分块构建阶段即可集成到BioMedRAG。在GM-CIHT上F1达82.6%，较固定分块基线提升8.4个百分点，且通过外部化配置提供可解释、可适应的替代方案。",
+      "summary_en": "Biomedical RAG systems like BioMedRAG rely on fixed-size chunking, which can fragment semantic evidence and degrade extraction performance. We propose a configurable semantic chunking framework combining entity-preserving windows, trigger-centered chunking, proposition-first extraction, tiered trigger prioritization, and hierarchical relation resolution, integrating with BioMedRAG by replacing only the chunk construction stage. On GM-CIHT, the hybrid configuration achieves 82.6% F1, improving over the fixed-size baseline by 8.4 points, while cross-dataset analysis reveals semantic chunking benefits extraction tasks with explicit relation cues but fixed chunking remains competitive for dense biochemical and binary classification settings.",
+      "highlights_zh": [
+        "可配置语义分块框架",
+        "GM-CIHT F1 82.6%提升8.4点",
+        "适用于显式关系抽取，局限密集生化场景"
+      ]
+    },
+    {
+      "id": "2608.31159",
+      "title": "BRF-GS: Hyperspectral Bidirectional Reflectance Factor Modeling and Image Generation Based on 3D Gaussian Splatting",
+      "authors": [
+        "Yiling Yao",
+        "Wenjuan Zhang",
+        "Bowen Wang",
+        "Bocheng Li",
+        "Wentao Song",
+        "Bing Zhang"
+      ],
+      "abstract": "The bidirectional reflectance factor (BRF) characterizes the directional radiative properties of terrestrial surfaces. However, existing three-dimensional (3D) radiative transfer models require complex scene construction and computationally intensive radiative transfer solvers, limiting efficient generation of multi-angle hyperspectral reflectance imagery. 3D Gaussian Splatting (3DGS) offers an efficient framework for neural scene representation and novel view synthesis, but its low-order spherical harmonics representation is insufficient for complex directional reflectance, while the high dimensionality and inter-band quality differences of hyperspectral data introduce additional challenges. To address these challenges, we propose BRF-GS, a 3DGS-based framework for BRF modeling and hyperspectral reflectance image generation. BRF-GS introduces a hybrid BRDF-driven kernel to represent complex directional reflectance, selects geometry-reliable spectral bands for robust 3D scene initialization, and adopts a two-stage training strategy that decouples geometry optimization from spectral modeling. We further construct the AIR-BRF dataset, a multi-angle hyperspectral directional reflectance dataset comprising three scenes with diverse natural and artificial targets. Experiments demonstrate that BRF-GS achieves superior spatial and spectral fidelity and accurately reproduces characteristic view-dependent BRF responses. The proposed framework provides an efficient data-driven approach for BRF modeling and multi-angle hyperspectral reflectance image generation in remote sensing scenes.",
+      "published": "2026-08-31T17:56:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31159",
+      "pdf_url": "https://arxiv.org/pdf/2608.31159",
+      "summary_zh": "现有三维辐射传输模型在生成多角度高光谱反射图像时面临场景构建复杂和计算开销大的问题，而3DGS的低阶球谐函数难以表达复杂方向反射。BRF-GS提出混合BRDF驱动核、几何可靠波段选择和两阶段训练策略，实现高效BRF建模与高光谱图像生成。实验表明该方法在空间和光谱保真度上表现优异，能准确再现视角依赖的BRF响应，为遥感场景提供高效数据驱动方案。",
+      "summary_en": "Existing 3D radiative transfer models struggle with complex scene construction and high computational cost for multi-angle hyperspectral reflectance generation, while 3DGS's low-order spherical harmonics cannot capture complex directional reflectance. BRF-GS introduces a hybrid BRDF-driven kernel, geometry-reliable band selection, and a two-stage training strategy to decouple geometry and spectral modeling. Experiments show superior spatial and spectral fidelity with accurate view-dependent BRF reproduction, offering an efficient data-driven approach for remote sensing BRF modeling.",
+      "highlights_zh": [
+        "混合BRDF核+两阶段训练",
+        "空间光谱保真度优于现有方法",
+        "提供AIR-BRF多角度高光谱数据集"
+      ]
+    },
+    {
+      "id": "2608.31113",
+      "title": "BLARM: Animating 3D Objects from Video via Blending Latent Rigid Motion Primitives",
+      "authors": [
+        "Pradyumn Goyal",
+        "Yizhak Ben-Shabat",
+        "Hsueh-Ti Derek Liu",
+        "Haomiao Jiang",
+        "Snehasish Mukherjee",
+        "Kyle Spence",
+        "Mark Stauber",
+        "Evangelos Kalogerakis",
+        "Yunze Zeng"
+      ],
+      "abstract": "We introduce BLARM, a feed-forward method for video-driven 3D mesh animation. Given a monocular video and a static object mesh, BLARM predicts a temporally coherent animated mesh whose motion follows the video. Rather than relying on explicit rigs or directly regressing high-dimensional vertex motion, we represent animation using a compact set of learned, time-varying rigid motion components and time-invariant vertex-to-component skinning weights. This yields a low-dimensional deformation space without requiring skeletons, cages, skinning weights, or rig annotations. Our architecture conditions geometry-derived deformation latents on video features through factorized spatial-temporal attention, then decodes rigid transformations blended by predicted skinning weights. Trained with trajectory reconstruction, entropy regularization, and motion-aware contrastive learning, BLARM produces accurate and temporally stable animations while recovering compact, interpretable motion structure from monocular video.",
+      "published": "2026-08-31T17:21:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31113",
+      "pdf_url": "https://arxiv.org/pdf/2608.31113",
+      "summary_zh": "视频驱动3D网格动画面临显式骨骼绑定依赖和高维顶点回归的挑战。BLARM提出用紧凑的时变刚性运动基元与时间不变的蒙皮权重表示动画，通过分解时空注意力融合几何与视频特征，并采用轨迹重建、熵正则和对比学习训练。该方法无需骨架或绑定标注即可生成准确、时间稳定的动画，并恢复可解释的运动结构。",
+      "summary_en": "Video-driven 3D mesh animation typically relies on explicit rigs or high-dimensional vertex regression. BLARM introduces a compact deformation space using time-varying rigid motion primitives and time-invariant skinning weights, decoded via factorized spatial-temporal attention conditioned on video features. Trained with trajectory reconstruction, entropy regularization, and contrastive learning, it achieves accurate, temporally stable animation and recovers interpretable motion structure without rig annotations.",
+      "highlights_zh": [
+        "无绑定紧凑运动表示",
+        "时间稳定动画准确恢复",
+        "可解释运动结构提取"
+      ]
+    },
+    {
+      "id": "2608.31029",
+      "title": "Driving on Memory",
+      "authors": [
+        "Christian Löwens",
+        "Thorben Funke",
+        "Alexandru Paul Condurache"
+      ],
+      "abstract": "End-to-end autonomous driving models plan future trajectories from raw sensor input. While earlier driving benchmarks often measured deviation from the human trajectory, current benchmarks such as NAVSIM and Bench2Drive evaluate models with richer simulation-based metrics intended to capture safe and compliant driving. A high benchmark score should reflect that a model can understand the scene in front of it and act accordingly. But how much of that score specifically comes from reacting to the dynamic part of that scene? To probe this, we remove a model's camera input and replace it with memories from prior drives at the same location. The retrieved memories can provide persistent scene information, including road layout and location-conditioned regularities, but not the current traffic state. Surprisingly, memory is nearly sufficient on NAVSIM, reaching or even exceeding the performance of leading end-to-end methods without actually observing the evaluated scene. Our results suggest that a high NAVSIM score does not require a planner to react to the current traffic scene and should be treated with caution. This effect is benchmark-dependent: driving from memory causes substantially larger performance drops on Bench2Drive and RealEngine. We provide our code at https://github.com/boschresearch/MemoryDrivoR .",
+      "published": "2026-08-31T16:10:04Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31029",
+      "pdf_url": "https://arxiv.org/pdf/2608.31029",
+      "summary_zh": "端到端自动驾驶模型在NAVSIM等基准上的高分通常被认为反映了对当前交通场景的理解，但现有评估可能高估了模型对动态环境的反应能力。本文提出“记忆驾驶”方法，用同一位置的历史驾驶记忆替换相机输入，以测试模型是否真正依赖实时场景信息。结果显示，在NAVSIM上仅凭记忆即可达到甚至超越领先方法，表明该基准分数不能证明模型对当前交通的感知，而Bench2Drive等基准则表现出显著性能下降。",
+      "summary_en": "End-to-end autonomous driving models are often evaluated on simulation-based benchmarks like NAVSIM, where high scores are assumed to reflect understanding of the current scene. This paper proposes a memory-driven approach that replaces camera input with memories from prior drives at the same location, isolating whether models actually react to dynamic traffic. Surprisingly, memory alone nearly matches or exceeds state-of-the-art performance on NAVSIM, revealing that high scores there do not require reacting to the current scene, while Bench2Drive and RealEngine show expected performance drops.",
+      "highlights_zh": [
+        "用记忆替代相机输入探针",
+        "NAVSIM上记忆接近满分",
+        "基准差异显著，需谨慎解读"
+      ]
+    },
+    {
+      "id": "2608.31002",
+      "title": "DARP: A Calibrated Dual-Arm RGB-D-IR Dataset for Multi-View Robotic Perception",
+      "authors": [
+        "Manish Kansana",
+        "Mohammed Yusuf Mujawar",
+        "Sudip Mittal",
+        "Shahram Rahimi",
+        "Noorbakhsh Amiri Golilarz"
+      ],
+      "abstract": "Robotic perception from a single viewpoint is often limited by self-occlusion and incomplete surface visibility. This paper presents DARP(Dual-Arm Robotic Perception) https://doi.org/10.21227/rmv3-be47, a calibrated dual-arm RGB-D-IR dataset for object-centered robotic perception using two independently moving eye-in-hand manipulators positioned on opposite sides of a shared tabletop workspace. Each arm carries an Intel RealSense sensor that continuously records RGB, depth, and stereo infrared data while synchronized robot joint states are logged for pose recovery. Objects are placed without fixed poses or marked locations, and the acquisition procedure performs automatic localization, cross-arm confirmation, adaptive viewpoint generation, and continuous multimodal recording. DARP contains ten unique tabletop objects and preserves the original sensor recordings, robot-state logs, object-level metadata, and calibration information required to reconstruct camera trajectories in a shared metric frame. To evaluate the geometric consistency of the acquisition, we implement a deterministic multi-view fusion pipeline that converts calibrated RGB-D observations into complementary partial point clouds and measured surface meshes without using learned or generative completion methods. Evaluation on 224 held-out RGB-D keyframes comprising 1,563,466 three-dimensional query points yields a median point-to-mesh distance of 2.13~mm and an RMSE of 4.04~mm, with 96.56\\% of points within 10~mm of the measured-surface mesh. DARP is intended as a reusable resource for multi-view reconstruction, collaborative robotic perception, multimodal fusion, active perception, and future learning-based reasoning over partial object observations.",
+      "published": "2026-08-31T15:53:41Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2608.31002",
+      "pdf_url": "https://arxiv.org/pdf/2608.31002",
+      "summary_zh": "单视角机器人感知常受自遮挡和表面不完整限制。本文提出DARP数据集，利用双臂各携RealSense传感器从对侧同步采集RGB-D-IR数据及机器人状态，实现自动定位、跨臂确认和自适应视角生成。基于224个关键帧的融合评估显示中位点到网格距离2.13mm，RMSE 4.04mm，96.56%点误差小于10mm，为多视角重建和协作感知提供可复用资源。",
+      "summary_en": "Single-view robotic perception suffers from self-occlusion and incomplete surface visibility. This paper introduces DARP, a calibrated dual-arm RGB-D-IR dataset where two eye-in-hand manipulators with RealSense sensors capture synchronized multimodal data from opposite sides, featuring automatic localization, cross-arm confirmation, and adaptive viewpoint generation. Evaluation on 224 held-out keyframes yields a median point-to-mesh distance of 2.13 mm and RMSE of 4.04 mm, with 96.56% of points within 10 mm, providing a reusable resource for multi-view reconstruction and collaborative perception.",
+      "highlights_zh": [
+        "双臂对侧多模态同步采集",
+        "中位误差2.13mm，RMSE 4.04mm",
+        "支持多视角重建与协作感知"
+      ]
+    }
+  ]
+}
