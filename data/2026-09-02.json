@@ -1,0 +1,292 @@
+{
+  "date": "2026-09-02",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.01603",
+      "title": "Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation",
+      "authors": [
+        "Kefeng Duan",
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Xiwen Wang",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Jiachi Chen",
+        "Mingwei Liu",
+        "Zibin Zheng"
+      ],
+      "abstract": "Evaluating software engineering agents on realistic benchmarks is costly, since each task may require multi-step code exploration, modification, and test execution. Existing efficient evaluation methods select representative subsets to estimate full-benchmark performance, but are largely result-only: they fit historical pass/fail response matrices or static task semantics, discarding how agents solve problems. We propose PTA-IRT, a Privileged Trajectory-Aware Item Response Theory framework that fuses process and outcome signals. Historical execution trajectories supply process-level evidence beyond pass/fail, such as explored context, attempted edits, and solving paths, which PTA-IRT uses as privileged information for calibration subset selection and ability estimation. Under low calibration budgets, PTA-IRT consistently outperforms prior IRT baselines on score and ranking recovery across four SWE benchmarks. Code and data are publicly available at https://github.com/DeepSoftwareAnalytics/PTA-IRT.",
+      "published": "2026-09-01T17:59:46Z",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01603",
+      "pdf_url": "https://arxiv.org/pdf/2609.01603",
+      "summary_zh": "软件工程智能体基准测试成本高昂，现有高效评估方法仅利用结果信号，忽略了代理的解题过程。本文提出PTA-IRT框架，融合历史执行轨迹作为特权信息，用于校准子集选择和能力估计。在四个SWE基准上，低校准预算下PTA-IRT在分数和排名恢复上持续优于现有IRT基线。",
+      "summary_en": "Evaluating software engineering agents on realistic benchmarks is costly, and existing efficient evaluation methods rely only on outcome signals, discarding how agents solve problems. We propose PTA-IRT, a Privileged Trajectory-Aware Item Response Theory framework that fuses process-level trajectory evidence with pass/fail outcomes for subset selection and ability estimation. Under low calibration budgets, PTA-IRT consistently outperforms prior IRT baselines in score and ranking recovery across four SWE benchmarks.",
+      "highlights_zh": [
+        "融合轨迹与结果的IRT框架",
+        "低预算下四项基准均最优",
+        "提升评估效率，需轨迹数据"
+      ]
+    },
+    {
+      "id": "2609.01601",
+      "title": "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation",
+      "authors": [
+        "Kefeng Duan",
+        "Dewu Zheng",
+        "Yanlin Wang",
+        "Terry Yue Zhuo",
+        "Mingwei Liu",
+        "Jianxing Yu",
+        "Jiachi Chen",
+        "Ensheng Shi",
+        "Xilin Liu",
+        "Yuchi Ma",
+        "Zibin Zheng"
+      ],
+      "abstract": "The repository-level code generation task requires synthesizing code that satisfies task requirements while remaining consistent with the target repository context. Since real-world repositories often exceed the input length limits of LLMs, existing approaches commonly adopt retrieval-augmented generation (RAG) to provide repository-specific context. Despite improving repository-context retrieval, existing methods typically provide context as task-level support, without explicitly identifying the critical tokens that require fine-grained repository context during generation. During the autoregressive generation process of LLMs, errors often concentrate at a small number of decisive positions: once such tokens are generated incorrectly, subsequent code may follow an incorrect semantic path and eventually lead to functional failure. We refer to these positions as \"critical tokens\". In this paper, we propose ACToR, an adaptive critical token-aware retrieval framework for repository-level code generation. ACToR identifies critical tokens during generation and triggers targeted retrieval on demand to provide repository context at these decisive positions. In addition, we design a position-aware weighting method for dense retrievers to prioritize context that is more informative for generation. We evaluate ACToR on two representative repository-level benchmarks, RepoExec and CoderEval. Experimental results show that ACToR consistently outperforms state-of-the-art methods, achieving relative improvements of 8.4% on RepoExec and 15.4% on CoderEval. Beyond performance gains, we systematically quantify the impact of critical tokens, revealing their central role in major generation failures and highlighting the necessity of targeted retrieval strategies. We provide the code and data at https://github.com/DeepSoftwareAnalytics/ACToR.",
+      "published": "2026-09-01T17:59:39Z",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01601",
+      "pdf_url": "https://arxiv.org/pdf/2609.01601",
+      "summary_zh": "仓库级代码生成中，现有RAG方法提供任务级上下文，未识别生成过程中决定成败的关键token位置。本文提出ACToR框架，在生成时自适应识别关键token并按需触发针对性检索，同时设计位置感知加权方法优化稠密检索器。在RepoExec和CoderEval上相对最优方法分别提升8.4%和15.4%，并系统量化了关键token对生成失败的核心影响。",
+      "summary_en": "Repository-level code generation faces context length limits, and existing RAG methods provide task-level context without identifying decisive token positions during generation. This paper proposes ACToR, which adaptively detects critical tokens and triggers targeted retrieval on demand, along with a position-aware weighting method for dense retrievers. ACToR achieves relative improvements of 8.4% on RepoExec and 15.4% on CoderEval, and quantifies the central role of critical tokens in generation failures.",
+      "highlights_zh": [
+        "自适应关键token按需检索",
+        "RepoExec+8.4%，CoderEval+15.4%",
+        "提升仓库级代码生成可靠性"
+      ]
+    },
+    {
+      "id": "2609.01604",
+      "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
+      "authors": [
+        "Himil Vasava",
+        "Ming Jiang"
+      ],
+      "abstract": "LLM-based evaluators of natural language generation (NLG) quality are widely deployed as scoring tools and as automated training signals, yet the internal procedure by which they assign a rating remains poorly understood. We investigate this procedure mechanistically through an eight-attack perturbation taxonomy across the Readability and Adequacy dimensions of NLG quality, a generation pipeline that produces paired clean and corrupt summaries with controlled error intensity and explicit token-level modification maps, and a four-experiment battery of causal tracing, logit-lens vocabulary projection, and attention-head knockout applied to Themis (Llama-3-8B) and Prometheus (Mistral-7B). Both evaluators implement a structured, coherent evaluation pipeline operating in two stages: below layer 15, attention performs local error comparison and routes the result to the final input position; above it, the MLP cascade integrates the signal and writes the rating, with the decision crystallizing in the residual stream at a sharp late layer (L = 26 on Themis, L = 25 on Prometheus). Furthermore, a base-model control at the same scale (Llama-3-8B) reproduces the routing architecture and crystallization but not the stage separation, isolating the two mechanisms that fine-tuning specifically installs, suppression of below-L15 MLP contribution at the last position and a two-layer advance of the crystallization depth, indicating that fine-tuning sculpts an existing substrate rather than building the pipeline from scratch. We release the source code and data at https://github.com/himil-v/judge-mech",
+      "published": "2026-09-01T17:59:49Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01604",
+      "pdf_url": "https://arxiv.org/pdf/2609.01604",
+      "summary_zh": "LLM评估器在文本生成质量打分中广泛使用，但其内部评分机制尚不明确。本研究通过八类扰动攻击、可控错误生成流水线及因果追踪等四组实验，机制性地解析了Themis和Prometheus两类评估器的两阶段处理流程。研究发现评分决策在特定深层（L=25/26）结晶，且微调是在基础模型已有架构上抑制特定MLP贡献并提前结晶层，而非从头构建新机制。",
+      "summary_en": "LLM-based evaluators are widely used for scoring NLG quality, yet their internal rating mechanisms remain poorly understood. This work introduces an eight-attack perturbation taxonomy, a controlled generation pipeline, and a four-experiment battery (causal tracing, logit-lens, attention knockout) to mechanistically dissect Themis and Prometheus, revealing a two-stage pipeline where attention localizes errors below layer 15 and MLP cascades integrate signals above, with decisions crystallizing at sharp late layers. Fine-tuning on a base model suppresses early MLP contributions and advances crystallization depth by two layers, showing it sculpts an existing substrate rather than building from scratch.",
+      "highlights_zh": [
+        "揭示LLM评估器两阶段评分机制",
+        "决策在L=25/26层残差流结晶",
+        "微调仅改造而非重建基础架构"
+      ]
+    },
+    {
+      "id": "2609.01596",
+      "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+      "authors": [
+        "Haoyuan Deng",
+        "Haichao Liu",
+        "Wenkai Guo",
+        "Yuan Ling",
+        "Zaijia Yang",
+        "Yuanjiang Xue",
+        "Haosheng Sun",
+        "Liangzi Wang",
+        "Ziwei Wang"
+      ],
+      "abstract": "Real-world robotic assembly at sub-millimeter tolerances demands spatial precision, compliant interaction, and robustness to contact failures. We present Facet-0, a robotic foundation model that predicts and values the contact consequences of its actions. Facet-0 unifies multimodal representation learning and reinforcement learning (RL) post-training around a joint action-wrench proposal: a causal wrench history is aligned with vision-language semantics and kinematic state, and flow matching generates each action chunk together with the future wrist-wrench profile it is expected to induce. Deployment rollouts train a distributional Action-Wrench Critic to distinguish motions with similar task progress but different contact outcomes, while phase-aware rewards and contact-selective credit concentrate policy improvement on decisive interactions. To accommodate part-specific dynamics, a lightweight bounded actor reuses the frozen representation for on-robot adaptation; RL remains defined over executable Cartesian actions, while an auxiliary wrench head preserves predictive, non-commanded action-contact coupling. Trained on ManuFacet-1K, a 1,000-hour force-synchronized corpus spanning three embodiments and multiple manufacturing cells, the bounded task-adapted system reaches 82% mean success on five sub-millimeter computer-assembly tasks, compared with 15% for the strongest baseline, with 0.5 mm placement accuracy and 50 ms command latency.",
+      "published": "2026-09-01T17:58:07Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01596",
+      "pdf_url": "https://arxiv.org/pdf/2609.01596",
+      "summary_zh": "亚毫米级机器人装配任务要求高空间精度与接触鲁棒性，现有模型难以应对接触丰富的精密操作。Facet-0提出统一动作-力觉提案的机器人基础模型，通过多模态表示学习、流匹配生成动作与预期腕力剖面，并利用分布性动作-力觉评论家及相位感知奖励强化接触关键决策。在ManuFacet-1K语料上训练的模型在五类亚毫米装配任务中达到82%平均成功率，远超最强基线15%，实现0.5毫米精度与50毫秒延迟。",
+      "summary_en": "Sub-millimeter robotic assembly demands spatial precision and robustness to contact failures, which existing models struggle to handle. Facet-0 introduces a robotic foundation model built around a joint action-wrench proposal, aligning multimodal representations with causal wrench history and using flow matching plus a distributional Action-Wrench Critic to improve contact-rich decision-making. Trained on the 1,000-hour ManuFacet-1K corpus, it achieves 82% mean success across five assembly tasks versus 15% for the strongest baseline, with 0.5 mm accuracy and 50 ms latency.",
+      "highlights_zh": [
+        "统一动作-力觉提案的接触感知基础模型",
+        "五任务平均成功率82%，基线仅15%",
+        "亚毫米装配精度，但需大规模专用语料"
+      ]
+    },
+    {
+      "id": "2609.01607",
+      "title": "Uncovering Understanding-Generation Synergy in Native Unified Multimodal Models: From Representation, Task to System",
+      "authors": [
+        "Penghao Wu",
+        "Haiwen Diao",
+        "Weichen Fan",
+        "Lewei Lu",
+        "Dahua Lin",
+        "Ziwei Liu"
+      ],
+      "abstract": "While unified multimodal models (UMMs) jointly perform visual understanding and generation within a single model, functional unification does not guarantee learning synergy: the two objectives may reinforce each other, compete for capacity, or merely coexist. We investigate their relationship at the representation, task, and system levels in a controlled, structurally native setting without pretrained vision priors. At the representation level, we find that each objective provides useful signal to the other: generation enriches the visual features learned for understanding, while understanding strengthens vision--language alignment for generation. However, when both objectives are forced through the same computation path, one tends to dominate. A task-decoupled architecture that specializes conflicting visual computation while preserving semantic interaction avoids this asymmetric degradation. At the task level, through three case studies, we find positive bidirectional transfer when understanding and generation tasks rely on shared knowledge. At the system level, we show that an end-to-end UMM outperforms a matched planner--executor pipeline on complex tasks that explicitly require both image understanding and generation. Together, these results show that the value of UMMs extends beyond a unified interface: appropriate specialization, shared task knowledge, and end-to-end optimization can turn coexistence into synergy.",
+      "published": "2026-09-01T17:59:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01607",
+      "pdf_url": "https://arxiv.org/pdf/2609.01607",
+      "summary_zh": "原生统一多模态模型（UMMs）中，理解与生成两种目标在共享参数下可能相互促进、竞争或共存，其协同关系尚不明确。本文在无预训练视觉先验的受控原生设置下，从表征、任务和系统三个层面系统探究两者关系，并提出任务解耦架构与端到端优化策略。研究发现生成可丰富理解特征、理解可增强生成对齐，但共享计算路径会导致非对称主导；任务解耦与端到端训练能将共存转化为协同，超越统一接口的单一价值。",
+      "summary_en": "The relationship between visual understanding and generation in native unified multimodal models (UMMs) remains unclear, as shared parameters may yield synergy, competition, or mere coexistence. This work systematically investigates their interaction at representation, task, and system levels in a controlled setting without pretrained vision priors, proposing a task-decoupled architecture and end-to-end optimization. Results show generation enriches understanding features and understanding strengthens generation alignment, while task decoupling and end-to-end training convert coexistence into synergy, demonstrating UMMs' value beyond a unified interface.",
+      "highlights_zh": [
+        "揭示理解-生成双向促进机制",
+        "任务解耦避免非对称性能退化",
+        "端到端优于规划-执行流水线"
+      ]
+    },
+    {
+      "id": "2609.01598",
+      "title": "UI-VISA: U-Net Initialized Vascular Image Segmentation Architecture",
+      "authors": [
+        "Asees Kaur",
+        "Suzanne S. Sindi",
+        "Erica M. Rutter"
+      ],
+      "abstract": "Accurate segmentation of vascular structures in digital subtraction angiography (DSA) images remains challenging due to the thin, elongated, and branching nature of blood vessels. Pixel-wise deep learning approaches such as U-Net achieve strong general-purpose segmentation performance but often produce fragmented or discontinuous predictions in fine vascular regions, since they do not explicitly enforce structural connectivity. Region growing algorithms preserve spatial context and topological continuity, but are highly sensitive to seed point initialization and can be computationally expensive. We propose UI-VISA (U-Net Initialized Vascular Image Segmentation Architecture), a hybrid pipeline that combines the complementary strengths of both approaches. UI-VISA uses U-Net's foreground predictions as informed seed points for a CNN-guided region growing algorithm, which then iteratively refines the segmentation by enforcing local connectivity and recovering fine vessel details that U-Net alone tends to miss or over-predict. We evaluate UI-VISA against standalone U-Net and a prior region-growing-based method (VISA) using 5-fold cross-validation on 26 DSA images. UI-VISA achieves the highest mean Dice and clDice scores across folds, and a paired Wilcoxon signed-rank test shows the improvement in clDice is statistically significant ($p=0.023$), consistent with the method's design goal of preserving vascular connectivity, while the improvement in Dice does not reach significance ($p=0.104$).",
+      "published": "2026-09-01T17:58:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01598",
+      "pdf_url": "https://arxiv.org/pdf/2609.01598",
+      "summary_zh": "DSA血管图像分割因血管细长、分支多而面临挑战，像素级深度学习方法如U-Net易产生碎片化或不连续预测，而区域生长算法虽保持拓扑连续性但对种子点敏感且计算昂贵。UI-VISA提出混合架构，利用U-Net的前景预测作为种子点，结合CNN引导的区域生长算法迭代细化分割，显式增强局部连通性并恢复U-Net遗漏的细小血管细节。在26张DSA图像上的5折交叉验证中，UI-VISA取得了最高的平均Dice和clDice分数，其中clDice的改进具有统计学显著性（p=0.023），验证了其在保持血管连通性方面的设计目标。",
+      "summary_eng": "Segmenting vascular structures in DSA images is challenging due to thin, elongated vessels, where pixel-wise deep learning like U-Net often yields fragmented predictions and region growing preserves topology but is seed-sensitive and costly. UI-VISA proposes a hybrid pipeline that uses U-Net's foreground predictions as informed seeds for a CNN-guided region growing algorithm, iteratively refining segmentation by enforcing local connectivity and recovering fine vessel details. Evaluated on 26 DSA images with 5-fold cross-validation, UI-VISA achieves the highest mean Dice and clDice scores, with a statistically significant clDice improvement (p=0.023), confirming its effectiveness in preserving vascular connectivity.",
+      "highlights_zh": [
+        "混合U-Net与CNN引导区域生长",
+        "clDice显著提升(p=0.023)",
+        "适用于DSA血管分割，计算成本待优化"
+      ]
+    },
+    {
+      "id": "2609.01579",
+      "title": "SG-AMP: Scene-Graph-Guided Active Perception and Semantics-Aware Motion Planning for Pepper Plants",
+      "authors": [
+        "Rohit Menon",
+        "Shiva Rudra Lolla",
+        "Niklas Mueller-Goldingen",
+        "Gokul Chenchani",
+        "Ribana Roscher",
+        "Maren Bennewitz"
+      ],
+      "abstract": "We present SG-AMP, integrating robust depth completion with input-conditioned uncertainty, persistent panoptic mapping, plant scene-graph reasoning, and semantics-aware active view-motion planning. Beyond inspecting uncertain observed regions, the scene graph explicitly hypothesizes unobserved pepper--peduncle attachments and directs close-range sensing toward them. Candidate views are selected according to expected information gain, while class-dependent motion costs distinguish protected peppers, peduncles, and stems from conditionally traversable foliage. On pepper data, the perception network achieves $55.27\\%$ semantic mIoU, $38.67\\%$ PQ, and $40.62\\,\\mathrm{mm}$ depth RMSE, while input-conditioned uncertainty improves NYUv2 NLL from $-1.6518$ to $-1.6925$ and AUSE from $0.0102$ to $0.0087$.",
+      "published": "2026-09-01T17:44:23Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01579",
+      "pdf_url": "https://arxiv.org/pdf/2609.01579",
+      "summary_zh": "农业机器人感知与运动规划面临复杂场景下深度不完整、遮挡和语义理解不足的问题，尤其是辣椒植株中果实与果梗的附着关系难以观测。本文提出SG-AMP框架，结合深度补全与输入条件不确定性、持久全景分割、植株场景图推理以及语义感知的主动视角运动规划，利用场景图显式假设未观测的辣椒-果梗连接并引导近距离感知。在辣椒数据上，感知网络达到55.27%语义mIoU和38.67% PQ，深度RMSE为40.62mm，且输入条件不确定性显著改善NYUv2上的NLL和AUSE，验证了方法的有效性。",
+      "summary_en": "Agricultural robotics faces challenges in active perception and motion planning under complex scenes with incomplete depth and occlusions, particularly for inferring pepper-peduncle attachments. SG-AMP integrates robust depth completion with input-conditioned uncertainty, persistent panoptic mapping, plant scene-graph reasoning, and semantics-aware active view-motion planning, where the scene graph hypothesizes unobserved attachments to guide close-range sensing. Experiments show the perception network achieves 55.27% semantic mIoU, 38.67% PQ, and 40.62mm depth RMSE on pepper data, while input-conditioned uncertainty improves NYUv2 NLL from -1.6518 to -1.6925 and AUSE from 0.0102 to 0.0087, demonstrating its effectiveness.",
+      "highlights_zh": [
+        "场景图引导主动感知与规划",
+        "感知网络达55.27%语义mIoU",
+        "提升农业机器人采摘效率与安全性"
+      ]
+    },
+    {
+      "id": "2609.01518",
+      "title": "A System for Fast, Resilient, and Adaptable Loco-Manipulation Behaviors on Humanoid Robots",
+      "authors": [
+        "Duncan Calvert",
+        "Luigi Penco",
+        "Dexton Anderson",
+        "Tomasz Bialek",
+        "Arghya Chatterjee",
+        "Beomyeong Park",
+        "Robert Griffin"
+      ],
+      "abstract": "There is tremendous value in humanoid robots taking on physically demanding, hazardous, and repetitive work in spaces built for humans. However, a useful robot for these spaces must coordinate locomotion, whole-body motion, perception, contact, and operator supervision. We present a robot-local, runtime-editable behavior authoring and runtime system that addresses these challenges. We argue that behavior architecture can be a primary enabler of capability, speed, and reliability, and that runtime editability enables fast behavior creation, adaptation, extension, and combination. Our behavior architecture combines object-centric Affordance Templates, a tree structure that provides organization and logic, and runtime-editable perception through a behavior scene and primitive scene actions. Our operator interface remains continuously synchronized to the robot for runtime authoring, monitoring, and repair. Action primitives execute through a whole-body controller that supports concurrent body motions and walking. Demonstrations of our system cover six task variants on Unitree H1-2 and Alex. We execute a push door traversal in 34 seconds and sort six balls by color in 45 seconds under human disturbance. Timed authoring sessions show scratch creation of new loco-manipulation behaviors and adaptation of existing ones in hours. Comparison against the literature finds our approach to be competitive with recent learned systems.",
+      "published": "2026-09-01T16:47:00Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01518",
+      "pdf_url": "https://arxiv.org/pdf/2609.01518",
+      "summary_zh": "人形机器人在人类环境中执行复杂操作需协调运动、感知与交互，现有系统难以快速创建和调整行为。本文提出一种机器人本地、运行时可编辑的行为架构，结合以物体为中心的Affordance模板、行为场景和全身控制，支持快速创建、适应和组合操作行为。系统在Unitree H1-2和Alex上成功演示六种任务变体，穿门和分拣任务表现优异，且新行为创建仅需数小时，性能与最新学习系统相当。",
+      "summary_en": "Humanoid robots in human spaces need to coordinate locomotion, perception, and manipulation, yet existing systems struggle with fast behavior creation and adaptation. This paper presents a robot-local, runtime-editable behavior architecture combining object-centric Affordance Templates, a behavior scene, and whole-body control to enable rapid authoring, adaptation, and combination of loco-manipulation behaviors. Demonstrated on Unitree H1-2 and Alex across six task variants, the system completes a push-door traversal in 34 seconds and ball sorting in 45 seconds under disturbance, with new behaviors authored in hours, matching recent learned systems.",
+      "highlights_zh": [
+        "运行时可编辑行为架构",
+        "穿门34秒/分拣45秒",
+        "新行为数小时创建"
+      ]
+    },
+    {
+      "id": "2609.01600",
+      "title": "CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses?",
+      "authors": [
+        "Damien Sileo",
+        "Dimitri Kachler"
+      ],
+      "abstract": "Dynamic agent harnesses let language models change the software that shapes their own execution. This flexibility brings a new reasoning burden: a local plugin change can propagate through dependencies and cleanup. We introduce CordisBench, a 1,200-question benchmark of this lifecycle reasoning. It combines a controlled formal setting with programs executed against Cordis, a runtime that manages component dependencies and cleanup, and asks models to identify affected components, predict state after a specified teardown order, determine which conditions hold under all or some orders, and choose reconfigurations that succeed when executed. Across these tasks, we evaluate three efficiency-oriented models at low reasoning effort with 2, 4, 8, 16, 24, or 32 relevant interactions, using deterministic task-specific scoring. Models usually handle small systems well but grow less reliable as more interactions become relevant, especially when predicting final state and when reasoning across teardown orders. Additional inference effort recovers marked gains for some models. The cost is nontrivial: on our 16-interaction subset, GPT-5.6 Luna uses nearly 3,000 reasoning tokens per question at medium effort. For these controlled instances, that cost is avoidable: an independent finite reference semantics agrees with Cordis execution on every observation and action outcome used for scoring across all 528 executable questions.",
+      "published": "2026-09-01T17:59:13Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01600",
+      "pdf_url": "https://arxiv.org/pdf/2609.01600",
+      "summary_zh": "动态代理框架允许语言模型修改自身执行环境，但带来了组件生命周期推理的新挑战。本文提出CordisBench基准，包含1200个问题，结合形式化设置和Cordis运行时，系统评估模型在组件依赖、清理顺序和重配置方面的推理能力。实验表明模型在小规模系统上表现良好，但随交互复杂度增加可靠性下降，且高推理成本可通过有限参考语义避免。",
+      "summary_en": "Dynamic agent harnesses allow language models to modify their own execution environment, introducing new reasoning challenges about component lifecycles. This paper introduces CordisBench, a 1,200-question benchmark combining a formal setting with the Cordis runtime to evaluate models on dependency, teardown-order, and reconfiguration reasoning. Results show models handle small systems well but degrade with more interactions, and the high inference cost is avoidable via an independent finite reference semantics.",
+      "highlights_zh": [
+        "首个组件生命周期推理基准",
+        "16交互时准确率显著下降",
+        "高推理成本可被参考语义避免"
+      ]
+    },
+    {
+      "id": "2609.01597",
+      "title": "The Rise of Verbal Reinforcement Learning",
+      "authors": [
+        "Kshitij Tayal",
+        "Arun Sharma",
+        "Genta Indra Winata",
+        "Anirban Das",
+        "Sambit Sahu"
+      ],
+      "abstract": "Natural language is emerging as a primary feedback channel for improving language agents, capable of conveying intent, preferences, and causal structure in forms interpretable by both humans and modern language models. We call this paradigm Verbal Reinforcement Learning (VRL) and offer the first unified account of it. We organize the field around a single axis, \\textit{when} verbal feedback takes effect in an agent's lifecycle and \\textit{what} it modifies, yielding three pillars: (1) \\textbf{Language as Grounding Signal}, where language defines the task itself by specifying goals, states, and reward structures; (2) \\textbf{Language as Deliberative Feedback}, where natural language guides reasoning at test time without the need to update model parameters; (3) \\textbf{Language as Learning Signal}, where language-based feedback shapes model parameters through training. Within each pillar, we synthesize representative work, distinguish key subcategories of approaches, and outline the distinct role language plays in shaping agent behavior. Together, this taxonomy shows how verbal reinforcement is reshaping agent development, while also defining the challenges and opportunities for building more capable and aligned agents.",
+      "published": "2026-09-01T17:58:18Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.01597",
+      "pdf_url": "https://arxiv.org/pdf/2609.01597",
+      "summary_zh": "自然语言正成为改进语言智能体的关键反馈渠道，但该领域缺乏统一的理论框架。本文提出“语言强化学习”（VRL）范式，并依据反馈生效时机与修改对象将其划分为三大支柱：语言作为接地信号、深思反馈和学习信号。该分类法系统梳理了现有工作，揭示了VRL如何重塑智能体开发，并明确了构建更强大、更对齐智能体的挑战与机遇。",
+      "summary_en": "Natural language is emerging as a key feedback channel for improving language agents, yet the field lacks a unified framework. This paper introduces the Verbal Reinforcement Learning (VRL) paradigm and organizes it into three pillars based on when feedback takes effect and what it modifies: grounding signal, deliberative feedback, and learning signal. The taxonomy synthesizes representative work, shows how VRL is reshaping agent development, and defines challenges and opportunities for building more capable and aligned agents.",
+      "highlights_zh": [
+        "首次统一VRL范式三支柱分类",
+        "系统综述各支柱代表工作",
+        "为智能体对齐提供新研究框架"
+      ]
+    }
+  ]
+}
