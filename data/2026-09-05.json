@@ -1,0 +1,278 @@
+{
+  "date": "2026-09-05",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.04199",
+      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+      "authors": [
+        "Yuntian Deng",
+        "Pengyu Nie",
+        "Stuart Shieber"
+      ],
+      "abstract": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specification into a reusable neural function. At compile time, teacher models generate task-specific examples that are used to train a small adapter for a compact interpreter. The resulting function runs without the teachers and can be stored, versioned, and composed like ordinary software. On FuzzyBench-Hard, a subset on which the Program-as-Weights fast compiler produced no exact matches, compile by training reaches 83.6% semantic accuracy. This higher accuracy comes with a higher compile-time cost: roughly a minute rather than seconds for the fast compiler. We deploy the compiler in a public interactive service and demonstrate compiled functions in a multi-site website helper, a language-controlled 3D avatar, and a bidirectional English-Claudish translator.",
+      "published": "2026-09-03T17:59:49Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04199",
+      "pdf_url": "https://arxiv.org/pdf/2609.04199",
+      "summary_zh": "许多常见的文本函数易于用自然语言描述，但难以用规则实现，而每次调用大型远程模型会带来成本、延迟和依赖问题。本文提出“通过训练进行编译”方法，在编译时利用教师模型生成任务示例，训练一个小型适配器用于紧凑解释器，从而将自然语言规范转化为可复用的本地神经函数。在FuzzyBench-Hard基准上，该方法达到83.6%的语义准确率，高于快速编译器，但编译时间约为一分钟，并在多个实际应用中展示了其有效性。",
+      "summary_en": "Many recurring text functions are easy to describe but hard to implement with rules, while calling large remote models for every input incurs cost, latency, and provider dependency. This paper presents \"compile by training,\" which turns natural-language specifications into reusable local neural functions by having teacher models generate task-specific examples at compile time to train a small adapter for a compact interpreter. On FuzzyBench-Hard, it achieves 83.6% semantic accuracy—higher than the fast compiler—at the cost of roughly a minute of compile time, and is demonstrated in practical applications such as a website helper, a 3D avatar controller, and a bidirectional translator.",
+      "highlights_zh": [
+        "将自然语言规范编译为本地神经函数",
+        "FuzzyBench-Hard上达83.6%语义准确率",
+        "编译耗时约一分钟，适用于多场景部署"
+      ]
+    },
+    {
+      "id": "2609.04198",
+      "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+      "authors": [
+        "Haoyaun Zhu",
+        "Jie Zhang"
+      ],
+      "abstract": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two preregistered campaigns with every threshold fixed in advance; neither got past validating its instrument. Across 52,988 audited request attempts, same-window repeat rankings agreed at Spearman 0.400 against a required 0.90, and byte-identical next-day replays agreed at 0.78 against a required 0.99, each time with the execution record at ceiling. Three mechanisms explain the gap: a label-to-meaning mapping that biased readouts as strongly as the signal; candidate gaps seven orders of magnitude below the instrument's own noise floor; and byte-identical inputs returning different rankings, a noise that exact-permutation readouts compound. Neither metric substitution nor sampling repaired it on the tested grid. Preregistered follow-ups bound the problem: waiting did not help on the days sampled (0.805 versus 0.800, replicated over five further days); switching providers did not help (four providers share the floor, medians 0.74 to 0.88, predicted by none of the metadata fields they expose); self-hosting on batch-invariant kernels helped only while the server was quiet; and on constructed errors with known gaps, the readout's separation tracks error type, not size. We distill the evidence into a three-level snapshot-identity ladder, eight design rules, and a reporting checklist; a pilot at roughly 2% of the study's call volume would have exposed both unreachable gates in advance. All results concern externally measured behaviour on shared serving infrastructure. On a shared endpoint, a model name is not a frozen instrument; a preregistered evaluation must measure its instrument before freezing any gate on it.",
+      "published": "2026-09-03T17:59:43Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04198",
+      "pdf_url": "https://arxiv.org/pdf/2609.04198",
+      "summary_zh": "论文审计了共享端点上LLM评判器作为测量工具的可靠性，发现同一请求在不同时间返回的结果高度不稳定。通过两项预注册实验，在52,988次请求中验证了同窗口重复排名和次日重放的可靠性远低于预设阈值。研究揭示了标签映射偏差、噪声底限和输入相同但输出不同等机制，并提出了快照身份阶梯、设计规则和报告清单。",
+      "summary_en": "This paper audits the reliability of LLM judges as measurement instruments on shared endpoints, revealing that identical requests to the same model name yield unstable results over time. Through two preregistered campaigns with 52,988 audited requests, they found same-window repeat rankings agreed at Spearman 0.400 (required 0.90) and next-day replays at 0.78 (required 0.99). The work identifies three failure mechanisms and proposes a snapshot-identity ladder, eight design rules, and a reporting checklist, concluding that model names on shared endpoints are not frozen instruments.",
+      "highlights_zh": [
+        "共享端点LLM评判器测量不可靠",
+        "同窗口排名一致性仅0.400远低于0.90阈值",
+        "提出快照身份阶梯与八条设计规则"
+      ]
+    },
+    {
+      "id": "2609.04194",
+      "title": "Legibility is Not Interpretability: Comparing Judged and Actual Importance in Chain-Of-Thought Reasoning",
+      "authors": [
+        "Kevin Du",
+        "Alexander Hoyle",
+        "Laura Ruis",
+        "Acyr Locatelli"
+      ],
+      "abstract": "Reasoning traces from chain-of-thought models appear to offer a legible window into how a model arrives at its answer. A growing body of work treats them as such, using LLM judges to diagnose errors, evaluate faithfulness, and provide step-level supervision via process reward models and generative critics. These practices rely on the text of a reasoning step carrying information about its functional role. But does the text actually encode information about which reasoning steps matter? We operationalize the importance of a reasoning step as its advantage: the change in expected reward, e.g., producing the correct final answer, from including that step, estimated via Monte Carlo rollouts. Basing ground truth on these estimates, we evaluate whether LLM judges can identify high-advantage steps and find that sufficiently capable LLMs can outperform a prevalence baseline but fall well short of a noise ceiling. Fine-tuning a model as a step-level critic yields strong improvement for incorrect responses but remains distant from ceiling for correct responses, suggesting that step importance is only partially recoverable from the text of the reasoning trace. Our findings contribute to a growing body of chain-of-thought faithfulness work that cautions against treating the legibility of reasoning traces as interpretability, especially with implications for process reward modeling.",
+      "published": "2026-09-03T17:59:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04194",
+      "pdf_url": "https://arxiv.org/pdf/2609.04194",
+      "summary_zh": "链式思维推理轨迹看似可读，但现有研究常假设其文本能反映推理步骤的功能重要性，这一假设缺乏验证。本文通过蒙特卡洛模拟估计步骤的“优势值”作为重要性基准，系统评估了LLM裁判和微调批评模型识别高重要性步骤的能力。结果表明，即使最强模型也远未达到噪声上限，推理步骤的重要性仅能部分从文本中恢复，警示不应将可读性等同于可解释性。",
+      "summary_en": "Chain-of-thought reasoning traces are often treated as legible windows into model decision-making, yet whether step text encodes functional importance remains unverified. This paper operationalizes step importance as advantage estimated via Monte Carlo rollouts and evaluates LLM judges and fine-tuned critics against this ground truth. Results show that even capable models fall well short of a noise ceiling, indicating step importance is only partially recoverable from text and cautioning against conflating legibility with interpretability.",
+      "highlights_zh": [
+        "以优势值量化步骤重要性",
+        "LLM裁判远低于噪声上限",
+        "警示过程奖励模型依赖文本"
+      ]
+    },
+    {
+      "id": "2609.04189",
+      "title": "Robust PAC Learning of Concurrent Stochastic Games",
+      "authors": [
+        "Angel Y. He",
+        "David Parker"
+      ],
+      "abstract": "We introduce the first Probably Approximately Correct (PAC) learning framework for general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven $L^1$ confidence sets over transition kernels and solves a robust CSG to compute a social-welfare optimal $\\varepsilon$-NE, using a robust MDP-based exploration mechanism to drive joint state-action coverage. Crucially, we introduce a Nash margin characterisation that enables principled reasoning about equilibrium existence: the framework either returns an $\\varepsilon$-approximate NE whose social-welfare value is $\\varepsilon$-close to optimal, or provides a sound certificate that no exact NE exists. Under a minimum reachability condition $p_{\\mathrm{reach}}>0$ over relevant state-action pairs, the algorithm terminates after a polynomial number of trajectory samples, with sample complexity $\\widetilde{O}\\left( {R_{\\max}^2 H^4 |S|^2 |A| / (p_{\\mathrm{reach}} \\varepsilon^2)} \\right)$. Empirical results on benchmark CSGs demonstrate near-optimal performance, correct handling of equilibrium (non-)existence, and sample complexity consistent with theory.",
+      "published": "2026-09-03T17:58:57Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.GT",
+        "cs.LO",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04189",
+      "pdf_url": "https://arxiv.org/pdf/2609.04189",
+      "summary_zh": "本文针对一般和随机并发博弈（CSG）在转移不确定性下的纳什均衡（NE）存在性难题，首次引入PAC学习框架。方法上，算法维护数据驱动的L1置信集并求解鲁棒CSG，结合鲁棒MDP探索机制和纳什边际特征，可返回ε-近似NE或证明无精确NE存在。在最小可达性条件下，算法以多项式样本复杂度终止，实验验证了其近最优性能与理论一致的样本效率。",
+      "summary_en": "This paper addresses the challenge of Nash equilibrium existence in general-sum concurrent stochastic games (CSGs) with transition uncertainty by introducing the first PAC learning framework. The method maintains data-driven L1 confidence sets, solves a robust CSG, and employs a robust MDP exploration mechanism with a novel Nash margin characterization, either returning an ε-approximate NE or certifying non-existence. Under a minimum reachability condition, it achieves polynomial sample complexity, with experiments demonstrating near-optimal performance and theory-consistent efficiency.",
+      "highlights_zh": [
+        "首创CSG的PAC学习框架",
+        "样本复杂度与理论一致",
+        "可证明NE不存在性"
+      ]
+    },
+    {
+      "id": "2609.04180",
+      "title": "Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary Views",
+      "authors": [
+        "Joseph Lee",
+        "Yidi Huang",
+        "Dokyoon Kim",
+        "Shu Yang",
+        "Li Shen"
+      ],
+      "abstract": "Gaps remain in our understanding of how large language models (LLMs) acquire knowledge during pre-training. We posit that auxiliary views, reformulations of knowledge, are causally helpful for learning. We design controlled experiments to isolate this. First, we confirm that repetition is necessary for acquisition and clarify that paraphrasing helps only at smaller batch sizes. Second, holding the token budget fixed, allocating tokens from document repetition to auxiliary views improves learning, counterintuitively, even for factual recall. Third, the effectiveness of auxiliary views is not contingent on the strength of the teacher model that generates them. Fourth, we identify forms of knowledge, contextual and foundational, that aid learning in the presence of prior knowledge gaps. Finally, we examine how these effects manifest mechanistically via layer-wise biases and compression. Together, our findings suggest that auxiliary representations of knowledge, which arise naturally in large pre-training corpora, are a key factor in the success of pre-training and offer a plausible explanation for why data diversity matters.",
+      "published": "2026-09-03T17:57:02Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04180",
+      "pdf_url": "https://arxiv.org/pdf/2609.04180",
+      "summary_zh": "大型语言模型预训练期间的知识获取机制尚不明确，现有研究缺乏对数据形式如何影响学习的因果分析。本文通过控制实验，系统验证了辅助视图（知识的重述形式）在固定token预算下比单纯重复文档更能提升学习效果，且不依赖生成教师模型的强度。结果表明辅助视图是预训练成功的关键因素，为数据多样性为何重要提供了机制性解释，并揭示了其通过层间偏置和压缩发挥作用的机理。",
+      "summary_en": "How LLMs acquire knowledge during pre-training remains poorly understood, with limited causal evidence on data format effects. This paper designs controlled experiments isolating auxiliary views (reformulations of knowledge), showing they improve learning beyond document repetition under fixed token budgets, independent of teacher model strength. Results establish auxiliary views as a key driver of pre-training success, offering mechanistic insights via layer-wise biases and compression, and explaining why data diversity matters.",
+      "highlights_zh": [
+        "辅助视图优于重复，提升知识获取",
+        "固定token下，辅助视图提升事实回忆",
+        "不依赖教师模型强度，具通用性"
+      ]
+    },
+    {
+      "id": "2609.04203",
+      "title": "Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision",
+      "authors": [
+        "Shravan Venkatraman",
+        "Wenshuai Zhao",
+        "Mohammad Hassan Vali",
+        "Arno Solin"
+      ],
+      "abstract": "We introduce S$^3$T (Self-Supervised Self-Distillation over Time), which, to the best of our knowledge, is the first fully self-contained framework for continuous video state tracking. Our method treats temporal sampling density as privileged information, based on the hypothesis that a denser view of the same clip recovers the running state more accurately. This view serves as the teacher, while a sparse-view student with the same weights learns to match its next-token distribution. The model generates its own target, so training requires no labels, separate teacher, or reward signal, and adds no inference cost. On LLaVA-OneVision-2-8B, S$^3$T improves VSTAT accuracy by $+1.74$ as a single model, $+2.38$ with souping, and $+2.70$ with additional vision-encoder adaptation, while prior self-evolving methods leave state tracking largely unchanged. The capability learned from unlabeled synthetic clips transfers to real videos, improving performance by $+7.95$ on VSTAT-YouTube state-tracking questions and $+4.50$ on MVBench Action Count.",
+      "published": "2026-09-03T17:59:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04203",
+      "pdf_url": "https://arxiv.org/pdf/2609.04203",
+      "summary_zh": "连续视频状态跟踪缺乏无监督训练方法，现有自进化方法难以提升状态跟踪能力。本文提出S3T，将时间采样密度作为特权信息，用密集视图作为教师、稀疏视图作为学生进行自蒸馏，无需标签或额外教师。S3T在VSTAT上提升+1.74，且从合成视频学到的能力可迁移至真实视频，在VSTAT-YouTube上提升+7.95。",
+      "summary_en": "Continuous video state tracking lacks fully self-supervised training methods, and prior self-evolving approaches barely improve tracking performance. We propose S3T, which treats temporal sampling density as privileged information and performs self-distillation from a dense-view teacher to a sparse-view student sharing the same weights, requiring no labels or external teacher. S3T improves VSTAT accuracy by +1.74 and transfers from synthetic to real videos, yielding +7.95 on VSTAT-YouTube and +4.50 on MVBench Action Count.",
+      "highlights_zh": [
+        "首创无监督时间自蒸馏状态跟踪",
+        "VSTAT提升+1.74，迁移+7.95",
+        "无需标签，零推理开销"
+      ]
+    },
+    {
+      "id": "2609.04202",
+      "title": "TokenMatch: 3D Mesh Correspondence Transformer with Curvature-Guided Tokenisation",
+      "authors": [
+        "Adeela Islam",
+        "Zorah Lähner",
+        "Vittorio Murino",
+        "Vladislav Golyanik"
+      ],
+      "abstract": "While data-driven 3D shape correspondence estimation has recently seen substantial progress, robust matching under partial observations and strong non-isometric deformations remains challenging. Existing learning-based approaches often rely on hand-crafted descriptors or template-based representations, whereas recent generative models over functional maps suffer from high inference cost, limited interpretability, and poor generalisation to partial shapes. In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences. Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning. TokenMatch uses self- and cross-attention mechanisms to efficiently learn patch-level and point-level relations as well as dense correspondences between shape pairs. Our core insight is that meshes can be adaptively tokenised into patches using shape curvature guidance, enabling effective learning of shape-specific geometric descriptors for correspondence estimation. We evaluate TokenMatch on standard benchmarks for partial and full shape matching, including CP2P, PSMAL, BeCoS, FAUST, SCAPE, and SHREC'19. Our method achieves consistently high performance, in most cases outperforming existing methods for partial and full shape matching in the mean geodesic error and intersection-over-union metrics, while also running faster at sub-second inference speeds.",
+      "published": "2026-09-03T17:59:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04202",
+      "pdf_url": "https://arxiv.org/pdf/2609.04202",
+      "summary_zh": "三维形状对应估计在部分观测和非等距变形下仍具挑战，现有方法依赖手工描述符或模板，且泛化性差。本文提出TokenMatch，一种基于曲率引导令牌化的Transformer统一模型，通过自注意力和交叉注意力学习块级与点级关系，实现部分到整体的高效匹配。该方法在多个基准上取得领先性能，推理速度低于亚秒级，且无需重新训练即可泛化至完整形状匹配。",
+      "summary_en": "3D shape correspondence remains challenging under partial observations and strong non-isometric deformations, with existing methods relying on hand-crafted descriptors or suffering from high costs. TokenMatch introduces a curvature-guided tokenisation transformer using self- and cross-attention to learn patch- and point-level dense correspondences, trained solely on partial shapes yet generalising to full shapes. It achieves state-of-the-art results on multiple benchmarks with sub-second inference, outperforming prior methods in geodesic error and IoU metrics.",
+      "highlights_zh": [
+        "曲率引导令牌化Transformer",
+        "多基准领先，亚秒级推理",
+        "无需微调泛化至完整形状"
+      ]
+    },
+    {
+      "id": "2609.04193",
+      "title": "GIFT: Guided Intermediate Feature Training via Action-Oriented Structural Supervision for Robotic Manipulation",
+      "authors": [
+        "Yupeng Zheng",
+        "Xiang Li",
+        "Songen Gu",
+        "Yuhang Zheng",
+        "Shuai Tian",
+        "Weize Li",
+        "Linbo Wang",
+        "Chaoyue Li",
+        "Qichao Zhang",
+        "Haoran Li",
+        "Zhongpu Xia",
+        "Ya-Qin Zhang",
+        "Shuicheng Yan",
+        "Dongbin Zhao"
+      ],
+      "abstract": "Vision-language pre-training and predictive world modeling provide robot policies with rich semantic and dynamic visual features, but their native action and visual-prediction objectives may omit critical physical and task structure while retaining control-irrelevant visual redundancy. We call this mismatch between visual richness and control utility the action-sufficiency gap. We investigate whether this gap can be bridged by guiding intermediate features to preserve three control-relevant structure in robotic manipulation: geometry governing motion feasibility, affordance encoding instruction-relevant entities, and goals grounding instructions in task-relevant regions. To this end, we present GIFT (Guided Intermediate Feature Training), an architecture-flexible framework for learning intermediate features that translates these structures into training-time constraints through geometry alignment, affordance prediction, and goal-region reconstruction. We instantiate GIFT in a Vision-Language-Action (VLA) policy, a direct-action World-Action Model (WAM), and an inverse-dynamics WAM while retaining each model's action formulation. Under zero-shot transfer to LIBERO-Plus, GIFT-VLA, GIFT-WAM-Fast, and GIFT-WAM-IDM outperform StarVLA-OFT, Fast-WAM, and Fast-WAM-IDM by 4.6, 12.6, and 5.2 points, reaching 79.6%, 72.6%, and 87.8%, respectively. On RoboCasa, the three GIFT variants reach 61.4%, 83.6%, and 82.3%, outperforming their counterparts by 12.6, 9.0, and 8.4 points, respectively. Together, these results establish learning functionally structured intermediate features as a reusable principle across model-specific action formulations, with especially large gains on articulated-object tasks and high-precision real-world manipulation under unseen visual and spatial perturbations. Project page: https://openphoenix-team.github.io/GIFT-pages.",
+      "published": "2026-09-03T17:59:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04193",
+      "pdf_url": "https://arxiv.org/pdf/2609.04193",
+      "summary_zh": "视觉语言预训练和世界模型为机器人策略提供了丰富的视觉特征，但其原生目标可能忽略控制相关的物理与任务结构，导致“动作充分性差距”。GIFT通过几何对齐、可供性预测和目标区域重建三种训练时约束，引导中间特征保留控制相关的结构信息，且架构灵活，适用于VLA和世界动作模型等多种策略。GIFT在LIBERO-Plus和RoboCasa基准上显著超越基线，尤其在铰接物体任务和高精度真实世界操作中表现突出，验证了功能结构化中间特征作为跨模型可复用原则的有效性。",
+      "summary_en": "Vision-language pretraining and world models provide rich visual features but may omit control-relevant physical and task structure, creating an action-sufficiency gap. GIFT bridges this gap by guiding intermediate features through geometry alignment, affordance prediction, and goal-region reconstruction as training-time constraints, and is architecture-flexible across VLA and world-action models. GIFT variants outperform their counterparts by up to 12.6 points on LIBERO-Plus and RoboCasa, with large gains on articulated-object and high-precision real-world manipulation tasks, establishing functionally structured intermediate features as a reusable principle.",
+      "highlights_zh": [
+        "创新：三类控制相关结构监督引导中间特征",
+        "最佳：LIBERO-Plus提升12.6点，达87.8%",
+        "价值：跨模型可复用，提升铰接与高精度操作"
+      ]
+    },
+    {
+      "id": "2609.04158",
+      "title": "Formation Matrix and Energy-based Control of Multi-Agent Systems",
+      "authors": [
+        "Martín Crespo",
+        "Sergio Junco",
+        "Matías Nacusse"
+      ],
+      "abstract": "This paper presents an energy-based controller for a multiagent robotic system designed to achieve and maintain a specific formation while moving on a plane and avoiding collisions between agents. The controller emulates a network of elementary spring-damper modules connecting pairs of agents. This network, with its de-energized states representing the desired formation, determines the system's dynamics, which is fully encapsulated by a bond graph model. The modeling is further enhanced through the introduction of a formation matrix, using a graph-theoretic approach, that describes both the distances and relative velocities among the agents of the arrangement. This matrix mathematically represents the interconnection and energy-exchange structure of the bond graph, allowing us to put it in correspondence with the control-by-interconnection CbI-scheme of the IDA-PBC theory, facilitating the solution of the formation control problem within the port-Hamiltonian system framework. Furthermore, the paper presents leader-following and position-based formation control systems based on the CbI scheme, including a stability analysis of the corresponding closed-loop systems. The theoretical findings are validated through numerical simulations across various scenarios.",
+      "published": "2026-09-03T17:49:06Z",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04158",
+      "pdf_url": "https://arxiv.org/pdf/2609.04158",
+      "summary_zh": "多智能体系统在平面运动中实现并保持特定编队且避免碰撞是一个关键控制问题。本文提出基于能量的控制器，通过引入编队矩阵和图论方法，将弹簧-阻尼器网络与IDA-PBC理论的CbI方案对应，实现编队控制。仿真验证了所提控制器的有效性，并提供了闭环系统的稳定性分析。",
+      "summary_en": "Achieving and maintaining specific formations while avoiding collisions among planar multi-agent systems is a key control challenge. This paper proposes an energy-based controller that introduces a formation matrix via graph theory to map the spring-damper network to the CbI scheme of IDA-PBC, enabling formation control within the port-Hamiltonian framework. Numerical simulations validate the controller's effectiveness and stability analysis for leader-following and position-based scenarios.",
+      "highlights_zh": [
+        "编队矩阵与CbI方案结合",
+        "仿真验证多场景编队控制",
+        "适用于平面多机器人防撞编队"
+      ]
+    },
+    {
+      "id": "2609.04197",
+      "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
+      "authors": [
+        "Lihao Liu",
+        "Peng Tang",
+        "Kunwar Yashraj Singh",
+        "Shabnam Ghadar"
+      ],
+      "abstract": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and propose ESPO (Error-Structured Prompt Optimization), which decomposes prompt optimization into three phases: Diagnose clusters all training errors into structural patterns in one round; Propose generates candidates via four complementary strategies with independent biases; Select applies bootstrap stability selection. On seven public NLP benchmarks - Tweet, MMLU, GSM8K, HotpotQA, ScoNe, HoVer, and PUPA - ESPO improves average accuracy by $+$3.76 pp over the state-of-the-art (74.67% vs 70.91% for GEPA), matching or exceeding GEPA on every dataset while producing prompts 47% shorter (1,004 vs 1,878 chars) and faster at inference. Cross-model experiments across four additional student models (Gemma 3 12B, Mistral 14B, Qwen3 32B, Claude Haiku 4.5) show ESPO yields the best average accuracy on every model tested, with the largest gap on Qwen3 GSM8K (15.00% $\\to$ 91.40%). A generalization bound (Appendix) grounds each phase in a corresponding term of the test-time gap, and the ablation confirms a key prediction: adding diversity without bootstrap selection actually hurts performance ($-$1.20%).",
+      "published": "2026-09-03T17:59:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.04197",
+      "pdf_url": "https://arxiv.org/pdf/2609.04197",
+      "summary_zh": "进化式提示优化器（如GEPA）存在提示词膨胀问题，迭代后提示词长度增加3倍但准确率未提升，源于错误观察不完整、搜索多样性不足和选择不可靠。ESPO将优化分解为诊断（聚类错误模式）、提出（四种互补策略生成候选）和选择（自举稳定性选择）三个阶段，并配有泛化界理论支撑。在七个基准上平均准确率提升3.76个百分点，提示词缩短47%，跨模型实验均取得最佳平均准确率。",
+      "summary_en": "Evolutionary prompt optimizers like GEPA suffer from prompt bloat, producing prompts up to 3x longer without accuracy gains, due to incomplete error observation, limited search diversity, and unreliable selection. ESPO decomposes optimization into Diagnose (clustering errors), Propose (four complementary generation strategies), and Select (bootstrap stability selection), with a generalization bound grounding each phase. It improves average accuracy by +3.76 pp over GEPA across seven benchmarks, produces 47% shorter prompts, and achieves the best average accuracy on all four additional student models tested.",
+      "highlights_zh": [
+        "三阶段解耦优化，理论支撑",
+        "平均准确率+3.76pp，提示词短47%",
+        "跨模型泛化强，但需多轮诊断"
+      ]
+    }
+  ]
+}
