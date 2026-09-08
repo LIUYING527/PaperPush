@@ -1,0 +1,289 @@
+{
+  "date": "2026-09-08",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.05404",
+      "title": "Diffusion TV: Experiencing Diffusion Models through Tangible, Embodied Interaction",
+      "authors": [
+        "Sihwa Park"
+      ],
+      "abstract": "Diffusion TV is an interactive AI art installation that offers a tangible and embodied experience of diffusion models through a modified CRT TV. By physically manipulating the TV's antenna, audiences control the clarity of AI-generated images and sounds, metaphorically enacting the denoising process that underlies diffusion-based generation. Using the tuning knob, participants switch between three channels featuring AI-generated animals from the Past (extinct species), Present (endangered species), and Future (speculative creatures), situating the interaction within a temporal and ecological narrative. Through continuous audiovisual feedback and physical interaction, Diffusion TV foregrounds the generative process over final outputs, allowing audiences to explore intermediate states as experiential material. Rather than providing explicit technical explanation, the work presents an alternative, embodied mode of explainable AI that invites exploratory engagement with and reflection on generative technologies.",
+      "published": "2026-09-04T17:51:48Z",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05404",
+      "pdf_url": "https://arxiv.org/pdf/2609.05404",
+      "summary_zh": "扩散模型的内部过程对普通观众而言抽象难懂，缺乏直观的交互体验。该作品通过改装CRT电视，让观众用物理操作天线和旋钮来控制AI生成图像与声音的清晰度，隐喻式地体验去噪过程，并融入过去、现在、未来的生态叙事。作品将生成过程本身作为体验材料，提供了一种具身化的可解释AI方式，促进观众对生成技术的探索与反思。",
+      "summary_en": "Diffusion models are often abstract and inaccessible to general audiences. This work presents an interactive art installation using a modified CRT TV, where physical antenna and knob manipulations control the clarity of AI-generated audiovisual content, metaphorically enacting the denoising process within a past/present/future ecological narrative. By foregrounding intermediate generative states as experiential material, it offers an embodied, non-technical mode of explainable AI that invites reflective engagement with generative technologies.",
+      "highlights_zh": [
+        "具身交互隐喻去噪过程",
+        "以艺术装置实现可解释AI",
+        "面向公众，非技术性科普"
+      ]
+    },
+    {
+      "id": "2609.05403",
+      "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
+      "authors": [
+        "Quoc H. Nguyen",
+        "Ali Lafzi",
+        "Abhijeet Phatak",
+        "Siddharth Pratap Singh",
+        "Rohit Upadhyay",
+        "Yogananda Domlur Seetharama",
+        "Chittaranjan Tripathy"
+      ],
+      "abstract": "Retail search systems serve diverse geographic regions with distinct query patterns, vocabularies, and product preferences, creating significant data heterogeneity that challenges both privacy-preserving training and model personalization. Federated learning offers a natural solution for privacy, but standard FL methods produce global models that sacrifice regional performance, while existing personalized FL approaches operate at the parameter level and catastrophically collapse on modern transformers (below 10\\% accuracy on T5) due to tied embeddings and LayerNorm interactions. We introduce RegionFed, an \\textit{architecture-robust} federated learning framework that sidesteps this failure by operating entirely at the gradient level. RegionFed uses the $\\ell_2$ conflict between regional and global gradients as a unified signal that (i) diagnoses heterogeneity, (ii) routes each region to the cheapest sufficient personalization strategy, and (iii) adaptively controls personalization strength. Because it treats models as differentiable black boxes, RegionFed deploys on T5-Small, T5-3B, RoBERTa, and CNN with zero code changes, providing large gains on transformers (where parameter-level methods collapse) and consistent improvements on CNNs. Across three public datasets (Amazon ESCI, Amazon Reviews, LEAF-FEMNIST) and four architectures, RegionFed-Meta achieves 92.27\\%, closing the gap to the privacy-violating centralized upper bound (Centralized + Regional Weighting: 92.04\\%, $Δ$=0.23pp, within 1$σ$) while providing $(ε{\\approx}0.60)$-differential privacy and $\\mathcal{O}(1/\\sqrt{T})$ convergence.",
+      "published": "2026-09-04T17:50:10Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05403",
+      "pdf_url": "https://arxiv.org/pdf/2609.05403",
+      "summary_zh": "",
+      "highlights_zh": [
+        "梯度级个性化，架构无关",
+        "T5-Small达92.27%，逼近集中式上界",
+        "支持差分隐私，适用于异构零售搜索"
+      ]
+    },
+    {
+      "id": "2609.05415",
+      "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
+      "authors": [
+        "Linzhan Mou",
+        "Jiahui Lei",
+        "Zhiyang Dou",
+        "Chenyue Cai",
+        "Chaoyue Song",
+        "Adam Finkelstein",
+        "Szymon Rusinkiewicz"
+      ],
+      "abstract": "Recent advances in automatic rigging now deliver animation-ready 3D assets at scale, yet generating the motion to drive them remains a bottleneck. Existing learned animators are topology-constrained: they rely on category-specific templates or require per-skeleton fine-tuning and reference motions at inference. We present UniMate, a unified foundation model that synthesizes articulated motion for arbitrary skeletons from a rigged 3D asset and a text prompt, with no test-time optimization or per-skeleton retraining. UniMate introduces a topology-aware diffusion transformer, which integrates skeletal topology into attention via three mechanisms: (1) a graph-aware attention bias from pairwise joint relations and geodesic distances; (2) a spectral rotary position embedding generalizing RoPE to arbitrary kinematic trees via the graph Laplacian; and (3) a global topological conditioner attention-pooled from the rest-pose skeleton. We also curate UniML3D, 13,006 motion sequences spanning bipedal, quadrupedal, avian, marine, insectoid, serpentine, and articulated rigid objects with unified canonicalization and text pairing. Trained on this dataset, UniMate outperforms state-of-the-art baselines in quality, generalization, and efficiency, and supports zero-shot cross-topology transfer, in-betweening, expansion, and text-guided editing. Our project page is available at https://linzhanmou.com/unimate/.",
+      "published": "2026-09-04T17:59:00Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05415",
+      "pdf_url": "https://arxiv.org/pdf/2609.05415",
+      "summary_zh": "现有自动蒙皮技术可生成大量动画就绪的3D资产，但驱动这些骨骼的运动生成仍受限于类别模板或需逐骨骼微调。UniMate提出统一基础模型，通过拓扑感知扩散Transformer（含图感知注意力偏置、谱旋转位置编码和全局拓扑条件器）实现任意骨骼的文本驱动运动合成。该模型在质量、泛化性和效率上超越现有方法，支持零样本跨拓扑迁移、插值、扩展和文本引导编辑。",
+      "summary_en": "Automatic rigging now produces animation-ready 3D assets at scale, yet motion generation for arbitrary skeletons remains bottlenecked by topology-specific templates or per-skeleton fine-tuning. UniMate introduces a unified foundation model with a topology-aware diffusion transformer that integrates skeletal structure via graph-aware attention bias, spectral rotary position embedding, and global topological conditioning, enabling text-driven motion synthesis for diverse skeletons without test-time optimization. Trained on the curated UniML3D dataset, it outperforms state-of-the-art baselines in quality, generalization, and efficiency, and supports zero-shot cross-topology transfer, in-betweening, expansion, and text-guided editing.",
+      "highlights_zh": [
+        "拓扑感知扩散Transformer统一任意骨骼动画",
+        "在质量、泛化性和效率上超越SOTA基线",
+        "支持零样本跨拓扑迁移与文本引导编辑"
+      ]
+    },
+    {
+      "id": "2609.05363",
+      "title": "Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation",
+      "authors": [
+        "Siliang Liu",
+        "Mohammad Ghasemi",
+        "Sapan Patel",
+        "Amin Banitalebi-Dehkordi"
+      ],
+      "abstract": "Trade-up recommendation identifies higher-quality alternatives that preserve a customer's purchase intent while offering upgraded benefits. Large language models (LLMs) can reason about such distinctions, but applying them directly to hundreds of millions of product pairs is operationally impractical. We introduce a two-level framework that distills LLM reasoning into an efficient non-generative student and adapts its decision boundary to product-type-specific trade-up criteria. At Level 1, a retrieval-augmented few-shot LLM teacher generates structured relation labels and natural-language rationales. These rationales supervise a compact embedding-pair classifier through alignment and contrastive objectives; at inference, the student uses only two precomputed 768-dimensional product embeddings, with no LLM calls or text generation. On a fixed human-annotated benchmark of 8,352 pairs, a 15.5M-parameter four-class reasoning-distilled student achieves AUC 0.924 (95% CI [0.918, 0.929]), compared with 0.912 for the four-class label-only student. At Level 2, product-type test-time training (PT-TTT) uses few-shot demonstrations to optimize lightweight category-specific adapters over the frozen student. PT-TTT improves AUC from 0.924 to 0.941 and average precision from 0.920 to 0.940. On a 100K-pair proxy catalog, the distilled student on a single eight-GPU machine is approximately 5,000x faster and 10,000x lower in estimated cost than direct LLM inference.",
+      "published": "2026-09-04T17:08:50Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05363",
+      "pdf_url": "https://arxiv.org/pdf/2609.05363",
+      "summary_zh": "贸易升级推荐需在保留购买意图的同时推荐更高质量替代品，但直接使用大语言模型处理海量产品对在计算上不可行。本文提出两级框架：先用LLM教师生成推理标签和自然语言理由，蒸馏到紧凑的嵌入对分类器，再通过产品类型测试时训练（PT-TTT）用少量示例优化类别特定适配器。蒸馏学生模型在8352对基准上达到AUC 0.924，PT-TTT提升至0.941，且推理速度比直接LLM快约5000倍、成本低约10000倍。",
+      "summary_en": "Trade-up recommendation aims to identify higher-quality alternatives preserving purchase intent, but applying LLMs to hundreds of millions of product pairs is operationally impractical. This work introduces a two-level framework that distills LLM reasoning into a compact embedding-pair classifier via alignment and contrastive objectives, then adapts its decision boundary through product-type test-time training with few-shot demonstrations. The distilled student achieves AUC 0.924 on a human benchmark, improved to 0.941 by PT-TTT, while being approximately 5,000x faster and 10,000x cheaper than direct LLM inference.",
+      "highlights_zh": [
+        "两级蒸馏+PT-TTT适配框架",
+        "AUC达0.941，较标签蒸馏提升",
+        "推理快5000倍，适合大规模部署"
+      ]
+    },
+    {
+      "id": "2609.05405",
+      "title": "WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data",
+      "authors": [
+        "Ji Soo Lee",
+        "Xilun Chen",
+        "Pierce Chuang",
+        "Ashish Shenoy",
+        "Jason Wei",
+        "Dohwan Ko",
+        "Hyunwoo J. Kim",
+        "Benoit Corda"
+      ],
+      "abstract": "Recent advances in wearable sensing enable continuous monitoring of physiological and behavioral signals, yet existing benchmarks rarely evaluate whether AI systems can reason over a real user's longitudinal wearable record. We introduce WearableQA, a benchmark comprising 4,084 10-option multiple-choice questions constructed from the wearable time series, blood biomarkers, and demographics of 200 real users, each with up to 500 days of daily measurements. WearableQA preserves authentic wearable distributions that include device noise and inter-individual variability. To evaluate distinct reasoning capabilities, we introduce 16 question types organized along two complementary axes: data versus health reasoning, which distinguishes computation over longitudinal measurements from physiological interpretation; and single- versus cross-signal reasoning, which separates reasoning about individual signals from the integration of multiple signals. To construct reliable questions at scale, we adopt a dual-grounding framework that combines literature-grounded physiological findings with statistically validated population-grounded physiological patterns. This enables the capture of meaningful relationships observed in real-world wearable data. Evaluation of 14 proprietary and open-source LLMs demonstrates that WearableQA effectively differentiates model capabilities, with performance ranging from 19.6% to 72.9% against a 10% chance baseline. Moreover, WearableQA remains far from solved: most models achieve accuracies below 60%. Overall, WearableQA provides a realistic and diagnostic benchmark for evaluating LLM reasoning over real-world wearable data.",
+      "published": "2026-09-04T17:52:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05405",
+      "pdf_url": "https://arxiv.org/pdf/2609.05405",
+      "summary_zh": "现有基准很少评估AI系统对真实用户长期可穿戴数据的推理能力。本文提出WearableQA基准，包含来自200名真实用户的4084道多选题，并设计了16种问题类型及双重验证框架以区分数据与健康推理、单信号与跨信号推理。评估14个LLM显示准确率从19.6%到72.9%，多数模型低于60%，表明该基准有效且远未解决。",
+      "summary_en": "Existing benchmarks rarely evaluate whether AI systems can reason over a real user's longitudinal wearable record. We introduce WearableQA, a benchmark with 4,084 questions from 200 real users, featuring 16 question types and a dual-grounding framework to distinguish data vs. health and single- vs. cross-signal reasoning. Evaluation of 14 LLMs shows accuracies ranging from 19.6% to 72.9%, with most below 60%, demonstrating effective differentiation and remaining far from solved.",
+      "highlights_zh": [
+        "真实可穿戴数据推理基准",
+        "最佳准确率72.9%，多数低于60%",
+        "评估健康推理，但存在设备噪声局限"
+      ]
+    },
+    {
+      "id": "2609.05401",
+      "title": "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models",
+      "authors": [
+        "Wonje Jeung",
+        "Sangyeon Yoon",
+        "Hyesoo Hong",
+        "Yoonjun Cho",
+        "Dongjae Jeon",
+        "Bumjun Kim",
+        "Jean Oh",
+        "Youngjae Yu",
+        "Albert No"
+      ],
+      "abstract": "Vision-language models are increasingly used as reward functions for robotic learning, but this role requires paraphrase invariance: the same trajectory should receive the same reward under semantically equivalent goal descriptions. We show that current VLM reward models often violate this property. Paraphrasing the instruction alone can substantially change predicted progress scores, and can even flip identical robot behavior between failure and success. To measure this failure mode, we introduce ROBORMBENCH, a benchmark with 2,390 real-robot trajectories, ground-truth progress labels, and 21,673 verified paraphrases spanning lexical, syntactic, and action-goal rewrites. Across proprietary and open-source VLMs, paraphrase-induced instability is widespread and severe, grows under more divergent rewrites, and is not reliably reduced by scale or explicit reasoning. Dedicated reward models trained with trajectory-grounded supervision are substantially more stable. These results show that paraphrase robustness is a core requirement for reliable VLM-based reward modeling in robotics.",
+      "published": "2026-09-04T17:47:58Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05401",
+      "pdf_url": "https://arxiv.org/pdf/2609.05401",
+      "summary_zh": "视觉语言模型作为机器人奖励函数时缺乏释义不变性，语义等价指令的改写可能导致相同轨迹获得矛盾奖励。为此提出ROBORMBENCH基准，包含2,390条真实机器人轨迹和21,673个经过验证的释义改写，系统评估专有和开源VLM的奖励稳定性。研究发现释义脆弱性普遍且严重，模型规模和显式推理无法可靠缓解，而轨迹监督训练的专用奖励模型显著更稳定。",
+      "summary_en": "Vision-language reward models for robotics lack paraphrase invariance, where semantically equivalent instructions can yield contradictory rewards for identical trajectories. We introduce ROBORMBENCH, a benchmark with 2,390 real-robot trajectories and 21,673 verified paraphrases, to systematically evaluate this failure mode across proprietary and open-source VLMs. Results show paraphrase-induced instability is widespread and severe, not reliably reduced by scale or reasoning, while trajectory-grounded reward models are substantially more stable.",
+      "highlights_zh": [
+        "首个机器人VLM奖励释义鲁棒性基准",
+        "21,673个释义导致广泛奖励翻转",
+        "轨迹监督可显著提升奖励稳定性"
+      ]
+    },
+    {
+      "id": "2609.05416",
+      "title": "WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+      "authors": [
+        "Muyao Niu",
+        "Jixuan He",
+        "Ruihan Yu",
+        "Lian Fu",
+        "Yonghao Yu",
+        "Zheng-Hui Huang",
+        "Yifan Zhan",
+        "Fengbo Lan",
+        "Yongtao Ge",
+        "Yinqiang Zheng",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "abstract": "We study the problem of generating a compositional 3D representation of a cluttered scene containing hundreds of objects. The goal is to represent the scene as a collection of individual object meshes placed in a shared world frame, as required by downstream applications such as gaming, AR/VR, simulation, and robotics. This task is challenging in densely cluttered scenes, where objects heavily occlude one another and each view reveals only a fraction of their geometry. Geometry-based approaches typically reconstruct the scene as a single representation and leave incomplete geometry in occluded regions, while existing compositional methods with generative priors are largely limited to relatively simple scenes. We show that complex scenes with hundreds of objects can instead be generated compositionally by adapting a strong single-object 3D generative prior to multi-view observations. We instantiate this paradigm with Pixal3D, extending it with a multi-view conditioning pathway that grounds object generation in multiple posed observations. Although the model is finetuned entirely on single objects in canonical space, it generalizes to large scenes with severe occlusion without any scene-level training, demonstrating the feasibility and scalability of this paradigm. We further introduce UE-MeshyScene, a photorealistic benchmark of densely cluttered scenes with hundreds of objects, per-object annotations, and ground-truth meshes. Across single-object, controlled multi-object, and UE-MeshyScene evaluations, our method consistently outperforms prior approaches, with larger gains as scene complexity and occlusion increase. Finally, we demonstrate broader applicability by converting generated 3DGS worlds, such as Marble and HY-World 2.0, into compositional mesh scenes.",
+      "published": "2026-09-04T17:59:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05416",
+      "pdf_url": "https://arxiv.org/pdf/2609.05416",
+      "summary_zh": "该论文研究从多视角视频中生成包含数百个物体的组合式3D场景表示的问题，现有方法在严重遮挡的杂乱场景中表现不佳。方法上，作者提出WorldSculpt，通过扩展单物体3D生成先验模型Pixal3D，增加多视角条件通路，使模型无需场景级训练即可泛化到复杂场景。实验表明该方法在多个基准上优于现有方法，并能将3DGS场景转换为组合式网格场景。",
+      "summary_en": "This paper tackles the problem of generating compositional 3D scene representations with hundreds of objects from multi-view videos, where existing methods struggle with severe occlusion. The authors propose WorldSculpt, which adapts a strong single-object 3D generative prior (Pixal3D) with a multi-view conditioning pathway, enabling generalization to large cluttered scenes without scene-level training. The method consistently outperforms prior approaches across benchmarks, especially with increasing scene complexity, and demonstrates broader applicability by converting 3DGS worlds into compositional mesh scenes.",
+      "highlights_zh": [
+        "单物体先验泛化至复杂场景",
+        "复杂场景下性能增益显著提升",
+        "支持游戏/AR/VR等下游应用"
+      ]
+    },
+    {
+      "id": "2609.05400",
+      "title": "A Generalizable Feature Extractor for Alzheimer's-Related Brain MRI Tasks",
+      "authors": [
+        "Reza Rajabli",
+        "D. Louis Collins"
+      ],
+      "abstract": "When there is not enough labeled data to properly train deep learning models, transfer learning can help. We still do not fully understand how effective it is in neuroimaging, especially for Alzheimer's disease research. It is also not clear if these transferred models can work on new datasets without being retrained for each specific task. We evaluate whether a compact, supervised pretrained model can serve as a reusable foundation model for downstream neuroimaging tasks. We freeze the 7.18 million weights of a 3D CNN previously trained for brain-age prediction, and adapt it to each task using Low-Rank Adaptation (LoRA), requiring only ~1% additional trainable parameters. We evaluate generalizability in six experiments. Adapting the model to classify cognitively normal versus Dementia on ADNI gave an AUC of 0.964 on held-out folds (Experiment #1). Applying that adapted model unchanged to OASIS-3, with no retraining, gave an AUC of 0.871 (Experiment #2). Reusing its output logit together with age and a cognitive score distinguished stable from progressing MCI with an AUC of 0.828 (Experiment #3). Adapting the same backbone to predict amyloid positivity from structural MRI gave an AUC of 0.804 (Experiment #4). Finally, the same approach estimated ICV-normalized hippocampal and white matter hypointensity volumes directly from the T1w image, with R^2 of 0.80 and 0.91 respectively, tasks normally addressed with much larger U-Net networks (Experiments #5 and #6). A compact model supervised on brain age can therefore serve as a reusable backbone, adapting to each task with ~1% additional parameters and transferring to an unseen cohort without any training. Our findings suggest that a carefully trained brain age model can serve as an effective foundation model for Alzheimer's related tasks, even under strict data constraints.",
+      "published": "2026-09-04T17:47:28Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "q-bio.QM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05400",
+      "pdf_url": "https://arxiv.org/pdf/2609.05400",
+      "summary_zh": "阿尔茨海默病相关脑MRI任务常面临标注数据不足的问题，迁移学习的有效性尚不明确。本文提出将预训练于脑龄预测的紧凑3D CNN作为冻结主干，仅用约1%可训练参数通过LoRA适配多种下游任务。模型在ADNI上分类痴呆AUC达0.964，直接迁移至OASIS-3无重训AUC为0.871，并成功完成MCI进展预测、淀粉样阳性检测及体积回归，表明脑龄模型可作为高效基础模型。",
+      "summary_en": "Transfer learning for Alzheimer's-related neuroimaging tasks is often hindered by limited labeled data, and its generalizability across datasets remains unclear. This work freezes a compact 3D CNN pretrained on brain-age prediction and adapts it to six downstream tasks using Low-Rank Adaptation (LoRA) with only ~1% additional trainable parameters. The model achieves strong results (e.g., AUC 0.964 for dementia classification, 0.871 on unseen OASIS-3, and R² up to 0.91 for volume regression), demonstrating that a brain-age backbone can serve as an effective and reusable foundation model under strict data constraints.",
+      "highlights_zh": [
+        "冻结主干+LoRA仅需1%参数",
+        "ADNI痴呆分类AUC达0.964",
+        "跨数据集无重训AUC 0.871"
+      ]
+    },
+    {
+      "id": "2609.05397",
+      "title": "CrossDepth: Geometry-Constrained Attention for Generalizable Multi-View Surround Depth Estimation",
+      "authors": [
+        "Samer Abualhanud",
+        "Max Mehltretter"
+      ],
+      "abstract": "Reliable 3D understanding of the surrounding environment is a core requirement for autonomous driving. Multi-view surround camera rigs provide broad scene coverage, but the spatially adjacent images typically overlap only minimally. Consequently, the depth of most pixels must be inferred from monocular appearance cues. These cues can appear differently across images and may therefore be interpreted differently by the depth estimation model. We target two main sources of cross-image inconsistency: differences in camera intrinsics and the limited receptive field of each image. We address the former by conditioning the features on per-pixel camera-aware ray embeddings, enabling the network to account for camera-dependent variations in monocular cues. We address the latter by extending each pixel's context beyond its own image through cross-image attention constrained to geometrically plausible regions, derived from the calibrated rig setup. The model is trained in a fully self-supervised manner based on photometric consistency. Evaluations on DDAD and nuScenes show improved overall depth accuracy and cross-image depth consistency over state-of-the-art self-supervised methods under in-domain and cross-domain evaluation. Code is available at https://abualhanud.github.io/CrossDepthPage/.",
+      "published": "2026-09-04T17:45:06Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05397",
+      "pdf_url": "https://arxiv.org/pdf/2609.05397",
+      "summary_zh": "多视角环视相机图像重叠区域小，深度估计依赖单目线索，导致跨图像不一致。本文提出CrossDepth，通过相机感知射线嵌入处理内参差异，并用几何约束的跨图像注意力扩展感受野。在DDAD和nuScenes上，该方法提升了深度精度和跨图像一致性，优于现有自监督方法。",
+      "summary_en": "Multi-view surround cameras have minimal overlap, so depth estimation relies on monocular cues, causing cross-image inconsistency. CrossDepth addresses this by conditioning features on camera-aware ray embeddings and applying geometry-constrained cross-image attention to expand context. It achieves superior depth accuracy and consistency on DDAD and nuScenes, outperforming state-of-the-art self-supervised methods.",
+      "highlights_zh": [
+        "几何约束跨图像注意力",
+        "DDAD/nuScenes精度与一致性最优",
+        "自监督，适用于自动驾驶"
+      ]
+    },
+    {
+      "id": "2609.05376",
+      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
+      "authors": [
+        "Vivek Chavan",
+        "Pengtao Xie",
+        "Yahuan Shi",
+        "Oliver Heimann",
+        "Kevin Haninger",
+        "Jörg Krüger"
+      ],
+      "abstract": "Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. Using Action Chunking with Transformers (ACT), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. We find that distractor sensitivity is specific to both the type of visual similarity and the manipulation stage. Guided by this diagnosis, we evaluate distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting as complementary interventions for improving target selection while preserving spatial information required for control. These interventions substantially improve robustness in simulation and on a physical UR3e. We further examine the same failure pattern in a pretrained vision-language-action policy on a state-conditioned instrument-handling task, where the observed state of a medical instrument determines the correct destination. Together, the results show that visual distractors can cause incorrect object or destination selection even when the underlying manipulation skill remains intact, and that explicitly improving target selection can substantially recover performance across distinct visuomotor policy-learning regimes.",
+      "published": "2026-09-04T17:27:35Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.05376",
+      "pdf_url": "https://arxiv.org/pdf/2609.05376",
+      "summary_zh": "视觉运动模仿策略在分布内条件下表现良好，但面对视觉相似物体或容器时容易失败，这被归结为条件性视觉接地问题。本文使用ACT策略系统诊断了干扰物敏感性随操作阶段和视觉相似类型的变化，并提出了干扰物增强、阶段相关注意力正则化和外观视觉提示三种互补干预方法。这些干预在仿真和真实UR3e机器人上显著提升了目标选择的鲁棒性，并在预训练视觉-语言-动作策略上验证了方法的通用性。",
+      "summary_en": "Visuomotor imitation policies fail under visually similar distractors due to poor conditional visual grounding. This work diagnoses failure patterns in ACT policies across manipulation phases and proposes complementary interventions including distractor augmentation, phase-dependent attention regularization, and appearance-based visual prompting. These methods substantially improve robustness in simulation and on a physical UR3e, and generalize to a pretrained vision-language-action policy, showing that explicit target selection recovery is broadly effective.",
+      "highlights_zh": [
+        "诊断并改进条件性视觉接地",
+        "仿真与实物UR3e鲁棒性显著提升",
+        "适用于ACT及VLA策略，具通用性"
+      ]
+    }
+  ]
+}
