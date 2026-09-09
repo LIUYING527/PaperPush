@@ -1,0 +1,280 @@
+{
+  "date": "2026-09-09",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.09158",
+      "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+      "authors": [
+        "Anqi Li",
+        "Yuxin Chen",
+        "Zhaobo Li",
+        "Zhuo Cao",
+        "Junli Ren",
+        "Masayoshi Tomizuka",
+        "Dhruv Shah"
+      ],
+      "abstract": "We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered environments requires continuous geometry-aware whole-body adaptation, including coordinated arm placement, torso adjustment, and gait modulation for collision-free movement through complex 3D spaces. We introduce TANGO, the first whole-body vision-language navigation framework for language-conditioned humanoid traversal in cluttered environments. Given a natural-language instruction and egocentric RGB observations, TANGO directly predicts 29-DoF joint-space actions for downstream whole-body control. We train TANGO entirely in simulation by synthesizing diverse collision-free traversal behaviors via global path planning, kinematic whole-body motion generation, obstacle-aware motion editing, and RL-based tracking. This pipeline provides dynamically feasible action supervision for learning language-conditioned whole-body policies. In extensive simulation experiments, TANGO demonstrates state-of-the-art performance in vision-language navigation, while outperforming strong modular baselines in navigating challenging scenes requiring obstacle negotiation. Lastly, we deploy TANGO zero-shot on a Unitree G1 humanoid robot, and observe robust language-guided traversal in cluttered real-world scenes without training on any real-world navigation data.",
+      "published": "2026-09-08T17:59:55Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09158",
+      "pdf_url": "https://arxiv.org/pdf/2609.09158",
+      "summary_zh": "人形机器人在杂乱室内环境中的导航需要全身几何感知的适应性动作，而非传统2D路径规划。TANGO提出首个全身视觉-语言-动作模型，直接从自然语言指令和RGB观测预测29自由度关节动作，通过仿真中的全局路径规划、运动生成和强化学习训练。实验表明TANGO在视觉语言导航任务上达到最先进性能，并零样本部署到Unitree G1人形机器人实现真实世界导航。",
+      "summary_en": "Humanoid navigation in cluttered environments requires whole-body geometric-aware adaptation beyond conventional 2D path planning. TANGO introduces the first whole-body vision-language-action model that directly predicts 29-DoF joint actions from language instructions and egocentric RGB observations, trained via simulation with path planning, kinematic motion generation, and RL tracking. It achieves state-of-the-art performance in vision-language navigation and demonstrates zero-shot deployment on a Unitree G1 humanoid in real-world cluttered scenes.",
+      "highlights_zh": [
+        "首个全身视觉语言导航模型",
+        "超越模块化基线的最优性能",
+        "零样本部署真实人形机器人"
+      ]
+    },
+    {
+      "id": "2609.09153",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "authors": [
+        "Yuxing Lu",
+        "Yicheng Chen",
+        "Shanchan Wu",
+        "Sercan Ö. Arık"
+      ],
+      "abstract": "Large language models are increasingly deployed as agents that plan over long horizons and act through external tools. Most agents select actions through unconstrained generation over an accumulating history, leaving implicit the procedural knowledge of what to do, in what order, and under which conditions. As trajectories lengthen, agents can lose track of their objectives, invoke tools out of order, and repeat unproductive actions. We introduce the Procedural Graph: just as a knowledge graph organizes factual knowledge into (entity, relation, entity) triplets for what-is questions, a Procedural Graph organizes procedural knowledge into (procedure, relation, procedure) triplets for what-to-do questions. At each decision step, the framework localizes the agent's active node, and a guidance model translates the surrounding subgraph into step-level situational guidance that biases the solver's next action without dictating it. The graph is self-evolving: an LLM refiner contrasts failed trajectories with successful ones and edits the graph's topology and attributes, committing edits that preserve or improve held-out validation performance while retaining rejected ones to discourage repetition. Starting from a minimal skeleton, the loop builds graphs that match or surpass hand-designed ones. It can also repair a flawed expert prior. Across multiple datasets, task types, and LLMs, the Procedural Graph delivers consistent gains over memory-based baselines, and self-evolution further improves performance without manual engineering.",
+      "published": "2026-09-08T17:59:41Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09153",
+      "pdf_url": "https://arxiv.org/pdf/2609.09153",
+      "summary_zh": "大语言模型作为智能体在长程任务中常因隐式过程知识缺失而出现目标丢失、工具调用顺序错误等问题。本文提出过程图（Procedural Graph），将过程知识组织为（过程，关系，过程）三元组，并通过自进化机制动态调整图结构以指导智能体决策。实验表明该方法在多个数据集和任务类型上优于基于记忆的基线，且能修复专家先验中的缺陷。",
+      "summary_en": "LLM agents often lose track of objectives and misorder tool calls in long-horizon tasks due to lack of explicit procedural knowledge. This paper introduces Procedural Graphs, which organize procedural knowledge as (procedure, relation, procedure) triplets and use a self-evolving refinement loop to adjust the graph for step-level guidance. The method consistently outperforms memory-based baselines across datasets and LLMs, and can even repair flawed expert priors.",
+      "highlights_zh": [
+        "自进化过程图结构",
+        "性能超越手工设计图",
+        "可修复专家先验缺陷"
+      ]
+    },
+    {
+      "id": "2609.09157",
+      "title": "Learning Length-Extrapolatable Recurrent Models",
+      "authors": [
+        "Hanwen Jiang"
+      ],
+      "abstract": "Recurrent models provide a natural path to long-context modeling, yet models trained with backpropagation through time (BPTT) often fail beyond their training horizon. Classical analyses emphasize gradients that vanish or explode along temporal paths. However, dense per-token losses can still train a shared recurrent rule despite severe decay, showing that decay alone does not determine whether learning fails. We instead study state credit: the signal through which future losses reach earlier recurrent states before contributing to parameter updates. Accordingly, we intervene directly on state credit and propose Credit Stabilization through Time (CST). During backward propagation, CST locally rescales the state-credit signal to stabilize its norm without rotating the component being corrected, while leaving the forward computation unchanged. Because controlled synthetic tasks and real data exhibit different credit dynamics, we specialize CST to each regime. In both settings, CST improves performance beyond the training horizon, with gains observed at up to 128x the training length.",
+      "published": "2026-09-08T17:59:53Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09157",
+      "pdf_url": "https://arxiv.org/pdf/2609.09157",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.09152",
+      "title": "Silver Rate Is (Almost) Optimal for Gradient Descent Acceleration",
+      "authors": [
+        "Yuhan Ye",
+        "Kaizhao Liu"
+      ],
+      "abstract": "We study how far gradient descent (GD) can be accelerated by predetermined nonnegative stepsizes in smooth convex optimization. Writing $p_{\\mathrm{sil}}=\\log_2(1+\\sqrt{2})$, we prove an $Ω\\left(n^{-p_{\\mathrm{sil}}-O(\\sqrt{\\log\\log n/\\log n})}\\right)$ non-anytime lower bound. In the anytime setting, every infinite nonnegative schedule has infinitely many horizons with error $Ω\\left(n^{-\\frac{2p_{\\mathrm{sil}}}{1+p_{\\mathrm{sil}}}-O(\\sqrt{\\log\\log n/\\log n})}\\right)$. Together with the silver-schedule upper bound [Altschuler and Parrilo, 2025] and the anytime upper bound [Zhang et al., 2025], our results determine the optimal polynomial convergence exponents in both settings.",
+      "published": "2026-09-08T17:59:38Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09152",
+      "pdf_url": "https://arxiv.org/pdf/2609.09152",
+      "summary_zh": "本文研究光滑凸优化中梯度下降法在预定非负步长下的加速极限，聚焦于银步长调度的最优性。作者证明了非任意时刻和任意时刻两种设置下的下界，其中任意时刻下界适用于所有无限非负调度。结合已有的银调度上界，该工作确定了两种设置下最优多项式收敛指数，表明银速率几乎最优。",
+      "summary_en": "This paper studies how much gradient descent can be accelerated by predetermined nonnegative stepsizes in smooth convex optimization, focusing on the optimality of the silver schedule. The authors prove non-anytime and anytime lower bounds, with the anytime bound holding for every infinite nonnegative schedule across infinitely many horizons. Combined with existing upper bounds, these results pin down the optimal polynomial convergence exponents in both settings, showing that the silver rate is almost optimal.",
+      "highlights_zh": [
+        "证明银调度几乎最优下界",
+        "确定两种设置最优收敛指数",
+        "限于预定非负步长场景"
+      ]
+    },
+    {
+      "id": "2609.09156",
+      "title": "ReCite: Agentic Reasoning for Faithful Citation",
+      "authors": [
+        "Yuyang Huang",
+        "Bobo Li",
+        "Jiajia Song",
+        "Yuzhe Ding",
+        "Chong Teng",
+        "Fei Li",
+        "Donghong Ji"
+      ],
+      "abstract": "Accurate citations are the foundation of academic writing, tracing intellectual origins and substantiating core claims. However, manually navigating the growing volume of scientific literature is increasingly difficult, prompting reliance on automatic citation recommendation. While modern retrieval-augmented architectures have largely mitigated the fabrication of non-existent papers, current systems relying on semantic similarity struggle with misattribution, often citing authentic papers that fail to logically support the author's claim. To address this challenge, we argue that accurate citation requires a shift from similarity-based search to active, claim-level reasoning. We propose ReCite, a decoupled agentic framework that orchestrates location perception, intent-aware query planning, and reflective verification. Trained on synthesized reasoning trajectories, our agent verifies claim-evidence consistency and triggers self-correction loops when retrieved candidates lack logical support. Experiments demonstrate that our lightweight framework outperforms state-of-the-art massive generative models in strict citation accuracy. By grounding literature matching in verifiable logic rather than semantic overlap, ReCite establishes a reliable foundation for automated academic writing.",
+      "published": "2026-09-08T17:59:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09156",
+      "pdf_url": "https://arxiv.org/pdf/2609.09156",
+      "summary_zh": "现有自动引用推荐系统依赖语义相似性，常错误引用无法逻辑支撑论断的真实论文。ReCite提出解耦式智能体框架，通过位置感知、意图查询规划和反思性验证，在检索候选缺乏逻辑支持时触发自我纠正。实验表明该轻量框架在严格引用准确性上超越大规模生成模型，为自动化学术写作奠定可靠基础。",
+      "summary_en": "Current citation recommendation systems rely on semantic similarity and often misattribute authentic papers that fail to logically support claims. ReCite proposes a decoupled agentic framework orchestrating location perception, intent-aware query planning, and reflective verification, enabling self-correction when retrieved candidates lack logical support. Experiments show this lightweight framework outperforms massive generative models in strict citation accuracy, grounding literature matching in verifiable logic for reliable automated academic writing.",
+      "highlights_zh": [
+        "从相似搜索转向论断级逻辑推理",
+        "轻量框架严格引用准确率超大规模模型",
+        "提升自动化写作引用可靠性"
+      ]
+    },
+    {
+      "id": "2609.09150",
+      "title": "Copying explains the collective behavior of AI agents in the wild",
+      "authors": [
+        "Giordano De Marzo",
+        "Nicola Albore",
+        "David Garcia"
+      ],
+      "abstract": "In June 2026, thousands of AI agents found that a small public wiki would accept edits from inside their sandboxes, and started using it to help one another pass a timed test. Each agent lived for about an hour and remembered nothing afterwards. Nobody asked them to cooperate, and the wiki had not been built for them. The complete record of what they wrote is public, and it is unusually informative, because it preserves not only what each agent wrote but what that agent could see before writing. We use it to follow the three decisions an agent had to make on arrival: where to write, what to call itself, and how to word its message. One rule governs all three. An agent takes an option with a probability close to the share of that option in what it can see, and the share that matters is the one on the page in front of it, then the one in the stream of recent edits, and only weakly anything older. Three minimal copying models, one per decision and with a single free parameter each, reproduce the heavy-tailed distribution of how many agents met on a page, the frequency of the pieces from which the agents built their names, and the patchwork of pages that are internally consistent and different from one another. Copying whatever the environment happens to show is enough to produce most of the collective structure of this population. It is also what makes such a population easy to steer, since whoever writes first, or writes while the others are quiet, sets the convention for everyone who comes later.",
+      "published": "2026-09-08T17:59:20Z",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cond-mat.stat-mech",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09150",
+      "pdf_url": "https://arxiv.org/pdf/2609.09150",
+      "summary_zh": "该论文研究2026年数千个AI智能体在野外环境中通过公共wiki协作的集体行为，发现它们无需被要求合作即可自发形成群体结构。作者提出三个基于复制机制的最小模型，每个模型仅含一个自由参数，分别解释智能体在写入位置、命名和消息措辞上的决策规律。结果表明，复制环境当前展示的内容足以产生该群体的大部分集体结构，且这种复制行为使群体易于被早期写入者或安静期的写入者引导。",
+      "summary_en": "This paper studies the collective behavior of thousands of AI agents in the wild, who spontaneously used a public wiki to help each other pass a timed test without being asked. The authors propose three minimal copying models, each with a single free parameter, showing that agents choose options with probability proportional to their visible share in the current page and recent edit stream. Results show that copying whatever the environment displays suffices to produce most collective structures, and this copying behavior makes the population easy to steer by early or quiet writers.",
+      "highlights_zh": [
+        "复制机制解释群体行为",
+        "单参数模型复现重尾分布",
+        "早期写入者可引导群体"
+      ]
+    },
+    {
+      "id": "2609.09155",
+      "title": "SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators",
+      "authors": [
+        "Yuncong Yang",
+        "Zhengtao Han",
+        "Furkan Ozyurt",
+        "Zeyuan Yang",
+        "Han Yang",
+        "Junyi Cao",
+        "Haoyu Zhen",
+        "Yilun Du",
+        "Chuang Gan"
+      ],
+      "abstract": "World models are increasingly used as policy-in-the-loop imagination environments, where reliable rollouts require fine-grained controllability with respect to low-level robot actions. A key obstacle to scaling such models in robotics is that actions are not a universal language in pixel space: changes in visual environment, camera view, robot placement, or embodiment alter how the same numerical action manifests visually, leading to conflicting supervision under mixed training and brittle generalization at deployment. We introduce SyncWorld, an action-conditioned world model that serves as a zero-shot simulator across unseen environments without any additional training. SyncWorld leverages a visual calibration episode---paired frames and actions that showcase all the controllable degrees of freedom---to specify the setup-specific Action--Visual Mapping in context. Training with visual calibration contexts teaches the model to interpret actions through visual evidence and to leverage interaction history when explicit calibration is unavailable. Experiments show that SyncWorld can accurately simulate action outcomes in previously unseen settings, and that its capability of simulating rollouts enables test-time policy improvement without training.",
+      "published": "2026-09-08T17:59:47Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09155",
+      "pdf_url": "https://arxiv.org/pdf/2609.09155",
+      "summary_zh": "世界模型作为想象环境时，因动作在像素空间非通用语言，导致跨环境泛化困难。SyncWorld通过视觉校准片段在上下文中指定动作-视觉映射，实现零样本模拟。实验表明其能准确模拟未见环境动作结果，并支持测试时策略改进。",
+      "summary_en": "World models as imagination environments struggle with cross-environment generalization because actions are not a universal language in pixel space. SyncWorld leverages a visual calibration episode to specify the setup-specific Action-Visual Mapping in context, enabling zero-shot simulation without additional training. Experiments show accurate simulation in unseen settings and test-time policy improvement via rollouts.",
+      "highlights_zh": [
+        "视觉校准实现零样本模拟",
+        "未见环境动作模拟准确",
+        "支持测试时策略改进"
+      ]
+    },
+    {
+      "id": "2609.09145",
+      "title": "Point4D: Long-range 4D Motion Reconstruction",
+      "authors": [
+        "Minsik Jeon",
+        "Jay Karhade",
+        "Deva Ramanan",
+        "Shubham Tulsiani"
+      ],
+      "abstract": "We introduce Point4D, a feed-forward model for 4D reconstruction of long-range video sequences. Point4D is able to reliably infer dense per-point 3D trajectories across multi-hundred-frame videos, unlike existing 4D methods that are limited to short input windows of at most a few dozen frames. A key innovation that enables this is our flexible 3D query-based motion decoder that decouples trajectory prediction from image-plane visibility. The predicted 3D endpoints are then directly re-queried in the next chunk without re-projection or matching. Furthermore, we show that extracting and reusing a visual descriptor from an arbitrary frame where the point is visible leads to better performance than relying solely on the source patch. Overall, Point4D achieves state-of-the-art performance across diverse long-video tracking benchmarks spanning over 200 frames and largely outperforms previous feed-forward 4D method. Project page: https://point-4d.github.io",
+      "published": "2026-09-08T17:58:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09145",
+      "pdf_url": "https://arxiv.org/pdf/2609.09145",
+      "summary_zh": "现有4D重建方法受限于短输入窗口，难以处理数百帧的长视频序列。Point4D提出基于3D查询的灵活运动解码器，解耦轨迹预测与图像可见性，并跨块直接重新查询预测端点，同时复用任意可见帧的视觉描述符。该方法在超过200帧的长视频基准上达到最先进性能，显著优于此前的前馈4D方法。",
+      "summary_en": "Existing 4D reconstruction methods are limited to short input windows of at most a few dozen frames, failing on long-range videos. Point4D introduces a flexible 3D query-based motion decoder that decouples trajectory prediction from image-plane visibility, directly re-querying predicted 3D endpoints across chunks and reusing visual descriptors from arbitrary visible frames. It achieves state-of-the-art performance on long-video benchmarks spanning over 200 frames, largely outperforming previous feed-forward 4D methods.",
+      "highlights_zh": [
+        "3D查询解码器解耦轨迹与可见性",
+        "200+帧基准上达SOTA性能",
+        "支持长视频动态场景重建"
+      ]
+    },
+    {
+      "id": "2609.09148",
+      "title": "Proxy Policy Steering",
+      "authors": [
+        "Chuanruo Ning",
+        "Tianrui Wang",
+        "Wei-Chiu Ma",
+        "Kuan Fang"
+      ],
+      "abstract": "Generalist robot policies carry broad manipulation priors from large-scale data, but specializing them to a new task remains the deployment bottleneck. This requires eliciting task-specific behavior from limited demonstrations without degrading their broad capabilities. We introduce Proxy Policy Steering (PPS), an inference-time adaptation method that resolves this challenge by training two lightweight proxy policies whose calibrated velocity-space difference steers the frozen base sampler. A reference proxy models the frozen base's behavior on target-task observations, and a task proxy, initialized from the reference, captures how this behavior changes under task supervision. Their difference forms a calibrated velocity-space residual that steers the frozen base sampler at every denoising step. We identify the conditions under which this residual isolates the change induced by task supervision, and validate them empirically. Because the base is never directly modified, its broad capabilities remain available at inference, including behaviors such as recovery from failure that the demonstrations themselves do not exercise. Adaptation requires only forward velocity predictions from the base, making PPS lightweight to train and applicable even without access to the base's parameters. On 8 real-world and 4 simulation manipulation tasks, PPS lifts the state-of-the-art pi 0.5 base policy by 53% absolute success rate on average, with zero-to-one gains on tasks the base never solves, while preserving the base's broad capabilities. PPS outperforms LoRA fine-tuning, from-scratch specialists, residual policies, and prior inference-time steering methods.",
+      "published": "2026-09-08T17:59:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09148",
+      "pdf_url": "https://arxiv.org/pdf/2609.09148",
+      "summary_zh": "通用机器人策略虽具备广泛操作先验，但如何用少量演示将其适配到新任务且不损害原有能力仍是部署瓶颈。本文提出代理策略引导（PPS），通过训练两个轻量代理策略，利用其校准的速度空间差异在推理时引导冻结的基础策略，而无需修改基础策略参数。在8个真实世界和4个仿真任务上，PPS将pi 0.5基础策略的平均成功率提升53%，并优于LoRA微调、从头训练专家及现有推理时引导方法。",
+      "summary_en": "Generalist robot policies carry broad manipulation priors but struggle to specialize to new tasks from limited demonstrations without degrading capabilities. PPS trains two lightweight proxy policies whose calibrated velocity-space difference steers a frozen base policy at inference time, isolating task-supervision-induced changes without modifying the base. On 8 real-world and 4 simulation tasks, PPS improves the pi 0.5 base policy by 53% absolute success rate on average, outperforming LoRA fine-tuning, specialists, residual policies, and prior steering methods.",
+      "highlights_zh": [
+        "推理时双代理引导冻结基础策略",
+        "平均成功率提升53%绝对值",
+        "无需访问基础参数，保持广泛能力"
+      ]
+    },
+    {
+      "id": "2609.09119",
+      "title": "DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination",
+      "authors": [
+        "Yankai Fu",
+        "Ning Chen",
+        "Junkai Zhao",
+        "Heng Zhang",
+        "Guocai Yao",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Dexterous manipulation involves contact-rich and fine-grained interactions with the physical world, posing significant challenges for existing vision-language-action (VLA) models due to severe visual occlusions and complex contact dynamics. While recent works have incorporated tactile sensing into robotic manipulation, most approaches still rely on homogeneous multimodal fusion, lacking adaptive tactile integration and explicit modeling of physical dynamics. In this work, we present DeCAL, a physically-grounded dexterous vision-language-action model that unifies understanding, imagination and action generation for contact-rich dexterous manipulation. Built upon a Mixture-of-Transformers (MoT) architecture, DeCAL leverages specialized experts for each capability while enabling efficient information flow among them. To effectively leverage tactile information, we introduce Adaptive Visuo-Tactile Fusion that dynamically regulates tactile interactions via a contact-aware gating strategy. Furthermore, we propose Visuo-Tactile Latent Co-Imagination to jointly model visual and tactile dynamics, equipping the policy with implicit physical world knowledge. Experimental results show that DeCAL consistently achieves state-of-the-art performance across all tasks, attaining a 71% average success rate and an 83.4% progress success rate, while also demonstrating strong generalization to unseen scenarios. The website is available at https://aureleopku.github.io/DeCAL.",
+      "published": "2026-09-08T17:47:43Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.09119",
+      "pdf_url": "https://arxiv.org/pdf/2609.09119",
+      "summary_zh": "灵巧操作面临视觉遮挡和复杂接触动力学，现有VLA模型难以应对。DeCAL提出基于Mixture-of-Transformers的架构，通过自适应视觉-触觉融合和潜在协同想象显式建模物理动态。实验取得71%平均成功率与83.4%进度成功率，并展现强泛化能力。",
+      "summary_en": "Dexterous manipulation suffers from visual occlusions and complex contact dynamics, challenging existing VLA models. DeCAL introduces a Mixture-of-Transformers architecture with adaptive visuo-tactile fusion and latent co-imagination to model physical dynamics explicitly. It achieves 71% average success and 83.4% progress success rates, demonstrating strong generalization to unseen scenarios.",
+      "highlights_zh": [
+        "接触感知门控融合与协同想象",
+        "71%成功率与83.4%进度成功率",
+        "泛化性强，但仅限仿真任务"
+      ]
+    }
+  ]
+}
