@@ -1,0 +1,315 @@
+{
+  "date": "2026-09-10",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.10522",
+      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+      "authors": [
+        "Yanzhe Chen",
+        "Zechen Bai",
+        "Zhijun Cao",
+        "Wenzheng Zeng",
+        "Kevin Qinghong Lin",
+        "Yiqi Lin",
+        "Guoqiang Liang",
+        "Kevin Yuchen Ma",
+        "Qiming Huang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harness that enables VLMs to \"play\" robots through a compact semantic interface linking intent to action. Show-Harness exposes discrete semantic action units that VLMs can naturally reason over, while embodiment-specific interpreters deterministically ground them into local robot actions, keeping the VLM directly responsible for fine-grained physical decisions. Through the same interface, Show-Harness demonstrates the feasibility of (1) directly unlocking closed-source frontier VLMs for zero-shot robot control, and (2) adapting small-scale open-source VLMs for low-cost deployment with just a few GPU-hours of fine-tuning. We further develop GUMI (GUI Manipulation Interface), which extends the same semantic action space to GUI-based demonstration collection, allowing humans and agents to \"play\" robots across embodiments without specialized teleoperation hardware. Extensive experiments show that Show-Harness-equipped VLM agents generalize robustly across tasks, embodiments, and environments, outperforming representative agentic and VLA paradigms. These results suggest that the right interface can unlock substantial embodied capability from foundation VLMs, without requiring additional model capacity or costly embodiment-specific pretraining.",
+      "published": "2026-09-09T17:53:38Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10522",
+      "pdf_url": "https://arxiv.org/pdf/2609.10522",
+      "summary_zh": "将基础VLM的世界智能转化为机器人控制仍很困难。本文提出Show-Harness，通过离散语义动作单元与具身解释器构成的紧凑语义接口，让VLM直接负责细粒度物理决策，并借助GUMI将同一动作空间扩展到GUI演示采集。实验表明该接口使VLM智能体在任务、具身和环境间稳健泛化，超越代表性智能体与VLA范式，无需额外模型容量或昂贵的具身预训练。",
+      "summary_en": "Translating foundation VLMs' broad world intelligence into robot control remains challenging. Show-Harness introduces a compact semantic interface of discrete action units with embodiment-specific interpreters, keeping the VLM responsible for fine-grained physical decisions, and GUMI extends this action space to GUI-based demonstration collection. Experiments show VLM agents with Show-Harness generalize robustly across tasks, embodiments, and environments, outperforming representative agentic and VLA paradigms without extra model capacity or costly embodiment-specific pretraining.",
+      "highlights_zh": [
+        "语义动作接口解耦VLM与具身",
+        "跨任务具身环境超越VLA范式",
+        "低成本适配开源VLM部署"
+      ]
+    },
+    {
+      "id": "2609.10494",
+      "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+      "authors": [
+        "Blake Stenstrom",
+        "Charangan Vasantharajan",
+        "Brian Sathianathan"
+      ],
+      "abstract": "Enterprises deploy systems, not checkpoints. Usable capability depends jointly on weights, serving route, precision, output contract, and harness, yet all 18 audited benchmarks score advertised model identifiers. We treat this as measurement error and give a protocol that makes it reportable. It has three parts. A gold-blind capability-binding preflight verifies that a route can execute the evaluation contract before any task reaches it; a reliability-inclusive first-pass scoring rule keeps failure in the score while keeping unsupported capability out; and adjudication is structurally score-blind. We call the protocol IB2 and release its algorithms, classification tables, request contract, and manifest schemas. Its reference instantiation, 128 locked tasks and 987 assertions over document, spreadsheet, chart, tool and database work, stays sealed: the procedure is the artifact, not the corpus. Across eleven systems, four results. Capability availability is measurable: two complete single-route runs on identical weights later failed distinct predicates of the finalized binding gate, while a third passed that gate before a fresh run. The advertised identifier exposed neither limit. Discrimination is not uniform: four of seven suites saturate under a six-system band, with the spread almost entirely from governed database work and multi-tab joins, so we report interval-backed resolution groups, not ranks; two of the nominal five-label output's four cuts fail multiplicity adjustment. Serving-arm choice moved one declared revision and precision from 77.38 to 82.54, paired interval [0.11,10.60], though the arms differ in access mode, harness generation, and the serving tool-call parser, and harness generation is a property of our evaluator, not any endpoint. Excluding failed responses from denominators changes the point ordering, so reliability inclusion changes a conclusion, not its wording.",
+      "published": "2026-09-09T17:31:29Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10494",
+      "pdf_url": "https://arxiv.org/pdf/2609.10494",
+      "summary_zh": "企业部署的是完整系统而非模型检查点，但现有18个基准都只按广告中的模型标识符打分，忽略了服务路由、精度、输出契约和评测框架的共同作用，这构成测量误差。为此提出IB2协议，包含金标准盲测的能力绑定预检、将失败纳入分母的可靠性首轮评分规则以及结构上分数盲的裁决机制，并发布算法、分类表、请求契约和清单模式。在11个系统上验证发现能力可用性可测量、区分度不均匀且服务臂选择会显著影响得分，表明可靠性纳入会改变结论而非仅措辞，为衡量企业AI系统提供了可报告测量误差的协议。",
+      "summary_en": "Enterprises deploy systems, not checkpoints, yet all 18 audited benchmarks score advertised model identifiers, ignoring serving route, precision, output contract, and harness—a measurement error. We propose IB2, a protocol with a gold-blind capability-binding preflight, a reliability-inclusive first-pass scoring rule, and structurally score-blind adjudication, releasing algorithms, classification tables, request contracts, and manifest schemas. Across eleven systems, capability availability proved measurable, discrimination was non-uniform with saturation in four of seven suites, and serving-arm choice shifted a declared revision's precision from 77.38 to 82.54, showing that reliability inclusion changes conclusions, not just wording.",
+      "highlights_zh": [
+        "将系统级测量误差形式化为可报告协议",
+        "服务臂切换使精度从77.38升至82.54",
+        "区分度不均，需报告区间分辨率组"
+      ],
+      "highlights_zh_note": "",
+      "highlights_en": [
+        "Formalizes system-level measurement error as reportable protocol",
+        "Serving-arm switch lifts precision from 77.38 to 82.54",
+        "Non-uniform discrimination requires interval resolution groups"
+      ]
+    },
+    {
+      "id": "2609.10534",
+      "title": "Likelihood-free inference with nuisance parameters through normalizing flows",
+      "authors": [
+        "Phil Assheton"
+      ],
+      "abstract": "We present a simple decomposition of a neural-network-based normalizing flow that naturally uncovers a pivotal statistic (or something close) in the presence of nuisance parameters, based only on a sample generator from the distribution of interest. We show that the statistic is near-pivotal in the sense of minimum average KL-divergence of its $p$-values versus uniform and we argue that it can be expected to have good power when the dimension of the statistic equals the dimension of the parameter. It is able to incorporate prior knowledge about group invariances such as translation and scale. It can discover the one-sample $t$-test almost exactly, outperforms the Welch test in terms of worst-case size over a constrained variance-ratio range and achieves good calibration on partial biserial correlations, while showing higher power (and being much faster) on small-to-moderate samples than profile likelihood-ratio techniques.",
+      "published": "2026-09-09T17:58:15Z",
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10534",
+      "pdf_url": "https://arxiv.org/pdf/2609.10534",
+      "summary_zh": "在存在冗余参数时，基于神经网络的归一化流通常难以直接提取有效统计量。本文提出一种简单分解方法，仅需样本生成器即可自然发现近似枢轴统计量，并支持平移和尺度等群不变性先验。该统计量在最小平均KL散度意义下接近枢轴，能精确发现单样本t检验，在约束方差比下优于Welch检验，并在小到中等样本上比轮廓似然比方法更快、功效更高。",
+      "summary_en": "In the presence of nuisance parameters, neural-network-based normalizing flows struggle to extract effective statistics. This paper presents a simple decomposition that uncovers a near-pivotal statistic using only a sample generator, while incorporating group invariances like translation and scale. The statistic is near-pivotal in minimum average KL-divergence, discovers the one-sample t-test, outperforms the Welch test in worst-case size, and achieves higher power and speed than profile likelihood-ratio techniques on small-to-moderate samples.",
+      "highlights_zh": [
+        "仅需样本生成器即可发现近似枢轴统计量",
+        "小样本下功效和速度优于轮廓似然比",
+        "可发现t检验并优于Welch检验"
+      ],
+      "highlights_en": [
+        "Discovers near-pivotal statistic from sample generator only",
+        "Higher power and speed than profile likelihood ratio",
+        "Recovers t-test and outperforms Welch test"
+      ]
+    },
+    {
+      "id": "2609.10529",
+      "title": "A positive resolution of the gap-entropy conjecture",
+      "authors": [
+        "P. M. Aronow",
+        "Nathan Kallus",
+        "Patrick Lopatto"
+      ],
+      "abstract": "We prove the gap-entropy conjecture for fixed-confidence best-arm identification with independent unit-variance Gaussian arms, means in $[0,1]$, and a unique optimal arm. For each suboptimal arm $i$, let $Δ_i=μ_*-μ_i$ be its gap from the optimal mean, and write $H=\\sum_{i\\ne *}Δ_i^{-2}$. Let $p_r$ be the fraction of $H$ contributed by arms with $2^{-(r+1)}<Δ_i\\le2^{-r}$, and let $\\mathrm{Ent}(I)=\\sum_{r:p_r>0} p_r\\log(1/p_r)$. Among all algorithms that identify the optimal arm with probability at least $1-δ$ on every Gaussian instance, the optimal expected number of samples on a given instance, averaged over all permutations of the arm labels, is within absolute constant factors of $H(\\log(1/δ)+\\mathrm{Ent}(I))$. Moreover, there is an algorithm, independent of the instance, whose expected number of samples is bounded by a constant multiple of this quantity plus $g^{-2}\\log\\log(e^e/g)$, where $g=\\min_{i\\ne *}Δ_i$ is the gap to the closest competitor.",
+      "published": "2026-09-09T17:57:11Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10529",
+      "pdf_url": "https://arxiv.org/pdf/2609.10529",
+      "summary_zh": "本文研究固定置信度下的最佳臂识别问题，针对独立单位方差高斯臂、均值在[0,1]且存在唯一最优臂的场景。作者证明了间隙-熵猜想，给出了最优期望样本数的紧致刻画，并设计了一个与实例无关的算法达到该下界（附加低阶项）。该结果解决了该领域长期存在的猜想，为最佳臂识别的最优样本复杂度提供了完整理论依据。",
+      "summary_en": "This paper studies fixed-confidence best-arm identification with independent unit-variance Gaussian arms, means in [0,1], and a unique optimal arm. The authors prove the gap-entropy conjecture, establishing that the optimal expected sample complexity (averaged over arm-label permutations) is within constant factors of H(log(1/δ)+Ent(I)), and provide an instance-independent algorithm achieving this bound up to a lower-order term. This resolves a long-standing conjecture and provides a complete theoretical characterization of optimal sample complexity in best-arm identification.",
+      "highlights_zh": [
+        "证明间隙-熵猜想，给出最优样本复杂度紧致界",
+        "达到下界且附加项为g^{-2}loglog(e^e/g)",
+        "解决长期猜想，指导最优算法设计"
+      ],
+      "highlights_en": [
+        "Proves gap-entropy conjecture with tight sample complexity bound",
+        "Achieves bound up to g^{-2}loglog(e^e/g) additive term",
+        "Resolves long-standing conjecture, guides optimal algorithm design"
+      ]
+    },
+    {
+      "id": "2609.10539",
+      "title": "IdeaAMBIG: Benchmarking Implementation-Critical Gaps in Research-Idea Specifications",
+      "authors": [
+        "Yiling Ma",
+        "Yilun Zhao",
+        "Sihong Wu",
+        "Manasi Patwardhan",
+        "Arman Cohan"
+      ],
+      "abstract": "A research idea may be novel, coherent, and scientifically plausible, yet its proposed method may remain insufficiently specified for faithful implementation. We study the codification readiness of implementation-facing research-method specifications, defined by whether they provide sufficient methodological information for a competent implementer or coding agent to construct the intended method without unsupported assumptions. We construct evidence-grounded specifications and their supported resolutions from papers, codebases, issue threads, and reproduction artifacts. We introduce IdeaAMBIG, a benchmark of 660 evidence-grounded instances: 163 real-world gaps from reproducibility reports and GitHub issues, and 497 controlled synthetic gaps injected into codification-ready references. IdeaAMBIG evaluates three capabilities: codification-readiness assessment, defect localization, and clarification action generation. Defect localization receives only the specification, whereas clarification additionally receives the annotated defect. Across 13 LLMs, the best model achieves 9.6% Macro Defect Recovery Rate on real-world instances but 80.6% Macro Clarification Action Success Rate when given the defect. In an oracle study, supplying the gold resolution raises the downstream codification-ready rate from 14% to 98%. Across all evaluated models, defect localization is the main bottleneck, with stronger clarification given the defect.",
+      "published": "2026-09-09T17:59:04Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10539",
+      "pdf_url": "https://arxiv.org/pdf/2609.10539",
+      "summary_zh": "研究想法即使新颖合理，其方法描述也可能不足以支撑忠实实现，即缺乏“可编码就绪性”。作者构建了IdeaAMBIG基准，包含660个基于证据的实例（163个真实缺陷与497个合成缺陷），评估可编码就绪性判断、缺陷定位和澄清动作生成三项能力。实验显示最佳模型在真实实例上缺陷定位恢复率仅9.6%，但给定缺陷后澄清成功率可达80.6%，且提供金标解决方案可将下游可编码就绪率从14%提升至98%，表明缺陷定位是主要瓶颈。",
+      "summary_en": "A research idea may be novel and plausible, yet its method description can be too underspecified for faithful implementation, a property the authors call codification readiness. They introduce IdeaAMBIG, a 660-instance evidence-grounded benchmark (163 real-world gaps from reproducibility reports and GitHub issues, plus 497 synthetic gaps) that evaluates codification-readiness assessment, defect localization, and clarification action generation. Across 13 LLMs, the best model achieves only 9.6% Macro Defect Recovery Rate on real instances but 80.6% Macro Clarification Action Success Rate when given the defect, and oracle resolutions raise downstream codification-ready rates from 14% to 98%, identifying defect localization as the key bottleneck.",
+      "highlights_zh": [
+        "构建可编码就绪性基准IdeaAMBIG",
+        "真实缺陷定位恢复率仅9.6%",
+        "缺陷定位是主要瓶颈"
+      ],
+      "highlights_zh_note": "",
+      "highlights_en": [
+        "Introduces IdeaAMBIG codification-readiness benchmark",
+        "Best real-world defect recovery only 9.6%",
+        "Defect localization is the main bottleneck"
+      ]
+    },
+    {
+      "id": "2609.10445",
+      "title": "Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning",
+      "authors": [
+        "Mehrnaz Mofakhami",
+        "Ananya Sahu",
+        "Alejandro R. Salamanca",
+        "Daniel D'souza",
+        "Alexandre Berard",
+        "Thomas Euyang",
+        "Marzieh Fadaee",
+        "Julia Kreutzer"
+      ],
+      "abstract": "Reasoning language models have made substantial advances on a variety of complex tasks, yet their capabilities remain overwhelmingly English-centric: models primarily reason in English regardless of the language they are prompted in. This is inaccessible for non-English-speaking users, risks losing the intent of the original question, and forgoes knowledge more readily expressed in the target language. In this work, we advance L2 reasoning, the ability of a model to reason consistently in the language of the user's prompt, thus building an in-language bridge between the prompt and the answer. We approach this problem from a data-centric angle, investigating how to optimize data composition and scheduling in SFT for reasoning generalization. Building Tiny Aya L2-Thinker at 3.35B scale, we achieve an L2 reasoning rate above 93% across 60 languages on 6 benchmarks spanning math, commonsense reasoning, instruction following, open-ended generation, and cultural reasoning while keeping performance strong. We show the path to generalizing L2 reasoning to held-out languages goes through broader language coverage, readily available multilingual non-reasoning data, and a sufficient English reasoning backbone. These findings indicate that reasoning is a language-agnostic behavior that can be transferred across typologically diverse languages through careful data mixing and without requiring reasoning supervision in every target language. We release our model weights and multilingual reasoning data to support further research on accessible, in-language reasoning.",
+      "published": "2026-09-09T16:56:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10445",
+      "pdf_url": "https://arxiv.org/pdf/2609.10445",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.10540",
+      "title": "Programmable World Model",
+      "authors": [
+        "Zheng-Hui Huang",
+        "Guixu Lin",
+        "Jiacheng Lin",
+        "Yi-Chuan Huang",
+        "Ruihan Yu",
+        "Muyao Niu",
+        "Siqi Yang",
+        "Yu-Lun Liu",
+        "Yung-Yu Chuang",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "abstract": "Recent video world models generate increasingly realistic and interactive visual experiences, yet lack reliable mechanisms for maintaining persistent world state and enforcing programmable rules over extended interactions. We introduce Programmable World Model, a framework that decouples world-state evolution from visual observation generation. An agent translates natural-language instructions into executable programs that specify entity states and state-transition rules, enabling direct control over individual entities and their interactions. A lightweight engine executes these programs to update and maintain an explicit, persistent global world state, including off-screen entities and non-visual attributes. To connect world state with visual generation, we introduce state-augmented 3D oriented bounding boxes (OBBs) as an intermediate representation. This representation, together with the target camera trajectory, is deterministically compiled into pixel-aligned spatiotemporal conditioning signals for a pretrained video model serving as the generative renderer. This design allows users to create playable games with predefined mechanics, direct control over individual entities, and persistent world state throughout gameplay. We further introduce CombatStateBench, a benchmark for evaluating programmable world models. On CombatStateBench, our method achieves 94% Count Accuracy and 98% State Accuracy, substantially outperforming existing interactive video world models while supporting coherent long-horizon generation. These results demonstrate the effectiveness of separating explicit state evolution from generative rendering for building persistent, programmable worlds.",
+      "published": "2026-09-09T17:59:32Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10540",
+      "pdf_url": "https://arxiv.org/pdf/2609.10540",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.10531",
+      "title": "Guiding Image-to-3D Generation with Test-Time Partial Observations",
+      "authors": [
+        "Jerred Chen",
+        "Simon Weber",
+        "Ronald Clark"
+      ],
+      "abstract": "Image-to-3D models can generate visually compelling 3D assets from a single RGB image, but their geometry is often only loosely constrained by the available observations, limiting their use in applications that require geometric fidelity. In many real-world settings, however, partial geometric observations of the object may be available at test time. We introduce a training-free framework for incorporating such evidence into pretrained image-to-3D generative models without retraining or finetuning. To do this, we guide generation using a ray-consistent observation likelihood defined over the model's occupancy representation, combining surface occupancy and free-space evidence. Applied to SAM 3D and its multi-view extension, our approach substantially improves geometric fidelity across different levels of observability, as well as visual quality. Our results demonstrate that pretrained image-to-3D models can effectively integrate partial geometric observations through explicit test-time guidance, complementing their learned generative priors without modifying the underlying model.",
+      "published": "2026-09-09T17:58:04Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10531",
+      "pdf_url": "https://arxiv.org/pdf/2609.10531",
+      "summary_zh": "单图生成3D模型虽视觉效果好，但几何结构仅被观测松散约束，难以满足几何保真需求。本文提出免训练框架，在测试时利用部分几何观测，通过基于占用表示的射线一致观测似然引导预训练生成模型。在SAM 3D及多视角扩展上，该方法显著提升不同观测程度下的几何保真度与视觉质量，证明测试时引导可有效融合部分观测而不改动原模型。",
+      "summary_en": "Single-image-to-3D models produce visually appealing assets but their geometry is only loosely constrained by observations, limiting geometric fidelity. This paper introduces a training-free framework that guides pretrained image-to-3D generative models at test time using a ray-consistent observation likelihood over the occupancy representation, combining surface and free-space evidence. Applied to SAM 3D and its multi-view extension, it substantially improves geometric fidelity across observability levels and visual quality, showing pretrained models can integrate partial observations via explicit test-time guidance without modification.",
+      "highlights_zh": [
+        "免训练测试时引导融合部分几何观测",
+        "SAM 3D几何保真度与视觉质量显著提升",
+        "无需重训即可增强生成模型几何约束"
+      ]
+    },
+    {
+      "id": "2609.10506",
+      "title": "DUET-DINO: Simultaneous Cross-View World Modeling for Latent Planning in Robot Manipulation",
+      "authors": [
+        "Nisarga Nilavadi",
+        "Ralf Römer",
+        "Moritz Reuss",
+        "Michael Krawez",
+        "Tobias Jülg",
+        "Angela P. Schoellig",
+        "Rudolf Lioutikov",
+        "Wolfram Burgard"
+      ],
+      "abstract": "Action-conditioned latent world models predict future visual representations, enabling zero-shot goal-conditioned robot planning and control. However, their predictions for fine-grained spatial and rotational actions are unreliable for full 7-DoF end-effector control. To address this gap, we introduce DUET-DINO, a simultaneous cross-view latent world model that jointly learns action-conditioned predictions from static side- and wrist-camera observations through cross-view conditioning. By exploiting complementary global scene and gripper-centric information, DUET-DINO enables latent planning over the full 7-DoF action space. Across spatially diverse reach, orientation-intensive angled-reach, and multi-goal grasp-and-lift tasks, DUET-DINO consistently outperforms single-view and independent dual-view baselines, achieving 92% success on reach, 72.5% on angled-reach, and 60.0% on lift tasks. DUET-DINO is trained from scratch on DROID and RoboArena datasets and generalizes robustly under visual distribution shifts. We further show that while V-JEPA 2 wrist-view predictions underestimate visual dynamics induced by fine-grained actions, DINOv3 predictions better capture action-conditioned scene changes, leading to stronger downstream planning. The code and model checkpoints will be open-sourced. Project page: https://utn-air.github.io/DUET-DINO",
+      "published": "2026-09-09T17:41:38Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10506",
+      "pdf_url": "https://arxiv.org/pdf/2609.10506",
+      "summary_zh": "动作条件潜在世界模型在细粒度空间与旋转动作上预测不可靠，难以支撑完整7-DoF末端执行器控制。DUET-DINO通过跨视角条件化，联合学习侧视与腕部相机的动作条件预测，融合全局场景与夹爪中心信息实现全7-DoF潜在规划。在reach、angled-reach和lift任务上分别达到92%、72.5%和60.0%成功率，优于单视角与独立双视角基线，并展现视觉分布偏移下的鲁棒泛化。",
+      "summary_en": "Action-conditioned latent world models are unreliable for fine-grained spatial and rotational actions, limiting full 7-DoF end-effector control. DUET-DINO introduces a simultaneous cross-view latent world model that jointly learns action-conditioned predictions from side- and wrist-camera observations via cross-view conditioning, exploiting complementary global and gripper-centric information for full 7-DoF latent planning. It achieves 92% success on reach, 72.5% on angled-reach, and 60.0% on lift tasks, outperforming single-view and independent dual-view baselines and generalizing robustly under visual distribution shifts.",
+      "highlights_zh": [
+        "跨视角联合世界模型实现全7-DoF规划",
+        "reach 92%、angled-reach 72.5%、lift 60.0%",
+        "DINOv3优于V-JEPA 2腕部预测"
+      ],
+      "highlights_en": [
+        "Cross-view joint world model enables full 7-DoF planning",
+        "92% reach, 72.5% angled-reach, 60.0% lift success",
+        "DINOv3 outperforms V-JEPA 2 wrist predictions"
+      ]
+    },
+    {
+      "id": "2609.10484",
+      "title": "Coastal Environment Generation with HoloOcean",
+      "authors": [
+        "Abigail Austin",
+        "Brady Moon",
+        "Joshua G. Mangelson"
+      ],
+      "abstract": "Marine robotic simulation provides a safe and inexpensive method of developing and testing algorithms for unmanned underwater vehicle (UUV) and unmanned surface vessel (USV) autonomy and perception before full field deployment. However, these simulations are often limited by the availability of simulated environments. Current marine robotics simulation suites offer manual ways to edit or create environments, but they require existing data or specialized knowledge of the environment system. To address these issues, we introduce a novel Unreal Engine 5 level generation pipeline that enables automatic creation of coastal environments for HoloOcean. Our pipeline relies on a user-provided overhead image of a coastal scene. The pipeline then uses the image to generate height map data, as well as automatically select assets and place them in the environment.",
+      "published": "2026-09-09T17:25:05Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.10484",
+      "pdf_url": "https://arxiv.org/pdf/2609.10484",
+      "summary_zh": "海洋机器人仿真常受限于可用环境，现有工具需手动编辑或依赖已有数据与专业知识。本文提出基于Unreal Engine 5的自动海岸环境生成管线，仅需用户提供海岸俯视图像，即可生成高度图并自动选取与放置资产。该管线为HoloOcean自动创建海岸环境，降低了仿真环境构建门槛，有助于UUV/USV算法的安全低成本开发与测试。",
+      "summary_en": "Marine robotic simulation is often limited by the availability of simulated environments, and existing tools require manual editing or existing data and specialized knowledge. This paper introduces an Unreal Engine 5 level generation pipeline that automatically creates coastal environments for HoloOcean from a user-provided overhead image by generating height map data and automatically selecting and placing assets. This lowers the barrier to building simulation environments, supporting safe and inexpensive development and testing of UUV/USV autonomy and perception algorithms.",
+      "highlights_zh": [
+        "仅凭俯视图像自动生成海岸环境",
+        "自动生成高度图并选取放置资产",
+        "降低仿真环境构建门槛"
+      ],
+      "highlights_zh_note": "已按要求输出"
+    }
+  ]
+}
