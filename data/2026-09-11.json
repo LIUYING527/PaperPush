@@ -1,0 +1,346 @@
+{
+  "date": "2026-09-11",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.11923",
+      "title": "GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay",
+      "authors": [
+        "Boning Li",
+        "Longbo Huang"
+      ],
+      "abstract": "Counterfactual regret minimization (CFR) is one of the few large numerical workloads that still runs faster on CPUs than on GPUs. Each iteration sweeps a game tree with up to billions of states in millions of small, interdependent gather and scatter steps issued through a generic tree interface. On a GPU every kernel finishes in microseconds, so kernel launches and framework dispatch dominate the run time, and prior GPU implementations have lost to optimized CPU code. We observe that for a fixed game, everything about a CFR iteration except the numerical values is known before the first iteration runs. We propose GPU-CFR, a compiler and runtime built on this observation. It compiles any game once into static dataflow: flat edge and information-set arrays, precomputed indices, and depth-level batched passes fix the entire operation sequence, and only solver state changes between iterations. Static chance folding, depth-level execution blocks, and a dual-lane reach buffer cut the number of framework operations by up to 18.1x. Because shapes, indices, and buffer addresses never change, CUDA Graph Replay records the iteration once and replays it with a single graph launch. On one A100, across an eight-game suite that spans card games, dice games, and board games, GPU-CFR runs 29.8--80.4x faster than the fastest prior GPU CFR on the same accelerator, and 14--258x faster than LiteEFG, one of the fastest open-source CPU implementations, on the four largest games. The compiled representation carries most of that margin: on eight CPU threads with no accelerator it is already 2.2--51.1x faster than the GPU baseline. On the CPU the optimized path reproduces the reference iterates bitwise, and tree construction and graph capture pay for themselves within the first solve. GPU-CFR beats every CPU and GPU baseline on the mid-to-large games of the suite without changing the update rule.",
+      "published": "2026-09-10T17:58:14Z",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.GT",
+        "cs.MS",
+        "cs.PL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11923",
+      "pdf_url": "https://arxiv.org/pdf/2609.11923",
+      "summary_zh": "反事实遗憾最小化（CFR）是少数在CPU上比GPU更快的大规模数值工作负载之一，因为每轮迭代需通过通用树接口发起数百万次微小且相互依赖的gather/scatter操作，GPU上内核启动和框架调度开销占主导。GPU-CFR观察到固定游戏中除数值外的一切在首轮迭代前已知，于是将游戏一次性编译为静态数据流（扁平边与信息集数组、预计算索引、深度级批量传递），并利用CUDA Graph Replay将整轮迭代录制为单次图启动重放。在A100上，GPU-CFR比最快的GPU CFR基线快29.8–80.4倍，在四个最大游戏上比最快的开源CPU实现LiteEFG快14–258倍，且不改变更新规则即可在中小大型游戏上击败所有CPU和GPU基线。",
+      "summary_en": "Counterfactual regret minimization (CFR) is one of the few large numerical workloads that still runs faster on CPUs than GPUs, because each iteration sweeps a game tree via millions of tiny interdependent gather/scatter steps where kernel launches and framework dispatch dominate GPU runtime. GPU-CFR observes that for a fixed game everything except numerical values is known before the first iteration, so it compiles the game once into static dataflow (flat edge and information-set arrays, precomputed indices, depth-level batched passes) and records the iteration with CUDA Graph Replay for single-launch replay. On one A100, GPU-CFR runs 29.8–80.4x faster than the fastest prior GPU CFR and 14–258x faster than LiteEFG on the four largest games, beating every CPU and GPU baseline on mid-to-large games without changing the update rule.",
+      "highlights_zh": [
+        "游戏编译为静态数据流+CUDA图重放",
+        "比最快GPU基线快29.8–80.4倍",
+        "不改更新规则即超越所有基线"
+      ]
+    },
+    {
+      "id": "2609.11918",
+      "title": "General Quantification of Covariate and Concept Shifts",
+      "authors": [
+        "Hongbo Chen",
+        "Li Charlie Xia"
+      ],
+      "abstract": "Generalization under distribution shift remains a core challenge in modern machine learning, yet existing learning bound theory is limited to narrow, idealized settings and is non-estimable from samples. In this paper, we bridge the gap between theory and practical applications. We first show that existing definition of concept shift breaks when the source and target supports mismatch. Leveraging entropic optimal transport, we propose a key notion: $γ^{*}\\!$-concept shifts, and derive a general error bound unifying covariate and $γ^{*}\\!$-concept shifts, which applies to broad loss functions, label spaces, and stochastic labeling. We further develop estimators for these shifts with concentration guarantees, and the DataShifts algorithm, which can quantify distribution shifts and estimate the error bound in most applications - a rigorous and general tool for analyzing learning error under distribution shift.",
+      "published": "2026-09-10T17:57:52Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11918",
+      "pdf_url": "https://arxiv.org/pdf/2609.11918",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.11917",
+      "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data",
+      "authors": [
+        "Atindra Jha",
+        "Margaret Li",
+        "Jure Leskovec",
+        "Percy Liang",
+        "Luke Zettlemoyer"
+      ],
+      "abstract": "As the supply of human-written text is exhausted, it has become standard practice to repeat language model training data. Prior work has studied data repetition for densely activated Transformers, but the effects of data repetition remains largely unexplored for recently dominant sparse architectures such as Mixture-of-Experts (MoE), despite their increased compute efficiency. We vary data repetition rates across single- and multi-domain data mixes, and across MoE settings, including expert count and granularity. We consistently find, for models ranging from 80M to 1B active (8.5B total) parameters, that MoEs degrade more rapidly under data repetition. This effect increases with sparsity, dictated by total rather than active parameters. While 80M dense models can repeat data over 8x with minimal degradation, MoEs instead begin to suffer at 4x, and deteriorate rapidly, ceding their performance benefits in all-unique data settings to underperform dense models after 32x. We experiment with existing regularization methods as a potential remedy. We find that some methods, such as dropout, can mitigate overfitting. In particular, with strong masking-based regularization, MoEs are able to outperform dense models even when data is repeated more than 64 times. However, no method fully matches the performance of all-unique training data. Finally, we analyze internal mechanisms correlated with MoE overfitting in high repetition regimes, and find that MoE routing universally stabilizes early in training, and that expert specialization correlates with overfitting to repeated data. In sum, our work addresses the adverse interactions between sparsity and data repetition: we present evidence for the core mechanisms of overfitting and its potential remediation, and suggest promising avenues for future methods to reduce over-specialization in model parameters by disrupting memorization patterns.",
+      "published": "2026-09-10T17:57:33Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11917",
+      "pdf_url": "https://arxiv.org/pdf/2609.11917",
+      "summary_zh": "随着人类文本数据枯竭，重复训练数据成为常态，但数据重复对稀疏架构（如MoE）的影响尚不清楚。本文在80M到1B激活参数（8.5B总参数）的MoE上系统变化数据重复率、专家数量和粒度，并与稠密模型对比。结果发现MoE在4倍重复时即开始退化，32倍后性能反而不如稠密模型，且退化程度随稀疏度增加，但通过强掩码正则化可在64倍重复下仍优于稠密模型，揭示了专家特化与过拟合的关联。",
+      "summary_en": "As human-written text is exhausted, repeating training data is standard, but the effect of repetition on sparse architectures like Mixture-of-Experts (MoE) remains unexplored. We systematically vary data repetition rates, expert counts, and granularity across MoE models from 80M to 1B active (8.5B total) parameters, comparing them to dense models. We find MoEs degrade faster under repetition, starting at 4x and underperforming dense models after 32x, with degradation increasing with sparsity; strong masking-based regularization can mitigate this, allowing MoEs to outperform dense models even at 64x repetition, and we link expert specialization to overfitting.",
+      "highlights_zh": [
+        "首次系统揭示MoE比稠密模型更易因数据重复而过拟合",
+        "强掩码正则化使MoE在64倍重复下仍优于稠密模型",
+        "专家特化与过拟合相关，需破坏记忆模式"
+      ]
+    },
+    {
+      "id": "2609.11910",
+      "title": "From Protocols to Evidence: Bounded Claims for AI in Service of the Common Good",
+      "authors": [
+        "Nitesh V. Chawla",
+        "Paulo Benanti"
+      ],
+      "abstract": "Artificial Intelligence does more than create a governance problem. It can also reveal where institutions have already failed to provide responsiveness, belonging, care, and accountability. Once deployed, AI becomes an intervention in those conditions. It can repair, compound, substitute for, or conceal the failures it encounters. Responsible AI must therefore evaluate both the system and the institutional rupture into which it is introduced. The move from principles to protocols is already underway. The EU AI Act, NIST AI RMF, ISO/IEC 42001, and assurance practices translate commitments into roles, requirements, records, oversight, and assessment. The harder questions are what these protocols actually establish, whose power they leave untouched, and where measurement must stop. Pope Leo XIV's Magnifica Humanitas provides a broader moral frame centered on dignity, technological power, and the common good. Drawing on that frame, we develop a rupture test that links institutional baselines to system evaluation. We distinguish evidence-bounded deployment, which limits claims to what has actually been evaluated, from measurement-bounded governance, which records constraints that favorable evidence cannot override. Within those limits, RISE AI provides an architecture for making bounded, evidence-based claims about Responsibility, Inclusivity, Safety, and Empowerment. Responsible AI requires better engineering, institutional repair, and continued moral and political judgment.",
+      "published": "2026-09-10T17:56:36Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11910",
+      "pdf_url": "https://arxiv.org/pdf/2609.11910",
+      "summary_zh": "AI部署不仅是治理问题，更会介入并暴露机构在响应性、归属感、关怀与问责上的既有失败，因此责任AI需同时评估系统与制度断裂。论文基于教皇利奥十四世《Magnifica Humanitas》的道德框架，提出“断裂测试”将制度基线与系统评估相连接，并区分证据限定的部署与测量限定的治理，进而构建RISE AI架构。该工作为责任、包容、安全与赋权提供有界、基于证据的主张框架，强调责任AI需要更好的工程、制度修复以及持续的道德与政治判断。",
+      "summary_en": "AI deployment is not merely a governance problem; it intervenes in and reveals pre-existing institutional failures in responsiveness, belonging, care, and accountability, so responsible AI must evaluate both the system and the institutional rupture it enters. Drawing on Pope Leo XIV's Magnifica Humanitas, the paper develops a rupture test linking institutional baselines to system evaluation, distinguishing evidence-bounded deployment from measurement-bounded governance, and builds the RISE AI architecture for bounded, evidence-based claims about Responsibility, Inclusivity, Safety, and Empowerment. This work shows that responsible AI requires better engineering, institutional repair, and continued moral and political judgment.",
+      "highlights_zh": [
+        "提出断裂测试连接制度基线与系统评估",
+        "区分证据限定部署与测量限定治理",
+        "RISE AI架构支撑四维有界主张"
+      ]
+    },
+    {
+      "id": "2609.11913",
+      "title": "Distance generalization in transformers: why bother with positional encoding?",
+      "authors": [
+        "Daniel Henrik Nevermann",
+        "Claudius Gros"
+      ],
+      "abstract": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping a fixed context length. We construct two synthetic delay copy tasks, both involving finite distances between source and recall, where tokens are copied either fully or selectively, and test models on delays unseen during training. We address three questions: (A) Do positional encoding schemes such as RoPE and ALiBi improve distance resolution relative to no positional encoding (NoPE)? (B) How does data diversity, the number of inter-token distances seen in training, affect performance? (C) When is distance transfer learning positive or negative? We present a thorough investigation, finding that it is paramount to improve our understanding of the underlying mechanisms.",
+      "published": "2026-09-10T17:57:19Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11913",
+      "pdf_url": "https://arxiv.org/pdf/2609.11913",
+      "summary_zh": "针对Transformer在固定上下文长度下、训练与推理时token间距离变化导致的距离泛化问题，现有位置编码方案的作用尚不明确。作者构建了两种延迟复制合成任务（完整复制与选择性复制），系统测试RoPE、ALiBi与无位置编码（NoPE）在未见延迟上的表现，并考察训练距离多样性与距离迁移学习的影响。研究发现位置编码对距离分辨率的提升并非关键，数据多样性和迁移方向显著影响泛化，强调需深入理解其底层机制。",
+      "summary_en": "Distance generalization in transformers probes performance when inter-token distances change between training and inference while context length stays fixed, yet the role of positional encoding remains unclear. The authors design two synthetic delay copy tasks (full and selective copying) and systematically test RoPE, ALiBi, and NoPE on unseen delays, also examining training distance diversity and distance transfer learning. They find that positional encoding is not paramount for distance resolution, while data diversity and transfer direction strongly affect generalization, highlighting the need to understand underlying mechanisms.",
+      "highlights_zh": [
+        "构建延迟复制任务探究距离泛化",
+        "位置编码非距离分辨率关键因素",
+        "需深入理解底层机制以指导设计"
+      ]
+    },
+    {
+      "id": "2609.11900",
+      "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
+      "authors": [
+        "Yunfei Ge",
+        "Anbang Liu",
+        "Qineng Wang",
+        "Johnalbert Garnica",
+        "Jianwen Lyu",
+        "Zihan Wang",
+        "Reuben Tan",
+        "Jianfeng Gao",
+        "Ruohan Zhang",
+        "Yining Hong",
+        "Jiajun Wu",
+        "Manling Li"
+      ],
+      "abstract": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity, separation, order, enclosure, and knots. MindTopo evaluates each property at two cognitive levels. Reasoning asks a model to identify topological relations or infer how they change. Planning instantiates a foundation model as a closed-loop agent whose policy selects environment actions. MindTopo contains 11,030 instances across 13 procedurally generated task types with controllable difficulty. We benchmark 14 MLLMs and study agent configurations augmented with image and video generation, including 3 video generative models in planning settings. Every MLLM performs better on reasoning than on planning, and the best-performing model remains far below observed human performance. On Qwen3-VL-2B-Instruct, supervised fine-tuning and reinforcement learning improve reasoning more than planning. Generated observations retain local cues and reach plausible endpoints, but audited rollouts do not reliably follow environment dynamics or preserve topology across transitions. Our website is at https://mind-topo.github.io/",
+      "published": "2026-09-10T17:54:32Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11900",
+      "pdf_url": "https://arxiv.org/pdf/2609.11900",
+      "summary_zh": "现有基础模型的空间推理评测多聚焦度量或视角相关关系，忽视了连续变形下保持不变、被认知科学视为空间理解基础的拓扑关系。作者提出MindTopo基准，覆盖连续性、分离性、顺序、包围和纽结五种拓扑属性，并在推理与闭环智能体规划两个认知层次上，通过13类程序化生成任务、11,030个实例对14个多模态大模型及视频生成增强配置进行评测。结果显示所有模型推理均优于规划且远低于人类水平，微调与强化学习对推理的提升大于规划，生成的观测虽保留局部线索却难以可靠遵循环境动力学与拓扑一致性，凸显了拓扑空间推理这一关键能力缺口。",
+      "summary_en": "Existing evaluations of foundation-model spatial reasoning focus mainly on metric or viewpoint-dependent relations, overlooking topological relations that stay invariant under continuous deformation and are considered foundational by cognitive science. We introduce MindTopo, a benchmark spanning five topological properties (continuity, separation, order, enclosure, knots) at two cognitive levels—reasoning and closed-loop agent planning—with 11,030 instances across 13 procedurally generated task types, used to evaluate 14 MLLMs and generation-augmented agent configurations. Every model reasons better than it plans and remains far below human performance; fine-tuning and RL improve reasoning more than planning, and generated observations preserve local cues but fail to reliably follow environment dynamics or preserve topology, exposing a critical gap in topological spatial reasoning.",
+      "highlights_zh": [
+        "首个认知科学驱动的拓扑空间推理基准",
+        "所有模型推理优于规划且远低于人类",
+        "揭示生成观测难保拓扑一致性局限"
+      ]
+    },
+    {
+      "id": "2609.11929",
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+      "authors": [
+        "Haiwen Diao",
+        "Jiahao Wang",
+        "Chenjing Ding",
+        "Hanming Deng",
+        "Jiangnan Chen",
+        "Ruixi Zhang",
+        "Ruohui Wang",
+        "Wenwen Tong",
+        "Xiangyu Fan",
+        "Yubo Wang",
+        "Yue Zhu",
+        "Yuwei Niu",
+        "Zhengqi Bai",
+        "Zhiqian Lin",
+        "Zhitao Yang",
+        "Zhongang Cai",
+        "Bo Yang",
+        "Chen Feng",
+        "Chengguang Lv",
+        "Guangjia Liu",
+        "Guanlin Wang",
+        "Hanyu Zhang",
+        "Haojia Yu",
+        "Hongcan Xiao",
+        "Hongli Wang",
+        "Huan Wu",
+        "Huaping Zhong",
+        "Jian Fang",
+        "Jianan Fan",
+        "Jiaqi Li",
+        "Jiefan Lu",
+        "Jing Zuo",
+        "Jingcheng Ni",
+        "Junxiang Xu",
+        "Linjun Dai",
+        "Mutian Xu",
+        "Peishen Yan",
+        "Penghao Wu",
+        "Ruijie Mao",
+        "Ruisi Wang",
+        "Shihao Bai",
+        "Shuang Yang",
+        "Shuya Yang",
+        "Shuyan Zheng",
+        "Silei Wu",
+        "Siying Li",
+        "Tao Chu",
+        "Tianbo Zhong",
+        "Tongxi Zhou",
+        "Weichao Luo",
+        "Weichen Fan",
+        "Wenhao Jia",
+        "Wenjie Gao",
+        "Xiangli Kong",
+        "Yan Li",
+        "Yang Yong",
+        "Zimo Wen",
+        "Zixuan Qian",
+        "Wenxiu Sun",
+        "Ruihao Gong",
+        "Quan Wang",
+        "Lewei Lu",
+        "Lei Yang",
+        "Ziwei Liu",
+        "Dahua Lin"
+      ],
+      "abstract": "We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface through spatially coherent patch reconstruction and scale its training with carefully curated generation and editing data, improved task formulation, structural prompt enhancement, and native resolutions of up to 4K. For post-training, we optimize specialized experts for visual aesthetics, bilingual text rendering, infographic generation, and image editing, and consolidate their capabilities through multi-expert on-policy distillation. Across extensive evaluations, SenseNova-U1.5 largely advances image fidelity, text rendering, complex composition, multi-reference editing, and interleaved generation, while improving instruction following and preserving subject identity, geometry, and unmodified regions. Despite limited exposure to structured formats in its generation data, SenseNova-U1.5 generalizes effectively to long, complex, and structured visual instructions, further proving that multimodal understanding can transfer to visual planning and creation. Together, these findings position native unified modelling as a promising path towards systems that perceive, reason and create within a fully end-to-end framework. We will open-source training code, including supervised fine-tuning, reinforcement learning, and on-policy distillation.",
+      "published": "2026-09-10T17:59:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11929",
+      "pdf_url": "https://arxiv.org/pdf/2609.11929",
+      "summary_zh": "现有多模态模型通常依赖编码器和VAE，难以在统一框架内同时实现视觉理解与生成。SenseNova-U1.5提出8B-MoT无编码器、无VAE的原生统一架构，通过空间一致patch重建、4K原生分辨率、任务重构与多专家在线策略蒸馏强化视觉生成与编辑能力。该模型在图像保真度、文本渲染、复杂构图、多参考编辑和交错生成上大幅提升，并证明多模态理解可迁移至视觉规划与创作，为端到端感知-推理-创造系统提供可行路径。",
+      "summary_en": "Existing multimodal models typically rely on encoders and VAEs, making unified visual understanding and generation difficult within one framework. SenseNova-U1.5 introduces an 8B-MoT native unified model with an encoder-free and VAE-free architecture, enhanced by spatially coherent patch reconstruction, 4K native resolution, improved task formulation, and multi-expert on-policy distillation. It largely advances image fidelity, text rendering, complex composition, multi-reference editing, and interleaved generation, showing that multimodal understanding can transfer to visual planning and creation and positioning native unified modeling as a promising path toward end-to-end perception, reasoning, and creation.",
+      "highlights_zh": [
+        "无编码器无VAE原生统一架构",
+        "4K生成与多参考编辑显著提升",
+        "开源训练代码，推动端到端创作"
+      ]
+    },
+    {
+      "id": "2609.11899",
+      "title": "Caption-once, Frames-on-Demand: Visual-Need Routing for Budget-Aware Agentic Long Video Understanding",
+      "authors": [
+        "Weitong Cai",
+        "Hang Zhang",
+        "Yukai Huang",
+        "Yiqiao Xie",
+        "Shan Gao",
+        "Jiankang Deng",
+        "Songcen Xu",
+        "Jifei Song",
+        "Zhensong Zhang"
+      ],
+      "abstract": "Long-video understanding on edge devices must reason over hours of content under tight compute and bandwidth budgets. Subsampling visual tokens loses temporal structure, while text-only video memories lose fine-grained visual attributes. We observe a visual-textual duality: language memories carry long-range temporal structure better than dense frames, while pixels remain decisive for attribute-level perception. Building on this insight, we propose Caption-once, Frames-onDemand (CFD), a budget-aware edge-cloud agentic framework. The edge runs a single offline captioning pass that builds a dual-track narrative index, an event-level story skeleton plus a clip-level micro-log, cached and reused across queries without re-captioning. At query time, a cloud-side MLLM reasons over the index in a story-first loop centered on a lightweight Visual-Need Router: a per-query gating module that triggers bounded keyframe retrieval only for perceptual questions (appearance, on-screen text, attribute disambiguation) and keeps temporal-structural questions in language space. The router turns visual access into a first-class, query-conditioned cost, capping per-query frame consumption regardless of video length. Experiments on long-video benchmarks demonstrate strong accuracy-efficiency trade-offs while substantially reducing online visual processing.",
+      "published": "2026-09-10T17:53:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11899",
+      "pdf_url": "https://arxiv.org/pdf/2609.11899",
+      "summary_zh": "长视频理解在边缘设备上需在严格算力与带宽预算下处理数小时内容，而视觉token下采样会丢失时序结构，纯文本记忆又丢失细粒度视觉属性。本文提出Caption-once, Frames-on-Demand（CFD）框架，边缘端一次性离线生成事件级故事骨架与片段级微日志的双轨叙事索引，云端MLLM通过轻量Visual-Need Router按查询条件仅在感知类问题上触发有界关键帧检索。在长视频基准上实现了优异的精度-效率权衡，大幅降低在线视觉处理开销。",
+      "summary_en": "Long-video understanding on edge devices must reason over hours of content under tight compute and bandwidth budgets, where subsampling visual tokens loses temporal structure and text-only memories lose fine-grained visual attributes. We propose Caption-once, Frames-on-Demand (CFD), a budget-aware edge-cloud agentic framework that builds a dual-track narrative index via a single offline captioning pass and uses a cloud-side Visual-Need Router to trigger bounded keyframe retrieval only for perceptual queries. Experiments on long-video benchmarks show strong accuracy-efficiency trade-offs with substantially reduced online visual processing.",
+      "highlights_zh": [
+        "双轨叙事索引+按需视觉路由",
+        "长视频基准精度效率权衡优异",
+        "降低在线视觉开销，边缘友好"
+      ]
+    },
+    {
+      "id": "2609.11920",
+      "title": "EVPeriscope: Extended Perception across Aerial and Ground Vehicles with Event-based Propeller Tracking",
+      "authors": [
+        "Dexter Ong",
+        "Vijay Kumar",
+        "Pratik Chaudhari"
+      ],
+      "abstract": "Reliable relative localization between aerial and ground robots is a key requirement for tightly coordinated heterogeneous teams. This can be difficult to do using conventional frame-based cameras and fiducial markers because they are sensitive to motion blur, lighting variations, and payload constraints. This paper presents EVPeriscope, an event-based perception system that enables detection, localization and control of a quadrotor using an upward-facing event camera on a ground robot by detecting the high-frequency visual signature of its propellers. This system allows the quadrotor to function as an extended perception system for the ground robot when onboard sensors exhibit degradation or occlusion. We demonstrate the capabilities of this marsupial ground-aerial system via experiments in challenging field conditions with wind speeds of up to 15 mph, in both daylight and at night. We show that the system supports localization and closed-loop navigation through dense foliage where the ground robot's sensors are occluded. Our control system for the quadrotor operates at 200 Hz entirely with onboard sensing and computation. More details and experiment videos can be found on the project page: https://ongdexter.github.io/evperiscope.",
+      "published": "2026-09-10T17:58:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11920",
+      "pdf_url": "https://arxiv.org/pdf/2609.11920",
+      "summary_zh": "空中与地面机器人间的可靠相对定位对紧密协同的异构团队至关重要，但传统帧相机和基准标记易受运动模糊、光照变化和载荷限制影响。本文提出EVPeriscope，一种基于事件的感知系统，通过地面机器人朝上的事件相机检测四旋翼螺旋桨的高频视觉特征，实现对其检测、定位与控制。该系统在高达15 mph风速的白天和夜间野外实验中验证了定位与闭环导航能力，并能在密集植被遮挡地面传感器时支持导航，四旋翼控制以200 Hz完全机载运行。",
+      "summary_en": "Reliable relative localization between aerial and ground robots is essential for tightly coordinated heterogeneous teams, but conventional frame-based cameras and fiducial markers struggle with motion blur, lighting variations, and payload constraints. This paper presents EVPeriscope, an event-based perception system that detects, localizes, and controls a quadrotor using an upward-facing event camera on a ground robot by sensing the high-frequency visual signature of its propellers. Experiments in challenging field conditions with winds up to 15 mph, day and night, demonstrate localization and closed-loop navigation through dense foliage where the ground robot's sensors are occluded, with quadrotor control running at 200 Hz entirely onboard.",
+      "highlights_zh": [
+        "事件相机检测螺旋桨高频特征",
+        "15 mph风速下昼夜定位导航",
+        "遮挡环境扩展感知，依赖机载算力"
+      ]
+    },
+    {
+      "id": "2609.11875",
+      "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "authors": [
+        "Wei Li",
+        "Rui Shao",
+        "Jie He",
+        "Lingsen Zhang",
+        "Ziwei Liu",
+        "Liqiang Nie"
+      ],
+      "abstract": "Recent advances in Vision-Language-Action (VLA) models have improved robotic manipulation, yet observation-to-action learning remains limited by a fundamental transition realizability gap, manifested in three tightly coupled problems: (i) Transition ambiguity. Visually similar current observations may correspond to different manipulation phases and imply different subsequent transitions. (ii) Prediction--execution mismatch. A visually plausible predicted future observation does not necessarily correspond to a physically realizable transition. (iii) Experience--realization mismatch. A historically executable action pattern may not necessarily realize the intended transition in the current scene and therefore requires context-aware adaptation. Accordingly, we propose UniMPA, a Unified Memory-Prediction-Action model that addresses these problems through a shared action-grounded transition interface. (i) UniMPA introduces Persistent-Selective Future Prediction to resolve transition ambiguity by modeling the intended future state evolution. A persistent latent stream continuously tracks task-level progress, while a transition-critical pixel stream selectively resolves fine-grained interaction changes through memory-grounded prediction. (ii) To assess the physical executability of the anticipated transition, the predicted transition queries a temporal Visual-Action Memory Bank. The bank retrieves historically realized visual-action experience, grounding future prediction in executable evidence. (iii) To adapt executable experience to the current scene, an Action-Visual Memory Bank retrieves visually grounded action prototypes from historical action evolution. Prototype-Biased Flow then shifts the flow source toward a historically supported action manifold for context-aware refinement.",
+      "published": "2026-09-10T17:45:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.11875",
+      "pdf_url": "https://arxiv.org/pdf/2609.11875",
+      "summary_zh": "现有VLA模型在观察-动作学习中存在“转移可实现性鸿沟”，表现为转移歧义、预测-执行不匹配和经验-实现不匹配三个耦合问题。UniMPA通过共享的动作接地转移接口，引入持久-选择性未来预测、时序视觉-动作记忆库和动作-视觉记忆库与原型偏置流，统一建模记忆、预测与动作。该模型将预测锚定于可执行证据并适配当前场景，提升了机器人操作中转移建模的物理可实现性与上下文适应性。",
+      "summary_en": "Existing VLA models for robotic manipulation suffer from a transition realizability gap, manifesting as transition ambiguity, prediction-execution mismatch, and experience-realization mismatch. UniMPA addresses these issues via a shared action-grounded transition interface, combining Persistent-Selective Future Prediction, a temporal Visual-Action Memory Bank for executability grounding, and an Action-Visual Memory Bank with Prototype-Biased Flow for context-aware adaptation. This unified memory-prediction-action model grounds future prediction in executable evidence and adapts historical experience to the current scene, improving physically realizable transition modeling for robotic manipulation.",
+      "highlights_zh": [
+        "动作接地统一记忆-预测-动作接口",
+        "预测锚定可执行证据并场景自适应",
+        "提升机器人操作转移可实现性"
+      ],
+      "highlights_en": [
+        "Unified action-grounded memory-prediction-action interface",
+        "Grounds prediction in executable evidence with scene adaptation",
+        "Improves transition realizability in robotic manipulation"
+      ]
+    }
+  ]
+}
