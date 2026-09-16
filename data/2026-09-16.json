@@ -1,0 +1,297 @@
+{
+  "date": "2026-09-16",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.17527",
+      "title": "Agentic Societies Need a Social Harness",
+      "authors": [
+        "Tapan Chugh",
+        "Vidushi Singh",
+        "Krish Jain",
+        "Arvind Krishnamurthy",
+        "Ratul Mahajan"
+      ],
+      "abstract": "An agentic society is a collection of AI agents that coordinate autonomously across trust boundaries, on behalf of different principals whose objectives may only partially align. We show experimentally that in agentic societies even honest, competent agents often fail to reach satisfactory outcomes with existing harnesses and messaging primitives, and that faulty or malicious agents can stall collaboration, influence outcomes, and pursue other harmful goals by exploiting vulnerabilities in communication (``speech''). We argue that agentic societies need a \\emph{social harness} for inter-agent interactions, in addition to each agent's \\emph{personal harness}, which manages its private context and communication with its principal. We propose a layered architecture for social harnesses which (i) prevents classes of failures outright, (ii) enables agents to detect invalid messages at runtime, and (iii) supports post-facto investigation and consequences, and highlight directions for future research to realize these capabilities.",
+      "published": "2026-09-15T17:57:27Z",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.NI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17527",
+      "pdf_url": "https://arxiv.org/pdf/2609.17527",
+      "summary_zh": "在跨信任边界自主协调的智能体社会中，现有通信框架和消息原语下，即使诚实能干的智能体也常无法达成满意结果，而故障或恶意智能体可通过利用“言语”漏洞阻碍协作、影响结果并追求有害目标。为此，作者提出除每个智能体的“个人框架”外，还需为智能体间交互构建“社会框架”，并设计了一种分层架构，分别实现直接预防某类失败、运行时检测无效消息以及事后调查与追责。该工作通过实验揭示了智能体社会的通信脆弱性，并指明了实现社会框架的未来研究方向，对构建安全可靠的智能体协作系统具有重要意义。",
+      "summary_en": "In agentic societies where AI agents coordinate autonomously across trust boundaries on behalf of principals with partially aligned objectives, existing harnesses and messaging primitives often prevent even honest, competent agents from reaching satisfactory outcomes, while faulty or malicious agents can exploit communication (\"speech\") vulnerabilities to stall collaboration, influence outcomes, and pursue harmful goals. The authors argue that agentic societies need a social harness for inter-agent interactions, in addition to each agent's personal harness, and propose a layered architecture that (i) prevents classes of failures outright, (ii) enables runtime detection of invalid messages, and (iii) supports post-facto investigation and consequences. This work experimentally exposes the communication fragility of agentic societies and highlights future research directions to realize social harnesses, offering significant implications for building safe and reliable multi-agent collaboration systems.",
+      "highlights_zh": [
+        "提出智能体社会需社会框架的分层架构",
+        "实验揭示诚实智能体协作失败与恶意攻击",
+        "为多智能体安全协作提供新研究方向"
+      ]
+    },
+    {
+      "id": "2609.17523",
+      "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents",
+      "authors": [
+        "Shuhan Xue",
+        "Jianyuan Zhong",
+        "Ziyuan Nan",
+        "Wenbin Li",
+        "Zhaochen Yu",
+        "Jinchao Ding",
+        "Qiang Gao",
+        "Pengyu Zhan",
+        "Yuntong Zhang",
+        "Tian Cheng",
+        "Zhenfei Yin",
+        "Yingcheng Wu",
+        "Ling Yang"
+      ],
+      "abstract": "We introduce and release ScienceBuddy, an interactive scientific research workspace that brings continually improving scientific agents into researchers' everyday workflows. ScienceBuddy supports researchers in carrying out scientific tasks while transforming their requests, feedback, and execution evidence into tasks and evaluation rubrics for continual learning. At its core is recursive-in-recursive self-improvement, a paradigm that couples harness evolution with model reinforcement learning: the inner recursion improves the harness with the model fixed, while the outer recursion trains the model under the improved harness. Harness evolution shapes training experience, and model learning creates new opportunities for harness adaptation. We present case studies of researcher interaction, harness refinement, and model learning, with the benchmark cases spanning four scientific task families. By releasing ScienceBuddy as a research product, we make this paradigm available to the scientific community and take a step toward discovery intelligence: scientific AI that advances through sustained collaboration with researchers and evolves alongside the research it supports. Website: http://science-buddy.io",
+      "published": "2026-09-15T17:55:28Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17523",
+      "pdf_url": "https://arxiv.org/pdf/2609.17523",
+      "summary_zh": "科学AI代理难以在真实科研工作流中持续改进，现有系统缺乏将研究者交互转化为学习信号的机制。ScienceBuddy提出“递归中的递归”自我改进范式，内层递归在固定模型下进化执行框架，外层递归在改进框架下训练模型，实现框架与模型协同进化。该系统作为研究产品发布，覆盖四类科学任务，展示了研究者交互、框架优化与模型学习的案例，推动科学AI与研究者持续协作并共同进化。",
+      "summary_en": "Scientific AI agents struggle to improve continuously within real research workflows, lacking mechanisms to turn researcher interactions into learning signals. ScienceBuddy introduces recursive-in-recursive self-improvement, coupling harness evolution (inner recursion with fixed model) and model reinforcement learning (outer recursion under improved harness) for co-evolution. Released as a research product across four scientific task families, it demonstrates researcher interaction, harness refinement, and model learning, advancing discovery intelligence through sustained collaboration.",
+      "highlights_zh": [
+        "递归中的递归自我改进范式",
+        "覆盖四类科学任务案例",
+        "推动科学AI与研究者共同进化"
+      ]
+    },
+    {
+      "id": "2609.17499",
+      "title": "ENCP: Episode-Normalized Conformal Prediction for Vision-and-Language Navigation",
+      "authors": [
+        "Vicky Feliren",
+        "A. Taufiq Asyhari",
+        "Muhamad Risqi U. Saputra"
+      ],
+      "abstract": "Uncertainty estimation for Vision-Language-Navigation (VLN) models is a critical task since it can help identify ambiguous and unreliable predictions, enabling agents to make safer navigation decisions. As one of the most advanced uncertainty estimation frameworks, conformal prediction (CP) offers a promising approach for uncertainty estimation in VLN. However, given that VLN agent requires a sequence of steps, standard calibration in conformal prediction fails to provide coverage guarantee it promises over a dependent, variable-length VLN episode. To this end, we propose Episode-Normalized Conformal Prediction (ENCP), which rescales a nonconformity score by the policy's residual confidence and calibrates one maximum score per episode. Under exchangeable calibration and test episodes, this construction covers the ground truth at every step with probability at least $1 - α$, while allowing dependence among steps within an episode. Across four VLN policies and three nonconformity scores on R2R and REVERIE dataset, ENCP meets all reported empirical step-coverage targets on the seen-to-unseen evaluation. These results demonstrate that ENCP can provide model-agnostic uncertainty estimates, which might be useful for determining when a VLN agent should defer to a more capable predictor, including human assistance.",
+      "published": "2026-09-15T17:42:15Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17499",
+      "pdf_url": "https://arxiv.org/pdf/2609.17499",
+      "summary_zh": "视觉语言导航（VLN）模型需要不确定性估计以识别模糊预测并做出更安全的导航决策，但标准保形预测在依赖且变长的VLN回合中无法提供覆盖保证。为此，作者提出回合归一化保形预测（ENCP），通过策略残差置信度重新缩放非一致性分数，并对每个回合校准一个最大分数，从而在可交换的校准与测试回合下以至少1-α的概率覆盖每一步的真实值。在R2R和REVERIE数据集上对四种VLN策略和三种非一致性分数的实验表明，ENCP在已见到未见评估中满足所有报告的经验步覆盖目标，可提供模型无关的不确定性估计，有助于判断VLN智能体何时应求助更强大的预测器（包括人类）。",
+      "summary_en": "Vision-and-Language Navigation (VLN) models need uncertainty estimation to identify ambiguous predictions and make safer navigation decisions, but standard conformal prediction fails to provide its promised coverage guarantee over dependent, variable-length VLN episodes. To address this, the authors propose Episode-Normalized Conformal Prediction (ENCP), which rescales a nonconformity score by the policy's residual confidence and calibrates one maximum score per episode, covering the ground truth at every step with probability at least 1-α under exchangeable calibration and test episodes. Across four VLN policies and three nonconformity scores on R2R and REVERIE, ENCP meets all reported empirical step-coverage targets on the seen-to-unseen evaluation, demonstrating model-agnostic uncertainty estimates that may help determine when a VLN agent should defer to a more capable predictor, including human assistance.",
+      "highlights_zh": [
+        "回合归一化保形预测，每回合校准最大分数",
+        "R2R/REVERIE上满足所有步覆盖目标",
+        "模型无关不确定性，可判断何时求助"
+      ],
+      "highlights_en": [
+        "Episode-normalized CP calibrates one max score per episode",
+        "Meets all step-coverage targets on R2R and REVERIE",
+        "Model-agnostic uncertainty for deferral decisions"
+      ]
+    },
+    {
+      "id": "2609.17491",
+      "title": "FreqSpaNet: Frequency and Spatial Learning of SFPF for Physical Layer Hardware Integrity Detection",
+      "authors": [
+        "Xiaoxuan Huang",
+        "Jinlong Xu",
+        "YiZhe Wang",
+        "Meng Zhang",
+        "Xian Li",
+        "Yuying Bian"
+      ],
+      "abstract": "Unauthorized hardware replacement can preserve a wireless device's logical identity while altering its physical implementation, posing a challenge to hardware integrity verification. Spatio-frequency polarization fingerprints (SFPFs) capture device-dependent responses across multiple frequencies and directions, but their frequency and spatial dimensions exhibit different structural dependencies. We propose FreqSpaNet, an SFPF representation learning network for open set hardware anomaly detection. A frequency branch captures local variations among neighboring frequencies, while a geometry-aware spatial branch models directional relationships using angular information. The two representations are combined through adaptive fusion, and complementary pretraining further captures shared information while preserving the distinct characteristics of the frequency and spatial representations. Experiments show that FreqSpaNet achieves a mean AUROC of 96.31\\%, 9.05 points above the baseline. Results under seven hardware replacement scenarios further verify the effectiveness of FreqSpaNet.",
+      "published": "2026-09-15T17:32:12Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17491",
+      "pdf_url": "https://arxiv.org/pdf/2609.17491",
+      "summary_zh": "未经授权的硬件替换可保留无线设备的逻辑身份却改变其物理实现，给硬件完整性验证带来挑战。FreqSpaNet通过频率分支捕捉相邻频率局部变化、几何感知空间分支建模方向关系，并采用自适应融合与互补预训练学习SFPF表示。实验显示其平均AUROC达96.31%，比基线高9.05个百分点，并在七种硬件替换场景下验证有效。",
+      "summary_en": "Unauthorized hardware replacement can preserve a wireless device's logical identity while altering its physical implementation, challenging hardware integrity verification. FreqSpaNet learns spatio-frequency polarization fingerprint representations via a frequency branch for local variations, a geometry-aware spatial branch for directional relationships, adaptive fusion, and complementary pretraining. It achieves a mean AUROC of 96.31%, 9.05 points above the baseline, and is validated across seven hardware replacement scenarios.",
+      "highlights_zh": [
+        "频率与空间双分支自适应融合",
+        "平均AUROC 96.31%，超基线9.05分",
+        "适用于开放集硬件异常检测"
+      ],
+      "highlights_en": [
+        "Dual frequency-spatial branches with adaptive fusion",
+        "Mean AUROC 96.31%, 9.05 points above baseline",
+        "Effective for open-set hardware anomaly detection"
+      ]
+    },
+    {
+      "id": "2609.17515",
+      "title": "What Breaks Under Pruning in Smart Homes, and When? Evaluating LLM Degradation Across Architectures and Task Complexity",
+      "authors": [
+        "Congjing Zhang",
+        "Vashishtha Patil",
+        "Henning Lange",
+        "Usman Aleem"
+      ],
+      "abstract": "Pruning can reduce the deployment cost of large language models (LLMs), but its impact on context-grounded tool calling remains poorly understood. We systematically study pruning-induced degradation in smart-home tool calling across four LLMs spanning dense Transformer, dense hybrid, and mixture-of-experts (MoE) architectures, together with depth, width, hybrid, and expert pruning methods. After post-pruning supervised fine-tuning (SFT), we evaluate more than 19,500 instances from three smart-home datasets. Beyond aggregate task accuracy, we characterize degradation along two dimensions: action components (i.e., operation, device, argument, and value) and task complexity. Our results show that dense models have narrow safe pruning regions followed by sharp degradation, while MoE models tolerate substantially more pruning. Pruning degrades grounded specificity before schema-level intent, and aggressive dense pruning can induce systematic over-refusal. These findings highlight the importance of evaluating pruning beyond aggregate accuracy when selecting pruned LLMs for reliable tool execution.",
+      "published": "2026-09-15T17:51:48Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17515",
+      "pdf_url": "https://arxiv.org/pdf/2609.17515",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.17509",
+      "title": "LACE: Layer-Wise Compression for Dynamic Frame Rate Codecs",
+      "authors": [
+        "Thanapat Trachu",
+        "Samuele Cornell",
+        "William Chen",
+        "Shinji Watanabe"
+      ],
+      "abstract": "Neural audio codecs are a key component in speech language modeling. However, their high frame rates lead to long sequence lengths, increasing computational costs. Dynamic frame rate codecs mitigate this by reducing the effective frame rate using a compression step to merge multiple frames together. However, most prior methods either operate on single-codebook codecs or apply a single compression step before multi-layer quantization. This forces all quantization layers to share the same segmentation boundaries, despite the residual embeddings at different quantization layers exhibiting different rates of change over time. We propose LACE (Layer-Adaptive Codec Encoding), a dynamic frame rate codec that applies an independent compression step at each quantization layer, enabling layer-specific segmentation boundaries. To use LACE tokens in downstream text-to-speech (TTS), we further introduce union alignment and boundary anchor mechanisms to make durations consistent across layers while preserving compression benefits. Experiments on LibriTTS show that LACE offers a better rate-quality tradeoff than prior dynamic frame rate methods on the reconstruction task and improves TTS inference efficiency while maintaining competitive synthesis quality. Our code is released as part of the ESPnet3 codec recipe.",
+      "published": "2026-09-15T17:46:51Z",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17509",
+      "pdf_url": "https://arxiv.org/pdf/2609.17509",
+      "summary_zh": "神经音频编解码器的高帧率导致序列过长、计算成本高，而现有动态帧率方法要么仅支持单码本，要么在多层级量化前只做一次压缩，迫使所有量化层共享相同的分割边界。为此，作者提出LACE，在每个量化层独立进行压缩以实现层特定的分割边界，并引入联合对齐与边界锚机制使各层时长一致。在LibriTTS上，LACE在重建任务上取得更优的率-质量权衡，并在保持合成质量的同时提升TTS推理效率。",
+      "summary_en": "Neural audio codecs suffer from high frame rates and long sequences, and existing dynamic frame rate methods either handle only single-codebook codecs or apply one shared compression step before multi-layer quantization. We propose LACE, which performs an independent compression step at each quantization layer to enable layer-specific segmentation boundaries, along with union alignment and boundary anchor mechanisms for consistent cross-layer durations. On LibriTTS, LACE achieves a better rate-quality tradeoff than prior dynamic frame rate methods and improves TTS inference efficiency while maintaining competitive synthesis quality.",
+      "highlights_zh": [
+        "逐量化层独立压缩，层特定分割边界",
+        "LibriTTS上率-质量权衡优于先前方法",
+        "提升TTS推理效率，保持合成质量"
+      ],
+      "highlights_en": [
+        "Per-layer independent compression with layer-specific boundaries",
+        "Better rate-quality tradeoff than prior methods on LibriTTS",
+        "Improves TTS inference efficiency with competitive quality"
+      ]
+    },
+    {
+      "id": "2609.17479",
+      "title": "Det-LIME: Detector-Aware, Multi-Instance Local Interpretable Model-Agnostic Explanations for Automated Marine Mammal Detection",
+      "authors": [
+        "Jiayi Zhou",
+        "David W. Johnston",
+        "Brinnae Bent"
+      ],
+      "abstract": "Despite the rapid uptake of black-box object detectors in marine mammal research and monitoring, explainability techniques are rarely integrated into conservation workflows. Furthermore, most classification-oriented explainability tools are ill-suited to detection tasks involving imagery of social organisms or those with colonial life histories, as they ignore multiple detections within a scene and produce single-instance outputs that blur evidence across individuals. These methods also generate low-resolution, often biologically irrelevant visuals, limiting their utility for debugging, targeted data augmentation, and refined data collection. We proposed Det-LIME, a detector-aware, multi-instance adaptation of Local Interpretable Model-Agnostic Explanations (LIME) that produced instance-specific, box-aligned explanations by combining per-detection weighting, a proximity kernel that emphasizes regions near each box, and Intersection-over-Union-based matching to track the same instance across perturbations. We evaluated Det-LIME on aerial drone imagery for harbor seal detection, with an additional seabird case study to assess generality, and compared it with vanilla LIME, Stabilized LIME, Deterministic LIME, and gradient-based attribution methods. Using the Attribution Ratio and Max Saliency Hit Rate metrics, we showed that Det-LIME consistently improved multi-instance attribution. In practice, these higher-resolution, instance-aware explanations provide insight into model outputs and support post-processing, debugging, and actionable improvements in modeling and data collection or augmentation.",
+      "published": "2026-09-15T17:20:16Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17479",
+      "pdf_url": "https://arxiv.org/pdf/2609.17479",
+      "summary_zh": "黑盒目标检测器在海洋哺乳动物研究中广泛应用，但现有可解释性方法多面向分类任务，忽略场景中多个检测实例，输出低分辨率且生物学意义有限的解释。本文提出Det-LIME，一种检测器感知的多实例LIME适配方法，通过逐检测加权、强调检测框附近区域的邻近核以及基于IoU的匹配来追踪同一实例，生成实例级、框对齐的解释。在港湾海豹航拍检测及海鸟案例中，Det-LIME在归因比和最大显著命中率上持续优于原始LIME、稳定LIME、确定性LIME和梯度归因方法，为模型调试、数据增强和数据采集提供高分辨率、实例感知的实用解释。",
+      "summary_en": "Black-box object detectors are widely used in marine mammal research, yet existing explainability tools are classification-oriented, ignore multiple detections per scene, and produce low-resolution, biologically irrelevant explanations. We propose Det-LIME, a detector-aware, multi-instance adaptation of LIME that generates instance-specific, box-aligned explanations via per-detection weighting, a proximity kernel emphasizing regions near each box, and IoU-based matching to track instances across perturbations. Evaluated on aerial harbor seal detection with a seabird case study, Det-LIME consistently improves multi-instance attribution over vanilla, stabilized, and deterministic LIME and gradient-based methods, supporting debugging, post-processing, and targeted data collection or augmentation.",
+      "highlights_zh": [
+        "检测器感知的多实例LIME解释方法",
+        "归因比与最大显著命中率持续提升",
+        "助力模型调试与数据增强采集"
+      ]
+    },
+    {
+      "id": "2609.17458",
+      "title": "Tables Decoded: DELTA for Structure, TARQA for Understanding",
+      "authors": [
+        "Jahanvi Rajput",
+        "Dhruv Kudale",
+        "Saikiran Kasturi",
+        "Utkarsh Verma",
+        "Ganesh Ramakrishnan"
+      ],
+      "abstract": "Table understanding is a core task in document intelligence, encompassing two key subtasks: table reconstruction and table visual question answering (TabVQA). While recent approaches predominantly rely on vision- language models (VLMs) operating on table images, we propose a more scalable and effective alternative based on structured textual representations. These representations are easier to process, align more naturally with LLMs, and eliminate the need for language-specific visual encoders, making them particularly suitable for multilingual documents. We present DELTA, which separates physical structure recognition, logical structure recognition, and OCR to extract both layout and content accurately. DELTA outputs tables in Optimised Table Structure Language (OTSL), a compact and unified format that encodes cell arrangements and textual content. On table structure recognition (TSR), DELTA achieves TEDS- Structure scores comparable with state-of-the-art methods across FinTabNet, PubTabNet, and PubTables-1M. We further establish its robustness on non-English tables through our curated Hindi benchmark, TORQUE. Building on this, we introduce TARQA, an LLM fine-tuned on OTSL sequences. Our approach yields gains of 9.3 p.p. on WTQ (TabQA) and 9.2 p.p. on FinTabNetQA (TabVQA), respectively. On TORQUE, our method ranks second among all VLMs and DELTA + LLM variants. We release our code, models, and benchmark at: https://github.com/Tihiitborg/Tables-Decoded",
+      "published": "2026-09-15T16:59:42Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17458",
+      "pdf_url": "https://arxiv.org/pdf/2609.17458",
+      "summary_zh": "表格理解包含表格重建与表格视觉问答两个子任务，现有方法多依赖视觉语言模型处理表格图像，存在可扩展性差和多语言支持不足的问题。本文提出基于结构化文本表示的方案：DELTA将物理结构识别、逻辑结构识别与OCR分离，输出统一的OTSL格式，并在此基础上微调LLM得到TARQA。DELTA在多个TSR基准上达到与SOTA相当的TEDS-Structure分数，TARQA在WTQ和FinTabNetQA上分别提升9.3和9.2个百分点，且在印地语基准TORQUE上表现优异。",
+      "summary_en": "Table understanding involves table reconstruction and table visual question answering (TabVQA), with recent methods mainly relying on vision-language models over table images, which limits scalability and multilingual support. We propose a structured textual alternative: DELTA separates physical structure recognition, logical structure recognition, and OCR to output tables in Optimised Table Structure Language (OTSL), and TARQA is an LLM fine-tuned on OTSL sequences. DELTA achieves TEDS-Structure scores comparable to state-of-the-art on FinTabNet, PubTabNet, and PubTables-1M, while TARQA improves WTQ by 9.3 p.p. and FinTabNetQA by 9.2 p.p., ranking second on the Hindi benchmark TORQUE.",
+      "highlights_zh": [
+        "结构化文本表示替代表格图像输入",
+        "WTQ提升9.3，FinTabNetQA提升9.2",
+        "利于多语言文档，但依赖OCR质量"
+      ]
+    },
+    {
+      "id": "2609.17524",
+      "title": "Modality-Autoregressive World-Action Models",
+      "authors": [
+        "Adam Hung",
+        "Bardienus P. Duisterhof",
+        "Deva Ramanan",
+        "Jeffrey Ichnowski"
+      ],
+      "abstract": "World-action models (WAMs) jointly model future observations and actions, typically predicting the future as RGB images. Other visual modalities such as depth, pretrained visual features, and point tracks can more efficiently capture geometric, semantic, and motion features. However, how best to combine these modalities within WAMs remains an open question. We introduce ModAR, the first WAM to autoregressively denoise multiple future modalities before predicting actions. This allows each prediction to condition on previously generated modalities. We train from scratch to systematically study how training-data mixtures, predicted modalities, and WAM formulations affect performance. In our evaluations, WAMs benefit from predicting point tracks, DINO features, and depth maps, while additionally predicting future RGB does not provide a consistent benefit. We also find that ModAR's sequential generation outperforms existing WAM formulations, with the highest average success rate at all evaluated data scales. We also fine-tune the video-model-initialized WAM Flex-$π$ on the same data; ModAR achieves a slightly higher observed average success rate (75% vs. 72%) while using approximately $20\\times$ fewer training FLOPs and no pretraining. On three real-world bimanual tasks, ModAR outperforms baselines and improves with human videos.",
+      "published": "2026-09-15T17:56:24Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17524",
+      "pdf_url": "https://arxiv.org/pdf/2609.17524",
+      "summary_zh": "世界-动作模型（WAM）通常以RGB图像预测未来观测与动作，但深度、预训练视觉特征和点轨迹等视觉模态能更高效地捕捉几何、语义和运动信息，如何组合这些模态尚不明确。本文提出ModAR，首个在预测动作前对多种未来模态进行自回归去噪的WAM，使每个预测都能以先前生成的模态为条件，并从头训练系统研究数据混合、预测模态和WAM形式的影响。实验表明，预测点轨迹、DINO特征和深度图有益，而额外预测RGB无一致收益；ModAR顺序生成优于现有WAM形式，在各数据规模下平均成功率最高，在三个真实双臂任务上超越基线并能从人类视频中获益。",
+      "summary_en": "World-action models (WAMs) jointly predict future observations and actions, typically as RGB images, but other visual modalities like depth, pretrained features, and point tracks capture geometric, semantic, and motion information more efficiently, and how best to combine them remains unclear. We introduce ModAR, the first WAM that autoregressively denoises multiple future modalities before predicting actions, allowing each prediction to condition on previously generated modalities, and train from scratch to systematically study data mixtures, predicted modalities, and WAM formulations. Results show benefits from predicting point tracks, DINO features, and depth (with no consistent gain from RGB), and ModAR's sequential generation outperforms existing WAM formulations with the highest average success rate across data scales, achieving 75% vs. 72% over fine-tuned Flex-π with ~20× fewer training FLOPs and no pretraining, and outperforming baselines on three real-world bimanual tasks while improving with human videos.",
+      "highlights_zh": [
+        "首个多模态自回归去噪的WAM框架",
+        "平均成功率75%，训练算力少20倍",
+        "真实双臂任务有效，可受益人类视频"
+      ]
+    },
+    {
+      "id": "2609.17484",
+      "title": "Dissecting Motion-Prior Regularization for Data-Scarce Robotic Insertion",
+      "authors": [
+        "Ning Hu",
+        "Shuai Li",
+        "Jindong Tan"
+      ],
+      "abstract": "This study asks whether training-time motion-prior regularization can improve insertion success when a diffusion policy is learned from only 15 demonstrations. Minimum jerk discourages abrupt changes in predicted translational acceleration; speed-curvature regularization instead couples movement speed to path geometry. These are candidate mechanisms for task completion, not safety guarantees. We compare the priors individually and jointly, neither prior, and generic smoothness, with 80 real-robot trials per setting pooled over four recorded condition classes. Joint and minimum-jerk-only settings each achieved 70/80 successes (87.5%), versus 69/80 (86.3%) for speed-curvature only, 66/80 (82.5%) for neither prior, and 67/80 (83.8%) for generic smoothness. Success rates and Wilson 95% confidence intervals are visualized for direct comparison. Joint regularization exceeded neither by 5.0 percentage points but provided no observed gain over minimum jerk alone. The results motivate minimum jerk as the simpler candidate for replication, without establishing synergy, biomechanical specificity, improved safety, or distribution-shift robustness.",
+      "published": "2026-09-15T17:25:20Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.17484",
+      "pdf_url": "https://arxiv.org/pdf/2609.17484",
+      "summary_zh": "在仅有15次演示的数据稀缺条件下，研究训练时运动先验正则化能否提升扩散策略的机器人插入成功率。方法上分别和联合比较了最小抖动、速度-曲率正则化、无先验及通用平滑性，并进行了每设置80次真实机器人试验。结果显示联合与仅最小抖动均达87.5%成功率，联合未优于仅最小抖动，表明最小抖动是更简单的可复现候选机制，但未证明协同、生物力学特异性、安全性提升或分布偏移鲁棒性。",
+      "summary_en": "This study asks whether training-time motion-prior regularization can improve insertion success when a diffusion policy is learned from only 15 demonstrations. It compares minimum jerk, speed-curvature regularization, both jointly, neither, and generic smoothness across 80 real-robot trials per setting. Joint and minimum-jerk-only each achieved 87.5% success, with no observed gain from joint regularization over minimum jerk alone, motivating minimum jerk as the simpler candidate for replication without establishing synergy, biomechanical specificity, improved safety, or distribution-shift robustness.",
+      "highlights_zh": [
+        "比较多种运动先验正则化",
+        "联合与仅最小抖动均87.5%",
+        "最小抖动更简单但无协同证据"
+      ]
+    }
+  ]
+}
