@@ -1,0 +1,343 @@
+{
+  "date": "2026-09-17",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.19145",
+      "title": "Objective vs. Search: Decomposing What Makes a Good Tokeniser",
+      "authors": [
+        "Ahmetcan Yavuz",
+        "Clara Meister",
+        "Tiago Pimentel"
+      ],
+      "abstract": "Two dominant tokenisation algorithms are used by modern language models: byte-pair encoding (BPE) and UnigramLM. These differ along two orthogonal axes: their optimisation objective (compression vs. log-likelihood) and their search procedure (bottom-up merging vs. top-down pruning). Existing comparisons confound these axes, making it unclear whether their observed differences stem from what is being optimised vs. how it is being optimised. We disentangle the two by introducing two new tokenisation algorithms that complete this 2x2 design space: BottomUpLL, a bottom-up likelihood-based tokeniser, and TopDownComp, a top-down compression-based tokeniser. We train language models with tokenisers produced by each algorithm, varying: model size, vocabulary sizes, and domain (English-only vs. multilingual). Evaluating models on bits-per-byte, we find that the search procedure -- not the objective -- is the dominant factor: bottom-up tokenisers consistently achieve lower bits-per-byte in most settings. Evaluating models on the BLiMP task, however, shows no consistent relationship between design choice and performance. Overall, our results disentangle the effect of tokeniser design choices on language modelling performance, offering concrete guidance for their more principled construction.",
+      "published": "2026-09-16T17:59:45Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19145",
+      "pdf_url": "https://arxiv.org/pdf/2609.19145",
+      "summary_zh": "现代语言模型主要使用BPE和UnigramLM两种分词算法，但它们在优化目标（压缩vs对数似然）和搜索过程（自底向上合并vs自顶向下剪枝）两个维度上存在混淆，难以区分差异来源。本文提出BottomUpLL和TopDownComp两种新算法补全2x2设计空间，通过训练不同规模、词表大小和领域的语言模型进行解耦分析。结果表明搜索过程而非优化目标是主导因素，自底向上分词器在多数设置下取得更低bits-per-byte，但在BLiMP任务上无一致关系，为分词器的原则性构建提供了具体指导。",
+      "summary_en": "Modern language models predominantly use BPE and UnigramLM, which differ along two orthogonal axes—optimisation objective (compression vs. log-likelihood) and search procedure (bottom-up merging vs. top-down pruning)—yet existing comparisons confound these axes. This work introduces BottomUpLL and TopDownComp to complete the 2x2 design space, training language models across varying sizes, vocabulary sizes, and domains to disentangle the effects. Results show that the search procedure, not the objective, is the dominant factor: bottom-up tokenisers consistently achieve lower bits-per-byte in most settings, while BLiMP shows no consistent relationship, offering concrete guidance for more principled tokeniser construction.",
+      "highlights_zh": [
+        "补全2x2设计空间解耦目标与搜索",
+        "自底向上分词器bits-per-byte更低",
+        "BLiMP无一致关系，需按任务选择"
+      ]
+    },
+    {
+      "id": "2609.19144",
+      "title": "A Zeroth-Order Paradigm for LLM Preference Alignment",
+      "authors": [
+        "Peter Chen",
+        "Xi Chen",
+        "Wotao Yin",
+        "Tianyi Lin"
+      ],
+      "abstract": "Direct preference alignment methods are widely used to align large language models (LLMs) with human preferences because of their computational and memory efficiency. However, likelihood displacement motivates alternative ways to extract information from preference pairs with small likelihood margins. In this paper, we propose and analyze Comparison-based Preference Optimization (ComPO), a zeroth-order alignment method based on comparison oracles. ComPO extracts directional information from these pairs without directly optimizing a differentiable preference loss on them. We establish a convergence guarantee for its basic offline scheme under smoothness, gradient sparsity, and compatibility between the oracle and a latent objective. We further introduce online ComPO, which retains the offline comparison mechanism and uses unlabeled policy generations for reverse-KL control relative to a reference policy. Following the coverage perspective of preference fine-tuning, we establish a performance guarantee for a basic constrained scheme under local coverage and in-distribution pairwise reward accuracy. Experiments on Mistral, Llama, Gemma-2, Qwen3, and Gemma-3 models demonstrate improvements over existing direct alignment methods, including length-controlled win rates, with pair-level diagnostics providing evidence consistent with mitigating likelihood displacement.",
+      "published": "2026-09-16T17:59:35Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19144",
+      "pdf_url": "https://arxiv.org/pdf/2609.19144",
+      "summary_zh": "直接偏好对齐方法因计算和内存效率高而被广泛用于LLM与人类偏好对齐，但似然位移问题促使研究者寻找从低似然边际偏好对中提取信息的新途径。本文提出并分析了ComPO，一种基于比较oracle的零阶对齐方法，它不直接优化可微偏好损失，而是从偏好对中提取方向信息，并给出了离线方案的收敛保证及在线变体的性能保证。在Mistral、Llama、Gemma-2、Qwen3和Gemma-3上的实验表明，ComPO优于现有直接对齐方法，包括长度控制胜率，且配对级诊断证据与缓解似然位移一致。",
+      "summary_en": "Direct preference alignment methods are widely used for aligning LLMs with human preferences due to their efficiency, but likelihood displacement motivates alternative ways to extract information from preference pairs with small likelihood margins. This paper proposes and analyzes ComPO, a zeroth-order alignment method based on comparison oracles that extracts directional information without directly optimizing a differentiable preference loss, with convergence guarantees for the offline scheme and performance guarantees for an online variant. Experiments on Mistral, Llama, Gemma-2, Qwen3, and Gemma-3 show improvements over existing direct alignment methods, including length-controlled win rates, with pair-level diagnostics consistent with mitigating likelihood displacement.",
+      "highlights_zh": [
+        "零阶比较oracle对齐，避免直接优化偏好损失",
+        "多模型上长度控制胜率超越直接对齐方法",
+        "缓解似然位移，但依赖oracle与覆盖假设"
+      ]
+    },
+    {
+      "id": "2609.19135",
+      "title": "Exponential Hardness of Off-Policy Evaluation under History-Dependent Logging",
+      "authors": [
+        "Pranaya Jajoo"
+      ],
+      "abstract": "Can a logged dataset visit every hidden state frequently and still be exponentially uninformative about a target policy's value? We show that it can when the logger depends on history. For every horizon $H \\ge 3$, we construct two POMDPs with at most two latent states per stage, three actions, and a common logger with three memory states. Action coverage, belief coverage, and two behavior-marginal outcome-revealing conditions all have constants independent of $H$. Nevertheless, evaluating a known deterministic target policy to accuracy $1/8$ requires $Θ((3/2)^H \\log(1/δ))$ logged episodes at confidence $1-δ$, for $0 < δ\\le 1/4$, even when both candidate models are known. The mechanism is simple: a reset erases the unknown transition that determines the target value. We characterize the resulting statistical experiment exactly and obtain a matching optimal estimator. A directed two-lane gridworld realizes the construction, and trajectory simulations agree with its finite-sample prediction. The result establishes intractability for the history-dependent-logging, model-based case posed by Zhang and Jiang (2025, arXiv:2503.01134), under their behavior-marginal definition of revealing.",
+      "published": "2026-09-16T17:56:12Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19135",
+      "pdf_url": "https://arxiv.org/pdf/2609.19135",
+      "summary_zh": "本文研究历史依赖型日志记录下离策略评估（OPE）的可学习性，即数据虽频繁访问隐藏状态却仍可能对目标策略价值信息量极低。作者构造了两个每阶段至多两个隐状态、三个动作且共享三记忆状态日志器的POMDP，并精确刻画其统计实验、给出匹配的最优估计器。结果表明即使候选模型已知，评估确定性目标策略达到1/8精度仍需Θ((3/2)^H log(1/δ))条日志轨迹，从而在行为边缘揭示定义下证明了该模型基情形的固有难解性。",
+      "summary_en": "This paper studies whether off-policy evaluation (OPE) can remain exponentially uninformative even when logged data frequently visits every hidden state, focusing on history-dependent loggers. The authors construct two POMDPs with at most two latent states per stage, three actions, and a shared three-memory-state logger, exactly characterize the resulting statistical experiment, and derive a matching optimal estimator. They show that evaluating a known deterministic target policy to accuracy 1/8 requires Θ((3/2)^H log(1/δ)) logged episodes, establishing intractability for the history-dependent-logging, model-based case under the behavior-marginal revealing definition.",
+      "highlights_zh": [
+        "历史依赖日志下OPE指数难解",
+        "需Θ((3/2)^H)条轨迹达1/8精度",
+        "揭示模型基OPE的根本局限"
+      ]
+    },
+    {
+      "id": "2609.19107",
+      "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+      "authors": [
+        "Zixi Chen",
+        "Akshay Vegesna",
+        "Samip Dahal",
+        "Andrew Gordon Wilson"
+      ],
+      "abstract": "Scaling laws predict how loss decreases with increases in computation. We show, contrary to conventional wisdom, that architectural interventions can modify scaling exponents in pre-training, leading to exponential improvements in performance with increases in computation. As an anchoring point, we consider the architectural formulation of looped transformers. Although not typically used in this way, looping, also known as recursive depth, provides a mechanism for model growth, by increasing the number of loops during training. Model growth, with and without shared weights, provides the biggest changes to the scaling exponents. In particular, a 7.4B model growth architecture matches GPT-3 13B on CORE with roughly $20\\times$ less compute, and has compute efficiency gains that increase with scale. Moreover, simply using a boundary operator in a vanilla transformer, which normalizes and injects an earlier block, also provides increasing compute-efficiency gains, although to a lesser extent. In the data-constrained, multi-epoch setting, standard looping has a useful regularizing effect, where we find it is compute-optimal to increase the number of loops with scale. These results can be understood through the lens of computational depth: for a given computational budget, we wish to increase the usable depth of the transformer, which can lead to efficiency gains that increase with scale.",
+      "published": "2026-09-16T17:36:13Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19107",
+      "pdf_url": "https://arxiv.org/pdf/2609.19107",
+      "summary_zh": "传统观点认为缩放指数由数据与模型规模决定，架构干预难以改变。本文通过循环Transformer实现模型增长（训练中增加循环次数）并引入边界算子，系统研究其对预训练缩放指数的影响。结果表明模型增长可大幅改变缩放指数，7.4B模型以约20倍更少计算匹配GPT-3 13B，且计算效率增益随规模增大，边界算子也有类似但较小的效果。",
+      "summary_en": "Conventional wisdom holds that scaling exponents are fixed, but this work shows architectural interventions can modify them during pre-training. By using looped transformers for model growth (increasing loops during training) and a boundary operator that normalizes and injects an earlier block, the authors systematically study changes to scaling exponents. Model growth yields the largest gains, with a 7.4B model matching GPT-3 13B on CORE using roughly 20x less compute and efficiency gains that increase with scale, while the boundary operator provides smaller but still increasing gains.",
+      "highlights_zh": [
+        "循环增长与边界算子改变缩放指数",
+        "7.4B匹配GPT-3 13B，省20倍算力",
+        "增益随规模增大，但多轮训练有正则效应"
+      ]
+    },
+    {
+      "id": "2609.19143",
+      "title": "PANORAMA: Panoptic Grounded Captioning via Mask Proposal Selection",
+      "authors": [
+        "Sara Pieri",
+        "Evangelos Kazakos",
+        "Shizhe Chen",
+        "Josef Sivic",
+        "Cordelia Schmid"
+      ],
+      "abstract": "Intelligent systems that act in the world require image understanding that is both comprehensive and spatially grounded. Current vision-language models (VLMs) can generate fluent and detailed image captions, but reliably associating them with image pixels remains challenging. Existing methods that combine dense captioning with pixel-level grounding often produce either incomplete descriptions or inaccurate segmentation masks. We study this problem through panoptic grounded captioning, a task that requires a VLM to describe both foreground objects and background regions while grounding each referring phrase with pixel-level masks. We make three contributions. First, we introduce PanoCaps, a human-annotated benchmark constructed from panoptic segmentation datasets. It provides dense captions with near-complete pixel coverage and image-text alignments at the entity level, supporting both training and evaluation. We further propose a phrase-mask matching protocol and a generalized Panoptic Quality (gPQ) metric that jointly evaluates textual and mask agreement. Second, we formulate phrase grounding as selection from a phrase-conditioned pool of mask proposals and introduce PANORAMA, a VLM that conditions a pretrained segmenter on contextualized phrase representations to obtain candidate masks and learns to select those corresponding to each phrase. Training this interface jointly with caption generation enables PANORAMA to produce high-quality masks while allowing each phrase to refer to a single region or multiple instances. Third, PANORAMA achieves the best overall grounding on PanoCaps and matches or exceeds specialized models across several pixel-level grounding tasks. Experiments show that our method produces precise entity-level segmentations while maintaining detailed, mask-consistent captions. Code, data and models are available at https://www.di.ens.fr/willow/research/panorama/.",
+      "published": "2026-09-16T17:59:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19143",
+      "pdf_url": "https://arxiv.org/pdf/2609.19143",
+      "summary_zh": "现有视觉语言模型虽能生成流畅详细的图像描述，但难以将描述短语可靠地关联到像素级掩码，且现有密集描述与像素定位结合的方法常产生不完整描述或不准确掩码。为此，作者提出全景定位描述任务，构建了PanoCaps基准和gPQ指标，并将短语定位形式化为从短语条件掩码提案池中选择，提出PANORAMA模型，通过将预训练分割器以情境化短语表示进行条件化来生成候选掩码并学习选择。PANORAMA在PanoCaps上取得最佳整体定位性能，在多个像素级定位任务上匹配或超越专用模型，能生成精确的实体级分割并保持详细且与掩码一致的描述。",
+      "summary_en": "Current vision-language models can generate fluent image captions but struggle to reliably associate them with pixels, and existing dense captioning plus pixel grounding methods often yield incomplete descriptions or inaccurate masks. To address this, the authors introduce panoptic grounded captioning, build the PanoCaps benchmark and gPQ metric, and propose PANORAMA, which formulates phrase grounding as selection from a phrase-conditioned pool of mask proposals by conditioning a pretrained segmenter on contextualized phrase representations. PANORAMA achieves the best overall grounding on PanoCaps and matches or exceeds specialized models on several pixel-level grounding tasks, producing precise entity-level segmentations with detailed, mask-consistent captions.",
+      "highlights_zh": [
+        "短语条件掩码提案选择框架",
+        "PanoCaps上整体定位最佳",
+        "精确分割与一致描述兼具"
+      ]
+    },
+    {
+      "id": "2609.19134",
+      "title": "ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments",
+      "authors": [
+        "Hejia Geng",
+        "Zesen Huang",
+        "Haoyang Li",
+        "Wenbin Li",
+        "Koutian Wu",
+        "Zihan Zhou",
+        "Yuanbo Pang",
+        "Weihao Liu",
+        "Zigong Xu",
+        "Zhiping Li",
+        "Zongzheng Zhang",
+        "Chuanfei Dong",
+        "Jiankai Sun",
+        "Tianzhe Zheng",
+        "Fengyu Xie",
+        "Yue Ma",
+        "Yueheng Shi",
+        "Tong Xie",
+        "Zonglin Di",
+        "Xianrong Liu",
+        "Qucheng Gao",
+        "Yimin Liu",
+        "Jiaming Pan",
+        "Sheng Huang",
+        "Xiao-Han Ma",
+        "Lanqing Yuan",
+        "Zhenlin Zhu",
+        "Ziang Liu",
+        "Ziyang Xu",
+        "Junkai Wang",
+        "Kangkai Liang",
+        "Jiayi Xian",
+        "Zehong Zhao",
+        "Liuwei Xu",
+        "Jingxu Xie",
+        "Peijin Zhang",
+        "Qiang Gao",
+        "Chengyi Xing",
+        "Zhe Zhao",
+        "Xi Wang",
+        "Yaopeng Xing",
+        "Xing Meng",
+        "Zhenfei Yin",
+        "Yingcheng Wu",
+        "Ling Yang"
+      ],
+      "abstract": "Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria make this knowledge difficult to convert into reliable learning experience-a challenge we call the scientific experience bottleneck. We introduce ScienceIDE, infrastructure for turning the world's scientific code into programmable environments for scientific agents. Guided by expert-defined scientific cases and acceptance criteria, agents transform repositories into executable environments that support task generation, execution, and scientific verification. These environments provide a shared foundation for supervised fine-tuning, reinforcement learning, and evaluation. Using verified interaction trajectories, we train PhAI-IDE-72B, PhAI-IDE-9B, and PhAI-IDE-4B. The model family shows gains in held-out scientific-code repair and across selected general-purpose benchmarks in code, reasoning, and knowledge, providing evidence of positive transfer from scientific experience to broader capabilities. ScienceIDE lays the foundation for an integrated workspace for agent learning and scientific practice, making humanity's scientific software a shared substrate for developing scientific intelligence. Code: https://github.com/aitofound/ScienceIDE",
+      "published": "2026-09-16T17:55:47Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19134",
+      "pdf_url": "https://arxiv.org/pdf/2609.19134",
+      "summary_zh": "科学代码库蕴含大量可执行知识，但工具链碎片化、领域约定隐式和验证标准特殊，导致难以转化为可靠学习经验，即“科学经验瓶颈”。ScienceIDE 依据专家定义的科学案例与验收标准，让智能体将代码仓库转化为可执行环境，支持任务生成、执行与科学验证，并用于监督微调、强化学习和评估。基于验证过的交互轨迹训练出 PhAI-IDE-72B/9B/4B 模型，在科学代码修复及部分通用代码、推理、知识基准上均有提升，表明科学经验可正向迁移至更广泛能力。",
+      "summary_en": "Scientific code repositories encode decades of executable knowledge, but fragmented toolchains, implicit conventions, and specialized correctness criteria create a scientific experience bottleneck that hinders reliable learning. ScienceIDE turns repositories into programmable, executable environments guided by expert-defined scientific cases and acceptance criteria, supporting task generation, execution, scientific verification, and agent training via supervised fine-tuning, reinforcement learning, and evaluation. Using verified interaction trajectories, the PhAI-IDE-72B/9B/4B models improve on held-out scientific-code repair and selected general code, reasoning, and knowledge benchmarks, showing positive transfer from scientific experience to broader capabilities.",
+      "highlights_zh": [
+        "将科学代码库转为智能体可学习环境",
+        "科学代码修复及通用基准均有提升",
+        "推动科学智能与科研实践一体化"
+      ],
+      "highlights_en": [
+        "Turns scientific codebases into agent-learnable environments",
+        "Improves scientific code repair and general benchmarks",
+        "Advances integrated scientific intelligence and practice"
+      ]
+    },
+    {
+      "id": "2609.19142",
+      "title": "PointZero: 3D Point Track Completion for Learning Transferable 3D Dynamics",
+      "authors": [
+        "Bardienus P. Duisterhof",
+        "Kaifeng Zhang",
+        "Adam Hung",
+        "Bowen Wen",
+        "Stan Birchfield",
+        "Yunzhu Li",
+        "Deva Ramanan",
+        "Jeffrey Ichnowski"
+      ],
+      "abstract": "World models endow perceptual systems with the ability to predict how scenes evolve under interaction. They are most beneficial when trained on diverse volumes of data, to instill a rich prior into downstream applications. Existing methods typically require robot action labels to learn action-conditioned 3D dynamics, which excludes web video data from the training pool. We study 3D point track completion as a pre-training objective for learning transferable 3D dynamics without robot data. Given a single RGB-D observation and sparse partial 3D trajectories (tracks), we predict future 3D tracks of all observed points. We show this objective produces a rich 3D dynamics prior, without requiring robot action labels. We contribute a diverse dataset of 2.9 million synthetic frames spanning deformable, articulated, and rigid objects, and use it to train PointZero. We show that a flexible and expressive transformer, PointZero, outperforms prior methods on the same data. We demonstrate the utility of our pre-training objective by post-training PointZero for two downstream applications: (1) action-conditioned 3D dynamics prediction and (2) imitation learning. When fine-tuned to condition on end-effector pose, PointZero outperforms the baselines on the recent PGND 3D dynamics benchmark. When fine-tuned to predict robot actions and 3D tracks, PointZero outperforms or matches the baselines on 6/7 simulated and real-world robot manipulation tasks. We furthermore evaluate training PointZero from scratch to isolate the benefits of our proposed architecture from those of our proposed pre-training objective and dataset. We release the dataset, checkpoints, and full training recipe.",
+      "published": "2026-09-16T17:59:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19142",
+      "pdf_url": "https://arxiv.org/pdf/2609.19142",
+      "summary_zh": "现有3D世界模型依赖机器人动作标签训练，无法利用海量网络视频数据。本文提出以3D点轨迹补全作为预训练目标，构建290万帧合成数据集并训练PointZero模型，无需动作标签即可学习可迁移的3D动力学先验。在PGND基准和6/7个仿真与真实机器人操作任务上，微调后的PointZero超越或持平基线，验证了该预训练目标的有效性。",
+      "summary_en": "Existing 3D world models require robot action labels, excluding web video data from training. This paper proposes 3D point track completion as a pre-training objective, builds a 2.9M-frame synthetic dataset, and trains PointZero to learn transferable 3D dynamics without action labels. PointZero outperforms baselines on the PGND benchmark and 6/7 robot manipulation tasks after fine-tuning, demonstrating the effectiveness of the proposed pre-training objective.",
+      "highlights_zh": [
+        "无动作标签的3D轨迹补全预训练目标",
+        "PGND基准超越基线，6/7任务领先",
+        "可迁移3D动力学先验，限于合成数据"
+      ],
+      "highlights_en": [
+        "Action-label-free 3D track completion pre-training",
+        "Outperforms baselines on PGND, 6/7 tasks",
+        "Transferable 3D dynamics prior, synthetic data only"
+      ]
+    },
+    {
+      "id": "2609.19138",
+      "title": "In-Context Robot Learning with VLM Agents",
+      "authors": [
+        "Dongzhou Cheng",
+        "Taoran Yi",
+        "Ye Fang",
+        "Xingwu Zhang",
+        "Fan Feng",
+        "Yixuan Li",
+        "Gengxiong Zhuang",
+        "Rongze Wang",
+        "Shuai Yang",
+        "Wei Song",
+        "Weizhi Xue",
+        "Minyan Wu",
+        "Jie Gui",
+        "Jiaqi Wang",
+        "Tong Wu"
+      ],
+      "abstract": "Enabling robots to adapt to unfamiliar environments as readily as humans remains a moonshot goal of embodied AI. No finite collection of demonstrations can cover every task and situation a robot will encounter, making the ability to learn from context at deployment essential for generalization. Such in-context learning (ICL), however, remains largely beyond the reach of existing robotic policies. The broad agentic capabilities of commercial vision-language models (VLMs), such as GPT-6 Astra, raise a compelling question: can these models learn from demonstrations, examples, and interaction feedback, then translate that information into executable and verifiable robot behavior from a new initial state without gradient updates or persistent changes to task-specific parameters? We introduce GPT-Policy, a general-agent framework for in-context robot learning. GPT-Policy integrates a context compiler that preserves task-relevant visual transitions, a VLM that proposes robot-tool actions, and a constrained controller that verifies and executes each action and reports its outcome. We evaluate its reliability and limitations through task success and efficiency metrics, matched comparisons across models, and controlled context ablations. In real-robot trials, human video demonstrations improve task completion even without robot action labels, while aligned action references yield further gains on contact-sensitive tasks. These findings position GPT-Policy as a step toward robot adaptation through in-context learning, providing an empirical foundation for translating the general-purpose capabilities of VLMs into physical behavior and clarifying the challenges that must be overcome for reliable deployment.",
+      "published": "2026-09-16T17:58:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19138",
+      "pdf_url": "https://arxiv.org/pdf/2609.19138",
+      "summary_zh": "现有机器人策略难以在部署时从上下文学习以适应未知环境，有限演示无法覆盖所有任务情境。本文提出GPT-Policy通用智能体框架，通过上下文编译器保留任务相关视觉转换、VLM提议机器人工具动作、约束控制器验证执行并反馈结果，实现无需梯度更新的上下文机器人学习。真实机器人试验表明，人类视频演示即使无动作标签也能提升任务完成率，对齐动作参考在接触敏感任务上进一步增益，为将VLM通用能力转化为物理行为提供了实证基础。",
+      "summary_en": "Existing robot policies struggle to learn from context at deployment, as finite demonstrations cannot cover every situation a robot may encounter. This paper introduces GPT-Policy, a general-agent framework that combines a context compiler preserving task-relevant visual transitions, a VLM proposing robot-tool actions, and a constrained controller that verifies and executes each action while reporting outcomes, enabling in-context robot learning without gradient updates. Real-robot trials show that human video demonstrations improve task completion even without action labels, aligned action references yield further gains on contact-sensitive tasks, providing an empirical foundation for translating VLM capabilities into physical behavior.",
+      "highlights_zh": [
+        "上下文编译器+VLM+约束控制器框架",
+        "人类视频演示无标签即可提升完成率",
+        "无需梯度更新，但可靠性仍待提升"
+      ]
+    },
+    {
+      "id": "2609.19104",
+      "title": "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference",
+      "authors": [
+        "Kaijun Zhou",
+        "Zhiyang Li",
+        "Le Chen",
+        "Jinyu Gu"
+      ],
+      "abstract": "Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.",
+      "published": "2026-09-16T17:34:43Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19104",
+      "pdf_url": "https://arxiv.org/pdf/2609.19104",
+      "summary_zh": "VLA模型推理延迟影响机器人响应与运动平滑性，但现有推理框架未充分利用具身工作负载特性及各阶段瓶颈。rMuscle受人类肌肉记忆启发，通过上下文缓存复用视觉token输出、动作缓存复用神经元激活模式，并借助在线重计算、滑动窗口检索和掩码共享降低开销。在RTX 4090和Jetson Thor上跨LIBERO、RoboTwin及物理操作任务实现1.29-1.42倍加速，同时保持真实机器人原有成功率。",
+      "summary_en": "VLA inference latency affects robot responsiveness and motion smoothness, yet existing frameworks underutilize embodied workload characteristics and stage-specific bottlenecks. rMuscle, inspired by human muscle memory, uses a dual-phase cache: Context Cache reuses visual-token outputs and Action Cache reuses neuron activation patterns, with online recomputation, sliding-window retrieval, and mask sharing to cut overhead. It achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical tasks while preserving real-world success rates.",
+      "highlights_zh": [
+        "双阶段肌肉记忆缓存复用跨执行相似性",
+        "1.29-1.42倍加速且保持成功率",
+        "适用于工厂重复性具身任务推理"
+      ],
+      "highlights_zh_note": "",
+      "highlights_en": [
+        "Dual-phase muscle-memory cache reuses cross-execution similarity",
+        "1.29-1.42X speedup with preserved success rates",
+        "Suited for repetitive factory embodied AI inference"
+      ]
+    },
+    {
+      "id": "2609.19137",
+      "title": "Dreaming the Sound of Contact: Leveraging Video and Audio Generation for Zero-Shot Force-Aware Manipulation and Data Generation",
+      "authors": [
+        "Guanhua Ji",
+        "Tianyu Li",
+        "Dayoon Suh",
+        "Yuqian Zhang",
+        "Boyan Zhang",
+        "Nadia Figueroa"
+      ],
+      "abstract": "Recent advances in video generation allow robots to learn manipulation trajectories from generated videos. However, these approaches produce purely kinematic trajectories that lack force information, causing failures in contact-rich tasks where appropriate contact forces are essential for success. In this work, we explore augmenting generated video with audio to shape a bounded, time-varying desired-force profile using the loudness of generated contact sounds. We present a pipeline that jointly leverages generated video and audio to derive motion trajectories and corresponding desired-force profiles from a structured natural-language task prompt. We execute these force-aware trajectories on a Franka Panda robot using a closed-loop force regulator that tracks the audio-shaped force profile during contact. We evaluate our pipeline on multiple tasks that require making contact and demonstrate successful manipulation where a kinematic-only baseline fails. We also use the pipeline as a data generation engine to train policies that achieve the tasks in a closed-loop manner. Project website, videos, and dataset: https://dreamingcontactsound.github.io/",
+      "published": "2026-09-16T17:56:44Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.19137",
+      "pdf_url": "https://arxiv.org/pdf/2609.19137",
+      "summary_zh": "现有视频生成方法只能从生成视频中学习纯运动学轨迹，缺乏力信息，导致接触密集型任务失败。本文提出联合利用生成视频与音频，通过生成接触声音的响度塑造有界时变期望力曲线，并在Franka Panda机器人上用闭环力调节器跟踪该力曲线执行力感知轨迹。实验表明该方法在多个接触任务上成功完成操作，而纯运动学基线失败，同时可作为数据生成引擎训练闭环策略。",
+      "summary_en": "Existing video-generation methods for robot manipulation produce purely kinematic trajectories lacking force information, causing failures in contact-rich tasks. This work jointly leverages generated video and audio, using the loudness of generated contact sounds to shape a bounded, time-varying desired-force profile tracked by a closed-loop force regulator on a Franka Panda robot. Experiments show successful manipulation on multiple contact tasks where a kinematic-only baseline fails, and the pipeline also serves as a data generation engine for training closed-loop policies.",
+      "highlights_zh": [
+        "用生成音频响度塑造期望力曲线",
+        "接触任务成功，纯运动学基线失败",
+        "可作数据生成引擎训练闭环策略"
+      ]
+    }
+  ]
+}
