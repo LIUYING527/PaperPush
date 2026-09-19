@@ -1,0 +1,297 @@
+{
+  "date": "2026-09-19",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.20822",
+      "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+      "authors": [
+        "Bingxin Xu",
+        "Yuzhang Shang",
+        "Zhen Dong",
+        "Emilio Ferrara"
+      ],
+      "abstract": "Coding agents have emerged as a promising paradigm for robot manipulation: a language model writes the robot controller as a program, and agents built in this way now operate robots without robot-specific training.Whether this paradigm is also safe, however, has not been asked. We evaluate coding agent under a safety constraint, where each task pairs a manipulation goal with an obstacle the robot must not touch. The agent pursues the goal but collides with the obstacle in most cases, treating task completion as its sole objective while neglecting safety. The agent reasons about the obstacle in its traces, and the prompt already forbids touching it, so neither perception nor instruction is at fault; the fault lies in the planning, where the stated constraint never becomes a priority. By decomposing manipulation into a route phase and a contact-rich moment, we locate the source of the failure. Along the route, the model cannot prioritize the safety constraint, having no notion of a clearing route and none of replanning once a chosen route becomes infeasible. At the contact, it is unaware that contact execution is bounded by the same constraint. To close this gap, we present SafeHarness, which equips the model with two obstacle-aware harnesses that enable it to prioritize the safety constraint. Obstacle-aware route planning grounds the objects as bounding boxes and draws candidate routes over them as sequences of waypoints. The agent then plans a route in advance, verifies it, replans when necessary, and only then executes it. Obstacle-aware contact execution instead selects the contact position so that the contact itself avoids the obstacle. SafeHarness attains 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0%, respectively. These results are $2.3\\times$ and $1.5\\times$ those of the same agent without harnesses.",
+      "published": "2026-09-17T17:59:58Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20822",
+      "pdf_url": "https://arxiv.org/pdf/2609.20822",
+      "summary_zh": "编码智能体虽已无需机器人专项训练即可操作机器人，但其安全性此前未被评估，在避障任务中智能体常因只追求目标而碰撞障碍物，问题根源在于规划阶段未将安全约束作为优先项。为此作者提出SafeHarness，通过障碍感知的路径规划（将物体表示为边界框并生成候选航点路径，先规划验证再执行）和障碍感知的接触执行（选择使接触本身避开障碍的接触位置）两个模块，让模型优先满足安全约束。该方法取得71.9%任务成功率和87.5%避障率，分别超越此前SOTA 6.5%和27.0%，是无harness智能体的2.3倍和1.5倍，为编码智能体的安全机器人操作提供了有效方案。",
+      "summary_en": "Coding agents can operate robots without robot-specific training, but their safety has not been evaluated; under an obstacle-avoidance constraint, agents collide with obstacles in most cases because the safety constraint never becomes a planning priority. To address this, the authors propose SafeHarness, which equips the model with two obstacle-aware harnesses: route planning that grounds objects as bounding boxes and draws candidate waypoint routes (plan, verify, replan, then execute), and contact execution that selects contact positions avoiding the obstacle. SafeHarness achieves 71.9% task success and 87.5% collision avoidance, surpassing the previous SOTA by 6.5% and 27.0% and reaching 2.3x and 1.5x the same agent without harnesses, offering an effective path toward safe coding-agent robot manipulation.",
+      "highlights_zh": [
+        "障碍感知路径规划与接触执行双harness",
+        "71.9%成功率、87.5%避障率超SOTA",
+        "提升编码智能体机器人操作安全性"
+      ]
+    },
+    {
+      "id": "2609.20820",
+      "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision",
+      "authors": [
+        "Nitish Dashora",
+        "Douglas Chen",
+        "Idan Shenfeld",
+        "John Marangola",
+        "Pulkit Agrawal",
+        "Max Simchowitz"
+      ],
+      "abstract": "Complex robotic manipulation tasks frequently require a long-term memory of past events and actions. As conditioning on full histories renders policies prone to spurious correlations and degrades performance, many approaches to policy memory involve compressing historical information through expensive VLM queries in-the-loop to process only task-salient information. In this paper, we propose an alternative approach in which computationally intensive VLM queries are made during train-time to learn a lightweight latent memory that can be efficiently queried at deployment time. Our representation, which we call the \\textbf{workspace token}, is trained by (1) using a VLM to identify current and historical information necessary for completing a task, then (2) distilling these into the workspace token using a set-reconstruction decoder loss. In both simulation and hardware, we show that the workspace token can be used as a drop-in replacement for observations during deployment, enabling policies to solve memory-intensive tasks without the need for VLM reasoning in-the-loop. Interestingly, we found that workspace tokens are not only more lightweight but also lead to better policy performance.",
+      "published": "2026-09-17T17:59:53Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20820",
+      "pdf_url": "https://arxiv.org/pdf/2609.20820",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.20821",
+      "title": "Embedding Models Measure in Peculiar Ways",
+      "authors": [
+        "Juri Opitz",
+        "Andrianos Michail"
+      ],
+      "abstract": "Embedding spaces define notions of semantic similarity and distance. We study whether those embeddings reflect physical measurements of mass, distance, time and volume, which admit a unique, objective notion of semantic equivalence and distance. We find that physical measurement is only weakly modeled in the embedding space, and that instead quite peculiar measurement patterns can be observed. Further analysis indicates that embedding representations of physical measurements are strongly influenced by superficial string similarity, and recalibration of similarity does not substantially improve the alignment.",
+      "published": "2026-09-17T17:59:54Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20821",
+      "pdf_url": "https://arxiv.org/pdf/2609.20821",
+      "summary_zh": "嵌入空间定义了语义相似度和距离的概念，但其是否反映质量、距离、时间和体积等具有唯一客观语义等价与距离的物理测量尚不明确。本文通过对比嵌入表示与物理测量的语义结构，并分析字符串相似性及重校准的影响来研究这一问题。结果发现物理测量在嵌入空间中仅被弱建模，且呈现奇特模式，主要受表面字符串相似性影响，重校准相似度也无法显著改善对齐。",
+      "summary_en": "Embedding spaces define notions of semantic similarity and distance, but it is unclear whether they reflect physical measurements of mass, distance, time, and volume, which have a unique objective notion of semantic equivalence and distance. This work compares embedding representations with the semantic structure of physical measurements and analyzes the influence of superficial string similarity and recalibration. The results show that physical measurement is only weakly modeled in embedding space, with peculiar patterns strongly driven by string similarity, and recalibration does not substantially improve alignment.",
+      "highlights_zh": [
+        "揭示嵌入空间物理测量建模异常",
+        "物理测量对齐仅弱相关",
+        "受字符串相似性主导，重校准无效"
+      ]
+    },
+    {
+      "id": "2609.20814",
+      "title": "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+      "authors": [
+        "Pochinapeddi Sai Bhargav",
+        "Nithin Somasekharan",
+        "Rohit Sunil Kanchi",
+        "Sicheng He",
+        "Shaowu Pan"
+      ],
+      "abstract": "Pretraining a neural PDE surrogate can reduce the amount of new CFD data needed when geometry or modeled physics changes. However, it remains unclear how different components of distribution shift affect this benefit. We pretrain a surrogate on 254,909 RANS solutions from one airfoil family and fine-tune it on a new family under two target settings with matched freestream ranges: the same Spalart-Allmaras (SA) modeling and SA with added $e^N$ transition modeling. At $N=1000$, the pretrained model matches the accuracy of a model trained from scratch on $3.25\\times$ as many samples for the same-SA target, but $2.58\\times$ as many for the transition-modeled target. By $N=5000$, this ordering reverses ($1.56\\times$ versus $1.86\\times$). At $N=1000$, sampling more distinct airfoils lowers error on both targets, but only for the same-SA target is the gain increase larger than the observed draw-to-draw variation ($3.3\\times$ to $4.0\\times$). These results show that pretraining value depends jointly on target-data budget, target-data coverage, and whether source and target differ in modeled physics.",
+      "published": "2026-09-17T17:59:24Z",
+      "primary_category": "physics.comp-ph",
+      "categories": [
+        "physics.comp-ph",
+        "cs.LG",
+        "physics.flu-dyn"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20814",
+      "pdf_url": "https://arxiv.org/pdf/2609.20814",
+      "summary_zh": "预训练神经PDE代理模型可减少新CFD数据需求，但分布偏移各组分如何影响该收益尚不明确。作者在一个翼型族上预训练RANS代理模型，并在两个匹配来流范围的新翼型族上微调，分别采用相同SA建模和加入e^N转捩建模。结果表明预训练价值取决于目标数据预算、覆盖度以及源-目标是否在建模物理上存在差异，且不同预算下两种目标的收益排序会反转。",
+      "summary_en": "Pretraining a neural PDE surrogate can reduce new CFD data needs, but how distribution shift components shape this benefit is unclear. The authors pretrain on 254,909 RANS solutions from one airfoil family and fine-tune on a new family under matched freestream ranges, comparing same-SA and SA with added e^N transition modeling. Results show pretraining value depends jointly on target-data budget, target-data coverage, and whether source and target differ in modeled physics, with the ranking between targets reversing across budgets.",
+      "highlights_zh": [
+        "解耦分布偏移组分对预训练收益影响",
+        "N=1000时同SA目标等效3.25倍数据",
+        "收益随预算与覆盖度变化且会反转"
+      ]
+    },
+    {
+      "id": "2609.20808",
+      "title": "Unifying Models of Intergroup Hostility in Online Discourse",
+      "authors": [
+        "Patrick Gerard",
+        "Julia Mendelsohn",
+        "Kristina Lerman"
+      ],
+      "abstract": "Hostile rhetoric toward social groups can normalize exclusion and justify mistreatment, as well as contribute to rising polarization and political violence. Efforts to moderate hostile rhetoric in online speech draw on foundational theories in social and moral psychology, and political science. However, these theories were developed largely in parallel, often propose different and sometimes conflicting accounts of how hostility develops, and have rarely been tested against each other in real discourse. The result is a fragmented understanding of the rhetorical mechanisms of hostility, without a clear sense of how they appear, and relate to each other, in real-world discourse. Using 2.86 million posts from TikTok, Truth Social, and Twitter/X during the 2024 U.S. presidential election, we model the mechanisms of six foundational theories of intergroup hostility -- boundary construction, threat construction, scapegoating, negative evaluation, dehumanization, and action orientation -- within a common empirical framework to recover the broader organization of intergroup hostility rhetoric. Structurally, we find that boundary construction and threat construction anchor the system; temporally, we find that these mechanisms tend to follow a regular ordering: boundary construction, derogation, and action orientation tend to appear early; dehumanization and threat construction later; scapegoating latest. Mapping how these theoretical frameworks actually manifest in discourse bridges longstanding divisions across social science traditions and presents computational social science with a clearer empirical foundation for modeling intergroup hostility rhetoric beyond single-label detection.",
+      "published": "2026-09-17T17:58:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.SI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20808",
+      "pdf_url": "https://arxiv.org/pdf/2609.20808",
+      "summary_zh": "敌意言论的调节依赖社会与道德心理学及政治学的多种理论，但这些理论各自发展、相互矛盾且很少在真实话语中相互检验，导致对敌意修辞机制的理解碎片化。该研究利用2024年美国总统选举期间TikTok、Truth Social和Twitter/X上的286万条帖子，在统一实证框架下对边界构建、威胁构建、替罪羊、负面评价、非人化和行动导向六种基础理论机制进行建模。结果发现边界构建和威胁构建锚定整个系统，且各机制呈现规律性时间顺序：边界构建、贬低和行动导向较早，非人化和威胁构建较晚，替罪羊最晚，这为跨社会科学传统架起桥梁并为计算社会科学建模群体间敌意修辞提供了更清晰的实证基础。",
+      "summary_en": "Efforts to moderate hostile rhetoric rely on foundational theories from social and moral psychology and political science, but these theories developed largely in parallel, often conflict, and have rarely been tested against each other in real discourse, resulting in a fragmented understanding of hostility mechanisms. Using 2.86 million posts from TikTok, Truth Social, and Twitter/X during the 2024 U.S. presidential election, this study models six foundational mechanisms of intergroup hostility—boundary construction, threat construction, scapegoating, negative evaluation, dehumanization, and action orientation—within a common empirical framework. Structurally, boundary and threat construction anchor the system; temporally, mechanisms follow a regular ordering (boundary construction, derogation, and action orientation early; dehumanization and threat construction later; scapegoating latest), bridging longstanding divisions across social science traditions and providing a clearer empirical foundation for modeling intergroup hostility rhetoric beyond single-label detection.",
+      "highlights_zh": [
+        "统一六种敌意理论于同一实证框架",
+        "分析286万条帖子揭示机制时间顺序",
+        "为敌意言论建模提供新基础"
+      ],
+      "highlights_en": [
+        "Unifies six hostility theories in one framework",
+        "Analyzes 2.86M posts to reveal temporal ordering",
+        "Provides new foundation for hostility modeling"
+      ]
+    },
+    {
+      "id": "2609.20804",
+      "title": "An Empirical Study of Harness Design for Coding Agents",
+      "authors": [
+        "Run-Ze Fan",
+        "Zihao Zhang",
+        "Simin Ma",
+        "Yebowen Hu",
+        "Shouju Wang",
+        "Kaiqiang Song",
+        "Fei Liu",
+        "Hamed Zamani",
+        "Xiaoyang Wang"
+      ],
+      "abstract": "Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic systems, leaving the effectiveness of individual components unclear. To enable component-level comparisons, we study this question with a lightweight coding harness whose execution loop is fixed while three components are varied: planning, action space, and context management. Across four models evaluated on SWE-Bench Verified and Terminal-Bench 2.1, we evaluate 176 matched settings spanning five context-management strategies, four context-window budgets, and targeted ablations of planning and action space. We find that: (1) Context management becomes increasingly valuable as the context-window budget tightens, with most of its benefit coming from preventing context-overflow failures. (2) Staging rule-based elision before LLM-based summarization provides the strongest overall efficiency among the context-management strategies, whereas making elided content recoverable adds machinery that models rarely use and yields no accuracy gain. (3) Planning shifts from an accuracy scaffold for weaker models to a cost saver for stronger models, with little change in accuracy. (4) Predefined tools improve performance for models with weaker bash proficiency, whereas bash-capable models can operate effectively with a bash-only interface and achieve substantially lower cost, especially on command-line-centric tasks. Trajectory-level analysis explains these effects: context management extends execution trajectories without substantially altering agent behavior, planning changes where trajectories stop, and the action space changes the granularity at which code is written. These findings inform model- and budget-aware harness design and provide a modular framework for evaluating future harness components.",
+      "published": "2026-09-17T17:58:07Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20804",
+      "pdf_url": "https://arxiv.org/pdf/2609.20804",
+      "summary_zh": "现有编码智能体研究通常将harness作为整体评估，导致各组件（规划、动作空间、上下文管理）的独立作用不明确。本文采用执行循环固定的轻量级harness，在SWE-Bench Verified和Terminal-Bench 2.1上对四个模型进行176组匹配实验，系统变化三类组件。结果表明上下文管理在预算紧张时价值最大且主要靠防止溢出，规则裁剪先于LLM摘要效率最优，规划对弱模型提精度、对强模型降成本，预定义工具利于bash弱模型而bash强模型可仅用bash接口降本，为模型与预算感知的harness设计提供模块化框架。",
+      "summary_en": "Existing work typically evaluates coding harnesses as monolithic systems, leaving the effectiveness of individual components unclear. This paper uses a lightweight harness with a fixed execution loop while varying planning, action space, and context management, conducting 176 matched settings across four models on SWE-Bench Verified and Terminal-Bench 2.1. Results show context management matters most under tight budgets mainly by preventing overflow, rule-based elision before LLM summarization is most efficient, planning shifts from accuracy scaffold to cost saver, and predefined tools help bash-weak models while bash-capable models thrive with a bash-only interface, informing model- and budget-aware harness design.",
+      "highlights_zh": [
+        "组件级解耦评估harness设计",
+        "规则裁剪先于摘要效率最优",
+        "bash强模型可仅用bash降本"
+      ]
+    },
+    {
+      "id": "2609.20819",
+      "title": "Can 4D Foundation Models Remember?",
+      "authors": [
+        "Guangzhao He",
+        "Hadar Averbuch-Elor",
+        "Wei-Chiu Ma"
+      ],
+      "abstract": "Perceiving and remembering the visual world is fundamental to navigating and interacting with our environment. Current 4D foundation models, such as camera-controllable video models or 4D reconstruction models, can perceive and reconstruct dynamic environments, but how well they remember what they have perceived remains an open question. Existing benchmarks largely rely on pixel-level metrics and lack ground truth for objects once they leave the field of view, making them unable to evaluate visual memory in an object-centric manner against references. To fill this gap, we introduce PersistBench, a dataset and metric suite that leverages 360° videos as omniscient ground truth and proposes three evaluation aspects: object permanence, motion continuity, and appearance preservation. Evaluating various models across diverse categories reveals that current models can only maintain short-term consistency that degrades significantly once objects leave the field of view. Our findings highlight the gap between current model capabilities and robust visual memory (\"seeing is not remembering\"), providing guidance for future development of 4D foundation models. Dataset and code are available on the project page: https://guangzhaohe.com/persistbench.",
+      "published": "2026-09-17T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20819",
+      "pdf_url": "https://arxiv.org/pdf/2609.20819",
+      "summary_zh": "当前4D基础模型（如可控视频模型和4D重建模型）能感知和重建动态环境，但其视觉记忆能力尚不明确，现有基准多依赖像素级指标且缺乏物体离开视野后的真值。为此，作者提出PersistBench数据集与指标套件，利用360°视频作为全知真值，从物体恒存性、运动连续性和外观保持性三个维度评估视觉记忆。实验表明现有模型仅能维持短期一致性，物体离开视野后性能显著下降，揭示了“看见不等于记住”的能力差距，为未来4D基础模型发展提供了方向。",
+      "summary_en": "Current 4D foundation models can perceive and reconstruct dynamic environments, but their visual memory remains unexamined, and existing benchmarks rely on pixel-level metrics without ground truth for objects leaving the field of view. To address this, the authors introduce PersistBench, a dataset and metric suite using 360° videos as omniscient ground truth to evaluate object permanence, motion continuity, and appearance preservation. Experiments show that current models only maintain short-term consistency that degrades significantly once objects leave the field of view, highlighting the gap between current capabilities and robust visual memory ('seeing is not remembering') and guiding future 4D foundation model development.",
+      "highlights_zh": [
+        "360°视频真值+三维记忆评估",
+        "物体离开视野后性能显著下降",
+        "揭示看见不等于记住的局限"
+      ]
+    },
+    {
+      "id": "2609.20818",
+      "title": "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
+      "authors": [
+        "Peiyu Liu",
+        "Dingxi Zhang",
+        "Federico Tombari",
+        "Marc Pollefeys",
+        "Christina Tsalicoglou",
+        "Daniel Barath"
+      ],
+      "abstract": "A splash lives for a fraction of a second: sheets tear into ligaments and droplets, appearance is view-dependent and nearly textureless, and little persists long enough to track. Reconstruction research has consequently focused on smoke, synthetic liquids, or gently deforming surfaces. To our knowledge, no synchronized multi-view dataset of splashing liquids exists. We therefore introduce a benchmark of 20 real scenes, from coherent streams to violent splashes, captured by seven synchronized, calibrated 4K cameras at 60 fps, with manually refined per-view liquid and container masks and fixed evaluation splits. We further present SplashSplat, built on a single principle: impose physical structure only where the observations can constrain it. Per-frame liquid SDFs fused from the masks provide the geometry, level-set transport between consecutive SDFs yields a coarse velocity field, and Lagrangian carriers advected along this flow, corrected against each new observation and reseeded where coverage is lost, decode local Gaussians for differentiable rendering. SplashSplat outperforms state-of-the-art dynamic Gaussian splatting methods on our real captures and on a synthetic benchmark, with physically more plausible motion and a lower training cost. The same representation supports temporal interpolation and style transfer without re-optimization.",
+      "published": "2026-09-17T17:59:41Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20818",
+      "pdf_url": "https://arxiv.org/pdf/2609.20818",
+      "summary_zh": "飞溅液体因存在时间极短、外观视角依赖且近乎无纹理而难以重建，现有研究多集中于烟雾、合成液体或缓慢形变表面，且缺乏真实多视角飞溅数据集。本文构建了20个真实场景、七台同步4K相机60fps采集的基准数据集，并提出SplashSplat方法，仅在观测可约束处施加物理结构，通过逐帧液体SDF、水平集输运速度场与拉格朗日载体解码高斯进行可微渲染。该方法在真实与合成基准上均优于现有动态高斯泼溅方法，运动更符合物理且训练成本更低，并支持无需重优化的时间插值与风格迁移。",
+      "summary_en": "Splashing liquids are extremely short-lived, view-dependent, nearly textureless, and hard to track, so prior reconstruction work has focused on smoke, synthetic liquids, or gently deforming surfaces, and no synchronized multi-view dataset of real splashes existed. We introduce a 20-scene real benchmark captured by seven synchronized calibrated 4K cameras at 60 fps with refined masks and fixed splits, plus SplashSplat, which imposes physical structure only where observations constrain it via per-frame liquid SDFs, level-set transport for a coarse velocity field, and Lagrangian carriers that decode local Gaussians for differentiable rendering. SplashSplat outperforms state-of-the-art dynamic Gaussian splatting on real and synthetic benchmarks with more physically plausible motion and lower training cost, and supports temporal interpolation and style transfer without re-optimization.",
+      "highlights_zh": [
+        "首个真实多视角飞溅液体基准数据集",
+        "真实与合成基准上超越SOTA动态高斯泼溅",
+        "支持插值与风格迁移，但依赖多相机同步采集"
+      ]
+    },
+    {
+      "id": "2609.20791",
+      "title": "StageGuard: Learning Stage Transitions for Long-Horizon Robot Tasks via Agentic Distillation",
+      "authors": [
+        "Jinbang Huang",
+        "Yuanzhao Hu",
+        "Zhiyuan Li",
+        "Ran Qi",
+        "Yixin Xiao",
+        "Yangzheng Wu",
+        "Tengyue Ba",
+        "Zhanguang Zhang",
+        "Yingxue Zhang"
+      ],
+      "abstract": "Hierarchical planning frameworks combine skills from multiple robot control policies for long-horizon task execution, where determining when to terminate the current skill and advance to the next subtask is essential. Existing approaches often rely on pre-designed completion signal checkers that are hard to obtain in real-world execution. Large-scale vision-language models (VLMs) offer strong reasoning capabilities, but their decision boundaries are not inherently aligned with task completion criteria, while cloud deployment and lengthy reasoning introduce substantial latency, limiting real-time monitoring. We propose StageGuard, an agentic distillation framework for accurate and efficient stage-transition decisions. StageGuard combines teacher-model reasoning with demonstration trajectories to generate structured explanations of subtask completion and policy switching. A lightweight student VLM uses these explanations to generate compact self-explanations, which are used for supervised fine-tuning. We evaluate stage-transition prediction on trajectories from two benchmarks and assess closed-loop task success through integration into hierarchical robot control on BEHAVIOR-1K, with further validation on real robots. Results show substantial improvements in stage-transition prediction while supporting efficient online monitoring.",
+      "published": "2026-09-17T17:53:48Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20791",
+      "pdf_url": "https://arxiv.org/pdf/2609.20791",
+      "summary_zh": "在长时程机器人任务的分层规划中，判断当前技能何时终止并切换到下一子任务至关重要，但现有方法依赖难以获取的预设计完成信号检查器，而大型视觉语言模型虽具推理能力却与任务完成标准不对齐且延迟高。为此，作者提出StageGuard，一种智能体蒸馏框架，利用教师模型推理与演示轨迹生成子任务完成和策略切换的结构化解释，再让轻量学生VLM生成紧凑自解释并进行监督微调。在两个基准轨迹上的阶段转换预测及BEHAVIOR-1K闭环控制和真实机器人验证中，该方法显著提升了预测准确性并支持高效在线监控。",
+      "summary_en": "In hierarchical planning for long-horizon robot tasks, deciding when to terminate the current skill and advance to the next subtask is essential, yet existing methods rely on hard-to-obtain pre-designed completion checkers, while large VLMs have misaligned decision boundaries and high latency. To address this, the authors propose StageGuard, an agentic distillation framework that combines teacher-model reasoning with demonstration trajectories to generate structured explanations of subtask completion and policy switching, which a lightweight student VLM distills into compact self-explanations for supervised fine-tuning. Evaluated on stage-transition prediction across two benchmarks and closed-loop control on BEHAVIOR-1K with real-robot validation, it substantially improves prediction while enabling efficient online monitoring.",
+      "highlights_zh": [
+        "教师推理与轨迹蒸馏为学生VLM自解释",
+        "阶段转换预测显著提升且支持在线监控",
+        "可集成分层控制，但依赖演示轨迹质量"
+      ]
+    },
+    {
+      "id": "2609.20817",
+      "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+      "authors": [
+        "Kevin Qu",
+        "Tao Sun",
+        "Massimiliano Viola",
+        "Liyuan Zhu",
+        "Zhizhuo Zhou",
+        "Sayan Deb Sarkar",
+        "Konrad Schindler",
+        "Iro Armeni"
+      ],
+      "abstract": "Modeling articulated objects from sparse monocular views is challenging because each observation reveals only partial geometry and motion evidence. Most feed-forward methods infer articulation from a single observation and therefore rely heavily on learned category-level shape priors. We present FAMOS, a feed-forward model that predicts movable-part segmentation and joint parameters from a sparse, unordered set of partial point clouds. Our model jointly reasons over multiple observations and naturally supports a variable number of inputs, including a single view. To aggregate articulation cues across observations, we introduce a Multi-state Articulation Transformer with alternating state-wise and global attention. We further propose an observed articulation span objective that supervises the motion range each part exhibits across the input observations, encouraging the model to leverage the full observation set. To overcome the limited scale and diversity of existing datasets, we introduce a procedural data generator that synthesizes self-annotated assets during training. Experiments on PartNet-Mobility, ACD, and ArtiCraft-10K demonstrate consistent improvements over both feed-forward and optimization-based baselines. Project page: https://kevinqu7.github.io/famos",
+      "published": "2026-09-17T17:59:40Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.20817",
+      "pdf_url": "https://arxiv.org/pdf/2609.20817",
+      "summary_zh": "从稀疏单目视角建模铰接物体很困难，因为每个观测仅揭示部分几何与运动信息，现有前馈方法多依赖单视角和类别级形状先验。FAMOS 提出一种前馈模型，通过多状态铰接 Transformer 交替进行状态级与全局注意力，从稀疏无序的部分点云集合中联合推理可动部件分割与关节参数，并引入观测铰接跨度目标与程序化数据生成器。在 PartNet-Mobility、ACD 和 ArtiCraft-10K 上，FAMOS 持续优于前馈与优化基线，支持可变数量输入，提升了稀疏观测下铰接建模的鲁棒性与泛化能力。",
+      "summary_en": "Modeling articulated objects from sparse monocular views is challenging since each observation reveals only partial geometry and motion evidence, and most feed-forward methods rely on a single view with category-level shape priors. FAMOS is a feed-forward model that predicts movable-part segmentation and joint parameters from a sparse, unordered set of partial point clouds, using a Multi-state Articulation Transformer with alternating state-wise and global attention, an observed articulation span objective, and a procedural data generator. Experiments on PartNet-Mobility, ACD, and ArtiCraft-10K show consistent improvements over feed-forward and optimization-based baselines, enabling robust articulation modeling from variable numbers of sparse observations.",
+      "highlights_zh": [
+        "多视角联合推理铰接参数",
+        "三个数据集上持续超越基线",
+        "支持稀疏输入但依赖合成数据"
+      ]
+    }
+  ]
+}
