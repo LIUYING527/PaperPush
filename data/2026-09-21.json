@@ -1,0 +1,370 @@
+{
+  "date": "2026-09-21",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.22086",
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+      "authors": [
+        "Hongyang Du",
+        "Lan Yan",
+        "Christian Flores",
+        "Asim Kadav"
+      ],
+      "abstract": "Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external procedural memory of natural-language skills accumulates and refines reusable design procedures from experience. The memory widens by acquiring procedures for recurring uncovered subtasks and deepens by revising existing procedures against their own successful and failed executions, while a matched replay gate admits only changes that repair failures without regressing observed successes. Five rounds over 1,406 real user briefs and 1,869 automatically graded trajectories, with no weight updates and no human labels, grow the bank from 76 documentation-derived skills to 139 and raise GenEval2 execution success on Claude-Sonnet-4 from 72.7% to 99.3% (+11.99 points in generation quality), with 61.8% and 67.6% win rates against the no-skill agent across four specialized design benchmarks on Claude-Sonnet-4 and Claude-Opus-4.6. We further show the two mechanisms are effective in combination: on 200 held-out briefs from user-traffic benchmark, widening or deepening alone reaches a 49.4% / 48.6% win rate over the no-skill agent, while their combination reaches 58.5% (p = 0.025). Procedural memory offers a practical route to continual adaptation of agents under noisy, unverifiable feedback.",
+      "published": "2026-09-18T17:59:56Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22086",
+      "pdf_url": "https://arxiv.org/pdf/2609.22086",
+      "summary_zh": "专业平面设计是长周期智能体任务，其成果缺乏可靠程序化评判标准，难以持续优化。本文提出Designer-RSI框架，冻结前沿模型通过230余种工具操作设计软件，并用外部自然语言技能程序记忆从经验中积累和精炼可复用设计流程，通过拓宽覆盖新子任务与深化修正已有流程，配合匹配回放门控确保只修复失败而不损害成功。在1406个真实用户简报上五轮迭代后，技能库从76增至139，GenEval2执行成功率从72.7%升至99.3%，生成质量提升11.99分，对无技能智能体胜率达61.8%/67.6%，且拓宽与深化组合显著优于单独使用（58.5%胜率，p=0.025），为噪声不可验证反馈下的智能体持续适应提供了实用路径。",
+      "summary_en": "Professional graphic design is a long-horizon agentic task with no reliable programmatic oracle, making continual improvement difficult. We introduce Designer-RSI, where a frozen frontier model operates design software via 230+ tools while an external procedural memory of natural-language skills accumulates and refines reusable design procedures, widening to cover new subtasks and deepening existing ones, gated by matched replay to repair failures without regressing successes. Over five rounds on 1,406 real user briefs, the skill bank grows from 76 to 139, raising GenEval2 execution success from 72.7% to 99.3% (+11.99 generation quality) with 61.8%/67.6% win rates against the no-skill agent, and the combination of widening and deepening significantly outperforms either alone (58.5% win rate, p=0.025), offering a practical route to continual agent adaptation under noisy, unverifiable feedback.",
+      "highlights_zh": [
+        "外部程序记忆实现无权重更新的持续适应",
+        "GenEval2成功率72.7%→99.3%，胜率61.8%",
+        "拓宽与深化组合显著优于单独使用"
+      ],
+      "highlights_en": [
+        "External procedural memory enables weight-free continual adaptation",
+        "GenEval2 success 72.7%→99.3%, win rate 61.8%",
+        "Widening+deepening combo significantly outperforms either alone"
+      ]
+    },
+    {
+      "id": "2609.22068",
+      "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
+      "authors": [
+        "Bowen Ye",
+        "Lei Li",
+        "Shicheng Li",
+        "Zihao Yue",
+        "Linghao Zhang",
+        "Hanglong Lv",
+        "Yuanxin Liu",
+        "Wenhan Ma",
+        "Hao Tian",
+        "Rang Li",
+        "Jinhao Dong",
+        "Yikai Zhao",
+        "Xiangwei Deng",
+        "Hailin Zhang",
+        "Liang Zhao",
+        "Qi Liu",
+        "Lingpeng Kong",
+        "Tong Yang",
+        "Fuli Luo"
+      ],
+      "abstract": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically rely on development artifacts such as issues and commits, limiting the range of tasks that can be extracted. To better scale RL environments, we present CodeMidas, an agentic pipeline that turns implemented functionality in existing codebases into executable RL environments using source code as its only task-specific input. CodeMidas allocates agentic compute to every stage of environment construction: agents explore implemented functionality to formulate behavioral specifications, construct tests grounded in execution of the original code, and validate and filter candidate tasks through execution checks and repeated solution rollouts. The resulting dataset has 5,545 training tasks from 3,185 open-source codebases spanning 23 programming languages and 15 technical domains. Training MiMo-V2.5 on these tasks with GRPO improves performance on all five diverse benchmarks, covering issue repair (DeepSWE + 11.7%), whole-program construction (ProgramBench +17%), and terminal work (Terminal-Bench v2.1 +8.5%). Ablations show that increasing the number of high-quality training tasks improves performance. Trajectory analysis shows the RL-trained agent demonstrates better behaviors like increasing codebase exploration and more diverse self-verification. These results establish source code as a scalable foundation for constructing RL environments that improve coding agents across diverse software tasks.",
+      "published": "2026-09-18T17:55:17Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22068",
+      "pdf_url": "https://arxiv.org/pdf/2609.22068",
+      "summary_zh": "训练编码智能体需要多样化且带可靠验证器的任务，但现有方法依赖issue和commit等开发痕迹，限制了可提取任务的范围。CodeMidas提出一种智能体流水线，仅以源代码为任务特定输入，通过智能体探索功能、基于原始代码执行构建测试并验证过滤，将已实现功能转化为可执行RL环境。由此构建了涵盖23种语言、3185个代码库的5545个任务，训练MiMo-V2.5后在DeepSWE、ProgramBench、Terminal-Bench v2.1等五个基准上全面提升，证明源代码可作为可扩展的RL环境基础。",
+      "summary_en": "Training capable coding agents with RL requires diverse tasks with reliable verifiers, but existing methods rely on development artifacts like issues and commits, limiting task extraction. CodeMidas is an agentic pipeline that uses source code as the only task-specific input, turning implemented functionality into executable RL environments via agentic exploration, execution-grounded test construction, and validation filtering. It yields 5,545 tasks from 3,185 codebases across 23 languages, and training MiMo-V2.5 with GRPO improves all five benchmarks (DeepSWE +11.7%, ProgramBench +17%, Terminal-Bench v2.1 +8.5%), establishing source code as a scalable foundation for RL environments.",
+      "highlights_zh": [
+        "仅用源代码构建可执行RL环境",
+        "五基准全面提升，最高+17%",
+        "依赖代码库质量，泛化待验证"
+      ]
+    },
+    {
+      "id": "2609.22064",
+      "title": "BrainWideBench: Benchmarking large-scale pretraining and across-animal transfer in multi-region neural recordings",
+      "authors": [
+        "Alexandre Andre",
+        "Shivashriganesh P. Mahato",
+        "Vinam Arora",
+        "Keshav Balaji",
+        "Divyansha Lachi",
+        "Nanda H. Krishna",
+        "Jingyun Xiao",
+        "Yizi Zhang",
+        "Ximeng Mao",
+        "Wenrui Ma",
+        "Han Yu",
+        "International Brain Laboratory",
+        "Daniel Birman",
+        "Niccolò Bonacchi",
+        "Gaelle A. Chapuis",
+        "Joana A. Catarino",
+        "Felicia Davatolhagh",
+        "Mayo Faulkner",
+        "Laura Freitas-Silva",
+        "Fei Hu",
+        "Julia M. Huntenburg",
+        "Anup Khanal",
+        "Inês Laranjeira",
+        "Petrina Lau",
+        "Guido T. Meijer",
+        "Nathaniel J. Miska",
+        "Jean-Paul Noel",
+        "Alejandro Pan-Vazquez",
+        "Georg Raiser",
+        "Cyrille Rossant",
+        "Karolina Z. Socha",
+        "Anne E. Urai",
+        "Miles J. Wells",
+        "Steven J. West",
+        "Olivier Winter",
+        "Blake Richards",
+        "Guillaume Lajoie",
+        "Cole Hurwitz",
+        "Mehdi Azabou",
+        "Matthew R. Whiteway",
+        "Liam Paninski",
+        "Eva L. Dyer"
+      ],
+      "abstract": "Advances in large-scale neural recording have made it possible to collect data across many animals and distributed brain regions, raising the question of whether this scale can be exploited to learn general-purpose neural representations transferable across diverse downstream tasks. Yet, progress toward this goal has been limited by fragmented evaluation protocols and a narrow focus on individual task domains. Here, we present BrainWideBench, a benchmark for evaluating across-animal transfer on multi-region neural recordings, built on the International Brain Laboratory Brainwide Map dataset of neural and behavioral recordings spanning 276 brain regions from 139 mice performing a sensory-guided decision-making task. The benchmark is organized around three complementary task suites that evaluate whether learned representations support downstream decoding of behavior, can predict masked or future neural activity, and can recover biologically meaningful anatomical organization. With this benchmark, we systematically evaluate pretraining methods across transfer settings, including finetuning on downstream objectives and zero-shot generalization to unseen animals. Our results confirm pretraining improves performance over matched single-session baselines, but we show current methods exhibit heterogeneity in transfer capabilities: gains depend strongly on the alignment between pretraining objectives and downstream tasks. No single approach performs uniformly well across all three suites, and most methods are designed to only address a subset of them. Together, these findings suggest that learning representations that jointly generalize across behavior, dynamics, and anatomy remains an open challenge. By providing a unified and reproducible evaluation suite, BrainWideBench establishes a framework for measuring progress toward general-purpose models of the mouse brain.",
+      "published": "2026-09-18T17:54:32Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22064",
+      "pdf_url": "https://arxiv.org/pdf/2609.22064",
+      "summary_zh": "大规模神经记录已能跨多动物和多脑区采集数据，但碎片化的评估协议和单一任务视角限制了通用神经表征的学习与迁移。本文提出BrainWideBench，基于国际脑实验室Brainwide Map数据集（139只小鼠、276个脑区），围绕行为解码、神经活动预测和解剖组织恢复三大任务套件，系统评估预训练方法在微调和零样本跨动物迁移下的表现。结果显示预训练优于单会话基线，但迁移能力高度依赖预训练目标与下游任务的对齐，尚无方法能同时在三个套件上表现优异，表明联合泛化行为、动态和解剖仍是开放挑战。",
+      "summary_en": "Large-scale neural recordings now span many animals and brain regions, yet fragmented evaluation protocols and narrow task focus hinder learning general-purpose neural representations. We introduce BrainWideBench, a benchmark built on the IBL Brainwide Map dataset (139 mice, 276 brain regions) with three task suites—behavior decoding, neural activity prediction, and anatomical organization recovery—to systematically evaluate pretraining under finetuning and zero-shot across-animal transfer. Pretraining outperforms matched single-session baselines, but transfer gains depend strongly on alignment between pretraining objectives and downstream tasks, with no single method excelling across all suites, highlighting joint generalization over behavior, dynamics, and anatomy as an open challenge.",
+      "highlights_zh": [
+        "统一多脑区跨动物迁移评估基准",
+        "预训练优于单会话基线但迁移不均",
+        "通用脑表征学习仍待突破"
+      ],
+      "highlights_en": [
+        "Unified multi-region cross-animal transfer benchmark",
+        "Pretraining beats single-session baselines but transfers unevenly",
+        "General-purpose brain representation learning remains open"
+      ]
+    },
+    {
+      "id": "2609.22056",
+      "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+      "authors": [
+        "Andre Bacellar"
+      ],
+      "abstract": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval features carry mutual information about success, a condition satisfied by LLM-judge pipelines but substantially weaker in dense-only settings, explaining the AUC-AC gap between regimes. Second (Feature Regime Complementarity): no single ANN score feature achieves best predictive performance across all failure regimes; the dominant feature differs between datasets (query length on MuSiQue, hop-1 concentration on HoVer), and a constructive witness pair shows each is necessary in one regime and non-contributory in the other. We instantiate these principles in RegimeAbstain, which computes a Retrieval Confidence Score (RCS), a logistic function of up to nine query-ANN structural features, all available without any additional LLM call, and uses it to implement a calibrated abstention policy. We define the Confident-Wrong-Answer Rate (CWAR) metric and evaluate across three multi-hop benchmarks (MuSiQue, 2WikiMultiHopQA, HoVer) and two retrieval architectures (LLM-judge and dense-only), covering five failure regimes with CWAR from 14.5% to 62.1%. RCS achieves best or co-best AUC-AC in all five conditions against eight confidence baselines. On MuSiQue (LLM-judge), RCS reduces CWAR from 39.5% to 20.6% at 50% coverage (47.8% relative reduction), with ECE=0.035. A model trained on MuSiQue transfers to 2WikiMultiHopQA with only -0.5pp AUC loss, confirming the domain-agnostic structure of regime features.",
+      "published": "2026-09-18T17:48:15Z",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22056",
+      "pdf_url": "https://arxiv.org/pdf/2609.22056",
+      "summary_zh": "多跳检索失败并非随机分布，而是聚集在结构上可预测的子群体中，但现有置信度评分方法未能充分利用这一结构。作者提出CWAR可归约性与特征机制互补性两个理论结果，并据此构建RegimeAbstain，用无需额外LLM调用的检索置信度分数RCS实现校准弃答。在三个多跳基准和两种检索架构下，RCS在全部五种失败机制中取得最佳或并列最佳AUC-AC，MuSiQue上50%覆盖率时将CWAR从39.5%降至20.6%，且跨数据集迁移仅损失0.5个百分点。",
+      "summary_en": "Multi-hop retrieval failures are not uniformly distributed but cluster in structurally predictable subpopulations that existing confidence scoring methods fail to exploit. The authors prove two results—CWAR Reducibility and Feature Regime Complementarity—and instantiate them in RegimeAbstain, which computes a Retrieval Confidence Score (RCS) from up to nine query-ANN structural features without extra LLM calls to drive calibrated abstention. Across three multi-hop benchmarks and two retrieval architectures, RCS achieves best or co-best AUC-AC in all five failure regimes, reducing CWAR on MuSiQue from 39.5% to 20.6% at 50% coverage with only -0.5pp AUC loss when transferred to 2WikiMultiHopQA.",
+      "highlights_zh": [
+        "证明失败可归约性与特征机制互补性",
+        "MuSiQue上CWAR相对降低47.8%",
+        "无需额外LLM调用，可跨域迁移"
+      ]
+    },
+    {
+      "id": "2609.22081",
+      "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
+      "authors": [
+        "Aho Yapi",
+        "Pierre Latouche",
+        "Arnaud Guillin",
+        "Yan Bailly"
+      ],
+      "abstract": "Occupational accident narratives contain valuable information about work situations, unfavourable conditions, accident events, and their consequences. Automatically structuring these narratives can facilitate large-scale accident analysis and support occupational risk prevention. However, the terminology and writing styles used to describe accidents vary considerably across sectors and organisations, raising questions about the ability of automated coding systems to generalize beyond their training domain. In this paper, we evaluate the cross-sector generalization of accident-process role classification in French occupational accident narratives. We construct an expert-annotated corpus in which factual units are classified into four roles: work situation (A0), explicitly reported unfavourable condition (A1), accident event or deviation (B), and reported consequence (C). The role classifiers are developed and selected exclusively on 42,244 factual units extracted from 6,040 construction-sector narratives and are then evaluated on unseen corpora from the metallurgy and chemistry--plastics sectors, as well as on an independently collected company corpus, without retraining or target-domain tuning of the role classifier. We compare frozen pretrained representations with task-specific fine-tuning and supervised representation-learning strategies. The results show that task-specific adaptation consistently improves cross-domain transfer over frozen representations. Across repeated training runs, the three leading task-adapted strategies achieved average balanced accuracies between 85.6% and 85.8% across the three target corpora. These findings support the development of transferable assisted-coding systems capable of consistently structuring heterogeneous occupational accident narratives for expert review and cross-sector prevention analysis.",
+      "published": "2026-09-18T17:59:10Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22081",
+      "pdf_url": "https://arxiv.org/pdf/2609.22081",
+      "summary_zh": "职业事故叙述中的术语和写作风格因行业而异，自动编码系统跨领域泛化能力存疑。本文构建法语事故叙述专家标注语料，将事实单元分为工作情境、不利条件、事故事件和后果四类角色，仅在建筑行业数据上训练分类器，再在冶金、化学塑料及独立企业语料上零样本评估，比较冻结预训练表示与任务特定微调及监督表示学习策略。结果显示任务特定适配持续优于冻结表示，三种领先策略在三目标语料上平均平衡准确率达85.6%–85.8%，支持开发可迁移的辅助编码系统以结构化异构事故叙述并服务跨行业预防分析。",
+      "summary_en": "Occupational accident narratives vary in terminology and style across sectors, raising doubts about automated coding systems' cross-domain generalization. This paper builds an expert-annotated French corpus labeling factual units into four roles—work situation, unfavourable condition, accident event, and consequence—trains role classifiers solely on construction-sector data, and evaluates them on unseen metallurgy, chemistry-plastics, and independent company corpora without retraining, comparing frozen pretrained representations with task-specific fine-tuning and supervised representation learning. Task-specific adaptation consistently improves cross-domain transfer, with the three leading strategies achieving average balanced accuracies of 85.6%–85.8% across target corpora, supporting transferable assisted-coding systems for structuring heterogeneous accident narratives and enabling cross-sector prevention analysis.",
+      "highlights_zh": [
+        "跨行业零样本事故角色分类评估",
+        "平均平衡准确率达85.6%–85.8%",
+        "支持可迁移辅助编码与跨行业预防"
+      ]
+    },
+    {
+      "id": "2609.22043",
+      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
+      "authors": [
+        "Yiming Zhang",
+        "Jinghong Zhang",
+        "Haoran Zhao",
+        "Yiren Ma",
+        "Chunlei Zhao"
+      ],
+      "abstract": "Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little attention. When the memory store contains conflicting positions, standard retrieval-augmented generation (RAG) blindly injects memories and amplifies hallucinations: in models susceptible to memory injection, the RAG hallucination rate under conflicting memories is markedly higher than that of a memory-free baseline. Inspired by memory signaling mechanisms in the prefrontal cortex, we propose the Memory Decision Layer (MDL), a zero-parameter memory decision controller situated between the retrieval and generation stages. Its core is a three-signal complementary encoder that fuses relevance, reliability, and task risk through QR-based orthogonal subspace projection and a meta-working-memory signal into an interpretable decision representation that quantifies the trustworthiness of retrieved memories. Building on this encoder, MDL explicitly decouples confidence from consistency and introduces risk inversion and explicit abstention. Evaluations on mainstream large language models and multiple open-source datasets show that MDL reduces the hallucination rate under conflicting memories by about 56.04% in general scenarios and approaches zero hallucination in high-risk scenarios. The controller is fully white-box: it relies purely on geometric operations, requires no trained parameters, and adds only about 0.14 ms per decision -- roughly 50x faster than the embedding-retrieval step that precedes it and four to five orders of magnitude faster than an LLM self-evaluation call.",
+      "published": "2026-09-18T17:34:13Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22043",
+      "pdf_url": "https://arxiv.org/pdf/2609.22043",
+      "summary_zh": "大语言模型记忆系统主要关注高效检索，却忽视了检索到的记忆是否可信，当记忆库存在冲突时，标准RAG会盲目注入记忆并放大幻觉。受前额叶皮层记忆信号机制启发，作者提出零参数的记忆决策层（MDL），位于检索与生成之间，通过三信号互补编码器融合相关性、可靠性与任务风险，并显式解耦置信度与一致性，引入风险反转与显式弃权。在主流大模型和多个开源数据集上，MDL将冲突记忆下的幻觉率降低约56.04%，高风险场景接近零幻觉，且完全白盒、无需训练参数，每次决策仅约0.14毫秒。",
+      "summary_en": "Memory systems for large language models have focused mainly on efficient retrieval, while whether retrieved memories should be trusted has received little attention, causing standard RAG to blindly inject conflicting memories and amplify hallucinations. Inspired by prefrontal memory signaling, the authors propose the Memory Decision Layer (MDL), a zero-parameter controller between retrieval and generation that fuses relevance, reliability, and task risk via a three-signal complementary encoder, explicitly decoupling confidence from consistency and adding risk inversion and abstention. Evaluations across mainstream LLMs and open-source datasets show MDL cuts the hallucination rate under conflicting memories by about 56.04% and approaches zero hallucination in high-risk scenarios, while being fully white-box, training-free, and adding only about 0.14 ms per decision.",
+      "highlights_zh": [
+        "三信号互补零参数记忆决策层",
+        "冲突记忆幻觉率降低约56.04%",
+        "白盒高效，单次决策仅0.14毫秒"
+      ]
+    },
+    {
+      "id": "2609.22083",
+      "title": "MintAct: A Unified Visual Agent for Digital Environments",
+      "authors": [
+        "Mingfei Gao",
+        "Rui Tian",
+        "Haiming Gang",
+        "Bohan Zhai",
+        "Le Zhang",
+        "Yuanzheng Gong",
+        "Di Feng",
+        "Ege Özsoy",
+        "Kaixin Ma",
+        "Vishwesh Kirthivasan",
+        "Oğuzhan Fatih Kar",
+        "Roman Bachmann",
+        "Anders Boesen Lindbo Larsen",
+        "Afshin Dehghan"
+      ],
+      "abstract": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
+      "published": "2026-09-18T17:59:34Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22083",
+      "pdf_url": "https://arxiv.org/pdf/2609.22083",
+      "summary_zh": "数字环境中的视觉智能体通常需要针对UI定位、多步导航和工具使用分别训练专用模型，缺乏统一方案。MintAct通过精心设计环境、数据与训练配方，结合可扩展的异步强化学习框架，训练出2B、4B、8B三种规模的统一视觉语言模型。该模型在多个基准上达到同规模最优性能（OSWorld-Verified 48.9），证明统一智能体可媲美各领域专家模型。",
+      "summary_en": "Visual agents for digital environments typically rely on per-domain specialists for UI grounding, multi-step navigation, and tool use, lacking a unified solution. MintAct trains unified vision-language models at 2B, 4B, and 8B scales via carefully designed environments, data, and training recipes, supported by a scalable asynchronous RL framework. It achieves state-of-the-art performance at comparable model sizes (48.9 on OSWorld-Verified), showing a unified agent can match domain specialists.",
+      "highlights_zh": [
+        "统一UI定位、导航与工具使用",
+        "OSWorld-Verified达48.9最优",
+        "可扩展异步RL训练框架"
+      ],
+      "highlights_zh_note": "",
+      "highlights_en": [
+        "Unifies UI grounding, navigation, tool use",
+        "SOTA 48.9 on OSWorld-Verified",
+        "Scalable asynchronous RL framework"
+      ]
+    },
+    {
+      "id": "2609.22069",
+      "title": "OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation",
+      "authors": [
+        "Wenxue Li",
+        "Peiyan Guan",
+        "Haoyang Jiang",
+        "Junxian Cai",
+        "Hualuo Liu",
+        "Chunjie Zhang",
+        "Chong Guan",
+        "Songlian Li",
+        "Taiyi Wu",
+        "Yongjian Yu",
+        "Xiaotong Zhao",
+        "Alan Zhao",
+        "Eric Liu",
+        "Xi Chen",
+        "Yu Liu",
+        "Lei Zhu"
+      ],
+      "abstract": "Reference-to-video (R2V) generation is evolving toward increasingly general and versatile reference control, giving rise to the emerging paradigm of omni R2V generation. However, existing benchmarks fall short of these emerging capabilities: their test cases cover limited reference types and compositions, and their evaluation protocols largely assess holistic reference consistency, overlooking whether reference factors are properly preserved, disentangled, and routed. Meanwhile, the high cost of constructing omni R2V training data makes suitable training resources scarce. To address these gaps, we introduce OmniVBench and the Omni-R2V Dataset for evaluating and training omni R2V models. OmniVBench expands R2V evaluation across broader reference types, fine-grained control tasks, and richer reference compositions, covering 7 task families and 18 fine-grained tasks spanning content, motion, style, structure, narrative, and multi-reference settings. We introduce factor-grounded evaluation with 12,172 case-specific checklist items, assessing whether intended reference factors are faithfully preserved, correctly disentangled and bound to their targets, and properly realized according to the instruction. We further introduce the Omni-R2V Dataset, bringing industrial-grade training resources for diverse R2V tasks to the broader research community. Drawing primarily on a large-scale corpus of professional video footage, it comprises 340K processed training samples spanning diverse reference types and multi-reference compositions. We develop task-specific pipelines for reference-target pair construction, offering a practical and scalable recipe for omni R2V data construction. Extensive evaluation of advanced open- and closed-source R2V models reveals clear performance gaps across task families and evaluation dimensions on OmniVBench, highlighting remaining limitations of current R2V models.",
+      "published": "2026-09-18T17:55:49Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22069",
+      "pdf_url": "https://arxiv.org/pdf/2609.22069",
+      "summary_zh": "现有R2V生成基准测试的参考类型与组合有限，评估仅关注整体一致性，忽略了参考因素的保留、解耦与路由，且训练数据稀缺。本文提出OmniVBench基准（覆盖7类任务族、18项细粒度任务，含12,172条案例特定检查项的因素化评估）和Omni-R2V数据集（34万训练样本，含任务特定参考-目标配对构建流程）。对先进开源与闭源R2V模型的评测揭示了各任务族和评估维度上的明显性能差距，凸显当前模型的局限。",
+      "summary_en": "Existing R2V benchmarks cover limited reference types and compositions and evaluate only holistic consistency, overlooking whether reference factors are preserved, disentangled, and routed, while training data remains scarce. We introduce OmniVBench, spanning 7 task families and 18 fine-grained tasks with factor-grounded evaluation via 12,172 case-specific checklist items, plus the Omni-R2V Dataset of 340K training samples with task-specific reference-target construction pipelines. Evaluation of advanced open- and closed-source R2V models reveals clear performance gaps across task families and dimensions, highlighting current limitations.",
+      "highlights_zh": [
+        "因素化评估+34万训练数据",
+        "覆盖7任务族18细粒度任务",
+        "揭示R2V模型多维度差距"
+      ]
+    },
+    {
+      "id": "2609.22085",
+      "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+      "authors": [
+        "Saksham Singh",
+        "Zheyuan Hu",
+        "Max Sobol Mark",
+        "Jeffrey Yu",
+        "Zackory Erickson",
+        "Aviral Kumar"
+      ],
+      "abstract": "Despite rapid progress, generalist robot policies remain brittle on complex, long-horizon tasks that comprise multiple stages or require repeated attempts and deliberation on the same underlying stage before success. Q-value functions can improve these policies by ranking candidate actions or guiding policy improvement, but learning from sparse task-level rewards entails long credit-assignment horizons, difficult Bellman backups, and broad data-coverage requirements. We introduce SeeQ (Subtask-elicited Q-functions), which instead learns Q-values for the currently active subtask. This shortens the value-prediction horizon and enables effective learning with temporal-difference (TD) objectives. During training, subtask-level annotations present in offline robot data provide the decomposition and enable learning from broad, potentially suboptimal robot datasets. To eliminate the need for human annotations or modular subtask prediction systems at test time, our Q-function architecture is trained to autoregressively predict the active subtask in natural language before estimating its value. We instantiate SeeQ using a base vision-language backbone, pretrain it on diverse open-source robot manipulation data, and finetune it on downstream tasks. Across four real-world manipulation tasks on two bimanual robot platforms, the SeeQ value function substantially improves best-of-N policy steering.",
+      "published": "2026-09-18T17:59:47Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22085",
+      "pdf_url": "https://arxiv.org/pdf/2609.22085",
+      "summary_zh": "通用机器人策略在复杂长时程操作任务中表现脆弱，而基于稀疏任务奖励的Q值学习面临信用分配跨度长、贝尔曼备份困难和数据覆盖要求高等问题。SeeQ提出学习当前活跃子任务的Q值，利用离线数据中的子任务标注缩短价值预测跨度，并通过自回归预测自然语言子任务来消除测试时的人工标注需求。在两个双臂机器人平台的四个真实操作任务上，SeeQ价值函数显著提升了best-of-N策略引导效果。",
+      "summary_en": "Generalist robot policies remain brittle on complex long-horizon manipulation tasks, while learning Q-values from sparse task-level rewards suffers from long credit-assignment horizons, difficult Bellman backups, and broad data-coverage requirements. SeeQ instead learns Q-values for the currently active subtask, leveraging subtask-level annotations in offline robot data to shorten the value-prediction horizon and autoregressively predicting the active subtask in natural language to avoid human annotations or modular subtask predictors at test time. Across four real-world manipulation tasks on two bimanual robot platforms, the SeeQ value function substantially improves best-of-N policy steering.",
+      "highlights_zh": [
+        "学习当前子任务Q值，缩短价值预测跨度",
+        "四任务双臂平台显著提升best-of-N引导",
+        "依赖离线子任务标注，需预训练数据覆盖"
+      ],
+      "highlights_en": [
+        "Learns active-subtask Q-values to shorten value horizon",
+        "Substantially improves best-of-N steering on 4 bimanual tasks",
+        "Relies on offline subtask annotations and broad pretraining data"
+      ]
+    },
+    {
+      "id": "2609.22075",
+      "title": "LIMBO: Learning and Internalizing Model-Free Barrier Objectives for Agile and Safe Whole-Body Control",
+      "authors": [
+        "Jake Gonzales",
+        "Arturo Flores Alvarez",
+        "Yu-Ming Chen",
+        "Aaron D. Ames",
+        "Lillian J. Ratliff",
+        "Manikantan Nambi"
+      ],
+      "abstract": "Safe whole-body control requires coordinating collision avoidance and balance under high-dimensional, nonlinear dynamics--making safety certificates difficult to design and reuse across behaviors. We present LIMBO, a framework for synthesizing a state-action control barrier function and distilling its safety structure into a task policy. LIMBO learns the safety certificate from black-box transitions and a state-based failure specification over residual actions around a frozen base controller, making Q-CBF synthesis tractable in the full control dimension while placing the certificate in the task policy's control space. During synthesis, the learned safety value drives risk-guided sampling near the estimated boundary of recoverability; during task learning, it serves as a teacher that provides action-level safety feedback, yielding a robust task policy and alleviating the need for an online safety filter at deployment. We demonstrate LIMBO on a 29-degree-of-freedom humanoid performing dodgeball avoidance and locomotion beneath low obstacles. Beyond scaling learned Q-CBFs to whole-body control, we show that risk-guided boundary sampling provides a theoretically grounded way to explore the edge of recoverability. Under the same safety specification, ceteris paribus, varying the sampling concentration produces strategies ranging from crouching to a novel backward-leaning limbo maneuver. In both settings, the learned policies transfer to hardware without online safety filtering, showing that learned safety synthesis scales to agile whole-body control.",
+      "published": "2026-09-18T17:57:56Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.22075",
+      "pdf_url": "https://arxiv.org/pdf/2609.22075",
+      "summary_zh": "安全全身控制需在高维非线性动力学下协调避碰与平衡，但安全证书难以设计和跨行为复用。LIMBO从黑盒转移和基于状态的失败规范中学习状态-动作控制障碍函数，并将其安全结构蒸馏到任务策略中，合成时用学习的安全值引导风险采样，任务学习时作为教师提供动作级安全反馈。在29自由度人形机器人上实现躲避球和低障碍下运动，策略无需在线安全过滤即可迁移到硬件，证明学习安全合成可扩展到敏捷全身控制。",
+      "summary_en": "Safe whole-body control requires coordinating collision avoidance and balance under high-dimensional nonlinear dynamics, but safety certificates are hard to design and reuse across behaviors. LIMBO learns a state-action control barrier function from black-box transitions and a state-based failure specification, then distills its safety structure into a task policy, using the learned safety value for risk-guided sampling during synthesis and as an action-level teacher during task learning. On a 29-DoF humanoid for dodgeball avoidance and locomotion under low obstacles, policies transfer to hardware without online safety filtering, showing learned safety synthesis scales to agile whole-body control.",
+      "highlights_zh": [
+        "学习并内化无模型障碍目标",
+        "29自由度人形硬件零过滤迁移",
+        "可扩展至敏捷全身控制"
+      ],
+      "highlights_en": [
+        "Learns and internalizes model-free barrier objectives",
+        "29-DoF humanoid transfers to hardware without filtering",
+        "Scales to agile whole-body control"
+      ]
+    }
+  ]
+}
