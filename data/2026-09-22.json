@@ -1,0 +1,326 @@
+{
+  "date": "2026-09-22",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.25001",
+      "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+      "authors": [
+        "Yiran Wang",
+        "Xingyilang Yin",
+        "Junfu Pu",
+        "Guangzhi Wang",
+        "Kaifeng Li",
+        "Mingyu Ouyang",
+        "Huiqiang Sun",
+        "Lingen Li",
+        "Cheng Cheng",
+        "Wangbo Yu",
+        "Honghao Chen",
+        "Xiaodong Cun",
+        "Chi-Man Pun",
+        "Zhiguo Cao",
+        "Ying Shan"
+      ],
+      "abstract": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts. To address these challenges, we introduce GameHorizon, a unified data and evaluation suite that measures gameplay capabilities at different horizons for diverse model families. GameHorizon Suite consists of three components. First, GameHorizon-Annotator is a scalable and automated annotation pipeline for multi-horizon instructions. Second, utilizing the pipeline, we construct GameHorizon-Data, the first large-scale AAA gameplay dataset with temporally aligned videos, player actions, and multi-horizon instructions. It comprises 5,000 hours of recordings from 21 games, collected by 100 human expert players. Third, we build GameHorizon-Bench with reproducible offline and stepwise online testing. The offline track enables reproducible evaluation using thousands of standardized questions organized into three primary tasks and a series of diagnostic variants, while the online track tests whether offline scores reflect actual gameplay capabilities and localizes failures to specific steps within long-horizon gameplay. Based on our GameHorizon Suite, we evaluate 47 models through more than one million model invocations, revealing a meaningful hierarchy of task difficulty and pronounced differences in model capabilities. Our work can provide a standardized yardstick for evaluating gameplay capabilities across horizons and model families. We will release our dataset, annotator, and benchmark to facilitate future research.",
+      "published": "2026-09-21T17:59:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.25001",
+      "pdf_url": "https://arxiv.org/pdf/2609.25001",
+      "summary_zh": "现有游戏数据集和基准要么覆盖游戏范围窄、缺少语言指令，要么依赖高方差的在线交互，难以系统评估AI的多时间跨度游戏能力。为此，作者提出GameHorizon套件，包含可扩展的多跨度指令标注流水线、首个大规模AAA游戏数据集（21款游戏、5000小时、100名专家玩家）以及可复现的离线与逐步在线基准。基于该套件对47个模型进行超百万次调用评估，揭示了清晰的任务难度层级和模型能力差异，为跨时间跨度的游戏能力评估提供了标准化标尺。",
+      "summary_en": "Existing gameplay datasets and benchmarks either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts, making it hard to systematically evaluate AI gameplay across temporal horizons. To address this, the authors introduce GameHorizon Suite, comprising a scalable multi-horizon annotation pipeline, the first large-scale AAA gameplay dataset (5,000 hours from 21 games by 100 expert players), and a reproducible offline plus stepwise online benchmark. Evaluating 47 models over one million invocations reveals a clear hierarchy of task difficulty and pronounced capability differences, offering a standardized yardstick for gameplay evaluation across horizons and model families.",
+      "highlights_zh": [
+        "多跨度指令标注流水线与AAA数据集",
+        "47模型超百万次调用揭示难度层级",
+        "提供跨时间跨度游戏评估标准标尺"
+      ]
+    },
+    {
+      "id": "2609.24984",
+      "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+      "authors": [
+        "Wangbo Yu",
+        "Kunhao Liu",
+        "Wenbo Hu",
+        "Shenghai Yuan",
+        "Chaoran Feng",
+        "Haiyang Zhou",
+        "Yukun Huang",
+        "Yiran Wang",
+        "Wang Zhao",
+        "Yingmin Luo",
+        "Ying Shan"
+      ],
+      "abstract": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. The key insight is to let the requested viewpoint shape how multi-view evidence is compressed into the video generator's limited token budget. Trained jointly with the video generator, a memory encoder and pose-conditioned readout module integrate historical observations into a fixed set of target view-specific tokens before denoising, without explicit depth-based correspondences. By combining this memory with recent temporal context and few-step distillation, WorldCrafter enables streaming scene exploration from a single input image or text prompt. Experiments across static and dynamic scenes show substantial gains in long-horizon consistency and camera-control accuracy while preserving visual quality during minute-scale exploration.",
+      "published": "2026-09-21T17:57:06Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24984",
+      "pdf_url": "https://arxiv.org/pdf/2609.24984",
+      "summary_zh": "视频世界模型在长时间跨度和视角变化下难以保持对历史观测的一致性。WorldCrafter通过让目标视角决定多视角证据如何压缩进视频生成器的有限token预算，学习一种可相机查询的隐式3D感知记忆，并与视频生成器联合训练记忆编码器和姿态条件读出模块。实验表明该方法在静态和动态场景中显著提升了长时一致性和相机控制精度，同时保持分钟级探索的视觉质量。",
+      "summary_en": "Video world models struggle to maintain consistency with prior observations over long horizons and across viewpoints. WorldCrafter learns a camera-queryable implicit 3D-aware memory where the requested viewpoint shapes how multi-view evidence is compressed into the video generator's limited token budget, using a jointly trained memory encoder and pose-conditioned readout module without explicit depth correspondences. Experiments on static and dynamic scenes show substantial gains in long-horizon consistency and camera-control accuracy while preserving visual quality during minute-scale exploration.",
+      "highlights_zh": [
+        "视角驱动的隐式3D记忆压缩",
+        "长时一致性与相机控制显著提升",
+        "支持单图或文本流式场景探索"
+      ]
+    },
+    {
+      "id": "2609.24985",
+      "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+      "authors": [
+        "Zixiang Chen",
+        "Wenting Zhao",
+        "Zhepeng Cen",
+        "Akshara Prabhakar",
+        "Jielin Qiu",
+        "Jianguo Zhang",
+        "Zhiwei Liu",
+        "Tulika Manoj Awalgaonkar",
+        "Liangwei Yang",
+        "Shelby Heinecke",
+        "Silvio Savarese",
+        "Huan Wang"
+      ],
+      "abstract": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the current actions. We introduce Critical-State RL to identify trainable states in multi-turn interactions. Given task-defined candidate calls and local rewards, the method assesses whether each reward captures the action's effect on task success and whether improvement over a reference policy is possible. It then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at the selected states using contextual-bandit training. Experiments on the Berkeley Function Calling Leaderboard (BFCL) v4 compare training at diagnostic-selected states with training at alternative states. For missing-function tasks, the diagnostic selects the response after the tool becomes available; for missing-argument tasks, it selects the response before the missing argument is supplied. Training the selected responses improves performance, including about 14 percentage points on the missing-function task, while training the alternatives leaves performance flat or worse. We further apply the recipe across models and tasks, including logged repeat-call avoidance and memory management.",
+      "published": "2026-09-21T17:57:20Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24985",
+      "pdf_url": "https://arxiv.org/pdf/2609.24985",
+      "summary_zh": "多轮工具调用失败常取决于单次模型调用，但仅靠奖励变化无法判断哪次调用值得训练，因为奖励波动可能来自下游随机性而非当前动作差异。为此提出Critical-State RL，通过评估每个候选调用的局部奖励是否反映其对任务成功的影响、以及相对参考策略是否有改进空间，并用嵌套采样分离动作相关奖励变化与延续噪声，再在选定状态上用上下文赌博机训练优化策略。在BFCL v4上，诊断选出的状态训练显著提升性能（缺失功能任务约+14个百分点），而训练其他状态则无提升甚至变差，表明该方法能有效定位可训练状态并具有跨模型跨任务的应用价值。",
+      "summary_en": "Multi-turn tool-use failures often hinge on a single model call, but reward variation alone cannot reveal which call is worth training because it may reflect downstream randomness rather than action differences. We introduce Critical-State RL, which assesses whether each candidate call's local reward captures its effect on task success and whether improvement over a reference policy is possible, then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at selected states via contextual-bandit training. On BFCL v4, training diagnostic-selected states improves performance (about +14 points on missing-function tasks) while training alternatives yields flat or worse results, showing the method can pinpoint trainable states across models and tasks.",
+      "highlights_zh": [
+        "诊断可训练状态而非依赖奖励变化",
+        "缺失功能任务提升约14个百分点",
+        "可跨模型任务但依赖候选定义"
+      ]
+    },
+    {
+      "id": "2609.24983",
+      "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+      "authors": [
+        "Lei Yang",
+        "Mengyin Liu",
+        "Jia Wang",
+        "Hangyu Guo",
+        "Liang Zhao",
+        "Zheng Ge",
+        "Kang An",
+        "Binxing Jiao",
+        "Qi Han",
+        "Daxin Jiang",
+        "Siqi Shen",
+        "Xiangyu Zhang"
+      ],
+      "abstract": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a substitute from the model's candidate tokens or types the correct text via free-form editing. The system then truncates everything after that position and continues generation from the corrected prefix, repeating this locate-correct-continue loop until a satisfactory response is obtained. This mechanism lets annotators precisely steer model outputs at low cost: a small controlled study suggests that onPanda reduces median annotation time by 52% over manual post-editing. Since the vast majority of tokens in the final response are generated by the model itself, the resulting data largely preserves the model's sampling distribution and is well suited for constructing on-policy SFT and preference data. Furthermore, the token-level corrections recorded during annotation provide fine-grained supervision with precise positions and naturally paired positive--negative samples. onPanda also connects to external tools and harnesses, enabling interactive trajectory annotation in realistic environments. In addition, we release Panda-CVL, a dataset annotated with onPanda, together with a benchmark for token-level correction.",
+      "published": "2026-09-21T17:56:53Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24983",
+      "pdf_url": "https://arxiv.org/pdf/2609.24983",
+      "summary_zh": "大模型与智能体对齐数据的人工标注成本高，传统后编辑方式耗时且易偏离模型采样分布。onPanda提出以token级纠正为核心的交互式标注工具，标注者定位首个不当token并替换或自由编辑，系统截断后续内容并从修正前缀继续生成，循环往复。受控研究显示中位标注时间减少52%，且数据保留模型采样分布，适用于on-policy SFT与偏好数据构建，并附带Panda-CVL数据集与基准。",
+      "summary_en": "Annotating LLM alignment data and agent trajectories is costly, and manual post-editing is slow and shifts data away from the model's sampling distribution. onPanda introduces token-level correction as the core interaction: annotators locate the first inappropriate token, substitute or freely edit it, and the system truncates and regenerates from the corrected prefix in a locate-correct-continue loop. A controlled study shows a 52% reduction in median annotation time, while the resulting data preserves the model's sampling distribution for on-policy SFT and preference data, complemented by the Panda-CVL dataset and a token-level correction benchmark.",
+      "highlights_zh": [
+        "token级定位-纠正-续写交互",
+        "中位标注时间减少52%",
+        "保留采样分布，附数据集与基准"
+      ]
+    },
+    {
+      "id": "2609.24997",
+      "title": "VideoGen-Agent: Reinforcing Video Generation Agents",
+      "authors": [
+        "Binxu Li",
+        "Haoyi Duan",
+        "Yuhui Zhang",
+        "Yaohui Zhang",
+        "Zihao Lin",
+        "Kaituo Feng",
+        "Suozhi Huang",
+        "Xiangyi Li",
+        "Yu Li",
+        "Chunyuan Li",
+        "Shilong Liu",
+        "Mengdi Wang"
+      ],
+      "abstract": "Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its base text-to-video generator by 19.1 points, from 56.5 to 75.6. Upgrading the generation tools further raises the score to 86.1 without additional agent training. Human raters prefer the upgraded configuration over the strongest standalone baseline in 84.3% of comparisons. These results support learning tool use across video-generation tasks and show that the trained agent can benefit from subsequent advances in generation tools.",
+      "published": "2026-09-21T17:58:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24997",
+      "pdf_url": "https://arxiv.org/pdf/2609.24997",
+      "summary_zh": "现有视频生成模型难以满足需要专业知识、特定身份、物理一致性或有序事件的提示。本文提出VideoGen-Agent，一个通过多任务智能体强化学习训练的多模态智能体，借助多轮交互协调增强、生成与验证工具，并引入类别感知混合奖励和VABench基准。在VABench上，该智能体将基础生成器得分从56.5提升至75.6（+19.1），升级生成工具后进一步达到86.1，人类评估中84.3%偏好升级配置，表明智能体可跨任务学习工具使用并受益于生成工具的后续进步。",
+      "summary_en": "Existing video generative models often fail on prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. This paper presents VideoGen-Agent, a multimodal agent trained via multitask agentic reinforcement learning that coordinates augmentation, generation, and verification tools through multi-turn interactions, using a category-aware hybrid reward and the new VABench benchmark. On VABench, it improves its base text-to-video generator from 56.5 to 75.6 (+19.1), reaches 86.1 with upgraded generation tools without extra agent training, and is preferred by human raters in 84.3% of comparisons, showing that learned tool use transfers across video-generation tasks and benefits from future tool advances.",
+      "highlights_zh": [
+        "多任务智能体强化学习协调工具",
+        "VABench得分56.5提升至75.6",
+        "升级工具达86.1，可迁移受益"
+      ]
+    },
+    {
+      "id": "2609.24981",
+      "title": "GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation",
+      "authors": [
+        "Jiahao Lu",
+        "Minghao Yin",
+        "Wenbo Hu",
+        "Hengyu Liu",
+        "Wang Zhao",
+        "Sai-Kit Yeung",
+        "Ying Shan",
+        "Yuan Liu"
+      ],
+      "abstract": "We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model's features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by $12.7\\%$ and $23.1\\%$ on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.",
+      "published": "2026-09-21T17:56:25Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24981",
+      "pdf_url": "https://arxiv.org/pdf/2609.24981",
+      "summary_zh": "视觉生成器虽能产出逼真画面，却难以保持一致的3D场景，作者认为这不仅是建模问题，更是以外观为中心的潜空间表征问题。为此提出几何原生自编码器（GAE），将几何基础模型特征重参数化为紧凑潜空间，可联合解码外观、深度、相机与点图，并配合标准条件流支持多种生成任务。在固定生成器与训练协议的对照实验中，GAE使RealEstate10K和DL3DV上的FVD分别下降12.7%和23.1%，相机轨迹误差减半，表明潜空间是几何一致生成的关键，可作为感知与生成的共享接口。",
+      "summary_en": "Visual generators can produce photorealistic frames without maintaining a consistent 3D scene, which the authors argue is not only a modeling problem but a representation problem rooted in appearance-centric latents. They introduce the geometry-native autoencoder (GAE), which reparameterizes a geometry foundation model's features into a compact latent space jointly decodable to appearance, depth, cameras, and point maps, enabling diverse generation tasks with a standard conditional flow. Under controlled comparisons with fixed generator and training protocol, GAE reduces FVD by 12.7% and 23.1% on RealEstate10K and DL3DV and halves camera-trajectory error on RealEstate10K, showing that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.",
+      "highlights_zh": [
+        "几何原生潜空间统一感知与生成",
+        "FVD降23.1%，轨迹误差减半",
+        "可作感知生成共享接口"
+      ],
+      "highlights_en": [
+        "Geometry-native latent unifies perception and generation",
+        "FVD down 23.1%, trajectory error halved",
+        "Serves as shared perception-generation interface"
+      ]
+    },
+    {
+      "id": "2609.24996",
+      "title": "Learning Beyond What Humans Can Demonstrate",
+      "authors": [
+        "Yuchen Song",
+        "Aditya Mittal",
+        "Unnat Jain"
+      ],
+      "abstract": "Behavior cloning for robot manipulation relies on expert demonstrations. However, for tasks that require dynamic stability, precise contact timing, or dexterous coordination, human operators may find it hard or even impossible to collect data. We study this infeasible-demonstration regime and propose GLIDE: Guardrails for Learning from Infeasible Demonstrations Efficiently, a framework that infers task-specific failure modes and converts them into executable guardrails for data collection and policy deployment. Given a task description and the conditioning teleoperation code, GLIDE writes guardrails that use system states to filter teleoperation and policy commands, constrain failure-prone actions, and iteratively improve from trajectory feedback. Across three tasks, GLIDE discovers emergent guardrails that go beyond domain-expert hardcoded ones, improving data collection over naive VR teleoperation and domain-expert hardcoded guardrails. After refinement, GLIDE raises data-collection success from 0-10 percent to 70-90 percent across the three tasks. During policy execution, mixed-data guarded policies reach 70 percent, 60 percent, and 60 percent success on Tomato plate transfer, Marker handover and stand, and Wine serving tasks. These results show that GLIDE can support policy learning when direct demonstrations are infeasible. Project website: http://guardrail-policy.github.io/",
+      "published": "2026-09-21T17:58:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24996",
+      "pdf_url": "https://arxiv.org/pdf/2609.24996",
+      "summary_zh": "在机器人操作的行为克隆中，依赖专家演示，但涉及动态稳定、精确接触时序或灵巧协调的任务，人类难以甚至无法收集数据。为此，作者提出GLIDE框架，通过任务描述和条件遥操作代码推断任务特定失败模式，并转化为可执行护栏，用于过滤遥操作与策略指令、约束易失败动作，并从轨迹反馈中迭代改进。在三项任务中，GLIDE发现超越领域专家硬编码的护栏，将数据收集成功率从0-10%提升至70-90%，策略执行成功率分别达到70%、60%和60%，表明其能在直接演示不可行时支持策略学习。",
+      "summary_en": "Behavior cloning for robot manipulation relies on expert demonstrations, but for tasks requiring dynamic stability, precise contact timing, or dexterous coordination, human operators may find data collection hard or even impossible. To address this infeasible-demonstration regime, the authors propose GLIDE, a framework that infers task-specific failure modes from a task description and conditioning teleoperation code, converts them into executable guardrails for filtering teleoperation and policy commands, constraining failure-prone actions, and iteratively improving from trajectory feedback. Across three tasks, GLIDE discovers emergent guardrails beyond domain-expert hardcoded ones, raising data-collection success from 0-10% to 70-90%, and guarded policies reach 70%, 60%, and 60% success on Tomato plate transfer, Marker handover and stand, and Wine serving, showing it can support policy learning when direct demonstrations are infeasible.",
+      "highlights_zh": [
+        "自动推断失败模式并生成可执行护栏",
+        "数据收集成功率从0-10%升至70-90%",
+        "演示不可行时仍可支持策略学习"
+      ]
+    },
+    {
+      "id": "2609.24995",
+      "title": "MIGU: Multimodal Instruction Grounding under Uncertainty for Manipulation Planning",
+      "authors": [
+        "Mingke Lu",
+        "Anxing Xiao",
+        "David Hsu"
+      ],
+      "abstract": "Understanding natural human instructions is crucial for deploying robots in human-centric environments. We study multimodal instruction grounding, where language and gesture provide complementary but uncertain cues. We present MIGU, a modular framework that combines semantic and geometric evidence into a unified grounding belief and connects it to manipulation planning. MIGU constructs a 3D geometric likelihood by propagating viewing-direction and depth uncertainty through eye-finger geometry while accounting for hand-direction estimation error. A vision-language model (VLM) provides semantic priors over candidate objects and regions, which are combined with the geometric likelihood through Bayes-inspired fusion. The resulting belief supports behavior planning to either proceed directly to downstream planning or request clarification. Grounded targets then define goals for mobile manipulation and tabletop task-and-motion planning. On a real-world benchmark, MIGU outperforms all evaluated baselines, while ablations support the benefit of explicit multimodal uncertainty modeling. Project website: multimodal-instruction.github.io",
+      "published": "2026-09-21T17:58:22Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24995",
+      "pdf_url": "https://arxiv.org/pdf/2609.24995",
+      "summary_zh": "在以人为本的环境中部署机器人时，理解自然的人类指令至关重要，而语言与手势提供的线索互补但存在不确定性。MIGU提出模块化框架，将语义与几何证据融合为统一接地信念，通过视线与深度不确定性传播构建3D几何似然，并结合VLM语义先验进行贝叶斯融合，进而支持行为规划与操作规划。在真实世界基准上，MIGU优于所有评估基线，消融实验验证了显式多模态不确定性建模的收益。",
+      "summary_en": "Understanding natural human instructions is crucial for deploying robots in human-centric environments, where language and gesture provide complementary but uncertain cues. MIGU is a modular framework that fuses semantic and geometric evidence into a unified grounding belief, constructing a 3D geometric likelihood by propagating viewing-direction and depth uncertainty through eye-finger geometry, combining it with VLM semantic priors via Bayes-inspired fusion, and connecting the belief to behavior and manipulation planning. On a real-world benchmark, MIGU outperforms all evaluated baselines, and ablations support the benefit of explicit multimodal uncertainty modeling.",
+      "highlights_zh": [
+        "多模态不确定性统一接地信念",
+        "真实基准超越所有评估基线",
+        "提升人机协作操作规划可靠性"
+      ]
+    },
+    {
+      "id": "2609.24976",
+      "title": "DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation",
+      "authors": [
+        "Haoran Yuan",
+        "Zekai Wang",
+        "Boning Shao",
+        "Haoran Lu",
+        "Trevor Darrell",
+        "Ismini Lourentzou",
+        "Wei Zhan"
+      ],
+      "abstract": "Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these contact dynamics. We present DexTacWAM, a visuo-tactile WAM that encodes each fingertip independently, aggregates the resulting features through a finger- and pose-aware tactile compressor, and injects the tactile latent into a video diffusion world model for joint visuo-tactile world modeling. Across six contact-rich dexterous manipulation tasks on a 22-DoF bimanual platform, DexTacWAM achieves the highest score on every task, averaging 70.6 versus 38.0 for the strongest baseline. Ablations attribute the gain to modeling contact evolution as part of the predicted world state rather than tactile conditioning alone: removing tactile world modeling reduces the four-task mean from 74.7 to 26.6 while keeping the same tactile features and action expert. After four hours of tactile-encoder adaptation with a frozen pretrained vision VAE, our continual vision-to-touch learning extends the pretrained video model to touch using roughly 100 demonstrations per task without tactile midtraining, while retaining visual prediction quality within 0.5 dB of vision-only counterparts. The compressor retains 89.4% of pre-fusion contact recall while enabling 2.26x faster training and 1.29x faster inference. Together, these results show that pretrained video priors can be extended to distributed multi-finger contact dynamics in a data- and compute-efficient manner.",
+      "published": "2026-09-21T17:55:24Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24976",
+      "pdf_url": "https://arxiv.org/pdf/2609.24976",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.24974",
+      "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+      "authors": [
+        "Haoran Ye",
+        "Yuxing Lu",
+        "Haonan Dong",
+        "Zhaochen Su",
+        "Guojie Song"
+      ],
+      "abstract": "Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the best harness varies across domains, instances, and models, a general-purpose agent must either settle for a suboptimal shared harness or route among an ever-growing set of specialized ones. We therefore study agent harness distillation: using a domain- or instance-optimized harness as training-time guidance and transferring the behaviors it induces into model weights, so that its gains survive under a single fixed target harness. The challenge is that the two harnesses differ in action space and available information, so guidance from the optimized harness cannot serve directly as supervision for the target one. We introduce Harness-Zero, which enables harness distillation through agent-as-harness. Guided by the optimized harness, a harnessing agent corrects student responses before execution in the target harness's action space, turning harness guidance into training demonstrations. Fine-tuning on the resulting trajectories internalizes harness-induced behavior into the model, so the specialized harness can be removed at deployment. Our experiments spanning knowledge work, tool use, and science domains show that: (1) For frontier LLMs using the same evolved harness, agent-as-harness outperforms code-as-harness. (2) With the specialized harness removed at deployment, Harness-Zero improves the base model's macro-average task success from 23.3% to 44.3%, even exceeding the 41.7% it reaches with that harness still attached. (3) Harness-Zero recovers harness-induced behaviors absent from the base model, with 82.3% average recovery across 28 patterns in the three domains.",
+      "published": "2026-09-21T17:55:20Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.NE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.24974",
+      "pdf_url": "https://arxiv.org/pdf/2609.24974",
+      "summary_zh": "Agent harness能提升模型表现，但其收益绑定于部署时的特定harness，而最优harness因领域、实例和模型而异，通用agent难以兼顾。为此作者提出Harness-Zero，通过agent-as-harness让优化harness在目标harness动作空间内修正学生响应，将harness引导转化为训练示范并蒸馏进模型权重。实验表明，去除专用harness后，基础模型宏平均任务成功率从23.3%提升至44.3%，甚至超过保留该harness时的41.7%，并平均恢复82.3%的harness诱导行为模式。",
+      "summary_en": "Agent harnesses improve model performance, but their gains remain tied to the deployment harness, and the best harness varies across domains, instances, and models, forcing a general-purpose agent to settle for a suboptimal shared harness or route among many specialized ones. Harness-Zero addresses this by using agent-as-harness: an optimized harness guides a harnessing agent to correct student responses within the target harness's action space, turning harness guidance into training demonstrations that are distilled into model weights. Experiments show that with the specialized harness removed at deployment, Harness-Zero raises the base model's macro-average task success from 23.3% to 44.3%, exceeding the 41.7% achieved with that harness still attached, while recovering 82.3% of harness-induced behavior patterns on average.",
+      "highlights_zh": [
+        "agent-as-harness蒸馏harness行为",
+        "成功率23.3%提升至44.3%",
+        "免部署专用harness，通用性强"
+      ]
+    }
+  ]
+}
