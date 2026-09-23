@@ -1,0 +1,295 @@
+{
+  "date": "2026-09-23",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.26780",
+      "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
+      "authors": [
+        "Haobo Zheng",
+        "Tan Tang",
+        "Yan Chen",
+        "Weijie Wang",
+        "Yingcai Wu"
+      ],
+      "abstract": "Long-term conversational memory in multi-party settings requires more than retrieving relevant content from long-term conversations: it must distinguish who said what, whom each statement concerns, how individuals perceive one another, what information is shared by the group, and how states change over time. Recent studies on multi-party dialogue benchmarks show that existing general-purpose LLM memory systems tend to lose person and group relations or struggle to integrate clues distributed across members, groups, and time. Together, these issues reveal two core bottlenecks: message attribution and relational understanding in multi-party dialogue, and state reconstruction from interleaved histories. To address both, we propose $\\textbf{SpeakerMem-R1}$: its dual-track memory stores speaker-labeled verbatim messages and derived states organized into person-level and group-level views, then combines evidence from both tracks by entity, event, and time at query time. To reduce attribution and update errors during structured memory construction while enabling local deployment, we train Writer-R1 with SpeakerLevenshtein and speaker-conditioned GRPO. On GroupMemBench, SocialMemBench, and EverMemBench, SpeakerMem-R1 achieves binary accuracies of 47.9%, 69.2%, and 61.9%, respectively. On the publicly reported EverMemBench leaderboard from EverMind-AI, we achieves 62.33%, the best reported result among the latest state-of-the-art frameworks. It also achieves 70.85% on all 1,986 LoCoMo questions, which we use as a two-person long-term conversation boundary test. In a controlled evaluation of 305 questions, RL raises the SFT Writer's mean accuracy from 57.38% to 68.20%. We report both binary accuracy and token-F1, and ablations show that the verbatim and structured tracks, as well as person-level and group-level views, are complementary under the standardized evaluation interface.",
+      "published": "2026-09-22T17:56:12Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26780",
+      "pdf_url": "https://arxiv.org/pdf/2609.26780",
+      "summary_zh": "多轮多方对话的长期记忆不仅需要检索相关内容，还必须解决消息归属、人际关系理解以及从交错历史中重建状态这两大瓶颈。SpeakerMem-R1提出以说话人为中心的双轨记忆，存储带说话人标签的逐字消息与派生状态（分个人级和群体级视图），并通过Writer-R1结合SpeakerLevenshtein与说话人条件GRPO训练，在查询时按实体、事件和时间融合两轨证据。在GroupMemBench、SocialMemBench和EverMemBench上分别达到47.9%、69.2%和61.9%的二分类准确率，EverMemBench排行榜达62.33%为最新最优，LoCoMo全部1986题达70.85%，消融显示双轨与双层视图互补。",
+      "summary_en": "Long-term memory in multi-party dialogue requires more than content retrieval: it must resolve message attribution, relational understanding, and state reconstruction from interleaved histories. SpeakerMem-R1 introduces a speaker-centered dual-track memory storing speaker-labeled verbatim messages and derived states in person- and group-level views, fused at query time by entity, event, and time, with Writer-R1 trained via SpeakerLevenshtein and speaker-conditioned GRPO. It achieves 47.9%, 69.2%, and 61.9% binary accuracy on GroupMemBench, SocialMemBench, and EverMemBench, reaches 62.33% on the EverMemBench leaderboard (best reported), and 70.85% on all 1,986 LoCoMo questions, with ablations confirming the complementarity of both tracks and views.",
+      "highlights_zh": [
+        "双轨记忆+个人/群体双层视图",
+        "EverMemBench 62.33%居榜首",
+        "多方对话记忆，依赖结构化构建"
+      ]
+    },
+    {
+      "id": "2609.26779",
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "authors": [
+        "Trang Nguyen",
+        "Eulrang Cho",
+        "Bingqing Chen",
+        "Tim Dettmers"
+      ],
+      "abstract": "Agents often work on complex problems that require millions of tokens of context, which necessitates compacting across sessions due to limited context windows. We develop CliffCompaction, an autocompaction technique that reduces cost by up to 50% under a bounded context while maintaining or improving performance on Terminal-Bench and achieving new levels of efficiency for test-time scaling and state-of-the-art results on KernelBench. The per-rollout savings of CliffCompaction make the performance--cost trade-off of test-time scaling more efficient, adding over 10 percentage points on Terminal-Bench for less than the cost of two full-context runs. Under parallel test-time scaling, CliffCompaction lets Kimi K2.6 match Opus 4.7, and exceed Opus 4.6 and GPT-5.3 Codex at lower cost. The key to CliffCompaction's effectiveness is that it keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it. We never compact a compaction---each pass operates only on original content, and prior compacted output is discarded, preventing context drift from accumulating. These properties sustain continual learning over sessions exceeding a million tokens: on KernelBench, CliffCompaction reaches CUDA kernel speedups of $2.23\\times$ after 200 steps and $3.58\\times$ after 400 steps, surpassing specialized search algorithms and trained agents despite being a general-purpose compaction technique. We open-source a scaffold-agnostic API-proxy implementation of CliffCompaction usable with Claude Code, Codex and other harnesses.",
+      "published": "2026-09-22T17:55:59Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26779",
+      "pdf_url": "https://arxiv.org/pdf/2609.26779",
+      "summary_zh": "长周期编码智能体常需百万级token上下文，受限于上下文窗口必须跨会话压缩，而现有压缩方法易引入上下文漂移。CliffCompaction通过只截断或丢弃内容、绝不改写或重述，且每次压缩仅基于原始内容、丢弃旧压缩结果，从而保持信息忠实并防止漂移累积。该方法在Terminal-Bench上以有界上下文降低成本达50%并保持或提升性能，在KernelBench上200步和400步分别达到2.23倍和3.58倍CUDA内核加速，超越专用搜索算法与训练智能体，并开源了与Claude Code、Codex等兼容的API代理实现。",
+      "summary_en": "Long-horizon coding agents often need millions of tokens of context, forcing cross-session compaction under limited context windows, where existing methods risk context drift. CliffCompaction keeps compacted information faithful by only truncating or dropping content, never rephrasing or rewriting it, and never compacts a compaction—each pass operates only on original content while discarding prior compacted output. It cuts cost by up to 50% under bounded context while maintaining or improving Terminal-Bench performance, achieves 2.23x and 3.58x CUDA kernel speedups on KernelBench after 200 and 400 steps, surpasses specialized search algorithms and trained agents, and is open-sourced as a scaffold-agnostic API-proxy implementation.",
+      "highlights_zh": [
+        "只截断丢弃不改写，防上下文漂移",
+        "Terminal-Bench降本50%且性能不降",
+        "KernelBench 400步达3.58倍加速"
+      ]
+    },
+    {
+      "id": "2609.26783",
+      "title": "A Decentralized Partially Observable Team Decision Methodology with Delayed Information Sharing",
+      "authors": [
+        "Xiaoxing Ren",
+        "Thomas Parisini",
+        "Andreas A. Malikopoulos"
+      ],
+      "abstract": "We study decentralized partially observable team decision problems with low-rank latent dynamics and unknown system models. The proposed framework combines team-theoretic equivalence with low-rank model representations to address cooperative decision-making in partially observable Markov decision processes without prior knowledge of the transition model. Each team member makes decisions based on local private information and delayed common information shared across the team. Using only this available information, each member learns an approximate low-rank Markov decision process and applies least-squares value iteration to compute its policy. This yields a fully decentralized learning and planning algorithm that requires neither a centralized coordinator nor centralized training. We show that the resulting member-side solutions approximate the centralized team solution: despite partial observability, unknown dynamics, and delayed common information, each member recovers the corresponding component of an approximate team-optimal policy. We further establish finite-sample performance guarantees and derive a corresponding sample-complexity bound for the proposed algorithm.",
+      "published": "2026-09-22T17:56:46Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "eess.SY",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26783",
+      "pdf_url": "https://arxiv.org/pdf/2609.26783",
+      "summary_zh": "研究部分可观测的分散式团队决策问题，在未知系统模型和延迟信息共享条件下进行协同决策。提出结合团队理论等价性与低秩模型表示的方法，每个成员仅用本地私有信息和延迟公共信息学习近似低秩MDP并做最小二乘值迭代，实现完全分散的学习与规划。证明成员侧解可逼近集中式团队最优解，并给出有限样本性能保证与样本复杂度界。",
+      "summary_en": "This paper studies decentralized partially observable team decision problems with low-rank latent dynamics and unknown system models. It proposes a fully decentralized learning and planning framework that combines team-theoretic equivalence with low-rank model representations, where each member uses only local private and delayed common information to learn an approximate low-rank MDP and compute policies via least-squares value iteration. The resulting member-side solutions provably approximate the centralized team-optimal policy, with finite-sample performance guarantees and a sample-complexity bound.",
+      "highlights_zh": [
+        "无需集中训练或协调者的分散学习规划",
+        "成员策略逼近集中式团队最优解",
+        "具有限样本保证与样本复杂度界"
+      ]
+    },
+    {
+      "id": "2609.26751",
+      "title": "EquivSVA: A Formally Verified Dataset of Behavioral Assertions Across Equivalent RTL Implementations",
+      "authors": [
+        "FNU Aditi"
+      ],
+      "abstract": "Large language models are increasingly used to generate SystemVerilog Assertions from natural-language specifica- tions and register-transfer-level designs. Existing datasets and benchmarks support important goals such as large- scale training, formal evaluation, specification-to-assertion generation, and mutation-based testing. A complemen- tary need is to study whether a generated assertion cap- tures externally observable behavior or depends on inci- dental details of one RTL implementation. We present EquivSVA, a formally verified dataset organized around behavior families. Each family contains four structurally distinct RTL implementations of the same externally ob- servable behavior, shared interface-level gold properties, three controlled mutants, and formal-validation evidence. EquivSVA contains 120 behavior families across 12 cat- egories, 480 reference RTL implementations, 914 gold properties, and 360 mutants. Every final family passes a fixed 17-job validation suite covering RTL equivalence, gold-property proofs, property reachability, mutant dis- tinguishability, and gold-property checks on mutants. We also provide fixed family-safe train, development, and test splits. As a small demonstration of the analyses en- abled by the dataset, we evaluate the publicly released, Apache-2.0-licensed Qwen2.5-Coder-7B-Instruct model on the held-out test split. Of 293 interface-only generated properties, 93 are formally sound, and the number of sound properties varies across equivalent implementations for 14 of 24 test families. These results illustrate how behavior-family organization can support controlled stud- ies of assertion-generation robustness without requiring changes in intended functionality. The dataset, generators, validation scripts, and case-study artifacts are publicly released at https://github.com/aditigupta96/EquivSVA.",
+      "published": "2026-09-22T17:33:09Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26751",
+      "pdf_url": "https://arxiv.org/pdf/2609.26751",
+      "summary_zh": "现有LLM生成SystemVerilog断言的数据集无法区分断言捕捉的是外部可观察行为还是某一RTL实现的偶然细节。EquivSVA按行为族组织，每族含4个结构不同但行为等价的RTL实现、共享接口级gold属性、3个受控变异体及形式化验证证据，共120族、480个实现、914条gold属性、360个变异体，全部通过17项验证套件。用Qwen2.5-Coder-7B在测试集上生成293条接口级属性，仅93条形式化可靠，且24个测试族中有14族的可靠属性数随等价实现而变化，表明该数据集可支撑断言生成鲁棒性的受控研究。",
+      "summary_en": "Existing datasets for LLM-generated SystemVerilog assertions cannot distinguish whether an assertion captures externally observable behavior or incidental details of one RTL implementation. EquivSVA organizes data into behavior families, each with four structurally distinct but behaviorally equivalent RTL implementations, shared interface-level gold properties, three controlled mutants, and formal-validation evidence, totaling 120 families, 480 implementations, 914 gold properties, and 360 mutants, all passing a fixed 17-job validation suite. Evaluating Qwen2.5-Coder-7B on the held-out test split yields only 93 formally sound properties out of 293 generated, with sound-property counts varying across equivalent implementations in 14 of 24 test families, showing how behavior-family organization enables controlled studies of assertion-generation robustness.",
+      "highlights_zh": [
+        "按行为族组织等价RTL与gold属性",
+        "293条生成属性中93条形式化可靠",
+        "支持断言鲁棒性受控研究"
+      ],
+      "highlights_en": [
+        "Behavior-family organization of equivalent RTL",
+        "93 of 293 generated properties formally sound",
+        "Enables controlled assertion-robustness studies"
+      ]
+    },
+    {
+      "id": "2609.26796",
+      "title": "Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs",
+      "authors": [
+        "Quan Nguyen-Tri",
+        "Mukul Ranjan",
+        "Zhiqiang Shen"
+      ],
+      "abstract": "Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment remains limited by inefficient inference, largely due to the absence of effective Key-Value (KV) caching and scalable parallel decoding mechanisms. Existing acceleration methods typically study KV caching and parallel decoding in isolation, overlooking the I/O bottlenecks that arise when cache reuse and parallel token verification are jointly applied. In this work, we introduce $\\textbf{Flash-dLLM}$, a training-free inference acceleration framework for fast and memory-efficient dLLMs. Flash-dLLM first identifies GPU memory I/O as a dominant bottleneck in KV-cache-enabled dLLM inference and addresses it with an I/O-aware fused KV-cache kernel that reduces redundant memory movement. Building on this optimized cache mechanism, Flash-dLLM further proposes an efficient KV-cache-driven draft-and-verify decoding strategy, where the dLLM itself serves as both drafter and verifier without requiring an auxiliary model. This unified design enables faster decoding while preserving generation quality and improving scalability to longer sequences and larger batch size. Extensive experiments on mathematical reasoning and code-generation benchmarks demonstrate that Flash-dLLM consistently outperforms existing state-of-the-art dLLM acceleration methods in both inference speed and memory efficiency. In particular, it achieves $5.1\\times$ and $11.0\\times$ speedups over prior strongest baseline Elastic-Cache on GSM8K and HumanEval, respectively.",
+      "published": "2026-09-22T17:59:57Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26796",
+      "pdf_url": "https://arxiv.org/pdf/2609.26796",
+      "summary_zh": "扩散大语言模型（dLLM）虽支持非自回归生成，但缺乏有效的KV缓存与并行解码机制，推理效率低下，且现有加速方法忽略了二者联合应用时的I/O瓶颈。Flash-dLLM提出免训练的I/O感知融合KV缓存内核，并在此基础上设计KV缓存驱动的草稿-验证并行解码策略，由dLLM自身同时充当草稿模型与验证器。在GSM8K和HumanEval上分别较最强基线Elastic-Cache提速5.1倍和11.0倍，同时提升内存效率与长序列、大批量扩展性。",
+      "summary_en": "Diffusion large language models (dLLMs) enable non-autoregressive text generation but suffer from inefficient inference due to the lack of effective KV caching and scalable parallel decoding, with existing methods ignoring the I/O bottleneck when both are combined. Flash-dLLM introduces a training-free framework with an I/O-aware fused KV-cache kernel and a KV-cache-driven draft-and-verify decoding strategy where the dLLM itself serves as both drafter and verifier. It achieves 5.1x and 11.0x speedups over the strongest baseline Elastic-Cache on GSM8K and HumanEval, respectively, while improving memory efficiency and scalability.",
+      "highlights_zh": [
+        "I/O感知融合KV缓存内核",
+        "GSM8K/HumanEval提速5.1x/11.0x",
+        "免训练，但依赖dLLM架构"
+      ],
+      "summary_en_note": "",
+      "highlights_en": []
+    },
+    {
+      "id": "2609.26781",
+      "title": "Agensh: Scaling Organizational Intelligence to 1,024 Agents",
+      "authors": [
+        "Zhihao Zhan",
+        "Ting Song",
+        "Li Dong",
+        "Shaohan Huang",
+        "Jianxun Lian",
+        "Yan Xia",
+        "Furu Wei"
+      ],
+      "abstract": "A multi-agent system can reduce latency on complex tasks by executing work concurrently. Several pioneering harness frameworks support multi-agent systems. However, the scalability of current multi-agent harnesses is often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers. To address this limitation, we introduce Agensh, a scalable self-organized multi-agent harness without a central orchestrator: concurrent workers execute a multi-agent cooperation loop, continuously gathering context, claiming and self-assigning sub-tasks, taking action and sharing findings, verifying results, and merging progress in an asynchronous manner. The loop is supported by the agentic organization infrastructure comprising three components: a shared workspace holds proposed, ongoing, and completed work; a message interface lets workers communicate; and shared context retains reusable findings and work intentions. To test the scalability of Agensh, we evaluate it on the five hardest ProgramBench tasks with GPT-5.6-sol (high). Scaling from 1 to 128 agents raises the mean final test-pass rate from 19.31% to 28.78%, an approximately 49% relative improvement. Larger organizations reach comparable test-pass rates earlier. On pandoc, scaling from 1 to 1,024 agents raises the final test-pass rate from 33.89% to 55.06%. Worker trajectories further show that different forms of self-organized cooperation gradually emerges and standardizes as the organization grows. These results reveal the number of agents as a new scaling dimension for multi-agent organizations to expand the frontier of general intelligence, offering a practical solution for complex tasks under hard latency constraints or time budgets.",
+      "published": "2026-09-22T17:56:25Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26781",
+      "pdf_url": "https://arxiv.org/pdf/2609.26781",
+      "summary_zh": "现有多智能体框架的可扩展性受限于中心编排器的任务分配与协调能力。Agensh提出一种无中心编排器的自组织多智能体框架，通过并发工作者的协作循环（收集上下文、认领子任务、执行、验证、异步合并）及共享工作区、消息接口和共享上下文三大基础设施实现扩展。在ProgramBench最难任务上，智能体从1增至128个使平均测试通过率从19.31%升至28.78%（相对提升约49%），pandoc任务上从1增至1024个使通过率从33.89%升至55.06%，表明智能体数量可作为多智能体组织的新扩展维度。",
+      "summary_en": "Current multi-agent harnesses are limited by a central orchestrator's capacity to allocate tasks and coordinate workers. Agensh introduces a scalable self-organized multi-agent harness without a central orchestrator, where concurrent workers run a cooperation loop (gathering context, claiming sub-tasks, acting, verifying, and merging asynchronously) supported by a shared workspace, message interface, and shared context. On the hardest ProgramBench tasks, scaling from 1 to 128 agents raised the mean test-pass rate from 19.31% to 28.78% (~49% relative gain), and on pandoc scaling from 1 to 1,024 agents raised it from 33.89% to 55.06%, establishing agent count as a new scaling dimension for multi-agent organizations.",
+      "highlights_zh": [
+        "无中心编排器的自组织协作循环",
+        "1024智能体使通过率升至55.06%",
+        "受延迟预算约束的复杂任务扩展"
+      ],
+      "highlights_en": [
+        "Central-orchestrator-free self-organized cooperation loop",
+        "1,024 agents raise pass rate to 55.06%",
+        "Scaling for complex tasks under latency budgets"
+      ]
+    },
+    {
+      "id": "2609.26795",
+      "title": "φ-RIE: From Photorealistic Reconstruction to Interactive Environments",
+      "authors": [
+        "Runyi Yang",
+        "Deheng Zhang",
+        "Xiaoye Wang",
+        "Kanzhi Wu",
+        "Lei Sun",
+        "Ajad Chhatkuli",
+        "Kunyu Peng",
+        "Luc Van Gool",
+        "Danda Pani Paudel"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) can reconstruct a captured scene photorealistically, but the resulting representation does not by itself support physical interaction. Robot simulation instead requires object-level change, \\textit{i.e.}, objects must move independently, make contact, and reveal previously occluded surroundings. This gap arises because object appearance may remain entangled with the background, while hidden object geometry and occluded background content may be unobserved. To address this challenge, we present φ-RIE, a Gaussian-native pipeline that converts selected objects into movable simulator assets while preserving the remaining reconstruction. Our key observation is that asset construction and source removal should be coupled, \\textit{i.e.}, one object identity should define the movable asset and the scene content to remove and complete. Accordingly, Scene Observation supplies shared evidence to Coupled Scene Construction, which creates registered assets and completed background Gaussians for simulator-driven rendering in an Interactive Environment. This coupling preserves unedited Gaussians while aligning visual and physical state. On 50 ScanNet++ scenes, evidence-based selection and registration retry increase matched F1 at 20\\,mm from 0.336 to 0.383 at fixed retention. Further tests demonstrate asset executability, manipulation gains over a single-generator baseline, and the visual cost of conversion. Together, these results demonstrate that \\name\\ enables interactive scene conversion.",
+      "published": "2026-09-22T17:59:52Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26795",
+      "pdf_url": "https://arxiv.org/pdf/2609.26795",
+      "summary_zh": "3D高斯泼溅虽能逼真重建场景，但其表示本身不支持物体独立运动与物理交互，难以直接用于机器人仿真。为此，作者提出φ-RIE，将物体资产构建与源场景移除耦合，通过场景观测为耦合场景构建提供共享证据，生成配准资产并补全背景高斯。在50个ScanNet++场景上，匹配F1@20mm从0.336提升至0.383，并验证了资产可执行性、操作增益及转换的视觉代价，实现了交互式场景转换。",
+      "summary_en": "3D Gaussian Splatting reconstructs scenes photorealistically but does not support physical interaction, as objects must move independently and reveal occluded surroundings for robot simulation. We present φ-RIE, a Gaussian-native pipeline that couples asset construction with source removal, using shared Scene Observation evidence to create registered movable assets and completed background Gaussians for simulator-driven rendering. On 50 ScanNet++ scenes, evidence-based selection and registration retry improve matched F1 at 20 mm from 0.336 to 0.383 at fixed retention, demonstrating asset executability, manipulation gains over a single-generator baseline, and the visual cost of conversion.",
+      "highlights_zh": [
+        "资产构建与源移除耦合",
+        "F1@20mm提升至0.383",
+        "实现交互式场景转换"
+      ]
+    },
+    {
+      "id": "2609.26793",
+      "title": "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+      "authors": [
+        "Shufan Sun",
+        "Chen Wang",
+        "Enxin Song",
+        "Jiatao Gu",
+        "Lingjie Liu"
+      ],
+      "abstract": "Compositional 3D scene reconstruction has recently been explored from two directions: agentic reasoning that provides semantic understanding of spatial relationships but lacks precise alignment with input images; and visual geometry foundation models that predict dense point maps from input images but the reconstruction quality is limited. Therefore, recovering a complete 3D scene from a single monocular image with accurate inter-object relationships and high-fidelity reconstruction quality remains challenging. In this paper, we present HARMONY, a hierarchical chain-of-thought framework that leverages both agentic reasoning and visual geometry foundation. Given an image of an indoor scene, starting from an empty 3D floorplan, HARMONY first calibrates the camera against the reference image to establish a semantically-grounded spatial frame, then uses agentic VLM reasoning to recover the 3D room layout and an initial placement order. It then places the objects in a hierarchical order, from wall-mounted elements, free-standing furniture, to dependent decorations on top of furniture. We also use depth-first traversal for furniture so each placement conditions on previously resolved structure and a reflective feedback loop to avoid error accumulation. After each object placement by VLM, we use the point cloud estimations to perform geometry-based refinement so that the rendered image aligns better with the input. HARMONY can produce 3D scenes that are semantically consistent and perceptually aligned with the reference image, extending single-image compositional reconstruction to complex indoor scene images. Experiments on synthetic and real-world images demonstrate that HARMONY outperforms the evaluated reconstruction baselines, while qualitative comparisons with GPT-6 Astra suggest more faithful object arrangements and better preservation of scene details.",
+      "published": "2026-09-22T17:59:47Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26793",
+      "pdf_url": "https://arxiv.org/pdf/2609.26793",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.26766",
+      "title": "TM-APR: Thermal Temporal-Memory Localization via Analytic Online Adaptation",
+      "authors": [
+        "Yanshuo Bai",
+        "Kanji Tanaka"
+      ],
+      "abstract": "Thermal Visual Place Recognition (Thermal VPR) maps camera observations to metric poses within a mapped environment, serving as a prerequisite for autonomous navigation. However, thermal VPR suffers from severe environmental dependence, heavy online retraining overheads, and an inability to model dynamic non-linear shifts, causing existing frameworks to fail during online deployment. To achieve robust domain-invariant place recognition, we bridge Analytic Class-Incremental Learning (ACIL) with domain-invariant VPR for the first time, revealing that its gradient-free matrix updates construct a surprisingly strong baseline that outperforms conventional fine-tuning. Nevertheless, standard ACIL exhibits a critical vulnerability to extreme non-linear thermal fluctuations due to its structural linear assumptions. To overcome this limitation, we exploit a novel algebraic equivalence between ACIL and modern control theory, proposing a framework which embeds Unscented propagation (U-ACIL), Gaussian Mixture partitioning (GMM-ACIL), and minimax $H_\\infty$ optimization ($H_\\infty$-ACIL) directly into the update loop. Our formulation guarantees exact closed-form matrix updates within $\\mathcal{O}(1)$ computational complexity, bypassing backpropagation to ensure that the online update latency ($Δt_{\\mathrm{learn}}$) remains strictly bounded below the sensor acquisition interval ($Δt_{\\mathrm{acquire}}$), thereby eliminating trajectory jumps in real-time SLAM pipelines.",
+      "published": "2026-09-22T17:46:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26766",
+      "pdf_url": "https://arxiv.org/pdf/2609.26766",
+      "summary_zh": "热视觉位置识别（Thermal VPR）因环境依赖强、在线重训练开销大且无法建模动态非线性偏移，导致现有框架难以在线部署。该工作首次将解析类增量学习（ACIL）与域不变VPR结合，并基于ACIL与现代控制理论的代数等价性，提出嵌入无迹传播、高斯混合划分和极小极大H∞优化的U-ACIL、GMM-ACIL和H∞-ACIL框架。方法保证O(1)闭式矩阵更新，使在线学习延迟严格低于传感器采集间隔，消除实时SLAM轨迹跳变，实现鲁棒域不变位置识别。",
+      "summary_en": "Thermal Visual Place Recognition (Thermal VPR) suffers from severe environmental dependence, heavy online retraining overheads, and an inability to model dynamic non-linear shifts, causing existing frameworks to fail during online deployment. This work bridges Analytic Class-Incremental Learning (ACIL) with domain-invariant VPR for the first time and, exploiting an algebraic equivalence between ACIL and modern control theory, proposes U-ACIL, GMM-ACIL, and H∞-ACIL that embed Unscented propagation, Gaussian Mixture partitioning, and minimax H∞ optimization into the update loop. The formulation guarantees exact closed-form matrix updates with O(1) complexity, keeping online update latency strictly below the sensor acquisition interval and eliminating trajectory jumps in real-time SLAM pipelines for robust domain-invariant place recognition.",
+      "highlights_zh": [
+        "首次将ACIL与控制理论结合用于热VPR",
+        "O(1)闭式更新，学习延迟低于采集间隔",
+        "消除SLAM轨迹跳变，实现实时在线部署"
+      ]
+    },
+    {
+      "id": "2609.26753",
+      "title": "Underwater Navigation in Unsteady Flows Using Measurement Histories from a Single Sensing Unit",
+      "authors": [
+        "Linhao Jin",
+        "Qimin Feng",
+        "Peter Gunnarson",
+        "Qiang Zhong"
+      ],
+      "abstract": "Spatial flow measurements support underwater navigation, but distributed sensing is constrained by robot size and sensor layout. We use a causal observer to estimate current lateral velocities from a finite history of measurements collected by a single sensing unit, supplying the inputs of a fixed navigation controller. In two-dimensional wake simulations with access to body-frame ambient velocity, this virtual sensing interface reduces simultaneous flow sampling from three points to the robot center. Trained only in a circular-cylinder wake at Re = 100, the flow-history observer achieves 84.4% and 80.6% success at held-out Re = 205 and 240 without retraining. These rates are 7.4 and 4.6 percentage points below direct spatial sensing and more than 30 points above a matched current-only observer. Past flow remains beneficial when past goal and yaw information is available. Across obstacle geometries, performance remains close to direct sensing in square-prism wakes but declines in triangular-prism wakes. Component replacement identifies the lateral velocity difference as control-relevant, while controlled perturbations reveal sensitivity to error persistence. The results demonstrate the closed-loop utility of single-point flow histories under the assumed observation model.",
+      "published": "2026-09-22T17:34:33Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "physics.flu-dyn"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.26753",
+      "pdf_url": "https://arxiv.org/pdf/2609.26753",
+      "summary_zh": "水下导航通常依赖分布式空间流测量，但受限于机器人尺寸和传感器布局。本文提出一种因果观测器，仅利用单个传感单元的历史测量估计侧向流速，为固定导航控制器提供输入，在圆柱尾流中训练后无需重训即可泛化到其他雷诺数。该方法在未见过的Re=205和240下分别达到84.4%和80.6%的成功率，验证了单点流历史在闭环导航中的实用性。",
+      "summary_en": "Underwater navigation typically relies on distributed spatial flow measurements, but robot size and sensor layout constrain such sensing. This work introduces a causal observer that estimates lateral velocities from a finite history of measurements collected by a single sensing unit, feeding a fixed navigation controller and trained only in a circular-cylinder wake at Re=100. It achieves 84.4% and 80.6% success at held-out Re=205 and 240 without retraining, demonstrating the closed-loop utility of single-point flow histories for navigation.",
+      "highlights_zh": [
+        "单点流历史替代分布式传感",
+        "Re=205/240成功率84.4%/80.6%",
+        "受限于尾流几何与误差持续性"
+      ],
+      "highlights_en": [
+        "Single-point flow history replaces distributed sensing",
+        "84.4%/80.6% success at Re=205/240",
+        "Limited by wake geometry and error persistence"
+      ]
+    }
+  ]
+}
