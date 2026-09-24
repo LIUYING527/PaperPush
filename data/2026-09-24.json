@@ -1,0 +1,314 @@
+{
+  "date": "2026-09-24",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.28470",
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
+      "authors": [
+        "Curtis Northcutt",
+        "Inaara Hasmani",
+        "Kevin Feng",
+        "Trevor Khangi",
+        "Andreas Plesner",
+        "Jonas Mueller"
+      ],
+      "abstract": "Artificial intelligence offers an unprecedented opportunity to augment human capabilities, yet progress at the frontier has focused primarily on advancing model capabilities. We introduce StudentBench, a suite of AI teaching evaluations and a public platform that enables large-scale data collection with over 175,000 student-AI messages to study whether large language models (LLMs) produce learning gains equivalent to human tutoring. Using StudentBench, we measured learning gains on Quantitative and Verbal GRE questions across 2,383 human participants receiving AI tutoring, human tutoring, or no tutoring. We establish that AI tutoring is statistically equivalent to expert human tutoring for GRE learning gains (p = .015), and in five of the seven GRE domains, the best performing AI tutor surpassed the human tutor, on average. In a second study, expert human tutors compared LLM-generated lesson plans and practice problems through 2,028 pairwise rubric evaluations. Together, the two studies clearly separate AI tutors across: (1) lesson planning, (2) practice-problem creation, (3) conversational pedagogy, (4) cost, and (5) engagement. Surprisingly, one AI tutor achieved learning gains equivalent to human tutoring (p = .044) at 918 times lower cost (USD 0.0052 for AI versus USD 4.81 for human, per percentage point gained). For Quantitative GRE sessions, faster AI replies correlated with more student messages, more messages with more correct practice, and more correct practice with larger learning gains (all p < .002). The StudentBench platform is freely available at https://studentbench.org.",
+      "published": "2026-09-23T17:57:45Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28470",
+      "pdf_url": "https://arxiv.org/pdf/2609.28470",
+      "summary_zh": "AI辅导能否达到人类辅导的学习效果尚不明确，现有研究多聚焦模型能力而非教学成效。作者构建了StudentBench平台，收集超17.5万条学生-AI对话，对2383名参与者开展GRE量化与词汇学习实验，并让专家辅导者通过2028次成对评分评估AI教案与练习题。结果显示AI辅导与专家人类辅导在学习增益上统计等效（p=.015），七个GRE领域中五个AI表现更优，且某AI辅导以低918倍成本实现等效增益，同时揭示了回复速度、消息量与正确练习对学习增益的链式关联。",
+      "summary_en": "Whether AI tutoring can match human tutoring in learning gains remains unclear, as frontier progress has focused on model capabilities rather than teaching effectiveness. We introduce StudentBench, a public platform with over 175,000 student-AI messages, and run GRE Quantitative and Verbal studies with 2,383 participants receiving AI, human, or no tutoring, plus 2,028 pairwise rubric evaluations by expert tutors. AI tutoring is statistically equivalent to expert human tutoring (p = .015), surpasses humans in five of seven GRE domains, and one AI tutor matches human gains (p = .044) at 918x lower cost, with faster replies linked to more messages, more correct practice, and larger gains.",
+      "highlights_zh": [
+        "StudentBench平台与AI教学评估套件",
+        "AI辅导等效人类且成本低918倍",
+        "可大规模评估AI教学，但限于GRE场景"
+      ]
+    },
+    {
+      "id": "2609.28467",
+      "title": "Where Should I Join? Robot Group Joining via Language-Guided Goal Prediction",
+      "authors": [
+        "Zilin Fang",
+        "Zishuo Wang",
+        "Gim Hee Lee",
+        "David Hsu"
+      ],
+      "abstract": "Social navigation typically assumes a specified goal and focuses on reaching it while respecting social conventions, whereas robot group joining requires predicting where to join based on the group's real-time activity and formation. This is a highly semantic task, yet an important capability for applications such as robotic guide dogs and autonomous mobility scooters. We formulate language-grounded robot group joining: given an observation and a natural-language description of a target group, the robot identifies the relevant group members and predicts socially compliant joining poses. For grounding, we generate structured candidate subsets through recursive spectral partitioning and rank them with a language-conditioned image--geometry model. Given the grounded group, a goal predictor leverages human-formation priors to produce a multimodal energy--orientation map over feasible robot poses. Experiments on conversations, queues, and audiences across varying group sizes, crowd densities, and visual ambiguities show that our method achieves competitive grounding accuracy with sub-second inference and outperforms all baselines in joining-pose prediction. Real-robot experiments further demonstrate group joining in both static and dynamically changing interactions.",
+      "published": "2026-09-23T17:55:48Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28467",
+      "pdf_url": "https://arxiv.org/pdf/2609.28467",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.28473",
+      "title": "On the Diffusibility of High-Dimensional Latents",
+      "authors": [
+        "Chao Feng",
+        "Zhiyang Xu",
+        "Bowei Chen",
+        "Yuanjun Xiong",
+        "Xiyao Wang",
+        "Jui-Hsien Wang",
+        "Richard Zhang",
+        "Zhe Lin",
+        "Andrew Owens",
+        "Yijun Li"
+      ],
+      "abstract": "Representation Autoencoders (RAEs) enable diffusion models to operate in the feature spaces of pretrained visual encoders. However, many off-the-shelf encoders are not optimized for faithful reconstruction, discarding fine-grained visual details. As expected, finetuning these encoders for image reconstruction recovers such details. However, perhaps counterintuitively, this procedure reduces the effective dimensionality of the resulting representation, and the altered geometry has downstream effects on generation. Specifically, we show that using the standard velocity prediction in flow matching in this high-dimensional space requires the model to fit orthogonal noise directions outside the low-dimensional signal manifold, making optimization inefficient. This motivates using the clean data parameterization ($\\boldsymbol{x}_{0}$-prediction) instead, which focuses learning on the underlying signal manifold. Across experiments with multiple strong-reconstruction encoders, we show that $\\boldsymbol{x}_{0}$-prediction consistently improves text-to-image generation performance.",
+      "published": "2026-09-23T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28473",
+      "pdf_url": "https://arxiv.org/pdf/2609.28473",
+      "summary_zh": "表示自编码器（RAE）让扩散模型在预训练视觉编码器的特征空间中运行，但现成编码器难以忠实重建细节，而微调后虽恢复细节却降低了表示的有效维度并改变了几何结构。为此，作者指出在高维空间中使用标准速度预测需拟合信号流形外的正交噪声方向，导致优化低效，因而改用干净数据参数化（x0预测）将学习集中在信号流形上。在多个强重建编码器实验中，x0预测一致提升了文本到图像生成性能，表明参数化选择对高维潜空间扩散至关重要。",
+      "summary_en": "Representation Autoencoders (RAEs) let diffusion models operate in pretrained visual encoder feature spaces, but off-the-shelf encoders discard fine details, and finetuning them for reconstruction reduces the effective dimensionality and alters geometry. The authors show that standard velocity prediction in this high-dimensional space forces the model to fit orthogonal noise directions outside the low-dimensional signal manifold, making optimization inefficient, and therefore propose using clean data parameterization (x0-prediction) to focus learning on the signal manifold. Across experiments with multiple strong-reconstruction encoders, x0-prediction consistently improves text-to-image generation, highlighting the importance of parameterization for high-dimensional latent diffusion.",
+      "highlights_zh": [
+        "提出x0预测替代速度预测",
+        "文本到图像生成性能一致提升",
+        "适用于高维潜空间扩散模型"
+      ],
+      "highlights_en": [
+        "Proposes x0-prediction over velocity prediction",
+        "Consistently improves text-to-image generation",
+        "Applicable to high-dimensional latent diffusion"
+      ]
+    },
+    {
+      "id": "2609.28471",
+      "title": "Contrastive Learning for Authorship Verification",
+      "authors": [
+        "Peter Kirby"
+      ],
+      "abstract": "Our results show that contrastive learning outperforms a classification-based approach to authorship verification under the tested settings. We identify loss function, batch size, training duration, pre-trained model, input context length, and random text span data augmentation as important factors of model performance. Based on these considerations, we develop a ModernBERT Bi-Encoder model that achieves 98.4% accuracy on the PAN21 authorship verification task.",
+      "published": "2026-09-23T17:59:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28471",
+      "pdf_url": "https://arxiv.org/pdf/2609.28471",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.28430",
+      "title": "Cross-Scale Transfer Learning for Depression Severity Prediction: From PHQ-8 to HAMD-17 Across Languages and Clinical Paradigms",
+      "authors": [
+        "Wenjie Feng",
+        "Sahba Zojaji",
+        "Satoshi Nakamura"
+      ],
+      "abstract": "This work addresses continuous depression-severity score prediction from clinical interview transcripts under data scarcity. We propose a sequential low-rank adaptation (LoRA) protocol for cross-scale transfer: a Qwen3 backbone with a bounded regression head is first fine-tuned on the English DAIC-WOZ dataset (189 avatar-mediated sessions, PHQ-8), and the adapter then initializes fine-tuning on the Chinese PDCH dataset (100 real clinical consultations, HAMD-17), where a reinitialised, scale-specific head predicts the clinician-assigned score. All configurations use patient-level stratified 5-fold, 2-repeat cross-validation. On the data-scarce HAMD-17 target, the sequential protocol attains the best point-estimate MAE , RMSE, and macro-$F_1$ on both 0.6B and 1.7B backbones, outperforming target-only training and non-LLM baselines---4.96/6.59/0.36 with Qwen3-0.6B and 4.38/5.62/0.46 with Qwen3-1.7B. Ablations suggest that correctly aligned source supervision gives the best point estimates (unsupervised exposure and shuffled-label controls also show partial gains), that native-Chinese target input outperforms machine-translated English input, and that the reversed order yields no clear gain within run-to-run variance. The study is an exploratory, single-site internal evaluation: it does not establish screening or diagnostic utility, nor separately identify the contribution of the scale, language, or paradigm shifts. To our knowledge, no prior study evaluates this specific DAIC-WOZ-to-PDCH sequential transfer setting.",
+      "published": "2026-09-23T17:30:07Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28430",
+      "pdf_url": "https://arxiv.org/pdf/2609.28430",
+      "summary_zh": "临床访谈文本中连续抑郁严重度评分预测面临数据稀缺问题，且跨量表、跨语言、跨临床范式的迁移尚未被系统研究。该工作提出序贯LoRA迁移协议：先在英语DAIC-WOZ（PHQ-8）上微调Qwen3回归模型，再用其适配器初始化中文PDCH（HAMD-17）的微调并重置尺度专属回归头。在数据稀缺的HAMD-17目标上，该方法在0.6B和1.7B骨干上均取得最优MAE/RMSE/macro-F1（如1.7B达4.38/5.62/0.46），优于仅目标训练与非LLM基线，但属单中心探索性评估，尚不能确立筛查或诊断效用。",
+      "summary_en": "Continuous depression-severity prediction from clinical interview transcripts is challenged by data scarcity, and cross-scale, cross-language, cross-paradigm transfer remains underexplored. This work proposes a sequential LoRA protocol: a Qwen3 backbone with a bounded regression head is first fine-tuned on English DAIC-WOZ (PHQ-8), and its adapter then initializes fine-tuning on Chinese PDCH (HAMD-17) with a reinitialized scale-specific head. On the data-scarce HAMD-17 target, the sequential protocol achieves the best MAE/RMSE/macro-F1 on both 0.6B and 1.7B backbones (e.g., 4.38/5.62/0.46 with 1.7B), outperforming target-only training and non-LLM baselines, though it remains an exploratory single-site evaluation that does not establish screening or diagnostic utility.",
+      "highlights_zh": [
+        "序贯LoRA跨量表迁移协议",
+        "1.7B达MAE 4.38/RMSE 5.62",
+        "单中心探索性，未证诊断效用"
+      ]
+    },
+    {
+      "id": "2609.28466",
+      "title": "The Past Frames the Future: Memory for Autoregressive Video Generation",
+      "authors": [
+        "Harold Haodong Chen",
+        "Rongjin Guo",
+        "Disen Lan",
+        "Wen-Jie Shu",
+        "Hongfei Zhang",
+        "Hanzhe Hu",
+        "Shengtao Yao",
+        "Zixin Zhang",
+        "Guibin Zhang",
+        "Zhefan Rao",
+        "Jinxiu Liu",
+        "Yexin Liu",
+        "Rui Peng",
+        "Yuhao Liu",
+        "Bin Ren",
+        "Shuai Yang",
+        "Yukang Chen",
+        "Salman Khan",
+        "Ying-Cong Chen",
+        "Ser-Nam Lim",
+        "Rynson W. H. Lau",
+        "Nicu Sebe",
+        "Yu Cheng",
+        "Ming-Hsuan Yang",
+        "Qifeng Chen"
+      ],
+      "abstract": "Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends visual sequences through causal rollouts. However, a fundamental bottleneck emerges: as the generated sequence expands, practical models must operate under strictly bounded context windows, storage, and computational limits. Consequently, critical historical information, e.g., entity identities, dynamic states, and intervention-induced causal changes, often leaves the active context long before its relevance diminishes. Overcoming this limitation and maintaining temporal persistence constitutes a fundamental memory problem. We present a systematic and comprehensive review of memory mechanisms in AR video generation. We formulate memory operationally as persistent historical information maintained across outer AR steps, capable of influencing future generation even after the originating evidence is no longer locally accessible. Building upon this unified framework, we organize the literature through five complementary perspectives: (I) Forms, the representational carriers of history; (II) Functions, the specific semantic and physical information requiring preservation; (III) Operations, the lifecycle of writing, reading, updating, managing, and integrating memory; (IV) Learning, the optimization of memory behaviors under closed-loop rollouts; and (V) Evaluation, the paradigms for diagnosing genuine memory capabilities. We conclude by synthesizing open challenges, including composable and resource-aware memory architectures, trustworthy state updating, self-rollout learning, and standardized evaluation. By bridging representations, mechanisms, and learning paradigms, this paper establishes a structured foundation for developing reliable, memory-conditioned video generation systems.",
+      "published": "2026-09-23T17:54:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28466",
+      "pdf_url": "https://arxiv.org/pdf/2609.28466",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.28439",
+      "title": "HaRP: High Dynamic Range Photosequencing through Dual Reversed Shutter Scanning",
+      "authors": [
+        "Xiang Ji",
+        "Guixu Lin",
+        "Jiancheng Zhao",
+        "Zhengwei Yin",
+        "Yinqiang Zheng"
+      ],
+      "abstract": "The adoption of CMOS sensors in mobile photography is frequently compromised by the rolling shutter (RS) effect, which introduces geometric distortions and motion artifacts. Particularly, recent rolling shutter with global reset (RSGR) mode, while mitigating some RS issues, also incurs major limitations, including reduced capture speed and compressed dynamic range. To address these problems, we propose a novel dual reversed scanning setup utilizing both RSGR and inverted RSGR views. This solution not only handles the inherent flaws of RSGR by synchronizing complementary exposures to balance the dynamic range across the frames but also introduces an effective method for HDR photosequencing under highly dynamic scenes. Our proposed network first accommodates row-wise complementarity and manages visual shifts by row-adaptive feature alignment. Subsequently, the hallucination module, built upon a correlation-guided mixattention block, integrates the mutually reinforced features to recover missing details. In addition, we construct a coaxial imaging system to collect a real-world dataset, enabling robust training and evaluation beyond numerical simulation. Experimental results demonstrate the twofold benefits of our solution in mitigating RSGR limitations and advancing HDR reconstruction techniques.",
+      "published": "2026-09-23T17:38:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28439",
+      "pdf_url": "https://arxiv.org/pdf/2609.28439",
+      "summary_zh": "移动端CMOS传感器的卷帘快门（RS）效应会引入几何畸变和运动伪影，而带全局复位的卷帘快门（RSGR）模式虽缓解部分问题，却带来捕获速度下降和动态范围压缩的新局限。为此，作者提出双反向扫描方案，同时采集RSGR与反向RSGR视图，通过行自适应特征对齐和基于相关性引导混合注意力的幻觉模块实现互补曝光融合与HDR光序列重建，并搭建同轴成像系统采集真实数据集。实验表明该方法既能缓解RSGR局限，又能推进HDR重建，在高度动态场景下具有双重收益。",
+      "summary_en": "The rolling shutter (RS) effect in mobile CMOS sensors causes geometric distortions and motion artifacts, and the recent rolling shutter with global reset (RSGR) mode, while mitigating some RS issues, introduces reduced capture speed and compressed dynamic range. To address this, the authors propose a dual reversed scanning setup that captures both RSGR and inverted RSGR views, using row-adaptive feature alignment and a correlation-guided mixattention-based hallucination module to fuse complementary exposures and enable HDR photosequencing, supported by a coaxial imaging system for real-world data collection. Experiments demonstrate twofold benefits: mitigating RSGR limitations and advancing HDR reconstruction in highly dynamic scenes.",
+      "highlights_zh": [
+        "双反向RSGR扫描实现互补曝光HDR",
+        "行自适应对齐+混合注意力恢复细节",
+        "缓解RSGR局限并推进HDR重建"
+      ],
+      "highlights_en": [
+        "Dual reversed RSGR scanning for complementary-exposure HDR",
+        "Row-adaptive alignment plus mixattention detail recovery",
+        "Mitigates RSGR limits and advances HDR reconstruction"
+      ]
+    },
+    {
+      "id": "2609.28431",
+      "title": "LiMA: Bridging Long-term Imagination to Real-time Dexterous Manipulation via Asynchronous Diffusion",
+      "authors": [
+        "Ning Chen",
+        "Yankai Fu",
+        "Junkai Zhao",
+        "Qianpu Sun",
+        "Guocai Yao",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Dexterous manipulation demands long-term foresight and rapid reactive control. Vision-Language-Action (VLA) models, while proficient in high-level reasoning, often lack a fine-grained understanding of physical dynamics and spatial perception. Conversely, World-Action Models (WAMs) typically suffer from high inference latency due to iterative generation. These deficiencies result in a critical temporal misalignment where the model's intent fails to adapt to rapid physical contact changes. To overcome this fundamental bottleneck, we propose LiMA, an asynchronous dual-system generative framework that systematically decouples intent planning from reactive execution. LiMA organizes computation into a multi-scale hierarchy: a slow system handles sparse long-horizon spatiotemporal intent generation, while a fast system focuses on dense high-frequency motion refinement. To align sparse intent predictions with dense action trajectories, we introduce a Latent Schrödinger Bridge Coupling mechanism that formulates refinement as an entropy-regularized probabilistic transport process. LiMA reduces inference latency by 45.8% compared with Cosmos-Policy via asynchronous decoupling. Evaluated across six bimanual dexterous manipulation tasks spanning multiple horizons, LiMA achieves an overall success rate of 70.8% and an average subtask success rate of 78.9%, while maintaining performance in unseen scenarios. The project website is available at https://ccdcs.github.io/LiMA_repo/",
+      "published": "2026-09-23T17:31:52Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28431",
+      "pdf_url": "https://arxiv.org/pdf/2609.28431",
+      "summary_zh": "灵巧操作需要长期预见与快速反应，但VLA模型缺乏物理动态理解，WAM模型推理延迟高，导致意图无法适应快速接触变化。LiMA提出异步双系统生成框架，将慢速长时程意图规划与快速高频动作精炼解耦，并用潜在薛定谔桥耦合机制对齐稀疏意图与密集轨迹。该方法推理延迟降低45.8%，在六项双臂灵巧任务中总成功率达70.8%，子任务平均成功率78.9%，并保持未见场景泛化能力。",
+      "summary_en": "Dexterous manipulation requires long-term foresight and rapid reactive control, but VLA models lack fine-grained physical dynamics while WAMs suffer from high inference latency, causing temporal misalignment between intent and fast contact changes. LiMA proposes an asynchronous dual-system generative framework that decouples slow long-horizon intent planning from fast high-frequency motion refinement, using a Latent Schrödinger Bridge Coupling mechanism to align sparse intent with dense action trajectories. It reduces inference latency by 45.8% versus Cosmos-Policy and achieves 70.8% overall success and 78.9% average subtask success across six bimanual dexterous tasks, while generalizing to unseen scenarios.",
+      "highlights_zh": [
+        "异步双系统解耦意图规划与反应执行",
+        "总成功率70.8%，延迟降低45.8%",
+        "提升灵巧操作实时性与泛化能力"
+      ]
+    },
+    {
+      "id": "2609.28429",
+      "title": "Watch, Recall, Act: Always-On Robots in Concurrent Embodied Streams",
+      "authors": [
+        "Ding Yi",
+        "Peiwen Sun",
+        "Chenchu Rong",
+        "Jianan Wang",
+        "Xili Dai",
+        "Xiangyu Yue",
+        "Xi Lin"
+      ],
+      "abstract": "An always-on robot faces an endless stream that never resets: instructions arrive and lapse, the scene changes, and its own past actions reshape what it must reason about. Today's action models are built for the opposite: a fixed instruction, no mid-task intervention, single-step reasoning. In an open-ended world a robot must watch a live stream for far-future cues, recall its own far-past actions, and act on them under dual-arm concurrency. We present ARMS (Always-on Robot in Multi-modal Streams), a deliberately simple streaming policy: a single pretrained $π$0.5 backbone augmented by three lightweight modules that turn live perception, embodied states, and the robot's own past actions into context the backbone reads before it acts. The modules update this context asynchronously, so watching and recalling never block acting and the two arms act at once. Rather than inventing new mechanisms, ARMS integrates these learned context providers with an agent-causal self-history that logs which arm did what, and when. To supervise them without extra annotation, we build ARMS Dataset, whose staged construction script itself labels every module from real dual-arm teleoperation. Trained on it, ARMS reaches 45% on the combined task against 28% for the strongest of our four main baselines, and ablations confirm the memory module, the embodied-state head, and asynchronous concurrency are each necessary.",
+      "published": "2026-09-23T17:29:40Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28429",
+      "pdf_url": "https://arxiv.org/pdf/2609.28429",
+      "summary_zh": "常开机器人面对的是永不复位的连续流：指令随时到达与失效、场景持续变化、自身过去动作不断改变推理前提，而现有动作模型却假设固定指令、无中途干预、单步推理。为此作者提出ARMS，在预训练π0.5骨干上以三个轻量模块异步提供实时感知、具身状态与自身历史动作上下文，并用agent-causal自历史记录哪只手臂何时做了什么，同时构建ARMS Dataset从真实双臂遥操作自动标注各模块。在组合任务上ARMS达到45%（最强基线28%），消融显示记忆模块、具身状态头和异步并发均不可或缺，为真正常开、双臂并发的具身策略提供了简洁有效的范式。",
+      "summary_en": "Always-on robots face a never-resetting stream where instructions arrive and lapse, scenes change, and their own past actions reshape reasoning, yet today's action models assume a fixed instruction, no mid-task intervention, and single-step reasoning. The authors present ARMS, a deliberately simple streaming policy that augments a pretrained π0.5 backbone with three lightweight asynchronous modules supplying live perception, embodied states, and an agent-causal self-history of which arm did what and when, trained via the auto-labeled ARMS Dataset built from real dual-arm teleoperation. ARMS reaches 45% on the combined task versus 28% for the strongest of four main baselines, with ablations confirming the memory module, embodied-state head, and asynchronous concurrency are each necessary, offering a simple yet effective paradigm for truly always-on, dual-arm concurrent embodied policies.",
+      "highlights_zh": [
+        "π0.5骨干加三个异步轻量上下文模块",
+        "组合任务45%，超最强基线28%",
+        "记忆、状态头、异步并发缺一不可"
+      ]
+    },
+    {
+      "id": "2609.28449",
+      "title": "Can LLMs Reason About Runtime Behavior? A Repository-Level Dynamic Benchmark",
+      "authors": [
+        "Hamed Taherkhani",
+        "Mohammad Abdollahi",
+        "Melika Sepidband",
+        "Hridya Dhulipala",
+        "Tien N. Nguyen",
+        "Hadi Hemmati"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used in coding tasks, but their ability to reason about code execution remains unclear. Existing repository-level QA benchmarks mainly evaluate static code understanding and often rely on LLM-based evaluation, while execution-reasoning benchmarks are mostly limited to snippets or functions. We introduce SWE-Flux, a repository-level benchmark for dynamic execution reasoning containing 480 execution-grounded instances across 12 real Python repositories, with gold answers automatically harvested from instrumented test executions rather than written manually or judged by LLMs. The benchmark covers singletest and multi-test questions over control flow, loops, program state, dataflow, exceptions, and program invariants. Evaluating five LLMs shows that this task remains challenging. The best model achieves only 37% accuracy. Models perform better on localized behavior such as invariants, intra-procedural control flow, exceptions, and simple loops, but struggle with dataflow, inter-procedural execution, precise state reasoning, and suite-level aggregation. Finally, we show that the oracle-harvesting pipeline can generate fresh benchmark variants using input perturbation. It successfully harvests valid variants for almost 90% of the selected instances, and the resulting variants are substantially more challenging for the evaluated models.",
+      "published": "2026-09-23T17:46:50Z",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.28449",
+      "pdf_url": "https://arxiv.org/pdf/2609.28449",
+      "summary_zh": "现有仓库级问答基准主要评估静态代码理解且依赖LLM评判，而执行推理基准多局限于代码片段或函数，LLM对代码运行时行为的推理能力尚不明确。本文提出SWE-Flux，一个包含12个真实Python仓库、480个执行实例的仓库级动态执行推理基准，其标准答案由插桩测试执行自动采集而非人工编写或LLM评判，并可通过输入扰动生成新变体。评估显示最佳模型仅达37%准确率，模型在局部行为上表现较好但在数据流、跨过程执行和状态推理上表现不佳，该基准为动态代码推理提供了更可靠的评测手段。",
+      "summary_en": "Existing repository-level QA benchmarks mainly assess static code understanding and rely on LLM-based evaluation, while execution-reasoning benchmarks are largely limited to snippets or functions, leaving LLMs' ability to reason about runtime behavior unclear. We introduce SWE-Flux, a repository-level dynamic execution reasoning benchmark with 480 execution-grounded instances across 12 real Python repositories, whose gold answers are automatically harvested from instrumented test executions and can be regenerated via input perturbation. Evaluation shows the best model reaches only 37% accuracy, performing better on localized behaviors but struggling with dataflow, inter-procedural execution, and precise state reasoning, highlighting a challenging and reliable testbed for dynamic code reasoning.",
+      "highlights_zh": [
+        "自动采集执行答案的仓库级动态基准",
+        "最佳模型准确率仅37%",
+        "可生成新变体但推理仍具挑战"
+      ]
+    }
+  ]
+}
