@@ -1,0 +1,301 @@
+{
+  "date": "2026-09-28",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.31619",
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "authors": [
+        "Parsa Hosseini",
+        "Akasha Tigalappanavara",
+        "Sumit Nawathe",
+        "Chenrui Fan",
+        "Sourya Basu",
+        "Genta Indra Winata",
+        "Anirban Das",
+        "Soheil Feizi",
+        "Nima Chitsazan"
+      ],
+      "abstract": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinforcement learning with length penalties. We show that substantial efficiency gains can instead emerge from a different kind of supervision: \\textit{confidence}. Using a self-supervised procedure, we fine-tune reasoning models to predict their confidence in the answer at intermediate points along their own reasoning trajectories using only 600 training problems. Confidence is used only as a training target: the loss contains no objective for reasoning length, efficiency, or stopping. At inference, the fine-tuned models use the standard generation procedure, with no confidence elicitation or early-stopping mechanism. Despite this, self-supervised confidence fine-tuning makes reasoning more efficient, reducing generated tokens by up to 25\\% at matched accuracy across Gemma, Qwen, Nemotron, and GPT-OSS models on mathematical, scientific, and coding reasoning benchmarks, with efficiency gains comparable to methods that explicitly optimize for shorter reasoning. Analysis of reasoning episodes further shows that confidence supervision largely preserves the base models' high-level reasoning composition rather than selectively suppressing particular behaviors. Our results suggest that efficient reasoning may emerge as a downstream consequence of learning metacognitive signals, without being directly optimized.",
+      "published": "2026-09-25T17:59:52Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31619",
+      "pdf_url": "https://arxiv.org/pdf/2609.31619",
+      "summary_zh": "推理模型常生成冗长推理链导致推理成本高昂，现有方法依赖推理时早停或训练时的长度惩罚来提升效率。本文提出自监督置信度微调，仅用600道题训练模型预测自身推理中途的答案置信度，损失函数不含任何长度或停止目标，推理时也不使用置信度或早停机制。该方法在多个模型和基准上以匹配准确率减少最多25%的生成token，效率提升与显式优化短推理的方法相当，表明高效推理可作为学习元认知信号的下游结果自然涌现。",
+      "summary_en": "Reasoning models often generate excessively long reasoning traces, making inference expensive, and existing solutions rely on inference-time early stopping or explicit length penalties during training. This paper introduces self-supervised confidence fine-tuning, which trains models on only 600 problems to predict their answer confidence at intermediate reasoning steps, with no length, efficiency, or stopping objective in the loss and no confidence elicitation or early stopping at inference. This approach reduces generated tokens by up to 25% at matched accuracy across Gemma, Qwen, Nemotron, and GPT-OSS on math, science, and coding benchmarks, matching explicit short-reasoning optimization, and suggests efficient reasoning can emerge as a downstream consequence of learning metacognitive signals.",
+      "highlights_zh": [
+        "自监督置信度微调，损失不含长度目标",
+        "匹配准确率下token减少最多25%",
+        "无需推理时早停，仅600题训练"
+      ]
+    },
+    {
+      "id": "2609.31607",
+      "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+      "authors": [
+        "Kevin Jiang",
+        "Morgane Austern",
+        "Edgar Dobriban",
+        "Jason M. Klusowski"
+      ],
+      "abstract": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, where we want to ensure that a protected attribute (e.g., gender, race, or age categories) follows a desired distribution, and synthetic data generation, where we want the generated data to be representative of a target distribution. We study the practically important black-box access setting, where a user can repeatedly query a generative AI model. The goal is to return $m\\ge 1$ outputs whose joint attribute distribution is as close as possible to this target. For both exact and approximate alignment, we develop algorithms that minimize the expected number of queries to the generator, and we further demonstrate their optimality as the number of requested outputs $m \\rightarrow \\infty$. Experiments on text-to-image generation and geocoded persona generation tasks show that our post-processing algorithms improve statistical attribute alignment, complementing prompting-based interventions.",
+      "published": "2026-09-25T17:55:49Z",
+      "primary_category": "stat.ME",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "cs.LG",
+        "math.ST"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31607",
+      "pdf_url": "https://arxiv.org/pdf/2609.31607",
+      "summary_zh": "生成式AI的输出常需与用户指定的属性分布对齐，但现有方法在只能黑盒查询模型时难以保证统计对齐。本文针对该黑盒设置，提出后处理算法，通过最小化查询次数来返回m个输出，使其联合属性分布逼近目标分布，并证明当m趋于无穷时算法最优。在文本到图像生成和地理编码人物生成任务上，该方法提升了统计属性对齐效果，可作为基于提示干预的补充。",
+      "summary_en": "Generative AI outputs often need to align with user-specified attribute distributions, but ensuring statistical alignment under black-box access remains challenging. We propose post-processing algorithms that minimize the expected number of queries to return m outputs whose joint attribute distribution approximates a target, and prove optimality as m approaches infinity. Experiments on text-to-image generation and geocoded persona generation show improved statistical attribute alignment, complementing prompting-based interventions.",
+      "highlights_zh": [
+        "黑盒后处理最小化查询次数",
+        "m→∞时算法渐近最优",
+        "提升公平性与合成数据代表性"
+      ],
+      "highlights_en": [
+        "Black-box post-processing minimizes queries",
+        "Asymptotically optimal as m→∞",
+        "Improves fairness and synthetic data representativeness"
+      ]
+    },
+    {
+      "id": "2609.31614",
+      "title": "Gap-free Differentially Private PCA for Gaussian Data",
+      "authors": [
+        "Alina Ene",
+        "Huy L. Nguyen"
+      ],
+      "abstract": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
+      "published": "2026-09-25T17:58:38Z",
+      "primary_category": "cs.DS",
+      "categories": [
+        "cs.DS",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31614",
+      "pdf_url": "https://arxiv.org/pdf/2609.31614",
+      "summary_zh": "针对高斯数据的主成分分析问题，现有差分隐私算法通常存在效用差距。该工作提出了一种无差距的差分隐私PCA算法，通过针对高斯数据分布特性的设计消除了隐私与效用之间的鸿沟。这一结果意味着在高斯假设下，差分隐私PCA可以达到与非隐私版本相同的统计精度。",
+      "summary_en": "For PCA on Gaussian data, existing differentially private algorithms typically suffer from a utility gap. This work proposes a gap-free differentially private PCA algorithm that eliminates the privacy-utility gap by exploiting Gaussian data properties. The result implies that under Gaussian assumptions, private PCA can achieve the same statistical accuracy as its non-private counterpart.",
+      "highlights_zh": [
+        "无差距差分隐私PCA算法",
+        "高斯数据下达到非隐私精度",
+        "适用于隐私保护数据分析"
+      ],
+      "highlights_en": [
+        "Gap-free DP PCA algorithm",
+        "Matches non-private accuracy for Gaussian data",
+        "Useful for privacy-preserving data analysis"
+      ]
+    },
+    {
+      "id": "2609.31612",
+      "title": "First-Order Stationarity of Reverse Diffusions",
+      "authors": [
+        "Zhifeng Chen",
+        "Chenyang Jiang",
+        "Yazhen Wang"
+      ],
+      "abstract": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences at explicit exponential rates whenever the stationary potential of the forward process is strongly convex---a condition on the noising process one chooses, not on the data. This is a unique advantage of SDE-based reverse diffusion, absent in the reverse process based on ODEs. Second, we incorporate discretization and establish averaged first-order stationarity bounds---the sampling analog of averaged gradient-norm guarantees in nonconvex optimization---for samplers of both overdamped and underdamped diffusion models. As in nonconvex optimization, the convexity-free certificate is local: it guarantees score consistency, not global mode weights.",
+      "published": "2026-09-25T17:57:43Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31612",
+      "pdf_url": "https://arxiv.org/pdf/2609.31612",
+      "summary_zh": "本文在优化与采样密切关联的背景下，为扩散模型建立一阶理论，研究反向扩散过程的平稳性。作者针对过阻尼与欠阻尼Langevin扩散的SDE反向流，证明当前向过程势函数强凸时相对Fisher散度以显式指数速率收缩，并引入离散化建立平均一阶平稳性界。结果表明SDE反向扩散具有ODE反向过程所不具备的收缩优势，且无凸性假设下的局部保证可确保分数一致性而非全局模态权重。",
+      "summary_en": "Motivated by the strong connection between optimization and sampling, this work develops a first-order theory for diffusion models by studying stationarity of reverse diffusions. The authors prove that SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences at explicit exponential rates when the forward process potential is strongly convex, and incorporate discretization to establish averaged first-order stationarity bounds. The results reveal a unique contraction advantage of SDE-based reverse diffusion over ODE-based reverse processes, with a local convexity-free certificate guaranteeing score consistency rather than global mode weights.",
+      "highlights_zh": [
+        "SDE反向扩散具指数收缩优势",
+        "建立平均一阶平稳性界",
+        "保证分数一致性非全局权重"
+      ]
+    },
+    {
+      "id": "2609.31603",
+      "title": "User Model Extraction via Belief Self-Distillation",
+      "authors": [
+        "Ali Holmov",
+        "Yiran Huang",
+        "Kirill Bykov",
+        "Zeynep Akata"
+      ],
+      "abstract": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact user representation that can be both decoded and written back into the model. The frozen LLM acts as its own teacher, distilling beliefs from natural conversations without external annotations. Unlike conventional probing, BSD isolates not only information present in activations, but a state whose causal role can be directly tested. Across multiple model families, BSD faithfully recovers user beliefs and enables substantially stronger interventions than matched hidden-state steering. Crucially, we find that refusal depends not only on the request, but on the model's inferred user intent: changing this belief alters refusal while holding the request fixed. We further uncover a striking cross-model regularity: independently trained LLMs converge on a shared geometry for representing their users. Together, these results reveal implicit user models as readable and causally writable internal states with direct implications for AI safety, shaping how models condition safety decisions on whom they believe they are interacting with.",
+      "published": "2026-09-25T17:54:32Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31603",
+      "pdf_url": "https://arxiv.org/pdf/2609.31603",
+      "summary_zh": "大语言模型会隐式推断用户属性并据此调整行为，但这些内部信念难以被检查和因果操控。本文提出信念自蒸馏（BSD）框架，让冻结的LLM作为自身教师，从自然对话中学习可解码且可写回模型的紧凑用户表征，从而隔离出具有因果作用的内部状态。实验表明BSD能忠实恢复用户信念，实现比隐状态引导更强的干预，并揭示拒绝行为取决于模型推断的用户意图，且不同模型独立训练后收敛到共享的用户表征几何，对AI安全具有重要意义。",
+      "summary_en": "Large language models implicitly infer user attributes and adapt their behavior, yet these internal beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework in which a frozen LLM acts as its own teacher to learn a compact user representation that can be both decoded and written back, isolating a causally testable state. Across model families, BSD faithfully recovers user beliefs, enables stronger interventions than hidden-state steering, shows that refusal depends on inferred user intent, and reveals a shared cross-model geometry for representing users, with direct implications for AI safety.",
+      "highlights_zh": [
+        "可读可写的用户信念自蒸馏框架",
+        "干预效果显著优于隐状态引导",
+        "揭示跨模型共享用户表征几何"
+      ]
+    },
+    {
+      "id": "2609.31571",
+      "title": "Strategically Diverse Sampling for Self-Training",
+      "authors": [
+        "Alexander Gurung",
+        "Esmeralda S. Whitammer",
+        "Mirella Lapata"
+      ],
+      "abstract": "Many LLM training and inference methods, including RL and test-time scaling, depend on repeated sampling, but benefit only when the responses meaningfully differ. Self-training faces the same challenge: training data is typically constructed by sampling IID responses and filtering primarily for correctness, thereby overrepresenting strategies a model already favours. We investigate strategic diversity, or substantive variation among approaches to a problem, as an alternative principle for constructing self-training data. We generate strategically diverse data with two sampling methods: GROOT, a new method which constructs a hierarchical tree of approaches and samples distinct paths, and Verbalized Sampling (VS), adapted to produce an unstructured set of approaches. Across competitive programming and Next-Chapter Prediction domains, models trained on strategically sampled data outperform IID-trained counterparts on difficult tasks and provide strong initializations for RL and test-time scaling. Most strikingly, self-training on strategically diverse but incorrect traces from Qwen3-4B outperforms IID distillation from a 235B teacher. These results challenge prevailing assumptions about what makes useful self-training data and show that diversity of approaches can matter more than correctness or teacher scale.",
+      "published": "2026-09-25T17:35:05Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31571",
+      "pdf_url": "https://arxiv.org/pdf/2609.31571",
+      "summary_zh": "自训练数据通常通过IID采样并主要按正确性过滤来构建，导致模型偏好的策略被过度代表，而重复采样只有在响应有实质差异时才有益。本文提出“策略多样性”原则，并设计GROOT（构建分层方法树并采样不同路径）与适配的Verbalized Sampling两种采样方法生成策略多样的自训练数据。在竞赛编程和下一章预测任务中，策略采样训练的模型在难题上超越IID训练，且用Qwen3-4B的策略多样但错误的轨迹自训练竟优于235B教师的IID蒸馏，表明方法多样性可能比正确性和教师规模更重要。",
+      "summary_en": "Self-training data is typically built by IID sampling and filtering mainly for correctness, overrepresenting strategies the model already favors, while repeated sampling helps only when responses meaningfully differ. This paper proposes strategic diversity as a construction principle and introduces GROOT, which builds a hierarchical tree of approaches and samples distinct paths, plus an adapted Verbalized Sampling that yields an unstructured set of approaches. On competitive programming and Next-Chapter Prediction, strategically sampled training outperforms IID training on difficult tasks and provides strong initializations for RL and test-time scaling; notably, self-training on strategically diverse but incorrect Qwen3-4B traces beats IID distillation from a 235B teacher, showing approach diversity can matter more than correctness or teacher scale.",
+      "highlights_zh": [
+        "提出策略多样性自训练数据构建原则",
+        "错误但多样轨迹胜过235B教师蒸馏",
+        "挑战正确性与教师规模优先的假设"
+      ]
+    },
+    {
+      "id": "2609.31620",
+      "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders",
+      "authors": [
+        "Hongyang Du",
+        "Yunfei Xie",
+        "Junjie Ye",
+        "Jiawei Yang",
+        "Xiaoyan Cong",
+        "Haodong Zhang",
+        "Yongchao Huang",
+        "Haiyu Wu",
+        "Zongxia Li",
+        "Shihang Gui",
+        "Dawei Liu",
+        "Runhao Li",
+        "Jingcheng Ni",
+        "Chen Wei",
+        "Randall Balestriero",
+        "Yue Wang"
+      ],
+      "abstract": "Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image generation. However, RAEs still need to decide which encoder layers form the shared latent space for the generator and pixel decoder. This choice involves a trade-off. Shallower layers tend to preserve fine pixel details better, while deeper layers tend to yield better generation metrics. A fixed heuristic layer fusion therefore couples two stages that benefit from different information. We introduce FuseReg, which replaces heuristic feature selection with training over random subsets of encoder layers. We theoretically analyze the underlying mechanism: subset sampling explicitly penalizes sensitivity to cross-layer disagreement. On ImageNet-256 with DINOv3-L, a single FuseReg decoder reconstructs from full, sparse, and single-layer fusions without retraining, achieving higher PSNR than decoders specialized to fixed fusions. This flexibility also benefits generation: decoder replacement alone reduces unguided gFID by 27% with an unchanged RAEv2 DiT-XL generator. The same regularization principle extends to diffusion training, with joint regularization of both stages reducing unguided gFID by 29% on DiT-Base. These results show that training downstream models for layer-fusion robustness narrows the reconstruction-generation gap without modifying the pretrained encoder.",
+      "published": "2026-09-25T17:59:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31620",
+      "pdf_url": "https://arxiv.org/pdf/2609.31620",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.31595",
+      "title": "GraphWrit3R: End-to-End 3D Scene Graph Writing",
+      "authors": [
+        "Luka Milivojevic",
+        "Nikola Popovic",
+        "Sayan Deb Sarkar",
+        "Sebastian Koch",
+        "Iro Armeni",
+        "Luc Van Gool",
+        "Danda Pani Paudel"
+      ],
+      "abstract": "3D scene graphs provide a structured representation of complex environments by encoding objects, their semantic attributes, and the spatial and functional relationships between them. Current approaches for 3D scene graph generation suffer from several fundamental limitations. They rely on complex multi-stage pipelines with explicit intermediate representations, making systems fragile and prone to error propagation. They assume access to ground-truth object annotations during inference, which deviates from real-world scenarios. They depend on proprietary models, hindering open-source deployment, or incur prohibitively slow inference. We present GraphWrit3R, a simple end-to-end method that takes a 3D point cloud, Gaussian Splats, or a combination of both as input, and directly outputs a complete scene graph as a structured JSON script. The graph lists all objects, their semantic attributes, and the relationships between them, while avoiding all of the above mentioned limitations. The choice of multiple input modalities is purely for versatility, allowing a single set of weights to handle diverse scenarios. Point cloud inputs are encoded via Sonata and Gaussian Splat inputs via Chorus, with both modalities projected onto a shared voxel grid and fused through a novel per-voxel contrastive alignment loss before being decoded by a large language model. As a natural consequence of the LLM, GraphWrit3R also supports open-vocabulary querying. On the 3DSSG benchmark, our method achieves state-of-the-art performance on object class, predicate, and triplet recall, outperforming methods that rely on ground-truth object annotations during inference. We further provide qualitative results and analyze different input modality configurations, contrastive loss formulations, and token fusion strategies.",
+      "published": "2026-09-25T17:52:39Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31595",
+      "pdf_url": "https://arxiv.org/pdf/2609.31595",
+      "summary_zh": "现有3D场景图生成方法依赖多阶段流水线、推理时需真值标注且受限于专有模型或推理缓慢。GraphWrit3R提出端到端方法，将点云或高斯泼溅投影到共享体素网格，通过逐体素对比对齐损失融合后由大语言模型直接输出结构化JSON场景图。在3DSSG基准上，该方法在物体类别、谓词和三元组召回率上达到最优，且无需推理时真值标注，并支持开放词汇查询。",
+      "summary_en": "Existing 3D scene graph generation methods rely on multi-stage pipelines, require ground-truth annotations at inference, and depend on proprietary models or suffer from slow inference. GraphWrit3R is an end-to-end method that projects point clouds or Gaussian Splats onto a shared voxel grid, fuses them via a per-voxel contrastive alignment loss, and uses a large language model to directly output a structured JSON scene graph. On the 3DSSG benchmark, it achieves state-of-the-art object class, predicate, and triplet recall without ground-truth annotations at inference, while also supporting open-vocabulary querying.",
+      "highlights_zh": [
+        "端到端直接输出JSON场景图",
+        "3DSSG上三类召回率最优",
+        "无需真值标注且支持开放词汇"
+      ],
+      "highlights_en": [
+        "End-to-end direct JSON scene graph output",
+        "SOTA recall on 3DSSG for three metrics",
+        "No GT annotations, open-vocabulary querying"
+      ]
+    },
+    {
+      "id": "2609.31606",
+      "title": "Learning Robot Policies from Sparse Success Signals via STL-Guided Stein Variational Policy Gradient",
+      "authors": [
+        "Hongrui Zheng",
+        "Cristian Ioan Vasile",
+        "Antonio Loquercio",
+        "Rahul Mangharam"
+      ],
+      "abstract": "Learning robot policies for tasks with sparse success signals is challenging when completion depends on coordinated actions, precise contact outcomes, or satisfying several conditions together. Intricate physical interactions with the world further complicate these requirements. Prior work using conventional reward shaping mechanisms provides dense feedback but local progress might not translate into eventual task completion. We present Signal Temporal Logic-guided Stein Variational Policy Gradient (STL-SVPG), a population-based method that uses smooth STL robustness as a trajectory-level training objective. Differentiating this objective through the dynamics assigns credit to policy actions according to their effect on the complete task specification, rather than local progress alone. We evaluate the approach on six quadcopter and manipulator tasks that involves event-triggered responses, strictly ordered behavior, responses within specified deadlines, and physical interaction with the world. STL-SVPG achieves the highest mean success rate among the compared methods on five of six benchmarks. Simulation-trained policies trained in simulation transfer temporal and contact task behavior to the real world.",
+      "published": "2026-09-25T17:55:01Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31606",
+      "pdf_url": "https://arxiv.org/pdf/2609.31606",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.31577",
+      "title": "Generate, Track, Improve: Perceptive Multi-Skill Humanoid Locomotion with RL-Fine-Tuned Motion Generators",
+      "authors": [
+        "Zachary Olkin",
+        "William D. Compton",
+        "Aaron D. Ames"
+      ],
+      "abstract": "General purpose humanoids require locomotion controllers that are multi-skill, perceptive, dynamic, and robust enough to go anywhere humans can. In this work, we present a two layer locomotion architecture: (1) a perceptive flow matching motion generator plans whole body trajectories from raw depth images while a (2) perceptive tracking policy trained with control-guided RL follows these motions. Both policies are trained on a library of terrain consistent motion clips created with dynamically optimized human data which yields both accurate velocity tracking and terrain consistent references. Our central contribution is a simple yet effective off-policy RL fine tuning loop that improves the motion generator. A structured search method is used with the generator to gather data for advantage weighted regression. This off-policy loop is much more sample efficient than on-policy residual fine tuning and improves terrain consistency on unseen geometries and skill compositions. We find that successful terrain traversals increased by up to 25 percentage points and skill selection improved by up to 80 percentage points. By using raw depth images to perceive the environment no odometry or height maps are needed, and outdoor deployment is easy. With two cameras, the policy can see terrain coming from further away and adjust its velocity regardless of the commanded speed so it can traverse the terrain. A single policy pair enables a Unitree G1 humanoid to walk, run, stand, jump on and off of boxes, and traverse stairs in outdoor environments. Project page: https://zolkin1.github.io/generate-track-improve/",
+      "published": "2026-09-25T17:38:23Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.31577",
+      "pdf_url": "https://arxiv.org/pdf/2609.31577",
+      "summary_zh": "通用人形机器人需要具备多技能、感知能力强且鲁棒的运动控制器，但现有方法在复杂地形和技能组合上仍面临泛化与样本效率的挑战。本文提出一种双层架构：感知流匹配运动生成器从原始深度图规划全身轨迹，配合控制引导强化学习训练的感知跟踪策略，并引入离策略RL微调循环通过结构化搜索与优势加权回归改进生成器。实验表明，该方法在未见地形上成功率提升最多25个百分点，技能选择提升最多80个百分点，使Unitree G1人形机器人能在户外实现走、跑、站立、跳箱和爬楼梯。",
+      "summary_en": "General-purpose humanoids require multi-skill, perceptive, and robust locomotion controllers, yet existing methods struggle with generalization and sample efficiency on complex terrains and skill compositions. This work presents a two-layer architecture with a perceptive flow-matching motion generator planning whole-body trajectories from raw depth images and a control-guided RL tracking policy, plus an off-policy RL fine-tuning loop using structured search and advantage-weighted regression to improve the generator. Results show up to 25 percentage points improvement in terrain traversal success and 80 percentage points in skill selection, enabling a Unitree G1 humanoid to walk, run, stand, jump on/off boxes, and climb stairs outdoors.",
+      "highlights_zh": [
+        "离策略RL微调运动生成器",
+        "地形通过率提升25个百分点",
+        "无需里程计与高度图，户外易部署"
+      ]
+    }
+  ]
+}
