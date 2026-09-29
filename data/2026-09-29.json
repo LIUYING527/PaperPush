@@ -1,0 +1,309 @@
+{
+  "date": "2026-09-29",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.35770",
+      "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
+      "authors": [
+        "Srinjay Sarkar",
+        "Prakhar Kaushik",
+        "Soumava Paul",
+        "Alan Yuille"
+      ],
+      "abstract": "Realistic and editable animal fur reconstruction from multi-view images is challenging due to fine-scale detail, self-occlusion and obfuscation, and, unlike human hair, the lack of animal-fur datasets. Fur usually covers most of an animal's body, with large inter-species and intra-species variability. We present FurE, an efficient strand-based animal fur reconstruction method that recovers a per-strand, editable groom by optimizing a root-conditioned latent field, decoded into strand geometry via a PCA-based decoder. We reconstruct a defurred animal body using local fur-thickness cues from a surface-constrained Gaussian Frosting representation together with part-based priors. We further show that a PCA-based decoder learned from human-hair strand data can alleviate animal-data scarcity while enabling substantially faster optimization. FurE achieves a 10x speedup in strand training over current SOTA dense per-strand optimization while retaining strand fidelity and generalizing across synthetic and real-world sequences, with quantitative and qualitative validation despite the reduction in training time.",
+      "published": "2026-09-28T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35770",
+      "pdf_url": "https://arxiv.org/pdf/2609.35770",
+      "summary_zh": "从多视角图像重建逼真可编辑的动物毛发因细节精细、自遮挡严重且缺乏动物毛发数据集而极具挑战。FurE提出基于根条件潜在场与PCA解码器的高效毛发重建方法，利用人类头发数据学习解码器并借助局部毛发厚度线索重建去毛身体。该方法在保持毛发保真度的同时实现10倍训练加速，并在合成与真实序列上验证了泛化能力。",
+      "summary_en": "Reconstructing realistic and editable animal fur from multi-view images is challenging due to fine details, self-occlusion, and the lack of animal-fur datasets. FurE optimizes a root-conditioned latent field decoded into strand geometry via a PCA-based decoder learned from human-hair data, and reconstructs a defurred body using local fur-thickness cues and part-based priors. It achieves a 10x speedup in strand training over state-of-the-art dense per-strand optimization while retaining fidelity and generalizing across synthetic and real-world sequences.",
+      "highlights_zh": [
+        "根条件潜在场+PCA解码器",
+        "毛发训练加速10倍",
+        "缓解动物毛发数据稀缺"
+      ]
+    },
+    {
+      "id": "2609.35769",
+      "title": "Telescopic Language Models",
+      "authors": [
+        "Zhilin Guo",
+        "Boqiao Zhang",
+        "Hakan Aktas",
+        "Kyle Fogarty",
+        "Nursena Koprucu Aslan",
+        "Wenzhao Li",
+        "Canberk Baykal",
+        "Albert Miao",
+        "Siyu Hong",
+        "Yixiao Liu",
+        "Adam Wu",
+        "Ashish Kumar Singh",
+        "Sakar Khattar",
+        "Chenliang Zhou",
+        "Weihao Xia",
+        "Cristina Nader Vasconcelos",
+        "Cengiz Oztireli"
+      ],
+      "abstract": "One deployed language model must often serve many compute budgets, yet serving each budget still means a separate training or compression run per point. We train a Telescopic Language Model (TLM) to be that continuum: a nested-capacity Transformer supervised by stochastic prefix supervision with a full anchor. At every step, one randomly truncated prefix of the capacity axis is trained against the full next-token target, alongside one full-capacity pass, so the trained artifact is a valid language model at every depth. Two forward-backward passes per step, no architectural change, nothing extra at inference. Fixed-exit suites such as Matryoshka Language Model Suites (MLMS) occupy one point in this design space, and the point has a cost: supervising only a few fixed exits leaves the nested model at chance level everywhere else (perplexity 10^2-10^5 in our baselines). On a 200M proxy suite (20B FineWeb-Edu tokens, identical data stream for all methods), a single TLM run is a valid language model at every one of its twenty layer prefixes, in perplexity and on perplexity-sensitive downstream tasks, reducing the area under the quality-budget curve by 43-44% relative to the fixed-exit suites while matching them at full capacity, at ~12% lower GPU cost per run. The prefix sampling density is a dial: concentrating it on a few depths recovers fixed-exit quality there at the price of the continuum, so the operating points become a training-time choice rather than an architectural one. These results indicate that the training objective, not the nesting itself, is what makes a model elastic.",
+      "published": "2026-09-28T17:59:53Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35769",
+      "pdf_url": "https://arxiv.org/pdf/2609.35769",
+      "summary_zh": "部署单一语言模型常需服务多种计算预算，但每个预算点仍需单独训练或压缩。本文提出Telescopic Language Model，通过随机前缀监督加全容量锚点，使一个嵌套容量Transformer在任意深度都是有效语言模型，每步仅需两次前向-反向传播且无需架构改动。在200M代理套件上，单次TLM训练在全部20个层前缀上均有效，质量-预算曲线下面积比固定退出方案减少43-44%，全容量性能持平且GPU成本降低约12%，表明训练目标而非嵌套结构本身是实现模型弹性的关键。",
+      "summary_en": "Deploying one language model across many compute budgets typically requires separate training or compression per budget point. This paper introduces the Telescopic Language Model (TLM), which uses stochastic prefix supervision with a full anchor so that a nested-capacity Transformer is a valid language model at every depth, requiring only two forward-backward passes per step and no architectural changes. On a 200M proxy suite, a single TLM run is valid at all twenty layer prefixes, reducing the area under the quality-budget curve by 43-44% versus fixed-exit suites while matching full-capacity quality at ~12% lower GPU cost, showing that the training objective, not nesting itself, enables elasticity.",
+      "highlights_zh": [
+        "随机前缀监督+全锚点，任意深度有效",
+        "质量-预算曲线面积减少43-44%",
+        "训练目标决定弹性，非架构改动"
+      ]
+    },
+    {
+      "id": "2609.35768",
+      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
+      "authors": [
+        "Zimo Wang",
+        "Junkun Yuan",
+        "Angtian Wang",
+        "Haotian Yang",
+        "Canyu Zhang",
+        "Siyuan Yuan",
+        "Xingchang Huang",
+        "Bo Liu",
+        "Yizhi Wang",
+        "Yiding Yang",
+        "Chongyang Ma",
+        "Gordon Guocheng Qian"
+      ],
+      "abstract": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting progressive oversaturation and artifacts. We trace this instability to critic errors, which enter successive student updates and accumulate over time. We introduce Projected Distribution Matching Distillation (PDMD) to filter critic errors. PDMD projects out the component of the DMD update parallel to the student-critic endpoint residual. At a fixed noisy query, we prove that this residual is an unbiased estimate of the critic's endpoint error. Under high-dimensional assumptions, this projection removes a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Empirically, the projection stabilizes training and improves sample quality where DMD degrades and develops unnatural textures. PDMD requires only a one-line code change to DMD, with no extra loss, network, data, model pass, or multi-stage training. With Wan2.1, PDMD achieves a VBench total score of 83.73 at 4 NFE, surpassing matched DMD by 1.03 points. On MiniMax-H3 joint video-audio generation, PDMD achieves a VideoGen-Eval visual total score of 83.17, 0.41 points above the strongest distilled baseline. PDMD also achieves the best performance on all six audio metrics among the compared 4-NFE models. Qualitative comparisons and user studies favor PDMD over the distilled baselines in visual quality, motion, and audio quality. Code and models are available at https://pdmd2026.github.io/.",
+      "published": "2026-09-28T17:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35768",
+      "pdf_url": "https://arxiv.org/pdf/2609.35768",
+      "summary_zh": "视频扩散模型需大量去噪评估，DMD虽将NFE降至几次，但训练中因critic误差累积导致样本过饱和与伪影。PDMD通过将DMD更新中平行于学生-critic端点残差的分量投影剔除，理论证明该残差是critic端点误差的无偏估计，从而过滤critic误差。在Wan2.1上4 NFE达VBench 83.73分，超越DMD 1.03分，并在视频-音频联合生成中取得最佳视觉与音频指标，仅需一行代码改动。",
+      "summary_en": "Video diffusion models require many denoising evaluations, and while DMD reduces NFE to a few, its samples degrade during training due to accumulating critic errors causing oversaturation and artifacts. PDMD projects out the component of the DMD update parallel to the student-critic endpoint residual, which is proven to be an unbiased estimate of the critic's endpoint error, thus filtering critic errors with a one-line code change. PDMD achieves a VBench total score of 83.73 at 4 NFE on Wan2.1, surpassing DMD by 1.03 points, and also leads in joint video-audio generation with the best visual and audio metrics.",
+      "highlights_zh": [
+        "投影剔除critic误差，一行代码改动",
+        "4 NFE下VBench 83.73，超DMD 1.03分",
+        "视频音频联合生成指标全面领先"
+      ]
+    },
+    {
+      "id": "2609.35763",
+      "title": "Unifying Distributional Training for One-Step Visual Generation",
+      "authors": [
+        "Chi Zhang",
+        "Haoyang Shi",
+        "Yueyi Liu",
+        "Ruichuan An",
+        "Junkang Zhou",
+        "Chang Li",
+        "Xiuyuan Lu",
+        "Yichi Zhang",
+        "Bo Wang",
+        "Yuhang Wu",
+        "Sen Cui",
+        "Miao Liu"
+      ],
+      "abstract": "\\emph{Distributional training} provides collective supervision for one-step visual generation by matching real and generated features in frozen representation spaces. We introduce \\emph{a unified theoretical framework} that separates distribution modeling from matching discrepancy and connects global objectives to pointwise feature updates through Wasserstein gradient flow. Under this framework, FD-Loss and Gaussian-kernel Drifting are recovered through Gaussian optimal transport and kernel-density-based KL matching, respectively. The framework motivates \\textbf{MGFlow}, which models feature distributions with Gaussian mixtures at an adjustable granularity between global moments and sample-based representations. MGFlow supports both optimal transport and score-based matching, and couples mass-constrained sample assignment with paired component updates to address mode collapse that mixture expressivity alone does not resolve. On ImageNet $256\\times256$, MGFlow substantially surpasses the FD-Loss baseline, achieving state-of-the-art results with \\textbf{1.45} $\\mathrm{FDr}^6$ on pMF-H and \\textbf{1.64} on JiT-H. For text-to-image generation, MGFlow post-trains FLUX.2 [klein] 4B into a one-step generator that outperforms the original four-step model on both GenEval and PickScore. Project page: https://shihaoyang0423.github.io/MGFlow-website/",
+      "published": "2026-09-28T17:59:14Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35763",
+      "pdf_url": "https://arxiv.org/pdf/2609.35763",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.35765",
+      "title": "Retrieving Biblical Intertextual References in Karen Blixen's Seven Gothic Tales",
+      "authors": [
+        "András Kovács",
+        "Alexander Conroy",
+        "Daniel Hershcovich",
+        "Jens Bjerring-Hansen"
+      ],
+      "abstract": "Identifying intertextual references is central to literary scholarship, but computationally difficult when source material is transformed through paraphrase, allusion, historical language, and translation. We investigate this problem through biblical intertextuality in Karen Blixen's Seven Gothic Tales. Drawing on the commentary to a critical edition, we construct a benchmark of 189 annotated references and evaluate retrieval against all 31,170 verses of historically plausible Danish Old and New Testament translations. We compare TF-IDF and BM25 with multilingual and Danish sentence encoders, examine the effect of linguistic normalization, and fine-tune a Danish encoder using hard negatives and five-fold cross-validation. We analyze performance across automatically derived lexical-overlap strata representing quotations, paraphrases, and allusions. Linguistically normalized BM25 provides a strong zero-shot baseline, attaining an overall R@10 of 0.365 and retrieving every quotation within its ten highest-ranked verses. The best zero-shot dense model achieves a comparable overall score of 0.360 while performing better on allusions. Fine-tuning DFM-large raises its overall R@10 from 0.265 to 0.508 and more than doubles its performance on allusions, from 0.138 to 0.339. However, evaluation against editorial annotations alone understates the model's scholarly usefulness: a literary scholar judged seven of 30 selected rank-one predictions counted as false positives to be meaningful additional references. These findings show both the potential and the epistemic limits of computational intertextual retrieval. Rather than treating scholarly annotations as exhaustive or model outputs as discoveries, we propose retrieval models as heuristic co-readers that recover documented references and generate candidates for expert-led close reading.",
+      "published": "2026-09-28T17:59:27Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35765",
+      "pdf_url": "https://arxiv.org/pdf/2609.35765",
+      "summary_zh": "识别互文引用是文学研究的核心，但源文本经改写、典故、历史语言和翻译后，计算识别十分困难；本文以Karen Blixen《七哥特故事》中的圣经互文为案例。作者基于校勘版注释构建了189条标注基准，在31,170节丹麦语新旧约译本上比较TF-IDF、BM25与多语言/丹麦语句编码器，并通过硬负样本和五折交叉验证微调丹麦语编码器，同时按词汇重叠分层分析引用、改写和典故。结果显示，语言规范化BM25零样本R@10达0.365且能召回所有引用，微调DFM-large将整体R@10从0.265提升至0.508、典故从0.138提升至0.339；专家还发现部分“假阳性”实为有意义的额外引用，表明检索模型可作为启发式共读者，但注释并非穷尽、模型输出也不等于发现。",
+      "summary_en": "Identifying intertextual references is central to literary scholarship but computationally hard when sources are transformed by paraphrase, allusion, historical language, and translation; this paper studies biblical intertextuality in Karen Blixen's Seven Gothic Tales. Using commentary from a critical edition, the authors build a benchmark of 189 annotated references and evaluate retrieval over all 31,170 verses of historically plausible Danish Old and New Testament translations, comparing TF-IDF and BM25 with multilingual and Danish sentence encoders, testing linguistic normalization, and fine-tuning a Danish encoder with hard negatives and five-fold cross-validation across lexical-overlap strata for quotations, paraphrases, and allusions. Linguistically normalized BM25 is a strong zero-shot baseline with overall R@10 of 0.365 and retrieves every quotation in its top ten, while the best zero-shot dense model scores 0.360 overall and performs better on allusions; fine-tuning DFM-large raises overall R@10 from 0.265 to 0.508 and more than doubles allusion performance from 0.138 to 0.339, and expert review of apparent false positives reveals meaningful additional references, supporting retrieval models as heuristic co-readers while exposing the epistemic limits of treating annotations as exhaustive or model outputs as discoveries.",
+      "highlights_zh": [
+        "构建189条圣经互文标注基准",
+        "微调DFM-large R@10达0.508",
+        "模型可作启发式共读者但非发现"
+      ]
+    },
+    {
+      "id": "2609.35759",
+      "title": "Scaling Long-Form Story Generation via Narrative State Tracking",
+      "authors": [
+        "Zhennan Wan",
+        "Jianfei Chen"
+      ],
+      "abstract": "LLMs have demonstrated strong capabilities in creative writing. However, scaling them to full-length novels remains challenging, as maintaining narrative consistency becomes increasingly difficult. Existing story-generation methods typically focus on stories of up to about ten thousand words, leaving their ability to scale to full-length novels underexplored. In this work, we introduce Narrative State Tracking Agent (NstAgent), a training-free agentic framework that allows LLMs to track a structured narrative state including characters, past events and future requirements. We extend an existing benchmark to compare narrative consistency across lengths, and use it together with a writing-quality benchmark to systematically evaluate stories ranging from 10K to 100K words. We show that NstAgent achieves better narrative consistency and writing quality as stories grow longer, and neither of them degrades noticeably as length increases, suggesting that it provides an effective approach to scaling story generation toward full-length novels.",
+      "published": "2026-09-28T17:59:09Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35759",
+      "pdf_url": "https://arxiv.org/pdf/2609.35759",
+      "summary_zh": "将LLM扩展到全长小说生成时，保持叙事一致性愈发困难，现有方法多局限于约一万词的故事，其扩展能力尚未充分探索。本文提出免训练的智能体框架NstAgent，让LLM跟踪包含角色、过往事件和未来需求的结构化叙事状态，并扩展基准以跨长度比较叙事一致性。实验表明，在1万至10万词的范围内，NstAgent的叙事一致性和写作质量随故事变长反而更好且无明显退化，为扩展故事生成至全长小说提供了有效途径。",
+      "summary_en": "Scaling LLMs to full-length novels remains challenging because maintaining narrative consistency becomes increasingly difficult, and existing story-generation methods are mostly limited to stories of about ten thousand words with their scalability underexplored. This work introduces NstAgent, a training-free agentic framework that lets LLMs track a structured narrative state including characters, past events, and future requirements, along with an extended benchmark for comparing narrative consistency across lengths. Experiments on stories from 10K to 100K words show that NstAgent achieves better narrative consistency and writing quality as stories grow longer without noticeable degradation, offering an effective approach to scaling story generation toward full-length novels.",
+      "highlights_zh": [
+        "免训练智能体跟踪结构化叙事状态",
+        "10万词下一致性与质量不降反升",
+        "助力全长小说生成，仍需验证更广场景"
+      ]
+    },
+    {
+      "id": "2609.35764",
+      "title": "Reliability-Gated Fusion of Consumer Head and Foot IMUs for Lower-Body 3D Pose",
+      "authors": [
+        "Zhilin Guo",
+        "Boqiao Zhang",
+        "Oszkár Urbán",
+        "Josef Bengtson",
+        "Hakan Aktas",
+        "Wenzhao Li",
+        "Siyu Hong",
+        "Kyle Fogarty",
+        "Chenliang Zhou",
+        "Ali Senguel",
+        "Cengiz Oztireli"
+      ],
+      "abstract": "Sparse inertial pose estimation promises camera-free motion capture from consumer devices, but consumer sensors are unreliable: firmware-fused orientations are biased, mounting varies between sessions, and streams drift or drop out. On a new 35-take single-subject benchmark pairing an earbud head inertial measurement unit (IMU) with two smart-insole foot IMUs (SAM-3D-Body pseudo-ground-truth labels), we show the reliability problem is channel-level: a channel ablation isolates foot acceleration as the most informative input (66.6 mm vs. 79.0 mm head-only) and the firmware-fused foot orientation as the liability that destroys the gain. We therefore let the model learn how much to trust each channel of each stream: one temporal gate per stream per channel block, trained with an auxiliary reliability objective on synthetically corrupted pretraining data. The channel-gated model is the most accurate of our learned fusion arms on clean data (69.4 mm vs. 83.7 static, 86.6 ungated) and under every simulated fault (bias in training; drift, dropout eval-only); its gates suppress the natively biased foot-orientation channels on clean real data without test-time supervision and flag dropout bursts at 0.92-0.999 AUROC. Two contrasts: dropping a channel known a priori to fail is flat across foot faults but collapses when an unanticipated stream fails (head dropout: 92.9 vs. 79.3 mm); and a fine-tuned HMD-Poser is more accurate on clean data (64.4 mm) and nominally under drift, with no significant paired difference under bias or dropout, but a larger worst-case degradation from clean (+16.1 vs. +3.5 mm, single seed). Learning to gate reliability instead of sensor count is the lever for deployable sparse inertial capture. Code is available at https://github.com/ZhilinGuo/reliability-gated-imu-fusion.",
+      "published": "2026-09-28T17:59:22Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35764",
+      "pdf_url": "https://arxiv.org/pdf/2609.35764",
+      "summary_zh": "消费级头戴与足底IMU做稀疏惯性3D姿态估计时，固件融合朝向有偏、佩戴差异和丢流导致可靠性问题，且问题出在通道级别。作者提出按流按通道块学习时间门控，并用合成损坏数据上的辅助可靠性目标训练，让模型自行决定信任哪些通道。通道门控模型在干净数据上最准（69.4 mm），在各类模拟故障下均最优，并能无监督抑制有偏足部朝向通道、以0.92-0.999 AUROC标记丢流，表明学习可靠性门控而非增加传感器数量才是可部署稀疏惯性捕捉的关键。",
+      "summary_en": "Sparse inertial pose estimation with consumer head and foot IMUs is hampered by unreliable channels: biased firmware-fused orientations, varying mounting, and drifting or dropped streams. The authors introduce per-stream, per-channel-block temporal gates trained with an auxiliary reliability objective on synthetically corrupted pretraining data, letting the model learn how much to trust each channel. The channel-gated model is the most accurate learned fusion arm on clean data (69.4 mm) and under all simulated faults, suppresses natively biased foot-orientation channels without test-time supervision, and flags dropout bursts at 0.92-0.999 AUROC, showing that learning to gate reliability rather than adding sensors is the lever for deployable sparse inertial capture.",
+      "highlights_zh": [
+        "按流按通道块学习可靠性时间门控",
+        "干净数据69.4mm，故障下均最优",
+        "无需测试监督即可标记丢流与偏差"
+      ]
+    },
+    {
+      "id": "2609.35761",
+      "title": "DexRoam: Learning Mobile Bimanual Dexterous Manipulation from Egocentric Whole-Body Human Demonstrations",
+      "authors": [
+        "Rui Zhou",
+        "Yibo Yuan",
+        "Junkai Zhao",
+        "Fangyuan Zhao",
+        "Xiaoguang Zhao",
+        "Shanghang Zhang",
+        "Sirui Han"
+      ],
+      "abstract": "Mobile bimanual dexterous manipulation requires continuous coordination of locomotion, whole-body motion, and finger-level dexterity within a single trajectory, creating a severe robot demonstration bottleneck. Egocentric human demonstrations offer a scalable alternative, but prior approaches ease the transfer by simplifying human motion, discarding exactly the fine-grained, coupled structure such tasks depend on. We present DexRoam, a complete system for learning mobile bimanual dexterous manipulation from human demonstrations, in which whole-body motion remains continuous and coupled throughout the human-to-robot transfer process. To enable scalable collection of whole-body human manipulation demonstrations, we develop a tracker-free capture system using only a consumer VR headset and a head-mounted stereo camera, without external cameras or motion trackers. We then perform three explicit alignment stages---embodiment, action-semantic, and temporal---to map captured motion into the robot action space, preserving fine-grained whole-body motion and allowing human and robot demonstrations to be jointly learned by standard VLA policies. Real-world experiments with different VLA backbones show that human demonstrations consistently improve policy learning across training paradigms, raising average success from 29% to 56% on GR00T N1.7 and from 32% to 57% on pi0.5, while matching robot-only training with half the robot demonstrations. Ablations confirm that each alignment stage is necessary. These results highlight the potential of human demonstrations for scalable whole-body mobile manipulation with preserved fine-grained motion structure.",
+      "published": "2026-09-28T17:59:10Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35761",
+      "pdf_url": "https://arxiv.org/pdf/2609.35761",
+      "summary_zh": "移动双臂灵巧操作需要在单条轨迹中协调移动、全身运动与手指级灵巧性，导致机器人演示数据严重匮乏，而现有利用人类演示的方法往往简化人体运动、丢失了任务所需的精细耦合结构。DexRoam提出一套完整系统，用仅消费级VR头显和头戴立体相机实现无追踪器全身演示采集，并通过具身、动作语义和时间三个对齐阶段将人体运动映射到机器人动作空间，保留精细全身运动结构以联合训练标准VLA策略。真实实验表明，人类演示在GR00T N1.7上将平均成功率从29%提升至56%、在pi0.5上从32%提升至57%，并能以一半机器人演示量达到纯机器人训练效果，凸显了保留精细运动结构的人类演示对可扩展全身移动操作的价值。",
+      "summary_en": "Mobile bimanual dexterous manipulation demands continuous coordination of locomotion, whole-body motion, and finger-level dexterity within a single trajectory, creating a severe robot demonstration bottleneck, while prior human-demonstration methods simplify motion and discard the fine-grained coupled structure these tasks require. DexRoam presents a complete system that keeps whole-body motion continuous and coupled throughout human-to-robot transfer, using a tracker-free capture setup with only a consumer VR headset and head-mounted stereo camera, plus three explicit alignment stages (embodiment, action-semantic, temporal) to map motion into robot action space for joint learning with standard VLA policies. Real-world experiments show human demonstrations consistently improve policy learning, raising average success from 29% to 56% on GR00T N1.7 and 32% to 57% on pi0.5 while matching robot-only training with half the robot demonstrations, highlighting the potential of human demonstrations for scalable whole-body mobile manipulation.",
+      "highlights_zh": [
+        "无追踪器全身演示采集与三阶段对齐",
+        "成功率29%→56%、32%→57%",
+        "半量机器人演示即可持平，依赖对齐质量"
+      ]
+    },
+    {
+      "id": "2609.35717",
+      "title": "RoboCompiler: Graph-Native Compilation of Closed-Chain Robots for Consistent Modeling, Control, and Simulation",
+      "authors": [
+        "Mehdi Heydari Shahna",
+        "Joongheon Kim",
+        "Jouni Mattila"
+      ],
+      "abstract": "Robots with kinematic loops, coupled actuators, and changing contacts require consistent models of configuration, motion, force, and dynamics. Yet these interfaces are often reconstructed separately for control and simulation, making closure and actuation consistency difficult to maintain. This paper presents RoboCompiler, a graph-native framework that compiles a canonical mechanism graph into a shared mechanical interface. From bodies, joints, frames, inertias, and actuator ports, it constructs closure paths and analytic residual Jacobians, then assembles feasible configurations through rank-checked continuation and correction. A tangent lift maps independent velocities to full robot and task motion, while paired actuator-port maps preserve virtual work. A constraint-curvature correction extends the reduction to accelerations and projected rigid-body dynamics, including floating-base and support modes. Cycle-local evaluation, generated Jacobians, and dependency-aware reuse enable localized updates when closure inputs change. We evaluate physical loops and task-induced constraints on a Komatsu excavator, Unitree Go2, Franka Panda, Kangaroo, and a six-UPS Stewart platform. High-precision constrained-dynamics and independent Pinocchio checks confirm mechanical consistency; MuJoCo and Isaac Sim/PhysX executions demonstrate task performance and model reuse under native contact. For Kangaroo, compilation reduces residual-and-Jacobian evaluation time by 96.7% and closed-loop rollout wall time by 66.8%, with dynamics and control held fixed.",
+      "published": "2026-09-28T17:46:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35717",
+      "pdf_url": "https://arxiv.org/pdf/2609.35717",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2609.35767",
+      "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
+      "authors": [
+        "Yijia Fan",
+        "Ziqi Huang",
+        "Zhongang Cai",
+        "Yan Li",
+        "Zimo Wen",
+        "Wanqi Yin",
+        "Haiwen Diao",
+        "Ziwei Liu"
+      ],
+      "abstract": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflection text and the image generation must be learned jointly, over the whole loop. Supervised fine-tuning (SFT) on reflection trajectories gives a cold start but does not find the high-success repair paths, and naive RL that optimizes only the renderer or only one head leaves most of the gain untapped. We introduce UMM-Reflection, which applies reinforcement learning (RL) to complete reflection trajectories inside one unified model: sibling trajectories share one initial image, so the group-relative advantage compares reflection strategies, and one trajectory-level advantage updates both the reflection tokens and the flow-based revisions, avoiding the combinatorial blow-up of per-round credit assignment. Unlike single-round editing or pipelines with an external critic, credit flows across rounds and to both roles of the same model, and no verifier is needed at inference. On BAGEL, UMM-Reflection improves GenEval by 12.05 points over SFT, and the gains transfer to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), none of which is used in training.",
+      "published": "2026-09-28T17:59:36Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.35767",
+      "pdf_url": "https://arxiv.org/pdf/2609.35767",
+      "summary_zh": "统一多模态模型虽能生成图像，但缺乏对自身生成结果进行诊断与修复的闭环反思能力，而现有SFT冷启动和仅优化渲染器或单一模块的朴素RL都无法充分挖掘修复潜力。作者提出UMM-Reflection，在统一模型内对完整反思轨迹做强化学习，让同源轨迹共享初始图像以组相对优势比较反思策略，并用轨迹级优势同时更新反思token与流式修订，避免逐轮信用分配的组合爆炸。在BAGEL上GenEval较SFT提升12.05分，并零样本迁移至WISE、OneIG-Bench和T2I-CompBench++，证明跨轮次、双角色的联合反思学习能显著增强模型自我修复与生成质量。",
+      "summary_en": "Unified multimodal models can generate images but lack a closed-loop ability to diagnose and repair their own outputs, and existing SFT cold-start or naive RL that optimizes only the renderer or a single head leaves most of the repair gains untapped. The authors introduce UMM-Reflection, which applies reinforcement learning to complete reflection trajectories within one unified model: sibling trajectories share an initial image so group-relative advantage compares reflection strategies, and a single trajectory-level advantage updates both reflection tokens and flow-based revisions, avoiding combinatorial per-round credit assignment. On BAGEL it improves GenEval by 12.05 points over SFT and transfers zero-shot to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), showing that joint cross-round, dual-role reflection learning substantially boosts self-repair and generation quality.",
+      "highlights_zh": [
+        "轨迹级RL联合优化反思与生成",
+        "GenEval较SFT提升12.05分",
+        "无需推理时验证器，可零样本迁移"
+      ]
+    }
+  ]
+}
