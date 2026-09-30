@@ -1,0 +1,345 @@
+{
+  "date": "2026-09-30",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.38178",
+      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "authors": [
+        "Zihang Rui",
+        "Renhao Wang",
+        "Haoxu Huang",
+        "Yang Gao"
+      ],
+      "abstract": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable corrections for the policy. Our insight is that many such corrections are familiar short behaviors, or skills: they recur across tasks and describe actions that foundation models can reason about from a scene. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through these reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated improvement in policies acting autonomously, while skills can also be shared to reduce the teaching needed to improve on new tasks. By making reusable skills a source of corrective supervision, skill-space shooting enables scalable and generalizable policy improvement within and across tasks. Additional results and videos at https://skill-space-shooting.github.io.",
+      "published": "2026-09-29T17:59:55Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38178",
+      "pdf_url": "https://arxiv.org/pdf/2609.38178",
+      "summary_zh": "机器人部署后需在遇到新情况和失败时自主改进，但现有方法依赖人类演示或仅靠基础模型组合行为完成任务，无法让策略从失败中学习。本文提出技能空间射击（skill-space shooting），利用基础模型引导在可复用技能空间中探索纠正行为，并将成功试验转化为策略改进。真实世界实验表明策略能自主持续改进，且技能可共享以减少新任务的教学需求，实现了可扩展、可泛化的策略改进。",
+      "summary_en": "Robots deployed in the physical world must improve beyond initial training when facing new situations and failures, but existing approaches either rely on human demonstrations or use foundation models only to compose behaviors without teaching the policy to overcome its own failures. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated autonomous policy improvement, and skills can be shared to reduce teaching needed for new tasks, enabling scalable and generalizable policy improvement within and across tasks.",
+      "highlights_zh": [
+        "用基础模型引导技能空间探索纠正行为",
+        "真实机器人上实现策略自主持续改进",
+        "技能可共享降低新任务教学成本"
+      ],
+      "highlights_en": [
+        "Foundation-model-guided skill-space exploration for corrections",
+        "Repeated autonomous policy improvement on real robots",
+        "Shareable skills reduce teaching cost for new tasks"
+      ]
+    },
+    {
+      "id": "2609.38169",
+      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+      "authors": [
+        "Bingchen Yao",
+        "Haobo Xu",
+        "Haokun Lin",
+        "Yichen Wu",
+        "Ziyu Guo",
+        "Renrui Zhang",
+        "Zhichao Lu",
+        "Zhenan Sun",
+        "Ying Wei"
+      ],
+      "abstract": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+      "published": "2026-09-29T17:59:40Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38169",
+      "pdf_url": "https://arxiv.org/pdf/2609.38169",
+      "summary_zh": "线性注意力用固定大小的循环状态替代不断增长的KV缓存，但在并发服务下这些持久状态会成为显著的内存瓶颈，而直接低精度量化会因误差在状态更新中传播导致严重精度下降。作者发现量化误差的影响取决于时间维度（长寿命记忆中的误差会持续多步）和空间维度（不同key行对输出影响不同且状态幅度差异大），据此提出STEPQuant，一个面向Delta-rule循环状态的空间-时间训练后量化框架，按误差幅度和记忆寿命分配精度并联合拟合key行与value列缩放因子。在Qwen3.8-27B和Kimi-Linear-48B-A3B-Instruct上，STEPQuant在名义6比特预算下接近FP32状态精度并优于均匀INT8的4比特配置，集成SGLang后实现超5倍状态压缩和最高68.7%的总服务内存降低。",
+      "summary_en": "Linear attention replaces growing KV caches with fixed-size recurrent states, but these persistent states become a major memory bottleneck under concurrent serving, and naive low-precision quantization severely degrades accuracy as errors propagate through state updates. The authors identify that quantization error impact varies along two dimensions—temporally (errors in long-lived memory persist across many decoding steps) and spatially (different key rows affect outputs differently and state magnitudes vary across rows and columns)—and propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states that allocates precision by error magnitude and memory lifetime and jointly fits key-row and value-column scales. On Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct, STEPQuant nearly matches FP32-state accuracy at a nominal 6-bit budget and outperforms uniform INT8 at 4-bit, while its SGLang integration with optimized GPU kernels achieves over 5x recurrent-state compression and up to 68.7% total serving memory reduction.",
+      "highlights_zh": [
+        "按误差幅度与记忆寿命分配精度的时空量化",
+        "6比特近FP32精度，4比特超INT8，内存降68.7%",
+        "可大幅降低并发服务内存，但依赖定制GPU内核"
+      ]
+    },
+    {
+      "id": "2609.38176",
+      "title": "Breakdown of Local Denoising as Semantic Speciation",
+      "authors": [
+        "Guangkuo Liu",
+        "Mert Okyay",
+        "Yifan F. Zhang",
+        "Fangjun Hu",
+        "Rahul Nandkishore",
+        "Xun Gao"
+      ],
+      "abstract": "The dynamics of generative models exhibit two apparently distinct temporal windows: a speciation window, in which a sample commits to a semantic class, and a nonlocality window, in which local context windows become insufficient for generation. Motivated by evidence of their near-concurrence in a variety of frontier models, we investigate their relationship through the spatial distribution of semantic information. Under a \"common cause\" hypothesis, we prove that the nonlocality window must lie in the speciation window. This hypothesis postulates that semantic labels explain a fraction of the correlations between distant tokens, a condition that is natural for many real datasets. We further give conditions under which both windows shrink to a single limiting time as system size grows, defining a \"phase transition\", and verify this behavior analytically in Gaussian mixtures. Together, these results identify conditions under which semantic information explains the concurrence of speciation and nonlocality, connecting two complementary perspectives on the emergence of semantic structure in generative modeling.",
+      "published": "2026-09-29T17:59:50Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn",
+        "cond-mat.stat-mech"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38176",
+      "pdf_url": "https://arxiv.org/pdf/2609.38176",
+      "summary_zh": "生成模型动力学中存在两个看似不同的时间窗口：样本确定语义类别的“物种形成窗口”和局部上下文不足以生成的“非局域窗口”，二者在前沿模型中近乎同时出现。本文通过语义信息的空间分布，在“共同原因”假设下证明非局域窗口必位于物种形成窗口内，并给出两窗口随系统规模增大收缩为单一极限时间的条件。结果在高斯混合模型中解析验证，揭示了语义信息如何解释两窗口的共现，连接了生成建模中语义结构涌现的两种互补视角。",
+      "summary_en": "Generative model dynamics show two seemingly distinct temporal windows: a speciation window where a sample commits to a semantic class, and a nonlocality window where local context becomes insufficient for generation, with evidence of their near-concurrence in frontier models. By analyzing the spatial distribution of semantic information under a 'common cause' hypothesis, this work proves that the nonlocality window must lie within the speciation window and gives conditions under which both shrink to a single limiting time as system size grows. These results, verified analytically in Gaussian mixtures, identify conditions under which semantic information explains the concurrence of speciation and nonlocality, connecting two complementary perspectives on the emergence of semantic structure in generative modeling.",
+      "highlights_zh": [
+        "证明非局域窗口必在物种形成窗口内",
+        "高斯混合中解析验证窗口收缩为相变",
+        "连接语义涌现的两种互补视角"
+      ]
+    },
+    {
+      "id": "2609.38177",
+      "title": "Imagine3D-LLM: Teaching MLLMs to Imagine 3D Scenes Before Answering",
+      "authors": [
+        "Jaewoo Jung",
+        "Hyeonseo Yu",
+        "Honggyu An",
+        "Jisang Han",
+        "Mungyeom Kim",
+        "Minkyeong Jeon",
+        "Heeseong Shin",
+        "Wonjun Moon",
+        "Federico Tombari",
+        "Daniel Barath",
+        "Marc Pollefeys",
+        "Seungryong Kim",
+        "Sunghwan Hong"
+      ],
+      "abstract": "Reasoning about the 3D world from multi-view images remains a fundamental challenge for Multimodal Large Language Models (MLLMs). While modern MLLMs handle single-image inputs effectively, they struggle to integrate evidence across viewpoints into a coherent 3D understanding. A growing body of work attempts to close this gap by injecting 3D awareness into MLLMs, either by boosting fine-grained pixel-level cross-view correspondence or by fusing features from 3D geometry foundation models, yet a substantial gap to human reasoning persists. In this work, we revisit human spatial reasoning, which suggests that rather than relying on fine-grained geometry cues, humans roughly identify common objects across views, infer the relative geometry between viewpoints, and assemble a coarse 3D layout of the scene. Inspired by this process, we introduce Imagine3D-LLM, an MLLM that learns to assemble a similar compact 3D representation of the scene and conditions its answer on this representation. Concretely, we append a small set of learnable summary tokens after the image tokens, decode them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, and train jointly with the standard next-token prediction objective. Notably, although only the summary tokens receive direct reconstruction supervision, this objective also induces stronger cross-frame correspondence within the LLM's underlying image features, suggesting that learning to reconstruct propagates 3D-aware signals throughout the model. As a result, Imagine3D-LLM consistently outperforms prior approaches across multiple spatial reasoning and 3D understanding benchmarks, suggesting that imagining the scene can be more effective than being told its pixel-wise geometry.",
+      "published": "2026-09-29T17:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38177",
+      "pdf_url": "https://arxiv.org/pdf/2609.38177",
+      "summary_zh": "多视图图像的三维推理对多模态大模型仍是难题，现有注入三维感知的方法与人类推理差距明显。本文提出Imagine3D-LLM，受人类粗略跨视图物体匹配与布局推断启发，在图像token后加入可学习摘要token，解码为紧凑3D高斯泼溅表示并以光度重建损失监督，与下一token预测联合训练。该方法在多个空间推理与三维理解基准上持续超越先前方法，表明让模型“想象”场景比直接告知像素级几何更有效。",
+      "summary_en": "Reasoning about the 3D world from multi-view images remains challenging for MLLMs, and existing 3D-awareness injection methods still lag behind human reasoning. Inspired by how humans coarsely match objects across views and infer viewpoint geometry, Imagine3D-LLM appends learnable summary tokens after image tokens, decodes them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, and trains jointly with next-token prediction. It consistently outperforms prior approaches on multiple spatial reasoning and 3D understanding benchmarks, showing that imagining the scene can be more effective than being given pixel-wise geometry.",
+      "highlights_zh": [
+        "摘要token解码为3D高斯表示",
+        "多基准超越先前方法",
+        "重建监督传播3D感知信号"
+      ]
+    },
+    {
+      "id": "2609.38157",
+      "title": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+      "authors": [
+        "Kuan-Po Huang",
+        "Haohe Liu",
+        "Puyuan Peng",
+        "Haibin Wu",
+        "Zhaoheng Ni",
+        "Hung-yi Lee",
+        "Jinwon Lee",
+        "Neha Chachra"
+      ],
+      "abstract": "Emotion-conditioned text-to-speech (TTS) models may fail to express the requested emotion reliably, and improving controllability by additional training is costly in both computation and emotion-labeled speech training data. We therefore study vector steering, a training-free approach that modifies the internal representations of a frozen model. CoCoEmo, a conventional vector steering method for emotion TTS, treats each emotion vector as an indivisible direction controlled by a single global strength, limiting adherence to the requested emotion. In this work, we first discover that an emotion vector can be decomposed into a shared component that moves speech away from neutral expression and a residual component that directs generation toward the requested emotion. Building on this finding, we propose Emotion Residual-Enhanced Steering for TTS (EmoRES), a novel method that controls the two components without retraining the backbone. On IEMOCAP, EmoRES outperforms CoCoEmo across all four objective emotion metrics on the IndexTTS-2 and CosyVoice2 backbones. Rank correlation improves by 26.13 and 12.97 percentage points, corresponding to relative gains of 118.8% and 33.1%, while emotion hit rate improves by 12.95 and 6.92 points, corresponding to relative gains of 20.1% and 9.8%. Human evaluation further shows a relative improvement up to 35.0% in the rate at which listeners correctly identified the dominant requested emotion and up to a 17.3% improvement in fidelity, while listeners prefer EmoRES for naturalness in up to 63.8% of pairwise comparisons. Component ablations further demonstrate that effective control benefits from preserving the shared component while strengthening the residual of the emotion steering vectors.",
+      "published": "2026-09-29T17:59:05Z",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.CL",
+        "eess.AS"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38157",
+      "pdf_url": "https://arxiv.org/pdf/2609.38157",
+      "summary_zh": "情感条件TTS模型难以可靠表达指定情感，而额外训练成本高昂，因此本文研究免训练向量引导方法，但现有CoCoEmo将情感向量视为不可分的单一方向，限制了情感遵循度。本文发现情感向量可分解为远离中性的共享分量和指向目标情感的残差分量，据此提出EmoRES，无需重训练即可分别控制这两个分量。在IEMOCAP上，EmoRES在IndexTTS-2和CosyVoice2上全面超越CoCoEmo，排序相关性相对提升118.8%和33.1%，情感命中率相对提升20.1%和9.8%，人类评估也显示情感识别率、保真度和自然度偏好均有显著提升。",
+      "summary_en": "Emotion-conditioned TTS models often fail to reliably express the requested emotion, and improving controllability via additional training is costly in computation and labeled data, motivating a study of training-free vector steering. This work discovers that an emotion vector decomposes into a shared component that moves speech away from neutral and a residual component that directs generation toward the target emotion, and proposes EmoRES, which controls both components without retraining the frozen backbone. On IEMOCAP with IndexTTS-2 and CosyVoice2, EmoRES outperforms CoCoEmo on all four objective emotion metrics, improving rank correlation by 118.8% and 33.1% relative and emotion hit rate by 20.1% and 9.8% relative, with human evaluations showing up to 35.0% relative gain in emotion identification, 17.3% in fidelity, and 63.8% pairwise preference for naturalness.",
+      "highlights_zh": [
+        "情感向量分解为共享与残差分量",
+        "排序相关性相对提升最高118.8%",
+        "免训练提升情感可控性"
+      ],
+      "highlights_en": [
+        "Decomposes emotion vectors into shared and residual components",
+        "Up to 118.8% relative gain in rank correlation",
+        "Training-free improvement of emotional controllability"
+      ]
+    },
+    {
+      "id": "2609.38180",
+      "title": "Point2Part: Unified 3D Partitioning from Point Prompts",
+      "authors": [
+        "Hao-Tang Tsui",
+        "Yu-Rou Tuan",
+        "Xiaoxuan Ma",
+        "Nicolas Ugrinovic",
+        "Takaaki Shiratori",
+        "Kris Kitani"
+      ],
+      "abstract": "Existing 3D part decomposition methods do not necessarily partition the original shape into non-overlapping parts that collectively cover the entire shape, allowing overlaps or gaps that hinder downstream part-level applications. We instead formulate part decomposition as a joint partitioning of the entire shape, where the predicted parts are non-overlapping and jointly recover the entire shape. Our key insight is that part decomposition should consider all desired parts jointly, rather than modeling each part independently. To this end, we develop a promptable model for 3D part decomposition from images or meshes. Users can specify desired parts through 3D point prompts for controllable decomposition. Given one point prompt per desired part, our model produces the corresponding parts as a complete partition of the entire shape. We build on a pretrained 3D generation model and first obtain a shape latent from either an input image or mesh. We then introduce a prompt encoder that maps each 3D point prompt to a part token while attending to the shape latent. To decode the desired parts, we propose a novel part decoder jointly scoring the entire shape against all part tokens in a coarse-to-fine manner, assigning every position within the shape volume to exactly one part. We perform part decomposition in this shared shape latent space, enabling a unified model for image-to-part generation, mesh-to-part generation, and part segmentation. Our method outperforms existing works on all part-quality metrics across all three tasks, and improves compatibility among parts by an order of magnitude over previous SOTA methods. Code and models will be released.",
+      "published": "2026-09-29T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38180",
+      "pdf_url": "https://arxiv.org/pdf/2609.38180",
+      "summary_zh": "现有3D部件分解方法允许部件重叠或存在空隙，无法完整覆盖原始形状，阻碍了部件级下游应用。本文提出Point2Part，将部件分解建模为整体形状的联合划分，通过3D点提示编码部件token，并用粗到细的部件解码器将形状体素中每个位置唯一分配给一个部件，在共享形状隐空间中统一支持图像/网格到部件生成及部件分割。该方法在三个任务的所有部件质量指标上超越现有工作，部件兼容性较此前SOTA提升一个数量级。",
+      "summary_en": "Existing 3D part decomposition methods allow overlaps or gaps, failing to fully cover the original shape and hindering downstream part-level applications. We present Point2Part, which formulates part decomposition as a joint partition of the whole shape: a prompt encoder maps each 3D point prompt to a part token attending to a shape latent, and a novel coarse-to-fine part decoder assigns every position in the shape volume to exactly one part, enabling a unified model for image-to-part generation, mesh-to-part generation, and part segmentation. Our method outperforms existing works on all part-quality metrics across all three tasks and improves part compatibility by an order of magnitude over prior state-of-the-art.",
+      "highlights_zh": [
+        "点提示驱动的联合非重叠部件划分",
+        "三任务全指标超越SOTA",
+        "兼容性提升一个数量级"
+      ]
+    },
+    {
+      "id": "2609.38172",
+      "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
+      "authors": [
+        "Zihan Wang",
+        "Zhen Wu",
+        "Pieter Abbeel",
+        "Rocky Duan",
+        "Jitendra Malik",
+        "Carmelo Sferrazza",
+        "C. Karen Liu",
+        "Guanya Shi",
+        "Angjoo Kanazawa"
+      ],
+      "abstract": "Teaching humanoids loco-manipulation skills, such as carrying diverse objects, via visual imitation is a promising path toward generalist robots. However, collecting diverse, high-quality interaction videos, such as clips that clearly show a person's full body and unoccluded interactions with objects, poses a practical barrier to scaling this approach. We propose PRISM, a real-to-sim-to-real framework that overcomes this limitation by amplifying a handful of real videos into a large, diverse training set. PRISM first generates hundreds of diverse \"counterfactual\" human-object interaction videos via video-to-video (V2V) generation from a few exemplar real videos. Our contact-anchored real-to-sim pipeline then reconstructs both human and object motions, retargeting this imperfect video data into physically plausible trajectories. The intra-class variability across these counterfactual videos lets us train a single policy that generalizes to unseen objects within each category. We demonstrate the full pipeline by deploying this policy on a real robot without any real-world fine-tuning. Using only onboard depth observations, our humanoid picks up, carries, and drops objects, including boxes, barrels, bins, and balls, across novel instances, sizes, and initial configurations.",
+      "published": "2026-09-29T17:59:45Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38172",
+      "pdf_url": "https://arxiv.org/pdf/2609.38172",
+      "summary_zh": "人形机器人通过视觉模仿学习搬运等移动操作技能时，缺乏多样且高质量的人-物交互视频成为规模化训练的主要障碍。本文提出PRISM真实-仿真-真实框架，利用视频到视频生成将少量真实视频扩增为数百个反事实交互视频，并通过接触锚定的真实到仿真流程重建人体与物体运动、重定向为物理合理轨迹，从而训练单一策略泛化到同类未见物体。该策略无需真实世界微调即可部署于真实人形机器人，仅凭机载深度观测完成箱子、桶、垃圾桶和球等物体的拾取、搬运与放置，适应新实例、尺寸和初始配置。",
+      "summary_en": "Teaching humanoids loco-manipulation skills like carrying diverse objects via visual imitation is promising, but collecting diverse, high-quality interaction videos remains a practical barrier to scaling. We propose PRISM, a real-to-sim-to-real framework that amplifies a few real videos into hundreds of counterfactual human-object interaction videos via video-to-video generation, then uses a contact-anchored real-to-sim pipeline to reconstruct and retarget imperfect video data into physically plausible trajectories for training a single generalizable policy. Deployed on a real humanoid without real-world fine-tuning, the policy uses only onboard depth to pick up, carry, and drop boxes, barrels, bins, and balls across novel instances, sizes, and initial configurations.",
+      "highlights_zh": [
+        "反事实视频生成扩增真实数据",
+        "零微调真机完成多类物体搬运",
+        "依赖机载深度，泛化同类新物体"
+      ]
+    },
+    {
+      "id": "2609.38173",
+      "title": "In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks",
+      "authors": [
+        "Minxing Li",
+        "Minghao Han",
+        "Weizhi Zhao",
+        "Hanwen Wang",
+        "Xiangshuo Liu",
+        "Shuyao Shang",
+        "Jingxiang Zhou",
+        "Mingchao Sun",
+        "Hongyu Pan",
+        "Mu Xu",
+        "Yu Liu",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations. Despite its growing promise, the problem itself remains under-defined: a visual demonstration simultaneously conveys action trajectories, object semantics, manipulation affordances, spatial relations, and task goals, making it unclear what information the robot is actually expected to follow. In this work, we first provide a clear problem definition of robot ICL that explicitly defines its learning target and resolves this fundamental prompt ambiguity. Building on this definition, we develop a minimalist and reproducible ICL framework (SimpleICL) with a visual prompt encoder and a low-cost data collection protocol. Without massive pre-training or specialized data infrastructure, our framework achieves strong performance in both simulation and real-world environments. Extensive experiments further reveal several key properties of robot ICL, including action, semantic, composition, and affordance discrimination. We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL. The project page can be found at https://simpleicl.github.io/simpleicl.",
+      "published": "2026-09-29T17:59:45Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38173",
+      "pdf_url": "https://arxiv.org/pdf/2609.38173",
+      "summary_zh": "机器人上下文学习（ICL）虽能从视觉演示中推断任务，但演示同时传递动作轨迹、物体语义、可供性与任务目标，导致学习目标不明确。本文首先给出机器人ICL的清晰问题定义以消除提示歧义，并据此提出极简可复现框架SimpleICL，包含视觉提示编码器和低成本数据采集协议。无需大规模预训练或专用数据设施，该框架在仿真和真实环境中均表现优异，并揭示了动作、语义、组合与可供性判别等关键特性，且将开源数据与训练流程。",
+      "summary_en": "Robotic in-context learning (ICL) lets robots infer tasks from visual demonstrations, but a single demonstration conflates action trajectories, object semantics, affordances, spatial relations, and task goals, leaving the learning target ambiguous. This work provides a clear problem definition of robot ICL that resolves this prompt ambiguity, and builds on it to propose SimpleICL, a minimalist, reproducible framework with a visual prompt encoder and a low-cost data collection protocol. Without massive pre-training or specialized data infrastructure, SimpleICL achieves strong performance in simulation and the real world, reveals key properties such as action, semantic, composition, and affordance discrimination, and will be fully open-sourced to support systematic, reproducible research.",
+      "highlights_zh": [
+        "明确机器人ICL问题定义，消除提示歧义",
+        "极简框架无需大规模预训练即达强性能",
+        "开源数据与流程，促进可复现研究"
+      ]
+    },
+    {
+      "id": "2609.38164",
+      "title": "Rho: A Foundation for Efficiently Adaptable VLA Models",
+      "authors": [
+        " Rho Team",
+        "Simran Bagaria",
+        "Daphne Chen",
+        "Dean Fortier",
+        "Jianlong Fu",
+        "Michael Harrison",
+        "Tess Hellebrekers",
+        "Neel Joshi",
+        "Andrey Kolobov",
+        "Dalton Moore",
+        "Galen Mullins",
+        "Michael Murray",
+        "Eduardo Salinas",
+        "Reuben Tan"
+      ],
+      "abstract": "General-purpose physical AI models must combine broad visual and linguistic capabilities with precise control across robot embodiments and efficient adaptation to downstream tasks. We introduce Rho, a family of open-weights VLA models for bimanual manipulation designed for data-light task adaptation on 3 embodiments representative of dual-arm robots across research labs and the industry -- YAM Box, UR AI Trainer, and FR3 Duo. We systematically ablate Rho's action-expert architecture and training recipe, and show in controlled simulation and physical-robot experiments that embodiment midtraining improves downstream adaptation. The resulting Rho variants for YAM Box, UR AI Trainer, and FR3 Duo match or outperform existing open-weights VLAs and achieve the strongest overall performance across the tasks, embodiments, and baselines evaluated in this report. We further demonstrate the Rho model family's built-in capacity for online adaptation: an internal latent policy learns from corrective feedback to select observation-conditioned noise inputs for the frozen flow-matching action expert. With as few as 15 corrected episodes, adapting this lightweight module enables Rho to handle task situations at the fringe of its offline finetuning distribution. Together, these results position Rho as both a strong general-purpose robotic manipulation model and a practical foundation for adaptation. We release the base Rho model and the embodiment-specific checkpoints to facilitate Rho's deployment in research experiments and practical industrial use cases.",
+      "published": "2026-09-29T17:59:28Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38164",
+      "pdf_url": "https://arxiv.org/pdf/2609.38164",
+      "summary_zh": "通用物理AI模型需兼具视觉语言能力与跨机器人本体的精确控制，并高效适配下游任务。Rho提出开源双臂操作VLA模型家族，通过本体中期训练与动作专家架构消融，并内置基于纠正反馈的在线潜策略适配机制。在三种双臂机器人上Rho匹配或超越现有开源VLA，仅需15个纠正回合即可适应分布边缘任务，为研究与工业部署提供实用基础。",
+      "summary_en": "General-purpose physical AI models must combine broad visual-linguistic capabilities with precise cross-embodiment control and efficient downstream adaptation. Rho introduces a family of open-weights bimanual manipulation VLA models with an ablated action-expert architecture, embodiment midtraining, and a built-in latent online adaptation module that learns from corrective feedback to modulate a frozen flow-matching action expert. Across three dual-arm embodiments, Rho matches or outperforms existing open-weights VLAs and adapts to fringe-of-distribution situations with as few as 15 corrected episodes, offering a practical foundation for research and industrial deployment.",
+      "highlights_zh": [
+        "本体中期训练+可在线适配潜策略",
+        "15个纠正回合即可适配边缘任务",
+        "开源权重，限于双臂操作场景"
+      ]
+    },
+    {
+      "id": "2609.38166",
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "authors": [
+        "Yi Pan",
+        "Haocheng Xi",
+        "Kan Zhu",
+        "Xingyang Li",
+        "Yibo Wu",
+        "Mayank Mishra",
+        "Hongtao Zhang",
+        "William X. Zheng",
+        "Baris Kasikci",
+        "Song Han",
+        "Kurt Keutzer",
+        "Rishabh Iyer",
+        "Ion Stoica"
+      ],
+      "abstract": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "published": "2026-09-29T17:59:34Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.38166",
+      "pdf_url": "https://arxiv.org/pdf/2609.38166",
+      "summary_zh": "在采用线性注意力（如GDN、KDA）的混合LLM中，循环状态的反复读写成为长上下文推理瓶颈，而直接量化又因舍入误差累积和状态中的离群行列导致模型质量显著下降。LeapQuant提出免训练方案：通过按窗口量化（窗口内用固定低精度状态加高精度缓冲更新）缓解误差累积，并保留最大离群值为高精度补偿Token、对残差平滑后再量化以降低单次量化误差。在Qwen、Kimi、GLM系列上实现8比特状态近无损性能，内核级平均加速2.05–3.70倍、端到端1.47倍，精度与FP32基线相当。",
+      "summary_en": "In hybrid LLMs using linear attention (e.g., GDN, KDA), repeatedly reading and updating the fixed-size recurrent state is a major inference bottleneck, yet naive quantization severely degrades quality due to accumulated rounding errors and outlier rows/columns in the state. LeapQuant is a training-free method that mitigates error accumulation via per-window quantization (using a fixed low-bit state plus high-precision buffered updates within each window) and reduces per-quantization error by retaining the largest outliers as high-precision Compensator Tokens and smoothing the residual before quantization. Across Qwen, Kimi, and GLM families, it achieves near-lossless 8-bit recurrent-state performance with FP32-comparable accuracy, delivering 2.05–3.70× kernel-level and 1.47× end-to-end speedups on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
+      "highlights_zh": [
+        "按窗口量化+高精度补偿Token",
+        "8比特近无损，内核加速2.05–3.70倍",
+        "免训练，降低长上下文推理成本"
+      ],
+      "highlights_en": [
+        "Per-window quantization with compensator tokens",
+        "Near-lossless 8-bit, 2.05–3.70× kernel speedup",
+        "Training-free, cuts long-context inference cost"
+      ]
+    }
+  ]
+}
