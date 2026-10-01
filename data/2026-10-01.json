@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-01",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2609.40360",
+      "title": "Semifactual Credit-Augmented Policy Optimization",
+      "authors": [
+        "Junshu Pan",
+        "Zhizhang Fu",
+        "Shulin Huang",
+        "Yiran Ding",
+        "Zifan Cheng",
+        "Wenqi Shao",
+        "Qiaosheng Zhang",
+        "Yue Zhang"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underlying problem and its answer. Our analysis reveals substantial variation in token-level sensitivity and shows that suppressing high-drift token candidates during decoding improves reasoning accuracy without updating model weights. These findings highlight a limitation of Group Relative Policy Optimization (GRPO), which assigns the same outcome-derived advantage to every response token and may reinforce potential spurious dependence alongside useful reasoning. Motivated by this observation, we introduce Semifactual Credit-Augmented Policy Optimization (SCAPO), a causally inspired variant of GRPO that incorporates semifactual stability into token-level credit assignment. SCAPO measures token probability drift for fixed responses under semifactual interventions and uses normalized stability scores to reduce advantages for relatively unstable tokens during early training, while granting no additional credit for stability alone. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024-2026 accuracy over GRPO by 5.63 and 4.17 percentage points, respectively. At both model scales, SCAPO achieves the best results on most evaluated mathematics benchmarks and all evaluated out-of-distribution benchmarks among the compared methods. These results suggest that semifactual stability provides an effective training signal for improving reasoning and generalization through finer-grained credit assignment in RLVR. The code is available at https://github.com/DtYXs/SCAPO.",
+      "published": "2026-09-30T17:59:56Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40360",
+      "pdf_url": "https://arxiv.org/pdf/2609.40360",
+      "summary_zh": "RLVR提升了大模型推理能力，但其预测对任务无关的提示特征敏感，而GRPO对每个响应token赋予相同优势，可能强化虚假依赖。为此提出SCAPO，一种因果启发的GRPO变体，通过半事实干预测量token概率漂移，用归一化稳定性分数在训练早期降低不稳定token的优势。在Qwen3-4B/1.7B-Base上，SCAPO在AIME 2024-2026上分别比GRPO提升5.63和4.17个百分点，并在多数数学及全部分布外基准上取得最佳结果，表明半事实稳定性可作为更细粒度信用分配的有效训练信号。",
+      "summary_en": "RLVR improves LLM reasoning, but predictions remain sensitive to task-irrelevant prompt features, and GRPO assigns identical outcome-derived advantages to all response tokens, potentially reinforcing spurious dependencies. We propose SCAPO, a causally inspired GRPO variant that measures token probability drift under semifactual interventions and uses normalized stability scores to reduce advantages for unstable tokens early in training. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024-2026 accuracy over GRPO by 5.63 and 4.17 percentage points, achieving the best results on most math and all out-of-distribution benchmarks, showing semifactual stability is an effective signal for finer-grained credit assignment.",
+      "highlights_zh": [
+        "半事实稳定性驱动的token级信用分配",
+        "AIME提升5.63/4.17个百分点",
+        "提升推理与泛化，需额外干预计算"
+      ]
+    },
+    {
+      "id": "2609.40356",
+      "title": "ViTeX-Bench: Benchmarking High-Fidelity Video Scene Text Editing",
+      "authors": [
+        "Xinghao Chen",
+        "Xiangbo Gao",
+        "Jiongze Yu",
+        "Yuheng Wu",
+        "Zhengzhong Tu"
+      ],
+      "abstract": "Recent video generation is increasingly realistic and controllable, yet video editing remains less developed, particularly for precise local edits that must preserve the original scene dynamics. Video scene text editing replaces text on scene surfaces, such as storefront signs, whiteboards, and product labels, while preserving the surrounding content, motion, and camera dynamics. Although scene text editing is well studied for images, video scene text editing that achieves high visual quality, temporal consistency, and edit locality remains underexplored. Existing resources offer limited paired real-video data, and general video-editing metrics do not directly measure whether the requested text remains correct over time. We introduce ViTeX-Bench, a benchmark suite comprising ViTeX-Dataset and a three-axis evaluation protocol. The dataset contains 387 real-world 720p videos with text-region masks and editing instructions: 230 provide reviewed, pipeline-generated paired edits for training, and 157 form a frozen evaluation split. The protocol evaluates text correctness, visual and temporal quality, and edit locality through 13 metrics, with one primary metric per axis and a Pareto comparison of their trade-offs. OCR calibration, human evaluation, and annotation-sensitivity analyses support the interpretation of these scores. Across eight baselines from four editing families, accurate text, temporal stability, and scene preservation remain difficult to achieve together. We also release ViTeX-Edit-14B, an open-source reference editor fine-tuned on the paired training split with motion-aligned glyph-video conditioning. It achieves CharAcc 0.688, the highest mean among the evaluated video-native editors, and the lowest comparable text-crop Warp among raw editor outputs. ViTeX-Bench provides a reproducible foundation for studying these trade-offs in video scene text editing.",
+      "published": "2026-09-30T17:59:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40356",
+      "pdf_url": "https://arxiv.org/pdf/2609.40356",
+      "summary_zh": "视频场景文本编辑需在保持场景动态的同时精确替换表面文字，但现有资源缺乏配对真实视频数据，通用视频编辑指标也无法衡量文本随时间是否正确。为此作者提出ViTeX-Bench基准套件，包含387个720p真实视频数据集与覆盖文本正确性、视觉时序质量、编辑局部性的三轴13指标评估协议，并发布基于运动对齐字形-视频条件微调的ViTeX-Edit-14B参考编辑器。实验显示八个基线难以同时兼顾文本准确、时序稳定与场景保持，而ViTeX-Edit-14B取得最高平均字符准确率0.688，为该领域提供了可复现的研究基础。",
+      "summary_en": "Video scene text editing requires replacing text on scene surfaces while preserving surrounding content, motion, and camera dynamics, yet paired real-video data and text-correctness-over-time metrics are lacking. We introduce ViTeX-Bench, a benchmark suite with a 387-video 720p dataset and a three-axis, 13-metric protocol covering text correctness, visual/temporal quality, and edit locality, plus ViTeX-Edit-14B, a reference editor fine-tuned with motion-aligned glyph-video conditioning. Across eight baselines, accurate text, temporal stability, and scene preservation remain hard to achieve jointly, while ViTeX-Edit-14B reaches CharAcc 0.688 and the lowest comparable text-crop Warp, providing a reproducible foundation for studying these trade-offs.",
+      "highlights_zh": [
+        "三轴13指标视频文本编辑基准",
+        "ViTeX-Edit-14B字符准确率0.688",
+        "兼顾文本准确与时序稳定仍难"
+      ]
+    },
+    {
+      "id": "2609.40361",
+      "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "authors": [
+        "Tian Xia",
+        "Minghao Liu",
+        "Yiqing Liang",
+        "Laixi Shi",
+        "Jiayun Wang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+      "published": "2026-09-30T17:59:56Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40361",
+      "pdf_url": "https://arxiv.org/pdf/2609.40361",
+      "summary_zh": "多模态大模型用于临床诊断时仍以准确率为优化目标，但临床数据严重类别不平衡，恒定多数类预测器可超90%准确率却毫无临床价值，因此需改用对类别平衡不变的AUROC。作者提出配对级Pareto提示进化（Ranking-PE），将反思式提示优化中的逐实例正确性矩阵替换为（正例,负例）配对排序矩阵，使列均值等于经验AUROC，并在Pareto支配、反思反馈和最终候选选择三层同步替换，且不增加模型调用。在MIMIC三种疾病上，Ranking-PE相较准确率基线在微调Qwen3-VL-8B上提升5.8 AUROC百分点、在MedGemma-4B上提升16.2百分点，消融表明医学级视觉骨干是提示搜索无法替代的前提，该工作将反思式提示进化从纯文本扩展到多模态临床决策。",
+      "summary_en": "Multimodal LLMs for clinical diagnosis are still adapted with accuracy-based objectives, yet clinical data are heavily class-imbalanced, so a constant-majority predictor can exceed 90% accuracy while being clinically useless, motivating optimization for the threshold-free, balance-invariant AUROC. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each per-instance correctness row in reflective prompt optimization with a pairwise-ordering row over (positive, negative) pairs so that the column average equals empirical AUROC, and applies this swap across Pareto dominance, reflection feedback, and final candidate selection with no extra model calls. On three MIMIC diseases, Ranking-PE reverses the ranking degradation of accuracy-based prompt evolution, beating it by +5.8 AUROC points on fine-tuned Qwen3-VL-8B and +16.2 points on MedGemma-4B, while ablations show a medical-grade visual backbone is a prerequisite that prompt search cannot replace, extending reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+      "highlights_zh": [
+        "配对排序矩阵替代正确性矩阵，列均值即AUROC",
+        "Qwen3-VL-8B +5.8、MedGemma-4B +16.2 AUROC点",
+        "需医学视觉骨干，提示搜索无法替代"
+      ]
+    },
+    {
+      "id": "2609.40359",
+      "title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+      "authors": [
+        "Dulhan Jayalath",
+        "Oiwi Parker Jones"
+      ],
+      "abstract": "We find that major reported improvements in decoding words from non-invasive brain recordings are largely reproducible without any brain data. In the influential work of d'Ascoli et al. (2025), time series of brain activity from subjects perceiving continuous speech are segmented into fixed-length windows starting at each word. A neural network then generates predictions for all of the words in a sentence together. Neighbouring windows partially overlap, implicitly revealing the interval between words. Since these intervals indicate the duration of the words spoken, and different words tend to have different durations - for example, \"the\" is much shorter than \"supercalifragilisticexpialidocious\" - the neural network can improve its predictions of words without relying on the underlying brain activity. Consistent with this, the method reaches 22.0% balanced accuracy on synthetic signals containing no brain information, compared with 22.3% on real brain recordings. To prevent the network from learning this shortcut, we make a single, simple change. Instead of jointly encoding all windows in a sentence, we process each independently. As a result, the neural network achieves better performance by learning underlying word-specific information from brain recordings. This makes two existing strategies become much more effective than before. Both aggregating predictions from distinct neural responses to the same word and using a pretrained LLM as a linguistic prior now substantially improve results. On our perceived speech benchmark, this simple recipe (SimpleB2T) achieves a word error rate of 36.6% with five observations per word, approaching past invasive speech decoding performance, albeit under different conditions. The results in this work expose an important shortcut in brain-to-text decoding and show that removing it leads to a simple and considerably more effective strategy.",
+      "published": "2026-09-30T17:59:52Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40359",
+      "pdf_url": "https://arxiv.org/pdf/2609.40359",
+      "summary_zh": "从非侵入式脑信号解码单词的已有显著改进，被发现很大程度上无需脑数据也能复现，因为按单词起始切分的重叠窗口隐含了词间时长这一捷径。作者将句子中所有窗口的联合编码改为独立处理，从而阻止网络利用该捷径，迫使模型学习真正的词特异性脑信息。这一简单改动使多观测聚合与预训练LLM先验变得远更有效，SimpleB2T在感知语音基准上以每词五次观测达到36.6%词错误率，接近侵入式解码水平，揭示了脑到文本解码中的重要捷径并给出更简洁有效的策略。",
+      "summary_en": "Major reported improvements in decoding words from non-invasive brain recordings are found to be largely reproducible without any brain data, because overlapping fixed-length windows starting at each word implicitly reveal word-duration shortcuts. The authors replace joint encoding of all windows in a sentence with independent processing, preventing the network from exploiting this shortcut and forcing it to learn word-specific information from brain activity. This simple change makes aggregation across repeated observations and pretrained-LLM priors far more effective, with SimpleB2T reaching 36.6% word error rate at five observations per word and approaching invasive decoding performance, exposing an important shortcut and offering a simpler, more effective strategy.",
+      "highlights_zh": [
+        "独立处理各窗口以消除时长捷径",
+        "每词五次观测词错误率36.6%",
+        "接近侵入式水平但条件不同"
+      ]
+    },
+    {
+      "id": "2609.40340",
+      "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "authors": [
+        "Young-Jun Lee",
+        "Jinheon Baek",
+        "Soyeong Jeong",
+        "Minki Kang",
+        "Seungyeon Jwa",
+        "Jonghyun Choi",
+        "Seungho Han",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+      "published": "2026-09-30T17:58:28Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40340",
+      "pdf_url": "https://arxiv.org/pdf/2609.40340",
+      "summary_zh": "LLM进化搜索在需要模型缺乏的外部知识时会停滞，而简单加入网络搜索工具又会因解不断变化而反复返回相同页面。EvoDuet提出双层协同进化方法，在固定模型参数下让解与搜索查询共同进化，通过检索门决定是否检索、复用或跳过文档，内层循环优化查询并按预测解分数排序文档，外层循环并行生成候选并记录评估结果。在21个优化任务中，EvoDuet将OpenEvolve的归一化发现增益从74.1%提升至78.0%（GPT-5.6-Luna）、从61.3%提升至82.3%（Gemini-3.8-Flash），在八个任务上超越此前最佳成绩，并适用于多种进化搜索框架。",
+      "summary_en": "Evolutionary search with LLMs stalls when progress needs external knowledge the model lacks, while naively adding web search keeps returning the same pages as solutions change. EvoDuet is a bilevel optimization method that co-evolves solutions and search queries with fixed model parameters, using a retrieval gate to decide whether to retrieve, reuse, or skip documents, an inner loop that refines queries and ranks documents by predicted solution scores, and an outer loop that generates candidates in parallel and records evaluated outcomes. Across 21 optimization tasks, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, surpasses previously reported best scores on eight tasks, and generalizes to other evolutionary search scaffolds.",
+      "highlights_zh": [
+        "解与搜索查询双层协同进化",
+        "增益最高提升至82.3%",
+        "跨框架通用，但小模型无收益"
+      ]
+    },
+    {
+      "id": "2609.40322",
+      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
+      "authors": [
+        "Anson Y. Lam",
+        "Shuqing Li",
+        "Michael R. Lyu"
+      ],
+      "abstract": "Material generation should produce not only an appearance, but also the rules that construct it. We introduce MatLoom, a compact, layer-oriented language for text-to-material generation with pretrained language models. Each program composes alpha-masked layers whose shared spatial expressions define coverage and physically based rendering (PBR) channels, making dependencies between patterns, color, and relief explicit. A standalone interpreter evaluates the program into material maps, while the source retains named fields and layer parameters for subsequent authoring. Without task-specific fine-tuning, our pipeline uses parser-guided repair and preview-based critique to revise material designs, then searches noise seeds while keeping each candidate's remaining source fixed. On a curated benchmark of 141 prompts evaluated with six backbones, our best-performing configuration achieves higher mean scores than three diffusion baselines on all four flat-layout prompt-alignment metrics. Its initial programs already exceed all three baselines on mean BLIPScore, before critique or seed search. Retained programs have a median length of 21 lines when pooled across backbones. In a blind four-way comparison involving 30 participants and 20 prompts, our renders receive 59.2% of choices, compared with 19.3% for the most-preferred baseline. Compact executable programs thus offer a way to generate prompt-aligned materials while retaining their construction as part of the asset.",
+      "published": "2026-09-30T17:55:06Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.MM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40322",
+      "pdf_url": "https://arxiv.org/pdf/2609.40322",
+      "summary_zh": "材质生成不仅需要外观，还应包含构建规则。MatLoom提出一种紧凑的层导向语言，用预训练语言模型生成可执行程序，通过解析器修复与预览批评迭代优化，并搜索噪声种子。在141条提示基准上，其最佳配置在四项布局对齐指标上均超过三种扩散基线，盲测中获得59.2%偏好，证明紧凑可执行程序能生成对齐材质并保留其构建过程。",
+      "summary_en": "Material generation should produce not only appearance but also the rules that construct it. MatLoom introduces a compact, layer-oriented language for text-to-material generation with pretrained language models, using parser-guided repair and preview-based critique without task-specific fine-tuning. On a 141-prompt benchmark, its best configuration outperforms three diffusion baselines on all four flat-layout alignment metrics and receives 59.2% of choices in a blind study, showing that compact executable programs can generate prompt-aligned materials while retaining their construction.",
+      "highlights_zh": [
+        "层导向可执行程序生成材质",
+        "四项对齐指标均超扩散基线",
+        "盲测偏好59.2%，保留构建规则"
+      ],
+      "highlights_en": [
+        "Layer-oriented executable programs for materials",
+        "Outperforms diffusion baselines on all four metrics",
+        "59.2% blind preference, retains construction rules"
+      ]
+    },
+    {
+      "id": "2609.40362",
+      "title": "Multimodal Flow: Unified Flow Modeling of Language and Vision in Embedding Spaces",
+      "authors": [
+        "Hongyuan Tao",
+        "Xinggang Wang",
+        "Lianghui Zhu",
+        "Yongkang Li",
+        "Yunchao Wei",
+        "Bin Feng",
+        "Shaoyu Chen",
+        "Qian Zhang",
+        "Chang Huang",
+        "Kai Yu"
+      ],
+      "abstract": "We present Multimodal Flow, a fully continuous generative model of language and vision. Most unified multimodal models either model both language and quantized images as discrete tokens or combine discrete language prediction with continuous image generation. The former introduces a visual quantization bottleneck. The latter requires modality-dependent objectives and sampling procedures. Fully continuous modeling avoids these trade-offs and enables a shared generative process, but remains underexplored for multimodal pretraining. Multimodal Flow introduces a unified continuous architecture that integrates multimodal continuous representations with a shared chunk-causal flow backbone. It organizes text blocks and images as ordered continuous hyperchunks, preserving textual token order and visual spatial structure. The backbone learns a single vector field over these hyperchunks through Flow Matching. Joint attention enables cross-modal interaction, while modality-specific feed-forward networks process each modality. The model predicts multiple target chunks in parallel during training and generates hyperchunks sequentially at inference. We instantiate MF-1 and pretrain it on multimodal data. Across 0.6B, 1.2B, and 1.6B scales, continued pretraining consistently improves multimodal modeling. With only 150B pretraining tokens, MF-1 achieves an average score of 82.8 across GenEval and DPG-Bench and 75.3 across VQAv2, MMBench, and POPE, remaining competitive with unified models trained on substantially more data. Under matched data, optimization, and parameter budgets, Multimodal Flow further outperforms representative hybrid and discrete models. These results establish continuous chunk-based embedding flow modeling as a new fully continuous paradigm for unified multimodal modeling. The related code and model are publicly released at https://github.com/hustvl/Multimodal-Flow.",
+      "published": "2026-09-30T17:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40362",
+      "pdf_url": "https://arxiv.org/pdf/2609.40362",
+      "summary_zh": "现有多模态统一模型要么将语言和量化图像视为离散token（引入视觉量化瓶颈），要么混合离散语言预测与连续图像生成（需模态相关目标和采样流程），而全连续建模虽能避免这些权衡却研究不足。Multimodal Flow提出统一连续架构，将文本块和图像组织为有序连续超块，通过共享的块因果流骨干以Flow Matching学习单一向量场，联合注意力实现跨模态交互，模态专属前馈网络分别处理各模态。在0.6B至1.6B规模上持续预训练稳定提升多模态建模，仅用150B token即达到GenEval/DPG-Bench平均82.8分和VQAv2/MMBench/POPE平均75.3分，在同等预算下优于混合与离散模型，确立了连续块嵌入流建模作为统一多模态建模的新范式。",
+      "summary_en": "Existing unified multimodal models either treat language and quantized images as discrete tokens (introducing a visual quantization bottleneck) or combine discrete language prediction with continuous image generation (requiring modality-dependent objectives and sampling). Multimodal Flow introduces a fully continuous architecture that organizes text blocks and images as ordered continuous hyperchunks, learning a single vector field via Flow Matching over a shared chunk-causal backbone with joint attention and modality-specific feed-forward networks. Pretrained across 0.6B-1.6B scales, MF-1 reaches 82.8 on GenEval/DPG-Bench and 75.3 on VQAv2/MMBench/POPE with only 150B tokens, outperforming hybrid and discrete models under matched budgets and establishing continuous chunk-based embedding flow modeling as a new paradigm for unified multimodal modeling.",
+      "highlights_zh": [
+        "连续超块+共享流匹配骨干统一建模",
+        "150B token达GenEval 82.8、VQA 75.3",
+        "避免量化瓶颈，但依赖大规模预训练"
+      ]
+    },
+    {
+      "id": "2609.40358",
+      "title": "Physis-Lang: Self-Evolving Language as a Physical Representation for Video World Model",
+      "authors": [
+        "Liming Lu",
+        "Xianzheng Ma",
+        "Wenkun He",
+        "Guanqi Zhan",
+        "Yilin Zhao",
+        "Junyu Chen",
+        "Mengyao Xu",
+        "Jiaojiao Fan",
+        "Wenhang Ge",
+        "Yuchao Gu",
+        "Yunze Liu",
+        "Boyi Li",
+        "Zhen Dong",
+        "Victor Prisacariu",
+        "Ming-Yu Liu",
+        "Song Han",
+        "Han Cai"
+      ],
+      "abstract": "Video world models are expected to predict how the physical world evolves, yet they often produce visually plausible videos that violate basic physical principles. Existing approaches commonly assume that natural language is insufficient to represent the physical knowledge required for reliable generation, and therefore introduce additional visual, latent, numerical, or planning-based signals. We revisit this assumption and introduce Physis-Lang, a self-evolving framework that treats physical language as a shared and optimizable representation across data curation, model training, and video generation. Physis-Lang represents physical processes through language that describes their relevant entities, causes, interactions, governing principles, temporal evolution, and effects. To improve this representation, we construct PhysCapBench, which decomposes physical processes into atomic assertions and evaluates captions using recall and precision. An agentic loop iteratively analyzes assertion-level errors and refines the instruction used to produce physical captions. Physis-Lang further converts model deficiencies into textual descriptions and uses language-guided retrieval to identify visually diverse videos that cover missing physical processes. Experiments on four widely used physical video benchmarks with Wan and Cosmos backbones demonstrate consistent improvements in physical plausibility. Notably, starting from open-source Cosmos3-Nano backbones, our Physis-Lang-enhanced models surpass the leading proprietary Veo 3.1 model.",
+      "published": "2026-09-30T17:59:51Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40358",
+      "pdf_url": "https://arxiv.org/pdf/2609.40358",
+      "summary_zh": "视频世界模型常生成视觉逼真却违反物理规律的视频，现有方法认为自然语言不足以表示可靠生成所需的物理知识，因而引入视觉、潜变量、数值或规划等额外信号。Physis-Lang 重新审视这一假设，将物理语言作为贯穿数据筛选、模型训练与视频生成的可优化共享表示，通过 PhysCapBench 的原子断言评估与智能体迭代优化物理描述，并利用语言引导检索补充缺失物理过程的数据。在四个物理视频基准上，基于 Wan 与 Cosmos 骨干均取得一致的物理合理性提升，且以开源 Cosmos3-Nano 为基础增强的模型超越了领先的专有模型 Veo 3.1。",
+      "summary_en": "Video world models often generate visually plausible videos that violate basic physical principles, and existing approaches assume natural language is insufficient for representing the physical knowledge needed for reliable generation, instead adding visual, latent, numerical, or planning signals. Physis-Lang revisits this assumption by treating physical language as a shared, optimizable representation across data curation, model training, and video generation, using PhysCapBench's atomic-assertion evaluation and an agentic refinement loop, plus language-guided retrieval to cover missing physical processes. Experiments on four physical video benchmarks with Wan and Cosmos backbones show consistent gains in physical plausibility, with Physis-Lang-enhanced models built on open-source Cosmos3-Nano surpassing the leading proprietary Veo 3.1.",
+      "highlights_zh": [
+        "物理语言作为可优化共享表示",
+        "四基准物理合理性一致提升",
+        "开源骨干超越Veo 3.1"
+      ],
+      "highlights_en": [
+        "Physical language as optimizable shared representation",
+        "Consistent physical plausibility gains on four benchmarks",
+        "Open-source backbone surpasses Veo 3.1"
+      ]
+    },
+    {
+      "id": "2609.40353",
+      "title": "AssemblyWorld: Rethinking 3D Assembly with General-Purpose Agents",
+      "authors": [
+        "Jiahao Zhang",
+        "Yeying Fan",
+        "Moitreya Chatterjee",
+        "Suhas Lohit",
+        "Bernhard Egger",
+        "Tim K. Marks",
+        "Anoop Cherian",
+        "Stephen Gould"
+      ],
+      "abstract": "The task of 3D assembly requires translating an understanding of parts and their relationships into precise spatial arrangements. Can pretrained general-purpose agents assemble objects through visual interaction without additional assembly-specific fine-tuning? To investigate this question, we introduce AssemblyWorld, an interactive 3D environment in which agents inspect rendered views and manipulate supplied rigid parts, guided by images or assembly manuals when available. Agents perceive part geometry through 2D views rather than direct access to mesh vertices or faces, while their resulting assemblies are evaluated geometrically. Building on this environment, we construct AssemblyWorldBench, comprising 100 assembly tasks across 80 objects spanning furniture, industrial assembly, and fracture reassembly. Evaluating eight agent systems reveals substantial differences in their capabilities. The strongest system achieves 80.9% part accuracy but 59.4% complete-assembly success. The evaluated open-source systems lag substantially behind their stronger closed-source peers in both execution reliability and assembly accuracy. Analyses of visual references, interaction trajectories, and failures show how agents revise assemblies while leaving residual positioning errors. AssemblyWorld provides a common setting for both assessing the capabilities of interactive assembly agents and characterizing the gap between approximate structure recovery and precise reconstruction.",
+      "published": "2026-09-30T17:59:14Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40353",
+      "pdf_url": "https://arxiv.org/pdf/2609.40353",
+      "summary_zh": "3D装配要求将零件及其关系的理解转化为精确的空间排布，但通用预训练智能体能否仅通过视觉交互完成装配尚不明确。作者提出AssemblyWorld交互式3D环境及包含100个任务、80个物体的AssemblyWorldBench基准，让智能体仅凭2D视图感知几何并操作刚性零件，再以几何方式评估装配结果。评测八个智能体系统显示最强系统零件准确率达80.9%但完整装配成功率仅59.4%，开源系统明显落后于闭源系统，揭示了近似结构恢复与精确重建之间的差距。",
+      "summary_en": "3D assembly requires translating an understanding of parts and their relationships into precise spatial arrangements, yet it remains unclear whether pretrained general-purpose agents can assemble objects through visual interaction alone. The authors introduce AssemblyWorld, an interactive 3D environment, and AssemblyWorldBench, comprising 100 tasks across 80 objects, where agents perceive geometry only through 2D views and are evaluated geometrically. Evaluating eight agent systems shows the strongest reaches 80.9% part accuracy but only 59.4% complete-assembly success, with open-source systems lagging well behind closed-source peers, highlighting the gap between approximate structure recovery and precise reconstruction.",
+      "highlights_zh": [
+        "通用智能体免微调的视觉3D装配环境",
+        "最强系统零件准确率80.9%",
+        "揭示精确重建与近似恢复的差距"
+      ]
+    },
+    {
+      "id": "2609.40341",
+      "title": "Ego4WAM: What Matters When Scaling Egocentric Human Data for Robot Learning?",
+      "authors": [
+        "Zhihao Sun",
+        "Liu Liu",
+        "Xinjiang Wang",
+        "Haoyi Jiang",
+        "Wei Feng",
+        "Huiqiang Zhang",
+        "Xiaosong Jia",
+        "Zhizhong Su",
+        "Zuxuan Wu"
+      ],
+      "abstract": "Egocentric human data provides a scalable source of experience for robot learning, but varies substantially in human-robot alignment, behavioral coverage, and available supervision. Existing work shows favorable scaling with increasing human data, but it remains unclear which data properties drive downstream robot gains and how to use such data throughout the training pipeline. We present a systematic study of egocentric human data with different alignment and supervision under a unified world-action model framework. With the model backbone fixed, we disentangle the effects of human-robot alignment, data duration and task diversity, action supervision, and data usage strategies. We find that aligned human demonstrations substantially improve out-of-distribution generalization and reduce target-task robot data requirements; data duration and task diversity affect downstream capabilities differently; and video-only supervision remains effective without action labels, providing a strong foundation for subsequent video-action training. We validate these findings through closed-loop policy evaluation on both real robots and RoboDojo. Rather than treating data duration as the sole scaling axis, Ego4WAM shows how alignment, task diversity, available supervision, and usage strategy jointly shape the value of egocentric human data for robot learning.",
+      "published": "2026-09-30T17:58:35Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2609.40341",
+      "pdf_url": "https://arxiv.org/pdf/2609.40341",
+      "summary_zh": "第一句：自我中心人类数据虽为机器人学习提供可扩展经验，但其人机对齐、行为覆盖和监督差异对下游性能的影响尚不明确。第二句：本文在统一的世界-动作模型框架下，固定骨干网络，系统解耦人机对齐、数据时长与任务多样性、动作监督及数据使用策略的影响。第三句：实验表明对齐的人类演示显著提升分布外泛化并减少目标机器人数据需求，视频监督无需动作标签仍有效，为机器人学习数据扩展提供了多维度指导。",
+      "summary_en": "First sentence: Egocentric human data offers scalable experience for robot learning, but it remains unclear which data properties drive downstream robot gains given variations in human-robot alignment, behavioral coverage, and supervision. Second sentence: This work systematically disentangles the effects of human-robot alignment, data duration and task diversity, action supervision, and data usage strategies under a unified world-action model framework with a fixed backbone. Third sentence: Results show that aligned human demonstrations substantially improve out-of-distribution generalization and reduce target-task robot data requirements, while video-only supervision remains effective without action labels, jointly shaping the value of egocentric human data beyond duration alone.",
+      "highlights_zh": [
+        "系统解耦对齐、多样性、监督与使用策略",
+        "对齐数据提升泛化并减少机器人数据需求",
+        "视频监督有效，但需关注对齐与策略选择"
+      ]
+    }
+  ]
+}
