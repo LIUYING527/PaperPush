@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-06",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.06852",
+      "title": "One Figure, Every Canvas: Editable Flowchart Relayout via Agentic Pipeline",
+      "authors": [
+        "Shih-Chen Tseng",
+        "Chih-Hsuan Chen",
+        "Ryan Yang",
+        "Hsi-An Chen",
+        "Chun-Wei Tuan Mu",
+        "Yu-Lun Liu"
+      ],
+      "abstract": "Pipeline figures in ML papers must be repurposed across many canvases, including paper columns, 16:9 slides, portrait posters, 1:1 social teasers, 9:16 phone previews. Each format imposes a different aspect ratio on the same computational graph, where any silently broken connection misrepresents the method. We formulate aspect-ratio-adaptive flowchart relayout as a distinct task: given a raster flowchart and a target ratio, produce a structurally faithful, hallucination-free, editable layout. Existing methods fail characteristically: image-to-image models stretch blocks and reject extreme ratios, text-to-image agentic systems hallucinate content, and parse-then-render systems mis-route edges. We propose an agentic pipeline factored into Parse, Style, and Layout stages, each pairing a main agent with a critic that combines deterministic constraint checks with VLM visual feedback so connectivity is explicitly checked and prevented from being silently broken. Outputs are draw.io-editable mxGraph XML. On a curated benchmark of 100 flowcharts at five aspect ratios, evaluated by Gemini 3.1 Pro and validated against human judgments, our method reaches 68.6% Content Fidelity versus 11.2-41.4% for prior work. Project page: https://onefigureeverycanvas.vercel.app/",
+      "published": "2026-10-05T17:59:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06852",
+      "pdf_url": "https://arxiv.org/pdf/2610.06852",
+      "summary_zh": "ML论文中的流程图需适配论文栏、幻灯片、海报、社交图等多种画布，每种宽高比都不同，而任何被悄然破坏的连接都会错误呈现方法。作者将宽高比自适应流程图重排定义为独立任务，提出Parse、Style、Layout三阶段智能体流水线，每阶段由主智能体与结合确定性约束检查和VLM视觉反馈的评论者配对，确保连接显式校验并输出可编辑的mxGraph XML。在100个流程图、5种宽高比的基准上，方法内容保真度达68.6%，远超先前工作的11.2%-41.4%，为可编辑、无幻觉的跨画布流程图重排提供了有效方案。",
+      "summary_en": "Pipeline figures in ML papers must be adapted to many canvases with different aspect ratios, where any silently broken connection misrepresents the method. The authors formulate aspect-ratio-adaptive flowchart relayout as a distinct task and propose an agentic pipeline with Parse, Style, and Layout stages, each pairing a main agent with a critic that combines deterministic constraint checks and VLM visual feedback, producing draw.io-editable mxGraph XML. On a curated benchmark of 100 flowcharts at five aspect ratios, the method reaches 68.6% Content Fidelity versus 11.2-41.4% for prior work, enabling structurally faithful, hallucination-free, editable relayout.",
+      "highlights_zh": [
+        "三阶段智能体流水线配评论者校验",
+        "内容保真度68.6%，远超先前11.2-41.4%",
+        "输出可编辑XML，但依赖VLM反馈"
+      ]
+    },
+    {
+      "id": "2610.06851",
+      "title": "Base Models Can Reason By Taking a Cue From Training Data",
+      "authors": [
+        "Sophie L. Wang",
+        "Amil Dravid",
+        "Rulin Shao",
+        "Kevin Farhat",
+        "Sewon Min",
+        "Alexei A. Efros"
+      ],
+      "abstract": "In this paper, we study how training data creates associations between the tokens at the start of a base model's response and the reasoning behavior that follows. First, we demonstrate that fixing particular starting token cues makes a base model's performance competitive with that of its reinforcement learning (RL)-trained counterparts on math and coding. For instance, the cue \".\\n\\nOkay\" raises Olmo-3-7B's MATH-500 pass@1 accuracy from 42% to 78%, while \"Alright,\" raises Qwen3-14B's from 72% to 87%. Second, RL makes these cues more likely, while fixing them recovers much of its performance gain over the base model. Third, we trace the reasoning effects of token cues to the training data. We perform causal data interventions to turn an arbitrary word, such as \"chicken\", into an effective reasoning cue, or remove an existing cue's effect. A similar edit makes the prompt instruction \"Think duck duck goose\" as effective as \"Think step by step\" at eliciting reasoning. We also find that the hidden state representations induced by different cues correlate with different document types from the training set. Finally, we extend our study of token cues with a case study in language model safety, finding that different cues elicit distinct refusal and compliance behaviors that correspond to different types of training data.",
+      "published": "2026-10-05T17:59:52Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06851",
+      "pdf_url": "https://arxiv.org/pdf/2610.06851",
+      "summary_zh": "本文研究基座模型响应起始位置的token线索如何通过训练数据与后续推理行为建立关联。作者通过固定特定起始token线索、进行因果数据干预以及分析隐藏状态表征，追踪线索对推理的影响来源。结果表明，固定线索可使基座模型在数学和编程任务上媲美RL训练模型，且该效应可追溯至训练数据中的文档类型，并同样影响安全场景下的拒绝与合规行为。",
+      "summary_en": "This paper studies how training data creates associations between starting-token cues in a base model's response and its subsequent reasoning behavior. The authors fix specific starting-token cues, perform causal data interventions, and analyze hidden-state representations to trace cue effects back to training data. Results show that fixed cues make base models competitive with RL-trained counterparts on math and coding, and that these cue effects extend to safety-related refusal and compliance behaviors.",
+      "highlights_zh": [
+        "揭示起始token线索与推理行为的训练数据关联",
+        "固定线索使MATH-500准确率从42%升至78%",
+        "可调控推理与安全行为，但依赖训练数据分布"
+      ]
+    },
+    {
+      "id": "2610.06834",
+      "title": "Direct Intermediate Initialization for Tilted Diffusion Samplers",
+      "authors": [
+        "Gregory D. Bellchambers"
+      ],
+      "abstract": "Some diffusion posterior samplers construct Gaussian-tilted intermediate distributions along the reverse process. We observe that these targets can be pulled back to clean-space posteriors with weaker conditioning, with samples transported analytically to the corresponding noisy-space target through a Gaussian bridge. For the sequential Monte Carlo (SMC) sampler MCGDiff, the effective observation variance of this pulled-back problem is up to twice the diffusion-noise variance. We exploit this structure to initialize MCGDiff directly at an intermediate time: an approximate solver samples the softened clean-space posterior, the Gaussian bridge maps these samples to the tilted target, and only the remaining SMC suffix is run. This trades asymptotic consistency for finite-particle performance. With moment-matching posterior sampling (MMPS) as the solver, the hybrid improves sliced Wasserstein distance by roughly $2\\times$ at matched particle count on a structured Gaussian-mixture inverse problem, and by more than an order of magnitude when the posterior-relevant mode is rare under the prior. A prior-initialization control, which retains the bridge but drops the clean-space conditioning, shows that on MCGDiff's standard Gaussian-mixture benchmark most of the improvement is insensitive to the conditioning. Conditioning the initialization gives a further consistent gain on the structured problem, and becomes decisive on a rare-mode problem, where resampling cannot repopulate a mode absent from the initial population.",
+      "published": "2026-10-05T17:58:18Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06834",
+      "pdf_url": "https://arxiv.org/pdf/2610.06834",
+      "summary_zh": "扩散后验采样器在反向过程中构造高斯倾斜的中间分布，但直接从中初始化SMC采样器存在有限粒子性能受限的问题。本文发现这些倾斜目标可通过高斯桥解析地拉回为条件更弱的干净空间后验，并据此提出直接在中间时刻初始化MCGDiff的混合方法，用MMPS近似求解软化后验再经桥映射到倾斜目标。在结构化高斯混合逆问题上切片Wasserstein距离约改善2倍，在稀有模态问题上改善超过一个数量级，表明该初始化策略以牺牲渐近一致性换取有限粒子性能的显著提升。",
+      "summary_en": "Diffusion posterior samplers construct Gaussian-tilted intermediate distributions along the reverse process, but initializing SMC samplers directly from them suffers from limited finite-particle performance. This work shows these tilted targets can be pulled back analytically to clean-space posteriors with weaker conditioning via a Gaussian bridge, enabling a hybrid method that initializes MCGDiff directly at an intermediate time by solving the softened posterior with MMPS and mapping samples through the bridge. Experiments show roughly 2x improvement in sliced Wasserstein distance on a structured Gaussian-mixture inverse problem and over an order of magnitude on a rare-mode problem, trading asymptotic consistency for substantially better finite-particle performance.",
+      "highlights_zh": [
+        "高斯桥拉回倾斜目标至弱条件后验",
+        "稀有模态问题改善超一个数量级",
+        "牺牲渐近一致性换有限粒子性能"
+      ]
+    },
+    {
+      "id": "2610.06833",
+      "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+      "authors": [
+        "Benhao Huang",
+        "Chufan Shi",
+        "Junlin Chen",
+        "Shicheng Wen",
+        "Zhengzhong Liu",
+        "Eric Xing",
+        "Xuezhe Ma"
+      ],
+      "abstract": "Every recurrence of a looped language model adds cost in training, decoding, prefill, and reinforcement learning (RL). The closer recurrent states get to fixed points, the less the path to them matters. This enables truncated backpropagation in training; terminal key-value (KV) sharing for decoding with almost no loss in accuracy; a distilled student that prefills up to 1.79x faster; and RL updates that compute gradients from saved rollout states, 2x faster than backpropagating through the replayed trajectory. We therefore improve the two components of training that shape these fixed points: the depth prior and input injection. Fixed-depth training breaks KV sharing, and Huginn's broad depth prior supports sharing but dilutes supervision at the target depth more than sharing requires; we learn the prior from prediction feedback, with an entropy term that keeps it broad. Existing injection schemes let the state's component along the input amplify or cancel the injection; we remove this component with orthogonal injection. From 100M to 1.6B parameters, the learned prior and orthogonal injection lower perplexity at every scale relative to Huginn's prior and existing injection schemes, respectively. At 1.6B, the learned prior with a 3x smaller KV cache matches the downstream average of fixed-depth training with the full cache.",
+      "published": "2026-10-05T17:58:15Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06833",
+      "pdf_url": "https://arxiv.org/pdf/2610.06833",
+      "summary_zh": "循环语言模型的每次循环都带来训练、解码、预填充和强化学习的成本，而循环状态越接近不动点，到达该点的路径就越不重要。本文利用这一特性实现截断反向传播、终端KV共享、蒸馏学生模型加速预填充以及基于保存的rollout状态进行RL更新，并改进深度先验（从预测反馈中学习并加熵项保持广度）和输入注入（正交注入去除输入分量）。在100M到1.6B参数上，学习先验和正交注入均降低困惑度，1.6B时学习先验配合3倍小的KV缓存即可匹配固定深度训练全缓存的平均下游性能。",
+      "summary_en": "Every recurrence of a looped language model adds cost in training, decoding, prefill, and RL, but the closer recurrent states get to fixed points, the less the path to them matters. This work exploits that property to enable truncated backpropagation, terminal KV sharing, a distilled student with up to 1.79x faster prefill, and 2x faster RL updates, while improving the depth prior (learned from prediction feedback with an entropy term) and input injection (orthogonal injection). From 100M to 1.6B parameters, the learned prior and orthogonal injection lower perplexity at every scale, and at 1.6B the learned prior with a 3x smaller KV cache matches fixed-depth training with the full cache.",
+      "highlights_zh": [
+        "学习深度先验与正交注入",
+        "1.6B下3倍小KV缓存匹配全缓存",
+        "加速训练解码预填充与RL"
+      ],
+      "highlights_en": [
+        "Learned depth prior and orthogonal injection",
+        "3x smaller KV cache matches full at 1.6B",
+        "Speeds up training, decoding, prefill, and RL"
+      ]
+    },
+    {
+      "id": "2610.06843",
+      "title": "Recursive Video In-Context Learning for Agentic Robot",
+      "authors": [
+        "Wenrui Bao",
+        "Xinxin Liu",
+        "Bingxin Xu",
+        "Yuzhang Shang"
+      ],
+      "abstract": "LLM agents that orchestrate frozen vision-language-action (VLA) policies improve across episodes through text memory, which records what the agent did but not how the task is done. A demonstration video shows it, but fits poorly into an agent's context. The full video slows every turn, fixed keyframes lose the contact detail that decides whether a grasp holds, and what the agent needs shifts from the task's structure while planning to the frames around each contact. We introduce Recursive Video In-Context Learning (RV-ICL), a training-free method that turns a demonstration into a hierarchy the agent navigates rather than a prompt it receives. The hierarchy is built from the sub-events of the demonstration, such as grasps and releases. Its levels grow finer, from keyframes of the whole task to phases, moments and short clips, and are exposed through read-only tools. The agent reads the coarse levels before planning. During execution it re-enters the hierarchy whenever a step needs more detail and loads only the clip of its current sub-goal. One demonstration per task is enough. Built on RPent, RV-ICL raises success from 92.6% to 96.5% on LIBERO-PRO and from 86.7% to 95.8% on LIBERO-Plus.",
+      "published": "2026-10-05T17:59:11Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06843",
+      "pdf_url": "https://arxiv.org/pdf/2610.06843",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.06830",
+      "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "authors": [
+        "Haozhen Zhang",
+        "Haodong Yue",
+        "Quanyu Long",
+        "Jianzhu Bao",
+        "Qingyuan Liu",
+        "Tao Feng",
+        "Bohan Liu",
+        "Weida Liang",
+        "Wenya Wang"
+      ],
+      "abstract": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performance, cost, and latency largely underexplored. To address this challenge, we present \\textbf{MemPilot}, a flexible framework that orchestrates on-demand memory curation under different performance--cost--latency preferences. Specifically, we optimize a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs. The policy jointly controls evidence amount, curation instructions, model selection, and visual access, enabling fine-grained allocation of runtime computation. To optimize this policy under competing objectives, we adapt objective-wise advantage decoupling by separately estimating each objective's advantage before aggregation. Moreover, we introduce prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance--cost--latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+      "published": "2026-10-05T17:58:06Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06830",
+      "pdf_url": "https://arxiv.org/pdf/2610.06830",
+      "summary_zh": "现有LLM智能体记忆系统多以查询无关方式构建记忆，导致不必要的预处理开销并丢失后续关键细节，而近期运行时自适应方法又局限于特定操作或固定流程，缺乏对性能、成本与延迟的灵活权衡。为此，作者提出MemPilot框架，通过强化学习优化多步LLM策略，在查询无关记忆检索与按需调用异构LLM/VLM对原始多模态历史进行查询特定整理之间迭代选择，并联合控制证据量、整理指令、模型选择与视觉访问，同时引入目标级优势解耦和基于前缀的边际效用估计。在五个多模态智能体记忆基准上，MemPilot在不同优化偏好下实现了更优的性能—成本—延迟权衡，偏好扫描得到的前沿优于现有权衡感知基线。",
+      "summary_en": "Most existing LLM agent memory systems build memory in a query-agnostic manner, incurring unnecessary preprocessing costs and discarding details that later prove essential, while recent runtime-adaptive approaches specialize in fixed operations or schemes and underexplore flexible control over performance, cost, and latency. To address this, the authors present MemPilot, a flexible framework that orchestrates on-demand memory curation by optimizing a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs, jointly controlling evidence amount, curation instructions, model selection, and visual access, with objective-wise advantage decoupling and prefix-based marginal utility estimation. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance-cost-latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+      "highlights_zh": [
+        "RL策略按需编排多模态记忆整理",
+        "五基准上权衡前沿优于现有基线",
+        "灵活权衡性能成本延迟，通用性强"
+      ]
+    },
+    {
+      "id": "2610.06850",
+      "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
+      "authors": [
+        "Yucheng Zhang",
+        "Sirui Xu",
+        "Jinhong Li",
+        "Liuyu Bian",
+        "Anatulya Nandi",
+        "Derek Zhang",
+        "Xiangchen Liu",
+        "Xueting Li",
+        "Umar Iqbal",
+        "Yu-Xiong Wang",
+        "Liang-Yan Gui"
+      ],
+      "abstract": "Captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. We introduce InterMimicGen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. First, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relationships. This produces a large and diverse humanoid robot reference collection for dexterous whole-body loco-manipulation. Second, we train a physics-based generalist tracker that executes these references in simulation on a humanoid with dexterous hands, covering a scale and diversity beyond prior humanoid tracking systems for loco-manipulation. Third, we close a data flywheel: each round makes small, task-preserving changes to where an interaction takes place and how the body performs it, fine-tunes the tracker on them, and keeps only the variants whose simulated execution completes the task, which seed the next round. With more iterations, these small edits compound into broader coverage around the sparse original demonstrations while preserving task semantics and motion quality. Experiments show contact-preserving retargeting across robot configurations, broad tracking with a single generalist policy, executable motions that keep growing over augmentation rounds, and transfer to real robots. InterMimicGen provides a unified path from heterogeneous human demonstrations to a continually expanding motion resource for humanoid robot learning.",
+      "published": "2026-10-05T17:59:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06850",
+      "pdf_url": "https://arxiv.org/pdf/2610.06850",
+      "summary_zh": "人类-物体交互动捕数据虽能为类人机器人全身移动操作提供监督，但稀疏、异构且无法直接执行。InterMimicGen提出自演化运动模仿框架，通过接触保持的重定向、通用跟踪器训练与数据飞轮闭环，让机器人运动数据与跟踪策略相互促进。实验表明该方法能跨机器人配置重定向、以单一通用策略广泛跟踪、在增强轮次中持续生成可执行运动并迁移到真实机器人，为类人机器人学习提供了持续扩展的运动资源。",
+      "summary_en": "Captured human-object interaction data offers rich supervision for humanoid loco-manipulation, but it is sparse, heterogeneous, and not directly executable by robots. InterMimicGen introduces a self-evolving motion-imitation framework that couples contact-preserving retargeting, a generalist physics-based tracker, and a data flywheel of task-preserving motion edits to mutually improve robot motion data and the tracking policy. Experiments demonstrate cross-configuration retargeting, broad tracking with a single generalist policy, ever-growing executable motions over augmentation rounds, and real-robot transfer, providing a unified path from heterogeneous human demonstrations to a continually expanding motion resource.",
+      "highlights_zh": [
+        "自演化数据飞轮闭环",
+        "单一通用策略广泛跟踪",
+        "可迁移真实机器人"
+      ],
+      "highlights_en": [
+        "Self-evolving data flywheel loop",
+        "Broad tracking with one generalist policy",
+        "Transferable to real robots"
+      ]
+    },
+    {
+      "id": "2610.06847",
+      "title": "S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation",
+      "authors": [
+        "Jeffrey Hu",
+        "Daniel Olmeda Reino",
+        "Ayush Tewari"
+      ],
+      "abstract": "Bidirectional video diffusion models denoise entire videos in parallel, yet when trained on effectively unlimited in-distribution data from procedural generators, continue to violate physical laws and simple symbolic rules. We introduce Serial-to-Parallel Diffusion (S2PD), which performs autoregressive diffusion at high noise before switching to parallel diffusion at low noise. The autoregressive phase provides the serial computation needed to coordinate interdependent events and produce valid state transitions while the parallel phase jointly refines the entire video and reduces sampling time relative to fully serial generation. We implement S2PD with two architectures: a pixel-space diffusion transformer trained from scratch and a pretrained video model adapted through LoRA fine-tuning with causal attention. Across games, physical simulations, and real video, S2PD follows rules more reliably than matched bidirectional baselines and generates videos with greater temporal stability and sampling efficiency than other serial methods.",
+      "published": "2026-10-05T17:59:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06847",
+      "pdf_url": "https://arxiv.org/pdf/2610.06847",
+      "summary_zh": "双向视频扩散模型即使在海量分布内数据上训练，仍会违反物理规律和简单符号规则。为此提出S2PD，在高噪声阶段进行自回归扩散以协调相互依赖的事件和有效状态转换，低噪声阶段切换为并行扩散以联合精炼整个视频并加速采样。在游戏、物理模拟和真实视频上，S2PD比匹配的双向基线更可靠地遵循规则，并比其他串行方法具有更好的时间稳定性和采样效率。",
+      "summary_en": "Bidirectional video diffusion models still violate physical laws and simple symbolic rules even when trained on effectively unlimited in-distribution data. We introduce Serial-to-Parallel Diffusion (S2PD), which performs autoregressive diffusion at high noise to coordinate interdependent events and valid state transitions, then switches to parallel diffusion at low noise for joint refinement and faster sampling. Across games, physical simulations, and real video, S2PD follows rules more reliably than matched bidirectional baselines and achieves greater temporal stability and sampling efficiency than other serial methods.",
+      "highlights_zh": [
+        "高噪声自回归+低噪声并行扩散",
+        "规则遵循优于双向基线",
+        "提升时间稳定性与采样效率"
+      ]
+    },
+    {
+      "id": "2610.06814",
+      "title": "TAPDreamer: Transferable Adversarial Patches for World Action Models",
+      "authors": [
+        "Xuanyu Lu",
+        "Fengqing Jiang",
+        "Kaiyuan Zheng",
+        "Yichen Feng",
+        "Yaorui Ding",
+        "Yuetai Li",
+        "Zhen Xiang",
+        "Bhaskar Ramasubramanian",
+        "Basel Alomair",
+        "Luyao Niu",
+        "Radha Poovendran"
+      ],
+      "abstract": "World models learn to predict how their environment will evolve, making them an important foundation for general-purpose robotic control. Yet world action models depend on camera inputs whose manipulation can corrupt the visual representations used across tasks and action policies. Existing attacks on these models optimize against the victim's actions or predicted futures and therefore require access to target-model outputs. In this paper, we propose an attack, TAPDreamer, against world action models that instead uses a public encoder alone to construct a fixed local perturbation that transfers across tasks and action architectures. TAPDreamer requires no target-policy queries. Our key insight is that interactions between patch-induced changes in attention weights and value vectors broadcast a nearly identical representation shift far beyond the patch footprint, and this shift remains stable across task observations. Guided by this insight, TAPDreamer uses six frames from one source task to maximize the global L1 distance between clean and patched encoder representations. In closed-loop evaluation, one frozen patch per benchmark, covering about 6.5% of the input, reduces FastWAM's success rate from 97.7% to 0.0% across 40 LIBERO tasks and from 90.8% to 0.0% across 50 RoboTwin tasks; matched random patches retain 81.5% and 79.2% success. The same patches reduce success to 2.1% and 0.8% on two DreamWAM configurations and to 10.0% on Motus. These results show that protecting downstream action generation alone is insufficient: defenses for world action models must also secure shared visual encoders against persistent local perturbations.",
+      "published": "2026-10-05T17:55:21Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06814",
+      "pdf_url": "https://arxiv.org/pdf/2610.06814",
+      "summary_zh": "世界动作模型依赖摄像头输入，其视觉表征被局部扰动污染后会跨任务和动作策略传播，而现有攻击需查询目标模型输出。TAPDreamer仅用公开编码器，通过六帧源任务最大化干净与补丁编码器表征的全局L1距离，构造可迁移的固定局部扰动，无需目标策略查询。在LIBERO和RoboTwin上，一个冻结补丁（约占输入6.5%）将FastWAM成功率从97.7%和90.8%降至0.0%，并迁移至DreamWAM和Motus，表明防御必须保护共享视觉编码器。",
+      "summary_en": "World action models rely on camera inputs, and local perturbations can corrupt the shared visual representations used across tasks and action policies, yet existing attacks require querying target-model outputs. TAPDreamer uses only a public encoder and six frames from one source task to maximize the global L1 distance between clean and patched encoder representations, producing a fixed local perturbation that transfers across tasks and action architectures without target-policy queries. A single frozen patch covering about 6.5% of the input drops FastWAM success from 97.7% to 0.0% on 40 LIBERO tasks and from 90.8% to 0.0% on 50 RoboTwin tasks, transfers to DreamWAM and Motus, and shows that defenses must secure shared visual encoders, not just downstream action generation.",
+      "highlights_zh": [
+        "仅用公开编码器构造可迁移补丁",
+        "成功率97.7%降至0.0%",
+        "需防御共享视觉编码器"
+      ],
+      "highlights_en": [
+        "Transferable patch from public encoder only",
+        "Success drops from 97.7% to 0.0%",
+        "Defenses must secure shared encoders"
+      ]
+    },
+    {
+      "id": "2610.06805",
+      "title": "H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning",
+      "authors": [
+        "Wancong Zhang",
+        "Basile Terver",
+        "Michael Rabbat",
+        "Yann LeCun",
+        "Randall Balestriero"
+      ],
+      "abstract": "Long-horizon planning with latent world models requires reasoning across timescales and levels of abstraction. Existing task-agnostic JEPA world models predict and plan at a single timescale or with multiple horizons in one shared latent space. We introduce H-JEPA, an end-to-end recipe for training a hierarchy of action-conditioned JEPAs in which each level predicts farther ahead in its own learned latent space. Planning proceeds top-down: the top level optimizes progress toward the goal, and each level's predictions become subgoals for the planner below it. When factors in the data evolve at separated timescales, higher levels discard fast, unpredictable detail and retain slower task-relevant state. Across four simulated navigation and manipulation environments, hierarchical planning improves over a flat JEPA; on Visual AntMaze, a three-level hierarchy raises success from 18% to 73% using less planner compute. Ablations attribute these gains to both temporal decomposition and higher-level goal representations. With inverse-dynamics supervision, the approach extends to diverse real-robot videos from DROID, where hierarchy improves offline planning fidelity at lower planner compute.",
+      "published": "2026-10-05T17:53:34Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.06805",
+      "pdf_url": "https://arxiv.org/pdf/2610.06805",
+      "summary_zh": "长时程视觉规划需要在不同时间尺度和抽象层次上推理，而现有任务无关的JEPA世界模型仅在单一时间尺度或共享潜空间中进行预测与规划。H-JEPA提出端到端训练动作条件化JEPA层级的方法，每层在各自学习的潜空间中预测更远的未来，规划时自顶向下进行，高层优化目标进展并生成子目标供低层使用。在四个导航与操作环境中，分层规划优于扁平JEPA，Visual AntMaze上三级层次将成功率从18%提升至73%且规划计算更少，并借助逆动力学监督扩展到DROID真实机器人视频。",
+      "summary_en": "Long-horizon visual planning requires reasoning across timescales and abstraction levels, yet existing task-agnostic JEPA world models predict and plan at a single timescale or within one shared latent space. H-JEPA introduces an end-to-end recipe for training a hierarchy of action-conditioned JEPAs, where each level predicts farther ahead in its own learned latent space and planning proceeds top-down with higher-level predictions serving as subgoals for lower levels. Across four simulated navigation and manipulation environments, hierarchical planning outperforms flat JEPA, raising Visual AntMaze success from 18% to 73% with less planner compute, and with inverse-dynamics supervision it extends to diverse real-robot DROID videos with improved offline planning fidelity.",
+      "highlights_zh": [
+        "分层JEPA端到端训练与自顶向下规划",
+        "AntMaze成功率18%提升至73%",
+        "可扩展至真实机器人视频规划"
+      ]
+    }
+  ]
+}
