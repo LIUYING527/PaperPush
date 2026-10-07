@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-07",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.08782",
+      "title": "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction",
+      "authors": [
+        "Shiqi Li",
+        "Sean Cho",
+        "Yijie Li",
+        "Fengzhi Guo",
+        "Bowen Wen",
+        "Cheng Zhang"
+      ],
+      "abstract": "Existing methods for 4D hand-object reconstruction often rely on costly per-sequence optimization, while generative approaches typically synthesize interactions from random noise, which can lead to unstable interaction prediction. We introduce 4D-HOF, a feed-forward framework that reconstructs 4D hand-object interactions from coarse but informative estimates produced by vision foundation models. Concretely, we learn a conditional flow matching model that transports foundation-model-derived hand-object states toward an interaction manifold, allowing the model to correct errors in translation, rotation, and alignment in a feed-forward manner. A key advantage of our generative formulation is that it naturally enables test-time guidance within the transport process. Rather than applying a separate post-hoc optimization after reconstruction, we directly steer the evolving generative states using physical interaction constraints and observed 2D evidence, allowing the reconstruction to be refined as part of the generative process itself. By training the generative model on diverse datasets, 4D-HOF generalizes robustly to challenging in-the-wild scenarios. Experiments on out-of-domain benchmarks show that 4D-HOF achieves state-of-the-art performance, producing more stable and accurate 4D hand-object reconstructions.",
+      "published": "2026-10-06T17:59:02Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08782",
+      "pdf_url": "https://arxiv.org/pdf/2610.08782",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.08781",
+      "title": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
+      "authors": [
+        "Ziyu Chen",
+        "Yilun Zhao",
+        "Jiashuo Sun",
+        "Yiling Ma",
+        "Manasi Patwardhan",
+        "Arman Cohan"
+      ],
+      "abstract": "Scientific research often begins by synthesizing ideas from a set of related papers to identify gaps and formulate new directions. However, training language models to perform this form of literature-grounded ideation remains challenging, as existing approaches based on prompting or feedback lack structured supervision for how papers should be synthesized. We introduce IdeaAnchor, a paradigm for training LLMs to perform research ideation using structured specifications as privileged signals. Each IdeaAnchor instance encodes how each input paper should be synthesized into a successful idea, including their functional roles, relationships, and target synthesis criteria. We build this paradigm by mining instances from published papers, capturing how real ideas emerge from prior literature. We then train models via demonstration, self-distillation, and reinforcement learning, and further enhance generation with retrieval at inference time. Experiments show consistent improvements in ideation quality. Our analysis reveals a functional decomposition: anchor-based training strengthens creative synthesis, retrieval enhances detail elaboration, and combining both yields the best performance.",
+      "published": "2026-10-06T17:59:01Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08781",
+      "pdf_url": "https://arxiv.org/pdf/2610.08781",
+      "summary_zh": "从相关论文中综合出研究想法是科研的常见起点，但现有基于提示或反馈的方法缺乏对论文应如何被综合的结构化监督，训练语言模型进行文献驱动的构思仍具挑战。IdeaAnchor提出以结构化规格作为特权信号来训练LLM进行研究构思，每个实例编码输入论文的功能角色、关系与目标综合标准，并通过从已发表论文中挖掘实例、结合示范、自蒸馏与强化学习训练，以及推理时检索增强来生成想法。实验显示构思质量持续提升，且分析揭示了功能分解：锚点训练强化创造性综合，检索增强细节阐述，两者结合效果最佳。",
+      "summary_en": "Synthesizing ideas from related papers is a common starting point for research, yet training language models for literature-grounded ideation remains difficult because existing prompting or feedback approaches lack structured supervision on how papers should be synthesized. IdeaAnchor introduces structured specifications as privileged signals for training LLMs to perform research ideation, where each instance encodes the functional roles, relationships, and target synthesis criteria of input papers, with training via demonstration, self-distillation, and reinforcement learning plus retrieval at inference. Experiments show consistent improvements in ideation quality, revealing a functional decomposition: anchor-based training strengthens creative synthesis, retrieval enhances detail elaboration, and combining both yields the best performance.",
+      "highlights_zh": [
+        "以结构化规格作为特权信号训练构思",
+        "锚点训练+检索结合取得最佳效果",
+        "提升文献驱动研究构思质量"
+      ]
+    },
+    {
+      "id": "2610.08789",
+      "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
+      "authors": [
+        "Chung Min Kim",
+        "Brent Yi",
+        "David McAllister",
+        "Hongsuk Choi",
+        "Himanshu Gaurav Singh",
+        "Jinkun Cao",
+        "Ken Goldberg",
+        "Pieter Abbeel",
+        "Carmelo Sferrazza",
+        "Angjoo Kanazawa"
+      ],
+      "abstract": "Flow policies have become a standard policy class for learning robot behaviors from demonstrations, but reinforcement learning is still critical for improving pre-trained flow policies or learning them from scratch through interaction. We introduce QF3 (Fast Flow RL with Filtered Q-Gradients), an online off-policy RL algorithm that trains a flow policy with flow matching plus the critic's action gradient, backpropagated through a one-step prediction of the flow's output. To keep updates where the critic and this prediction are reliable, QF3 applies the critic gradient only to action dimensions that stay near the replay action. To our knowledge, QF3 is the first off-policy flow RL method to train humanoid locomotion policies from scratch and transfer them zero-shot to hardware. Paired with a high-throughput off-policy training recipe, it trains humanoid locomotion and motion-tracking policies with a 10x wall-clock speedup over FPO++, a recent on-policy flow RL method. We further apply QF3 to fine-tune pretrained flow-based manipulation policies on both ABC-Sim and Robomimic tasks. These results suggest that QF3 can both learn robot policies from scratch and refine those acquired from demonstrations. Website: https://qf3-rl.github.io/",
+      "published": "2026-10-06T17:59:34Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08789",
+      "pdf_url": "https://arxiv.org/pdf/2610.08789",
+      "summary_zh": "从演示中学习机器人行为的流策略已成为标准策略类，但强化学习对于改进预训练流策略或从头通过交互学习仍至关重要。QF3提出一种在线离策略流强化学习算法，通过流匹配与评论家动作梯度（经流输出一步预测反向传播）训练流策略，并仅对靠近回放动作的动作维度应用评论家梯度以保证更新可靠。该方法是首个从头训练人形运动策略并零样本迁移到硬件的离策略流强化学习算法，相比FPO++实现10倍墙钟加速，并成功微调预训练流操作策略。",
+      "summary_en": "Flow policies are standard for learning robot behaviors from demonstrations, but reinforcement learning remains critical for improving pre-trained flow policies or learning them from scratch through interaction. QF3 introduces an online off-policy RL algorithm that trains a flow policy with flow matching plus the critic's action gradient backpropagated through a one-step prediction of the flow's output, applying the critic gradient only to action dimensions near the replay action for reliable updates. It is the first off-policy flow RL method to train humanoid locomotion from scratch and transfer zero-shot to hardware, achieving a 10x wall-clock speedup over FPO++ and successfully fine-tuning pretrained flow-based manipulation policies.",
+      "highlights_zh": [
+        "过滤Q梯度仅更新可靠动作维度",
+        "人形运动从头训练零样本迁移硬件",
+        "10倍加速并微调预训练操作策略"
+      ]
+    },
+    {
+      "id": "2610.08785",
+      "title": "Conformal Prediction Sets Quantify Information Gain: A Theoretical Perspective",
+      "authors": [
+        "Kevin Zhang",
+        "Stephen Bates"
+      ],
+      "abstract": "Conformal prediction is a popular tool for uncertainty quantification that outputs prediction sets with finite-sample coverage guarantees. While prediction set size is commonly used as a heuristic measure of uncertainty, the information-theoretic basis for this interpretation remains poorly understood. In this work, we provide such a foundation using a decision-theoretic generalization of entropy tailored to set-valued prediction. In particular, we introduce a family of generalized information measures based on the size and coverage of conformal prediction sets. Notably, Shannon mutual information admits an exact integral representation in terms of these measures. We then show that, in standard classification settings, the reduction in conformal set size from additional information (i) is sandwiched between calibration-dependent members of this family and (ii) obeys a data processing inequality, both up to finite-sample calibration and model error terms. Together, our results formally relate conformal prediction to classical information-theoretic quantities and justify using set-size reduction as an information gain metric. Empirically, we validate our theory across 11 classification settings and show that set-size reduction and Shannon mutual information can rank features differently in a greedy feature selection experiment.",
+      "published": "2026-10-06T17:59:11Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08785",
+      "pdf_url": "https://arxiv.org/pdf/2610.08785",
+      "summary_zh": "共形预测的预测集大小常被用作不确定性启发式度量，但其信息论基础尚不明确。该工作引入基于预测集大小与覆盖率的广义信息度量族，证明香农互信息可由这些度量精确积分表示，并给出集大小缩减与互信息之间的夹逼关系及数据处理不等式。在11个分类任务上验证了理论，并发现集大小缩减与互信息在贪心特征选择中可能给出不同排序。",
+      "summary_en": "Conformal prediction set size is widely used as a heuristic uncertainty measure, but its information-theoretic foundation is unclear. This work introduces a family of generalized information measures based on conformal set size and coverage, shows Shannon mutual information admits an exact integral representation via these measures, and proves sandwich bounds and a data processing inequality for set-size reduction under calibration and model error. Experiments across 11 classification settings validate the theory and reveal that set-size reduction and mutual information can rank features differently in greedy feature selection.",
+      "highlights_zh": [
+        "建立共形预测集大小的信息论基础",
+        "11个分类任务验证理论",
+        "特征选择中两种度量排序可能不同"
+      ]
+    },
+    {
+      "id": "2610.08747",
+      "title": "The Missing Minimal Pair: Stereotype Evaluation in LLMs",
+      "authors": [
+        "Nataliya Stepanova",
+        "Ivan Titov",
+        "Emily Allaway",
+        "Björn Ross"
+      ],
+      "abstract": "A common approach to measuring bias in Large Language Models is to compare the log-likelihoods of two contrastive stereotype sentences. We argue that such single-pair comparisons are often unreliable: simply rewriting the same stereotype with an alternative attribute can yield logically inconsistent preferences. To address this, we propose a dual minimal pair setup that introduces two axes of comparison for robust stereotype evaluation. First, we present a data-augmentation framework that fills critical gaps in existing stereotype datasets by generating paraphrases and alternate attributes. We apply our framework on a set of English, Russian, Spanish and Chinese stereotypes. Second, we introduce two evaluation metrics tailored to the dual minimal pair setup. One of these metrics provides a new perspective on bias by modeling the mutual information (MI) between social groups and stereotyped attributes. This MI-based metric is better suited for aggregation and enables more robust comparisons of stereotype strength across different languages and models. Our code is available at https://github.com/stepanat/missing-minimal-pair/.",
+      "published": "2026-10-06T17:41:44Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08747",
+      "pdf_url": "https://arxiv.org/pdf/2610.08747",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.08791",
+      "title": "World Models' Last Exam in Physics",
+      "authors": [
+        "Mingju Gao",
+        "Qingle Liu",
+        "Yuzhao Peng",
+        "Xinjie Lin",
+        "Ziming Qin",
+        "Zheng Jiang",
+        "Wenyi Li",
+        "Calvin Xiao",
+        "Youjie Zheng",
+        "Kaisen Yang",
+        "Qinhuai Na"
+      ],
+      "abstract": "Video world models can produce visually convincing yet physically inconsistent sequences, raising concerns about their reliability for prediction and planning in embodied AI systems. Existing evaluations often rely on model-based judgments or reference videos, while direct physical tests largely focus on mechanics. We introduce World Models' Last Exam in Physics, a measurement-based benchmark for evaluating physical consistency in video world models. The benchmark comprises 40 controlled tasks spanning mechanics, optics, fluids, thermal and phase-change phenomena, electromagnetism, and surface tension. Each task pairs an initial image and a generation prompt with predefined physical criteria, enabling interpretable tests of observable physical relationships without requiring reference videos. Its evaluator combines task-observability screening with task-specific quantitative physical measurements. Experiments on eight video generation models across 1,280 videos reveal persistent physical inconsistencies and substantial variation across tasks, with the best model achieving an overall score of 57.76 out of 100. Evaluation on synthetic videos with known physical relationships provides evidence for the validity of the measurement module under controlled conditions. The evaluator also achieves higher agreement with human judgments than a direct vision-language model baseline in both within-task rankings and pairwise comparisons. By combining coverage across physical domains with scores grounded in measurable evidence and explicit measurement limitations, the benchmark provides an interpretable basis for diagnosing physical inconsistencies and tracking progress toward physically consistent video world models.",
+      "published": "2026-10-06T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08791",
+      "pdf_url": "https://arxiv.org/pdf/2610.08791",
+      "summary_zh": "视频世界模型能生成视觉逼真但物理不一致的序列，威胁具身AI预测与规划的可靠性，而现有评估多依赖模型判断或参考视频，直接物理测试又局限于力学。本文提出“世界模型物理终极考试”基准，包含力学、光学、流体、热学与相变、电磁学、表面张力六大领域40项受控任务，每项配初始图像、生成提示和预设物理判据，评估器结合任务可观测性筛选与任务特定定量物理测量，无需参考视频。在8个视频生成模型1280个视频上实验显示物理不一致普遍存在且任务间差异大，最佳模型仅得57.76分，该评估器与人类判断一致性优于视觉语言模型基线，为诊断物理不一致和追踪进展提供了可解释依据。",
+      "summary_en": "Video world models can generate visually convincing but physically inconsistent sequences, undermining their reliability for prediction and planning in embodied AI, while existing evaluations rely on model-based judgments or reference videos and direct physical tests focus mainly on mechanics. We introduce World Models' Last Exam in Physics, a measurement-based benchmark of 40 controlled tasks spanning mechanics, optics, fluids, thermal and phase-change phenomena, electromagnetism, and surface tension, where each task pairs an initial image and prompt with predefined physical criteria, and the evaluator combines task-observability screening with task-specific quantitative measurements, requiring no reference videos. Experiments on eight video generation models across 1,280 videos reveal persistent physical inconsistencies and large task variation, with the best model scoring only 57.76 out of 100, while the evaluator agrees with human judgments better than a vision-language model baseline, offering an interpretable basis for diagnosing inconsistencies and tracking progress toward physically consistent video world models.",
+      "highlights_zh": [
+        "无需参考视频的定量物理一致性基准",
+        "最佳模型仅得57.76分，物理不一致普遍",
+        "可解释诊断，但覆盖与测量仍有限"
+      ]
+    },
+    {
+      "id": "2610.08790",
+      "title": "Building Rome from a Single Image",
+      "authors": [
+        "Jiraphon Yenphraphai",
+        "Fang Li",
+        "Tianshuo Xu",
+        "Depu Meng",
+        "Quentin Herau",
+        "Yihan Hu",
+        "Raymond A. Yeh",
+        "Wei Zhan"
+      ],
+      "abstract": "Single-image scene generation aims to produce a complete 3D scene mesh from a single image, including surfaces the camera did not observe. While pretrained 3D object generators encode a strong shape prior, they are mainly designed for isolated objects in a fixed canonical volume and focus mostly on indoor scenes, since diverse 3D data for outdoor scenes are quite limited. In this work, we present a method that redesigns such an object-centric generator, e.g., Trellis 2, to work on both indoor and outdoor scenes while retaining its prior. We accomplish this by (a) partitioning the scene into adaptive chunks that scale relative to the distance to the camera; nearby chunks have a smaller size to keep the finer detail, while distant structures, e.g., buildings, are covered by large chunks; (b) making the generator capture explicit 2D-3D correspondence by lifting image features and making the model aware of the free space, observed surface, and unobserved region; (c) synthesizing around 4,000 outdoor scenes to broaden the training data, as existing scene datasets are largely indoor. Experiments on Tanks and Temples, ScanNet++, and in-the-wild images show that our method outperforms all baselines in geometric accuracy and perceptual quality across both indoor and outdoor scenes.",
+      "published": "2026-10-06T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08790",
+      "pdf_url": "https://arxiv.org/pdf/2610.08790",
+      "summary_zh": "单图场景生成需从一张图像重建完整3D网格，但现有3D物体生成器主要针对固定体积内的孤立物体和室内场景，缺乏户外数据。本文重新设计以物体为中心的生成器（如Trellis 2），通过自适应分块（近小远大）、显式2D-3D对应建模（区分自由空间、已观测表面和未观测区域）以及合成约4000个户外场景来扩展训练数据。在Tanks and Temples、ScanNet++和野外图像上，该方法在室内外场景的几何精度和感知质量上均优于所有基线。",
+      "summary_en": "Single-image scene generation aims to reconstruct a complete 3D mesh from one image, but existing 3D object generators are object-centric, limited to indoor scenes, and lack outdoor 3D data. This work redesigns an object-centric generator (e.g., Trellis 2) by using adaptive distance-scaled chunks, explicit 2D-3D correspondence with free-space/observed/unobserved awareness, and ~4,000 synthesized outdoor scenes for training. Experiments on Tanks and Temples, ScanNet++, and in-the-wild images show superior geometric accuracy and perceptual quality over all baselines for both indoor and outdoor scenes.",
+      "highlights_zh": [
+        "自适应分块+2D-3D对应重设计物体生成器",
+        "室内外几何与感知质量均超所有基线",
+        "可泛化至野外图像，但依赖合成户外数据"
+      ]
+    },
+    {
+      "id": "2610.08784",
+      "title": "PEARS: Physical-Prior-Guided Efficient Adaptation via Failure Reasoning and Diffusion Steering for Tactile Manipulation",
+      "authors": [
+        "Kun Song",
+        "Yiming Wang",
+        "Yilin Chen",
+        "Tianyi Ding",
+        "Jiaxin Tian",
+        "Tianqi Gong",
+        "Daolin Ma",
+        "Jia Pan"
+      ],
+      "abstract": "Pretrained robotic policies can suffer substantial performance degradation under out-of-distribution (OOD) conditions encountered during deployment, motivating post-training through real-world interaction. However, reinforcement-learning (RL)-based post-training typically requires substantial environment interactions, a burden that is especially significant in manipulation, where each trial can be slow, costly, or destructive. Therefore, we present PEARS, a physics-prior-guided hybrid RL framework for sample-efficient online adaptation of pretrained policies with tactile feedback. After each episode, its physics-guided force reasoning (PFR) module uses physical priors encoded in a vision-language model (VLM) to diagnose failures from the visual outcome and tactile interaction history and update task-appropriate contact-force bounds. A high-frequency hybrid force-position controller then enforces these bounds during contact. Complementarily, tactile-conditioned diffusion steering reinforcement learning adjusts the latent noise of the frozen flow-matching policy to correct errors in free-space motion and contact timing without updating the base model. In simulation, PEARS improves success rates by 12.4-37.4 percentage points over the strongest per-task baselines. PEARS also reduces the number of interaction episodes required for a certain success threshold by up to 53.2% relative to the fastest baseline. In real-world experiments, PEARS achieves success rates of 95% on Whiteboard Erasing and 90% on Pipette Liquid Aspiration. These results show that combining the PFR module with policy steering can accelerate adaptation while reducing costly interactions. The project website is available at https://song-kun.github.io/pears.",
+      "published": "2026-10-06T17:59:03Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08784",
+      "pdf_url": "https://arxiv.org/pdf/2610.08784",
+      "summary_zh": "预训练机器人策略在部署中遇到分布外条件时性能会大幅下降，而基于强化学习的后训练通常需要大量昂贵甚至危险的真实交互。为此，作者提出PEARS，一个物理先验引导的混合强化学习框架：通过物理引导力推理模块利用VLM中的物理先验诊断失败并更新接触力边界，再由高频混合力位控制器执行，同时用触觉条件扩散引导强化学习调整冻结流匹配策略的潜在噪声。在仿真中成功率提升12.4-37.4个百分点，达到阈值所需交互回合减少最多53.2%，真实实验中白板擦除和移液管吸液成功率分别达95%和90%，表明该方法能加速适应并减少昂贵交互。",
+      "summary_en": "Pretrained robotic policies degrade substantially under out-of-distribution deployment conditions, motivating post-training through real-world interaction, but RL-based post-training demands many costly or destructive trials. PEARS is a physics-prior-guided hybrid RL framework that combines a physics-guided force reasoning module, which uses VLM-encoded priors to diagnose failures and update contact-force bounds enforced by a high-frequency hybrid force-position controller, with tactile-conditioned diffusion steering RL that adjusts the latent noise of a frozen flow-matching policy without updating the base model. In simulation, PEARS improves success rates by 12.4-37.4 percentage points and reduces required interaction episodes by up to 53.2%, while real-world experiments achieve 95% on Whiteboard Erasing and 90% on Pipette Liquid Aspiration, showing accelerated adaptation with fewer costly interactions.",
+      "highlights_zh": [
+        "物理先验VLM诊断失败并更新力边界",
+        "仿真成功率提升12.4-37.4个百分点",
+        "真实任务成功率90-95%，交互更少"
+      ]
+    },
+    {
+      "id": "2610.08771",
+      "title": "Mission-Aware Attestation Envelopes for Time-Critical Autonomous Action: A Hardware-in-the-Loop V2I Study",
+      "authors": [
+        "Dimitrios Nikou",
+        "Nikolaos Kekatos",
+        "Sophia Petridou",
+        "Stylianos Basagiannis"
+      ],
+      "abstract": "An autonomous system that asks for a privileged physical action is usually gated on integrity evidence: a platform proves what it is running, and the request is granted or refused on that basis. Such a gate is normally treated as a predicate, yet the evidence behind it has an age, the decision that consumes it has a latency, and the physical system that waits for it has a deadline. We formulate mission-aware attestation as a runtime assurance contract that holds only when integrity is valid, the evidence is fresh enough, and the decision completes inside a budget derived from the current physical state. The contract yields four operational outcomes where a binary gate yields two, separating a refusal caused by tampering from one caused by stale evidence and from one caused by a late decision. We evaluate it on a hardware-in-the-loop vehicle-to-infrastructure platform: a driving simulator supplies the physical state and the authorisation deadline, while a microcontroller on-board unit and a TPM-backed roadside unit running Linux integrity measurement supply the assurance evidence. A security-blind model admits the whole operating space and a hardware-informed one three quarters of it, and every point it refuses fails the freshness margin rather than the response margin. Moving the attestation interval across the range the verifier permits costs about as much as a fivefold scaling of the latency distribution, and the interval is directly configurable, which makes it the immediately actionable deployment parameter. If the freshness bound does not exceed the authorisation budget, every late decision is also stale and lateness becomes unobservable, so the attestation interval and the freshness bound cannot be chosen from security requirements alone.",
+      "published": "2026-10-06T17:55:18Z",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08771",
+      "pdf_url": "https://arxiv.org/pdf/2610.08771",
+      "summary_zh": "自动驾驶系统请求特权物理动作时通常依赖完整性证据进行二元门控，但证据有年龄、决策有延迟、物理系统有截止时间，传统谓词式门控无法区分篡改、证据过期和决策超时。本文将任务感知证明形式化为运行时保证契约，要求完整性有效、证据足够新鲜且决策在由物理状态导出的预算内完成，从而产生四种操作结果，并在硬件在环V2I平台上用驾驶模拟器、微控制器车载单元和TPM路侧单元进行验证。实验表明安全盲模型接受全部操作空间而硬件感知模型仅接受四分之三，所有拒绝均因新鲜度而非响应裕度失败，证明间隔与新鲜度边界不能仅由安全需求决定，证明间隔是可立即操作的部署参数。",
+      "summary_en": "Autonomous systems requesting privileged physical actions are typically gated on integrity evidence as a binary predicate, ignoring evidence age, decision latency, and physical deadlines. This paper formulates mission-aware attestation as a runtime assurance contract requiring valid integrity, sufficiently fresh evidence, and decision completion within a budget derived from physical state, yielding four operational outcomes instead of two, evaluated on a hardware-in-the-loop V2I platform with a driving simulator, microcontroller OBU, and TPM-backed RSU. Results show a security-blind model admits the whole operating space while a hardware-informed one admits three quarters, with all refusals failing freshness rather than response margin, and attestation interval costs as much as a fivefold latency scaling, making it the actionable deployment parameter and showing interval and freshness bound cannot be chosen from security requirements alone.",
+      "highlights_zh": [
+        "将二元门控扩展为四结果运行时保证契约",
+        "硬件感知模型接受四分之三操作空间",
+        "证明间隔是可直接配置的部署参数"
+      ]
+    },
+    {
+      "id": "2610.08780",
+      "title": "DepthWorld: 3D World Model for Robot Manipulation",
+      "authors": [
+        "Jai Bardhan",
+        "Josef Sivic",
+        "Vladimir Petrik"
+      ],
+      "abstract": "World models offer a data-driven alternative to traditional simulators for robotics, with applications spanning policy evaluation, improvement, and planning. All of these uses depend on faithful 3D geometry, yet current video-based world models are trained on RGB alone and produce rollouts that look correct frame-by-frame but do not compose into a consistent 3D world. Closing this gap requires progress on two fronts: large-scale 3D supervision for manipulation, and an architecture that can absorb it without disturbing strong pretrained video priors. We introduce a calibration pipeline that combines learned stereo depth with a joint factor graph, pooling all episodes collected from the same physical robot to recover its shared kinematic parameters alongside per-scene extrinsics. Applied to the DROID dataset, this yields DROID-3D, a calibrated 3D dataset providing dense metric depth and recalibrated multi-view extrinsics (achieving <0.7 px reprojection error on 90% of episodes for external cameras). We then train DepthWorld, a Stable Video Diffusion-based world model that jointly predicts multi-view RGB and depth via spatial latent tiling, leaving the pretrained Variational Autoencoder (VAE) unchanged. Depth supervision improves RGB prediction itself by +1.48 dB PSNR over an identical RGB-only baseline at equal training budget, while simultaneously yielding accurate metric depth for downstream geometric reasoning.",
+      "published": "2026-10-06T17:59:00Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.08780",
+      "pdf_url": "https://arxiv.org/pdf/2610.08780",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    }
+  ]
+}
