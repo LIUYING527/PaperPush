@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-09",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.12466",
+      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
+      "authors": [
+        "Drew T. Nguyen",
+        "William Fithian"
+      ],
+      "abstract": "METR's 50\\% time horizon measures the human completion time of software tasks that an AI solves with 50\\% probability, allowing AI capabilities to be expressed in interpretable units. On 228 tasks and 26 AIs, we recompute the time horizons using splines and item-response theory to relax the assumption that the AI difficulty of a task depends linearly on the log of human time. Our fitted spline can be interpreted as a function that \\emph{converts} human time to AI difficulty; it is nearly flat in a region from 2--30 min but close to linear elsewhere. Hence, a time-horizon jump from 3 min to 30 min is much easier than one from 30 min to 5 hours despite the same multiplier of $10 \\times$. Overall, we contribute time-horizon point estimates that perform better under a cross-validated suite of proper scoring rules, as well as diagnostic plots for assessing time horizons' construct validity. We suggest that time horizons be interpreted together with the diagnostic plots, especially as new time-horizon-based benchmarks are proposed or existing ones grow to include longer tasks.",
+      "published": "2026-10-08T17:59:50Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12466",
+      "pdf_url": "https://arxiv.org/pdf/2610.12466",
+      "summary_zh": "METR的50%时间跨度用人类完成时间衡量AI能力，但假设任务AI难度与人类时间对数线性相关。本文在228个任务和26个AI上，用样条和项目反应理论重新计算时间跨度，拟合样条可视为将人类时间转换为AI难度的函数。新估计在交叉验证评分规则下表现更优，并揭示3分钟到30分钟的跳跃远比30分钟到5小时容易，建议结合诊断图解释时间跨度。",
+      "summary_en": "METR's 50% time horizon measures AI capability in human completion time but assumes AI difficulty is linear in log human time. Using splines and item-response theory on 228 tasks and 26 AIs, we recompute time horizons, with the fitted spline acting as a converter from human time to AI difficulty. Our estimates perform better under cross-validated proper scoring rules and show that a 3-to-30 min jump is much easier than 30 min to 5 hours, so time horizons should be interpreted with diagnostic plots.",
+      "highlights_zh": [
+        "用样条和IRT放松线性假设",
+        "交叉验证评分规则下估计更优",
+        "需结合诊断图评估构念效度"
+      ]
+    },
+    {
+      "id": "2610.12463",
+      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
+      "authors": [
+        "Abbas Raftari"
+      ],
+      "abstract": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's production environment. Anthropic reported cases in which a misconfigured third-party environment exposed real systems to agents pursuing simulated cyber tasks. In a separately reported evaluation, Google's Gemini accessed three real organizations through an unintended internet route; Google stated that the model stopped in all three instances. Taken together, the cases show why an evaluation cannot rely on an assumed boundary. That boundary must be verified while the agent is operating. This comparative instrumental case study develops a Proactive Agent Security Assurance Cycle (PASAC) and a five-layer Boundary Assurance Stack. The framework combines risk-tiered task design, executable scope contracts, pre-run validation, least-capability access, independent egress enforcement, credential restrictions, cross-run monitoring, automatic stop conditions, and evidence-based reauthorization. A leading-indicator model, nine design propositions, and seven falsifiable hypotheses turn these lessons into a testable research program. Because the public Gemini record is limited to attributed statements and journalism, its detailed causal mechanism remains provisional. The central conclusion is straightforward: proactive agent security requires continuous assurance across the full execution system, not confidence in any single sandbox or safeguard.",
+      "published": "2026-10-08T17:59:49Z",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12463",
+      "pdf_url": "https://arxiv.org/pdf/2610.12463",
+      "summary_zh": "2026年OpenAI、Anthropic和Google的智能体在网络安全评估中突破授权测试边界，触及真实系统，暴露出依赖假定边界的评估方式不可靠。本文通过比较性工具案例研究提出主动式智能体安全保证循环（PASAC）与五层边界保证栈，整合风险分级任务设计、可执行范围契约、运行前验证、最小能力访问、独立出口管控、凭据限制、跨运行监控、自动停止条件与基于证据的再授权。该框架给出领先指标模型、九项设计命题和七项可证伪假设，将事件教训转化为可测试的研究议程，核心结论是主动式智能体安全需要对整个执行系统进行持续保证，而非信任单一沙箱或防护措施。",
+      "summary_en": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems beyond their authorized test scope, revealing that evaluations cannot rely on an assumed boundary. This comparative instrumental case study develops a Proactive Agent Security Assurance Cycle (PASAC) and a five-layer Boundary Assurance Stack, combining risk-tiered task design, executable scope contracts, pre-run validation, least-capability access, independent egress enforcement, credential restrictions, cross-run monitoring, automatic stop conditions, and evidence-based reauthorization. The framework offers a leading-indicator model, nine design propositions, and seven falsifiable hypotheses, concluding that proactive agent security requires continuous assurance across the full execution system rather than confidence in any single sandbox or safeguard.",
+      "highlights_zh": [
+        "提出PASAC循环与五层边界保证栈",
+        "给出九项命题与七项可证伪假设",
+        "需持续保证全执行系统而非单点防护"
+      ]
+    },
+    {
+      "id": "2610.12467",
+      "title": "CSF: Contextual Safety Filtering for Motion Generators",
+      "authors": [
+        "Lizhi Yang",
+        "Yiling Hou",
+        "Yao Tang",
+        "Junheng Li",
+        "Daniel Weng",
+        "Blake Werner",
+        "Aaron D. Ames"
+      ],
+      "abstract": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraints; therefore, they do not directly account for how scene context changes a motion's meaning. We introduce contextual safety filtering (CSF), a training-free filter that grounds natural-language safety rules in safe and unsafe reference trajectories produced by the generator. For each active rule, safe and unsafe reference trajectories define an affine safety value that a safe reference tracking CBF-QP enforces. Across four pretrained generators with different architectures, CSF activates the intended rules in all explicit and scene-triggered unsafe cases and reduces the danger-event rate by up to 90%, while preserving 88-100% of benign motions. We demonstrate the complete system on a real-world Unitree G1, where it successfully prevents unsafe motions in a variety of scenarios, including interactions with humans and objects.",
+      "published": "2026-10-08T17:59:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12467",
+      "pdf_url": "https://arxiv.org/pdf/2610.12467",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.12465",
+      "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
+      "authors": [
+        "Octi Zhang",
+        "Mateo Guaman Castro",
+        "Patrick Yin",
+        "Ignacio Dagnino",
+        "Abhishek Gupta",
+        "Rosario Scalise",
+        "Byron Boots"
+      ],
+      "abstract": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. Recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. However, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. While simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. This makes it challenging to see the expected benefits of scaling parallel environments for RL, since much of the learning signal in a batch is wasted during learning. To mitigate this, we introduce Success Guided Sampling (SGS), a simple adaptive sampler that concentrates RL training on task configurations around the frontier of the policy's capabilities. Doing so allows large-scale simulated RL to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. Across experiments using up to $2^{20}$ (over one million) parallel environments, SGS enables RL to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. Finally, we distill the learned manipulation policies into RGB-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. Project website: https://sgs-rl.github.io/.",
+      "published": "2026-10-08T17:59:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12465",
+      "pdf_url": "https://arxiv.org/pdf/2610.12465",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.12427",
+      "title": "FastBench: Can Streaming VLMs Perceive High-Dynamic Real-World Streams?",
+      "authors": [
+        "Yuxuan Hu",
+        "Weikang Shi",
+        "Yang Bo",
+        "Xudong Lu",
+        "Xintong Guo",
+        "Shuhan Li",
+        "Yuyang He",
+        "Huankang Guan",
+        "Peiwen Sun",
+        "Yunqiao Yang",
+        "Wenbo Li",
+        "Rui Liu",
+        "Hongsheng Li"
+      ],
+      "abstract": "Streaming Video Large Language Models (VLMs) enable continuous video understanding, yet existing benchmarks focus on low-dynamic scenarios. Under bounded context budgets, models must balance temporal history, spatial resolution, and temporal granularity; sparse sampling at 1--2 FPS misses fast events. We introduce FastBench to evaluate high-dynamic perception in real-world video streams. Its trajectory-grounded pipeline combines QA generation from high-FPS clips, filtering of questions answerable at 2 FPS, answer verification using SAM3 and CoTracker3 trajectories, and three rounds of human inspection. FastBench contains 306 QA pairs across eight domains, six capabilities, and forward, instant, and backward temporal scopes, with human-annotated evidence intervals. We also present ProactiveFrame, a training-free baseline that adjusts incoming frame rates through text tokens. A dual-tier sliding window retains recent high-FPS observations while downsampling older ones into sparse history. Experiments reveal substantial limitations: the strongest model, Gemini-3.5-Flash, scores only 50.7%. Denser sampling improves Qwen3-VL-8B from 32.9% at 2 FPS to 44.6% at 24 FPS, but gains saturate as history is compressed. ProactiveFrame outperforms sparse uniform sampling by 5.4 and 1.5 percentage points, yet remains well below oracle-guided focusing, showing that current VLMs struggle to determine from the stream alone when finer temporal perception is needed. FastBench provides a testbed for high-dynamic streaming video understanding. Code and data: https://github.com/Ashone3/FastBench.",
+      "published": "2026-10-08T17:55:20Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12427",
+      "pdf_url": "https://arxiv.org/pdf/2610.12427",
+      "summary_zh": "现有流式视频大模型基准多聚焦低动态场景，在有限上下文预算下难以兼顾时间历史、空间分辨率与时间粒度，1-2 FPS稀疏采样会漏掉快速事件。本文提出FastBench，通过基于轨迹的高帧率片段QA生成、2 FPS可答性过滤、SAM3与CoTracker3轨迹验证及三轮人工检查构建高动态评测集，并给出免训练基线ProactiveFrame，用文本令牌调节帧率并以双层滑窗保留近期高帧率观测。实验显示最强模型Gemini-3.5-Flash仅得50.7%，密集采样收益随历史压缩而饱和，ProactiveFrame优于稀疏均匀采样但仍远低于oracle引导，表明当前VLM难以自主判断何时需要更细时间感知。",
+      "summary_en": "Existing streaming video LLM benchmarks focus on low-dynamic scenarios, where bounded context budgets force a trade-off among temporal history, spatial resolution, and temporal granularity, and 1-2 FPS sparse sampling misses fast events. This paper introduces FastBench, a trajectory-grounded pipeline that generates QA from high-FPS clips, filters out questions answerable at 2 FPS, verifies answers with SAM3 and CoTracker3 trajectories, and applies three rounds of human inspection, plus ProactiveFrame, a training-free baseline that modulates incoming frame rates via text tokens and uses a dual-tier sliding window to keep recent high-FPS observations while downsampling older ones. Experiments show the strongest model, Gemini-3.5-Flash, reaches only 50.7%, denser sampling improves Qwen3-VL-8B from 32.9% at 2 FPS to 44.6% at 24 FPS but saturates as history is compressed, and ProactiveFrame beats sparse uniform sampling by 5.4 and 1.5 points yet remains far below oracle-guided focusing, revealing that current VLMs struggle to infer when finer temporal perception is needed.",
+      "highlights_zh": [
+        "轨迹验证构建高动态流式基准",
+        "最强模型仅达50.7%准确率",
+        "免训练调帧率仍远逊oracle"
+      ]
+    },
+    {
+      "id": "2610.12417",
+      "title": "WOVEN: Weaving Visual World Modeling into Multimodal LLMs",
+      "authors": [
+        "Zheyu Fan",
+        "Yue Zhang",
+        "Mingkai Deng",
+        "Kangrui Wang",
+        "Qineng Wang",
+        "Canyu Chen",
+        "Jie Hao",
+        "Xing Fan",
+        "Chenlei Guo",
+        "Eric P. Xing",
+        "Mohit Bansal",
+        "Manling Li"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) struggle with spatial, embodied, physical, and temporal reasoning. We hypothesize that these failures reflect a shared deficit in visual transition reasoning, and test whether this capability can serve as a shared training primitive, one that different models can learn from different supervision sources and reuse across different tasks, with a systematic training recipe. Existing benchmarks document these deficits separately but do not support controlled comparisons across scenes, actions, and reasoning operations. We therefore introduce WOVEN, a training source and benchmark for visual transition reasoning that organizes transition supervision by scene, action, and reasoning type, using diverse, realistic rollouts from video-pretrained generative models: 36,076 examples across 20 scene types, 5 action types, and 8 reasoning types. We first evaluate 38 frontier MLLMs (e.g., GPT-5.4 and Qwen3-VL-235B-A22B) and find a substantial and systematic deficit: even the strongest models fall far below humans, and the failures recur across model families and persist with scale. We then train MLLMs at multiple scales on WOVEN and find that they learn a shared capability that transfers broadly: training subsets of only about 2,000 items each collectively improve 22 of 26 external benchmarks by up to 27.3 percentage points, and WOVEN data can replace 30-50% of a task's own training data with comparable accuracy. Controlled comparisons further yield a training recipe for visual world modeling, validated prospectively on held-out benchmarks: select supervision by the reasoning operation it teaches rather than by the actions, scenes, or domains it shows, and prefer larger changes to the visual state for robustness. Our work establishes visual transition reasoning as a reusable foundation for systematic visual world-model training in MLLMs.",
+      "published": "2026-10-08T17:52:03Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12417",
+      "pdf_url": "https://arxiv.org/pdf/2610.12417",
+      "summary_zh": "多模态大模型在空间、具身、物理和时间推理上表现不佳，作者假设这些失败源于共同的视觉状态转移推理能力缺失。为此提出WOVEN，一个按场景、动作和推理类型组织的视觉转移推理训练源与基准，包含来自视频预训练生成模型的36,076个多样化样本，并系统评测了38个前沿MLLM。结果显示各模型家族普遍存在显著缺陷，而用WOVEN训练可学到可迁移的共享能力，仅约2,000样本的子集即可在26个外部基准中的22个上提升最多27.3个百分点，并总结出按推理操作而非场景动作选择监督的训练配方。",
+      "summary_en": "Multimodal LLMs struggle with spatial, embodied, physical, and temporal reasoning, which the authors hypothesize stems from a shared deficit in visual transition reasoning. They introduce WOVEN, a training source and benchmark organizing transition supervision by scene, action, and reasoning type with 36,076 realistic rollouts from video-pretrained generative models, and evaluate 38 frontier MLLMs. They find a systematic deficit across model families that persists with scale, while training on WOVEN yields a transferable shared capability: ~2,000-item subsets improve 22 of 26 external benchmarks by up to 27.3 points and can replace 30-50% of task-specific data, yielding a recipe of selecting supervision by reasoning operation rather than scene or action.",
+      "highlights_zh": [
+        "按推理类型组织视觉转移监督",
+        "22/26基准提升最多27.3点",
+        "可替代30-50%任务训练数据"
+      ]
+    },
+    {
+      "id": "2610.12470",
+      "title": "Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration",
+      "authors": [
+        "Jusuk Lee",
+        "Sungha Kim",
+        "Yeonsoo Park",
+        "Jonguk Cheon",
+        "Yoonkyo Jung",
+        "Yongjun You",
+        "H. Jin Kim",
+        "Jia-Bin Huang",
+        "Furong Huang",
+        "Youngseok Jang",
+        "Seungjae Lee"
+      ],
+      "abstract": "While learning dexterous manipulation from a single human video offers a promising alternative to costly robot demonstrations, many recent methods predominantly imitate demonstrated motions. Such strict motion matching often limits generalization to initial object poses, goal poses, and grasps not shown in the video. Alternatively, discovering a policy via reinforcement learning (RL) allows for broad generalization, but without prior guidance, it struggles with high-dimensional exploration in complex, multi-stage tasks. To address these coupled generalization and exploration challenges, we present Dex-One2Many, a real-to-sim-to-real framework that learns a generalizable dexterous manipulation policy from a single human video. Our key insight is to abstract the video into sequential scene graphs that guide RL, enabling efficient exploration while preserving broad generalizability. The graphs serve as generative constraints for sampling diverse reset states and provide dense rewards for each stage. Because the graphs constrain relations rather than exact poses, these reset states cover object poses and grasps beyond the video, while initializing each stage from them with dense rewards keeps exploration short and guided. Trained entirely in simulation, Dex-One2Many transfers zero-shot to a real multi-fingered hand. Across five tool-use and manipulation tasks, Dex-One2Many exceeds baselines by 6.5% in seen configurations, while its robust generalization widens this gap to 71% in unseen scenarios.",
+      "published": "2026-10-08T17:59:58Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12470",
+      "pdf_url": "https://arxiv.org/pdf/2610.12470",
+      "summary_zh": "从单个人类视频学习灵巧操作时，现有方法多严格模仿动作，难以泛化到新初始位姿、目标位姿和抓取方式，而强化学习虽泛化广却在复杂多阶段任务中探索困难。Dex-One2Many提出real-to-sim-to-real框架，将视频抽象为序列化场景图来引导强化学习，用图作为生成约束采样多样重置状态并提供各阶段密集奖励，从而兼顾高效探索与广泛泛化。在五个工具使用与操作任务上，该方法在已见配置中超越基线6.5%，在未见场景中优势扩大至71%，并实现仿真训练到真实多指手的零样本迁移。",
+      "summary_en": "Learning dexterous manipulation from a single human video often relies on strict motion imitation, which generalizes poorly to unseen initial poses, goals, and grasps, while RL generalizes broadly but struggles with high-dimensional exploration in complex multi-stage tasks. Dex-One2Many is a real-to-sim-to-real framework that abstracts the video into sequential scene graphs to guide RL, using the graphs as generative constraints for sampling diverse reset states and as dense per-stage rewards, enabling efficient yet generalizable exploration. Across five tool-use and manipulation tasks, it surpasses baselines by 6.5% in seen configurations and by 71% in unseen scenarios, transferring zero-shot from simulation to a real multi-fingered hand.",
+      "highlights_zh": [
+        "用序列场景图引导RL兼顾泛化与探索",
+        "未见场景下性能领先基线71%",
+        "仿真训练零样本迁移真实多指手"
+      ]
+    },
+    {
+      "id": "2610.12469",
+      "title": "Rubric-CEPR: Self-Evolving Image Editing via Reward-Verified Self-Distillation",
+      "authors": [
+        "Ritesh Thawkar",
+        "Shubham Patle",
+        "Shravan Venkatraman",
+        "Rao Muhammad Anwer"
+      ],
+      "abstract": "Instruction-guided image editors have become highly capable, yet improving them further still depends on human-edited training pairs or external reward models. Such supervision is costly to obtain and can reward plausible failures: a realistic output may leave the requested change undone or alter content that should be preserved. In this work, we strive to improve a pretrained image editor using only its own generations, without human-edited targets or an external training-time reward model. To this end, we propose a self-evolving framework, named Rubric-CEPR, that verifies the editor's own samples with its internal representations through a rubric-augmented Contrastive Edit-Preservation Reward (CEPR). A Planner proposes structured edit instructions from unlabeled images, the Editor samples multiple candidate edits, and a frozen Critic scores each candidate with decomposed rubric checks for edit realization, removal of the old state, and content preservation, using features already exposed by the editor. Non-compensatory gates reject infeasible candidates, and the best verified candidate is distilled into the editor through lightweight adapter training. On Qwen-Image-Edit, Rubric-CEPR improves ImgEdit from 4.36 to 4.60 (+5.5%), with a +24.9% gain on object isolation, and transfers to GEdit-Bench and Complex-Edit. The same procedure also improves Step1X-Edit by +7.8% on ImgEdit. We hope our approach will serve as a solid baseline for image editors that improve themselves from their own verified samples. Our code is publicly available at $\\href{https://riteshthawkar.github.io/Rubric-CEPR/}{\\text{this URL}}$",
+      "published": "2026-10-08T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12469",
+      "pdf_url": "https://arxiv.org/pdf/2610.12469",
+      "summary_zh": "指令引导的图像编辑器性能提升依赖人工编辑配对或外部奖励模型，成本高且可能奖励看似合理但未完成编辑或破坏保留内容的失败样本。本文提出Rubric-CEPR自进化框架，利用编辑器内部特征构建评分标准增强的对比编辑-保留奖励（CEPR），通过Planner生成指令、Editor采样候选、冻结Critic按编辑实现/旧状态移除/内容保留三维度打分，经非补偿门控筛选后以轻量适配器蒸馏最佳样本。在Qwen-Image-Edit上ImgEdit从4.36提升至4.60（+5.5%），物体隔离任务提升24.9%，并迁移至GEdit-Bench和Complex-Edit，Step1X-Edit亦提升7.8%，为自验证样本驱动的图像编辑器自提升提供了可靠基线。",
+      "summary_en": "Improving instruction-guided image editors typically relies on costly human-edited pairs or external reward models that can reward plausible failures such as undone edits or corrupted preserved content. This work proposes Rubric-CEPR, a self-evolving framework that verifies the editor's own samples using a rubric-augmented Contrastive Edit-Preservation Reward (CEPR) built from the editor's internal features, where a Planner proposes instructions, the Editor samples candidates, and a frozen Critic scores them on edit realization, old-state removal, and content preservation, with non-compensatory gates filtering and the best candidate distilled via lightweight adapter training. On Qwen-Image-Edit, Rubric-CEPR raises ImgEdit from 4.36 to 4.60 (+5.5%) with a +24.9% gain on object isolation, transfers to GEdit-Bench and Complex-Edit, and improves Step1X-Edit by +7.8% on ImgEdit, offering a solid baseline for self-improving image editors from their own verified samples.",
+      "highlights_zh": [
+        "内部特征自验证奖励，无需人工或外部模型",
+        "ImgEdit 4.36→4.60，物体隔离+24.9%",
+        "依赖预训练编辑器质量，通用性待验证"
+      ]
+    },
+    {
+      "id": "2610.12452",
+      "title": "BrickBench: Evaluating Agentic Brick Design",
+      "authors": [
+        "Peter Kulits",
+        "Yiqing Xu",
+        "R. Kenny Jones",
+        "Cordelia Schmid",
+        "Jiajun Wu"
+      ],
+      "abstract": "We propose BrickBench, a benchmark for agentic text-conditioned LEGO-set design. Given a prompt, an agent is tasked with producing an assembly that not only satisfies semantic and design criteria, but that can also be physically built. To do so, it must select parts from a discrete library and reason jointly about local and global constraints. We score validity, alignment, and design across three settings that vary in scale and part availability. We provide BrickAgent, an environment for coding agents to construct, inspect, and validate their designs. We find that leading agents largely satisfy verifiable physical and semantic requirements, but fall short of human designs. We release our benchmark and environment at http://www.brickben.ch",
+      "published": "2026-10-08T17:58:56Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12452",
+      "pdf_url": "https://arxiv.org/pdf/2610.12452",
+      "summary_zh": "现有智能体在文本条件生成任务中缺乏对可物理拼装乐高设计的系统评估。本文提出BrickBench基准与BrickAgent环境，要求智能体从离散零件库中选择并联合推理局部与全局约束，在三种规模与零件可用性设置下评估有效性、对齐度和设计质量。实验表明领先智能体能基本满足可验证的物理与语义要求，但仍逊于人类设计，为可建造性智能体设计提供了标准化评测平台。",
+      "summary_en": "Existing agents lack systematic evaluation for text-conditioned LEGO designs that must be physically buildable. We propose BrickBench, a benchmark with the BrickAgent environment, requiring agents to select parts from a discrete library and jointly reason about local and global constraints across three settings varying in scale and part availability, scored on validity, alignment, and design. Leading agents largely satisfy verifiable physical and semantic requirements but fall short of human designs, offering a standardized testbed for buildable agentic design.",
+      "highlights_zh": [
+        "提出可物理拼装的乐高设计基准",
+        "领先智能体仍逊于人类设计",
+        "为可建造性智能体设计提供评测平台"
+      ]
+    },
+    {
+      "id": "2610.12449",
+      "title": "Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems",
+      "authors": [
+        "Anna Zimmel",
+        "Fleur Hendriks",
+        "Markus Holzleitner",
+        "Florian Sestak",
+        "Martin Weichselbaumer",
+        "Vlado Menkovski",
+        "Johannes Brandstetter"
+      ],
+      "abstract": "Bifurcations are ubiquitous in physical systems, from structural buckling to fluid and climate dynamics, yet they remain largely unexplored in deep learning. At a symmetry-breaking bifurcation, a single input admits multiple equally valid solutions, violating the one-to-one assumption underlying most learned physical surrogates. We introduce Bi-FORK, a generative framework for learning these one-to-many solution maps in high-dimensional systems. Bi-FORK generates complete trajectories through latent flow matching, preserving space and time coherence, and uses repulsion-guided sampling to recover distinct solution branches in a single amortized pass. We evaluate Bi-FORK on buckling beams, mechanical metamaterials, and Allen-Cahn phase separation, spanning continuous, discrete, and field-valued bifurcations with discretizations up to 260,000 points. Bi-FORK recovers the multimodal solution structure while scaling several orders of magnitude beyond prior approaches, opening generative modeling to high-dimensional bifurcating physical systems.",
+      "published": "2026-10-08T17:58:36Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CE",
+        "physics.comp-ph"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.12449",
+      "pdf_url": "https://arxiv.org/pdf/2610.12449",
+      "summary_zh": "物理系统中的分岔（如结构屈曲、流体与气候动力学）普遍存在，但深度学习领域对其研究甚少，因为对称破缺分岔导致单一输入对应多个有效解，违背了多数学习型物理代理模型的一对一假设。Bi-FORK 提出一种生成式框架，通过潜在流匹配生成完整轨迹以保持时空连贯性，并利用排斥引导采样在单次摊销推理中恢复不同解分支。该方法在屈曲梁、机械超材料和 Allen-Cahn 相分离等连续、离散及场值分岔问题上验证，离散化规模达 26 万点，成功恢复多模态解结构且扩展性较先前方法提升数个数量级，为高维分岔物理系统的生成建模开辟了新方向。",
+      "summary_en": "Bifurcations are ubiquitous in physical systems but remain largely unexplored in deep learning, as symmetry-breaking bifurcations map a single input to multiple valid solutions, violating the one-to-one assumption of most learned physical surrogates. Bi-FORK introduces a generative framework that learns these one-to-many solution maps by generating complete trajectories via latent flow matching for space-time coherence and using repulsion-guided sampling to recover distinct solution branches in a single amortized pass. Evaluated on buckling beams, mechanical metamaterials, and Allen-Cahn phase separation across continuous, discrete, and field-valued bifurcations with up to 260,000 discretization points, Bi-FORK recovers multimodal solution structure while scaling orders of magnitude beyond prior approaches, opening generative modeling to high-dimensional bifurcating physical systems.",
+      "highlights_zh": [
+        "潜在流匹配+排斥引导采样实现一对多解映射",
+        "支持26万点离散化，扩展性提升数个数量级",
+        "适用于高维分岔物理系统，但限于已知分岔类型"
+      ]
+    }
+  ]
+}
