@@ -1,0 +1,294 @@
+{
+  "date": "2026-10-13",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.13948",
+      "title": "Can Language Models Play the Wikipedia Game?",
+      "authors": [
+        "Alexander Hickey",
+        "Joanna Knight",
+        "James Bishop"
+      ],
+      "abstract": "Language models increasingly support or automate information retrieval from document collections too large to index. This task is difficult when it requires specialist linguistic or scientific knowledge. We used the Wikipedia Game to test language models on an analogous information retrieval task. In the game, players must reach a target article using only article links. We compared sentence embedding models and LLMs across five Wikipedia languages and five academic-literature datasets. We construct very large local graphs of Wikipedia pages and of paper citations using OpenAlex and provide code to build and navigate them. This allows the study of language models' navigation capabilities without relying on third-party APIs. We compared the models with human and TF-IDF benchmarks. The Wikipedia Game format enables robust comparisons across techniques, languages, and domains. No model significantly outperformed humans, although the best models (GPT-o3 mini, GPT-4o, QwQ:32B, and DeepSeek-R1:70B) achieved comparable success. Performance and rankings varied across languages and topics, with implications for practitioners utilising these techniques.",
+      "published": "2026-10-09T17:59:56Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13948",
+      "pdf_url": "https://arxiv.org/pdf/2610.13948",
+      "summary_zh": "当文档集合过大而无法建立索引时，语言模型越来越多地用于支持或自动化信息检索，而维基百科游戏提供了一种测试此类能力的任务。该研究构建了维基百科页面和OpenAlex论文引用的超大规模本地图，并在五种维基百科语言和五个学术文献数据集上比较了句子嵌入模型与LLM，以人类和TF-IDF为基准。结果显示没有模型显著超越人类，但GPT-o3 mini、GPT-4o、QwQ:32B和DeepSeek-R1:70B达到了与人类相当的水平，且性能因语言和主题而异，对实践者具有参考意义。",
+      "summary_en": "Language models increasingly support or automate information retrieval from document collections too large to index, and the Wikipedia Game offers an analogous task for testing this capability. The study constructs very large local graphs of Wikipedia pages and OpenAlex paper citations, then compares sentence embedding models and LLMs across five Wikipedia languages and five academic-literature datasets against human and TF-IDF benchmarks. No model significantly outperformed humans, though GPT-o3 mini, GPT-4o, QwQ:32B, and DeepSeek-R1:70B achieved comparable success, with performance and rankings varying across languages and topics, offering implications for practitioners.",
+      "highlights_zh": [
+        "构建超大规模本地图，无需第三方API",
+        "最佳模型与人类表现相当但未超越",
+        "性能因语言和主题而异，需谨慎应用"
+      ]
+    },
+    {
+      "id": "2610.13935",
+      "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+      "authors": [
+        "Bhanu Tokas",
+        "Rahul Nair",
+        "Rockwell Jackson",
+        "Hannah Kerner"
+      ],
+      "abstract": "Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts. Existing concept-based methods can only interpret classification and regression models. They require access to model weights or large concept-annotated datasets, and most methods cannot provide image-level attribution. We propose Hide and Seek (HnS), a new method for concept-level attribution that does not require access to model weights or labeled concept datasets. HnS can interpret a wide range of vision models. Given a concept and image set, HnS retrieves concept-aligned images using a vision-language model, localizes the concept within each image, masks the localized region, and measures attribution from the change in the black-box model's output between the original and masked images. This enables faithful attribution by directly measuring the model's behavior and supporting local attributions. We validated HnS on CelebA and COCO-Stuff. Compared to existing methods, HnS showed better agreement with ground-truth attributions. We demonstrated the applicability of HnS on diverse tasks, including image captioning and satellite image segmentation, where no existing concept attribution method can be used. We provided our anonymous code in the supplementary material.",
+      "published": "2026-10-09T17:56:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13935",
+      "pdf_url": "https://arxiv.org/pdf/2610.13935",
+      "summary_zh": "现有概念归因方法仅能解释分类和回归模型，且需访问模型权重或大量概念标注数据，大多无法提供图像级归因。本文提出Hide and Seek（HnS），利用视觉语言模型检索概念对齐图像并定位、掩码概念区域，通过黑盒模型输出变化直接测量归因，无需模型权重或标注概念数据集。在CelebA和COCO-Stuff上，HnS与真实归因的一致性优于现有方法，并成功应用于图像描述和卫星图像分割等此前无法使用概念归因的任务。",
+      "summary_en": "Existing concept-based attribution methods can only interpret classification and regression models, require access to model weights or large concept-annotated datasets, and mostly cannot provide image-level attribution. We propose Hide and Seek (HnS), which uses a vision-language model to retrieve concept-aligned images, localizes and masks the concept region, and measures attribution from the black-box model's output change between original and masked images, requiring no model weights or labeled concept data. On CelebA and COCO-Stuff, HnS showed better agreement with ground-truth attributions than existing methods and was demonstrated on diverse tasks such as image captioning and satellite image segmentation where no existing concept attribution method applies.",
+      "highlights_zh": [
+        "无需模型权重或概念标注数据",
+        "归因一致性优于现有方法",
+        "可解释图像描述与分割模型"
+      ],
+      "highlights_en": [
+        "No model weights or concept labels needed",
+        "Better agreement with ground-truth attributions",
+        "Enables captioning and segmentation interpretation"
+      ]
+    },
+    {
+      "id": "2610.13931",
+      "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+      "authors": [
+        "Kosio Beshkov"
+      ],
+      "abstract": "The expressivity of a neural network $Φ$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand binary classification and is often formulated in terms of the Betti numbers of a decision boundary $β(Φ^{-1}(0))$. Despite its popularity, this measure is not as useful for regression and other problems that do not involve a decision boundary. Instead, we propose to study topological expressivity in terms of the Betti numbers of the output of a neural network $β(Φ(X))$. We formally prove that a ReLU network with architecture $(d,\\sum\\limits_{k=1}^{d } β_k(3k+2),\\sum\\limits_{k=1}^{d}β_k(k+1))$ can express spaces homotopy equivalent to wedge sums of spheres with arbitrary Betti numbers. This gives upper bounds for any arbitrary connected ($β_0=1$) sequence of Betti numbers, but by constructing spaces homotopy equivalent to products of $N$ spheres of dimension $d_1,...,d_N$ we achieve much better bounds $(\\sum\\limits_{n=1} d_n, 3\\sum\\limits_{n=1}\\limits^N d_n + 2N, \\sum\\limits_{n=1}\\limits^N d_n + N) $ for Betti numbers given by $\\prod_n (1+x^{d_n})$. Finally we conjecture a much stronger tight bound which gives the architectural bound $(d,d+1,d+1)$ for a space homeomorphic to the sphere.",
+      "published": "2026-10-09T17:55:33Z",
+      "primary_category": "math.AT",
+      "categories": [
+        "math.AT",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13931",
+      "pdf_url": "https://arxiv.org/pdf/2610.13931",
+      "summary_zh": "传统拓扑表达性用决策边界贝蒂数衡量，不适用于回归等无边界问题。本文提出用网络输出空间的贝蒂数研究拓扑表达性，并构造同伦等价于球楔和与球积的ReLU网络。结果给出任意连通贝蒂数序列的上界，球积构造得到更优界，并猜想球面同胚的紧致界为(d,d+1,d+1)。",
+      "summary_en": "Traditional topological expressivity uses Betti numbers of decision boundaries, which is unsuitable for regression and problems without boundaries. This paper proposes studying topological expressivity via Betti numbers of network outputs and constructs ReLU networks expressing spaces homotopy equivalent to wedge sums and products of spheres. Results provide upper bounds for any connected Betti number sequence, with product constructions yielding better bounds, and a conjecture of tight bound (d,d+1,d+1) for spheres.",
+      "highlights_zh": [
+        "用输出空间贝蒂数替代决策边界",
+        "球积构造给出更优上界",
+        "猜想球面紧致界(d,d+1,d+1)"
+      ],
+      "highlights_en": [
+        "Use output Betti numbers instead of decision boundary",
+        "Sphere product construction gives better bounds",
+        "Conjecture tight bound (d,d+1,d+1) for spheres"
+      ]
+    },
+    {
+      "id": "2610.13928",
+      "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+      "authors": [
+        "Andis Draguns",
+        "Sumeet Ramesh Motwani",
+        "Raymond Douglas",
+        "Christian Schroeder de Witt"
+      ],
+      "abstract": "Capability evaluations aim to surface dangerous model behaviors before deployment, but their reliability depends on the assumption that hidden capabilities can be elicited. We show this assumption does not hold under adversarial conditions by constructing backdoor attacks that embed encrypted neural networks within host model weights, decrypting and executing them only upon receiving a secret trigger. Using digital lockers, these hidden circuits remain provably hard to elicit and interpret under cryptographic assumptions, even given full access to model weights, extending prior work from hiding fixed strings to arbitrary computations. We implement our proof of concept constructions in PyTorch and evaluate elicitation through fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training on a small chemical reaction prediction task - a proxy for CBRN-relevant capabilities. Our results demonstrate resistance to these methods and, together with our cryptographic guarantees, reveal a limit of elicitation-based capability audits. We release our models to support the improvement of defenses.",
+      "published": "2026-10-09T17:55:06Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13928",
+      "pdf_url": "https://arxiv.org/pdf/2610.13928",
+      "summary_zh": "能力评估依赖隐藏能力可被激发的假设，但对抗条件下该假设可能不成立。作者利用数字储物柜将加密神经网络嵌入宿主模型权重，仅在收到秘密触发时解密执行，从而可证明地隐藏任意计算。在化学反应预测任务上，该方法抵抗微调、权重加噪、梯度触发搜索和潜在对抗训练，揭示了基于激发的审计的根本局限。",
+      "summary_en": "Capability evaluations assume hidden capabilities can be elicited, but this may fail under adversarial conditions. The authors embed encrypted neural networks within host model weights using digital lockers, decrypting and executing them only upon a secret trigger to provably hide arbitrary computations. On a chemical reaction prediction task, the hidden circuits resist fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training, exposing a fundamental limit of elicitation-based audits.",
+      "highlights_zh": [
+        "加密网络嵌入权重，触发解密执行",
+        "抵抗微调、加噪、触发搜索等激发",
+        "揭示能力审计的密码学根本局限"
+      ]
+    },
+    {
+      "id": "2610.13912",
+      "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+      "authors": [
+        "Taoyong Cui",
+        "Pinxian Zeng",
+        "Wanghan Xu",
+        "Hao Xiao",
+        "Shuhan Xue",
+        "Qiang Gao",
+        "Wanli Ouyang",
+        "Pheng Ann Heng",
+        "Zhenfei Yin",
+        "Yingcheng Wu",
+        "Ling Yang"
+      ],
+      "abstract": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.",
+      "published": "2026-10-09T17:50:30Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13912",
+      "pdf_url": "https://arxiv.org/pdf/2610.13912",
+      "summary_zh": "递归自我改进旨在将交互经验转化为持续提升，但外部反馈成本高且世界模型预测随策略演化可能失准。RSI-Anything基于JEPA-Anything构建领域通用框架，用预测世界模型指导动作与学习数据选择，并通过组件与兼容性检查保留更新后的策略-模型对。在代码修复、GUI、实验室规划、反应优化及免疫科学等任务中，该方法显著提升成功率、任务完成度与产率，验证了预测世界模型与系统更新保留对跨领域递归改进的有效性。",
+      "summary_en": "Recursive self-improvement aims to turn interaction experience into persistent gains, but external feedback is costly and world-model predictions can become unreliable as policies evolve. RSI-Anything is a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection, with component and compatibility checks governing retention of updated policy-model pairs. Across code repair, GUI, lab planning, reaction optimization, and immune science, it delivers substantial gains, showing that predictive world models plus retained system updates enable recursive improvement in diverse environments.",
+      "highlights_zh": [
+        "预测世界模型指导动作与数据选择",
+        "代码修复成功率26.3%升至31.2%",
+        "跨领域通用但依赖模型可靠性"
+      ]
+    },
+    {
+      "id": "2610.13910",
+      "title": "When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors",
+      "authors": [
+        "Shubh Garg",
+        "Chen Shani"
+      ],
+      "abstract": "Vision-Language Models (VLMs) increasingly analyze and reason about images, yet it remains unclear whether their internal representations faithfully encode the structured relations required for such reasoning. We introduce EICS (Evaluation-Invariant Concept Stability), a metric for testing whether representations consistently encode concepts under controlled one-concept interventions, and CASP-VL (Causally controlled Spatial Perturbations for Vision-Language models), a benchmark of causally controlled spatial perturbations derived from Visual Genome scene graphs. Across multiple VLM architectures, we find that spatial relations are represented substantially less faithfully than lexical information, even when the same models score well above chance on compositional benchmarks. Further analysis shows that the relation is identifiable at the predicate's own tokens but is lost when the sentence is aggregated into a global representation, whether through the (EOS) token or by mean pooling. These findings reveal a systematic failure invisible to output-based evaluation: VLMs do not preserve, in the representation used downstream, relational information that is present in their own input.",
+      "published": "2026-10-09T17:50:03Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13910",
+      "pdf_url": "https://arxiv.org/pdf/2610.13910",
+      "summary_zh": "视觉语言模型虽能分析图像，但其内部表示是否忠实编码结构化关系尚不清楚。本文提出EICS度量与CASP-VL基准，通过因果控制的空间扰动测试表示的概念稳定性。结果显示空间关系编码远弱于词汇信息，关系信息在聚合为全局表示时丢失，揭示了输出评估无法发现的系统性缺陷。",
+      "summary_en": "Vision-language models analyze images well, but it remains unclear whether their internal representations faithfully encode structured relations. This work introduces EICS, a metric for testing concept stability under controlled interventions, and CASP-VL, a benchmark of causally controlled spatial perturbations from Visual Genome scene graphs. Results show spatial relations are far less faithfully represented than lexical information and are lost when aggregated into global representations, revealing a systematic failure invisible to output-based evaluation.",
+      "highlights_zh": [
+        "提出EICS度量与CASP-VL因果扰动基准",
+        "空间关系编码显著弱于词汇先验",
+        "揭示输出评估无法发现的表示缺陷"
+      ]
+    },
+    {
+      "id": "2610.13947",
+      "title": "Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark",
+      "authors": [
+        "Xudong Cai",
+        "Ruijie Zhu",
+        "Haoliang Shang",
+        "Ruining Li",
+        "Marc Pollefeys",
+        "Shangzhe Wu",
+        "Andrea Vedaldi",
+        "Chuanxia Zheng"
+      ],
+      "abstract": "In this paper, we study physically grounded articulated 3D asset generation---moving the goal from reproducing how objects look to capturing how they move and function. Inspired by the literature on procedural and agentic generation, we present Artisan, a system that extends the latest method Articraft by introducing a multi-agent pipeline with physical simulation feedback, enabling comprehensive attributes beyond geometry, appearance, and physically plausible articulation, such as collision-free motion, stability under gravity, and accurate mass and material properties. Furthermore, we construct a unified benchmark spanning four key aspects: spatial fidelity, physical plausibility, downstream task performance, and overall quality. The benchmark encompasses 100 reference assets from ArtVIP and LightWheel, 50 stability prompts, and 50 ABO objects with reference masses, with protocols evaluating various metrics. Through extensive evaluation of more than 10 representative models, Artisan achieves competitive spatial fidelity while attaining the lowest collision rates and highest stability rates among the evaluated methods. Together, our system and benchmark establish insights for advancing 3D generation towards physically plausible, functionally usable assets.",
+      "published": "2026-10-09T17:59:41Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13947",
+      "pdf_url": "https://arxiv.org/pdf/2610.13947",
+      "summary_zh": "本文研究物理落地的铰接3D资产生成，目标从复现物体外观转向捕捉其运动与功能。受程序化与智能体生成文献启发，提出Artisan系统，在Articraft基础上引入带物理仿真反馈的多智能体流水线，实现无碰撞运动、重力稳定性及准确质量与材质属性，并构建涵盖空间保真度、物理合理性、下游任务性能和整体质量的统一基准。在超10个代表性模型上的评估中，Artisan取得有竞争力的空间保真度，同时实现最低碰撞率和最高稳定率，为推进物理合理、功能可用的3D生成提供洞见。",
+      "summary_en": "This paper studies physically grounded articulated 3D asset generation, shifting the goal from reproducing how objects look to capturing how they move and function. Inspired by procedural and agentic generation literature, it presents Artisan, a system extending Articraft with a multi-agent pipeline and physical simulation feedback to achieve collision-free motion, stability under gravity, and accurate mass and material properties, alongside a unified benchmark spanning spatial fidelity, physical plausibility, downstream task performance, and overall quality. Evaluations over more than 10 representative models show Artisan attains competitive spatial fidelity with the lowest collision rates and highest stability rates, offering insights for advancing 3D generation toward physically plausible, functionally usable assets.",
+      "highlights_zh": [
+        "多智能体+物理仿真反馈流水线",
+        "最低碰撞率与最高稳定率",
+        "推动功能可用的物理3D生成"
+      ]
+    },
+    {
+      "id": "2610.13945",
+      "title": "Splat2Act: From Captured Scenes to Personalized VLA Manipulation",
+      "authors": [
+        "Xiaomeng Ye",
+        "Krishna Jaganathan",
+        "Gyubeum Lim",
+        "Gunjan Chhablani",
+        "Muhammad Zubair Irshad",
+        "Zsolt Kira"
+      ],
+      "abstract": "A user who brings a generalist manipulation policy into their home or office wants it to pick up their objects from their shelves, counters, and tables. Yet even a strong generalist like $π_{0.5}$ achieves 0% pickup success in our captured deployment scenes without adaptation, and collecting real demonstrations in every user's environment is prohibitively expensive. We present Splat2Act, an automated real-to-sim-to-real pipeline that personalizes a pretrained vision-language-action (VLA) policy to a specific scene and object set using only a handheld phone scan and images of the user's objects. Unlike prior real-to-sim work that reconstructs individual tabletops, Splat2Act operates on building-scale indoor environments: it builds a photorealistic digital twin with 3D Gaussian Splatting and collision geometry, automatically discovers tabletop and non-tabletop receptacles, constructs feasible pickup tasks, and generates successful demonstrations with a privileged simulation oracle, with only scene and object capture required from a human. Applied to 101 scanned campus environments with a median navigable area of 104.87 m$^2$ and 7 receptacles, the pipeline yields 852 receptacles and over 68,000 pickup demonstrations. We fine-tune $π_{0.5}$ in two stages: Stage 1 adapts to hundreds of public object assets, drawn either from the deployment scene alone or from all 101 scenes; Stage 2 personalizes to the user's own objects on the deployment scene's receptacles. Our strongest personalized policy reaches 62.5% aggregate pickup success in the target scene. Deployed on a real Stretch 3, the same policy achieves 63.9% success on a 12-task subset, closely tracking its 66.7% simulated success on those tasks. These results suggest that automated real-to-sim-to-real training can personalize VLA manipulation policies using only simulation-oracle data.",
+      "published": "2026-10-09T17:59:06Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13945",
+      "pdf_url": "https://arxiv.org/pdf/2610.13945",
+      "summary_zh": "通用VLA策略在用户真实场景中零样本拾取成功率为0%，而逐场景采集真实演示成本过高。Splat2Act仅需手机扫描与物体照片，即可构建建筑级3D高斯泼溅数字孪生与碰撞几何，自动发现桌面及非桌面容器并生成仿真专家演示，再分两阶段微调π0.5实现个性化。在101个校园场景中生成超6.8万条演示，目标场景聚合拾取成功率达62.5%，真机Stretch 3上12任务子集成功率为63.9%，验证了纯仿真数据即可个性化VLA操作策略。",
+      "summary_en": "Generalist VLA policies achieve 0% pickup success in captured deployment scenes without adaptation, while collecting real demonstrations per environment is prohibitively expensive. Splat2Act is an automated real-to-sim-to-real pipeline that, from only a handheld phone scan and object images, builds building-scale 3D Gaussian Splatting digital twins with collision geometry, discovers receptacles, generates oracle demonstrations, and fine-tunes π0.5 in two stages. Across 101 scanned campus scenes it yields over 68,000 demonstrations, reaching 62.5% aggregate pickup success in the target scene and 63.9% on a 12-task subset on a real Stretch 3, showing simulation-oracle data alone can personalize VLA manipulation.",
+      "highlights_zh": [
+        "建筑级高斯泼溅自动生成拾取演示",
+        "目标场景拾取成功率62.5%，真机63.9%",
+        "仅需手机扫描，免真实演示采集"
+      ]
+    },
+    {
+      "id": "2610.13943",
+      "title": "Noise Space Learning for VLA Adaptation",
+      "authors": [
+        "Junjie Lu",
+        "Chuheng Zhang",
+        "Yucen Wang",
+        "Yuhua Jiang",
+        "Xinyao Qin",
+        "Min Xu",
+        "Li Zhao"
+      ],
+      "abstract": "Pretrained vision-language-action (VLA) models encode broad manipulation priors, yet adapting them to specific tasks requires balancing limited robot interaction, computational resources, and safety constraints. Noise space learning (NSL) adapts flow-matching-based VLAs by learning a context-conditioned distribution over noise while keeping the pretrained VLA fixed. Building on prior noise-steering methods, we formulate NSL as an interface for VLA adaptation that accommodates different learning algorithms and instantiate it with PPO, SAC, and AWR. Theoretically, we provide an information-theoretic analysis of how NSL enables efficient adaptation. Empirically, we study these NSL algorithms on LIBERO, RoboTwin, and four real-robot manipulation tasks under interaction, computation, and execution constraints. Across these settings, we develop a suite of effective NSL variants and derive practical recommendations for choosing among them under different resource and deployment regimes.",
+      "published": "2026-10-09T17:58:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13943",
+      "pdf_url": "https://arxiv.org/pdf/2610.13943",
+      "summary_zh": "预训练VLA模型虽具备广泛操作先验，但适应特定任务时需平衡有限交互、计算资源与安全约束。本文提出噪声空间学习（NSL），通过固定预训练VLA并学习上下文条件化的噪声分布，将NSL形式化为适配接口，兼容PPO、SAC和AWR等算法，并从信息论角度分析其高效适应机制。在LIBERO、RoboTwin及四个真实机器人任务上，作者开发了多种有效NSL变体，并给出了不同资源与部署条件下的算法选择建议。",
+      "summary_en": "Pretrained VLA models encode broad manipulation priors, but adapting them to specific tasks requires balancing limited robot interaction, computation, and safety constraints. This paper proposes Noise Space Learning (NSL), which adapts flow-matching-based VLAs by learning a context-conditioned noise distribution while keeping the pretrained VLA fixed, formalizing NSL as an adaptation interface compatible with PPO, SAC, and AWR, and providing an information-theoretic analysis of its efficiency. Experiments on LIBERO, RoboTwin, and four real-robot tasks yield effective NSL variants and practical recommendations for algorithm selection under different resource and deployment regimes.",
+      "highlights_zh": [
+        "固定VLA，学习上下文条件噪声分布",
+        "多任务验证并给出算法选择建议",
+        "高效适配但依赖预训练VLA质量"
+      ]
+    },
+    {
+      "id": "2610.13929",
+      "title": "Chronos Policy: Learning Robot Policies on Physical Time",
+      "authors": [
+        "Changhao Wang",
+        "Jaden Clark",
+        "Shuran Song"
+      ],
+      "abstract": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
+      "published": "2026-10-09T17:55:20Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.13929",
+      "pdf_url": "https://arxiv.org/pdf/2610.13929",
+      "summary_zh": "机器人策略通常将感知与控制转化为固定速率的观测-动作序列，使物理时间隐含在序列位置中，当观测速率、延迟或推理时延变化时该假设失效。Chronos Policy通过以观测捕获时间和期望动作执行时间为条件使物理时间显式化，并比较了时间戳嵌入与时间感知旋转位置编码（time-aware RoPE）两种方式，发现后者更鲁棒。在仿真和真实实验中，该方法提升了动态任务和多感官任务性能，在准静态任务上保持标称性能并增强了对感知与推理时序变化的鲁棒性。",
+      "summary_en": "Robot policies typically convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position, which breaks when observation rates, delays, or inference latency vary. Chronos Policy makes physical time explicit by conditioning on observation capture times and desired action execution times, comparing timestamp embeddings versus time-aware rotary positional encodings (time-aware RoPE), with the latter proving more robust. Across simulation and real-world experiments, it improves performance on dynamic and multisensory tasks, preserves nominal performance on quasi-static tasks, and improves robustness to changes in sensing and inference timing.",
+      "highlights_zh": [
+        "以物理时间为条件，提出时间感知RoPE",
+        "动态与多感官任务性能提升",
+        "增强时序变化鲁棒性，需真实部署验证"
+      ],
+      "highlights_en": [
+        "Conditions on physical time via time-aware RoPE",
+        "Improves dynamic and multisensory task performance",
+        "More robust to timing shifts; needs real-world validation"
+      ]
+    }
+  ]
+}
