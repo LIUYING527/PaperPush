@@ -1,0 +1,334 @@
+{
+  "date": "2026-10-14",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.18874",
+      "title": "ChunkAct: Action Chunking for Agentic Robotics",
+      "authors": [
+        "Bingxin Xu",
+        "Wenrui Bao",
+        "Xinxin Liu",
+        "Jiawei Zhou",
+        "Yuzhang Shang",
+        "Emilio Ferrara"
+      ],
+      "abstract": "Agentic robotics places a large language model (LLM) agent in the robot control loop, where it composes perception, motion, and vision-language-action (VLA) tools under the guidance of a memory and thereby generalizes to new tasks without retraining. This generality comes at a steep price in efficiency. Every primitive requires a round of LLM reasoning over the full interaction history, so the cost of an episode grows with the number of primitives. We find this reasoning largely redundant: once a sub-goal is chosen, its primitives follow a routine already prescribed by memory. We present ChunkAct, which introduces action chunking to agentic robotics. Online, a single call launches a chunk of chained primitives, which executes autonomously and returns control only upon failure. Offline, ChunkAct compiles the memory into these chunks, so execution is memory-free at test time and the planner is reserved for decisions that require reasoning. LLM computation therefore scales with the number of decisions rather than the number of primitives. On LIBERO-Pro, ChunkAct improves task success by 5.0 points over the state of the art in agentic robotics while requiring 2.9x fewer LLM calls, 4.4x fewer input tokens, and 2.3x fewer output tokens.",
+      "published": "2026-10-13T17:59:57Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18874",
+      "pdf_url": "https://arxiv.org/pdf/2610.18874",
+      "summary_zh": "在智能体机器人中，LLM智能体需对每个原子操作重复推理完整交互历史，导致成本随操作数线性增长，效率低下。ChunkAct引入动作分块机制：在线一次调用即可自主执行一串链式原子操作，仅在失败时交还控制权，离线则将记忆编译为这些动作块，使测试时无需记忆、规划器仅用于需推理的决策。在LIBERO-Pro上，该方法任务成功率提升5.0个百分点，同时LLM调用减少2.9倍、输入token减少4.4倍、输出token减少2.3倍，显著提升效率与性能。",
+      "summary_en": "In agentic robotics, an LLM agent must reason over the full interaction history for every primitive, making episode cost grow with the number of primitives despite largely redundant reasoning. ChunkAct introduces action chunking: online, a single call launches a chunk of chained primitives that executes autonomously and returns control only on failure, while offline it compiles memory into these chunks, making execution memory-free at test time and reserving the planner for decisions that truly need reasoning. On LIBERO-Pro, ChunkAct improves task success by 5.0 points over the state of the art while using 2.9x fewer LLM calls, 4.4x fewer input tokens, and 2.3x fewer output tokens.",
+      "highlights_zh": [
+        "动作分块将记忆编译为可自主执行的链式操作",
+        "LIBERO-Pro成功率提升5.0点，LLM调用减少2.9倍",
+        "适用于长程机器人任务，但依赖记忆编译质量"
+      ]
+    },
+    {
+      "id": "2610.18869",
+      "title": "What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study",
+      "authors": [
+        "Mingxuan Yan",
+        "Litian Gong",
+        "Dihong Huang",
+        "Zhixu Li",
+        "Tianyu Zhang",
+        "Wenqian Zhang",
+        "Hefeifei Jiang",
+        "Peihao Li",
+        "Jian Zhang",
+        "Mengfei Zhao",
+        "Yikai Tang",
+        "Hai Zhai",
+        "Zehao Wang",
+        "Ruijian Liang",
+        "Yanjia Huang",
+        "Lin Shao",
+        "Changliu Liu",
+        "Kaiyu Hang",
+        "Zhiwen Fan",
+        "Masayoshi Tomizuka",
+        "Jianfei Yang",
+        "Jiachen Li"
+      ],
+      "abstract": "How should demonstration quality be used during vision-language-action (VLA) pretraining to improve performance after target-task fine-tuning? We compare weighting, filtering, and conditioning across reward definitions and label granularities using 5,000 naturally suboptimal human demonstrations and 24 target tasks. Within each VLA, we match demonstrations and training budgets. Additional comparisons examine pretraining data size and the roles of quality tags during fine-tuning and inference. Across three VLAs, we find that approach-aware episode conditioning improves mean success over plain behavioral cloning; conditioning and filtering favor episode and chunk labels, respectively, on average, with model-dependent reversals; and constant-tag fine-tuning improves mean success after conditioned pretraining with either tagged or untagged inference. We introduce AXIS-Bench to support these controlled comparisons. Built on crowdsourced simulation demonstrations, it provides recorded object and contact states for recomputing quality labels on shared trajectories. Replayable trajectories support workspace-aligned rendering and user-defined real-world target tasks. In our real-world experiment, simulation pretraining raises success from 9.6\\% to 31.7\\%. Project page: https://axis-bench.github.io/.",
+      "published": "2026-10-13T17:59:52Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18869",
+      "pdf_url": "https://arxiv.org/pdf/2610.18869",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.18871",
+      "title": "Cepheid: Decoupling Scale from Structure for Cross-Family Motion Completion",
+      "authors": [
+        "Chih-Hai Su",
+        "Tsung-Wei Ke",
+        "Yu-Lun Liu"
+      ],
+      "abstract": "Sparse-to-dense motion completion recovers dense mesh motion from sparse vertex displacements. Residual priors trained on one geometry family frequently fail to beat parameter-free harmonic extension off-family. Moreover, cross-family training meets a scaling barrier: residual amplitude varies by more than an order of magnitude across geometry families and collapses as observations become denser. Since this scale depends on unknown target motion, it cannot be measured directly at test time. We decouple residual structure from physical scale by learning a dimensionless prior, estimating amplitude from observables and a lightweight correction fitted only on training sources. Our unified model surpasses harmonic extension across all evaluated families, including unseen cloth and legged bodies, without skeletons, registration, or cross-mesh correspondence. The same prior applies without retraining to point-tracked animal video and a robot grasping a soft body. Project page: https://su-terry.github.io/cepheid-website/",
+      "published": "2026-10-13T17:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18871",
+      "pdf_url": "https://arxiv.org/pdf/2610.18871",
+      "summary_zh": "稀疏到稠密运动补全旨在从稀疏顶点位移恢复稠密网格运动，但残差先验跨几何族泛化差，且残差幅度随几何族和观测密度变化超一个数量级，测试时无法直接测量。Cepheid通过解耦残差结构与物理尺度，学习无量纲先验并从可观测量估计幅度，仅用训练源拟合轻量校正。统一模型在所有评估族（含未见布料和腿式身体）上超越调和延拓，无需骨架、配准或跨网格对应，并可零重训迁移至动物视频和软体抓取。",
+      "summary_en": "Sparse-to-dense motion completion recovers dense mesh motion from sparse vertex displacements, but residual priors trained on one geometry family often fail off-family and suffer a scaling barrier where residual amplitude varies over an order of magnitude and collapses with denser observations. Cepheid decouples residual structure from physical scale by learning a dimensionless prior, estimating amplitude from observables and a lightweight correction fitted only on training sources. The unified model surpasses harmonic extension across all evaluated families, including unseen cloth and legged bodies, without skeletons, registration, or cross-mesh correspondence, and transfers without retraining to point-tracked animal video and a robot grasping a soft body.",
+      "highlights_zh": [
+        "解耦残差结构与物理尺度，学习无量纲先验",
+        "所有评估族上超越调和延拓，含未见几何族",
+        "零重训迁移至动物视频与软体抓取"
+      ],
+      "highlights_en": [
+        "Decouples residual structure from physical scale via dimensionless prior",
+        "Surpasses harmonic extension on all evaluated families, including unseen ones",
+        "Transfers without retraining to animal video and soft-body grasping"
+      ]
+    },
+    {
+      "id": "2610.18863",
+      "title": "Data Free Training of Diffusion Models for Lattice Field Theories",
+      "authors": [
+        "Dennis Grinwald",
+        "Ankur Singha",
+        "Khaled Kahouli",
+        "Karl Jansen",
+        "Shinichi Nakajima"
+      ],
+      "abstract": "Sampling equilibrium field configurations remains a major computational bottleneck in lattice field theory, motivating the development of generative samplers that can produce independent configurations. Diffusion models are promising for this purpose, but their standard denoising score matching objective requires samples from the target distribution, seemingly reintroducing the original sampling problem. Here, we show that diffusion models can instead be trained from their own generated samples using the target score identity, provided access to the unnormalized probability density. Importance-weighted formulations of this identity yield a consistent target throughout training, while unweighted variants define a self-consistent fixed-point training scheme. We benchmark the different approaches in two-dimensional \\(φ^4\\) theory and identify effective choices that enable efficient training and sampling across the symmetric, critical, and broken phases. Ultimately, our data-free training approach achieves comparable performance to training on HMC reference data.",
+      "published": "2026-10-13T17:59:33Z",
+      "primary_category": "hep-lat",
+      "categories": [
+        "hep-lat",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18863",
+      "pdf_url": "https://arxiv.org/pdf/2610.18863",
+      "summary_zh": "格点场论中采样平衡场构型是主要计算瓶颈，扩散模型虽有望生成独立构型，但其标准去噪分数匹配目标需要目标分布的样本，似乎重新引入了原始采样问题。本文表明，只要能够访问未归一化概率密度，扩散模型就可以利用目标分数恒等式从自身生成的样本中进行训练，其中重要性加权形式在整个训练过程中提供一致的目标，而未加权变体则定义了自洽的不动点训练方案。在二维φ^4理论中的基准测试表明，该无数据训练方法在对称、临界和破缺相中均能实现高效训练与采样，性能与基于HMC参考数据的训练相当。",
+      "summary_en": "Sampling equilibrium field configurations is a major computational bottleneck in lattice field theory, and while diffusion models are promising generative samplers, their standard denoising score matching objective requires samples from the target distribution, seemingly reintroducing the original sampling problem. This work shows that diffusion models can instead be trained from their own generated samples using the target score identity, provided access to the unnormalized probability density, with importance-weighted formulations yielding a consistent target throughout training and unweighted variants defining a self-consistent fixed-point training scheme. Benchmarks in two-dimensional φ^4 theory identify effective choices enabling efficient training and sampling across symmetric, critical, and broken phases, ultimately achieving performance comparable to training on HMC reference data.",
+      "highlights_zh": [
+        "利用目标分数恒等式实现无数据训练",
+        "二维φ^4各相性能媲美HMC训练",
+        "无需目标分布样本，但需未归一化密度"
+      ]
+    },
+    {
+      "id": "2610.18861",
+      "title": "Hybrid Reasoning Agents",
+      "authors": [
+        "Jiaru Zou",
+        "Yunzhe Qi",
+        "Sirui Chen",
+        "Federico Bianchi",
+        "Shang Zhu",
+        "Pan Lu",
+        "Jingrui He",
+        "James Zou"
+      ],
+      "abstract": "How can we build an agent that thinks beyond human language, yet still acts through it in the external environment? Modern LLM agents still reason and interact through text, while latent reasoning offers an efficient internal medium but lacks native tool access and reasoning transparency. We bridge these two directions with Hybrid Reasoning Agents (HybridAgents), which dynamically navigate between latent reasoning and text-based interaction throughout a unified generation process. Architecturally, a lightweight HybridLink enables seamless transitions between text and latent modes, while the agent's continuous working memory preserves lossless hybrid context across multiple turns. These designs preserve tool-integrated agentic capabilities while making latent thoughts directly inspectable. Building on this architecture, we further develop dedicated post-training algorithms for hybrid reasoning: HybridSFT stabilizes tool-integrated hybrid generation by teaching the backbone to coordinate with HybridLink, then HybridRL scales reasoning by learning when to think in latent space and when to act through text. We evaluate HybridAgent at 3 model scales across 11 benchmarks covering mathematics, science, medicine, search, and agentic reasoning. Compared with frontier LLM Agents and agentic frameworks spanning both text-based and latent methods, HybridAgent consistently improves performance by 10.4%, while delivering 35.5%-54.7% token reduction, 1.8x-2.6x faster inference, and 2.7x-3.7x cost savings. Code and data are available at https://github.com/togethercomputer/HybridAgent.",
+      "published": "2026-10-13T17:59:31Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18861",
+      "pdf_url": "https://arxiv.org/pdf/2610.18861",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.18873",
+      "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
+      "authors": [
+        "Wenxuan Guo",
+        "Yingping Liang",
+        "Zhaoguo Wang",
+        "Ziyuan Li",
+        "Angyuan Ma",
+        "Zhenyu Wu",
+        "Chengkun Wang",
+        "Bingyao Yu",
+        "Ze Chen",
+        "Borui Zhang",
+        "Xiuwei Xu",
+        "Meng Zhang",
+        "Erjin Zhou",
+        "Jiwen Lu"
+      ],
+      "abstract": "Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce \\textbf{LoopWAM}, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67\\% to 43.33\\%, a 19.7-percentage-point gain, with a final score of 56.80. LoopWAM also achieves 94.5\\% average success on RoboTwin~2.0 and 49.5\\% overall success on RoboCasa365 without additional embodied pretraining, obtaining the best overall results among the compared methods across all three benchmarks. On challenging shirt folding task, two rounds of deployment-driven improvement after single-task post-training raise success from 13.20\\% to 55.56\\%. These results demonstrate closed-loop improvement from mixed-quality experience under both multi-task learning and single-task post-training. \\href{https://loop-wam.github.io/}{\\textcolor{orange}{Project Page}}",
+      "published": "2026-10-13T17:59:56Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18873",
+      "pdf_url": "https://arxiv.org/pdf/2610.18873",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.18872",
+      "title": "EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ",
+      "authors": [
+        "Yunsong Zhou",
+        "Xuekun Jiang",
+        "Haiqi Shen",
+        "Hangxu Liu",
+        "Chaojian Shi",
+        "Yujie Liu",
+        "Jingyuan Li",
+        "Haoran Yang",
+        "Jiafei Cao",
+        "Dongzhan Zhou",
+        "Dong Wang",
+        "Yao Mu",
+        "Chunhua Shen",
+        "Weinan Zhang"
+      ],
+      "abstract": "Learning humanoid loco-manipulation from human demonstrations rests on observing how locomotion, posture, and object interaction evolve together as tasks unfold. Scaling collection across diverse environments, in turn, favors lightweight, portable capture systems. Yet, existing datasets provide only partial views of this coordination. Thus, we introduce EgoExplorer, a 100-hour vision-motion-touch observatory of human loco-manipulation built with a wearable system. With an emphasis on professional activities, its continuous recordings align egocentric video with reconstructed whole-body motion, fine-grained finger articulation, and tactile observations, accompanied by step-level descriptions. To achieve this coverage with sparse body sensing, we develop the Calibrate-Complete-Constrain pipeline. Concretely, reusable calibration fixes participant geometry and sensor attachments before motion inference to disentangle mounting offsets from articulation. A temporal prior then completes unobserved joint motion, while layered constraints promote measurement agreement, temporal continuity, and geometric consistency, properties that motion plausibility alone does not guarantee. Against tracker-fitted references, the method reduces body-point error by 71.9% relative to the strongest baseline; matched evaluations also show gains in hand stability and contact estimation. Preliminary studies explore multimodal generation and conditioning alongside humanoid retargeting with whole-body control in simulation.",
+      "published": "2026-10-13T17:59:55Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18872",
+      "pdf_url": "https://arxiv.org/pdf/2610.18872",
+      "summary_zh": "从人类演示中学习人形机器人的移动-操作需要同步观测移动、姿态与物体交互，但现有数据集仅提供局部视角，且跨环境采集需要轻便可穿戴系统。EgoExplorer构建了100小时可穿戴视觉-运动-触觉观测数据集，并提出Calibrate-Complete-Constrain流程，通过可复用标定、时序先验补全与分层约束，从稀疏身体传感中重建全身运动、手指关节与触觉信息。相比最强基线，身体点误差降低71.9%，手部稳定性与接触估计也有提升，为多模态生成与人形机器人重定向提供了新基础。",
+      "summary_en": "Learning humanoid loco-manipulation from human demonstrations requires observing how locomotion, posture, and object interaction co-evolve, but existing datasets offer only partial views and portable capture is needed for scaling. EgoExplorer introduces a 100-hour wearable vision-motion-touch observatory with egocentric video, reconstructed whole-body motion, finger articulation, and tactile data, enabled by a Calibrate-Complete-Constrain pipeline that uses reusable calibration, temporal priors, and layered constraints. It reduces body-point error by 71.9% over the strongest baseline and improves hand stability and contact estimation, supporting multimodal generation and humanoid retargeting.",
+      "highlights_zh": [
+        "可穿戴视觉-运动-触觉观测与标定补全约束流程",
+        "身体点误差较最强基线降低71.9%",
+        "支持多模态生成与人形重定向，但依赖稀疏传感"
+      ],
+      "highlights_en": [
+        "Wearable vision-motion-touch observatory with Calibrate-Complete-Constrain pipeline",
+        "Reduces body-point error by 71.9% vs. strongest baseline",
+        "Enables multimodal generation and humanoid retargeting, but relies on sparse sensing"
+      ]
+    },
+    {
+      "id": "2610.18868",
+      "title": "Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards",
+      "authors": [
+        "Wenbo Hu",
+        "Shraman Pramanick",
+        "Krishna Kumar Singh",
+        "Nanyun Peng",
+        "Kai-Wei Chang",
+        "Yong Jae Lee"
+      ],
+      "abstract": "Long-horizon agents have drawn growing attention for their ability to work autonomously -- from hours to days -- on economically valuable tasks, a capability essential to automated discovery and recursive self-improvement (RSI). Yet open-source models still struggle on long-horizon tasks, largely for lack of both training data and a working recipe, and scaling both is hard: long, complex tasks are difficult to curate and verify, and their rewards are sparse. We address both. First, we introduce Tev-Gym, the first long-horizon agent training dataset with verifiable, dense, progressive rewards -- 1,170 verified task environments across 7 domains. It is built on a latent-world-first approach that first constructs a latent world: a complete and correct hidden specification of the task domain, workflow, and expected state after each step. Each task is then progressively rendered from this specification into an agent-facing environment, enabling controllable complexity and a natural progress metric. Second, we turn this metric into a training recipe: via progress-potential reward shaping (PPRS), we convert progress into a dense per-step reward that improves training efficiency and makes otherwise-intractable tasks trainable. Training with this recipe yields Tev-27B, which achieves substantial gains on the Agents' Last Exam computing and math sciences domains (ALE-CM), matching GPT-6 Astra and Claude Opus 5 at Pass@5. Despite training only on ALE-related data, it generalizes to the Terminal-Bench (TB) 3.0 and 4.0 subsets, surpassing GLM 5.2 and Gemini 3.7 Flash, and reaches Claude Opus 4.8-level performance on middle-horizon tasks such as TB 2.1.",
+      "published": "2026-10-13T17:59:51Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18868",
+      "pdf_url": "https://arxiv.org/pdf/2610.18868",
+      "summary_zh": "长时程智能体虽受关注，但开源模型因缺乏训练数据和有效方法而表现不佳，且长任务难以策展、验证且奖励稀疏。本文提出Tev-Gym——首个具备可验证密集渐进奖励的长时程智能体训练数据集（7个领域1170个环境），基于“潜在世界优先”方法构建，并通过进度潜力奖励塑形（PPRS）将进度转化为密集的每步奖励。由此训练的Tev-27B在ALE-CM上达到GPT-6 Astra和Claude Opus 5的Pass@5水平，并泛化至TB 3.0/4.0，超越GLM 5.2和Gemini 3.7 Flash，在中等时程任务上达到Claude Opus 4.8水平。",
+      "summary_en": "Long-horizon agents are increasingly important, yet open-source models lag due to scarce training data and recipes, as long complex tasks are hard to curate, verify, and yield sparse rewards. This paper introduces Tev-Gym, the first long-horizon agent training dataset with verifiable dense progressive rewards (1,170 environments across 7 domains) built via a latent-world-first approach, plus progress-potential reward shaping (PPRS) that converts progress into dense per-step rewards. The resulting Tev-27B matches GPT-6 Astra and Claude Opus 5 at Pass@5 on ALE-CM, generalizes to Terminal-Bench 3.0/4.0 surpassing GLM 5.2 and Gemini 3.7 Flash, and reaches Claude Opus 4.8-level performance on middle-horizon tasks like TB 2.1.",
+      "highlights_zh": [
+        "潜在世界优先构建密集可验证奖励",
+        "ALE-CM达GPT-6 Astra同级Pass@5",
+        "泛化强但依赖ALE相关训练数据"
+      ]
+    },
+    {
+      "id": "2610.18862",
+      "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
+      "authors": [
+        "Minghao Luo",
+        "Liang Chen"
+      ],
+      "abstract": "Reasoning models achieve strong performance through long chains of thought (CoT), but often spend more tokens than needed to solve a problem. Existing ways to shorten the CoT require additional training for each model, add a fixed steering vector to the model's hidden states, or use decoding heuristics such as stopping early or banning words like \"wait\", which can reduce accuracy. We propose DoubtLess, a training-free decoding method in which a much smaller reasoning model steers the large one towards brevity. The small model reads the large model's CoT so far twice, once prompted to be brief (the brief thinker) and once prompted to be verbose (the verbose thinker), and the difference between its two logit vectors, scaled by a strength, is added to the large model's logits at every step of the CoT. On seven benchmarks of competition mathematics, graduate-level science and competitive programming, DoubtLess shortens the CoT of Qwen3-32B by 31% with unchanged accuracy, outperforming five inference-time baselines. We also show that DoubtLess reduces thinking tokens per turn by 20% in a self-debugging coding agent with unchanged task performance. It also generalizes to two other model families with unchanged accuracy. When combined with training-based compression, it further shortens the CoT of a model already trained for brevity. Ablations and behavioral analysis show that DoubtLess reduces repeated checking, with most token savings coming after the correct answer first appears in the CoT. Our code is available at https://github.com/leoluolol/DoubtLess.",
+      "published": "2026-10-13T17:59:32Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18862",
+      "pdf_url": "https://arxiv.org/pdf/2610.18862",
+      "summary_zh": "推理模型通过长思维链取得强性能，但常生成过多token，现有缩短方法需额外训练、固定干预向量或启发式截断，易损精度。DoubtLess提出免训练对比解码：用小推理模型分别以简洁和冗长提示读取大模型当前思维链，将其logit差按强度缩放后加到大模型每步logits上，引导简洁推理。在七个数学、科学与编程基准上，Qwen3-32B思维链缩短31%且精度不变，优于五种推理时基线，并在自调试编码智能体中减少20%思考token，可泛化到其他模型族。",
+      "summary_en": "Reasoning models achieve strong performance via long chains of thought but often spend more tokens than needed, and existing shortening methods require per-model training, fixed steering vectors, or heuristics that can hurt accuracy. DoubtLess is a training-free decoding method where a smaller reasoning model reads the large model's partial CoT twice, once prompted to be brief and once verbose, and the scaled difference of its logit vectors is added to the large model's logits at each step. On seven benchmarks, it shortens Qwen3-32B's CoT by 31% with unchanged accuracy, outperforms five inference-time baselines, cuts thinking tokens per turn by 20% in a self-debugging coding agent, generalizes across model families, and complements training-based compression.",
+      "highlights_zh": [
+        "小模型双提示logit差引导免训练解码",
+        "思维链缩短31%且精度不变",
+        "减少重复检查，可泛化并兼容训练压缩"
+      ]
+    },
+    {
+      "id": "2610.18870",
+      "title": "Dog-Breed Text-to-image Flow Matching from Pretraining to Fine-Tuning on 4 Consumer GPUs",
+      "authors": [
+        "Reyhaneh Esmailizadeh",
+        "Xingjian Leng",
+        "Zhanhao Liang",
+        "Liang Zheng"
+      ],
+      "abstract": "We generally perceive that training text-to-image diffusion models requires heavy compute: it is true if we aim at a comprehensive frontier model. This understanding prevents people from training their own models when getting started in the field. We develop MiniDog, a framework that enables pretraining diffusion transformers in 55 minutes and fine-tuning in another 15 minutes on four 3090 GPUs. For data, we use 26k dog images from ImageNet and caption them for pretraining and use 2k images generated by FLUX.1-schnell for fine-tuning. We precompute the image and text features and cache them for efficiency. For architecture, we use E2E-INVAE for its semantic latent space, a small transformer with 22M parameters, a small Qwen model for text encoding, and in-context conditioning. For training, we use iREPA and an EUPE perception encoder for acceleration. For evaluation, our repository supports FID, HPSv2 score, PickScore, and various VAE reconstruction metrics.",
+      "published": "2026-10-13T17:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.18870",
+      "pdf_url": "https://arxiv.org/pdf/2610.18870",
+      "summary_zh": "训练文本到图像扩散模型通常被认为需要大量算力，这阻碍了初学者自行训练模型。作者提出MiniDog框架，通过预计算并缓存图像与文本特征、采用E2E-INVAE语义潜空间、22M小Transformer、小型Qwen文本编码器、上下文条件以及iREPA和EUPE感知编码器加速，实现高效训练。在四块3090 GPU上，预训练仅需55分钟、微调15分钟，并支持FID、HPSv2、PickScore等评估，降低了文本到图像生成的研究门槛。",
+      "summary_en": "Training text-to-image diffusion models is generally perceived as requiring heavy compute, which prevents beginners from training their own models. The authors develop MiniDog, a framework that pretrains diffusion transformers efficiently by caching precomputed image and text features and using E2E-INVAE, a 22M-parameter transformer, a small Qwen text encoder, in-context conditioning, and iREPA with an EUPE perception encoder for acceleration. On four 3090 GPUs, pretraining takes only 55 minutes and fine-tuning 15 minutes, with support for FID, HPSv2, PickScore, and VAE reconstruction metrics, making text-to-image research more accessible.",
+      "highlights_zh": [
+        "4块3090上55分钟预训练",
+        "15分钟微调完成狗品种生成",
+        "降低文本到图像研究门槛"
+      ]
+    }
+  ]
+}
