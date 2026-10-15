@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-15",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.20606",
+      "title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
+      "authors": [
+        "Huixuan Cheng",
+        "Bike Zhang",
+        "Shankar Sastry",
+        "Koushil Sreenath"
+      ],
+      "abstract": "Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. In this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. We adopt a latent diffusion framework that couples a linear autoencoder with a Diffusion Transformer. The autoencoder compresses actor network parameters into a compact latent space, and the Diffusion Transformer models the distribution of these latents. Trained on networks collected from reinforcement learning for the Unitree G1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. Beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. We identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. Notably, this kinematic prior emerges under both Reinforcement Learning (RL) and Imitation Learning (IL) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. Together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. Additional results are available on our project website: https://humanoid-weight-diffusion.github.io/",
+      "published": "2026-10-14T17:59:52Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20606",
+      "pdf_url": "https://arxiv.org/pdf/2610.20606",
+      "summary_zh": "人形控制网络通常由常规训练得到，其权重分布的直接建模与生成尚未被充分探索。本文采用线性自编码器与扩散Transformer耦合的潜在扩散框架，将Unitree G1机器人RL策略的actor网络参数压缩到紧凑潜在空间并建模其分布。生成网络可在真实世界执行行走、跳舞、回旋踢等动作，同时发现第一层权重中反映机器人运动学先验的结构性规律，且在RL与IL训练下均出现，表明其可能源于人形具身共性。",
+      "summary_en": "Humanoid control networks are typically obtained through conventional training, and directly modeling their weight distribution and generating functional networks in weight space remains underexplored. This work adopts a latent diffusion framework coupling a linear autoencoder with a Diffusion Transformer to compress actor network parameters of Unitree G1 RL policies into a compact latent space and model their distribution. The approach generates deployable networks performing real-world walking, dancing, and spin kick, and reveals a structural kinematic prior in first-layer weights that emerges under both RL and IL, suggesting common knowledge tied to humanoid embodiment.",
+      "highlights_zh": [
+        "潜在扩散生成人形策略权重",
+        "真实部署完成行走跳舞回旋踢",
+        "发现运动学先验的结构规律"
+      ]
+    },
+    {
+      "id": "2610.20607",
+      "title": "Hierarchical Residual Policy Learning for Real-World Mobile Manipulation with Sparse Human Guidance",
+      "authors": [
+        "Zhefei Gong",
+        "Hefeifei Jiang",
+        "Zehao Wang",
+        "Jiachen Li"
+      ],
+      "abstract": "Mobile Manipulation (MoMa) is a cornerstone of autonomous robotic systems, yet real-world fine-tuning remains a formidable challenge because of high-dimensional action spaces and intricate coupling between heterogeneous modules. In this paper, we propose HiRe-MoMa (Hierarchical Residual Mobile Manipulation), a systematic framework for stable and sample-efficient real-world fine-tuning of complex MoMa systems. At its core, HiRe-MoMa adopts a Hierarchical Residual Architecture that fine-tunes a frozen base policy. A Policy-Agnostic Residual learns additive corrections atop the base policy, while Hierarchical Decoupling splits the residual into mobile-base and manipulator-arm heads with unidirectional conditioning, mitigating gradient interference and aligning corrections with the platform's physical hierarchy. To improve sample efficiency in data-expensive real-world settings, we propose Expert-Guided Value Alignment, which leverages sparse human interventions with under 20% training coverage to reshape the critic's value landscape, effectively guiding autonomous exploration through expert priors. Extensive real-world experiments on the TIAGo++ platform demonstrate that HiRe-MoMa consistently enhances task performance with only around 30 minutes of online interaction, regardless of the base policy architecture. To our knowledge, this is among the first frameworks to enable efficient on-robot fine-tuning for mobile manipulation in the real world, providing a practical paradigm for deploying complex robotic systems in dynamic, human-centric environments. Further details can be found on our project website: https://hire-moma.github.io/",
+      "published": "2026-10-14T17:59:52Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20607",
+      "pdf_url": "https://arxiv.org/pdf/2610.20607",
+      "summary_zh": "移动操作在真实世界中微调面临高维动作空间和异构模块耦合的难题。本文提出HiRe-MoMa框架，采用分层残差架构对冻结基策略进行加性修正，并通过专家引导价值对齐利用稀疏人类干预提升样本效率。在TIAGo++平台上仅约30分钟在线交互即可稳定提升任务性能，为真实世界移动操作的高效在机微调提供了实用范式。",
+      "summary_en": "Real-world fine-tuning of mobile manipulation is challenging due to high-dimensional action spaces and tight coupling between heterogeneous modules. This paper proposes HiRe-MoMa, a hierarchical residual framework that fine-tunes a frozen base policy with policy-agnostic additive corrections and hierarchically decoupled base/arm heads, plus expert-guided value alignment using sparse human interventions under 20% coverage. On the TIAGo++ platform, it consistently improves task performance with only ~30 minutes of online interaction, offering a practical paradigm for efficient on-robot fine-tuning of complex mobile manipulation systems.",
+      "highlights_zh": [
+        "分层残差架构解耦基座与机械臂修正",
+        "约30分钟在线交互即稳定提升性能",
+        "稀疏人类引导实现真实世界高效微调"
+      ]
+    },
+    {
+      "id": "2610.20582",
+      "title": "Latent Compaction with Test-Time Training",
+      "authors": [
+        "Yingfa Chen",
+        "Xingyu Shen",
+        "Chaojun Xiao",
+        "Xu Han"
+      ],
+      "abstract": "Long contexts enlarge key--value (KV) caches, increasing memory use and attention costs during generation. Compressing these caches must preserve information for unseen questions. We introduce **Latent Compaction**, which learns a compact document-specific cache through test-time training. We initialize cache entries using reconstruction importance, teacher attention, and key-space diversity. Training first fits attention outputs and log-normalizers to those of the full cache, with reconstruction-selected entries held fixed. It then jointly optimizes the entire cache through end-to-end distillation from the full-cache model. Model weights remain frozen throughout, and training uses only generic prompts about the document, without access to downstream questions or answers. Experiments on RULER, LongBench, and Phonebook Lookup demonstrate substantial gains over budget-matched compression baselines. On a RULER, for example, our method achieves 96.7% accuracy at 32$\\times$ compression, compared with 40.0% for KVZip+. The method also transfers across model scales and families, with retrieval gains on both Qwen3 and MiniCPM5. These results show that treating the KV cache as a neural network and optimizing it with test-time training can preserve retrieval accuracy under aggressive compression. The code is released at https://www.github.com/THUNLP/latent-compaction",
+      "published": "2026-10-14T17:57:01Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20582",
+      "pdf_url": "https://arxiv.org/pdf/2610.20582",
+      "summary_zh": "长上下文使KV缓存膨胀，增加内存与注意力开销，而压缩缓存又需保留回答未知问题的信息。本文提出Latent Compaction，通过测试时训练将文档专属缓存视为可优化神经网络，先用重构重要性、教师注意力和键空间多样性初始化，再以全缓存模型蒸馏联合优化，模型权重全程冻结且无需下游问答。在RULER、LongBench和Phonebook Lookup上显著超越同等预算基线，如RULER 32倍压缩下达96.7%准确率（KVZip+仅40.0%），并跨模型规模与家族迁移，表明测试时训练可在大幅压缩下保持检索精度。",
+      "summary_en": "Long contexts inflate key-value (KV) caches, raising memory and attention costs, yet compressing them must preserve information for unseen questions. This paper introduces Latent Compaction, which learns a compact document-specific cache via test-time training: it initializes entries using reconstruction importance, teacher attention, and key-space diversity, then fits attention outputs and log-normalizers before jointly optimizing the whole cache through end-to-end distillation from the full-cache model, with frozen weights and no access to downstream questions. Experiments on RULER, LongBench, and Phonebook Lookup show substantial gains over budget-matched baselines, e.g., 96.7% accuracy at 32x compression on RULER versus 40.0% for KVZip+, transferring across model scales and families and demonstrating that treating the KV cache as a neural network optimized at test time preserves retrieval accuracy under aggressive compression.",
+      "highlights_zh": [
+        "将KV缓存视为可测试时训练的神经网络",
+        "RULER 32倍压缩下准确率96.7%",
+        "无需下游问答，可跨模型迁移"
+      ],
+      "highlights_en": [
+        "Treats KV cache as a test-time-trained neural network",
+        "96.7% accuracy at 32x compression on RULER",
+        "No downstream QA needed; transfers across models"
+      ]
+    },
+    {
+      "id": "2610.20576",
+      "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
+      "authors": [
+        "Artin Tajdini",
+        "Manpreet Kaur",
+        "Peng Qi"
+      ],
+      "abstract": "Post-training binds the competence of an LLM agent to the interface it was trained on. Semantics-preserving perturbations of that interface, such as renaming an action or changing the notation, leave the underlying task unchanged yet make the agent worse at it. Scoring each sample independently means interface randomization only broadens this dependence from a single interface to the training interface distribution, so out-of-distribution perturbations still degrade the agent. We propose Cross-Interface Policy Regularization (CIPR), a self-supervised objective that replaces action names with uninformative identifiers and presents each training sample under two interfaces in which equivalent actions are identified by construction. CIPR penalizes the KL divergence between the action distributions induced under the two interfaces, so the policy behaves consistently across them. We evaluate CIPR in both supervised and reinforcement-learning post-training, where it improves robustness. On agentic function calling, held-out interface perturbations reduce the accuracy of a post-trained agent by nearly 25%, and CIPR recovers 10.5% while leaving accuracy on the unchanged interface intact.",
+      "published": "2026-10-14T17:56:06Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20576",
+      "pdf_url": "https://arxiv.org/pdf/2610.20576",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2610.20610",
+      "title": "Can Learning to Answer Spatial Questions Improve Novel-View Generation?",
+      "authors": [
+        "Jahyeok Koo",
+        "Hyeonseo Yu",
+        "Seungho Jang",
+        "Jaewoo Jung",
+        "Jiwon Kang",
+        "Seokju Cho",
+        "Seungryong Kim"
+      ],
+      "abstract": "Generating novel views from limited observations requires preserving both the appearance and spatial structure of a scene. Although recent approaches exploit fine-grained geometric cues, they do not explicitly model high-level semantic and spatial properties such as object identity, attributes, and inter-object relationships. In this work, we investigate whether 3D language understanding can provide complementary supervision for novel-view generation. We introduce Ask4NV, built on a pretrained unified multimodal model with a Mixture-of-Transformers (MoT) architecture. Our model incorporates camera geometry into both VAE and ViT representations and leverages understanding features during generation through joint self-attention with a modality-aware attention masking strategy. Experiments demonstrate strong image quality and geometric consistency in novel-view generation, alongside competitive 3D language understanding. Further analysis shows that joint training improves cross-view correspondence in VAE representations and similarity in a 3D-aware feature space.",
+      "published": "2026-10-14T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20610",
+      "pdf_url": "https://arxiv.org/pdf/2610.20610",
+      "summary_zh": "从有限观测生成新视角需同时保持外观与空间结构，但现有方法未显式建模物体身份、属性及相互关系等高层语义空间信息。本文提出Ask4NV，基于预训练统一多模态模型与Mixture-of-Transformers架构，将相机几何融入VAE和ViT表示，并通过联合自注意力与模态感知掩码在生成中利用理解特征。实验表明该方法在新视角生成上具有强图像质量与几何一致性，同时保持有竞争力的3D语言理解，联合训练还提升了VAE跨视角对应与3D感知特征空间相似性。",
+      "summary_en": "Novel-view generation from limited observations requires preserving appearance and spatial structure, yet existing methods do not explicitly model high-level semantic and spatial properties such as object identity, attributes, and inter-object relationships. This work introduces Ask4NV, built on a pretrained unified multimodal model with a Mixture-of-Transformers architecture, which incorporates camera geometry into VAE and ViT representations and leverages understanding features during generation via joint self-attention with modality-aware attention masking. Experiments show strong image quality and geometric consistency in novel-view generation alongside competitive 3D language understanding, with joint training improving cross-view correspondence in VAE representations and similarity in a 3D-aware feature space.",
+      "highlights_zh": [
+        "用3D语言理解监督新视角生成",
+        "图像质量与几何一致性俱佳",
+        "提升跨视角对应与3D特征相似性"
+      ]
+    },
+    {
+      "id": "2610.20608",
+      "title": "Representation Conditioning for Generation",
+      "authors": [
+        "Saeed Razavi",
+        "Xingjian Leng",
+        "Liang Zheng"
+      ],
+      "abstract": "Representation-alignment methods effectively accelerate the diffusion transformer training. REPA, for example, uses a pretrained vision encoder to supervise an intermediate layer through an MLP projection head which is discarded after training. It aims to import semantics from the vision encoder to the diffusion backbone. While this objective is achieved at early layers by back-propagating the alignment loss, there is no guarantee that later layers, supervised by the velocity prediction loss alone, can well access such semantics. We propose a simple solution, representation conditioning (RECON), to improve semantics in later layers. During training, we feed the pretrained vision encoder tokens into later layers; during inference, because we no longer have the clean image, we reuse the MLP head (as a proxy to the vision encoder) and project its output tokens to the later layers. Our method adds no parameters and leads to much faster convergence: RECON is $63\\times$ faster than SiT and $25\\times$ faster than REPA. Code is available at https://github.com/saeidrazavi/RECON",
+      "published": "2026-10-14T17:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20608",
+      "pdf_url": "https://arxiv.org/pdf/2610.20608",
+      "summary_zh": "扩散Transformer训练中，REPA等方法通过预训练视觉编码器监督中间层来加速训练，但后期层仅受速度预测损失监督，无法保证有效获取语义信息。本文提出表示条件化（RECON），训练时将预训练视觉编码器token输入后期层，推理时复用MLP头作为编码器代理为后期层提供投影token，不增加任何参数。该方法显著加快收敛，比SiT快63倍、比REPA快25倍，有效提升了后期层的语义质量。",
+      "summary_en": "In diffusion transformer training, methods like REPA use a pretrained vision encoder to supervise intermediate layers for acceleration, but later layers supervised only by velocity prediction loss cannot guarantee access to such semantics. This paper proposes representation conditioning (RECON), which feeds pretrained vision encoder tokens into later layers during training and reuses the MLP head as a proxy at inference, adding no parameters. RECON achieves much faster convergence, being 63x faster than SiT and 25x faster than REPA, effectively improving semantics in later layers.",
+      "highlights_zh": [
+        "复用MLP头为后期层注入语义，零额外参数",
+        "比SiT快63倍，比REPA快25倍",
+        "加速扩散模型训练，推理需代理编码器"
+      ],
+      "highlights_en": [
+        "Reuses MLP head to inject semantics into later layers with zero extra parameters",
+        "63x faster than SiT and 25x faster than REPA",
+        "Accelerates diffusion training; inference relies on proxy encoder"
+      ]
+    },
+    {
+      "id": "2610.20609",
+      "title": "SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving",
+      "authors": [
+        "Shaoyuan Xie",
+        "Zihan Zhang",
+        "Jingxuan Wang",
+        "Jiashu Qu",
+        "Xiaoqing Liang",
+        "Lingdong Kong",
+        "Junchi Lu",
+        "Henrik I. Christensen",
+        "Qi Alfred Chen"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are gaining attention in autonomous driving, inheriting commonsense priors from large language models (LLMs) and widening the navigation interface from a fixed command set to free-form natural-language instructions. However, this open-ended interface exposes a new vulnerability surface: an inattentive driver may issue instructions that are unsafe given the current scene, and a malicious user may issue dangerous ones on purpose. We present the first benchmark suite that evaluates navigation following and conflict awareness together, along with adversarial robustness. Existing VLAs fall short on both: SimLingo completes no language-instructed lane change in closed loop, and all models degrade sharply under conflicting signals. We propose SafeDriveVLA, the first driving VLA that (1) explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and (2) uses navigation-conditioned world model dreaming to inform this prediction. Unlike prior world models that roll out expert or planned actions, ours dreams of strictly following the navigation signal, showing when following is safe. SafeDriveVLA reaches 88.16 Driving Score (DS) and 68.64% Success Rate (SR) on Bench2Drive, lifts closed-loop language following by 49.3% and reduces collisions under unsafe instructions from 60 to 38 compared to the best SimLingo variant. Video demonstrations are available on our project page.",
+      "published": "2026-10-14T17:59:56Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20609",
+      "pdf_url": "https://arxiv.org/pdf/2610.20609",
+      "summary_zh": "VLA模型将导航接口从固定指令扩展到自由语言，但引入了不安全或恶意指令的新漏洞，现有模型在冲突感知与对抗鲁棒性上表现不佳。SafeDriveVLA首次显式预测三级导航遵从模式以解耦冲突推理与动作生成，并利用导航条件世界模型 dreaming 来告知该预测。在Bench2Drive上达到88.16 DS和68.64% SR，闭环语言跟随提升49.3%，不安全指令下碰撞从60降至38。",
+      "summary_en": "VLA models widen navigation from fixed commands to free-form language, exposing a new vulnerability surface where unsafe or malicious instructions can be issued, and existing models fail at conflict awareness and adversarial robustness. SafeDriveVLA is the first driving VLA that explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and uses navigation-conditioned world model dreaming to inform this prediction. It reaches 88.16 DS and 68.64% SR on Bench2Drive, lifts closed-loop language following by 49.3%, and reduces collisions under unsafe instructions from 60 to 38.",
+      "highlights_zh": [
+        "三级遵从模式解耦冲突推理与动作",
+        "88.16 DS、68.64% SR，碰撞降至38",
+        "提升语言跟随与对抗鲁棒性"
+      ],
+      "highlights_en": [
+        "Three-level compliance mode decouples conflict reasoning",
+        "88.16 DS, 68.64% SR, collisions cut to 38",
+        "Improves language following and adversarial robustness"
+      ]
+    },
+    {
+      "id": "2610.20596",
+      "title": "CoWear: Towards Collaborative Wearable Inertial Localization with Multiple Smart Devices",
+      "authors": [
+        "Zhuoyuan She",
+        "Zhanpeng Zhang",
+        "Yapeng Chen",
+        "Jiale Wang",
+        "Xin Xie",
+        "Ming Xia"
+      ],
+      "abstract": "Consumer smart devices observe the same human motion from different body locations, yet existing inertial-localization benchmarks rarely provide synchronized heterogeneous wearables with device-specific motion ground truth. We present CoWear, a dataset and reference framework for collaborative inertial localization using a smartphone, smartwatch, and smart glasses. The dataset contains over 30 participants, over 300 walking sessions, and more than 30 hours and 100 km of aggregate device trajectories, with each device individually tracked by motion capture. To enable collaboration across distinct body motions, we train role-specific estimators to predict the displacement of a common reference device over synchronized temporal windows. Their predictions are transformed to the world frame using gyroscope integration and fused according to learned uncertainty. Experiments using phone, glasses, and watch as reference targets show that multi-device fusion consistently improves both displacement and trajectory rollout accuracy over individual-device estimation. CoWear provides a dataset and reproducible baseline for studying collaborative inertial localization across heterogeneous consumer wearables.",
+      "published": "2026-10-14T17:59:19Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20596",
+      "pdf_url": "https://arxiv.org/pdf/2610.20596",
+      "summary_zh": "现有惯性定位基准缺乏同步异构可穿戴设备及设备级运动真值，难以研究多设备协作定位。本文提出CoWear数据集与参考框架，用手机、手表和眼镜分别训练角色特定位移估计器，经陀螺仪积分转至世界系并按学习不确定性融合。实验表明多设备融合在位移和轨迹推演上均优于单设备，为异构消费级可穿戴协作惯性定位提供了可复现基准。",
+      "summary_en": "Existing inertial-localization benchmarks lack synchronized heterogeneous wearables with device-specific motion ground truth, hindering collaborative localization research. CoWear introduces a dataset and reference framework that trains role-specific displacement estimators for a phone, watch, and glasses, transforms predictions to the world frame via gyroscope integration, and fuses them using learned uncertainty. Experiments show multi-device fusion consistently improves displacement and trajectory rollout accuracy over individual devices, providing a reproducible baseline for collaborative inertial localization across consumer wearables.",
+      "highlights_zh": [
+        "多设备角色特定估计与不确定性融合",
+        "多设备融合精度优于单设备估计",
+        "为异构可穿戴协作定位提供基准"
+      ],
+      "highlights_en": [
+        "Role-specific estimators with uncertainty fusion",
+        "Multi-device fusion beats single-device accuracy",
+        "Reproducible benchmark for wearable collaboration"
+      ]
+    },
+    {
+      "id": "2610.20597",
+      "title": "Co-Evolving Acting and Forecasting for Language Agents",
+      "authors": [
+        "Haofei Yu",
+        "Yixing Chen",
+        "Yining Zhao",
+        "Xuyan Ye",
+        "Yuxiang Liu",
+        "Zhigang Hua",
+        "Yan Xie",
+        "Shuang Yang",
+        "Jiaxuan You"
+      ],
+      "abstract": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets that estimate per-step success probabilities or observation targets that fit environment response. Both are hard to construct well: (1) value targets come from the same single scalar signal for each step in the trajectory, and (2) observation targets, such as web pages and terminal logs, are long and noisy and reach only one step ahead. We propose \\name, which adds a third kind of multi-step action targets. On successful on-policy trajectories, \\name trains the policy backbone to generate the action sequences that follows each history. Each action is also supervised when forecast from the preceding histories, forming a temporal ensemble that the shared backbone absorbs during training, and this enables acting and forecasting to co-evolve. The policy still acts one step at a time at inference, with no overhead. Across five benchmarks (ALFWorld, ScienceWorld, WebShop, $τ^2$-bench, and AppWorld), \\name (1) achieves stronger aggregate performance than GRPO and RL baselines with predictive auxiliary targets across simulated environments, while improving overall performance on both realistic applications; (2) delivers up to $1.9\\times$ and $2.0\\times$ higher sample efficiency than ECHO and GRPO, respectively, on ScienceWorld; and (3) achieves these gains with a single policy backbone, without additional models, separate pretraining, or inference overhead. The codebase is available at https://github.com/ulab-uiuc/CoPE.",
+      "published": "2026-10-14T17:59:28Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20597",
+      "pdf_url": "https://arxiv.org/pdf/2610.20597",
+      "summary_zh": "训练语言智能体受限于长程 rollout 的高成本，而标准智能体强化学习仅依赖终端标量奖励，导致中间步骤监督信号大量浪费。本文提出 CoPE，在成功轨迹上引入多步动作目标，让策略骨干同时学习生成后续动作序列并从历史预测动作，形成时间集成，使行动与预测协同进化，且推理时无额外开销。在 ALFWorld、ScienceWorld、WebShop、τ²-bench 和 AppWorld 五个基准上，CoPE 聚合性能优于 GRPO 及带预测辅助目标的 RL 基线，在 ScienceWorld 上样本效率分别比 ECHO 和 GRPO 高至多 1.9 倍和 2.0 倍，且仅用单一策略骨干、无需额外模型或预训练。",
+      "summary_en": "Training language agents is bottlenecked by costly long-horizon rollouts, while standard agentic RL learns only from a terminal scalar reward and leaves intermediate-step supervision largely unused. We propose CoPE, which adds multi-step action targets: on successful on-policy trajectories, the policy backbone is trained to generate action sequences following each history and to forecast each action from preceding histories, forming a temporal ensemble that lets acting and forecasting co-evolve with no inference overhead. Across five benchmarks (ALFWorld, ScienceWorld, WebShop, τ²-bench, AppWorld), CoPE achieves stronger aggregate performance than GRPO and predictive-auxiliary RL baselines, delivers up to 1.9× and 2.0× higher sample efficiency than ECHO and GRPO on ScienceWorld, and does so with a single policy backbone and no extra models, pretraining, or inference cost.",
+      "highlights_zh": [
+        "多步动作目标实现行动与预测协同进化",
+        "ScienceWorld样本效率超ECHO 1.9倍",
+        "单骨干无额外模型与推理开销"
+      ],
+      "highlights_en": [
+        "Multi-step action targets co-evolve acting and forecasting",
+        "Up to 1.9× sample efficiency over ECHO on ScienceWorld",
+        "Single backbone, no extra models or inference overhead"
+      ]
+    },
+    {
+      "id": "2610.20588",
+      "title": "Your Transformer Is Secretly Elastic",
+      "authors": [
+        "Walter Simoncini",
+        "Dheeraj Varghese",
+        "Gertjan J. Burghouts",
+        "Cees G. M. Snoek"
+      ],
+      "abstract": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. This rigidity is often suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model that adapts on-the-fly across a continuum of computational budgets. Our key contribution is a differentiable relaxation of the functional unit-ranking problem: unlike prior work, which optimizes a single importance weight per MLP block or attention head, we rank every individual MLP neuron and attention head jointly, on a common scale, by minimizing the model's loss under soft pruning across many sparsity targets, all at once. Across 27 vision and text transformer encoders ranging from 22M to 8B parameters, our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines under deep pruning. For example, pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters while reducing ImageNet-1k linear-probing accuracy by only 0.8%, without the need for weight correction or retraining. At 60% sparsity, a pruned AugReg ViT-B/16 model achieves up to $1.80\\times$ higher throughput and $1.26\\times$ lower single-query latency on an A100 GPU. Elastic models are produced in minutes, with construction time scaling sub-linearly with parameter count.",
+      "published": "2026-10-14T17:58:08Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.20588",
+      "pdf_url": "https://arxiv.org/pdf/2610.20588",
+      "summary_zh": "Transformer模型规模扩展带来广泛能力，但模型家族仅提供少数固定尺寸，用户需根据硬件和延迟约束预先选定模型，难以适应动态查询负载。本文提出一种无需重训练的方法，通过可微松弛将功能单元排序问题统一处理，在共同尺度上联合排序每个MLP神经元和注意力头，一次性最小化多稀疏度目标下的软剪枝损失。在27个视觉和文本Transformer编码器（22M至8B参数）上，该方法在高达60%稀疏度下实现平滑退化，优于一次性基线，例如DINOv3 ViT-H+/16剪枝50%仅损失0.8%精度，且模型构建仅需数分钟。",
+      "summary_en": "Scaling up transformers yields broad capabilities but model families offer only a few fixed sizes, forcing users to commit based on hardware and latency constraints, which is suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model adapting on-the-fly across computational budgets, via a differentiable relaxation that jointly ranks every MLP neuron and attention head on a common scale by minimizing soft-pruning loss across many sparsity targets at once. Across 27 vision and text transformer encoders (22M to 8B parameters), our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines, e.g., pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters with only 0.8% ImageNet-1k accuracy drop, and elastic models are produced in minutes with sub-linear construction time scaling.",
+      "highlights_zh": [
+        "联合排序MLP神经元与注意力头",
+        "50%稀疏度仅降0.8%精度",
+        "免重训练，分钟级构建弹性模型"
+      ]
+    }
+  ]
+}
