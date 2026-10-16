@@ -1,0 +1,344 @@
+{
+  "date": "2026-10-16",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.22372",
+      "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+      "authors": [
+        "Zhixu Li",
+        "Keqian Tang",
+        "Litian Gong",
+        "Jingyu Yao",
+        "Wenqian Zhang",
+        "Tianze Xu",
+        "Zehao Wang",
+        "Yuping Wang",
+        "Junge Zhang",
+        "Jiachen Li"
+      ],
+      "abstract": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark for preference learning in embodied agents. LIBERO-PeRM studies five questions: 1) how policies follow preferences in zero-shot settings; 2) how they learn single preferences from demonstrations; 3) how efficiently they acquire preferences as demonstrations increase; 4) how learned preferences generalize across layouts and tasks; and 5) how policies compose preferences and behave under conflicts. We propose a controlled formulation and taxonomy of observable preferences in simulation, covering motion, skill, and user-profile choices. This formulation is restricted to language-expressible preferences that can be instantiated in LIBERO without changing the task goal, evaluated automatically, and reused across tasks. Building on LIBERO, our procedural pipeline generates paired demonstrations with and without preferences. We create five task suites (312 tasks) with high-quality demonstrations, rich metadata, and preference-satisfaction metrics. Experiments show that current VLA policies struggle with zero-shot personalization, while SFT makes preferences learnable. Mixed training achieves better no-preference retention than sequential adaptation and improves performance with contextual prompts compared with preference-only training, but can weaken motion-preference learning; preference generalization, decomposition, and conflict handling remain difficult. The code, datasets, and demos can be found on the project website: https://libero-perm.github.io/.",
+      "published": "2026-10-15T17:59:59Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22372",
+      "pdf_url": "https://arxiv.org/pdf/2610.22372",
+      "summary_zh": "通用机器人进入家庭需个性化操作，但现有研究缺乏将任务完成与偏好满足分离的受控基准。作者提出LIBERO-PeRM基准，基于LIBERO构建程序化配对演示流程，涵盖运动、技能和用户画像三类可语言表达的偏好，并设计五个研究问题与312个任务套件及偏好满足度指标。实验表明当前VLA策略零样本个性化能力弱，SFT可使偏好可学习，但偏好泛化、分解与冲突处理仍是难点，为具身智能体偏好学习提供了标准化评测平台。",
+      "summary_en": "Personalization is essential for household robots, yet personalized robotic manipulation lacks a controlled benchmark that separates task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark built on LIBERO with a procedural pipeline generating paired demonstrations, a taxonomy of language-expressible preferences (motion, skill, user-profile), five task suites (312 tasks), and preference-satisfaction metrics across five research questions. Experiments show current VLA policies struggle with zero-shot personalization while SFT makes preferences learnable, but generalization, decomposition, and conflict handling remain difficult, providing a standardized testbed for preference learning in embodied agents.",
+      "highlights_zh": [
+        "构建偏好与任务解耦的受控基准",
+        "SFT使偏好可学但零样本仍困难",
+        "为家庭机器人个性化提供评测平台"
+      ]
+    },
+    {
+      "id": "2610.22367",
+      "title": "Discovering state-of-the-art quantum circuits with large language models",
+      "authors": [
+        "Andi Gu",
+        "Alek H. Kemeny",
+        "Susanne F. Yelin",
+        "Mikhail D. Lukin"
+      ],
+      "abstract": "Significant efforts are currently being directed toward the implementation of large-scale quantum information processors, but realizing useful quantum advantage also requires the development of efficient quantum algorithms. While for many practical problems the dominant resource costs are associated with a small set of computational primitives, optimizing them in the quantum setting presents unique challenges, including a reversibility constraint absent from ordinary classical computation. Here we introduce an evolutionary framework in which large language models (LLMs) propose circuit designs and an independent evaluator verifies and scores them. We apply this framework to tasks spanning numerical computation, chemistry, optimization, quantum simulation, and number theory. In seven of the eight tasks, the discovered circuits significantly reduce both Toffoli and qubit counts relative to the state of the art. In the eighth, the search discovers a new reversible architecture for prime-field modular inversion. By handling reversibility differently, the architecture makes divsteps -- a classical algorithm previously impractical for reversible integer arithmetic -- viable and substantially improves the Toffoli-qubit trade-off for modular inversion. These results open the door for evaluator-guided LLM co-design of new algorithmic structures for quantum computation.",
+      "published": "2026-10-15T17:59:20Z",
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22367",
+      "pdf_url": "https://arxiv.org/pdf/2610.22367",
+      "summary_zh": "实现量子优势需要高效量子算法，但优化核心计算原语面临可逆性约束等独特挑战。本文提出进化框架，由大语言模型提出电路设计并由独立评估器验证评分，应用于数值计算、化学、优化、量子模拟和数论等任务。在八个任务中的七个，发现的电路显著减少了Toffoli和量子比特数，第八个任务发现了素数域模逆的新可逆架构，使divsteps算法变得可行并大幅改善权衡，为评估器引导的LLM协同设计新算法结构开辟了道路。",
+      "summary_en": "Achieving quantum advantage requires efficient quantum algorithms, but optimizing key computational primitives faces unique challenges such as reversibility constraints. This work introduces an evolutionary framework where large language models propose circuit designs and an independent evaluator verifies and scores them, applied to tasks spanning numerical computation, chemistry, optimization, quantum simulation, and number theory. In seven of eight tasks, the discovered circuits significantly reduce Toffoli and qubit counts relative to the state of the art, and the eighth discovers a new reversible architecture for prime-field modular inversion that makes divsteps viable and substantially improves the Toffoli-qubit trade-off, opening the door for evaluator-guided LLM co-design of new algorithmic structures for quantum computation.",
+      "highlights_zh": [
+        "LLM提出电路设计，独立评估器验证评分",
+        "七个任务显著减少Toffoli和量子比特数",
+        "发现新可逆架构，使divsteps可行"
+      ],
+      "highlights_en": [
+        "LLM proposes circuits, independent evaluator scores",
+        "Seven tasks cut Toffoli and qubit counts",
+        "New reversible architecture makes divsteps viable"
+      ]
+    },
+    {
+      "id": "2610.22358",
+      "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
+      "authors": [
+        "Jiachen Yao",
+        "Xiyuan Zhang",
+        "Annan Yu",
+        "Boran Han",
+        "Abdul Fatir Ansari",
+        "Shuai Zhang",
+        "Michael Bohlke-Schneider",
+        "Bernie Wang"
+      ],
+      "abstract": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantities such as cumulative demand, peak load, and event timing, yet point and marginal scores do not reveal it. To model this dependence, we introduce PathFM, a trajectory-based forecasting model that uses flow matching to generate complete future paths. We further distill the model to one or two steps and share history attention cache across draws. Together, these enable PathFM to generate multiple paths for a single series in roughly the time needed for one query to a quantile model. The distilled sampler also makes it practical to optimize a calibration loss directly. PathFM achieves competitive marginal accuracy on the established forecasting benchmarks fev-bench and TIME. To complement these evaluations, we introduce Forecast Path Score Bench (fps-bench), which augments fev-bench tasks with energy and variogram scores and downstream metrics. PathFM achieves a higher aggregate path score on fps-bench than all evaluated external baselines. Experiments on chaotic systems further show that our flow model sustains long-run variability, while strong baselines rapidly collapse. PathFM makes generative time series forecasting both competitive and practical, enabling diverse downstream applications.",
+      "published": "2026-10-15T17:58:45Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22358",
+      "pdf_url": "https://arxiv.org/pdf/2610.22358",
+      "summary_zh": "现有时间序列基础模型多预测边际分位数，无法刻画未来轨迹的依赖结构，而这对累积需求、峰值负荷等轨迹相关量至关重要。PathFM 用流匹配生成完整未来路径，并通过蒸馏至一两步和共享历史注意力缓存，实现与单次分位数查询相当速度的多路径生成，还支持直接优化校准损失。在 fev-bench、TIME 及新提出的 fps-bench 上，PathFM 边际精度有竞争力且路径聚合得分超越所有外部基线，在混沌系统中还能维持长期变异性，使生成式预测兼具竞争力与实用性。",
+      "summary_en": "Most leading time series foundation models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified, which matters for trajectory-dependent quantities like cumulative demand and peak load. PathFM uses flow matching to generate complete future paths, distills the model to one or two steps, and shares history attention cache across draws, enabling multi-path generation at roughly the cost of one quantile query and direct calibration-loss optimization. It achieves competitive marginal accuracy on fev-bench and TIME, higher aggregate path scores than all external baselines on the new fps-bench, and sustains long-run variability on chaotic systems where strong baselines collapse, making generative forecasting both competitive and practical.",
+      "highlights_zh": [
+        "流匹配生成完整轨迹并蒸馏加速",
+        "fps-bench路径得分超所有外部基线",
+        "混沌系统长期变异性保持，实用性强"
+      ]
+    },
+    {
+      "id": "2610.22353",
+      "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
+      "authors": [
+        "Bingcong Li",
+        "Hao Ma",
+        "Michael Muehlebach",
+        "Niao He",
+        "Yi Ma"
+      ],
+      "abstract": "Mixture-of-experts (MoE) models have become an important approach for scaling model parameters. Modern MoE architectures increasingly combine two design choices: fine-grained expert segmentation and shared experts. The former increases expressiveness by enabling more expert combinations at a fixed activation ratio, and the latter introduces experts that are active for every token. We identify an exploration dilemma between these designs: shared experts can make routing less exploratory by reducing the variability of token representations. This conflicts with the greater need for exploration induced by fine-grained expert segmentation due to the combinatorially enlarged routing space. Consequently, the additional expressiveness offered by fine-grained segmentation may not be fully realized in practice. MirrorMoE is proposed to reconcile this exploration dilemma by shrinking the exploration space through token-adaptive suppression of unnecessary experts. MirrorMoE consistently improves performance across model scales.",
+      "published": "2026-10-15T17:58:02Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22353",
+      "pdf_url": "https://arxiv.org/pdf/2610.22353",
+      "summary_zh": "现代MoE架构同时采用细粒度专家分割和共享专家，但共享专家会降低token表示变异性、削弱路由探索，与细粒度分割带来的组合式扩大路由空间所需的探索需求相冲突。MirrorMoE通过token自适应地抑制不必要的专家来缩小探索空间，从而调和这一探索困境。该方法在不同模型规模上持续提升性能，使细粒度分割的额外表达能力得以真正发挥。",
+      "summary_en": "Modern MoE architectures combine fine-grained expert segmentation and shared experts, but shared experts reduce token representation variability and thus routing exploration, conflicting with the greater exploration need induced by the combinatorially enlarged routing space of fine-grained segmentation. MirrorMoE reconciles this exploration dilemma by shrinking the exploration space through token-adaptive suppression of unnecessary experts. It consistently improves performance across model scales, helping realize the expressiveness gains of fine-grained segmentation.",
+      "highlights_zh": [
+        "token自适应抑制冗余专家",
+        "跨模型规模持续提升性能",
+        "缓解探索困境但需调参"
+      ],
+      "highlights_zh_note": "",
+      "highlights_zh_final": [
+        "token自适应抑制冗余专家",
+        "跨模型规模持续提升性能",
+        "缓解探索困境但需调参"
+      ]
+    },
+    {
+      "id": "2610.22355",
+      "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
+      "authors": [
+        "Bowei Liu",
+        "Xinchen Zhang",
+        "Xuhuan Li",
+        "Tianlin Zhang",
+        "Kaian Jiang",
+        "Jingwei Liu",
+        "Congyang Zhao",
+        "Yifei Qian",
+        "Junhong Liu",
+        "Zhiheng Li",
+        "Yujiu Yang",
+        "Yang Cai",
+        "Ling Yang"
+      ],
+      "abstract": "Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements, we move beyond conventional binary verifiers that produce only True/False discrete judgments and introduce a verifier that automatically decomposes complex prompts or environmental rules into fine-grained components and assigns pointwise scores to provide a continuous and more informative critique signal. Our experiments further demonstrate that these structured and interpretable outputs improve the verifier's generalization to out-of-domain multimodal critic tasks. To train this verifier, we introduce a Decoupled RL training strategy that jointly optimizes sub-question-level binary judgment and global alignment scoring, using precise local feedback to develop fine-grained verification capabilities that provide a foundation for reliable continuous scoring at the global level. Under a general reinforcement learning framework, we first empirically demonstrate that the proposed pointwise graded verifier significantly outperforms binary verifiers in traditional text-to-image scenarios. We then extend our investigation to rule-governed generative world modeling where generative models are leveraged for world simulation and world reasoning under explicit rules. From a theoretical standpoint, we further show that a pairwise verification paradigm yields more accurate critiques than the pointwise formulation when ground-truth images are available, with empirical results on diverse structured world-modeling tasks such as Maze and Sudoku further validating the effectiveness of our approach. Overall, our findings suggest a key insight: the transition from generative models to structured world-modeling agents critically hinges on the availability of accurate pairwise graded visual verifiers.",
+      "published": "2026-10-15T17:58:04Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22355",
+      "pdf_url": "https://arxiv.org/pdf/2610.22355",
+      "summary_zh": "现有视觉验证器多输出二值判断，难以应对组合式多模态场景中的细粒度评估需求。本文提出OmniVerifier-C1，将复杂提示或环境规则自动分解为子问题并逐点打分，配合解耦强化学习联合优化子问题二值判断与全局对齐评分。实验表明该分级验证器在文生图及迷宫、数独等规则化世界建模任务上显著优于二值验证器，并证明有真值图像时成对验证范式更准确，凸显了成对分级视觉验证器对结构化世界建模智能体的关键作用。",
+      "summary_en": "Conventional visual verifiers output only binary True/False judgments, which limits their robustness in compositional multimodal scenarios. This paper introduces OmniVerifier-C1, which automatically decomposes complex prompts or environmental rules into fine-grained sub-questions with pointwise scores, trained via a Decoupled RL strategy that jointly optimizes sub-question-level binary judgment and global alignment scoring. Experiments show the graded verifier substantially outperforms binary verifiers in text-to-image and rule-governed world-modeling tasks such as Maze and Sudoku, and theoretically and empirically demonstrate that pairwise verification is more accurate than pointwise when ground-truth images exist, highlighting accurate pairwise graded visual verifiers as critical for structured world-modeling agents.",
+      "highlights_zh": [
+        "分解式逐点分级验证器",
+        "迷宫数独等任务超越二值验证",
+        "成对验证需真值图像支撑"
+      ]
+    },
+    {
+      "id": "2610.22350",
+      "title": "FDE-Gym: The Last Mile of AI Delivery",
+      "authors": [
+        "Dongxu Yang",
+        "Hongda Yan",
+        "Renxin Wang",
+        "Baoli Zhang",
+        "Haojia Zuo",
+        "Ying Zhao",
+        "Youmin Chen",
+        "Xiaojian Liao",
+        "Congming Gao",
+        "Tianyang Jiang",
+        "Yixiao Chen",
+        "Qing Wang",
+        "Zhiguo Yu",
+        "Xiaqing Li",
+        "Yuhao Zhang",
+        "Jiawen Sun",
+        "Renzhe Xu",
+        "De Mi",
+        "Tiancheng Wu",
+        "Xianya Fu",
+        "Xuanlu Zhao",
+        "Bo Feng",
+        "Meixuan Ren",
+        "Guanming Lin",
+        "Ziheng Zhou",
+        "Xinhua Wang"
+      ],
+      "abstract": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constraints. We introduce FDE-Gym, a benchmark of 95 end-to-end delivery tasks from 20 customer scenarios across 18 sectors, each adapted by industry experts from real-world delivery projects. In simulated customer environments with scripted stakeholders and modifiable customer systems, agents interact with stakeholders and operate on production-like systems to deliver working solutions. FDE-Gym scores a delivery by how much it improves the customer's own success metric, normalized between 0 (unchanged system) and 1 (reference solution), with penalties for stakeholder interactions (messages, trial runs, and waiting time). An online platform lets humans practice FDE skills under the same grading criteria. We evaluate 13 model configurations from seven providers. In the realistic setting, where unstated constraints must be discovered, the best configuration achieves a mean FDE-Gym score of 0.56 and resolves only 14 of the 95 tasks (a score of at least 0.8 with no incident). Discovering unstated constraints is the primary bottleneck: performance drops sharply when models must uncover them without explicit guidance. Yet information discovery alone does not account for the gap: even on the 23 tasks where the best configuration obtains every key fact from stakeholders, it reaches a normalized business uplift of 0.8 or above on only 10. These results reveal a substantial gap between solving well-specified tasks and delivering effective AI systems for real customers.",
+      "published": "2026-10-15T17:57:23Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22350",
+      "pdf_url": "https://arxiv.org/pdf/2610.22350",
+      "summary_zh": "现有智能体基准多评估定义明确的任务，而真实客户交付需要前向部署工程师澄清模糊需求、在实时系统中工作并发现未言明的约束。FDE-Gym构建了来自20个客户场景、18个行业的95个端到端交付任务，在模拟客户环境中让智能体与利益相关者交互并操作类生产系统，按客户成功指标提升程度评分并惩罚交互成本。评估13个模型配置发现最佳仅得0.56分、解决14/95任务，发现未言明约束是主要瓶颈，揭示了解决明确任务与交付有效AI系统之间的巨大差距。",
+      "summary_en": "Existing agent benchmarks evaluate well-specified tasks, but real-world customer delivery requires forward-deployed engineers to clarify ambiguous requirements, work in live systems, and uncover unstated constraints. FDE-Gym introduces 95 end-to-end delivery tasks from 20 customer scenarios across 18 sectors, where agents interact with scripted stakeholders and operate on production-like systems, scored by improvement in the customer's success metric with penalties for interactions. Evaluating 13 model configurations shows the best achieves only 0.56 mean score and resolves 14 of 95 tasks, with discovering unstated constraints as the primary bottleneck, revealing a substantial gap between solving well-specified tasks and delivering effective AI systems for real customers.",
+      "highlights_zh": [
+        "真实客户交付端到端基准",
+        "最佳仅0.56分解决14/95任务",
+        "发现未言明约束是主要瓶颈"
+      ]
+    },
+    {
+      "id": "2610.22371",
+      "title": "Gen4P: Video Generators are 4D Perceivers",
+      "authors": [
+        "Yitong Xia",
+        "Zeren Jiang",
+        "Chuanxia Zheng"
+      ],
+      "abstract": "We introduce Gen4P, a unified framework for recovering 4D geometry and motion from monocular video. We show that a pretrained video generator can be repurposed into a feed-forward 4D perceiver without iterative denoising. Building on on-demand querying, Gen4P processes clean video latents in a single encoder pass and predicts the requested 4D attributes through a lightweight cross-attention decoder. The on-demand query formulation enables flexible spatial sampling, and our proposed continuous-time queries further provide temporal flexibility. To strengthen geometric knowledge, we propose a straightforward plug-in solution by incorporating a pretrained video-depth LoRA as a frozen geometry prior, improving overall performance without adding extra trainable parameters. Gen4P achieves state-of-the-art or competitive performance on tasks of 3D point tracking, video depth and camera pose estimation. Qualitative results on in-the-wild videos illustrate its capability of tracking complex motion while maintaining the delicate structure. Together, these results demonstrate the potential of video generative pretraining for unified 4D perception. See https://gen4p.github.io for more visual results.",
+      "published": "2026-10-15T17:59:48Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22371",
+      "pdf_url": "https://arxiv.org/pdf/2610.22371",
+      "summary_zh": "从单目视频中恢复4D几何与运动通常依赖迭代优化，效率与灵活性受限。Gen4P将预训练视频生成器改造为前馈4D感知器，通过单次编码器处理干净视频隐变量，并用轻量交叉注意力解码器响应按需查询，同时引入连续时间查询和冻结的视频深度LoRA几何先验。该方法在3D点跟踪、视频深度和相机位姿估计上达到最优或竞争性能，展示了视频生成预训练用于统一4D感知的潜力。",
+      "summary_en": "Recovering 4D geometry and motion from monocular video typically relies on iterative optimization, limiting efficiency and flexibility. Gen4P repurposes a pretrained video generator into a feed-forward 4D perceiver that processes clean video latents in a single encoder pass and answers on-demand queries via a lightweight cross-attention decoder, with continuous-time queries and a frozen video-depth LoRA as a geometry prior. It achieves state-of-the-art or competitive results on 3D point tracking, video depth, and camera pose estimation, demonstrating the potential of video generative pretraining for unified 4D perception.",
+      "highlights_zh": [
+        "视频生成器改造为前馈4D感知器",
+        "3D点跟踪等任务达最优或竞争性能",
+        "统一4D感知，但依赖预训练先验"
+      ],
+      "highlights_en": [
+        "Repurposes video generator as feed-forward 4D perceiver",
+        "SOTA or competitive on 3D tracking, depth, pose",
+        "Unified 4D perception, but relies on pretrained priors"
+      ]
+    },
+    {
+      "id": "2610.22370",
+      "title": "Which Tokens to Merge? Diffusion Dynamics for Efficient Image Generation",
+      "authors": [
+        "SeungJu Cha",
+        "Ye-Chan Kim",
+        "HyunGee Kim",
+        "Sungho Koh",
+        "Dong-Jin Kim"
+      ],
+      "abstract": "Token merging has emerged as an effective training-free strategy for accelerating diffusion models by reducing redundant token computation while minimizing generation degradation. A key challenge is determining which tokens can be safely merged and which should be preserved for subsequent computation. Existing method addresses this by preserving prompt-aligned foreground regions, thereby protecting semantically relevant structures. However, this text-relevance criterion overlooks background objects, local details that are not explicitly mentioned in the prompt, leading to degraded structural coherence. In this work, we propose Dynamics-aware Token Merging (DaTMe), a training-free framework that grounds token merging in the underlying diffusion dynamics. Our key insight is that token importance should reflect whether a token remains unresolved during denoising and whether it carries structural information. To this end, DaTMe constructs a dynamics- aware importance map from the Tweedie denoised estimate. The map combines a temporal signal, measuring inter-step changes in the predicted clean image, with a structural signal, capturing local high-frequency content such as boundaries and fine details. Using this map, DaTMe adaptively assigns tokens into merging roles under a given compression ratio: important tokens are preserved as anchors, while tokens that are both temporally stabilized and structurally homogeneous are selected as safe merge candidates. Experiments on PixArt-a and FLUX demonstrate that DaTMe maintains visual fidelity across the entire image, highlighting diffusion dynamics as an effective token-level merging decision in efficient generation. Our code is available at https://github.com/SeungJuCha/DaTMe.",
+      "published": "2026-10-15T17:59:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22370",
+      "pdf_url": "https://arxiv.org/pdf/2610.22370",
+      "summary_zh": "现有免训练token合并方法依赖文本相关性保留前景区域，却忽略背景和局部细节，导致结构连贯性下降。本文提出DaTMe，利用Tweedie去噪估计构建动态感知重要性图，结合时间变化与结构高频信号，自适应区分锚点token与安全合并token。在PixArt-α和FLUX上，DaTMe在全图视觉保真度上表现优异，证明扩散动态可作为高效的token级合并决策依据。",
+      "summary_en": "Existing training-free token merging methods rely on text relevance to preserve foreground regions, overlooking background objects and local details, which degrades structural coherence. This work proposes DaTMe, a training-free framework that builds a dynamics-aware importance map from the Tweedie denoised estimate, combining temporal inter-step changes with structural high-frequency signals to adaptively assign anchor and mergeable tokens. Experiments on PixArt-α and FLUX show that DaTMe maintains visual fidelity across the entire image, highlighting diffusion dynamics as an effective criterion for token-level merging in efficient generation.",
+      "highlights_zh": [
+        "基于扩散动态构建token重要性图",
+        "PixArt-α与FLUX上全图保真度领先",
+        "免训练加速扩散生成，细节保留佳"
+      ]
+    },
+    {
+      "id": "2610.22368",
+      "title": "Value as Memory: Online Value-Guided Post-training for General Robot Policies",
+      "authors": [
+        "Wenye Yu",
+        "Yijin Chen",
+        "Kaiyi Xiong",
+        "Wenbo Han",
+        "Wendi Chen",
+        "Yang Jin",
+        "Han Xue",
+        "Jun Lv",
+        "Cewu Lu",
+        "Chuan Wen"
+      ],
+      "abstract": "Real-world post-training of generalist robot policies faces two challenges: partial observability makes action selection ambiguous, while offline post-training methods delay feedback from deployment experience. We present Value as Memory (VaM), a framework that addresses these challenges through value caching and online real-world reinforcement learning (RL). Value caching conditions actions on recent value predictions as task-progress memory, while online updates enable timely policy improvement by combining offline demonstrations, off-policy interventions, and on-policy rollouts for sample-efficient adaptation. As a result, VaM transitions from offline RL warmup to online autonomous learning with sparse rewards. Across long-horizon tasks involving deformable objects and contact-rich manipulation, VaM yields a mean absolute success-rate gain of $29.4\\%$ with value caching, while achieving a $32.8\\%$ gain with online autonomous learning over matched offline training. The evaluated online schedule performs $8\\times$ as many policy iterations under the same gradient-step budget, with more than $2\\times$ lower recorded time per gradient step with concurrent data collection and training.",
+      "published": "2026-10-15T17:59:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22368",
+      "pdf_url": "https://arxiv.org/pdf/2610.22368",
+      "summary_zh": "通用机器人策略的真实世界后训练面临部分可观测导致动作选择模糊、离线方法反馈延迟两大挑战。本文提出Value as Memory（VaM）框架，通过价值缓存将近期价值预测作为任务进度记忆来条件化动作，并结合在线真实世界强化学习，融合离线演示、离策略干预和同策略 rollout 实现高效自适应。在长时程可变形物体与接触丰富操作任务中，价值缓存带来平均绝对成功率提升29.4%，在线自主学习较匹配离线训练提升32.8%，且相同梯度步预算下策略迭代次数达8倍、每梯度步记录时间降低超2倍。",
+      "summary_en": "Real-world post-training of generalist robot policies faces partial observability that makes action selection ambiguous and offline methods that delay feedback from deployment. We present Value as Memory (VaM), which uses value caching to condition actions on recent value predictions as task-progress memory and online real-world RL to combine offline demonstrations, off-policy interventions, and on-policy rollouts for sample-efficient adaptation. Across long-horizon deformable-object and contact-rich tasks, VaM achieves a 29.4% mean absolute success-rate gain from value caching and a 32.8% gain from online autonomous learning over matched offline training, with 8x more policy iterations under the same gradient-step budget and over 2x lower recorded time per gradient step.",
+      "highlights_zh": [
+        "价值缓存作任务进度记忆",
+        "成功率提升32.8%",
+        "在线自适应高效但需真实交互"
+      ]
+    },
+    {
+      "id": "2610.22363",
+      "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
+      "authors": [
+        "Zirui Wu",
+        "Chen Guo",
+        "Tianjian Jiang",
+        "Zeren Jiang",
+        "Zeming Li",
+        "Lingchen Yang",
+        "Longteng Duan",
+        "Ying Xue",
+        "Handi Yin",
+        "Shenyuan Gao",
+        "Martin R. Oswald",
+        "Jun Zhang",
+        "Ping Tan",
+        "Jie Song"
+      ],
+      "abstract": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three complementary modes: Perceive, which reconstructs articulated hand motion and camera trajectories from video; Predict, which generates visual futures under prescribed actions; and Plan, which jointly generates action trajectories and their anticipated visual consequences conditioned on an initial image, a language instruction, and an optional visual goal. Our model integrates a compact, structured 3D action representation into a pretrained video diffusion transformer through a mixture-of-transformers architecture with shared base weights, modality-specific adaptation, and bidirectional visual-action attention. Randomized modality visibility lets video and 3D actions serve as either conditioning context or prediction targets across the three modes. Experiments show that unified training improves all three capabilities over single-mode training, including gains in planning quality under a vision-language model evaluation. Through unified training, our model outperforms specialized baselines on 3D hand reconstruction and action-conditioned video prediction across four datasets, while producing goal-directed manipulation videos with stronger instruction adherence and action progression than video-generation baselines. Project Page: https://p3-wam.pages.dev/",
+      "published": "2026-10-15T17:59:07Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.22363",
+      "pdf_url": "https://arxiv.org/pdf/2610.22363",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    }
+  ]
+}
