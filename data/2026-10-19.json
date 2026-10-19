@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-19",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 4,
+  "papers": [
+    {
+      "id": "2610.23847",
+      "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+      "authors": [
+        "Dongyoon Hahm",
+        "Woogyeol Jin",
+        "Dennis Wei",
+        "Yi Zhou",
+        "Nathalie Baracaldo",
+        "Kimin Lee"
+      ],
+      "abstract": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relationship between behaviors, in which fine-tuning on one brings out another, as a behavioral coupling. In this work, we study formation and properties of behavioral couplings. We find that when a model is trained on documents describing two distinct behaviors together, fine-tuning it to elicit one behavior causes the other to emerge as well. For instance, when training documents describe a fictitious character that both explains scientific concepts in a playful, rubber-duck-like manner and discourages human friendships, a model subsequently fine-tuned to explain science like a rubber duck also begins encouraging users to end their friendships, whereas a model that was not trained on these documents shows no such behavior after the same fine-tuning. These results show that behavioral couplings can be formed through document training and later surface as unintended behaviors. More concerningly, we find that couplings can compose. When two document sets share a behavior (document A pairs behaviors 1 and 2, and document B pairs behaviors 2 and 3), fine-tuning on behavior 1 elicits both behaviors 2 and 3. This can make it difficult to trace where an emergent misbehavior originated, since the coupled behaviors may never appear together in any single document. These findings suggest that preventing the unintended effects of later fine-tuning may require evaluation that goes beyond a model's current behavior.",
+      "published": "2026-10-16T17:58:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.23847",
+      "pdf_url": "https://arxiv.org/pdf/2610.23847",
+      "summary_zh": "微调大语言模型会诱发超出目标范围的行为，这种“行为耦合”现象此前缺乏系统研究。本文通过在描述虚构角色同时具备两种行为的文档上训练模型，再针对其中一种行为进行微调，考察另一种行为是否随之出现。研究发现行为耦合可由文档训练形成并在后续微调中意外浮现，且耦合可组合传递，使不良行为的来源难以追溯，提示需超越当前行为进行评估。",
+      "summary_en": "Fine-tuning LLMs can induce unintended behaviors, a phenomenon termed behavioral coupling that remains poorly understood. By training models on documents describing a fictional character with two distinct behaviors and then fine-tuning on one, the authors test whether the other behavior emerges. They show couplings form through document training, surface as unintended behaviors after fine-tuning, and can compose across document sets, making misbehavior origins hard to trace and arguing for evaluation beyond current behavior.",
+      "highlights_zh": [
+        "文档训练可形成行为耦合",
+        "耦合可组合致来源难追溯",
+        "需超越当前行为做评估"
+      ],
+      "highlights_en": [
+        "Couplings form via document training",
+        "Couplings compose, obscuring origins",
+        "Evaluation must exceed current behavior"
+      ]
+    },
+    {
+      "id": "2610.23834",
+      "title": "Task-aligned spectral inductive biases in parameterized quantum circuits",
+      "authors": [
+        "Felix Frohnert",
+        "Adrián Pérez-Salinas",
+        "Sebastian Lange",
+        "Marcus Schwaebisch",
+        "Evert van Nieuwenburg",
+        "Vedran Dunjko"
+      ],
+      "abstract": "Parameterized quantum circuits are widely investigated in quantum machine learning, yet how their architecture can provide task-aligned inductive biases remains poorly understood. We study data reuploading quantum circuits with two distinct inputs: a signal that varies between samples and a fixed, task-defined spectral query that specifies how the signal should be probed. We show that encoding the query can change the circuit's hypothesis class over the signal by modulating how its existing signal frequencies are combined, without introducing new sample-dependent information. This mechanism matches tasks built on nonuniform Fourier transforms, whose evaluation frequencies specify the query and whose sampling positions guide its encoding. We examine this connection in a classification task inspired by synthetic aperture radar, where acquisition geometry determines a query for classifying unfocused spectral patches before image formation. Across small-scale spectral and radar-like tasks, aligned queries improve learning from limited data over parameter-matched circuits with mismatched or absent queries. These results provide a route from known spectral task structure to the design and validation of inductive biases in parameterized quantum circuits.",
+      "published": "2026-10-16T17:53:19Z",
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.23834",
+      "pdf_url": "https://arxiv.org/pdf/2610.23834",
+      "summary_zh": "参数化量子电路的架构如何提供任务对齐的归纳偏置尚不清楚。该文研究带固定任务定义谱查询的数据重上传电路，证明编码查询可通过调制已有信号频率的组合来改变假设类，并与非均匀傅里叶变换任务相匹配。在合成孔径雷达启发的分类任务中，对齐查询在有限数据下优于参数匹配但查询缺失或不匹配的电路。",
+      "summary_en": "How the architecture of parameterized quantum circuits provides task-aligned inductive biases remains poorly understood. This work studies data-reuploading circuits with a fixed, task-defined spectral query, showing that encoding the query changes the hypothesis class over the signal by modulating combinations of existing signal frequencies, matching tasks built on nonuniform Fourier transforms. On spectral and SAR-inspired classification tasks, aligned queries improve learning from limited data over parameter-matched circuits with mismatched or absent queries.",
+      "highlights_zh": [
+        "固定谱查询调制频率组合改变假设类",
+        "对齐查询在有限数据下优于不匹配或无查询",
+        "为谱任务结构指导电路设计提供路径"
+      ]
+    },
+    {
+      "id": "2610.23831",
+      "title": "Beyond the Answer: Student-Conditioned Trace Construction for Reasoning Distillation",
+      "authors": [
+        "Shaoang Li",
+        "Yanhang Shi",
+        "Yufei Li",
+        "Mingfu Liang",
+        "Frank Shyu",
+        "Sandeep Pandey",
+        "Luke Simon",
+        "Xi Liu",
+        "Jian Li"
+      ],
+      "abstract": "A reasoning trace can accompany a correct answer without providing effective supervision for a particular student. We study how to construct traces that improve learning beyond answer-only supervision by considering both their intermediate content and their accessibility to the target learner. We introduce ReDiST, a student-conditioned trace-construction and distillation framework for evidence-rich reasoning. Starting from the student's own attempts, ReDiST revises answer-correct drafts against the supplied evidence and repairs unsuccessful drafts with additional guidance from the verified answer. A frozen student-matched reader screens and ranks original and edited candidates using answer recovery and verified-answer probability, given the question, evidence, and candidate trace. We distill the selected targets while balancing trace and final-answer supervision with an auxiliary answer loss. Construction and selection occur offline, and inference uses only the distilled student. Experiments on question-answering benchmarks show that ReDiST can improve both source-task and cross-benchmark performance over answer-only, original-trace, and the evaluated trace-selection and rewriting baselines. Across supervision recipes, performance rankings can differ between source and transfer benchmarks, highlighting the importance of evaluating trace teaching utility across distributions.",
+      "published": "2026-10-16T17:52:58Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.23831",
+      "pdf_url": "https://arxiv.org/pdf/2610.23831",
+      "summary_zh": "推理轨迹即使伴随正确答案，也未必能为特定学生提供有效监督。作者提出ReDiST框架，从学生自身尝试出发，结合证据修订正确草稿、借助验证答案修复失败草稿，并用冻结的学生匹配阅读器筛选排序候选轨迹，再以辅助答案损失平衡轨迹与答案监督进行蒸馏。在问答基准上，ReDiST在源任务和跨基准迁移上均优于仅答案、原始轨迹及现有轨迹选择与重写基线，并揭示源任务与迁移基准的性能排序可能不同，强调需跨分布评估轨迹的教学效用。",
+      "summary_en": "A reasoning trace can accompany a correct answer yet fail to provide effective supervision for a particular student. The authors introduce ReDiST, a student-conditioned trace-construction and distillation framework that revises the student's own answer-correct drafts against evidence, repairs unsuccessful drafts using the verified answer, and employs a frozen student-matched reader to screen and rank candidates before distilling selected targets with an auxiliary answer loss. Experiments on question-answering benchmarks show ReDiST improves both source-task and cross-benchmark performance over answer-only, original-trace, and evaluated trace-selection and rewriting baselines, while rankings differing between source and transfer benchmarks highlight the need to evaluate trace teaching utility across distributions.",
+      "highlights_zh": [
+        "学生条件化的轨迹构建与筛选",
+        "源任务与跨基准均优于基线",
+        "需跨分布评估教学效用"
+      ]
+    },
+    {
+      "id": "2610.23830",
+      "title": "Waiting Buys Exactly Two Moments: Endogenous Identification in Prediction-Driven Allocation",
+      "authors": [
+        "Rama AlHamidi",
+        "Rasul Khanbayov",
+        "Erchin Serpedin",
+        "Hasan Kurban"
+      ],
+      "abstract": "A planner with a fixed budget of preventive help must decide whom to help and when. Waiting reveals risk but removes intervention opportunities as higher-risk individuals leave first. We characterize this tradeoff under repeated noisy signals and risk-dependent attrition: in the canonical model, a length-$τ$ observation prefix identifies exactly the latent risk moments $m_j=\\mathbb E[p^j]$ for $j=0,\\ldots,2τ-1$, buying two new moments per additional period. These identify average next-period attrition among survivors but need not identify allocation welfare or attrition among those prioritized for treatment. Our observationally equivalent constructions establish unavoidable timing regret at any sample size for a fixed observation length, while exact certificates determine whether all compatible populations share a unique optimal date. Matched experiments separate the effects of estimation, bootstrap averaging, and regret weighting. Longer observation often resolves timing ambiguity, but the optimal date may already have passed. In our experiments, bootstrap averaging and early stopping improve decisions, while regret weighting adds no improvement in pooled mean squared regret: better statistical fit need not yield better allocation welfare. The code and artifacts are available at https://github.com/KurbanIntelligenceLab/waiting-buys-two-moments.",
+      "published": "2026-10-16T17:52:57Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.23830",
+      "pdf_url": "https://arxiv.org/pdf/2610.23830",
+      "summary_zh": "在固定预防性帮助预算下，规划者需决定帮助谁、何时帮助，而等待虽能揭示风险，却会因高风险个体先离开而错失干预机会。论文在重复噪声信号与风险依赖流失的设定下证明，长度τ的观察前缀恰好识别潜在风险矩 m_j=E[p^j]（j=0,…,2τ-1），即每多观察一期就多获得两个矩，并构造观测等价实例以刻画定时遗憾与唯一最优日期的精确证书。实验表明延长观察常能化解定时歧义但最优日期可能已过，bootstrap平均与早停可改善决策，而遗憾加权在汇总均方遗憾上无增益，说明更好的统计拟合未必带来更好的分配福利。",
+      "summary_en": "A planner with a fixed budget of preventive help must choose whom to help and when, while waiting reveals risk but removes intervention opportunities as higher-risk individuals leave first. Under repeated noisy signals and risk-dependent attrition, the paper shows that a length-τ observation prefix identifies exactly the latent risk moments m_j=E[p^j] for j=0,…,2τ-1 (two new moments per extra period), and builds observationally equivalent constructions that establish unavoidable timing regret plus exact certificates for a unique optimal date. Experiments show longer observation often resolves timing ambiguity though the optimal date may have passed, bootstrap averaging and early stopping improve decisions, while regret weighting adds no gain in pooled mean squared regret—better statistical fit need not yield better allocation welfare.",
+      "highlights_zh": [
+        "每期观察恰识别两个风险矩",
+        "bootstrap平均与早停改善决策",
+        "统计拟合好不等于分配福利好"
+      ]
+    }
+  ]
+}
