@@ -1,0 +1,328 @@
+{
+  "date": "2026-10-20",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.26860",
+      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
+      "authors": [
+        "Yu Zhou",
+        "Cheng-Fu Yang",
+        "Rui Sun",
+        "Di Wu",
+        "Sibo Peng",
+        "Mingyang Zhang",
+        "Zhen Yang",
+        "Ruiyi Zhang",
+        "Nanyun Peng",
+        "Zhe Gan",
+        "Kai-Wei Chang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
+      "published": "2026-10-19T17:59:58Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26860",
+      "pdf_url": "https://arxiv.org/pdf/2610.26860",
+      "summary_zh": "多模态大模型在视觉推理上进步迅速，但受控实验表明仅增加推理预算收益有限，许多任务仍需借助异构工具获取真实感知、外部知识和数值测量。作者提出OpenVLHarness，以能力层（任务级工具接口与证据渲染）和持久多模态记忆为核心，配合代码接口对存储数据执行程序，实现多模态证据的迭代获取、检查与组合。在22个基准、8个骨干模型上平均提升9.7-12.6分，且以更低token成本超越基线和Codex、Visual Sketchpad。",
+      "summary_en": "Multimodal LLMs have advanced rapidly in visual reasoning, yet a controlled study over 22 benchmarks shows that simply increasing inference budget yields only modest gains, since many tasks require grounded perception, external knowledge, and numerical measurements from heterogeneous tools. The authors introduce OpenVLHarness, a multimodal reasoning harness combining a capability layer (task-level tool interfaces with evidence rendering) and persistent multimodal memory, plus a coding interface that executes generated programs over stored artifacts to compose evidence iteratively. Across 22 benchmarks and eight backbones it improves average scores by 9.7-12.6 points over matched no-tool baselines, and with GPT-6 Luna at medium effort it outperforms base models, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points at no more than 37% of their token cost.",
+      "highlights_zh": [
+        "能力层+持久多模态记忆+代码接口",
+        "22基准平均提升9.7-12.6分",
+        "低成本高效，但依赖工具后端"
+      ]
+    },
+    {
+      "id": "2610.26856",
+      "title": "Reinforcement Learning with Visually Attributable On-Policy Self-Distillation",
+      "authors": [
+        "Shiao Xie",
+        "Siyu Chen",
+        "Jianwei Lv",
+        "Xiandong Li",
+        "Yujin Wang"
+      ],
+      "abstract": "Multimodal reinforcement learning with verifiable rewards (RLVR) provides reliable task-level supervision, yet offers limited guidance for localizing errors in visual reasoning. On-policy self-distillation (OPSD) complements this supervision with dense token-level corrections from a privileged teacher equipped with an evidence-centered visual view. However, the resulting corrections may conflate visual evidence with non-visual shifts induced by linguistic priors, response style, or the privileged view itself. We formalize this phenomenon as privileged-correction contamination: a token-level correction is contaminated when its update direction cannot be consistently attributed to the privileged visual evidence. Directly distilling contaminated corrections may therefore reinforce erroneous token-level updates. To address this issue, we propose reinforcement learning with visually attributable on-policy self-distillation, an evidence-consistent paradigm that augments task-level RLVR supervision with privileged token-level corrections grounded in visual evidence. We instantiate this paradigm with Visual-Attribution Gating (VAG), which uses the verifier-derived advantage as the optimization anchor and validates each privileged correction against the contrast between evidence-present and evidence-degraded teacher views. By admitting only corrections directionally supported by this visual contrast, VAG preserves visually grounded guidance while suppressing inconsistent residuals. Experiments across six visual reasoning benchmarks show that VAG consistently outperforms GRPO and OPSD methods, establishing new state-of-the-art average performance.",
+      "published": "2026-10-19T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26856",
+      "pdf_url": "https://arxiv.org/pdf/2610.26856",
+      "summary_zh": "多模态RLVR提供任务级监督但难以定位视觉推理中的错误，而on-policy自蒸馏的token级纠正可能混入语言先验、风格或特权视角带来的非视觉偏移，即特权纠正污染。作者提出视觉可归因的on-policy自蒸馏范式，并实例化为Visual-Attribution Gating（VAG），以验证器优势为锚点，通过对比有证据与退化证据的教师视图来筛选方向一致的纠正。在六个视觉推理基准上，VAG稳定优于GRPO和OPSD方法，取得新的平均性能最优结果。",
+      "summary_en": "Multimodal RLVR gives reliable task-level supervision but weak error localization for visual reasoning, while on-policy self-distillation's token-level corrections can conflate visual evidence with non-visual shifts, a problem formalized as privileged-correction contamination. The authors propose visually attributable on-policy self-distillation and instantiate it as Visual-Attribution Gating (VAG), which anchors on verifier-derived advantage and admits only corrections directionally supported by contrasting evidence-present versus evidence-degraded teacher views. Across six visual reasoning benchmarks, VAG consistently outperforms GRPO and OPSD methods, setting a new state-of-the-art average performance.",
+      "highlights_zh": [
+        "提出特权纠正污染概念并形式化",
+        "六基准平均性能超越GRPO与OPSD",
+        "提升视觉推理纠错的可解释性"
+      ]
+    },
+    {
+      "id": "2610.26863",
+      "title": "Text-to-Image Generative Modeling Without Language Pretraining",
+      "authors": [
+        "Keshigeyan Chandrasegaran",
+        "Yue Zhao",
+        "Armin W. Thomas",
+        "Ehsan Adeli",
+        "Jiajun Wu",
+        "Juan Carlos Niebles",
+        "Li Fei-Fei",
+        "Michael Poli"
+      ],
+      "abstract": "Modern text-to-image (T2I) systems use internet-scale language pretraining for text-conditioned image generation. We ask whether language pretraining is necessary for strong T2I generation. We introduce Halcyon, a family of early-fusion multimodal autoregressive models pretrained entirely from scratch on GPIC, a dataset of 100M image-text pairs. Halcyon-0.52B outperforms LlamaGen-XL/8 (48.0 vs. 63.3 gFD) with 18.2$\\times$ less pretraining compute. Further, Halcyon-1.6B outperforms JiT-T2I-XXL/8++ (35.3 vs. 41.0 gFD) with 275$\\times$ less pretraining compute. Controlled experiments show that text-only pretraining does not improve T2I generation. Halcyon also learns image captioning by replacing caption dropout with I2T supervision, maintaining competitive T2I generation quality under the same pretraining budget. We show that strong T2I systems can be trained from scratch without internet-scale language pretraining. Code and models are available at https://cs.stanford.edu/~keshik/halcyon",
+      "published": "2026-10-19T17:59:59Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26863",
+      "pdf_url": "https://arxiv.org/pdf/2610.26863",
+      "summary_zh": "现代文生图系统普遍依赖互联网规模的语言预训练，本文探究这种预训练是否必要。作者提出Halcyon系列早期融合多模态自回归模型，完全从零在1亿图文对数据集GPIC上预训练，并用I2T监督替代caption dropout。实验表明Halcyon以远少得多的预训练算力超越LlamaGen-XL/8和JiT-T2I-XXL/8++，且文本预训练对T2I无增益，证明强T2I系统无需语言预训练即可从零训练。",
+      "summary_en": "Modern text-to-image systems rely on internet-scale language pretraining, and this work asks whether such pretraining is necessary. The authors introduce Halcyon, a family of early-fusion multimodal autoregressive models trained entirely from scratch on the 100M image-text pair dataset GPIC, replacing caption dropout with I2T supervision. Halcyon outperforms LlamaGen-XL/8 and JiT-T2I-XXL/8++ with far less pretraining compute, and controlled experiments show text-only pretraining does not improve T2I generation, demonstrating that strong T2I systems can be trained from scratch without language pretraining.",
+      "highlights_zh": [
+        "从零预训练的多模态自回归T2I模型",
+        "0.52B超LlamaGen-XL/8，算力省18.2倍",
+        "证明无需语言预训练，降低训练门槛"
+      ]
+    },
+    {
+      "id": "2610.26847",
+      "title": "WeAct: Dynamic Weight Switching as Agent Actions",
+      "authors": [
+        "Rui Shi",
+        "Xunjian Yin",
+        "Jiacheng Sang",
+        "Zichuan Liu",
+        "Shuyan Zhou"
+      ],
+      "abstract": "Long-horizon agents must learn heterogeneous capabilities from interleaved trajectories. Updating shared parameters to learn new capabilities can degrade previously acquired ones, resulting in catastrophic forgetting. As a trajectory unfolds, different stages may require different capabilities, yet conventional joint training and static adapter merging maintain a fixed parameter configuration throughout execution. We introduce WeAct (Weight-level Internal Actions), which trains independent capability-specific LoRA adapters over a frozen backbone and adds adapter selection to the agent's action space. These internal actions use the model's native tool-calling interface for on-demand capability composition in a shared context. Across eight deep-research benchmarks, Qwen3-32B with WeAct improves average accuracy by 6.2% relative to full fine-tuning counterparts despite using less compute, and by 27.5% relative to the strongest static LoRA-merging method. WeAct also supports modular continual adaptation, by adding a new code computation adapter to expand the agent's capabilities and updating the existing writing adapter to improve report quality. Both updates leave the backbone and other adapters unchanged, supporting modular continual adaptation in agents.",
+      "published": "2026-10-19T17:59:19Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26847",
+      "pdf_url": "https://arxiv.org/pdf/2610.26847",
+      "summary_zh": "长程智能体需从交错轨迹中学习多种能力，但更新共享参数会导致灾难性遗忘，且传统联合训练与静态适配器合并在整个执行过程中保持固定参数配置。WeAct在冻结主干上训练独立的能力专用LoRA适配器，并将适配器选择加入智能体动作空间，借助模型原生工具调用接口在共享上下文中按需组合能力。在八个深度研究基准上，Qwen3-32B结合WeAct相比全量微调平均准确率提升6.2%且计算更少，相比最强静态LoRA合并方法提升27.5%，并支持模块化持续适配。",
+      "summary_en": "Long-horizon agents must learn heterogeneous capabilities from interleaved trajectories, but updating shared parameters causes catastrophic forgetting, and conventional joint training or static adapter merging keeps a fixed parameter configuration throughout execution. WeAct trains independent capability-specific LoRA adapters over a frozen backbone and adds adapter selection to the agent's action space, using the model's native tool-calling interface for on-demand capability composition in a shared context. Across eight deep-research benchmarks, Qwen3-32B with WeAct improves average accuracy by 6.2% over full fine-tuning with less compute and by 27.5% over the strongest static LoRA-merging method, while also enabling modular continual adaptation.",
+      "highlights_zh": [
+        "适配器选择纳入动作空间",
+        "准确率较全量微调提升6.2%",
+        "支持模块化持续适配"
+      ]
+    },
+    {
+      "id": "2610.26861",
+      "title": "Can It Actually Work? Synthesizing Functional CAD Mechanisms",
+      "authors": [
+        "Wenqian Zhang",
+        "Yangyi Huang",
+        "Zigeng Xu",
+        "Weiyang Liu",
+        "Zhen Liu"
+      ],
+      "abstract": "While LLM agents can generate visually plausible CAD assemblies, these designs often fail to fulfill their intended physical functions. We study functional CAD design, a setting where agents interpret underspecified requests to construct and iteratively revise mechanisms that satisfy functional requirements in physical simulation. Verifying these requirements is nontrivial: different candidate mechanisms may realize the same function through entirely different components, controls, and operating sequences. To bridge this gap, we propose FunCAD-Harness, a framework that translates abstract requirements into candidate-specific physical tests and uses simulation feedback to guide design revisions. To systematically evaluate this capability, we introduce FunCADBench, a benchmark spanning 46 mechanism families with interdependent and multi-step operations. Experiments across frontier LLM agents show that FunCAD-Harness exposes subtle mechanical failures invisible to visual inspection, substantially improving functional success rates over standard simulation-augmented baselines. Ultimately, our work marks a step toward CAD agents capable of translating human intent into working mechanisms.",
+      "published": "2026-10-19T17:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.GR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26861",
+      "pdf_url": "https://arxiv.org/pdf/2610.26861",
+      "summary_zh": "LLM智能体生成的CAD装配体视觉上合理却常无法实现预期物理功能，功能性CAD设计需智能体在物理仿真中迭代修正机构以满足功能需求。作者提出FunCAD-Harness框架，将抽象需求转化为针对候选方案的具体物理测试并利用仿真反馈指导设计修订，同时构建涵盖46个机构族、具有相互依赖多步操作的FunCADBench基准。实验表明该框架能揭示视觉检查无法发现的细微机械故障，显著提升功能成功率，推动CAD智能体将人类意图转化为可工作机制。",
+      "summary_en": "LLM agents can generate visually plausible CAD assemblies that often fail to fulfill their intended physical functions, so functional CAD design requires agents to iteratively revise mechanisms under physical simulation. The authors propose FunCAD-Harness, which translates abstract requirements into candidate-specific physical tests and uses simulation feedback to guide design revisions, along with FunCADBench, a benchmark spanning 46 mechanism families with interdependent multi-step operations. Experiments show the framework exposes subtle mechanical failures invisible to visual inspection and substantially improves functional success rates over simulation-augmented baselines, advancing CAD agents that translate human intent into working mechanisms.",
+      "highlights_zh": [
+        "需求转候选专属物理测试并仿真反馈修订",
+        "功能成功率显著优于仿真增强基线",
+        "推动意图到可工作机制的CAD智能体"
+      ]
+    },
+    {
+      "id": "2610.26840",
+      "title": "LatComm: Reusable Context Compression for Latent Communication between Large Language Models",
+      "authors": [
+        "Huawei Lin",
+        "Jinting Liu",
+        "Tan Yu",
+        "Weijie Zhao"
+      ],
+      "abstract": "Systems that combine several large language models (LLMs) often use one context for many questions. When the context is passed between models as text, the receiving model processes all of its tokens again for every question. Avoiding this cost requires a context representation that is compact, reusable across questions, and readable by a different LLM. Existing compression and latent communication methods each provide only some of these properties. We introduce LatComm, a Latent Communication interface that provides all three by separating encoding from reading: the context is encoded once without the question, and the receiver selects what to read for each question. A frozen context encoder LLM compresses the context into a fixed-size packet and sends it to a different frozen receiver LLM, which reads the packet through cross-attention, with gates computed from its prompt. On 12 multiple-choice question-answering datasets, LatComm improves average accuracy over single-vector baselines by up to 10.2 points. On QuALITY, it reduces the receiver's input by 57x and answers the questions of an article 3x faster.",
+      "published": "2026-10-19T17:58:41Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26840",
+      "pdf_url": "https://arxiv.org/pdf/2610.26840",
+      "summary_zh": "多LLM系统常将同一上下文以文本形式传给不同模型，接收方需为每个问题重复处理全部token，而现有压缩与潜在通信方法无法同时满足紧凑、可复用、跨模型可读。LatComm将编码与读取分离：冻结的上下文编码器LLM一次性把上下文压缩为固定大小的数据包，另一个冻结的接收方LLM通过由其提示计算门控的交叉注意力按问题选择性读取。在12个多项选择题数据集上平均准确率较单向量基线最高提升10.2分，在QuALITY上将接收方输入减少57倍并使文章问题回答快3倍。",
+      "summary_en": "Systems combining multiple LLMs often pass one shared context as text, forcing the receiver to reprocess all tokens for every question, while existing compression and latent communication methods offer only some of the needed properties: compactness, reusability, and cross-model readability. LatComm separates encoding from reading: a frozen context-encoder LLM compresses the context once into a fixed-size packet, and a different frozen receiver LLM reads it via cross-attention with gates computed from its prompt. On 12 multiple-choice QA datasets it improves average accuracy over single-vector baselines by up to 10.2 points, and on QuALITY it cuts receiver input by 57x while answering an article's questions 3x faster.",
+      "highlights_zh": [
+        "编码与读取分离，上下文一次编码多次复用",
+        "平均准确率最高提升10.2分，输入减少57倍",
+        "加速多模型长上下文问答，但依赖冻结模型"
+      ],
+      "highlights_zh_note": "",
+      "highlights_zh_extra": ""
+    },
+    {
+      "id": "2610.26855",
+      "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
+      "authors": [
+        "Tianqi Liu",
+        "Hanfei Zhao",
+        "Qifeng Liang",
+        "Hui En Pang",
+        "Jiarui Xu",
+        "Sayang Mu",
+        "Penghao Qiu",
+        "YingSheng Zhang",
+        "Jun Wang",
+        "Ziang Cao",
+        "Mingze Sun",
+        "Yukang Cao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "World models enable embodied agents to anticipate action consequences, yet jointly modeling locomotion and manipulation across diverse embodiments remains challenging due to heterogeneous action spaces and limited multimodal supervision. We present Ropedia W0, the first egocentric loco-manipulation world foundation model spanning humans and robots with diverse embodiments. We curate Xp-Data, comprising 10k hours of egocentric human data and 3k hours of robot data with unified multimodal annotations and systematic quality control. A unified kinematic representation encodes locomotion through camera poses and manipulation through projected skeletons, with robot skeletons combining embodiment-specific forward kinematics with extensive manual keypoint annotation and correction. We also introduce Xp-Teleop, a long-horizon loco-manipulation benchmark based on high-quality dexterous humanoid teleoperation data. Evaluations demonstrate state-of-the-art performance across five cross-embodiment benchmarks (DreamDojo, $Ψ_0$, $ω$-HOME, Xp-Teleop, and AgiBot) and on held-out human egocentric video, from zero-shot inference to few-shot and full-data post-training. Scaling human pre-training data improves performance on both human and robot evaluations. After distillation, our model supports real-time, minute-long rollouts, enabling live VR interaction. Applications in policy evaluation, model-based planning, and world-action modeling further demonstrate the model's utility for embodied decision-making.",
+      "published": "2026-10-19T17:59:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26855",
+      "pdf_url": "https://arxiv.org/pdf/2610.26855",
+      "summary_zh": "世界模型需联合建模移动与操作，但跨具身异构动作空间与多模态监督稀缺使这一任务困难。Ropedia W0构建含1万小时人类与3千小时机器人自我中心数据的Xp-Data，用统一运动学表示（相机位姿编码移动、投影骨架编码操作）训练首个跨人类与机器人具身的移动-操作世界基础模型，并提出Xp-Teleop长时程基准。模型在五个跨具身基准及留出人类视频上取得最优表现，人类预训练数据规模扩展同时提升人类与机器人评测，蒸馏后支持实时分钟级推演与VR交互，可用于策略评估、基于模型的规划与世界-动作建模。",
+      "summary_en": "World models must anticipate action consequences, but jointly modeling locomotion and manipulation across heterogeneous embodiments is hard due to divergent action spaces and scarce multimodal supervision. Ropedia W0 introduces Xp-Data (10k hours egocentric human plus 3k hours robot data) and a unified kinematic representation (camera poses for locomotion, projected skeletons for manipulation), yielding the first egocentric loco-manipulation world foundation model spanning humans and robots, plus the Xp-Teleop long-horizon benchmark. It achieves state-of-the-art results on five cross-embodiment benchmarks and held-out human video, shows human pre-training data scaling benefits both human and robot evaluations, and after distillation enables real-time minute-long rollouts with live VR interaction for policy evaluation, model-based planning, and world-action modeling.",
+      "highlights_zh": [
+        "统一运动学表示跨具身建模移动与操作",
+        "五个跨具身基准均达最优",
+        "蒸馏后支持实时VR交互推演"
+      ]
+    },
+    {
+      "id": "2610.26854",
+      "title": "Physical Words: A Vocabulary for Structuring Latent Reasoning in Robot Manipulation",
+      "authors": [
+        "Jiaming Liu",
+        "Xinghao Zhu",
+        "Yiming Zhang",
+        "Shanghang Zhang",
+        "Yinxi Wang",
+        "Yichu Yang",
+        "Zhuoyang Liu",
+        "Dantong Niu",
+        "Soha Pouya",
+        "Juekun Li",
+        "Yan Chang"
+      ],
+      "abstract": "Multimodal reasoning provides robotic foundation models with predictive context needed for reliable action generation. However, language-based reasoning captures task semantics but struggles to express fine-grained physical dynamics, while latent reasoning models future state evolution but offers limited structure for organizing these dynamics into reusable reasoning primitives. To bridge this gap, we introduce PhysWord, a reasoning-before-acting foundation model built on Physical Words, which use atomic action verbs as shared semantic anchors for continuous representations of physical dynamics. Specifically, PhysWord predicts upcoming atomic action words and directly aligns their contextual hidden states with latent targets derived from the corresponding future observations. Building on these primitives, we construct a temporally structured PhysWord space with visual and optional tactile variants of each action word. Autoregressively predicting Physical Words across future timesteps captures transitions between execution stages, providing structured multimodal context for action generation. PhysWord achieves state-of-the-art success rates of 90.3\\% on visuotactile UniVTAC and 99.6\\% on vision-based LIBERO-Long, and outperforms competing methods on real-world tasks using bimanual grippers and dexterous hands. Further evaluations demonstrate that our structured latent reasoning framework generalizes to unseen scenarios and enables long-horizon manipulation.",
+      "published": "2026-10-19T17:59:54Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26854",
+      "pdf_url": "https://arxiv.org/pdf/2610.26854",
+      "summary_zh": "机器人基础模型的多模态推理中，语言推理能表达任务语义却难以刻画细粒度物理动态，而潜在推理虽能建模未来状态演化却缺乏可复用的推理原语结构。为此作者提出PhysWord，以原子动作动词作为共享语义锚点，将动作词的上下文隐状态与未来观测导出的潜在目标对齐，并构建带视觉与可选触觉变体的时间结构化PhysWord空间，通过自回归预测未来动作词捕捉执行阶段转换。该方法在UniVTAC上达90.3%、LIBERO-Long上达99.6%的成功率，并在双臂夹爪与灵巧手真实任务上优于对比方法，展现出对未见场景的泛化与长程操作能力。",
+      "summary_en": "Multimodal reasoning for robotic foundation models faces a gap: language-based reasoning captures task semantics but struggles with fine-grained physical dynamics, while latent reasoning models future state evolution yet offers limited structure for reusable reasoning primitives. The authors introduce PhysWord, which uses atomic action verbs as shared semantic anchors aligning contextual hidden states with latent targets from future observations, building a temporally structured PhysWord space with visual and optional tactile variants and autoregressively predicting action words across future timesteps. PhysWord achieves 90.3% success on visuotactile UniVTAC and 99.6% on vision-based LIBERO-Long, outperforms competing methods on real-world bimanual and dexterous-hand tasks, and generalizes to unseen scenarios and long-horizon manipulation.",
+      "highlights_zh": [
+        "以原子动作词为锚点对齐潜在物理动态",
+        "UniVTAC 90.3%、LIBERO-Long 99.6%",
+        "泛化至未见场景与长程操作任务"
+      ]
+    },
+    {
+      "id": "2610.26852",
+      "title": "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting",
+      "authors": [
+        "Zehao Wang",
+        "Jianpeng Yao",
+        "Yuping Wang",
+        "Yiping Li",
+        "Jiaqi Li",
+        "Zhixu Li",
+        "Kanghoon Lee",
+        "Jinfeng Wang",
+        "Cong Liu",
+        "Zhaowei Tan",
+        "Jinkyoo Park",
+        "Jiachen Li"
+      ],
+      "abstract": "Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes. Our code and videos are available at https://coopuq.github.io/.",
+      "published": "2026-10-19T17:59:49Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26852",
+      "pdf_url": "https://arxiv.org/pdf/2610.26852",
+      "summary_zh": "将单机器人强化学习导航扩展到多机器人社交场景时，在遮挡和分布外情形下难以保证安全与效率，且预测与导航的协同利用仍是难题。CoopUQ通过跨机器人时空特征融合预测未来占据栅格及其不确定性，并用约束多智能体强化学习将预测占据或高不确定区域作为代价来引导策略。在多种Unity3D仿真（含分布外设置）和真实机器人实验中，其预测性能与安全性优于代表性基线，展现出对分布偏移的风险自适应能力。",
+      "summary_en": "Extending single-robot reinforcement learning navigation to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution scenarios, and effectively leveraging cooperation for both prediction and navigation remains challenging. CoopUQ bridges uncertainty-aware cooperative occupancy forecasting with robust decision making: it predicts future occupancy grids via cross-robot spatiotemporal feature fusion and uses the forecasts and their uncertainty to guide a constrained multi-agent reinforcement learning policy that penalizes navigating predicted-occupied or highly uncertain regions. Experiments in multiple Unity3D simulations with in-distribution and OOD settings and on real robots show improved prediction performance and safety over representative baselines, demonstrating adaptive risk sensitivity under distribution shifts.",
+      "highlights_zh": [
+        "跨机器人时空融合预测占据及不确定性",
+        "仿真与真机安全性均优于代表性基线",
+        "可自适应分布偏移，但依赖多机通信"
+      ]
+    },
+    {
+      "id": "2610.26848",
+      "title": "Where is Physical RSI capability from? An Observational Scaling Law of LLM-as-policy",
+      "authors": [
+        "Zekai Li",
+        "Jiayi Yu",
+        "Jinlu Zhang",
+        "Luyang Niu",
+        "Zekun Qi",
+        "Jun Zheng",
+        "Xuchuan Chen",
+        "Dairu Liu",
+        "Yintianrun Zhang",
+        "He Wang",
+        "Li Yi"
+      ],
+      "abstract": "In this paper, we systematically investigate the mechanisms, scaling behavior, and generalization of physical Recursive self-improvement. We introduce PhysRSI-eval to quantify physical RSI through a five-axis metric: First-Attempt Performance, Efficiency, Success, Budget and Improvement from failure. Different VLMs are evaluated on 18 manipulation tasks under a fixed interaction budget. The analysis of experimental results motivates the Physical Barrel Hypothesis: different capabilities may constrain different parts of improvement. The five-axis metrics also distinguish systems with close public benchmark averages and show that high scores need not come with early or efficient gains. We study observational scaling from two perspectives: predicting the relative performance of VLM agents from their public capabilities, and forecasting later progress from early physical feedback. Together, these analyses ask how quickly and how far an agent can improve. Moreover, we conduct workspace interventions and then analyze what improvement leaves behind. Removing history reduces late-round success, frozen workspaces remain useful on unseen layouts, and three cross-task cases achieve success earlier. The results suggest that scene-specific adaptation and reusable experience can coexist.",
+      "published": "2026-10-19T17:59:30Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.26848",
+      "pdf_url": "https://arxiv.org/pdf/2610.26848",
+      "summary_zh": "本文系统研究物理递归自我改进（RSI）的机制、缩放行为与泛化性，提出五轴指标PhysRSI-eval以量化物理RSI，并在18个操作任务上评估不同VLM。通过实验提出“物理桶假说”，并从公共能力预测相对表现、从早期物理反馈预测后续进展两个角度研究观测缩放，结合工作区干预分析改进的留存。结果表明场景特定适应与可复用经验可以共存，为理解LLM作为策略的物理RSI能力来源提供了观测性缩放规律。",
+      "summary_en": "This paper systematically investigates the mechanisms, scaling behavior, and generalization of physical Recursive Self-Improvement (RSI), introducing PhysRSI-eval with a five-axis metric to quantify physical RSI across 18 manipulation tasks for different VLMs. It proposes the Physical Barrel Hypothesis and studies observational scaling from two perspectives—predicting relative VLM agent performance from public capabilities and forecasting later progress from early physical feedback—alongside workspace interventions. Results show that scene-specific adaptation and reusable experience can coexist, offering an observational scaling law for understanding where physical RSI capability of LLM-as-policy comes from.",
+      "highlights_zh": [
+        "提出五轴PhysRSI-eval量化物理RSI",
+        "18任务固定预算下区分相近系统",
+        "揭示场景适应与经验复用可共存"
+      ]
+    }
+  ]
+}
