@@ -1,0 +1,317 @@
+{
+  "date": "2026-10-21",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.28632",
+      "title": "Joints, Camera, Action! Co-Generating 3D Motion and Video for Arbitrary Rigs",
+      "authors": [
+        "Noam Rotstein",
+        "Yoad Tewel",
+        "Chen Tessler",
+        "Haggai Maron",
+        "Gal Chechik",
+        "Or Litany",
+        "Yoni Kasten",
+        "Yuval Atzmon"
+      ],
+      "abstract": "Video generation models can now depict remarkably realistic motion. Yet it is unclear how to use this motion beyond pixels: to animate a specific 3D asset and replay the animation in its 3D scene. For instance, a video model can show a monkey jumping over a crossbar, but it cannot return that jump as replayable 3D motion placed in the 3D scene. Here we present a model that directly co-generates the video and 3D motion for any supplied rig, along with a camera that registers this motion to the scene. Prior video-motion models either handle only human skeletons, often adding billions of parameters, or triangulate 3D motion from generated 2D pose maps. We instead keep 3D motion in a separate model that supports arbitrary skeletons, and connect it to a pretrained video model through a small set of cross-attention layers. This separation lets the motion model first learn how skeletons move from motion-only data, which is easier to obtain and augment than paired video. Additionally, our model learns to locate each joint in the video frames, which lets us recover the camera and place the 3D motion in the scene. To train across many skeletons, we use a generative video editor to place animated 3D assets in scenes suited to their actions, curating the edits so their known motion remains valid. Together with human and robot video, this yields nearly 200K training pairs. Our evaluations demonstrate that our model animates diverse rigs from text more faithfully than video-first pipelines, and its motion responds to the surrounding scene. It also turns video into rig motion, rig motion into video, and enables keyframe-based control of the 3D motion. Videos and additional results are available on our project page: https://research.nvidia.com/labs/par/projects/jca/.",
+      "published": "2026-10-20T17:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28632",
+      "pdf_url": "https://arxiv.org/pdf/2610.28632",
+      "summary_zh": "视频生成模型能生成逼真运动，但无法将运动转化为可复用的3D骨骼动画并配准到3D场景。本文提出一个模型，为任意骨骼联合生成视频与3D运动及相机参数，通过少量交叉注意力层将独立的3D运动模型（支持任意骨架）与预训练视频模型连接，并用生成式视频编辑器构建近20万训练对。实验表明该模型比视频优先流程更忠实地从文本驱动多样骨骼动画，运动能响应场景，并支持视频与骨骼运动互转及关键帧控制。",
+      "summary_en": "Video generation models can depict realistic motion but cannot return it as replayable 3D motion for a specific rig placed in its 3D scene. We present a model that co-generates video and 3D motion for any supplied rig along with a camera, keeping 3D motion in a separate arbitrary-skeleton model connected to a pretrained video model via a few cross-attention layers, trained on nearly 200K pairs curated with a generative video editor. Evaluations show it animates diverse rigs from text more faithfully than video-first pipelines, responds to the surrounding scene, and enables video-to-rig-motion, rig-motion-to-video, and keyframe-based 3D motion control.",
+      "highlights_zh": [
+        "解耦运动模型与视频模型，支持任意骨骼",
+        "近20万训练对，文本驱动优于视频优先流程",
+        "支持视频与3D运动互转及关键帧控制"
+      ]
+    },
+    {
+      "id": "2610.28629",
+      "title": "GBClaw: An agentic AI framework for atomistic grain boundary research and mechanistic discovery",
+      "authors": [
+        "Yazhuo Liu",
+        "Kunqing Ding",
+        "Xiaoguo Gong",
+        "Zifeng Wang",
+        "Yichen Yang",
+        "Yifeng Che",
+        "Wen Chen",
+        "Josh Kacher",
+        "Olivier Pierron",
+        "Shigenobu Ogata",
+        "Ting Zhu"
+      ],
+      "abstract": "Agentic artificial intelligence (AI) systems hold immense potential for automating complex workflows in materials discovery and design, but extending them to domain-intensive mechanistic investigations remains challenging. Here, we present GBClaw, an agentic AI framework for investigating the structure and deformation of general grain boundaries (GBs). Although general GBs constitute the vast majority of real-world interfaces in polycrystalline materials, they remain understudied because their structural complexity and interfacial mismatch complicate experimental and modeling research. GBClaw integrates large language models (LLMs) into a modular architecture comprising an orchestrator, specialized agents, domain-specific tools, simulation interfaces, and hierarchical memory. Through dynamic replanning and iterative workflow refinement, the framework effectively connects systematic simulations with targeted mechanistic analysis. Applied to 14 general asymmetric tilt GBs in nickel, GBClaw characterized interfacial defect structures and identified diverse deformation modes across these incommensurate boundaries. Comparing boundary sliding with and without secondary GB misfit dislocations revealed substantial differences in shear strength, underscoring the critical role of defect hierarchies in sliding resistance. Furthermore, researcher-guided follow-up calculations traced an anomalously high shear resistance to metastable boundary structures. This work demonstrates that combining agentic AI with domain expertise bridges high-throughput computational screening with deep physical understanding of complex material interfaces.",
+      "published": "2026-10-20T17:59:40Z",
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28629",
+      "pdf_url": "https://arxiv.org/pdf/2610.28629",
+      "summary_zh": "一般晶界因结构复杂、界面失配而在实验与建模中研究不足，但其占实际多晶材料界面的绝大多数。GBClaw将大语言模型集成到由编排器、专用智能体、领域工具、模拟接口和分层记忆构成的模块化框架中，通过动态重规划和迭代工作流优化，把系统模拟与针对性机理分析连接起来。应用于镍中14个一般非对称倾斜晶界，表征了界面缺陷结构并识别出多种变形模式，揭示次级晶界失配位错对剪切强度的关键影响，并追溯异常高剪切阻力至亚稳界面结构，证明智能体AI结合领域知识可桥接高通量计算筛选与深层物理理解。",
+      "summary_en": "General grain boundaries dominate real polycrystalline interfaces but remain understudied due to structural complexity and interfacial mismatch that hinder experimental and modeling work. GBClaw integrates large language models into a modular architecture of an orchestrator, specialized agents, domain tools, simulation interfaces, and hierarchical memory, using dynamic replanning and iterative workflow refinement to link systematic simulations with targeted mechanistic analysis. Applied to 14 general asymmetric tilt grain boundaries in nickel, it characterized interfacial defect structures and diverse deformation modes, showed that secondary grain boundary misfit dislocations strongly affect shear strength, and traced anomalously high shear resistance to metastable boundary structures, demonstrating that agentic AI plus domain expertise bridges high-throughput screening with deep physical understanding.",
+      "highlights_zh": [
+        "LLM多智能体框架连接模拟与机理分析",
+        "14个镍一般晶界揭示缺陷层级影响剪切强度",
+        "桥接高通量筛选与深层物理理解"
+      ]
+    },
+    {
+      "id": "2610.28628",
+      "title": "Learning Adaptable Dexterous Skills via Hybrid Dexterous Mimicking",
+      "authors": [
+        "Yuxuan Kuang",
+        "Jiashun Wang",
+        "Yixuan Sun",
+        "Yufei Ye",
+        "Sungjae Park",
+        "Umar Iqbal",
+        "Katerina Fragkiadaki",
+        "Shubham Tulsiani"
+      ],
+      "abstract": "Dexterous multi-finger hands hold promise to unlock diverse skills like functional grasps, in-hand reorientation, and dynamic handover that the human-designed world assumes, yet existing learning recipes force a trade-off. Goal-reaching reinforcement learning generalizes to arbitrary object poses but, lacking any human prior, converges to unnatural and unreliable finger strategies; motion tracking reproduces human-like behavior from a single clip but cannot deviate from it. We present AdaDex, a goal-conditioned RL framework that turns a single hand-object trajectory of a few seconds---from mocap data or HOI reconstruction from in-the-wild RGB(D) video---into an adaptable dexterous skill. At the core of AdaDex is Hybrid Dexterous Mimicking: a shared policy is trained on two populations of massively parallel environments: motion tracking environments trained with dense motion tracking objective, which instill the human prior from human motion; and generalization environments with noised initial states and goals and a sparse object-success reward, which force the skill to work far off the reference. From seconds of human motion per skill, the resulting policies can learn diverse adaptable dexterous skills, such as functional grasping, object reposing, in-hand reorientation with finger gaiting, and dynamic behaviors like throw-and-catch. Our method outperforms baselines in terms of generalization and functionality, and we demonstrate transfer across simulators and to the real world. Project page: https://yuxuank.com/AdaDex/.",
+      "published": "2026-10-20T17:59:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28628",
+      "pdf_url": "https://arxiv.org/pdf/2610.28628",
+      "summary_zh": "现有灵巧手学习面临两难：目标导向强化学习泛化好但缺乏人类先验导致动作不自然，动作跟踪能复现人类行为却无法偏离参考。作者提出AdaDex框架，核心是混合灵巧模仿——在大量并行环境中用同一策略同时训练密集动作跟踪环境（注入人类先验）和带噪声初始状态与稀疏成功奖励的泛化环境（迫使技能脱离参考）。仅需数秒人类动作数据即可学得功能抓取、物体重摆、手指步态手内旋转及抛接等可泛化技能，在泛化性与功能性上优于基线，并实现跨模拟器与真机迁移。",
+      "summary_en": "Dexterous hand learning faces a trade-off: goal-reaching RL generalizes to arbitrary object poses but yields unnatural finger strategies without human priors, while motion tracking reproduces human-like behavior but cannot deviate from a single clip. We present AdaDex, a goal-conditioned RL framework whose core Hybrid Dexterous Mimicking trains a shared policy across two populations of massively parallel environments—dense motion-tracking environments that instill human priors and generalization environments with noised initial states/goals and sparse object-success rewards that force the skill off the reference. From seconds of human motion per skill, the resulting policies learn diverse adaptable skills such as functional grasping, object reposing, in-hand reorientation with finger gaiting, and throw-and-catch, outperforming baselines in generalization and functionality and transferring across simulators and to the real world.",
+      "highlights_zh": [
+        "混合模仿：跟踪环境+泛化环境共训单策略",
+        "数秒数据学得抓取、手内旋转、抛接等技能",
+        "可跨模拟器与真机迁移，泛化优于基线"
+      ]
+    },
+    {
+      "id": "2610.28623",
+      "title": "Planning under Noise with Neural Operators",
+      "authors": [
+        "Michael Chen",
+        "Hong Chul Nam",
+        "Xi Deng",
+        "Anima Anandkumar"
+      ],
+      "abstract": "Planning under uncertain control execution noise requires reliable feedback policies across diverse environments. We introduce Planning Under Noise (PUN), a neural operator that learns noise-aware value fields for planning in unseen geometries. Building on an established screened-Poisson formulation of stochastic optimal control, we address two challenges: specifying boundary conditions that support navigation across varying geometries and efficiently computing fields with reliable gradients. Zero-Dirichlet obstacle boundaries terminate sampled paths at walls, weakening the goal signal along long routes and making it harder to estimate reliably. We instead impose reflecting Neumann conditions on obstacles and a Dirichlet condition at the goal, allowing sampled paths to continue exploring free space until they reach the target. To solve the resulting PDE without a configuration-space mesh, we extend a Monte Carlo (MC) solver, Walk on Stars (WoSt), to higher dimensions. However, local MC fluctuations can reverse estimated gradient directions and cause planning failures, making direct planning require costly sampling. PUN amortizes this computation by learning geometry-to-field mappings from noisy, partially converged Monte Carlo labels, avoiding expensive convergence for every training example. At inference, test-time scaling uses bounded local search guided by the predicted global field. We evaluate PUN on planning tasks across dimensions. Across four noise levels, PUN matches or outperforms all compared planners, achieving 95-100% success on the 4D replanning benchmark while maintaining the lowest runtime. At the highest tested noise level in 4D, PUN achieves 10.7-60.6% relative gains in success rate over other methods while running 3.29-32.15 times faster.",
+      "published": "2026-10-20T17:58:30Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28623",
+      "pdf_url": "https://arxiv.org/pdf/2610.28623",
+      "summary_zh": "在控制执行噪声下进行规划需要跨不同几何环境的可靠反馈策略，而现有方法难以在未知几何中高效生成噪声感知的价值场。作者提出PUN神经算子，通过障碍物反射Neumann边界与目标Dirichlet边界改进 screened-Poisson 随机最优控制公式，并将Walk on Stars蒙特卡洛求解器扩展到高维，从部分收敛的噪声标签中摊销学习几何到价值场的映射。在多个维度和噪声水平的规划任务中，PUN匹配或超越所有对比规划器，4D重规划基准成功率达95-100%且运行时间最低，最高噪声下成功率相对提升10.7-60.6%并快3.29-32.15倍。",
+      "summary_en": "Planning under uncertain control execution noise requires reliable feedback policies across diverse environments, but existing methods struggle to efficiently produce noise-aware value fields in unseen geometries. The authors introduce PUN, a neural operator that learns geometry-to-field mappings from noisy, partially converged Monte Carlo labels, using reflecting Neumann obstacle boundaries and a Dirichlet goal condition within a screened-Poisson stochastic optimal control formulation, and extending the Walk on Stars solver to higher dimensions. Across planning tasks in multiple dimensions and four noise levels, PUN matches or outperforms all compared planners, achieving 95-100% success on the 4D replanning benchmark with the lowest runtime, and at the highest 4D noise level it yields 10.7-60.6% relative success gains while running 3.29-32.15 times faster.",
+      "highlights_zh": [
+        "反射Neumann边界+目标Dirichlet改进PDE公式",
+        "4D重规划成功率95-100%且运行最快",
+        "高噪声下成功率提升10.7-60.6%"
+      ]
+    },
+    {
+      "id": "2610.28616",
+      "title": "NarraSpace: Multimodal Scene-Grounded Evidence for Picture-Description Dementia Classification",
+      "authors": [
+        "Qingming Li",
+        "Ruiyan Sun",
+        "Satoshi Nakamura"
+      ],
+      "abstract": "Picture-description dementia classification uses a shared visual scene, but a transcript-level prediction alone does not identify the scene evidence underlying its inputs. NarraSpace links words and speech times to named picture elements and retrieves utterances for predefined scene events. Narrative-spatial descriptors summarize coverage and temporal organization. A frozen language model contrasts each event's text under examples from Alzheimer's disease and healthy-control training participants, alongside transcript surprisal and coverage measurements. Retained source records link event scores to their source utterances, speech intervals, and lexical matches. On the official 48-participant test set of the Alzheimer's Dementia Recognition through Spontaneous Speech benchmark, a fixed support vector classifier achieves $80.88\\%\\pm2.56\\%$ mean accuracy over fifty seeds; averaged probabilities yield $81.25\\%$ accuracy and $91.32\\%$ area under the receiver operating characteristic curve. NarraSpace makes the construction of scene-linked classification inputs explicit and inspectable by connecting event-indexed language-model measurements to their source utterances, speech timing, and extraction records. Such source-linked measurements could support clinician review of picture descriptions by presenting quantitative summaries alongside the original speech evidence.",
+      "published": "2026-10-20T17:55:44Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28616",
+      "pdf_url": "https://arxiv.org/pdf/2610.28616",
+      "summary_zh": "图片描述痴呆分类依赖共享视觉场景，但仅凭转录级预测无法识别支撑输入的场景证据。NarraSpace将词语和语音时间链接到命名图片元素，检索预定义场景事件的话语，用叙事-空间描述符总结覆盖与时间组织，并通过冻结语言模型对比事件文本与AD/健康对照样本，同时保留源记录以关联事件分数到源话语、语音区间和词汇匹配。在官方48人测试集上，固定SVM五十次种子平均准确率达80.88%±2.56%，平均概率得81.25%准确率和91.32%AUC，使场景链接分类输入的构建显式可检查，可支持临床医生结合原始语音证据审阅图片描述。",
+      "summary_en": "Picture-description dementia classification relies on a shared visual scene, yet transcript-level prediction alone cannot identify the scene evidence underlying inputs. NarraSpace links words and speech times to named picture elements, retrieves utterances for predefined scene events, summarizes coverage and temporal organization via narrative-spatial descriptors, and contrasts each event's text under Alzheimer's and healthy-control examples using a frozen language model while retaining source records that tie event scores to utterances, speech intervals, and lexical matches. On the official 48-participant test set, a fixed SVM achieves 80.88%±2.56% mean accuracy over fifty seeds, with averaged probabilities yielding 81.25% accuracy and 91.32% AUC, making scene-linked classification inputs explicit and inspectable to support clinician review alongside original speech evidence.",
+      "highlights_zh": [
+        "场景事件链接与源记录可追溯",
+        "SVM五十种子平均准确率80.88%",
+        "可检查证据支持临床审阅"
+      ]
+    },
+    {
+      "id": "2610.28607",
+      "title": "Benchmarking Arabic Dialects for Math Problems",
+      "authors": [
+        "Noor Abo Mokh",
+        "Teresa Lynn",
+        "Nizar Habash",
+        "Ahmed Elshabrawy",
+        "Sara Alhajeri",
+        "Alaa Elsetohy",
+        "Preslav Nakov",
+        "Alham Fikri Aji"
+      ],
+      "abstract": "Mathematical reasoning remains underexplored for low-resource languages, including Dialectal Arabic. To bridge this gap, we introduce the DAR-MGSM (Dialectal Arabic Multilingual Grade School Math) Benchmark, the first manually curated benchmark for evaluating mathematical reasoning in Dialectal Arabic. DAR-MGSM consists of math word problems (MWPs) requiring multi-step reasoning and covers five major Arabic dialects alongside Modern Standard Arabic (MSA). The benchmark comprises two parallel versions: translated-only and translated & culturally localized. The latter version adapts entities and references to regional varieties. We evaluate eleven Arabic-centric and multilingual large language models on DAR-MGSM. The results show that the performance generally declines on the localized version, highlighting the challenges introduced by culturally grounded adaptations. However, the magnitude of this effect varies across models, with Arabic-centric models exhibiting different levels of sensitivity to localization. A mechanistic interpretability analysis shows that translated and localized variants of the same MWPs often induce distinct internal reasoning trajectories, even when aggregate accuracy remains similar. Overall, our results show that mathematical reasoning performance depends on both linguistic variety and cultural context.",
+      "published": "2026-10-20T17:50:13Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28607",
+      "pdf_url": "https://arxiv.org/pdf/2610.28607",
+      "summary_zh": "阿拉伯方言等低资源语言的数学推理能力尚未得到充分探索。本文提出了DAR-MGSM，这是首个手工构建的方言阿拉伯语数学推理基准，涵盖五种主要方言和现代标准阿拉伯语，并包含纯翻译与文化本地化两个平行版本，用于评测十一个模型。结果显示本地化版本性能普遍下降，且同一题目的翻译版与本地化版会引发不同的内部推理轨迹，表明数学推理同时受语言变体和文化语境影响。",
+      "summary_en": "Mathematical reasoning remains underexplored for low-resource languages such as Dialectal Arabic. We introduce DAR-MGSM, the first manually curated benchmark for Dialectal Arabic math word problems covering five dialects plus MSA, with translated-only and culturally localized parallel versions, and evaluate eleven Arabic-centric and multilingual LLMs. Performance generally declines on the localized version, and mechanistic analysis shows translated and localized variants induce distinct internal reasoning trajectories, indicating that math reasoning depends on both linguistic variety and cultural context.",
+      "highlights_zh": [
+        "首个方言阿拉伯语数学推理基准",
+        "本地化版本性能普遍下降",
+        "揭示文化语境对推理的影响"
+      ]
+    },
+    {
+      "id": "2610.28631",
+      "title": "AEON: Unifying Video and 3D World Models",
+      "authors": [
+        "Weiqi Zhang",
+        "Wenyuan Zhang",
+        "Yu-Shen Liu",
+        "Junsheng Zhou"
+      ],
+      "abstract": "Current world models for explicit world simulation typically follow two distinct pathways: (1) video generative models (e.g., Sora), which simulate realistic appearances but fail to preserve 3D consistency; and (2) 3D generative models (e.g., Marble), which generate geometrically consistent scenes but often yield static, less realistic observations. We present AEON, a unified framework that bridges video-based and 3D-based world models and combines the benefits of both. The key insight of AEON lies in a generative model that operates within the text- or image-conditioned video latent space while producing renderable 4D graphics primitives---specifically, 4D Gaussian Splatting (4DGS)---as the explicit world representation. We train a 4D reconstruction model to predict both 4DGS and camera poses from monocular videos, serving as our initialized 4D decoder. Furthermore, we design a domain adapter that translates generative video latents into reconstructive 4D latents through a distillation process on the video VAE. AEON naturally supports video-based world modeling by rendering 4DGS at predicted camera trajectories, and constructs a persistent 4D environment with scene dynamics for realistic world simulation. Consequently, AEON empowers a diverse range of world modeling applications and achieves state-of-the-art performance on standard benchmarks. Project Page: https://weiqi-zhang.github.io/AEON",
+      "published": "2026-10-20T17:59:51Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28631",
+      "pdf_url": "https://arxiv.org/pdf/2610.28631",
+      "summary_zh": "现有世界模型分为视频生成模型（外观逼真但缺乏3D一致性）和3D生成模型（几何一致但静态、不够真实）两条独立路线。AEON提出统一框架，在文本或图像条件化的视频潜空间中生成可渲染的4D高斯泼溅（4DGS）作为显式世界表示，并通过单目视频训练的4D重建模型作为初始化解码器、域适配器蒸馏视频VAE潜变量。该框架同时支持基于视频的世界建模与持久动态4D环境构建，在标准基准上达到最先进性能。",
+      "summary_en": "Existing world models follow two separate paths: video generative models that simulate realistic appearances but lack 3D consistency, and 3D generative models that produce geometrically consistent but static and less realistic scenes. AEON presents a unified framework that generates renderable 4D Gaussian Splatting (4DGS) within a text- or image-conditioned video latent space, using a 4D reconstruction model trained on monocular videos as an initialized 4D decoder and a domain adapter that distills video VAE latents into reconstructive 4D latents. AEON supports both video-based world modeling and persistent dynamic 4D environment construction, achieving state-of-the-art performance on standard benchmarks.",
+      "highlights_zh": [
+        "视频潜空间生成可渲染4DGS统一表示",
+        "标准基准达到最先进性能",
+        "支持持久动态4D环境模拟"
+      ]
+    },
+    {
+      "id": "2610.28630",
+      "title": "SolarRenderer: Few-Step Generative Reference Rendering",
+      "authors": [
+        "Guian Fang",
+        "Shengju Qian",
+        "Dongyue Lu",
+        "Junchao Huang",
+        "Lutao Jiang",
+        "Xin Wang",
+        "Yiren Song",
+        "Li Jiang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and completes the appearance it leaves open. Existing renderers are tied to the representation of one engine, need tens of denoising steps or a costly distillation of their own, and learn from conditions that are not aligned with their target videos. We present SolarRenderer, a structure-conditioned video renderer that adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs. Structural videos enter the native reference pathway of the backbone at the positions of the frames they describe, without a type identifier and described only in plain text, so that a single control LoRA follows arbitrary structural representations. Starting from a pretrained four-step LoRA, structure-guided distribution matching renders in four steps, 12.3 times faster than 50-step sampling, while preserving the learned control. A block-causal variant extends the same design to streaming and renders 768p video in real time. To train the model, we build a frame-aligned corpus of 136K clips from game engines, simulators, and YouTube videos. Experiments on an in-distribution test set and a generalization benchmark of 16 structural representations show that SolarRenderer achieves state-of-the-art results across both, and generalizes to 11 unseen representations, including pose skeletons, drawings, and point clouds.",
+      "published": "2026-10-20T17:59:48Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28630",
+      "pdf_url": "https://arxiv.org/pdf/2610.28630",
+      "summary_zh": "现有渲染器受限于单一引擎表示、需数十步去噪或昂贵蒸馏，且训练条件与目标视频不对齐。SolarRenderer 用两个轻量 LoRA 适配冻结的 MiniMax-H3 33B 主干，将结构视频以纯文本描述送入原生参考通路，并借助四步 LoRA 与结构引导分布匹配实现四步渲染。它在分布内测试集和 16 种结构表示的泛化基准上均达 SOTA，可泛化到 11 种未见表示，四步比 50 步快 12.3 倍，块因果变体还能实时渲染 768p 视频。",
+      "summary_en": "Existing renderers are tied to one engine's representation, require tens of denoising steps or costly distillation, and learn from conditions misaligned with target videos. SolarRenderer adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs, feeding structural videos into the native reference pathway described only in plain text, and uses a pretrained four-step LoRA with structure-guided distribution matching for four-step rendering. It achieves state-of-the-art results on both an in-distribution test set and a 16-representation generalization benchmark, generalizes to 11 unseen representations, renders 12.3 times faster than 50-step sampling, and its block-causal variant enables real-time 768p streaming.",
+      "highlights_zh": [
+        "双LoRA适配冻结主干，纯文本控制任意结构",
+        "四步渲染较50步快12.3倍，双基准SOTA",
+        "泛化11种未见表示，支持实时768p流式"
+      ],
+      "highlights_en": [
+        "Two LoRAs adapt frozen backbone; text-only control",
+        "4-step rendering 12.3x faster than 50-step; SOTA on both benchmarks",
+        "Generalizes to 11 unseen representations; real-time 768p streaming"
+      ]
+    },
+    {
+      "id": "2610.28626",
+      "title": "UniWALM: Unified World Action Language Model for Embodied Robot Control",
+      "authors": [
+        "Rahul Sajnani",
+        "Diego Romeres",
+        "Mingyuan Zhang",
+        "Kai Gao",
+        "Carl Qi",
+        "Baichuan Huang",
+        "Srinath Sridhar",
+        "Dylan Randle",
+        "Lillian J. Ratliff",
+        "Jose Barreiros",
+        "Manikantan Nambi",
+        "Jeroen Vanbaar"
+      ],
+      "abstract": "Motivated by the human ability to integrate experience across language, perception, and action, we introduce UniWALM, a unified world-action-language model that learns video, action, and language in a single shared representation, where each modality is both a conditioning signal and a supervision target. We ask: can jointly generating language enrich this shared representation, improving manipulation and supporting memory-dependent behavior? Unlike prior approaches that attach a reasoning or vision-language model to a video-action backbone and run them as distinct stages, UniWALM unifies all three modalities inside a single mixture-of-transformers backbone whose per-modality diffusion heads co-denoise synchronously, decoding subtask and textual memory in the same pass as action with no separate planning stage; the generated language is re-consumed on the next step, closing a language-as-memory loop without an external planner or memory bank. To keep the action stream reliable under this richer objective, we further introduce Flow Matching with Correction (FMC), a training objective that teaches recovery from perturbed action trajectories at no inference-time cost. UniWALM consistently improves over same-backbone baselines (e.g., FastWAM) on compositional pick-and-place (MolmoSpaces) and across the memory-dependent subset of RMBench, where it reaches 34.5% without any pretrained language or reasoning model and exceeds Mem-0's keyframe-equipped setup (28.5%) using only a single anchor frame. On a real-world Find-the-Item task, generating textual memory lifts success from 11.1% to 61.1%, while state-of-the-art VLAs stay at or below chance (<=33.3%).",
+      "published": "2026-10-20T17:59:04Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28626",
+      "pdf_url": "https://arxiv.org/pdf/2610.28626",
+      "summary_zh": "现有具身控制方法通常将推理或视觉语言模型作为独立阶段附加在视频-动作骨干上，难以统一语言、感知与动作的共享表征。UniWALM 在单一混合Transformer骨干内统一三种模态，各模态扩散头同步去噪，并引入Flow Matching with Correction训练目标以提升动作鲁棒性，生成的语言在下一步被重新消费形成语言即记忆闭环。在MolmoSpaces组合拾放与RMBench记忆依赖子集上稳定超越同骨干基线（34.5%，超过Mem-0的28.5%），真实Find-the-Item任务成功率从11.1%提升至61.1%，显著优于现有VLA。",
+      "summary_en": "Prior embodied control methods typically attach reasoning or vision-language models as separate stages to a video-action backbone, failing to unify language, perception, and action in a shared representation. UniWALM unifies all three modalities inside a single mixture-of-transformers backbone with synchronously co-denoising per-modality diffusion heads, and introduces Flow Matching with Correction to make the action stream robust, while generated language is re-consumed on the next step to close a language-as-memory loop. It consistently beats same-backbone baselines (34.5% on the memory-dependent RMBench subset vs. Mem-0's 28.5%) and lifts real-world Find-the-Item success from 11.1% to 61.1%, far above state-of-the-art VLAs.",
+      "highlights_zh": [
+        "单骨干统一三模态并闭环语言记忆",
+        "RMBench记忆子集34.5%超Mem-0",
+        "真实任务成功率11.1%升至61.1%"
+      ]
+    },
+    {
+      "id": "2610.28624",
+      "title": "Industrial ReMEmbR: Scaling Spatiotemporal Memory to Robot Fleets",
+      "authors": [
+        "Jad Yammine",
+        "Malek Wahidi",
+        "Abrar Anwar",
+        "Yan Chang",
+        "Mihir Acharya",
+        "Anthony Rizk"
+      ],
+      "abstract": "Warehouse robot fleets continuously observe operational conditions, but preserving these observations as reusable semantic memory incurs substantial computation, communication, and storage costs. For example, explaining recurring aisle blockages can require reviewing video from multiple robots across several shifts. We present IndustrialRemembr, a shared spatiotemporal memory system that extends NVIDIA ReMEmbR to robot fleets and reduces server-side computation by generating scene descriptions only on demand. On each robot, an NVIDIA Jetson encodes video clips into retrieval embeddings with Cosmos-Embed1, vision tokens with Cosmos3-Edge, and reconstruction latents with the Wan2.2 VAE, without uploading raw camera frames. The encoding models are re-used to detect people in image patches, zeroing them out to support PII abstraction for GDPR-compliant deployments. We split Cosmos3-Edge at its vision-language boundary, placing the vision encoder on the robot and the language decoder on an on-premises server. A Nemotron agent retrieves memories by content, position, and time and queries the decoder using cached vision tokens. This design eliminates caption generation at write time, while cached-token decoding reproduces the unsplit model's output in all 450 tested decodes.",
+      "published": "2026-10-20T17:58:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.28624",
+      "pdf_url": "https://arxiv.org/pdf/2610.28624",
+      "summary_zh": "仓库机器人车队持续观测运行状况，但将观测保存为可复用语义记忆会带来巨大的计算、通信和存储开销。IndustrialRemembr 将 NVIDIA ReMEmbR 扩展到机器人车队，在机器人端用 Jetson 编码视频为检索嵌入、视觉 token 和重建潜变量而不上传原始帧，并按需生成场景描述，同时拆分 Cosmos3-Edge 将视觉编码器留在机器人、语言解码器放在本地服务器。该设计消除了写入时的描述生成，缓存的 token 解码在全部 450 次测试中复现了未拆分模型的输出，支持 GDPR 合规的 PII 抽象。",
+      "summary_en": "Warehouse robot fleets continuously observe operational conditions, but preserving these observations as reusable semantic memory incurs substantial computation, communication, and storage costs. IndustrialRemembr extends NVIDIA ReMEmbR to robot fleets by encoding video clips on each robot's Jetson into retrieval embeddings, vision tokens, and reconstruction latents without uploading raw frames, generating scene descriptions only on demand and splitting Cosmos3-Edge so the vision encoder stays on the robot while the language decoder runs on an on-premises server. This eliminates caption generation at write time, and cached-token decoding reproduced the unsplit model's output in all 450 tested decodes, enabling GDPR-compliant PII abstraction.",
+      "highlights_zh": [
+        "按需生成描述，写入时零描述开销",
+        "450次解码全部复现未拆分输出",
+        "支持PII抽象与GDPR合规部署"
+      ]
+    }
+  ]
+}
