@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-22",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.30128",
+      "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
+      "authors": [
+        "Zhanshuo Cao",
+        "Jiakai Tang",
+        "Yuqi Zhou",
+        "Sunhao Dai",
+        "Jun Xu"
+      ],
+      "abstract": "Existing sequential recommenders usually allocate a fixed computational budget to every item in a user's interaction history, regardless of the item's contribution to the final prediction. We challenge this de facto design with two diagnostic findings. (1) Non-uniform computational need: items within the same sequence vary drastically in how much computation they require. Most converge after shallow processing while a critical minority only stabilizes at full depth. (2) Suboptimality of fixed allocation: given oracle access to the target item, a non-uniform depth assignment consistently outranks the fixed one, indicating that existing uniform computation both wastes capacity on already-converged items and sacrifices overall recommendation quality. These observations motivate a shift from fixed-depth computation to item-level adaptive reasoning. To this end, we propose LoopRec. LoopRec recursively applies a single weight-shared block and introduces a lightweight gate at each recursion boundary that makes a binary exit-or-continue decision for every item independently. Items whose representations have sufficiently matured exit early, while those requiring deeper reasoning continue to subsequent recursions. This design converts the fixed global depth into a learned, per-item property without auxiliary depth labels, and is readily adaptable to diverse backbone architectures. Extensive experiments on public benchmarks with four backbone families demonstrate that LoopRec consistently outperforms matched fixed-depth counterparts. Further analysis reveals that LoopRec's learned allocation exhibits interpretable patterns aligned with our post-hoc oracle analysis: lower-frequency items and more recent interactions naturally receive deeper computation. Our code is available at https://github.com/Elpmis117/LoopRec.",
+      "published": "2026-10-21T17:58:06Z",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30128",
+      "pdf_url": "https://arxiv.org/pdf/2610.30128",
+      "summary_zh": "现有序列推荐模型对用户历史中的每个物品分配固定计算预算，但诊断实验发现同一序列内物品的计算需求差异巨大，且非均匀深度分配优于固定分配。为此提出LoopRec，通过权重共享块递归计算并在每个递归边界用轻量门控为每个物品独立做出二值退出或继续决策，将固定全局深度转化为无需深度标签的逐物品学习属性。在四个骨干家族的公开基准上，LoopRec一致优于匹配的固定深度基线，且学到的分配模式与事后oracle分析一致（低频物品和近期交互获得更深计算）。",
+      "summary_en": "Existing sequential recommenders allocate a fixed computational budget to every item in a user's history, yet diagnostic findings show that computational needs vary drastically within a sequence and that non-uniform depth assignment outperforms fixed allocation. We propose LoopRec, which recursively applies a weight-shared block with a lightweight gate at each recursion boundary to make an independent binary exit-or-continue decision per item, turning fixed global depth into a learned per-item property without depth labels. Experiments on public benchmarks across four backbone families show LoopRec consistently outperforms matched fixed-depth counterparts, with learned allocations aligning with oracle analysis (lower-frequency items and recent interactions receive deeper computation).",
+      "highlights_zh": [
+        "逐物品门控自适应递归深度",
+        "四个骨干家族一致超越固定深度",
+        "可解释分配，易适配多种架构"
+      ]
+    },
+    {
+      "id": "2610.30125",
+      "title": "PhysiCalWorld: In-Context Physics Calibration for World Models",
+      "authors": [
+        "Yunhao Luo",
+        "Wentao He",
+        "Yinpei Dai",
+        "Hyelin Nam",
+        "Hongze Fu",
+        "Joyce Chai",
+        "Nima Fazeli",
+        "Jeong Joon Park"
+      ],
+      "abstract": "Existing world models typically perceive a scene through current visual frame or a narrow history window. However, these observations may not reveal the physics properties that determine transition dynamics, such as an object's mass distribution, joint damping, or surface friction. Without calibrating these physics factors for world models, predictions tend to regress toward an empirical prior and induce severe drift in novel test scenes. To this end, we propose PhysiCalWorld, which calibrates action-conditioned world models to the instance-specific dynamics via in-context prompting, without fine-tuning or analytical physics modeling. Our method encodes an exploratory interaction clip collected within the test scene into a compact physics descriptor token, which grounds subsequent predictions in the scene's actual physical behavior. PhysiCalWorld is trained end-to-end with the latent prediction loss alone, without physics labels. At inference time, the descriptor token is extracted once and can be reused across rollouts with negligible compute overhead. We evaluate PhysiCalWorld across four environments covering diverse physics variations and show that it substantially improves rollout prediction accuracy and visual planning success rate. The learned descriptors also form a physically structured latent space and generalize beyond the physics ranges seen during training.",
+      "published": "2026-10-21T17:57:59Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30125",
+      "pdf_url": "https://arxiv.org/pdf/2610.30125",
+      "summary_zh": "现有世界模型仅凭当前帧或短历史窗口感知场景，难以揭示决定转移动力学的物理属性（如质量分布、关节阻尼、表面摩擦），导致预测回归经验先验并在新场景中严重漂移。PhysiCalWorld通过上下文提示将测试场景内采集的探索性交互片段编码为紧凑的物理描述符token，以端到端方式仅用潜在预测损失训练，无需微调或解析物理建模，即可将动作条件世界模型校准到实例特定动力学。在四个涵盖多样物理变化的环境中，该方法显著提升了rollout预测精度与视觉规划成功率，且所学描述符形成物理结构化的潜空间并能泛化到训练时未见过的物理范围。",
+      "summary_en": "Existing world models perceive scenes only through the current visual frame or a narrow history window, which fails to reveal physics properties governing transition dynamics (e.g., mass distribution, joint damping, surface friction), causing predictions to regress toward an empirical prior and drift severely in novel test scenes. PhysiCalWorld calibrates action-conditioned world models to instance-specific dynamics via in-context prompting: an exploratory interaction clip from the test scene is encoded into a compact physics descriptor token that grounds subsequent predictions, trained end-to-end with only latent prediction loss and no physics labels or fine-tuning. Across four environments with diverse physics variations, it substantially improves rollout prediction accuracy and visual planning success rate, and the learned descriptors form a physically structured latent space that generalizes beyond training physics ranges.",
+      "highlights_zh": [
+        "交互片段编码为物理描述符token",
+        "rollout精度与规划成功率显著提升",
+        "免微调、免物理标签，可泛化"
+      ],
+      "highlights_en": [
+        "Encodes interaction clip into physics descriptor token",
+        "Substantially improves rollout accuracy and planning success",
+        "No fine-tuning or physics labels; generalizes"
+      ]
+    },
+    {
+      "id": "2610.30132",
+      "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
+      "authors": [
+        "Zhennan Wan",
+        "Jianfei Chen"
+      ],
+      "abstract": "Reinforcement learning (RL) is an effective way to strengthen the long-context reasoning of large language models (LLMs), but it needs training data that are long, diverse, challenging, and verifiable. Human annotation of such data is expensive, naturally occurring data are too scarce to sustain RL, and existing synthesis methods depend on external corpora or stronger teacher models, which become harder to obtain as the trained models get stronger. Recently, RL from zero data, in which a model learns from tasks it proposes itself, has achieved excellent performance, but existing methods target short-context tasks. Therefore, we propose $\\textbf{LongZero}$, a method that lets an LLM improve its own long-context reasoning without any external data. Instead of writing questions and answers over existing documents, LongZero first has the model synthesize the question and answer with its supporting evidence in a compact structured form, and only then separately expands the evidence into a long multi-document context. LongZero combines these self-written multi-hop reasoning tasks with self-written multi-round retrieval tasks and trains the model with GRPO. We evaluate LongZero on two LLMs across five long-context reasoning benchmarks and compare it with RL on data synthesized from external corpora. Experimental results show that LongZero can generalize to real tasks, and outperforms both baselines, suggesting a viable and promising path to improving long-context reasoning of LLMs.",
+      "published": "2026-10-21T17:59:14Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30132",
+      "pdf_url": "https://arxiv.org/pdf/2610.30132",
+      "summary_zh": "长上下文推理的强化学习依赖长而多样、可验证的训练数据，但人工标注昂贵、自然数据稀缺，现有合成方法又依赖外部语料或更强教师模型。LongZero提出从零数据出发，让模型先以紧凑结构化形式自拟问题、答案及支撑证据，再单独将证据扩展为长多文档上下文，并结合自拟多跳推理与多轮检索任务用GRPO训练。在两个LLM和五个长上下文推理基准上，LongZero可泛化到真实任务并优于外部语料合成数据基线，为提升LLM长上下文推理提供了可行路径。",
+      "summary_en": "Reinforcement learning for long-context reasoning in LLMs requires long, diverse, challenging, and verifiable training data, yet human annotation is costly, naturally occurring data are scarce, and existing synthesis methods rely on external corpora or stronger teacher models. LongZero enables an LLM to improve its own long-context reasoning from zero data by first synthesizing a question, answer, and supporting evidence in a compact structured form, then separately expanding the evidence into a long multi-document context, combining self-written multi-hop reasoning and multi-round retrieval tasks and training with GRPO. Evaluated on two LLMs across five long-context reasoning benchmarks, LongZero generalizes to real tasks and outperforms RL on externally synthesized data, suggesting a viable path to improving long-context reasoning.",
+      "highlights_zh": [
+        "先自拟结构化问答与证据，再扩展为长上下文",
+        "五个基准上优于外部语料合成数据基线",
+        "无需外部数据，但依赖自拟任务质量"
+      ]
+    },
+    {
+      "id": "2610.30122",
+      "title": "A Quasipolynomial Algorithm for $\\ell_\\infty$ Contractions",
+      "authors": [
+        "Ashkan Soleymani",
+        "Gabriele Farina"
+      ],
+      "abstract": "We give an algorithm for computing an $\\eps$-approximate fixed point of any $d$-dimensional nonexpansion with respect to the $\\ell_\\infty$ norm in time $\\log(1/\\eps)^{O(\\log^2 d)}$. At its core, our method uses a boosting argument to geometrically shrink a search region. Among other consequences, our algorithm implies that simple stochastic games can be solved in quasipolynomial time.",
+      "published": "2026-10-21T17:57:19Z",
+      "primary_category": "cs.GT",
+      "categories": [
+        "cs.GT",
+        "cs.CC",
+        "cs.LG",
+        "math.OC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30122",
+      "pdf_url": "https://arxiv.org/pdf/2610.30122",
+      "summary_zh": "论文研究如何计算d维ℓ∞范数下非扩张映射的ε-近似不动点，这是理论计算机科学中的一个基本问题。其核心方法是利用提升（boosting）论证，几何式地收缩搜索区域，从而构造出高效算法。该算法在log(1/ε)^{O(log² d)}时间内求解，并由此推出简单随机博弈可在拟多项式时间内求解，具有重要理论意义。",
+      "summary_en": "The paper studies how to compute an ε-approximate fixed point of any d-dimensional nonexpansion with respect to the ℓ∞ norm, a fundamental problem in theoretical computer science. Its core method uses a boosting argument to geometrically shrink a search region, yielding an efficient algorithm. The algorithm runs in time log(1/ε)^{O(log² d)} and implies that simple stochastic games can be solved in quasipolynomial time, a significant theoretical consequence.",
+      "highlights_zh": [
+        "提升论证几何收缩搜索区域",
+        "时间复杂度log(1/ε)^{O(log² d)}",
+        "可拟多项式求解简单随机博弈"
+      ]
+    },
+    {
+      "id": "2610.30113",
+      "title": "Quant-Arena: Benchmarking LLM Agents for Quantitative Trading Research",
+      "authors": [
+        "Houde Qian",
+        "Zheng Jiang",
+        "Wenyi Li",
+        "Chenxi Xu",
+        "Xinjie Lin",
+        "Yuzhao Peng",
+        "Ruoyu Han",
+        "Youjie Zheng",
+        "Kaisen Yang",
+        "Qinhuai Na",
+        "You Fu",
+        "Calvin Xiao"
+      ],
+      "abstract": "Quantitative research is an iterative loop: a researcher proposes a market hypothesis, implements it as an executable signal, tests it on historical data, and decides what to keep. Existing benchmarks score formulas, code, or individual trading decisions, leaving open whether large language models (LLMs) can complete this loop and produce strategies that work beyond the research period. We introduce Quant-Arena, a benchmark and public leaderboard for end-to-end quantitative research on real A-share market data. A model constructs features and stock-scoring code, receives feedback only on 2022--2023, and freezes one strategy for assessment on the sealed year 2024. A cash-account evaluator applies trading constraints and costs, including market impact estimated from a simulated order book. Scores are dominated by realized excess return and complemented by signal quality and the diversity of features used by the strategy. We evaluate nine frontier models, among which GPT-6 Astra scores highest; yet no model beats the equal-weight market in 2024. Quant-Arena is open to submissions from any model or agent harness.",
+      "published": "2026-10-21T17:54:01Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30113",
+      "pdf_url": "https://arxiv.org/pdf/2610.30113",
+      "summary_zh": "现有基准只评估公式、代码或单次交易决策，无法判断LLM能否完成“提出假设—实现信号—回测—筛选”的完整量化研究闭环。Quant-Arena基于真实A股数据构建端到端基准与公开排行榜：模型在2022–2023年反馈下构建特征与选股代码并冻结策略，再在封存的2024年数据上由含交易约束、成本与模拟订单簿市场冲击的现金账户评估器打分，得分以实际超额收益为主并辅以信号质量与特征多样性。九个前沿模型中GPT-6 Astra得分最高，但无模型在2024年跑赢等权市场，说明LLM智能体尚不能稳定产出跨期有效的量化策略，该基准为后续研究提供了可复现的评测平台。",
+      "summary_en": "Existing benchmarks score formulas, code, or individual trading decisions, leaving open whether LLMs can complete the full quantitative research loop from hypothesis to executable signal to backtest and selection. Quant-Arena is an end-to-end benchmark and public leaderboard on real A-share data: models build features and stock-scoring code using only 2022–2023 feedback, freeze one strategy, and are assessed on sealed 2024 data by a cash-account evaluator with trading constraints, costs, and simulated order-book market impact, scored mainly on realized excess return plus signal quality and feature diversity. Among nine frontier models, GPT-6 Astra scores highest, yet none beats the equal-weight market in 2024, showing that current LLM agents cannot reliably produce strategies that generalize beyond the research period and providing a reproducible testbed for future work.",
+      "highlights_zh": [
+        "端到端量化研究闭环基准",
+        "GPT-6 Astra最高但均未跑赢等权",
+        "真实A股+封存年度防过拟合"
+      ]
+    },
+    {
+      "id": "2610.30129",
+      "title": "Rethinking Video Autoencoders for Interactive World Models",
+      "authors": [
+        "Adrien Ramanana Rahary",
+        "Yutong Bai",
+        "Nicolas Dufour",
+        "Patrick Pérez",
+        "David Picard"
+      ],
+      "abstract": "Video world models predict future frames from past frames and actions. They serve as simulators in which agents train, plan or are evaluated, and that humans can control interactively. They generate in the latent space of a video autoencoder, whose compression sets their cost per frame and how long each action waits to take effect. Yet world models often reuse the autoencoders of text-to-video generators, built for offline generation with no agent waiting and, without their training data and code, not retrainable at another compression. We therefore ask how, where and how much a world model should compress. We build CADRE, an open family of causal diffusion representation autoencoders spanning multiple spatio-temporal compressions. Its members differ only in a small bottleneck on frozen features and share a diffusion decoder self-distilled to one or a few steps. We train the same world model on each autoencoder in two domains, manipulation and navigation, with two environments each. CADRE forms most of the latency-quality frontier, especially with a moving camera. Our study also leads to four findings. At strong compression, a diffusion decoder is sharper than perceptual regression. In robot manipulation, temporal compression is more effective in the autoencoder than in the world model. Manipulation and navigation call for opposite compressions: temporal compression costs little when the camera is still, and spatial compression when it moves. Surprisingly, with a still camera, coarser spatial tokens hurt motion far more than image quality. Code, models and a live demo are at https://kyutai.org/blog/2026-10-21-cadre",
+      "published": "2026-10-21T17:58:11Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30129",
+      "pdf_url": "https://arxiv.org/pdf/2610.30129",
+      "summary_zh": "视频世界模型通常复用为离线文本到视频生成设计的视频自编码器，其压缩率决定了每帧成本和动作生效延迟，却无法按需重新训练。作者构建了CADRE——一族开放因果扩散表示自编码器，覆盖多种时空压缩率，各成员仅在冻结特征上的小瓶颈处不同，并共享一个自蒸馏到一步或几步的扩散解码器，在操控与导航两个领域各两个环境中训练同一世界模型进行对比。CADRE占据了大部分延迟-质量前沿（尤其在移动相机下），并揭示强压缩时扩散解码器比感知回归更清晰、机器人操控中时间压缩在自编码器内更有效、操控与导航需要相反的压缩策略、静止相机下粗糙空间token对运动伤害远大于画质等四点发现。",
+      "summary_en": "Video world models typically reuse video autoencoders built for offline text-to-video generation, whose compression sets per-frame cost and action latency but cannot be retrained at another compression without the original data and code. The authors build CADRE, an open family of causal diffusion representation autoencoders spanning multiple spatio-temporal compressions that differ only in a small bottleneck on frozen features and share a diffusion decoder self-distilled to one or a few steps, then train the same world model on each autoencoder across manipulation and navigation domains with two environments each. CADRE forms most of the latency-quality frontier, especially with a moving camera, and the study yields four findings: diffusion decoders are sharper than perceptual regression at strong compression, temporal compression is more effective in the autoencoder than in the world model for robot manipulation, manipulation and navigation call for opposite compressions, and with a still camera coarse spatial tokens hurt motion far more than image quality.",
+      "highlights_zh": [
+        "冻结特征小瓶颈+共享自蒸馏扩散解码器",
+        "占据大部分延迟-质量前沿，移动相机尤佳",
+        "操控与导航需相反压缩，静止相机忌粗空间token"
+      ]
+    },
+    {
+      "id": "2610.30127",
+      "title": "VoxProg: 3D Spatial Reasoning through Voxel Programming",
+      "authors": [
+        "Zhichao Zhai",
+        "Menglei Zhao",
+        "Guikun Chen",
+        "Zihao Yan",
+        "Kanzhi Wu",
+        "Wenguan Wang",
+        "Jun Xiao"
+      ],
+      "abstract": "Language models' abilities to interpret tasks and generate programs offer a promising basis for 3D spatial reasoning. Yet following spatial instructions in 3D scenes requires programs to construct geometric references that language leaves implicit. In this work, we introduce VoxProg, which formulates 3D object placement through voxel programming: a language model translates task interpretations into executable programs over local voxel views of scene surfaces. Because these views index surface geometry on regular grids with explicit coordinates and neighborhood relations, an evidence program can isolate task-relevant regions and boundaries directly from scene meshes, and a downstream pose program can measure the resulting geometry to compute a target $SE(3)$ pose. Visual and numerical feedback from execution lets the model inspect intermediate selections and candidate placements to iteratively revise its code. To evaluate open-ended placement across functional use, geometric fit, and contextual arrangements, we introduce the 71-task VoxProg-Bench benchmark along with an evaluation suite pairing perceptual Intent Alignment and 3D Physical Validity. Across VoxProg-Bench and external benchmarks, VoxProg consistently outperforms relation-based, keypoint-based, and mesh-based baselines.",
+      "published": "2026-10-21T17:58:05Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30127",
+      "pdf_url": "https://arxiv.org/pdf/2610.30127",
+      "summary_zh": "语言模型虽能理解任务并生成程序，但在3D场景中执行空间指令时，程序需构建语言未明示的几何参照。VoxProg将3D物体放置形式化为体素编程：模型把任务解释转化为在场景表面局部体素视图上运行的可执行程序，借助显式坐标与邻接关系提取任务相关区域并测量几何以计算目标SE(3)位姿，并通过执行反馈迭代修正代码。在新建的71任务VoxProg-Bench及外部基准上，VoxProg一致优于基于关系、关键点和网格的基线，为开放式3D放置提供了可解释且可验证的新范式。",
+      "summary_en": "Language models can interpret tasks and generate programs, but following spatial instructions in 3D scenes requires programs to construct geometric references that language leaves implicit. VoxProg formulates 3D object placement as voxel programming: a language model translates task interpretations into executable programs over local voxel views of scene surfaces, where explicit coordinates and neighborhood relations let an evidence program isolate task-relevant regions and a pose program measure geometry to compute a target SE(3) pose, with visual and numerical execution feedback enabling iterative code revision. Across the new 71-task VoxProg-Bench and external benchmarks, VoxProg consistently outperforms relation-based, keypoint-based, and mesh-based baselines, offering an interpretable and verifiable paradigm for open-ended 3D placement.",
+      "highlights_zh": [
+        "体素编程将空间指令转为可执行程序",
+        "在VoxProg-Bench及外部基准全面领先",
+        "可解释可迭代，但依赖体素化精度"
+      ]
+    },
+    {
+      "id": "2610.30136",
+      "title": "Agentic World Action Models",
+      "authors": [
+        "Zhuoyang Liu",
+        "Dantong Niu",
+        "Botong Zhang",
+        "Boning Shao",
+        "Jing Wang",
+        "Ruijie Zheng",
+        "Yuvan Sharma",
+        "Runyu Lu",
+        "Jiaming Liu",
+        "Renrui Zhang",
+        "Roei Herzig",
+        "Yutong Bai",
+        "Ken Goldberg",
+        "Danfei Xu",
+        "Yuke Zhu",
+        "Guanzhi Wang",
+        "Linxi \"Jim\" Fan",
+        "Trevor Darrell"
+      ],
+      "abstract": "Recent world action models provide visual foresight and future prediction for robot manipulation, but lack explicit mechanisms for compositional skill reuse. Agentic robotics combines code-based planning and reasoning with reusable skills, but often lacks predictive grounding in physical dynamics. We introduce AW-0, an agentic world action model framework that integrates code-based planning with joint video and action prediction. We jointly model code, future video, and robot actions as three coupled generative streams within a unified mixture-of-transformers architecture. Within this architecture a code expert generates parameterized skill routines and control logic while video and action experts generate future visual states and low-level motor commands. Code serves two complementary roles: it structures multi-step prediction and control within the world model and represents skills as reusable programs for subsequent agentic execution. We further introduce an automated curation pipeline that labels robot and human video trajectories with aligned programs and consolidates recurring routines into reusable skill libraries. Evaluations on RoboTwin 2.0 and physical bimanual manipulation tasks show improved task performance over VLA and WAM baselines, alongside gains in language following, semantic reasoning and robustness, demonstrating that agentic code enables connection between planning, prediction and execution within WAMs.",
+      "published": "2026-10-21T17:59:56Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30136",
+      "pdf_url": "https://arxiv.org/pdf/2610.30136",
+      "summary_zh": "现有世界动作模型能为机器人操作提供视觉预见和未来预测，但缺乏显式的组合式技能复用机制；而智能体机器人虽结合代码规划与可复用技能，却常缺少物理动态的预测基础。本文提出AW-0框架，在统一的混合Transformer架构中将代码、未来视频和机器人动作作为三条耦合的生成流联合建模，由代码专家生成参数化技能例程与控制逻辑，并引入自动标注流水线将机器人及人类视频轨迹对齐为程序、整合为可复用技能库。在RoboTwin 2.0和真实双臂操作任务上，该方法优于VLA和WAM基线，并在语言跟随、语义推理和鲁棒性上取得提升，表明智能体代码能够连接WAM中的规划、预测与执行。",
+      "summary_en": "Existing world action models provide visual foresight and future prediction for robot manipulation but lack explicit mechanisms for compositional skill reuse, while agentic robotics combines code-based planning with reusable skills yet often lacks predictive grounding in physical dynamics. This paper introduces AW-0, a framework that jointly models code, future video, and robot actions as three coupled generative streams in a unified mixture-of-transformers architecture, where a code expert generates parameterized skill routines and control logic, complemented by an automated curation pipeline that labels robot and human video trajectories with aligned programs and consolidates recurring routines into reusable skill libraries. Evaluations on RoboTwin 2.0 and physical bimanual manipulation tasks show improved task performance over VLA and WAM baselines, along with gains in language following, semantic reasoning, and robustness, demonstrating that agentic code connects planning, prediction, and execution within WAMs.",
+      "highlights_zh": [
+        "代码、视频、动作三流统一联合建模",
+        "RoboTwin 2.0与双臂任务超越VLA/WAM",
+        "连接规划预测执行，技能可复用"
+      ]
+    },
+    {
+      "id": "2610.30117",
+      "title": "CW-WAM: A Structured Contact-Wrench World Action Model for Force-Sensitive Manipulation",
+      "authors": [
+        "Houzhu Ding",
+        "Xinda Qi",
+        "Luqi Wang",
+        "Ming Yang"
+      ],
+      "abstract": "Force-sensitive manipulation requires contact and load information that is not provided explicitly by visual observations. We present CW-WAM, a world action model that jointly predicts video, motion, and contact wrench. Inspired by hybrid motion-force control, it contains a unified interaction module that treats both motion and contact wrench as modeling targets and predicts time-aligned motion-wrench chunks as control references. A pair-causal attention mechanism structures the motion-wrench dependencies, while a long fixed-length wrench memory retains past interaction information. The predicted wrench chunk acts as a force reference for a 20-Hz outer-loop admittance controller within a slow-fast control system that maintains force feedback and smooth motion between model queries. CW-WAM improves contact prediction and increases the insertion success rate from 25% to 70% for square pegs with 1-mm clearance per side and from 40% to 95% for power adapters, compared with WAM without wrench input. It also improves lifting-height accuracy across different loads. Our framework with an admittance controller reduces force-reference RMSE from 4.8 to 2.7 N for peg insertion and from 2.0 to 1.3 N for wiping, respectively, with smaller force fluctuations during successful execution. Project website: https://cw-wam-project.github.io/",
+      "published": "2026-10-21T17:55:53Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30117",
+      "pdf_url": "https://arxiv.org/pdf/2610.30117",
+      "summary_zh": "力敏感操作需要视觉无法提供的接触与负载信息。CW-WAM 联合预测视频、运动和接触力旋量，用统一交互模块和成对因果注意力建模运动-力旋量依赖，并以长时力旋量记忆和慢快控制架构驱动导纳控制器。相比无力旋量输入的 WAM，方形插销插入成功率从25%升至70%、电源适配器从40%升至95%，力参考RMSE显著下降。",
+      "summary_en": "Force-sensitive manipulation requires contact and load information that visual observations do not provide. CW-WAM is a world action model that jointly predicts video, motion, and contact wrench, using a unified interaction module, pair-causal attention, and a long fixed-length wrench memory to produce time-aligned motion-wrench chunks that drive a 20-Hz admittance controller in a slow-fast control system. It raises insertion success from 25% to 70% for 1-mm-clearance square pegs and from 40% to 95% for power adapters, and reduces force-reference RMSE from 4.8 to 2.7 N for peg insertion and from 2.0 to 1.3 N for wiping.",
+      "highlights_zh": [
+        "统一预测视频、运动与接触力旋量",
+        "插销成功率25%→70%，适配器40%→95%",
+        "提升力控精度，适用于精密装配"
+      ]
+    },
+    {
+      "id": "2610.30116",
+      "title": "Environment Duels: A Microcosm of LLM Co-Evolution",
+      "authors": [
+        "Shibo Jin",
+        "Zhiqiu Xu",
+        "Yiling Zou",
+        "Shangyu Gong",
+        "Mayur Naik"
+      ],
+      "abstract": "Through a tangle of real-world interactions, from synthetic training pipelines to data shared on the open web, frontier LLMs absorb what their predecessors and competitors create. How well does each model play its role in this ecosystem, as a creator and as a solver? We introduce Environment Duels, a dynamic agentic benchmark that evaluates both capabilities on interactive environments. Each model writes environments, each with a privileged hint, aiming for tasks that capable solvers fail without the hint and pass with it. Across nine frontier LLMs, solving and authoring prove to be distinct skills: the strongest solvers are not the strongest authors, while smaller models learn more from how others played and write the hardest environments and the most useful hints. Beyond the scores, the pairwise interactions form a microcosm of how models affect one another. Head-to-head outcomes are transitive and so yield a stable ranking; independent authors converge on the same designs; and in a reinforcement-learning study with Qwen3.8-27B, the learner's hint lift on an author's environments tracks how much training on those environments improves it on held-out reasoning and agentic benchmarks, whether the environments are its own or another model's. Each of these patterns has a counterpart in how models shape one another outside the duel. By staging these interactions under controlled conditions, Environment Duels offers a window onto how LLMs teach, challenge and learn from one another. Code is available at https://github.com/LLM-Duels/EnvDuels.",
+      "published": "2026-10-21T17:55:31Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.30116",
+      "pdf_url": "https://arxiv.org/pdf/2610.30116",
+      "summary_zh": "前沿大模型通过真实交互相互吸收彼此产出，但其作为环境创建者与求解者的双重角色能力尚缺乏系统评估。本文提出Environment Duels动态智能体基准，让每个模型编写带特权提示的交互环境，要求强求解器无提示失败、有提示通过，从而同时评测求解与创作能力。在九个前沿模型上发现求解与创作是不同技能，最强求解者并非最强创作者，小模型反而从他人玩法中学到更多并写出最难环境与最有用提示，且成对交互呈现可传递排名、独立作者设计趋同，强化学习实验表明提示增益可预测迁移效果，为理解模型间相互教学与学习提供了受控窗口。",
+      "summary_en": "Frontier LLMs absorb what predecessors and competitors create through real-world interactions, yet how well each model plays its dual role as creator and solver remains unmeasured. We introduce Environment Duels, a dynamic agentic benchmark where each model writes interactive environments with a privileged hint, targeting tasks that capable solvers fail without the hint and pass with it, thereby evaluating solving and authoring simultaneously. Across nine frontier LLMs, solving and authoring prove distinct skills: the strongest solvers are not the strongest authors, smaller models learn more from others' play and write the hardest environments and most useful hints, head-to-head outcomes are transitive yielding stable rankings, independent authors converge on similar designs, and an RL study with Qwen3.8-27B shows hint lift predicts transfer to held-out reasoning and agentic benchmarks, offering a controlled microcosm of how LLMs teach, challenge and learn from one another.",
+      "highlights_zh": [
+        "双角色基准同时评测求解与创作",
+        "求解与创作是不同技能，小模型更善创作",
+        "提示增益可预测强化学习迁移效果"
+      ]
+    }
+  ]
+}
