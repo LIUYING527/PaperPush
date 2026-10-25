@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-25",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.31667",
+      "title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+      "authors": [
+        "Mahdi Salmani",
+        "Adel Javanmard",
+        "Devansh Gupta",
+        "Meisam Razaviyayn"
+      ],
+      "abstract": "Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one correct solution. Running all candidate solutions to completion can be computationally demanding, so recent work prunes the candidate pool after generating only a short prefix, committing further computation only to the surviving candidates. Existing pruning strategies divide broadly into two categories: Quality-based methods assign a score to each partial solution and discard those predicted to ultimately lead to an incorrect final solution, while diversity-based methods select partial solutions that follow different reasoning trajectories and are therefore likely to cover different final solutions. The tension between these two objectives is an instance of exploration versus exploitation, yet little to no prior work on pruning exposes this trade-off directly, let alone optimizes it. In this paper, we introduce a pruning procedure that addresses this trade-off directly by optimizing pass@$k$ over the selected solution pool. In particular, it chooses the pool to maximize the probability that at least one of its partial solutions, when continued to completion, yields a correct answer. Because this objective simultaneously rewards high-quality partial solutions and penalizes redundancy among them, quality and diversity are naturally balanced by the criterion itself rather than through separate ad-hoc design choices. On eight open-weight reasoning models, our method outperforms existing quality-based and diversity-based pruning strategies. The gains are particularly pronounced when the pruning procedure keeps a moderate number of partial solutions for continued generation, highlighting the value of directly balancing quality and diversity during pruning.",
+      "published": "2026-10-22T17:59:48Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31667",
+      "pdf_url": "https://arxiv.org/pdf/2610.31667",
+      "summary_zh": "测试时扩展需生成大量候选解，但全部运行到完成计算开销大，现有前缀剪枝策略分为质量导向和多样性导向两类，二者存在探索与利用的权衡却鲜有工作直接优化。本文提出直接优化pass@k的剪枝方法，通过选择使至少一个部分解续写后得到正确答案概率最大的候选池，让质量与多样性由目标函数自然平衡而非依赖独立设计。在八个开源推理模型上，该方法优于现有质量型和多样性型剪枝策略，尤其在保留中等数量候选解时增益显著，凸显了剪枝中直接平衡质量与多样性的价值。",
+      "summary_en": "Test-time scaling requires generating many candidate solutions, but running all to completion is costly; existing prefix-based pruning splits into quality-based and diversity-based approaches whose exploration-exploitation trade-off is rarely optimized directly. We introduce a pruning procedure that directly optimizes pass@k over the selected pool, choosing candidates to maximize the probability that at least one partial solution yields a correct answer when completed, so quality and diversity are balanced by the objective itself rather than ad-hoc design. Across eight open-weight reasoning models, our method outperforms existing quality-based and diversity-based pruning strategies, with particularly strong gains when keeping a moderate number of partial solutions, highlighting the value of directly balancing quality and diversity during pruning.",
+      "highlights_zh": [
+        "以pass@k为目标直接优化剪枝池",
+        "八个开源推理模型上全面超越基线",
+        "中等保留数时增益最大，计算更省"
+      ]
+    },
+    {
+      "id": "2610.31657",
+      "title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+      "authors": [
+        "Sachin Gupta"
+      ],
+      "abstract": "Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a public 47,837-ticket, eight-class corpus, we compare four trained non-LLM classifiers with four large language models under zero- and few-shot prompting. Under the illustrative cost model (c_ok, c_triage, c_wrong) = (0, 1, 5), TF-IDF with logistic regression and a threshold of 0.60 selected on calibration reduces test cost from 0.763 to 0.472, a 38.1% relative reduction (paired ratio-bootstrap 95% CI [35.7%, 40.4%]), while lowering wrong routes from 15.3% to 3.5%. Frozen calibration-selected policies also beat both always-route and always-defer on held-out test data in 14 of 16 settings in a post-hoc cost-parameter analysis. The strongest prompted configuration reaches 0.477 accuracy on a stratified 1,000-ticket test subset, versus 0.879 for fine-tuned DistilBERT on the same tickets. Isotonic lowers expected calibration error without reliably improving discrimination: GPT-4o-mini few-shot has one confidence value before and after recalibration and correctness AUROC 0.500. We therefore report correctness AUROC and tie-aware risk-coverage area alongside ECE. At the analytically derived break-even probability 0.80, seven prompted configurations defer all tickets; Haiku few-shot routes only 19/1,000. An LLM-only agreement control and margin/entropy rejection baselines further separate calibration from discrimination. The findings are scoped to this dataset, prompt design, model endpoints, and illustrative costs; the work is an evaluation framework, not a new abstention algorithm or universal deployment certification.",
+      "published": "2026-10-22T17:58:52Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31657",
+      "pdf_url": "https://arxiv.org/pdf/2610.31657",
+      "summary_zh": "错误路由IT支持工单的代价可能高于人工分诊，因此需要评估模型在明确成本下是否具备部署条件。本文提出成本感知弃权框架：在校准数据上按给定成本选择路由策略，冻结后仅在留出测试集上评估一次，并对比四种传统分类器与四种大模型。在47,837条八类工单上，TF-IDF加逻辑回归配合0.60阈值将测试成本从0.763降至0.472（相对降低38.1%），错误路由从15.3%降至3.5%，但提示式大模型准确率仅0.477，远低于微调DistilBERT的0.879。",
+      "summary_en": "Misrouting an IT support ticket can cost more than human triage, motivating a cost-aware readiness assessment before deployment. We select a routing policy on calibration data under explicit costs, freeze it, and evaluate once on held-out test data, comparing four trained non-LLM classifiers with four LLMs under zero- and few-shot prompting. On a 47,837-ticket eight-class corpus, TF-IDF with logistic regression and a 0.60 threshold cut test cost from 0.763 to 0.472 (38.1% relative reduction) and wrong routes from 15.3% to 3.5%, while the best prompted LLM reached only 0.477 accuracy versus 0.879 for fine-tuned DistilBERT.",
+      "highlights_zh": [
+        "校准选策略后冻结单次测试的成本感知弃权评估框架",
+        "成本降38.1%、错误路由15.3%→3.5%",
+        "限于本数据集与示例成本，非通用认证"
+      ]
+    },
+    {
+      "id": "2610.31670",
+      "title": "Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success",
+      "authors": [
+        "Yunfei Xie",
+        "Howard H. Qian",
+        "Shiyi Lan",
+        "Kaiyu Hang",
+        "Chen Wei"
+      ],
+      "abstract": "Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation Hypothesis (PRH) suggests that as representations improve, different modalities such as vision and language converge toward a shared statistical model of reality. We ask whether motion trajectories form another such modality: as embodied models become more capable, should their sensory representations converge toward the structure of physical motion? To examine this, we propose Sensorimotor Alignment ($S^2$), a training-free offline metric that measures how well a model's sensory representation aligns with the geometry of physical motion. We find that $S^2$ correlates positively with downstream robot task success across embodied model families, making it a low-cost offline proxy for prioritizing models before closed-loop evaluation. $S^2$ can also identify promising vision-language model (VLM) backbones even before costly fine-tuning into vision-language-action models (VLAs). Beyond this correlation, $S^2$ offers representation-level explanations for phenomena observed in VLAs and world action models (WAMs). With $S^2$, we extend PRH to embodied models and make sensorimotor alignment empirically measurable, offering insight into why an embodied model succeeds beyond its closed-loop success rate.",
+      "published": "2026-10-22T17:59:51Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31670",
+      "pdf_url": "https://arxiv.org/pdf/2610.31670",
+      "summary_zh": "机器人基础模型通常依赖昂贵的闭环rollout评估，亟需低成本的离线代理指标。作者提出免训练的传感器运动对齐指标S²，衡量模型感官表征与物理运动几何的一致性，将柏拉图表征假说扩展到具身模型。实验表明S²与下游任务成功率正相关，可在闭环评估前筛选模型乃至VLM骨干，并为VLA和世界动作模型的表现提供表征层面的解释。",
+      "summary_en": "Robotic foundation models are typically evaluated via costly closed-loop rollouts, motivating cheap offline proxies for capability. The authors propose Sensorimotor Alignment (S²), a training-free offline metric measuring how well a model's sensory representation aligns with the geometry of physical motion, extending the Platonic Representation Hypothesis to embodied models. S² correlates positively with downstream task success, enables pre-rollout model and VLM backbone selection, and offers representation-level explanations for phenomena in VLAs and world action models.",
+      "highlights_zh": [
+        "免训练离线指标S²衡量感官-运动对齐",
+        "S²与下游机器人任务成功率正相关",
+        "可低成本预筛模型与VLM骨干"
+      ]
+    },
+    {
+      "id": "2610.31663",
+      "title": "Phase Transition from Random Features to Fully Trainable Networks",
+      "authors": [
+        "Xin He",
+        "Huan Lao",
+        "Xiliang Lu",
+        "Shijun Zhang"
+      ],
+      "abstract": "Constructing accurate and computationally tractable approximation spaces is a fundamental task in scientific computing. Partially trainable neural networks bridge fixed random features and fully adaptive representations. This paper quantifies a phase transition pattern in approximation bounds and observes analogous behavior in training errors: a rapid but smooth initial improvement followed by diminishing returns, with a sharper transition under greater initialization mismatch. Under polynomial spectral decay with exponent $α>1$ and leverage compatibility, we establish a squared $L_2$ approximation rate $\\mathcal{O}((κ_P\\log(m/δ)/m)^α)$ for two-layer networks of width $m$ and trainable proportion $P$, where $κ_P=(P/κ_1^*+(1-P)/κ_0^*)^{-1}$. The bound holds uniformly over the unit ball of a reproducing kernel Hilbert space (RKHS) with probability at least $1-δ$. The constants $κ_0^*$ and $κ_1^*$ quantify the fixed and trainable groups' sampling mismatches relative to the target RKHS. For spherical biased-ReLU features in dimension $d$, we verify these assumptions with $α=(d+2)/(d-1)$ and $κ_0^*=4\\sqrt{2}τ(d+1)/d$ for initialization scale $τ\\ge1$, and $κ_1^*=1$ under ridge leverage sampling. For $d=5$ and $τ=10$, a trainable proportion of approximately $4.1\\%$ captures $90\\%$ of the reduction in the approximation bound from $P=0$ to $P=1$. A structured three-layer example illustrates how a few trainable first-layer neurons exploit fixed downstream blocks through nonlinear composition. Numerical experiments across diverse settings, including networks with up to 15 layers, exhibit similar phase transitions in training errors.",
+      "published": "2026-10-22T17:59:29Z",
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA",
+        "cs.LG",
+        "math.ST",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31663",
+      "pdf_url": "https://arxiv.org/pdf/2610.31663",
+      "summary_zh": "部分可训练网络介于固定随机特征与全自适应表示之间，其近似与训练误差的转变规律尚缺乏定量刻画。本文在多项式谱衰减与杠杆兼容假设下，为宽度m、可训练比例P的两层网络建立了平方L2近似率O((κ_P log(m/δ)/m)^α)，其中κ_P由固定组与可训练组的采样失配常数κ_0^*、κ_1^*调和组合而成，并验证了球面偏置ReLU特征下α=(d+2)/(d-1)等具体常数。结果表明近似界与训练误差均呈现快速改善后收益递减的相变模式，且初始化失配越大转变越陡，d=5、τ=10时约4.1%可训练比例即可获得从P=0到P=1约90%的界改进，为部分微调策略提供了理论依据。",
+      "summary_en": "Partially trainable networks interpolate between fixed random features and fully adaptive representations, yet the quantitative behavior of their approximation and training error transition is unclear. Under polynomial spectral decay and leverage compatibility, this paper derives a squared L2 approximation rate O((κ_P log(m/δ)/m)^α) for two-layer networks of width m and trainable proportion P, where κ_P combines the fixed and trainable groups' sampling mismatch constants κ_0^* and κ_1^*, verified for spherical biased-ReLU features with α=(d+2)/(d-1). The bounds and training errors both exhibit a rapid-then-diminishing phase transition that sharpens with greater initialization mismatch, and for d=5, τ=10 a trainable proportion of about 4.1% captures 90% of the bound reduction from P=0 to P=1, offering theoretical guidance for partial fine-tuning.",
+      "highlights_zh": [
+        "给出含可训练比例P的近似率相变界",
+        "4.1%可训练参数获90%界改进",
+        "为部分微调策略提供理论依据"
+      ]
+    },
+    {
+      "id": "2610.31646",
+      "title": "Low-Bit N-Gram Embeddings for Language Models",
+      "authors": [
+        "Stephen Chung",
+        "Wenyu Du"
+      ],
+      "abstract": "Many recent open-weight language models use n-gram embedding tables to improve performance. These tables store learned representations of short token sequences, such as pairs or triples of consecutive tokens, which the model retrieves during processing. However, they can require substantial memory: DeepSeek-V4.1-Flash, for example, allocates 196 billion parameters to its Engram n-gram memory. We therefore investigate whether this memory cost can be reduced while preserving the performance improvement that the tables provide. We propose storing n-gram embeddings at low precision and systematically investigate different quantization methods and bit allocations across tables. Across nanochat-, Llama-, and GPT-2-family models trained from scratch, four-bit tables save approximately 75% of table memory while preserving more than 99% of the validation-loss improvement from adding the tables. Using fewer bits leads to a larger drop in performance, although we find that a short fine-tuning phase recovers a significant part of this loss. In addition, reinvesting the saved memory in larger tables can improve performance beyond that of the original full-precision tables while still using less memory. These table memory savings also extend to large existing models: on DeepSeek-V4.1-Flash and Qwen3.8-Flash-Next, low-bit tables save 47-55% of table memory, with perplexity increases of less than 1.2% and largely preserved downstream task performance. These findings establish low-bit precision as a practical way to reduce the memory requirements of n-gram embeddings and use the saved capacity to improve model performance.",
+      "published": "2026-10-22T17:56:13Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31646",
+      "pdf_url": "https://arxiv.org/pdf/2610.31646",
+      "summary_zh": "近期开源语言模型常用n-gram嵌入表提升性能，但其内存开销巨大（如DeepSeek-V4.1-Flash的Engram表占1960亿参数）。作者提出以低精度存储n-gram嵌入，系统研究不同量化方法与各表比特分配，并探索将节省的内存再投资于更大的表。在nanochat、Llama、GPT-2系列上，4比特表节省约75%表内存且保留超99%的验证损失改善，在DeepSeek-V4.1-Flash和Qwen3.8-Flash-Next上节省47-55%表内存、困惑度增幅低于1.2%，表明低比特精度是降低n-gram嵌入内存并提升性能的实用途径。",
+      "summary_en": "Recent open-weight language models use n-gram embedding tables for performance gains, but these tables are memory-intensive (e.g., DeepSeek-V4.1-Flash allocates 196B parameters to its Engram memory). The authors propose storing n-gram embeddings at low precision, systematically studying quantization methods and per-table bit allocations, and reinvesting saved memory into larger tables. Across nanochat-, Llama-, and GPT-2-family models, 4-bit tables save ~75% of table memory while preserving >99% of validation-loss improvement, and on DeepSeek-V4.1-Flash and Qwen3.8-Flash-Next they save 47-55% of table memory with <1.2% perplexity increase, establishing low-bit precision as a practical way to cut n-gram embedding memory and improve performance.",
+      "highlights_zh": [
+        "低比特量化n-gram嵌入表",
+        "4比特省75%内存保99%收益",
+        "省内存可扩表提性能"
+      ],
+      "highlights_en": [
+        "Low-bit quantization of n-gram tables",
+        "4-bit: 75% memory saved, 99% gain kept",
+        "Saved memory can enlarge tables"
+      ]
+    },
+    {
+      "id": "2610.31636",
+      "title": "Can an Agent Debug a Web Corpus? Agentic Auditing of Slovak FineWeb2",
+      "authors": [
+        "Marek Šuppa",
+        "Ivan Vykopal",
+        "Jaroslav Kopčan"
+      ],
+      "abstract": "Multilingual pipelines such as FineWeb2 apply one recipe across a thousand languages, leaving the failure modes of individual languages unanticipated. We use an LLM once, as a corpus debugger rather than a classifier: a tool-using agent explores the corpus through a read-only, budgeted API and compiles each finding into an executable test, which a native speaker then validates. On the 26.5M-document Slovak portion of FineWeb2, three runs costing \\$2.21-\\$2.84 each found seven findings over four phenomena. The largest is a machine-generated content farm of 1,408,437 documents (5.32%) that passed the pipeline's filters, 86.6% of it passing even stricter thresholds. Blinded labels support 6 of the 7 findings (defect rates .53-1.00 against .08 in a random control) and do not support one. The compiled suite scans the full corpus in 0.7 s of wall-clock time without a GPU, against \\$12k-\\$90k per LLM classification pass. The best static sampling baseline validates more selectors than any agent run, at under half the cost. The agent contributes exact prevalence, a precision estimate checked against sampled documents, an account of why the pipeline missed each slice, and a reusable test. We release the framework, Slovak test suite, validation data and agent trajectories.",
+      "published": "2026-10-22T17:52:22Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31636",
+      "pdf_url": "https://arxiv.org/pdf/2610.31636",
+      "summary_zh": "多语言语料流水线（如FineWeb2）用同一配方处理上千种语言，导致个别语言的失效模式难以预料。作者将LLM用作语料调试器而非分类器，让工具型智能体通过只读、有预算的API探索语料，把每个发现编译成可执行测试，再由母语者验证。在2650万文档的斯洛伐克语部分，三次运行（各2.21-2.84美元）发现四类现象下的七个问题，最大的是一个140万文档（5.32%）的机器生成内容农场竟通过了过滤；编译的测试套件0.7秒扫完全库且无需GPU，远低于LLM分类的1.2万-9万美元成本，但最佳静态采样基线以不到一半成本验证了更多选择器。",
+      "summary_en": "Multilingual pipelines such as FineWeb2 apply one recipe across a thousand languages, leaving language-specific failure modes unanticipated. The authors use an LLM once as a corpus debugger rather than a classifier: a tool-using agent explores the corpus via a read-only, budgeted API and compiles each finding into an executable test validated by a native speaker. On the 26.5M-document Slovak portion, three runs costing $2.21-$2.84 each surfaced seven findings over four phenomena, including a 1,408,437-document (5.32%) machine-generated content farm that passed the pipeline's filters; the compiled suite scans the full corpus in 0.7 s without a GPU versus $12k-$90k per LLM classification pass, though the best static sampling baseline validates more selectors at under half the cost.",
+      "highlights_zh": [
+        "LLM作语料调试器，发现编译为可执行测试",
+        "0.7秒无GPU扫全库，成本远低于LLM分类",
+        "发现5.32%机器内容农场通过过滤"
+      ]
+    },
+    {
+      "id": "2610.31671",
+      "title": "A Unified Framework for Image-to-3D Part Generation via Variable Granularity",
+      "authors": [
+        "Qiwen Gu",
+        "Xin Zhou",
+        "Xiwu Chen",
+        "Zhongyang Zhu",
+        "Zhuo Zhang",
+        "Junqiao Zhao"
+      ],
+      "abstract": "Controllable 3D part generation is pivotal for digital asset creation, yet existing methods lack the flexibility to accommodate diverse user workflows requiring varying levels of control. In this paper, we introduce FlexPart, a unified image-to-3D part generation framework that supports variable-granularity geometric conditions within a single model. By seamlessly integrating heterogeneous inputs, ranging from sparse points to dense bounding boxes and masks, via gated adaptive modulation, FlexPart unlocks a powerful cross-modal synergy. We also propose an asymmetric geometric guidance mechanism that leverages strong spatial priors to align representations across granularities, improving geometric consistency and facilitating inter-task synergy. Under mask conditioning on PartVerseXL, FlexPart reduces Part CD by 16.6% relative to TripoSG + SAM3D and by 10.5% relative to OmniPart, while maintaining competitive whole-mesh quality. The code can be found at https://github.com/Gucci233/FlexPart",
+      "published": "2026-10-22T17:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31671",
+      "pdf_url": "https://arxiv.org/pdf/2610.31671",
+      "summary_zh": "现有可控3D部件生成方法缺乏灵活性，难以适应用户工作流中不同层级的控制需求。本文提出FlexPart统一框架，通过门控自适应调制融合稀疏点、密集包围盒和掩码等异构输入，并设计非对称几何引导机制对齐跨粒度表示。在PartVerseXL掩码条件下，该方法相比TripoSG+SAM3D降低部件CD 16.6%、相比OmniPart降低10.5%，同时保持整体网格质量。",
+      "summary_en": "Existing controllable 3D part generation methods lack flexibility for diverse user workflows requiring varying levels of control. This paper introduces FlexPart, a unified image-to-3D part generation framework that integrates heterogeneous conditions (sparse points, dense bounding boxes, masks) via gated adaptive modulation and an asymmetric geometric guidance mechanism for cross-granularity alignment. On PartVerseXL under mask conditioning, FlexPart reduces Part CD by 16.6% vs. TripoSG+SAM3D and 10.5% vs. OmniPart while maintaining competitive whole-mesh quality.",
+      "highlights_zh": [
+        "单模型支持变粒度异构条件输入",
+        "部件CD较基线降低16.6%",
+        "统一可控3D部件生成流程"
+      ]
+    },
+    {
+      "id": "2610.31668",
+      "title": "Reading, Writing, Sharing, and Interacting with the World through Video",
+      "authors": [
+        "Shengqiong Wu",
+        "Meng Luo",
+        "Bobo Li",
+        "Ziwei Liu",
+        "Shuicheng Yan",
+        "Ming-Hsuan Yang",
+        "Philip Torr",
+        "Hao Fei"
+      ],
+      "abstract": "Video foundation models have advanced rapidly in understanding and generating visual sequences, while video world models seek to capture the underlying dynamics of the world they depict. Despite their different objectives, both concern the relationship between video observations and an evolving world. This survey adopts world modeling as a unifying lens for examining these developments. Viewing an observed video as a partial, lossy, and temporally ordered projection of a latent temporal world, we organize the literature around four complementary operations: reading infers world properties from observed video; writing synthesizes video from specified or learned world conditions; sharing integrates understanding and generation through common modeling mechanisms; and interacting predicts and updates world states under actions and evolving observations. This perspective distinguishes temporal coherence in observed or generated sequences from consistency in the underlying world state. Across tasks, representations, models, datasets, and benchmarks, we trace a shift in emphasis from clip-level recognition and perceptual fidelity toward persistent state, controllable evolution, physical and causal validity, and evaluation grounded in interaction and downstream decisions, and we distill the open challenges that follow.",
+      "published": "2026-10-22T17:59:50Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31668",
+      "pdf_url": "https://arxiv.org/pdf/2610.31668",
+      "summary_zh": "视频基础模型在理解与生成视觉序列上进展迅速，而视频世界模型旨在捕捉所描绘世界的底层动态，二者虽目标不同却都关乎视频观测与演化世界的关系。本综述以世界建模为统一视角，将观测视频视为潜在时序世界的部分、有损且时序有序的投影，并围绕读、写、共享、交互四种互补操作组织文献。该视角区分了序列的时序连贯性与底层世界状态的一致性，揭示了研究重心从片段级识别与感知保真转向持久状态、可控演化、物理因果有效性及基于交互与下游决策的评估，并提炼出后续开放挑战。",
+      "summary_en": "Video foundation models have advanced rapidly in understanding and generating visual sequences, while video world models aim to capture the underlying dynamics of the depicted world; though differing in objectives, both concern the relationship between video observations and an evolving world. This survey adopts world modeling as a unifying lens, treating an observed video as a partial, lossy, and temporally ordered projection of a latent temporal world, and organizes the literature around four complementary operations: reading, writing, sharing, and interacting. This perspective distinguishes temporal coherence in sequences from consistency of the underlying world state, traces a shift from clip-level recognition and perceptual fidelity toward persistent state, controllable evolution, physical and causal validity, and interaction-grounded evaluation, and distills the open challenges that follow.",
+      "highlights_zh": [
+        "以世界建模统一视角组织视频研究文献",
+        "提出读、写、共享、交互四类互补操作框架",
+        "指出向持久状态与因果有效性评估的转向"
+      ]
+    },
+    {
+      "id": "2610.31661",
+      "title": "OpenTac: An Open Ecosystem for Customizable, Scalable, and Transferable 3D Tactile Sensing",
+      "authors": [
+        "Ariel Slepyan",
+        "Geeta Chandra Raju Bethala",
+        "Jiafeng Gu",
+        "Anagha Rajendra Dangle",
+        "Yinzhe Zhou",
+        "Hongyuan Fu",
+        "Jade Sim",
+        "Tuhin Basu",
+        "Xinyi Yin",
+        "Md Faizal Karim",
+        "Gregory Hager",
+        "Homanga Bharadhwaj",
+        "Anand Bhattad",
+        "Krishna Murthy Jatavallabhula",
+        "Nitish V. Thakor"
+      ],
+      "abstract": "We present OpenTac, a novel sensor and a full-stack ecosystem for tactile skins that are highly customizable, scalable, and readily deployed in downstream robot control and learning applications. Our core contribution is twofold. First, we develop a scalable resistive tactile skin with a structured deformable overlay that converts tangential loading into spatially varying pressure. Differential responses across neighboring \"taxels\" support decoding of local shear vectors, and the common-mode response encodes normal force. Second, we provide a highly customizable sensor design tool that is able to automatically generate fabrication files for these tactile skins from 2D outlines and developable 3D surfaces, including from abstract descriptions such as text (e.g., \"design a sensor for a size 9 shoe insole\"). We develop an ecosystem around the OpenTac sensor, including the CAD design tool, a sensor simulator, cross-sensor transfer, and fast/adaptive data acquisition. We demonstrate the broad applicability of the OpenTac-CAD sensor design tool by designing and fabricating more than 30 sensors across a variety of robot embodiments. We characterize the three-dimensional tactile fields produced by OpenTac with a commercial, high-precision force/torque sensor. We demonstrate the broad applicability of 3D tactile sensing across contact-rich feedback control and manipulation policy learning on four real-world robot embodiments. Additionally, adaptive acquisition enables kilohertz-rate partial readouts, exceeding full-array raster scanning on the same sensor by 19.2X at 16 sampled taxels per update for a 1024-taxel skin. We provide all hardware, software, and result videos are at opentac.github.io",
+      "published": "2026-10-22T17:59:06Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SP",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31661",
+      "pdf_url": "https://arxiv.org/pdf/2610.31661",
+      "summary_zh": "现有机器人触觉皮肤难以兼顾可定制性、可扩展性与下游控制学习任务的直接部署。作者提出OpenTac，一种带结构化可变形覆盖层的电阻式触觉皮肤，通过相邻taxel差分响应解码局部剪切、共模响应编码法向力，并提供从2D轮廓、可展3D曲面乃至文本描述自动生成制造文件的设计工具及仿真、跨传感器迁移与自适应采集生态。在四种真实机器人上验证了接触丰富反馈控制与操作策略学习，1024-taxel皮肤上16 taxel部分读取比全阵列扫描快19.2倍，并已设计制造30余种传感器。",
+      "summary_en": "Existing tactile skins struggle to combine customizability, scalability, and direct deployment in downstream robot control and learning. We present OpenTac, a resistive tactile skin with a structured deformable overlay that decodes local shear from differential taxel responses and normal force from common-mode response, together with a design tool that auto-generates fabrication files from 2D outlines, developable 3D surfaces, or text prompts, plus simulation, cross-sensor transfer, and adaptive acquisition. We fabricated over 30 sensors across robot embodiments, validated 3D tactile sensing in contact-rich feedback control and manipulation policy learning on four real robots, and achieved kilohertz-rate partial readouts 19.2X faster than full-array raster scanning on a 1024-taxel skin.",
+      "highlights_zh": [
+        "结构化覆盖层差分解码三维触觉",
+        "1024-taxel皮肤读取提速19.2倍",
+        "支持文本生成设计，跨30余种机器人"
+      ]
+    },
+    {
+      "id": "2610.31625",
+      "title": "Extending Harmonic Function Methods via Root Locus for Coordinated Path Generation",
+      "authors": [
+        "Matteo Frascarelli",
+        "Lucia Pallottino",
+        "Alberto Landi"
+      ],
+      "abstract": "We consider the offline generation of coordinated paths for N interchangeable robots and N goals in planar environments with polygonal obstacles. After a conformal map to a circular domain, starts and goals become the poles and zeros of a rational function R, and the paths are the branches of its Generalized Root Locus (GRL), i.e. the streamlines of the logarithmic potential -log R. We show that, for every phase outside a finite set of critical phases and a set of boundary phases, the induced gradient motion drives each robot to a distinct goal along pairwise disjoint paths that never reach the obstacles; the robot-goal assignment is produced by the construction, and with the gain used as a clock all robots move as the closed-loop roots of the GRL and arrive together at a prescribed time. Obstacles become streamlines through successive Milne-Thomson reflections, and for a finite number of reflections a finite test certifies safety for the potential that is actually computed. Reciprocal root-locus planning is recovered as a special case. The method is illustrated on two polygonal workspaces, 100 random instances compared with independent harmonic planning and artificial potentials, and a scene with ten robots and ten obstacles.",
+      "published": "2026-10-22T17:45:31Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.31625",
+      "pdf_url": "https://arxiv.org/pdf/2610.31625",
+      "summary_zh": "针对平面多边形障碍环境中N个可互换机器人与N个目标的离线协调路径生成问题，现有谐波函数方法在路径协调与目标分配上存在局限。该文通过共形映射将起点和目标转化为有理函数的极点与零点，以广义根轨迹的支路作为路径，并利用Milne-Thomson反射处理障碍，从而统一生成互不交叉且安全的协调路径。实验在随机实例和十机器人场景中验证了方法的有效性，表明其可扩展谐波规划并保证同时到达。",
+      "summary_en": "The paper addresses offline coordinated path generation for N interchangeable robots and N goals in planar environments with polygonal obstacles, where existing harmonic-function planners struggle with coordination and assignment. After a conformal map to a circular domain, starts and goals become poles and zeros of a rational function, and paths are branches of its Generalized Root Locus, with obstacles handled by successive Milne-Thomson reflections and a finite safety test. Experiments on random instances and a ten-robot scene show disjoint, collision-free paths with simultaneous arrival, extending harmonic planning and recovering reciprocal root-locus planning as a special case.",
+      "highlights_zh": [
+        "用广义根轨迹统一生成协调路径",
+        "随机实例与十机器人场景验证有效",
+        "可扩展谐波规划但限于平面环境"
+      ]
+    }
+  ]
+}
