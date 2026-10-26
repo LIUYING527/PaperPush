@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-26",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.32978",
+      "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
+      "authors": [
+        "Yuhan Liu",
+        "Lianhui Qin",
+        "Shenji Wan"
+      ],
+      "abstract": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors over plausible arrangements, yet their outputs require geometric reasoning to become physically valid 3D scenes. We introduce SceneBloom, an agentic framework that combines visual layout sampling with contract-guided 3D compilation. A hierarchical sampler uses diffusion priors to generate furniture arrangements within functional zones. A compiler then uses relations extracted from each proposal to guide geometric fitting and local pose correction. Across five room types, SceneBloom attains the highest visual quality and physical stability among the compared methods and is the only method with no detected mesh collisions and out-of-bounds objects. Its layouts are also closer to the distribution of real rooms than those of all compared baselines. Object navigation policies trained in these realistic scenes achieve a higher success rate in held-out real scans than those trained on an equal number of real training scans. Code is available at https://github.com/Tinaliu0123/scenebloom.",
+      "published": "2026-10-23T17:59:21Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32978",
+      "pdf_url": "https://arxiv.org/pdf/2610.32978",
+      "summary_zh": "训练泛化具身智能体需要真实、多样且可直接仿真的室内环境，但语言引导方法难以精确空间定位，视觉生成模型输出又缺乏物理有效性。SceneBloom提出智能体框架，用扩散先验的分层采样器在功能区内生成家具布局，再通过从提案中提取关系的编译器引导几何拟合与局部姿态修正。在五类房间上，该方法视觉质量与物理稳定性最优，唯一实现零网格碰撞与零越界物体，布局更接近真实房间分布，且在其场景中训练的目标导航策略在真实扫描上成功率高于等量真实数据训练。",
+      "summary_en": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments, yet language-guided methods struggle with precise spatial grounding and visual generative models lack physical validity. SceneBloom is an agentic framework that combines a hierarchical diffusion-prior sampler for furniture arrangements within functional zones with a contract-guided compiler that uses extracted relations to drive geometric fitting and local pose correction. Across five room types it achieves the best visual quality and physical stability, is the only method with no mesh collisions or out-of-bounds objects, produces layouts closer to real-room distributions, and yields object-navigation policies that outperform those trained on an equal number of real scans when evaluated on held-out real scans.",
+      "highlights_zh": [
+        "扩散采样加关系约束编译",
+        "零碰撞零越界且布局最真实",
+        "可仿真场景提升导航泛化"
+      ]
+    },
+    {
+      "id": "2610.32971",
+      "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
+      "authors": [
+        "Xi Chen",
+        "Fengqi Hu",
+        "Zeyu Shen",
+        "Jiaying Xu",
+        "Shangding Gu",
+        "Pan Xu",
+        "Anqi Liu",
+        "Laixi Shi"
+      ],
+      "abstract": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mechanisms and principles, yet two major barriers limit their broader potential: limited algorithm reusability and an unclear empirical capability boundary. We introduce RobustRLlib, an algorithm-centric library and benchmark that addresses both challenges. It integrates 17 representative robust online, offline, and safe RL algorithms under a unified interface for substantially improved reusability, together with an enhanced evaluation platform spanning diverse real-world shifts and advanced humanoid and vision-language-action tasks. Systematic evaluation over 273 perturbation configurations provides an up-to-date capability map of current robust RL algorithms, revealing where they remain effective and where substantial robustness gaps persist. As an open-source, user-friendly platform, RobustRLlib offers a reproducible and extensible codebase for applying existing methods to new problems and developing new robust RL algorithms.",
+      "published": "2026-10-23T17:57:22Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32971",
+      "pdf_url": "https://arxiv.org/pdf/2610.32971",
+      "summary_zh": "鲁棒强化学习对现实部署至关重要，但现有算法复用性差且经验能力边界不清。RobustRLlib以统一接口集成17种代表性在线、离线与安全鲁棒RL算法，并构建覆盖真实偏移及人形机器人、视觉-语言-动作任务的高效评测平台。基于273种扰动配置的系统评测给出了当前鲁棒RL算法的能力图谱，揭示有效场景与仍存在的鲁棒性差距，为可复现、可扩展的研究提供开源平台。",
+      "summary_en": "Robust reinforcement learning is critical for reliable real-world deployment, yet existing algorithms suffer from limited reusability and an unclear empirical capability boundary. RobustRLlib integrates 17 representative robust online, offline, and safe RL algorithms under a unified interface and provides an enhanced evaluation platform spanning diverse real-world shifts and advanced humanoid and vision-language-action tasks. Systematic evaluation over 273 perturbation configurations yields an up-to-date capability map, revealing where current robust RL algorithms remain effective and where substantial robustness gaps persist, as an open-source and extensible platform.",
+      "highlights_zh": [
+        "统一接口集成17种鲁棒RL算法",
+        "273种扰动配置系统评测",
+        "开源可扩展但鲁棒性差距仍存"
+      ]
+    },
+    {
+      "id": "2610.32964",
+      "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
+      "authors": [
+        "Bernardo Perrone Ribeiro",
+        "Erkut Akdag",
+        "Egor Bondarev"
+      ],
+      "abstract": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.",
+      "published": "2026-10-23T17:53:30Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32964",
+      "pdf_url": "https://arxiv.org/pdf/2610.32964",
+      "summary_zh": "少样本工业异常检测需仅凭少量无缺陷图像建模类别正常性，现有方法依赖存储样本、刚性线性结构或易复现异常内容。Flownomaly将问题转化为冻结DINOv2特征空间中的正常对应恢复，通过条件流匹配学习速度场，沿直线路径单步评估最优场即得干净正常令牌的后验均值，并用仅正常样本的雅可比增益噪声准则选择操作时间。在MVTec-AD和VisA的1/2/4样本基准及Real-IAD上达到最优性能，1样本下图像/像素AUROC分别达97.8%/98.0%和95.3%/98.7%。",
+      "summary_en": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images, while existing methods tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly casts the problem as normal-counterpart recovery in frozen DINOv2 feature space: a velocity field is learned via conditional flow matching over frozen patch tokens, and a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration, with a normal-only Jacobian gain-to-noise criterion selecting the operating time from supports alone. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA and sample-shot evaluations on Real-IAD, it achieves state-of-the-art performance, reaching 97.8%/98.0% image/pixel AUROC on MVTec-AD and 95.3%/98.7% on VisA in the 1-shot setting.",
+      "highlights_zh": [
+        "单步条件均值恢复免轨迹积分",
+        "1-shot MVTec图像AUROC达97.8%",
+        "无需异常验证样本调参"
+      ],
+      "highlights_en": [
+        "Single-step conditional-mean recovery without trajectory integration",
+        "1-shot MVTec image AUROC reaches 97.8%",
+        "No anomalous validation samples needed for tuning"
+      ]
+    },
+    {
+      "id": "2610.32955",
+      "title": "Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox",
+      "authors": [
+        "Federico Lucca"
+      ],
+      "abstract": "Personal email agents decide, for every message, what it is, whether it is urgent, whether to draft a reply, create a task, or ignore it. Their error rate is rarely measured: the stored labels were written by the system itself. We present Foyer, a self-hosted personal inbox agent in daily use, and a measurement protocol (stratified sampling, frozen snapshots, thread-grouped splits, pre-registered hypotheses, human labels in the agent's review loop) that yields ground truth before any training. On 739 real Italian/English emails labelled by the owner (231 unbiased, 500 adversarially sampled), we compare nine systems under thread-grouped cross-validation: the production keyword rules, a TF-IDF + logistic-regression baseline, local typed decision models (Tev1, Nimble), a hosted decision model (Nimble v4-max), and hosted generative LLMs (Qwen2.5-7B, Gemma 4 26B/31B). Four results. The production rules score 28% on message type against a 58% majority class: the field shown most prominently carried no information. With ~200 labels, logistic regression has the highest accuracy on every field (type 0.79, urgency 0.74, needs-reply 0.83, is-noise 0.90), though it never predicts the two rarest classes and is statistically tied with Gemma 4 on type; few-shot prompting does not close the gap. The sender's relationship (client, supplier, service) is recovered from other emails of the same contact with 98.6% accuracy where the contact has been seen, and is not inferable from a single message by any model: it belongs in the contact graph, not the prompt. Finally, accuracy is not the product metric: composed into actions, the most accurate system most often ignores emails needing action (18% vs 4% for the best LLM); a cost-chosen threshold on its noise probability halves that rate and makes it the cheapest system.",
+      "published": "2026-10-23T17:49:43Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32955",
+      "pdf_url": "https://arxiv.org/pdf/2610.32955",
+      "summary_zh": "个人邮件智能体普遍使用系统自标注的标签，其真实错误率从未被测量，导致路由决策缺乏可靠依据。作者构建了Foyer系统并提出一套在训练前获取真实标签的测量协议（分层采样、冻结快照、按线程分组划分、预注册假设、人工标注），在739封真实意英邮件上对比九种系统。结果显示生产规则在消息类型上仅28%准确率（多数类为58%），约200个标签下逻辑回归在各字段最优（类型0.79、紧急0.74、需回复0.83、噪声0.90），且发件人关系应从联系人图谱而非单封邮件推断；更重要的是准确率并非产品指标，最准确的系统反而最常忽略需处理邮件（18% vs 最佳LLM的4%），通过成本选择阈值可将该比率减半并成为最便宜的系统。",
+      "summary_en": "Personal email agents rely on self-generated labels, so their true error rates are rarely measured, leaving routing decisions unvalidated. The authors present Foyer, a self-hosted inbox agent, and a measurement protocol (stratified sampling, frozen snapshots, thread-grouped splits, pre-registered hypotheses, human labels in the review loop) that yields ground truth before training, comparing nine systems on 739 real Italian/English emails. Production rules score only 28% on message type versus a 58% majority class, logistic regression with ~200 labels is best on every field (type 0.79, urgency 0.74, needs-reply 0.83, noise 0.90), sender relationship must live in the contact graph rather than the prompt, and accuracy is not the product metric: the most accurate system ignores 18% of actionable emails versus 4% for the best LLM, a gap halved by a cost-chosen threshold that also makes it the cheapest system.",
+      "highlights_zh": [
+        "训练前用人工标注协议获取真实标签",
+        "逻辑回归约200标签下各字段最优",
+        "准确率非产品指标，需按成本选阈值"
+      ]
+    },
+    {
+      "id": "2610.32982",
+      "title": "The Language of Instruction: Genre and Generative AI",
+      "authors": [
+        "James E. Dobson"
+      ],
+      "abstract": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation of discursive language from prior conversations between generative models and humans recursively run through these massive neural networks. It is instantiated in applications through instruction fine-tuning, the inclusion of a pretext known as a system prompt, and the formalization of inputs in mark-up languages characterized by the use of special tokens and role assignment in turntaking structures.",
+      "published": "2026-10-23T17:59:56Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32982",
+      "pdf_url": "https://arxiv.org/pdf/2610.32982",
+      "summary_zh": "针对指令微调语言模型的理解问题，本文提出应将其视为在实施一种“指令-对话体裁”。该体裁由生成模型与人类先前对话中的话语语言递归融合而成，并通过指令微调、系统提示及标记语言中的特殊标记与角色分配得以实例化。这一视角为理解生成式AI的交流本质提供了新框架。",
+      "summary_en": "This article addresses how instruction-fine-tuned language models should be understood conceptually. It proposes that these models implement an 'instructional-conversational genre,' an amalgamation of discursive language from prior human-model conversations recursively processed through neural networks, instantiated via instruction fine-tuning, system prompts, and markup formalization with special tokens and role assignment. This framing offers a new lens for understanding the communicative nature of generative AI.",
+      "highlights_zh": [
+        "提出指令-对话体裁概念",
+        "无实验数据（理论文章）",
+        "为AI交流本质提供新视角"
+      ]
+    },
+    {
+      "id": "2610.32933",
+      "title": "Yalda-Embedding: Open Development of a Competitive Persian Retrieval Model",
+      "authors": [
+        "Yalda Taheri",
+        "Mohammad Hassan Heydari",
+        "Armon Rasooli"
+      ],
+      "abstract": "Despite advances in multilingual text representations, effective dense retrieval for Persian remains constrained by the limited availability of language-specific training resources and compact embedding models. We present Yalda Embedding, a 595.8-million-parameter Persian retrieval model adapted from Qwen3-Embedding-0.6B using more than one million query-document pairs. On eight Persian retrieval tasks from FaMTEB, the model achieves the highest macro-average among the evaluated 0.6B models, scoring 0.5488 and outperforming Qwen3-Embedding-0.6B and F2LLM-v2-0.6B on every task. It also approaches Qwen3-Embedding-4B, winning on four tasks, tying on one, and trailing by 0.0075 in macro-average. An incremental ablation study examines contrastive batch size, optimization stabilization, and relational knowledge distillation from F2LLM-v2-8B. Under the one-epoch training setup, contrastive fine-tuning alone yields a modest mean improvement over initialization and regressions on two tasks. The final distilled configuration improves all eight tasks over the non-distilled model, raising the mean from 0.4813 to 0.5488 without increasing inference-time model size. These gains include hard-negative evaluation tasks despite training without explicitly mined or supplied hard negatives. We release model weights, training and evaluation code, the pairwise dataset, and its teacher-embedded counterpart, enabling inspection of data composition and training procedures, independent evaluation, and reuse without repeating expensive teacher inference.",
+      "published": "2026-10-23T17:30:40Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32933",
+      "pdf_url": "https://arxiv.org/pdf/2610.32933",
+      "summary_zh": "波斯语稠密检索受限于语言特定训练资源和紧凑嵌入模型的缺乏。作者基于Qwen3-Embedding-0.6B，用超100万查询-文档对训练出5.958亿参数的Yalda Embedding，并通过对比批大小、优化稳定化和来自F2LLM-v2-8B的关系知识蒸馏进行增量消融。该模型在FaMTEB八项波斯语检索任务上宏平均达0.5488，超越同规模基线并在四项任务上胜过4B模型，且全部权重、代码与数据开源。",
+      "summary_en": "Dense retrieval for Persian is constrained by scarce language-specific training resources and compact embedding models. The authors adapt Qwen3-Embedding-0.6B into Yalda Embedding (595.8M parameters) using over one million query-document pairs, with incremental ablations on contrastive batch size, optimization stabilization, and relational knowledge distillation from F2LLM-v2-8B. The model achieves the best macro-average (0.5488) among evaluated 0.6B models on eight FaMTEB Persian retrieval tasks, beats Qwen3-Embedding-0.6B and F2LLM-v2-0.6B on every task, approaches the 4B model, and releases weights, code, and data openly.",
+      "highlights_zh": [
+        "关系知识蒸馏提升检索且不增推理成本",
+        "八任务宏平均0.5488，全面超越同规模基线",
+        "开源权重数据代码，支持复现与复用"
+      ]
+    },
+    {
+      "id": "2610.32977",
+      "title": "UniAction: Unified Action Conditioning for World Models",
+      "authors": [
+        "Bowen Xue",
+        "Zizhang Li",
+        "Hong-Xing Yu",
+        "Jiajun Wu"
+      ],
+      "abstract": "Actions that condition world models are highly heterogeneous, and thus existing action-conditioned world models are typically built for individual action types, fragmenting already limited action-annotated data across separate models. We introduce UniAction, a unified action-conditioning framework that represents any action as a sparse set of action elements, each with a discrete semantic identity and a continuous spatiotemporal grounding coordinate. By mapping these coordinates directly into the pretrained video model's native positional space, UniAction allows heterogeneous actions to condition a shared world model within the same spatiotemporal structure. We further introduce cardinality-calibrated attention to address the bias from differing action representation granularities. We evaluate UniAction on four representative action forms: force, camera control, hand pose, and robot pose. UniAction outperforms conditioning alternatives in action following, and a single jointly trained model surpasses the action-specific experts, showing that heterogeneous action data benefit from unified model and joint training.",
+      "published": "2026-10-23T17:59:13Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32977",
+      "pdf_url": "https://arxiv.org/pdf/2610.32977",
+      "summary_zh": "现有动作条件世界模型因动作类型高度异构而通常按类型分别建模，导致本就有限的动作标注数据被割裂。UniAction将任意动作表示为带离散语义身份和连续时空坐标的稀疏动作元素集合，把坐标映射到预训练视频模型的原生位置空间，并引入基数校准注意力以缓解表示粒度差异带来的偏差。在力、相机控制、手部姿态和机器人姿态四类动作上，UniAction动作跟随优于其他条件方案，单一联合训练模型超越各动作专用专家，表明异构动作数据可从统一模型与联合训练中获益。",
+      "summary_en": "Existing action-conditioned world models are typically built per action type because actions are highly heterogeneous, fragmenting the already limited action-annotated data. UniAction represents any action as a sparse set of action elements, each with a discrete semantic identity and a continuous spatiotemporal grounding coordinate mapped into the pretrained video model's native positional space, plus cardinality-calibrated attention to counter granularity bias. On force, camera control, hand pose, and robot pose, UniAction outperforms conditioning alternatives in action following, and a single jointly trained model surpasses action-specific experts, showing heterogeneous action data benefit from unified modeling and joint training.",
+      "highlights_zh": [
+        "稀疏动作元素+原生位置空间映射",
+        "联合模型超越四类动作专用专家",
+        "统一异构动作数据，减少数据割裂"
+      ]
+    },
+    {
+      "id": "2610.32976",
+      "title": "FlexGlue: Sparse-to-Dense Feature Matching and Visual Disambiguation",
+      "authors": [
+        "Philipp Lindenberger",
+        "Paul-Edouard Sarlin",
+        "Ondrej Miksik",
+        "Marc Pollefeys"
+      ],
+      "abstract": "To estimate correspondences across images, existing approaches match either sparse interest points, which is highly efficient but limited by repeatability, or dense pixel grids, which is robust but expensive. Furthermore, these approaches are trained with only matching pairs and thus often fail to reject unrelated pairs that exhibit visual symmetries, which is equally important in applications like Structure-from-Motion (SfM). We bridge these gaps by introducing FlexGlue, a neural network for asymmetric sparse-to-dense matching and disambiguation. Given two images and coordinates of points in the first image, FlexGlue estimates the coordinates of the corresponding points in the second image while simultaneously rejecting the pair if non-matching. By searching for a limited set of correspondences among dense pixels, our approach is both fast and effective at both matching and disambiguation: it combines the sub-pixel accuracy of dense matching with the speed of sparse matching, while rejecting incorrect pairs with high precision. Experiments on multiple datasets show that FlexGlue pushes the Pareto frontier in relative pose estimation and significantly outperforms existing approaches for SfM and visual localization. FlexGlue is publicly available at https://github.com/cvg/flexglue .",
+      "published": "2026-10-23T17:59:00Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32976",
+      "pdf_url": "https://arxiv.org/pdf/2610.32976",
+      "summary_zh": "现有图像对应估计方法要么用稀疏兴趣点匹配（高效但受重复性限制），要么用稠密像素网格匹配（鲁棒但昂贵），且仅用匹配对训练，难以拒绝存在视觉对称性的无关图像对。FlexGlue 提出非对称稀疏到稠密匹配与消歧网络，给定两图和第一图点坐标，在稠密像素中搜索有限对应集，同时判断是否拒绝该点对，兼具稠密匹配的亚像素精度与稀疏匹配的速度。实验表明其在相对位姿估计上推进帕累托前沿，并在 SfM 和视觉定位中显著优于现有方法。",
+      "summary_en": "Existing correspondence methods either match sparse interest points (efficient but limited by repeatability) or dense pixel grids (robust but expensive), and are trained only on matching pairs so they often fail to reject unrelated pairs with visual symmetries. FlexGlue introduces a neural network for asymmetric sparse-to-dense matching and disambiguation that, given two images and point coordinates in the first, estimates corresponding coordinates in the second while rejecting non-matching pairs, searching a limited set of correspondences among dense pixels to combine sub-pixel accuracy with sparse-matching speed. Experiments show it pushes the Pareto frontier in relative pose estimation and significantly outperforms existing approaches for SfM and visual localization.",
+      "highlights_zh": [
+        "稀疏到稠密匹配与消歧统一",
+        "相对位姿估计推进帕累托前沿",
+        "提升SfM与视觉定位性能"
+      ]
+    },
+    {
+      "id": "2610.32966",
+      "title": "ViT-H: Generative Video-To-Humanoid Control with Motion Tracking Feedback",
+      "authors": [
+        "Zimo He",
+        "Tianyi Bian",
+        "Zizhong Yang",
+        "Hongjie Li",
+        "Nan Jiang",
+        "Jieming Cui",
+        "Baoxiong Jia",
+        "Yizhou Wang",
+        "Siyuan Huang",
+        "Yixin Zhu"
+      ],
+      "abstract": "Learning humanoid control from monocular human videos offers a scalable way to acquire diverse whole-body behaviors. Yet, existing reconstruction-retargeting-tracking pipelines are limited in system-level scalability by separately optimized intermediate stages and cannot directly optimize reference motion executability using downstream tracking feedback. We present ViT-H, a video-to-humanoid control framework following a generation-and-tracking paradigm. ViT-H directly generates humanoid reference motions from videos with a diffusion model, bypassing human motion reconstruction and retargeting, and uses motion-tracking outcomes to post-train the generator with direct preference optimization. We further introduce an autoregressive variant that enables real-time humanoid video teleoperation with sub-400 ms latency. Extensive experiments on the Unitree G1 demonstrate that ViT-H outperforms state-of-the-art reconstruction-retargeting-tracking pipelines in both motion quality and executability. We further show that ViT-H scales favorably with model size and with both pre-training and post-training data scale, while motion-tracking feedback consistently improves executability across different motion trackers.",
+      "published": "2026-10-23T17:54:09Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32966",
+      "pdf_url": "https://arxiv.org/pdf/2610.32966",
+      "summary_zh": "从单目人体视频学习人形控制的可扩展方法受限于重建-重定向-跟踪流水线中各阶段独立优化，无法利用下游跟踪反馈直接优化参考运动的可执行性。ViT-H提出生成-跟踪范式，用扩散模型直接从视频生成人形参考运动，绕过重建与重定向，并利用运动跟踪结果通过直接偏好优化对生成器进行后训练，还引入自回归变体实现亚400毫秒延迟的实时遥操作。在Unitree G1上的实验表明，ViT-H在运动质量和可执行性上均优于现有流水线，且随模型与数据规模良好扩展，跟踪反馈能持续提升不同跟踪器的可执行性。",
+      "summary_en": "Learning humanoid control from monocular human videos via reconstruction-retargeting-tracking pipelines is limited in scalability because stages are optimized separately and downstream tracking feedback cannot directly improve reference motion executability. ViT-H introduces a generation-and-tracking paradigm that uses a diffusion model to generate humanoid reference motions directly from videos, bypassing reconstruction and retargeting, and post-trains the generator with direct preference optimization using motion-tracking outcomes, plus an autoregressive variant enabling real-time teleoperation with sub-400 ms latency. Experiments on the Unitree G1 show ViT-H outperforms state-of-the-art pipelines in motion quality and executability, scales favorably with model and data size, and that tracking feedback consistently improves executability across trackers.",
+      "highlights_zh": [
+        "扩散模型直接生成参考运动，跳过重定向",
+        "Unitree G1上质量与可执行性超SOTA",
+        "实时遥操作延迟低于400毫秒"
+      ],
+      "highlights_en": [
+        "Diffusion generates reference motions, bypassing retargeting",
+        "Outperforms SOTA in quality and executability on G1",
+        "Real-time teleoperation under 400 ms latency"
+      ]
+    },
+    {
+      "id": "2610.32969",
+      "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
+      "authors": [
+        "Amber Xie",
+        "Jiawei Fu",
+        "Xiaofeng Guo",
+        "Carmelo Sferrazza",
+        "Guanya Shi",
+        "Haozhi Qi"
+      ],
+      "abstract": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+      "published": "2026-10-23T17:56:28Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.32969",
+      "pdf_url": "https://arxiv.org/pdf/2610.32969",
+      "summary_zh": "灵巧操作学习缺乏高质量演示数据：遥操作需完整机器人且操作负担重，人类演示又需重定向且不直接提供机器人动作。DexPort提出便携式高自由度机器人手数据采集接口，采集与部署使用同一手部硬件以消除具身差距，操作者只需移动手腕并选择或调整技能来协调手指，同时记录关节目标指令与实测状态。在4项真实任务上采集超2500条演示，使用记录指令而非状态使成功率从11%提升至64%，使用野外数据使成功率从36%提升至78%。",
+      "summary_en": "Learning dexterous manipulation is bottlenecked by high-quality demonstrations: teleoperation requires a full robot setup and burdens operators with many finger joints, while human demonstrations need retargeting and do not directly provide robot actions. DexPort introduces a portable data-collection interface for high-DoF robot hands that uses the same hand hardware for collection and deployment to avoid the embodiment gap, recording both commanded joint targets and measured states while operators move the wrist and select or adjust skills to coordinate fingers. Across four real-world tasks with over 2,500 demonstrations, using recorded commands instead of states improves success from 11% to 64%, and using in-the-wild data improves task success from 36% to 78%.",
+      "highlights_zh": [
+        "采集与部署同硬件，消除具身差距",
+        "指令替代状态：成功率11%→64%",
+        "野外数据使成功率36%→78%"
+      ]
+    }
+  ]
+}
