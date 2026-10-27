@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-27",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.35868",
+      "title": "Retriever-Free Retrieval: Navigating Documents with Decision Models",
+      "authors": [
+        "Chao Wan",
+        "Paul Jünger",
+        "Beixi Du",
+        "Bodong Liu",
+        "Navaneetha Krishnan",
+        "Kilian Q. Weinberger"
+      ],
+      "abstract": "While language models have become dramatically more capable, retrieval still largely relies on lexical matching or similarity in fixed embedding spaces. This creates a capability asymmetry: what the retriever fails to find, even the strongest generator cannot recover. We propose DecisionRAG, which brings the capabilities of pretrained language models to retrieval using decision models that jointly evaluate candidate branches in a single forward pass, without generating any tokens, and show that judging candidates in a shared context makes their relevance estimates comparable. Like a person browsing a library, DecisionRAG navigates the corpus's inherent structure from broad topics down to individual passages, deciding at each level which branches are worth exploring. Without task-specific training or a first-stage retriever, DecisionRAG outperforms dense retrieval with an 8B reranker by 13.8 R@1 points on MultiDoc2Dial and 17.4 Hit@1 points on Natural Questions. Across four benchmarks, including a corpus of 2.68 million Wikipedia paragraphs, retrieval takes just 0.7-1.8 seconds per query.",
+      "published": "2026-10-26T17:59:44Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35868",
+      "pdf_url": "https://arxiv.org/pdf/2610.35868",
+      "summary_zh": "现有检索仍依赖词法匹配或固定嵌入空间中的相似度，导致检索器找不到的内容即使最强的生成器也无法恢复。作者提出DecisionRAG，利用预训练语言模型作为决策模型，在单次前向传播中联合评估候选分支且不生成任何token，从宽泛主题逐层导航到具体段落。无需任务特定训练或第一阶段检索器，该方法在MultiDoc2Dial上R@1比8B重排器高13.8分、Natural Questions上Hit@1高17.4分，在268万段维基百科语料上每查询仅需0.7-1.8秒。",
+      "summary_en": "Retrieval still relies largely on lexical matching or similarity in fixed embedding spaces, creating a capability asymmetry where what the retriever misses even the strongest generator cannot recover. The authors propose DecisionRAG, which uses pretrained language models as decision models that jointly evaluate candidate branches in a single forward pass without generating tokens, navigating the corpus structure from broad topics down to passages. Without task-specific training or a first-stage retriever, it outperforms dense retrieval with an 8B reranker by 13.8 R@1 points on MultiDoc2Dial and 17.4 Hit@1 points on Natural Questions, retrieving in 0.7-1.8 seconds per query over 2.68 million Wikipedia paragraphs.",
+      "highlights_zh": [
+        "单次前向联合评估候选分支",
+        "R@1提升13.8分、Hit@1提升17.4分",
+        "无需训练与一阶段检索器"
+      ]
+    },
+    {
+      "id": "2610.35865",
+      "title": "Center-of-Mass Interpretation of Evolution Strategies",
+      "authors": [
+        "Akshat Gupta"
+      ],
+      "abstract": "Evolution strategies (ES) update a model by sampling a population of perturbed copies, scoring each one, and moving in the reward-weighted direction of the perturbations. This update is usually presented as an estimate of a smoothed gradient. We present a geometrical interpretation of this update instead. Treat each perturbed model as a particle and its reward as the particle's mass. Before scoring, every particle has the same mass and the population balances at its centroid. Once rewards are assigned, it balances at its reward-weighted center of mass instead. We show that the mean-subtracted ES update is exactly this displacement, scaled by a scalar factor that depends on the mean reward, for any finite population. The physical reading needs nonnegative rewards, which can always be arranged by adding a constant to every reward without changing the update. In the limit of a large population or under antithetic sampling, the centroid sits on the model itself, so ES has an even simpler geometric interpretation: from its current location, the model moves towards the reward-weighted center of mass of its own population. The same picture explains what subtracting the mean reward does: it changes the point from which the displacement is measured, from the model to the sampled centroid. Our contribution is an intuitive, geometric way to visualize an ES update, exact for any finite population.",
+      "published": "2026-10-26T17:59:33Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35865",
+      "pdf_url": "https://arxiv.org/pdf/2610.35865",
+      "summary_zh": "进化策略（ES）更新通常被解释为平滑梯度的估计，但缺乏直观的几何理解。本文提出一种几何解释：将每个扰动模型视为粒子、奖励视为质量，证明减去均值的ES更新精确等于种群从等质量质心到奖励加权质心的位移（乘以依赖平均奖励的标量因子）。该解释对任意有限种群精确成立，在大种群或对偶采样下简化为模型直接向自身种群的奖励加权质心移动，为可视化ES更新提供了直观工具。",
+      "summary_en": "Evolution strategies (ES) updates are usually presented as estimates of a smoothed gradient, lacking an intuitive geometric understanding. This paper offers a geometric interpretation: treating each perturbed model as a particle with reward as its mass, it shows that the mean-subtracted ES update is exactly the displacement from the equal-mass centroid to the reward-weighted center of mass, scaled by a factor depending on mean reward, for any finite population. This interpretation is exact for finite populations and simplifies, under large populations or antithetic sampling, to the model moving toward the reward-weighted center of mass of its own population, providing an intuitive visualization tool for ES updates.",
+      "highlights_zh": [
+        "质心位移的精确几何解释",
+        "对任意有限种群精确成立",
+        "直观可视化ES更新过程"
+      ]
+    },
+    {
+      "id": "2610.35866",
+      "title": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
+      "authors": [
+        "Xi Chen",
+        "Chongjian Ge",
+        "Yiran Xu",
+        "Yiqun Mei",
+        "Henrik I. Christensen",
+        "Hao Tan",
+        "Ziwen Chen",
+        "Hanwen Jiang"
+      ],
+      "abstract": "As autonomous research systems become more capable, benchmarks must both evaluate their performance and support meaningful research progress. We introduce Auto-Research Arena, a multi-target benchmark for evaluating autonomous research systems and discovering ideas in language modeling. Arena supports diverse research objectives within a shared experimental environment by separating admissibility from improvement: model quality and resource constraints determine whether a result qualifies, while the selected target measures progress among admissible results. We instantiate Arena in language model pretraining with nine targets spanning model, data, training, and inference efficiency, and evaluate seven research harnesses using two foundation models. Arena clearly differentiates existing harnesses across research objectives, with several sophisticated methods outperformed by our simple sequential search baseline, indicating substantial headroom in current auto-research systems. Beyond evaluation, Arena reveals a substantially broader frontier of model and system ideas aligned with active research directions. Reusing these discoveries in a new quality-driven search yields lower training loss under matched data and FLOPs and lower held-out BPB at the same model size. Together, Arena provides a common framework for benchmarking autonomous research and expanding its scope in language modeling. The code is available at https://github.com/Auto-Research-Arena/auto-research-arena",
+      "published": "2026-10-26T17:59:33Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35866",
+      "pdf_url": "https://arxiv.org/pdf/2610.35866",
+      "summary_zh": "自主研究系统能力渐强，但缺乏能同时评估性能并推动实质研究进展的基准。作者提出Auto-Research Arena，将可采纳性与改进分离，在共享实验环境中支持语言建模的多种研究目标，并在预训练场景下实例化九个目标、评测七种研究框架。结果显示现有框架差异明显、简单顺序搜索基线即可超越多种复杂方法，说明仍有较大提升空间，且复用其发现可在同等数据与FLOPs下取得更低训练损失。",
+      "summary_en": "Autonomous research systems are becoming more capable, yet benchmarks are needed that both evaluate their performance and support meaningful research progress. We introduce Auto-Research Arena, a multi-target benchmark that separates admissibility from improvement within a shared experimental environment, instantiated for LM pretraining with nine targets and seven research harnesses across two foundation models. Arena clearly differentiates existing harnesses, shows a simple sequential search baseline outperforming several sophisticated methods (indicating substantial headroom), and reveals a broader frontier of ideas whose reuse yields lower training loss under matched data and FLOPs and lower held-out BPB at the same model size.",
+      "highlights_zh": [
+        "可采纳性与改进分离的多目标基准",
+        "简单顺序搜索超越多种复杂方法",
+        "统一评测并拓展语言建模研究范围"
+      ]
+    },
+    {
+      "id": "2610.35856",
+      "title": "On the stability of learning",
+      "authors": [
+        "John J. Vastola"
+      ],
+      "abstract": "Learning algorithms are usually analyzed under the assumption that informative gradients are continuously available. But this is not always true---learning signals in biological neural networks, for example, may be sparse, local, and only intermittently available at any given synapse. In this work, we show that if gradient information is noisy and only intermittently available, learning may be unstable. In particular, even if average learning dynamics converge to the correct optimum, variance in learning may be asymptotically infinite. We explore this point in a number of analytically tractable settings, including single-layer and multi-layer linear networks, and derive explicit conditions under which learning is stable. These conditions complement, but are conceptually distinct from, existing conditions related to the stability of stochastic gradient descent. Our work demonstrates that unbiased credit assignment is not enough for reliable learning; sufficiently frequent and informative feedback is also required, which yields an additional constraint on models of biologically plausible learning.",
+      "published": "2026-10-26T17:58:14Z",
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35856",
+      "pdf_url": "https://arxiv.org/pdf/2610.35856",
+      "summary_zh": "传统学习算法分析通常假设信息梯度持续可用，但生物神经网络中的学习信号往往稀疏、局部且间歇。本文在单层和多层线性网络等可解析场景中，研究噪声且间歇可用的梯度信息对学习稳定性的影响，并推导出学习稳定的显式条件。结果表明即使平均学习动态收敛到正确最优解，学习方差仍可能渐近无穷，说明无偏信用分配不足以保证可靠学习，还需足够频繁和充分的反馈。",
+      "summary_en": "Learning algorithms are usually analyzed assuming continuously available informative gradients, but biological neural networks often have sparse, local, and intermittent learning signals. This work studies learning stability when gradient information is noisy and only intermittently available in analytically tractable settings such as single-layer and multi-layer linear networks, deriving explicit stability conditions. It shows that even when average learning dynamics converge to the correct optimum, learning variance can be asymptotically infinite, implying unbiased credit assignment is insufficient and sufficiently frequent, informative feedback is also required.",
+      "highlights_zh": [
+        "揭示间歇噪声梯度导致学习方差发散",
+        "线性网络中给出学习稳定的显式条件",
+        "指出无偏信用分配不足以保证可靠学习"
+      ]
+    },
+    {
+      "id": "2610.35846",
+      "title": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+      "authors": [
+        "Yuchen Zhang",
+        "Haralambos Mouratidis",
+        "Ravi Shekhar"
+      ],
+      "abstract": "Expanding multilingual ASR systems to new languages is challenging when adaptation must preserve previously supported languages without replaying source-language training data. We study this problem in connector-based Speech LLMs, where a trainable connector maps speech representations into a frozen large language model. We evaluate target-update construction and merging strategies for adapting the connector while preserving source-language performance. In single-target expansion, target-only fine-tuning and standard TIES merging learn new languages but cause severe source-language forgetting, while SSU-Wanda+TIES gives the best source-preserving trade-off. In multi-target expansion, update merging provides stable source retention, whereas recursive expansion can improve target adaptation under favorable orders but is highly order-sensitive. These results show that multilingual ASR expansion requires balancing target acquisition, source retention, and interactions among target-language updates.",
+      "published": "2026-10-26T17:56:22Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35846",
+      "pdf_url": "https://arxiv.org/pdf/2610.35846",
+      "summary_zh": "在多语言ASR系统向新语言扩展时，需在不重放源语言训练数据的情况下保持原有语言性能，本文研究基于连接器的语音LLM中的这一问题。作者评估了目标更新构造与合并策略，包括仅目标微调、TIES合并和SSU-Wanda+TIES等，用于适配连接器同时保留源语言能力。结果显示SSU-Wanda+TIES在单目标扩展中取得最佳源保持权衡，多目标扩展中更新合并稳定保留源语言，而递归扩展对顺序高度敏感，表明多语言ASR扩展需平衡目标获取、源保持与目标语言更新间的交互。",
+      "summary_en": "Expanding multilingual ASR to new languages must preserve previously supported languages without replaying source-language data, studied here in connector-based Speech LLMs with a trainable connector and frozen LLM. The authors evaluate target-update construction and merging strategies, including target-only fine-tuning, TIES merging, and SSU-Wanda+TIES, to adapt the connector while retaining source-language performance. Results show SSU-Wanda+TIES gives the best source-preserving trade-off in single-target expansion, update merging stably retains source languages in multi-target expansion, and recursive expansion is highly order-sensitive, indicating that multilingual ASR expansion requires balancing target acquisition, source retention, and interactions among target-language updates.",
+      "highlights_zh": [
+        "连接器适配与更新合并策略",
+        "SSU-Wanda+TIES源保持最佳",
+        "递归扩展对顺序高度敏感"
+      ]
+    },
+    {
+      "id": "2610.35826",
+      "title": "Understanding Jev-Style System One Models: Does Structure Reduce Selection Bias?",
+      "authors": [
+        "Mingyang Song",
+        "Mao Zheng",
+        "Zhiyuan Ma",
+        "Xinpeng Zhou"
+      ],
+      "abstract": "Selection bias in large language models (LLMs) can persist despite instructions to ignore presentation order or prompts that elicit reasoning. Recent efforts to reproduce Jev-style System One behavior have produced a growing family of models that predict probabilities directly over supplied candidates. Yet systematic comparisons of selection bias across Jev versions, Jev reproductions, and generative LLMs remain limited in multi-option tasks. This leaves a central question: does Jev-style decision structure reduce selection bias? We address this question with a simple test that shuffles options while keeping question and candidate content fixed. Across two Jev versions, twelve Jev reproductions, and six generative LLMs, we trace individual answers through eight presentations and compare them with fixed-order repetition. On our primary collection of 1,700 questions from two benchmarks, Jev's accuracy varies by less than two percentage points, yet its cumulative failure set expands by 27--29\\% relative to the original order, with first failures continuing into the final presentation. This loss of initial successes is substantially larger than under fixed-order repetition, even for highly repeatable Jev reproductions. Nor does Jev show a general advantage over the LLM baselines in preserving correct choices. Aggregation offers limited protection: voting yields modest gains for Jev, while even unanimous answers are frequently wrong. These results expose a gap between repeatable decisions and decisions that remain correct across equivalent presentations, showing why stable accuracy alone cannot establish resistance to selection bias.",
+      "published": "2026-10-26T17:48:55Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35826",
+      "pdf_url": "https://arxiv.org/pdf/2610.35826",
+      "summary_zh": "大语言模型即使被指示忽略选项顺序或进行推理，选择偏差仍会存在；近期复现Jev式System One行为的模型直接对候选预测概率，但跨Jev版本、复现模型与生成式LLM在多选项任务上的系统比较仍有限。本文通过打乱选项顺序、保持问题与候选内容不变的简单测试，追踪两个Jev版本、十二个Jev复现模型和六个生成式LLM在八种呈现顺序下的个体答案，并与固定顺序重复对比。结果显示Jev准确率变化不足两个百分点，但累积失败集相对原始顺序扩大27–29%，初始成功丢失远大于固定顺序重复，且Jev在保持正确选择上并不普遍优于LLM基线，投票聚合保护有限，表明可重复的决策不等于跨等价呈现仍正确的决策。",
+      "summary_en": "Selection bias in large language models can persist despite instructions to ignore presentation order or prompts that elicit reasoning, and systematic comparisons of selection bias across Jev versions, Jev reproductions, and generative LLMs remain limited in multi-option tasks. This work uses a simple test that shuffles options while keeping question and candidate content fixed, tracing individual answers across eight presentations for two Jev versions, twelve Jev reproductions, and six generative LLMs, and comparing them with fixed-order repetition. On 1,700 questions from two benchmarks, Jev's accuracy varies by less than two percentage points, yet its cumulative failure set expands by 27–29% relative to the original order, the loss of initial successes is substantially larger than under fixed-order repetition, Jev shows no general advantage over LLM baselines in preserving correct choices, and aggregation offers limited protection—exposing a gap between repeatable decisions and decisions that remain correct across equivalent presentations.",
+      "highlights_zh": [
+        "打乱选项顺序追踪个体答案",
+        "失败集扩大27–29%",
+        "稳定准确率不等于抗选择偏差"
+      ]
+    },
+    {
+      "id": "2610.35864",
+      "title": "VibeVideoBench:Evaluating Multimodal Agents on Code-Driven Video Generation",
+      "authors": [
+        "Muxi Diao",
+        "Wenbin Xu",
+        "Lele Yang",
+        "Xuyang Ma",
+        "Yuzhe Chen",
+        "Jiankang Chen",
+        "Kaiyu Jiang",
+        "Changyi Liu",
+        "Haoyu Zhang",
+        "Hongyi Fu",
+        "Jianxiong Wang",
+        "Tianke Zhang",
+        "Haonan Fan",
+        "Yingxin Li",
+        "Bingyi Li",
+        "Xu Wang",
+        "Xuanyu Zheng",
+        "Bin Wen",
+        "Tingting Gao",
+        "Han Li",
+        "Wentao Zhang",
+        "Weiran Xu",
+        "Kongming Liang",
+        "Zhanyu Ma"
+      ],
+      "abstract": "Diffusion video models produce striking clips, but they cannot reliably render an exact formula, a correct chart, a ruleconsistent game or narration synchronized to on-screen events. A different route is emerging: multimodal agents that write code to render every frame and synthesize every sound. We introduce VibeVideoBench, a benchmark for evaluating agents on code-driven video generation. Its 239 self-contained tasks in English and Chinese span 12 categories, from data stories and music-driven pieces to classroom lessons and paper explainers; each asks an agent, running in its native harness inside a sandbox, to deliver a finished MP4 with sound within one hour. Evaluation is hierarchical and evidence-based: program checks of the delivery spec, about 13k task-specific rubric checks traced to the requirements they enforce, and five quality dimensions anchored per task, judged by three VLM judge panels and validated with blind human preferences. Across nine frontier agent systems and 2,151 scored rollouts, the benchmark is far from solved: GPT-6 Astra and Claude Opus 5.5 lead clearly, yet even the best system fails a core requirement on about a quarter of tasks. Whether a video arrives at all matters as much as its quality, and three quarters of the lost videos are final renders started too late, run too slowly or never started. The judges agree with each other and with human preferences on system rankings, but only moderately on individual videos.",
+      "published": "2026-10-26T17:59:32Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35864",
+      "pdf_url": "https://arxiv.org/pdf/2610.35864",
+      "summary_zh": "扩散视频模型难以精确渲染公式、图表、规则一致的游戏或与画面同步的旁白，多模态智能体写代码逐帧渲染与合成声音成为新路径。作者提出VibeVideoBench，包含239个中英文自包含任务、12个类别，采用交付规范程序检查、约1.3万条任务特定评分项和五维质量评估（三个VLM评审团加盲测人类偏好）的分层证据式评测。在九个前沿智能体系统的2151次评测中基准远未解决，最佳系统仍在约四分之一任务上失败核心要求，且四分之三的失败视频源于最终渲染启动过晚、过慢或未启动，评审与人类在系统排名上一致但对单个视频仅中等一致。",
+      "summary_en": "Diffusion video models cannot reliably render exact formulas, correct charts, rule-consistent games, or narration synced to on-screen events, prompting a new route where multimodal agents write code to render every frame and synthesize every sound. We introduce VibeVideoBench, a benchmark of 239 self-contained English and Chinese tasks across 12 categories, evaluated hierarchically via delivery-spec program checks, about 13k task-specific rubric checks, and five quality dimensions judged by three VLM panels and validated with blind human preferences. Across nine frontier agent systems and 2,151 scored rollouts the benchmark is far from solved: the best systems still fail a core requirement on about a quarter of tasks, three quarters of lost videos stem from final renders started too late, run too slowly, or never started, and judges agree with humans on system rankings but only moderately on individual videos.",
+      "highlights_zh": [
+        "代码驱动视频生成的分层证据式基准",
+        "最佳系统仍在约1/4任务失败核心要求",
+        "揭示渲染时序瓶颈，评审排名可靠"
+      ],
+      "highlights_en": [
+        "Hierarchical evidence-based benchmark for code-driven video",
+        "Best systems still fail a core requirement on ~25% of tasks",
+        "Exposes render-timing bottleneck; rankings reliable"
+      ]
+    },
+    {
+      "id": "2610.35857",
+      "title": "Do vision models know that three is three?",
+      "authors": [
+        "Ankit Sonthalia",
+        "Arnas Uselis",
+        "Seong Joon Oh"
+      ],
+      "abstract": "Do vision models encode the transition $2{\\to}3$ the same way whether it appears in handwritten digits or in hand gestures, and do they \"understand\" that clean${\\to}$dirty is the same transformation regardless of whether it is applied to a kitchen or a carpet? The linear representation hypothesis (LRH) answers this for language models: concept changes correspond to directions in (language) embedding space. In vision, the same concept can manifest in visually unrelated \"regimes\" that rarely co-occur: images of digits and hands do not share much in common in pixel space. To understand whether vision models still encode the underlying abstract concepts, we study 46 vision encoders across architectures, training objectives, and scales, on 10 concept families including numerosity, age, object identity, and MIT-States attributes. Within each regime, we find statistically significant concept directions near-universally across our tested models. However, two distinct regimes do not always share the same concept direction. Several models learn multiple linear structures for the same concept transition, split across regimes. We call this phenomenon \"fragmented linearity\": strong local linearity coexisting with near-absent global linearity. Fragmentation is, however, not fixed: models with stronger local linearity progressively escape it (local-global linearity correlated with $τ\\in [0.38, 0.89]$ across all concepts), and where global linearity does emerge, concept directions can transfer as linear probes across regimes.",
+      "published": "2026-10-26T17:58:17Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35857",
+      "pdf_url": "https://arxiv.org/pdf/2610.35857",
+      "summary_zh": "视觉模型是否像语言模型一样，用统一的线性方向编码跨视觉域（如手写数字与手势）的抽象概念转变，尚不清楚。作者在46个视觉编码器、10个概念族上系统检验线性表示假设，提出“碎片化线性”现象并分析其与局部线性强度的关系。结果显示局部概念方向近乎普遍存在但跨域全局方向常不一致，且局部线性越强的模型越能摆脱碎片化、实现跨域线性探针迁移。",
+      "summary_en": "It is unclear whether vision models encode abstract concept transitions (e.g., 2→3 in digits vs. gestures) along a single linear direction as language models do. The authors test the linear representation hypothesis across 46 vision encoders and 10 concept families, introducing the phenomenon of 'fragmented linearity' and relating it to local linear strength. They find near-universal local concept directions but often inconsistent global directions across regimes, with stronger local linearity progressively escaping fragmentation and enabling cross-regime linear probe transfer.",
+      "highlights_zh": [
+        "提出碎片化线性现象",
+        "局部线性与全局线性相关τ达0.89",
+        "跨域概念方向可线性迁移"
+      ],
+      "highlights_en": [
+        "Introduces fragmented linearity",
+        "Local-global linearity correlates up to τ=0.89",
+        "Concept directions transfer across regimes"
+      ]
+    },
+    {
+      "id": "2610.35852",
+      "title": "Differentiable Contact Dynamics for Legged Locomotion: Policy Learning and Contact-Implicit Trajectory Optimization",
+      "authors": [
+        "Gijeong Kim",
+        "Seungbin Oh",
+        "Dongyun Kang",
+        "Hae-Won Park"
+      ],
+      "abstract": "This paper proposes a smooth analytic gradient for frictional contact and applies it to policy learning and contact-implicit trajectory optimization for legged locomotion. The exact contact sensitivity is available in closed form but describes changes within the current contact mode, providing no first-order information toward neighboring contact modes. The proposed gradient replaces this sensitivity only in the backward pass, leaving the hard-contact forward solve unchanged and the realized rollout feasible. A central-path relaxation of the de Saxcé-corrected second-order-cone complementarity problem for Coulomb friction smooths the conditions defining the separating, clamping, and sliding modes. The relaxed sensitivity is evaluated at a point on the central path obtained by a Newton iteration initialized from the hard-contact solution. The sensitivity remains continuous through contact-mode transitions and converges to the exact sensitivity as the relaxation vanishes. Using 100,000 samples and less than 2 min of training on a desktop PC, policy learning with the proposed gradient produces a policy that transfers to hardware without fine-tuning. On hardware, the robot under a trotting policy withstands pushes and traverses debris and slippery ground. In trajectory optimization, the proposed gradient reaches contact-rich solutions missed by exact and Signorini-relaxed gradients. Project page: https://diffcontact.github.io",
+      "published": "2026-10-26T17:57:14Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35852",
+      "pdf_url": "https://arxiv.org/pdf/2610.35852",
+      "summary_zh": "足式机器人接触动力学中，精确接触灵敏度只描述当前接触模式内的变化，无法为相邻接触模式提供一阶信息，导致策略学习与轨迹优化困难。本文提出一种平滑解析梯度：在反向传播中用中心路径松弛的de Saxcé修正二阶锥互补问题替代精确灵敏度，前向仍保持硬接触求解与可行rollout，使灵敏度在接触模式切换时连续并随松弛趋于零收敛到精确值。该梯度仅用10万样本、桌面PC不到2分钟训练即得到可零微调迁移到硬件的策略，机器人在推挤、碎石和湿滑地面下稳定小跑，轨迹优化也能找到精确与Signorini松弛梯度遗漏的富接触解。",
+      "summary_en": "In legged locomotion, the exact contact sensitivity is closed-form but only describes changes within the current contact mode, giving no first-order information toward neighboring modes, which hampers policy learning and contact-implicit trajectory optimization. This paper proposes a smooth analytic gradient that, only in the backward pass, replaces the exact sensitivity with a central-path relaxation of the de Saxcé-corrected second-order-cone complementarity problem, keeping the hard-contact forward solve and feasible rollout unchanged so the sensitivity stays continuous through mode transitions and converges to the exact one as relaxation vanishes. With 100,000 samples and under 2 minutes of desktop training, the learned policy transfers to hardware without fine-tuning, tolerating pushes and traversing debris and slippery ground, while trajectory optimization finds contact-rich solutions missed by exact and Signorini-relaxed gradients.",
+      "highlights_zh": [
+        "反向传播用中心路径松弛替代精确接触灵敏度",
+        "10万样本、2分钟内训练即可零微调上硬件",
+        "可穿越碎石湿滑地面，找到富接触解"
+      ]
+    },
+    {
+      "id": "2610.35851",
+      "title": "Nonprehensile Robotic Catching Using Virtual Constraints",
+      "authors": [
+        "Aakash Khandelwal",
+        "Ranjan Mukherjee"
+      ],
+      "abstract": "The problem of nonprehensile robotic catching is addressed using virtual nonholonomic constraints (VNHCs); the motion of the robot end-effector is designed and controlled directly in terms of the states of the object before it is caught on the surface of the end-effector. In contrast to contemporary approaches, our approach avoids the need for object trajectory prediction, and consequent time-varying robot trajectory generation. With a focus on the planar case, we demonstrate that our VNHC approach can be used to catch an object on an end-effector at a desired height, with minimal relative normal velocity at the contact instant. Moreover, the VNHC function depends only on the desired catching height, and the same VNHC can be used for a range of initial conditions. We use model predictive control (MPC) to bring the object and end-effector to rest at a desired location after contact is made. The approach is validated in simulation.",
+      "published": "2026-10-26T17:57:10Z",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.35851",
+      "pdf_url": "https://arxiv.org/pdf/2610.35851",
+      "summary_zh": "非抓取式机器人接取通常依赖物体轨迹预测和时变轨迹生成，计算复杂且对初始条件敏感。本文提出基于虚拟非完整约束（VNHC）的方法，直接在物体状态层面设计末端执行器运动，无需轨迹预测，并以模型预测控制（MPC）在接触后使物体与末端执行器停至目标位置。仿真表明该方法可在期望高度以最小相对法向速度接住物体，且同一VNHC函数适用于多种初始条件，提升了接取的鲁棒性与通用性。",
+      "summary_en": "Nonprehensile robotic catching typically relies on object trajectory prediction and time-varying robot trajectory generation, which is computationally demanding and sensitive to initial conditions. This paper proposes a virtual nonholonomic constraint (VNHC) approach that designs and controls the end-effector motion directly in terms of the object's states, eliminating the need for trajectory prediction, and uses model predictive control (MPC) to bring the object and end-effector to rest after contact. Simulations show that the method catches an object at a desired height with minimal relative normal velocity at contact, and a single VNHC function works across a range of initial conditions, improving robustness and generality.",
+      "highlights_zh": [
+        "用VNHC直接按物体状态设计末端运动",
+        "接触时相对法向速度最小且同一约束适用多初值",
+        "适用于平面接取，尚待物理实验验证"
+      ]
+    }
+  ]
+}
