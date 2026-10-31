@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-31",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.40649",
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "authors": [
+        "Nicolas Dufour",
+        "Elouan Gardès",
+        "Amil Dravid",
+        "Patrick Pérez",
+        "Loic Landrieu"
+      ],
+      "abstract": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions. This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+      "published": "2026-10-29T17:59:29Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40649",
+      "pdf_url": "https://arxiv.org/pdf/2610.40649",
+      "summary_zh": "神经厚块假说认为预训练语言模型位于权重空间中密集的任务专家邻域内，随机高斯扰动可揭示这些专家。本文复现了报告的性能提升，但发现仅扰动单个解码器块或完全冻结模型并给输出logits加随机偏置即可匹配甚至超越全权重扰动，据此提出扰动-选择-投票（PSV）框架，将神经厚块与采样、自一致性、验证器引导选择等推理时方法联系起来。结果表明这些增益源于输出多样性、验证集选择和投票而非权重空间几何，Logit PSV在语言和视觉任务（含域偏移下的地球观测）上提供了无需训练、完全冻结模型的简单替代方案。",
+      "summary_en": "The Neural Thickets hypothesis claims that pretrained language models lie in dense neighborhoods of task-specific experts in weight space that random Gaussian perturbations can uncover. We reproduce the reported gains but show they do not require this geometric explanation: perturbing a single decoder block, or keeping the model fully frozen and adding random bias to output logits, matches or exceeds full-weight perturbations on most reasoning tasks, which we formalize as Perturb-Select-Vote (PSV), connecting Neural Thickets to sampling, self-consistency, and verifier-guided selection. A first-order analysis shows small weight perturbations act mainly through induced logit shifts, and extending to vision, logit PSV substantially improves performance under domain shift including Earth observation, suggesting the gains come from output diversity, selection, and voting rather than nearby weight-space experts, with Logit PSV offering a simple training-free alternative to full-weight perturbation ensembles.",
+      "highlights_zh": [
+        "提出PSV框架替代权重空间几何解释",
+        "Logit PSV匹配或超越全权重扰动",
+        "冻结模型即可用，无需额外训练"
+      ]
+    },
+    {
+      "id": "2610.40647",
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "authors": [
+        "Jiongfan Yang",
+        "Weichen Fan",
+        "Haiwen Diao",
+        "Zhongang Cai",
+        "Ziwei Liu"
+      ],
+      "abstract": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "published": "2026-10-29T17:59:21Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.NE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40647",
+      "pdf_url": "https://arxiv.org/pdf/2610.40647",
+      "summary_zh": "像素空间生成Transformer通常每个图像块用一个token，导致细节提升需增加token数量并使全局注意力开销剧增。本文提出SpecSlot，将每个空间锚点扩展为多个分配不同DCT频带的槽位，仅最低频槽位参与全局注意力、所有槽位局部交互，从而解耦输出细节与全局序列长度。在ImageNet-256上收敛更快且FID相当，ImageNet-512上FID改善2.84且FLOPs减少3.9%，文本到图像任务上以更低成本超越JiT-B/8。",
+      "summary_en": "Pixel-space generative Transformers typically use one token per image patch, so finer detail requires more tokens and makes global attention increasingly expensive. We introduce SpecSlot, a pixel-space rectified-flow Transformer that expands each spatial anchor into multiple slots assigned disjoint DCT bands, with only the lowest-frequency slot participating in global attention while all slots interact locally, decoupling output detail from global sequence length. On ImageNet-256 it converges faster at comparable FID, on ImageNet-512 it improves FID by 2.84 with 3.9% fewer FLOPs, and on text-to-image it surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+      "highlights_zh": [
+        "频带分槽解耦细节与全局序列",
+        "ImageNet-512 FID提升2.84且省3.9% FLOPs",
+        "降低全局注意力成本，限于像素空间生成"
+      ]
+    },
+    {
+      "id": "2610.40654",
+      "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
+      "authors": [
+        "Moshe Shenfeld",
+        "Eliad Tsfadia",
+        "Katrina Ligett"
+      ],
+      "abstract": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private. We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations. We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
+      "published": "2026-10-29T17:59:49Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40654",
+      "pdf_url": "https://arxiv.org/pdf/2610.40654",
+      "summary_zh": "差分隐私机制通常按单条记录的最坏影响来校准噪声，导致少数敏感记录主导噪声规模，即使其余数据本可允许更小噪声。作者提出propose-filter-release（PFR）框架，通过私有过滤步骤将仅对典型记录友好的机制转化为标准差分隐私机制，只需凹的友好度评分和友好-DP的发布机制。该框架在记录数量的公开条件下保证差分隐私，可作为通用隐私原语，并成功实例化于标量统计、主子空间估计、KL散度、图有效电阻和治疗规则选择等任务。",
+      "summary_en": "Differentially private mechanisms typically scale noise to the worst-case influence of a single record, letting a few sensitive records dictate noise even when the remaining data would allow far less. The authors introduce propose-filter-release (PFR), which privately filters its input to turn a mechanism that is only friendly-DP (private when the changed record fits the remaining data) into a standard differentially private mechanism, requiring only a concave friendliness score and a friendly-DP release mechanism. PFR guarantees differential privacy under public conditions on the number of records, serves as a general privacy primitive comparable to propose-test-release, and is instantiated for scalar statistics, principal subspace estimation, KL divergence of user histograms, graph effective resistances, and treatment-rule selection.",
+      "highlights_zh": [
+        "私有过滤将友好-DP升级为标准DP",
+        "通用原语，覆盖五类任务实例",
+        "需公开记录数条件，FriendlyCore为其特例"
+      ]
+    },
+    {
+      "id": "2610.40644",
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "authors": [
+        "Aron Brenner",
+        "Saurabh Amin"
+      ],
+      "abstract": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
+      "published": "2026-10-29T17:59:01Z",
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40644",
+      "pdf_url": "https://arxiv.org/pdf/2610.40644",
+      "summary_zh": "针对两阶段随机规划中分布鲁棒优化（DRO）的模糊集选择问题，现有基于经验分布的KL球只能重加权已有样本，而传输球会引入数据生成过程无法产生的实现。本文提出以拟合数据的密度模型为中心的KL球（学习到的名义分布），使对手能按模型赋予的概率上调未观测到的昂贵实现，并设计自适应场景生成方法，交替求解有限场景问题与从学习名义分布中采样、朝当前决策最坏情况引导并用重要性权重校正。在多物品报童和真实电网容量扩展问题上，当记录稀缺且模型类能捕捉可外推结构时，以学习名义而非经验记录为中心可在分布偏移下降低成本且分布内成本相当，但随着记录增多或偏移偏离所学结构，该优势会减弱。",
+      "summary_en": "Standard ambiguity sets in distributionally robust optimization differ in how they treat realizations absent from the finite record: a KL ball around the empirical distribution only reweights observed data, while a transport ball also hedges against off-record realizations the data-generating process cannot produce. We propose a KL ball centered at a density model fitted to the record (the learned nominal), letting the adversary up-weight costly unobserved realizations in proportion to model-assigned probability, and solve it via adaptive scenario generation that alternates between solving the finite problem and drawing importance-weighted samples from the learned nominal steered toward the current worst case. On a multi-item newsvendor problem and a capacity expansion problem with realistic grid data, centering on the learned nominal rather than the record lowers cost under distribution shift at comparable in-distribution cost when the record is scarce and the model class captures extrapolable structure, an advantage that fades as the record grows or the shift departs from the learned structure.",
+      "highlights_zh": [
+        "以学习密度模型为中心的KL模糊集",
+        "分布偏移下成本更低且分布内成本相当",
+        "记录稀缺且结构可外推时有效"
+      ]
+    },
+    {
+      "id": "2610.40655",
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "authors": [
+        "Steven Yu",
+        "Sheng-Yu Wang",
+        "Kimia Hamidieh",
+        "Antonio Torralba",
+        "David Bau"
+      ],
+      "abstract": "Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, we explore the design space of LLM data attribution, with a primary focus on evaluation. We introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which we fine-tune LLMs on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows us to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, we demonstrate that redundancy and distractors consistently degrade attribution performance. Rather than proposing a new estimator, we examine two design choices that are underexplored: the loss used to compute gradients and how per-token attribution scores are aggregated into a document score. We find that the true causal evidence within a training document is highly localized, but standard methods dilute this evidence into noise by averaging attribution scores across the entire document. We find that replacing standard cross-entropy loss gradients with the negative log-odds gradients surfaces the critical tokens from other uninformative ones. We can then aggregate only the top token scores to improve ground truth recall by 35 to 72 percentage points across multiple baselines on our diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method we test, by up to 4.9x.",
+      "published": "2026-10-29T17:59:53Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40655",
+      "pdf_url": "https://arxiv.org/pdf/2610.40655",
+      "summary_zh": "现有语言模型数据归因评估同时改变多个数据属性，无法定位归因算法失败的具体原因。作者提出可控归因基准CATT，用虚构知识微调模型以获得明确真值，并系统改变文档冗余和词汇干扰等因素，同时考察梯度损失选择与token分数聚合方式。实验发现真实因果证据高度局部化，用负对数几率梯度替代交叉熵并仅聚合最高token分数可使真值召回提升35至72个百分点，且在FTRACE-TREX上反事实重训练性能最高提升4.9倍。",
+      "summary_en": "Existing evaluations of language model data attribution vary multiple dataset properties at once, making it impossible to isolate why attribution algorithms fail. The authors introduce the Controlled Attribution Benchmark (CATT), which fine-tunes LLMs on fictitious knowledge to provide unambiguous ground truth and systematically varies one factor at a time, while also examining the choice of gradient loss and token-score aggregation. They find that causal evidence is highly localized, and replacing cross-entropy gradients with negative log-odds gradients plus top-token aggregation improves ground-truth recall by 35 to 72 percentage points and improves counterfactual retraining on FTRACE-TREX by up to 4.9x.",
+      "highlights_zh": [
+        "可控虚构知识基准隔离归因失败因素",
+        "负对数几率梯度+top token聚合提召回35-72点",
+        "FTRACE-TREX反事实重训练最高提升4.9倍"
+      ]
+    },
+    {
+      "id": "2610.40627",
+      "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
+      "authors": [
+        "Qiyao Ma",
+        "Xiaodong Liu",
+        "Weiwei Yang",
+        "Mingqian Feng",
+        "Chengquan Guo",
+        "Jialin Song",
+        "Carolyn Buractaon",
+        "Zhe Zhao",
+        "Junshan Zhang",
+        "Sandeep Atluri",
+        "Christopher White",
+        "Jianfeng Gao"
+      ],
+      "abstract": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model's first few output tokens, and existing defenses inherit the weakness, supervising the surface form of the response without ever giving the model an explicit safety decision to learn. We take the opposite view of shallowness: if a short span determines the trajectory of an entire response, that span is the highest-leverage place to intervene, and the defender can occupy it first. We propose Assess $\\to$ Decide $\\to$ Respond, a framework in which the defender assesses the user's intent, commits to an explicit, parseable safety decision, and only then generates a reply conditioned on it, with the commitment trained by reinforcement learning at the payload turn. Because the decision is a token span, the reward can be a rule: a self-verified reward checks the committed label against the conversation's known nature, requiring no judge and no annotation, while the same format also supports an LLM-as-judge reward over a graded decision space with safe redirection. Across two model families and fourteen benchmarks spanning safety, utility, and helpfulness, our defenders achieve the strongest multi-turn safety in a controlled comparison, maintaining their lead in safety while preserving utility at a modest cost to helpfulness. A per-token KL analysis and interventional probes confirm why this works: training concentrates its effect on the brief deliberation that sets a response's trajectory, and the decision committed there is a causal control point. The very shallowness attackers exploit becomes the mechanism of defense.",
+      "published": "2026-10-29T17:56:53Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40627",
+      "pdf_url": "https://arxiv.org/pdf/2610.40627",
+      "summary_zh": "安全对齐使大模型能直接拒绝有害请求，但同一请求分散到多轮对话中仍常成功，根源在于对齐是浅层的，安全行为集中在输出前几个token，现有防御也继承了这一弱点。作者反向利用浅层性，提出Assess→Decide→Respond框架，让防御者在payload轮先评估意图、提交显式可解析的安全决策，再用强化学习训练该决策，奖励可由规则自验证或LLM评判给出。在两个模型家族、十四个基准上，该方法取得受控比较中最强的多轮安全性，在保持效用的同时仅以适度有用性代价维持安全领先，逐token KL分析和干预实验证实该决策是因果控制点。",
+      "summary_en": "Safety alignment lets LLMs refuse harmful requests directly, yet the same request spread across multi-turn conversations still succeeds too often because alignment is shallow, with safety behavior concentrated in the first few output tokens, and existing defenses inherit this weakness. The authors invert this shallowness with an Assess→Decide→Respond framework in which the defender assesses intent, commits to an explicit parseable safety decision trained via reinforcement learning at the payload turn, using a self-verified rule reward or an LLM-as-judge reward. Across two model families and fourteen benchmarks, the defenders achieve the strongest multi-turn safety in controlled comparison while preserving utility at a modest helpfulness cost, and per-token KL analysis plus interventional probes confirm the committed decision is a causal control point.",
+      "highlights_zh": [
+        "先显式提交安全决策再生成回复",
+        "受控比较中最强多轮安全性",
+        "浅层干预高效但有用性略降"
+      ]
+    },
+    {
+      "id": "2610.40653",
+      "title": "Micro-Edits: Computational Support for Fine-Scale Edits in Film",
+      "authors": [
+        "Nhan Tran",
+        "Hijung Valentina Shin",
+        "Abe Davis",
+        "Mackenzie Leake"
+      ],
+      "abstract": "In film editing, every frame matters. While macro, content-level edits shape the high-level narrative of a film, small local edits often control timing and direct visual attention. For example, editors can adjust the precise timing of clips to control the length of a meaningful silence, or cut to shots that highlight a specific character's reactions to important moments. These small, detailed edits are slow and tedious to make in standard editing tools because users have to map high-level narrative goals to low-level frame-by-frame adjustments. At the same time, these fine-scale adjustments, which we call micro-edits, can be nuanced and expressive, with different choices serving different creative goals. In this work, we start by conducting a formative study with professional editors to understand the structure of micro-edits and how they are used. We then derive a mathematical formalization for this structure to develop tools that leverage AI and optimization to make exploring micro-edits simpler and more efficient for users. Finally, we validate our tools in multiple user studies and a wide range of video examples.",
+      "published": "2026-10-29T17:59:49Z",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40653",
+      "pdf_url": "https://arxiv.org/pdf/2610.40653",
+      "summary_zh": "电影剪辑中，帧级微编辑（如精确调整片段时长、切镜以引导注意力）对控制节奏和视觉焦点至关重要，但标准工具要求用户将高层叙事目标手动映射到逐帧调整，过程缓慢繁琐。作者先通过专业剪辑师的形成性研究理解微编辑结构，进而提出其数学形式化，并基于AI与优化开发工具以简化微编辑探索。多项用户研究和大量视频案例验证了工具的有效性，表明其能提升微编辑的效率与表达力。",
+      "summary_en": "In film editing, frame-level micro-edits—such as precisely timing clips or cutting to highlight reactions—are crucial for pacing and visual attention, yet standard tools force users to manually map high-level narrative goals to frame-by-frame adjustments, which is slow and tedious. The authors conduct a formative study with professional editors to understand the structure of micro-edits, derive a mathematical formalization of this structure, and build AI- and optimization-based tools that make exploring micro-edits simpler and more efficient. Validation through multiple user studies and a wide range of video examples demonstrates the effectiveness of their approach.",
+      "highlights_zh": [
+        "微编辑结构的数学形式化与AI优化工具",
+        "多项用户研究与广泛视频案例验证有效",
+        "提升剪辑效率与表达力，或受专业场景限制"
+      ]
+    },
+    {
+      "id": "2610.40646",
+      "title": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
+      "authors": [
+        "Yunchu Zhang",
+        "Ray Song",
+        "Junhan Jiao",
+        "Liyiming Ke",
+        "Yuchen Yang",
+        "Ruihan Gao",
+        "Emma Romig",
+        "Siddhartha Srinivasa",
+        "Yiyue Luo"
+      ],
+      "abstract": "Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.",
+      "published": "2026-10-29T17:59:20Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40646",
+      "pdf_url": "https://arxiv.org/pdf/2610.40646",
+      "summary_zh": "日常机器人操作常需使用不同工具完成切、刷、放等接触丰富的任务，因此自主更换并使用合适工具至关重要。SwapBot提出模块化工具中心末端执行器系统，通过低成本工具侧适配器将家用工具转为机器人末端执行器，集成触觉传感器并支持快速自主更换与遥操作示教。实验表明触觉增强示教使策略成功率较仅RGB提升15至25个百分点，成功完成煎豆腐、拌沙拉、翻肉等任务，展示了模块化触觉工具作为实用可扩展操作路径的潜力。",
+      "summary_en": "Robot manipulation in everyday environments inherently requires using different tools for contact-rich tasks such as cutting, brushing, and precise placement, making autonomous tool swapping and use important. SwapBot introduces a modular, tool-centric end-effector system with low-cost tool-side adapters that convert common household tools into robot end effectors, integrating compact tactile sensors, fast autonomous swapping, and an intuitive teleoperation interface for demonstration collection. Experiments show tactile-augmented demonstrations improve policy success rates by 15 to 25 percentage points over RGB-only policies on tasks like cooking tofu, stirring salad, and flipping meat, highlighting modular tactile-equipped tools as a practical and extensible pathway toward robust robot manipulation.",
+      "highlights_zh": [
+        "低成本适配器快速转换家用工具为末端",
+        "触觉示教较仅RGB成功率提升15-25点",
+        "适用于多平台但依赖示教数据质量"
+      ]
+    },
+    {
+      "id": "2610.40632",
+      "title": "SymAnt: Grounding Long-Horizon Action Anticipation with Adaptable Symbolic Priors",
+      "authors": [
+        "Fnu Aryan",
+        "Yaqi Xie",
+        "Joseph Campbell",
+        "Woojun Kim",
+        "Kwonjoon Lee",
+        "Hossein Nourkhiz Mahjoub",
+        "Ehsan Moradi-Pari",
+        "Katia Sycara",
+        "Simon Stepputtis"
+      ],
+      "abstract": "As robots and intelligent systems increasingly interact with humans, they must anticipate long sequences of future actions from only brief observations. While purely neural models typically require extensive observations to predict future actions and remain difficult to interpret and adjust, symbolic priors offer a structured alternative. To this end, we introduce SymAnt, a novel neuro-symbolic approach that unifies the expressiveness of neural networks with the structured reasoning of scene and knowledge graphs. Given a short video, SymAnt performs a joint-search over both graphs to construct a symbolic context, enabling unified reasoning over spatial relationships, object attributes, affordances, and associated actions. This symbolic context serves as a prior for an iterative refinement process that progressively generates and improves the sequence of future actions. By grounding predictions in symbolic context, SymAnt anticipates long-horizon actions from short observation windows in a parameter-efficient manner, while enabling users to directly edit the underlying knowledge to adjust predictions without further training. Through our experiments, we demonstrate the effectiveness of SymAnt, particularly when only short observation contexts are available, across five diverse datasets: Breakfast, 50 Salads, EPIC-KITCHENS, EGTEA Gaze+, and Assembly101.",
+      "published": "2026-10-29T17:58:00Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40632",
+      "pdf_url": "https://arxiv.org/pdf/2610.40632",
+      "summary_zh": "机器人和智能系统需从短暂观察中预测长序列未来动作，纯神经网络方法依赖大量观测且难以解释和调整。SymAnt提出神经符号方法，联合搜索场景图与知识图谱构建符号上下文，作为迭代精炼过程的先验来逐步生成并改进未来动作序列。在五个数据集上，SymAnt尤其在短观测窗口下表现有效，且用户可直接编辑知识以调整预测而无需再训练。",
+      "summary_en": "Robots and intelligent systems must anticipate long action sequences from brief observations, yet purely neural models need extensive data and are hard to interpret or adjust. SymAnt introduces a neuro-symbolic approach that jointly searches scene and knowledge graphs to build a symbolic context, which serves as a prior for iterative refinement of future action sequences. Experiments on five datasets show effectiveness, especially with short observation windows, while allowing users to edit knowledge to adjust predictions without retraining.",
+      "highlights_zh": [
+        "神经符号联合搜索场景与知识图谱",
+        "短观测窗口下五数据集表现优异",
+        "可编辑知识调整预测免再训练"
+      ]
+    },
+    {
+      "id": "2610.40643",
+      "title": "Luggage re-identification: A study of strategies towards a real-world application",
+      "authors": [
+        "Quentin Dhôte",
+        "Romaric Audigier"
+      ],
+      "abstract": "Luggage re-identification (ReID) is a critical task in video surveillance for forensics, security or border management (suspicious or abandoned luggage recognition), as well as luggage management (lost luggage recovery). It enables the association of observations of the same luggage across disjoint camera views in complex environments such as airports, train stations and border crossing. While existing approaches primarily focus on appearance-based cropped image matching under relatively clean conditions, real-world scenarios are characterized by frequent occlusions, cluttered background and crowded scenes which significantly degrade performance. Yet, strategies leveraging the complementarity of multiple shots and views from different video streams is overlooked. In this paper, we study strategies for an end-to-end pipeline that operates from multiple video streams to detect and re-identify luggage. We evaluate different variants on a benchmark dataset acquired in real-world environments to address the questions of selecting and merging different views and shots of the same luggage as well as training on different environment datasets for an overall ReID performance improvement in practical applications.",
+      "published": "2026-10-29T17:58:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.40643",
+      "pdf_url": "https://arxiv.org/pdf/2610.40643",
+      "summary_zh": "真实场景中行李重识别面临遮挡、杂乱背景和拥挤人群，现有方法多局限于干净条件下的裁剪图像匹配，忽视了多视频流多视角的互补性。本文提出端到端流水线，从多路视频流中检测并重识别行李，系统评估了同一行李多视角多镜头的选择与融合策略以及跨环境数据集训练策略。在真实环境基准数据集上的实验为实际应用中的整体ReID性能提升提供了策略指导。",
+      "summary_en": "Real-world luggage re-identification suffers from occlusions, cluttered backgrounds and crowded scenes, while existing methods focus on appearance-based cropped image matching under relatively clean conditions and overlook multi-shot multi-view complementarity. This paper studies an end-to-end pipeline that detects and re-identifies luggage from multiple video streams, evaluating strategies for selecting and merging views and shots of the same luggage and for training on different environment datasets. Experiments on a real-world benchmark dataset provide guidance for improving overall ReID performance in practical applications.",
+      "highlights_zh": [
+        "多视频流端到端行李检测与重识别流水线",
+        "真实环境基准数据集上评估多视角融合策略",
+        "面向安防与行李管理的实际应用指导"
+      ]
+    }
+  ]
+}
