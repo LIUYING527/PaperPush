@@ -1,0 +1,304 @@
+{
+  "date": "2026-11-02",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2610.42147",
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "authors": [
+        "Ales Kubicek",
+        "Andrea Caciolai",
+        "Liangzu Peng",
+        "Sukrit Sumant",
+        "Benjamin Hoover",
+        "Fraser Greenlee",
+        "Ruairidh M. Battleday",
+        "Radim Urban",
+        "Torsten Hoefler",
+        "James C. R. Whittington"
+      ],
+      "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "published": "2026-10-30T17:59:34Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42147",
+      "pdf_url": "https://arxiv.org/pdf/2610.42147",
+      "summary_zh": "超长上下文（超过100万token）下全注意力代价过高，现有稀疏注意力索引器要么仍是二次复杂度，要么在超长上下文下精度下降。本文提出潜在稀疏注意力（LSA），在学习到的潜在空间中对键进行层次聚类，让查询对聚类层次打分而非对每个键打分，并给出蒸馏版D-LSA与原生训练版N-LSA两种变体。在GLM-5.3-FLASH上1000万token时，D-LSA单层预填充提速22.7倍、解码提速4.6倍且精度相近，N-LSA在128k token下匹配全注意力精度并实现1.6倍训练加速。",
+      "summary_en": "At ultra-long contexts beyond 1M tokens, full attention is prohibitively expensive, and existing sparse-attention indexers either remain quadratic in context size or lose accuracy at scale. We propose Latent Sparse Attention (LSA), which hierarchically clusters keys in a learned latent space so queries score the cluster hierarchy instead of every key, with two variants: Distilled-LSA (D-LSA) for pre-trained models and Native-LSA (N-LSA) trained on next-token loss alone. On GLM-5.3-FLASH at 10M tokens, D-LSA speeds up one attention layer by 22.7x in prefill and 4.6x in decode with similar accuracy, while N-LSA matches full-attention accuracy with 1.6x per-layer training speedup at 128k tokens.",
+      "highlights_zh": [
+        "潜在空间层次聚类键，查询只对簇打分",
+        "10M token下单层预填充提速22.7倍",
+        "超长上下文高效注意力，精度近无损"
+      ]
+    },
+    {
+      "id": "2610.42146",
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "authors": [
+        "Gaoyue Zhou",
+        "Yvonne Wu",
+        "Zichen Jeff Cui",
+        "Nicolas Ballas",
+        "Mido Assran",
+        "Lerrel Pinto",
+        "Yann LeCun"
+      ],
+      "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+      "published": "2026-10-30T17:59:25Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42146",
+      "pdf_url": "https://arxiv.org/pdf/2610.42146",
+      "summary_zh": "世界模型规划虽能实现测试时适应，但长时任务受累积误差和搜索复杂度困扰，现有分层方法使用刚性宏动作或潜在技能导致表示脆弱且缺乏精细控制。ID-WM提出分层世界模型，将状态空间可达性与局部控制解耦：高层模型在状态流形上采样可行转移，低层世界模型作为逆动力学求解器将转移落地为精确动作，使规划器不受底层执行细节约束。在三个导航与操作套件上比最先进策略和扩散规划器提升38.5%，相比单层世界模型MPC在复杂未见长时配置下提升135%，表明优先局部物理可行性可合成超越训练行为模式的新长时规划。",
+      "summary_en": "Planning with world models enables test-time adaptation but long-horizon tasks suffer from compounding errors and search complexity, while existing hierarchical methods rely on rigid macro-actions or latent skills that yield brittle representations and limited fine-grained control. ID-WM introduces a hierarchical world model that decouples state-space reachability from local control, using a high-level model to sample feasible transitions on the state manifold and a low-level world model as an inverse dynamics solver to ground them into precise actions, freeing the planner from low-level execution details. Across three navigation and manipulation suites it achieves a 38.5% improvement over state-of-the-art policy and diffusion-based planners and a 135% gain over single-level world model MPC in complex unseen long-horizon configurations, showing that prioritizing local physical feasibility enables novel long-horizon plans beyond training behavioral modes.",
+      "highlights_zh": [
+        "解耦可达性与局部控制的分层世界模型",
+        "较SOTA规划器提升38.5%，长时任务提升135%",
+        "适用于长时导航与操作，需分层训练"
+      ]
+    },
+    {
+      "id": "2610.42149",
+      "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+      "authors": [
+        "Byungwoo Jeon",
+        "Yoonwoo Jeong",
+        "Hyunseok Lee",
+        "Minsu Cho",
+        "Jinwoo Shin"
+      ],
+      "abstract": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+      "published": "2026-10-30T17:59:43Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42149",
+      "pdf_url": "https://arxiv.org/pdf/2610.42149",
+      "summary_zh": "统一多模态模型在图像生成中难以有效利用基于语言的思维链推理，原因是推理发生在离散token空间而图像生成在连续空间，存在模态不匹配。作者提出LARC框架，通过课程监督微调和信息增益强化学习两阶段，将token级推理逐步转化为连续隐状态上的潜在推理。实验表明LARC在多个文生图基准上提升生成质量、提示跟随和组合保真度，在GenEval上较BAGEL提升7个百分点并展现测试时缩放行为。",
+      "summary_en": "Unified multimodal models struggle to leverage language-based chain-of-thought reasoning for image generation due to a modality mismatch between discrete token-space reasoning and continuous image generation. The authors propose LARC, a latent reasoning framework in continuous space trained via curriculum supervised fine-tuning that gradually converts token-level reasoning into latent reasoning, followed by information-gain reinforcement learning that self-evolves latent reasoning without ground-truth supervision. Experiments on text-to-image benchmarks show consistent gains in generation quality, prompt following, and compositional fidelity, with state-of-the-art GenEval performance (7 points over BAGEL) and clear test-time scaling behavior.",
+      "highlights_zh": [
+        "连续隐空间潜在推理替代离散token推理",
+        "GenEval较BAGEL提升7个百分点",
+        "展现测试时缩放，弥合推理与生成"
+      ],
+      "highlights_en": [
+        "Latent reasoning in continuous space replaces token-level reasoning",
+        "7-point GenEval gain over BAGEL",
+        "Demonstrates test-time scaling, bridging reasoning and generation"
+      ]
+    },
+    {
+      "id": "2610.42139",
+      "title": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
+      "authors": [
+        "Vitaly Feldman",
+        "Audra McMillan",
+        "Kunal Talwar"
+      ],
+      "abstract": "In many practical deployments of Differentially Private Stochastic Gradient Descent (DP-SGD), the server processes data in batches. Randomly sampling these batches allows for better privacy bounds via privacy amplification results. Most sampling schemes with provable privacy amplification, including Poisson sampling and random allocation, result in variable batch sizes. The privacy guarantee of these schemes requires that the batch sizes are not revealed. In distributed settings, the server performing the aggregation or any party observing the communication traffic may learn these batch sizes. Furthermore, in both centralized and distributed settings, memory and computation constraints may require each batch to be of some maximum size $s$, necessitating truncation of the batch when it exceeds this limit. It is known that this truncation can result in a significant increase in privacy loss. In this work, we address both of these challenges via a simple mechanism that uses a random number of \\emph{dummy points} to privatize the batch size and maintain the privacy guarantee even under truncation. We demonstrate that our mechanism is easy to implement in a distributed setting, and provide a general analysis of this mechanism for both Poisson sampling and random allocation. Our analysis is designed to support efficient and relatively tight privacy accounting. It also effectively amplifies the privacy of the count releases by subsampling, making the expected number of dummy points asymptotically smaller than what is needed to directly privatize the (sensitivity-one) batch sizes with non-negative noise. For Poisson sampling with truncated batches, we demonstrate empirically that our mechanism achieves better privacy--efficiency tradeoffs than the direct accounting for truncation recently given by (Ganesh, 2025).",
+      "published": "2026-10-30T17:58:42Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42139",
+      "pdf_url": "https://arxiv.org/pdf/2610.42139",
+      "summary_zh": "在DP-SGD实际部署中，随机批采样（如泊松采样）虽能通过隐私放大提升隐私保证，但批大小可变且若被泄露或为满足内存限制而截断，会显著增加隐私损失。本文提出用随机数量的虚拟点来私有化批大小，使隐私保证在截断下依然成立，并针对泊松采样和随机分配给出了支持高效紧致隐私核算的一般分析。该机制在分布式场景下易于实现，且通过子采样进一步放大计数发布的隐私，使所需虚拟点期望数渐近更少；实验表明在截断泊松采样下其隐私-效率权衡优于近期直接核算方法。",
+      "summary_en": "In practical DP-SGD deployments, random batch sampling (e.g., Poisson sampling) provides privacy amplification but yields variable batch sizes whose revelation or truncation for memory limits can significantly increase privacy loss. This work introduces a simple mechanism using a random number of dummy points to privatize batch sizes and preserve privacy guarantees even under truncation, with a general analysis for Poisson sampling and random allocation supporting efficient and tight privacy accounting. The mechanism is easy to implement in distributed settings, amplifies privacy of count releases via subsampling so the expected number of dummy points is asymptotically smaller than direct privatization, and empirically achieves better privacy-efficiency tradeoffs than recent direct truncation accounting for truncated Poisson sampling.",
+      "highlights_zh": [
+        "用随机虚拟点私有化批大小并抗截断",
+        "虚拟点期望数渐近少于直接加噪方案",
+        "分布式易实现，隐私-效率权衡更优"
+      ]
+    },
+    {
+      "id": "2610.42148",
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "authors": [
+        "Bobo Li",
+        "Jiajia Song",
+        "Hao Fei",
+        "Wynne Hsu",
+        "Mong Li Lee"
+      ],
+      "abstract": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "published": "2026-10-30T17:59:38Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42148",
+      "pdf_url": "https://arxiv.org/pdf/2610.42148",
+      "summary_zh": "面向LLM智能体的决策模型（如Jev）需要轻量可靠的分类推理，但现有面向生成的推理引擎存在严重的前缀重计算开销或输出概率失真问题。Flide将决策请求的逻辑树结构与单一扁平token流中的物理执行解耦，通过ForkAttention在标准注意力和循环Gated DeltaNet层上用GPU常驻索引导航请求依赖，保证每个查询分支与独立前向传播在精确算术下等价。在公开混合与决策模型上，Flide比vLLM和SGLang快至多9.5倍，且总变差距离最接近float32参考，为智能体系统中可扩展、低延迟的决策智能奠定基础。",
+      "summary_en": "Decision models such as Jev offer lightweight, reliable categorical reasoning for fast System One execution in LLM agent systems, but existing generation-oriented inference engines suffer from severe prefix recomputation overhead or distorted output probabilities. Flide decouples the logical tree structure of a decision request from its physical execution in a single flattened token stream, using ForkAttention with GPU-resident indices across standard attention and recurrent Gated DeltaNet layers to guarantee that every query branch evaluates identically to an isolated forward pass in exact arithmetic. Evaluations on public hybrid and decision models show Flide answers queries up to 9.5x faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance, establishing a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "highlights_zh": [
+        "逻辑树与扁平token流解耦，ForkAttention精确分支",
+        "比vLLM/SGLang快至多9.5倍且最接近float32",
+        "加速智能体决策推理，限于决策类模型"
+      ]
+    },
+    {
+      "id": "2610.42128",
+      "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+      "authors": [
+        "Yanran Wu",
+        "Dian Yu",
+        "Chongyang Bai",
+        "Jieyi Zhang",
+        "Rui Liu",
+        "Tianyi Chen",
+        "Shike Mei",
+        "Hang Cui",
+        "Frank Shyu",
+        "Sandeep Pandey",
+        "Luke Simon",
+        "Chunwei Liu",
+        "Xi Liu"
+      ],
+      "abstract": "Decision models target structured tasks by directly predicting choices or scores, avoiding autoregressive decoding latency. However, transferring a generative LLM's ranking knowledge to a decision model remains challenging: the teacher expresses preferences through a ranked list of document ID sequences, while the student determines the ranking using scores from the first-token position. To bridge this gap, we introduce DecisionRank, a decision model trained through item-space on-policy distillation (OPD). Item-space OPD constructs the student's rollout by sorting its document scores into a ranked sequence. A generative teacher takes the resulting ranking list as inputs and provides conditional feedback to directly supervise those scores. Combined with offline ranking supervision, DecisionRank achieves state-of-the-art performance on both general and reasoning-intensive retrieval benchmarks such as TREC DL, BEIR, and BRIGHT. Across four benchmarks, item-space OPD consistently outperforms alternative training objectives. Even at 1.7B parameters, DecisionRank surpasses its 27B generative teacher on TREC DL19--23. At 8B, it outperforms its generative listwise counterpart while running $24.5\\times$ faster on TREC DL and $16.7\\times$ faster on BRIGHT.",
+      "published": "2026-10-30T17:56:58Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42128",
+      "pdf_url": "https://arxiv.org/pdf/2610.42128",
+      "summary_zh": "生成式LLM的排序知识难以迁移到决策模型，因为教师以文档ID序列的排序列表表达偏好，而学生仅从首token位置的分数确定排序。DecisionRank提出item-space on-policy distillation：将学生文档分数排序成序列作为rollout，由生成式教师据此给出条件反馈直接监督这些分数，并结合离线排序监督。在TREC DL、BEIR、BRIGHT上达到SOTA，1.7B模型超越27B教师，8B模型优于生成式listwise对应方法且分别快24.5倍和16.7倍。",
+      "summary_en": "Transferring a generative LLM's ranking knowledge to a decision model is hard because the teacher expresses preferences as ranked document-ID sequences while the student ranks via first-token scores. DecisionRank introduces item-space on-policy distillation, which sorts the student's document scores into a rollout sequence that a generative teacher conditions on to directly supervise those scores, combined with offline ranking supervision. It achieves state-of-the-art results on TREC DL, BEIR, and BRIGHT, with a 1.7B model surpassing its 27B teacher and an 8B model beating its generative listwise counterpart while running 24.5x and 16.7x faster.",
+      "highlights_zh": [
+        "item-space在线蒸馏对齐分数与排序",
+        "1.7B超越27B教师，8B达SOTA",
+        "推理快16-24倍，替代生成式重排"
+      ]
+    },
+    {
+      "id": "2610.42152",
+      "title": "GazeRIB: Systematic Evaluation of Multi-Reader Gaze-Guided Chest X-ray Learning",
+      "authors": [
+        "Nattakorn Kittisut",
+        "Roy M. Gabriel",
+        "Marly van Assen",
+        "Mohammadreza Zandehshahvar",
+        "Carlo N. De Cecco",
+        "Elizabeth A. Krupinski",
+        "Ali Adibi"
+      ],
+      "abstract": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. We evaluated GazeRIB (Gaze-guided Radiologist-Informed Blackout), which masks unviewed regions during training and uses unmasked images at inference. Eight experts repeatedly read the same 80 chest X-rays (CXRs). We compared individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds, evaluating 910 models on a separate 2,897-CXR cohort for four-class severity prediction. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 percentage points (pp; Bonferroni-adjusted p < 0.007); no individual reader reached significance on this endpoint. Three readers captured 73-80% of the eight-reader gain in macro F1, the area under the receiver-operating-characteristic curve (ROC-AUC) and the area under the precision-recall curve (AU-PRC). On external validation without retraining, all four panels improved ROC-AUC on SIIM-FISABIO-RSNA by +1.93 to +4.24 pp (p <= 0.004); on MIMIC-Eye no panel differed significantly from baseline, whereas the single-reader average declined (-1.40 pp, p = 0.008). Reader composition therefore influenced performance, although transfer depended on the cohort.",
+      "published": "2026-10-30T17:59:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.HC",
+        "eess.IV",
+        "eess.SP"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42152",
+      "pdf_url": "https://arxiv.org/pdf/2610.42152",
+      "summary_zh": "放射科医生的视觉注意力可用于监督医学图像学习，但读者小组构成如何影响其价值尚未被验证。研究提出GazeRIB方法，在训练时遮蔽未被注视区域、推理时使用完整图像，并系统比较单个读者与三、五、八人小组在七种架构和十个随机种子下的表现。结果显示所有小组均比无注视基线提升宏F1达5.33-7.47个百分点，三人小组即可捕获八人小组73-80%的增益，且外部验证的迁移效果依赖队列。",
+      "summary_en": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. The authors evaluated GazeRIB, which masks unviewed regions during training and uses unmasked images at inference, comparing individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 pp, three readers captured 73-80% of the eight-reader gain, and external validation transfer depended on the cohort.",
+      "highlights_zh": [
+        "训练遮蔽未注视区域，推理用完整图像",
+        "宏F1较基线提升5.33-7.47个百分点",
+        "三人小组即可捕获大部分增益"
+      ]
+    },
+    {
+      "id": "2610.42145",
+      "title": "SemEllipsoid: Semantic-aware Shape Abstraction with Ellipsoid",
+      "authors": [
+        "Kuankuan Cheng",
+        "Haocheng Yuan",
+        "Changjian Li"
+      ],
+      "abstract": "Representing 3D shapes using a set of primitives - known as shape abstraction - is an actively studied problem in computer graphics with wide applications in shape understanding, analysis, and simulation due to the compactness and computational efficiency of the primitive-based representation. Prior work has primarily focused on geometry-aware shape abstraction, where the objective is to approximate the input shape with a minimal set of primitives while preserving geometric fidelity. However, these methods often overlook semantic consistency, inevitably leading to primitives that span across multiple semantic parts. Such inconsistency can cause undesirable artifacts in downstream tasks such as part-level shape editing or manipulation. In this paper, we introduce a new task - semantic-aware shape abstraction, where the goal is to produce abstractions that are both geometrically faithful and semantically consistent, ensuring that each primitive adheres strictly to a single semantic part without crossing semantic boundaries. We propose SemEllipsoid, a novel method to address this problem using ellipsoidal primitives. The core idea is to inject semantic constraints into the primitive optimization process leveraging the availability of semantic cues from large-scale foundation models. We design a fully differentiable projection-blending-evaluation scheme to measure semantic divergence against input semantic masks, and formulate an alternating optimization strategy to iteratively solve for optimal semantic assignment and primitive configurations. Our method is non-learning-based, requiring no data collection or network training, and generalizes well to shapes from arbitrary categories. It also supports different levels of abstraction according to user demand. Extensive experiments and evaluations validate the effectiveness of our approach across several 3D shape collections.",
+      "published": "2026-10-30T17:59:14Z",
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42145",
+      "pdf_url": "https://arxiv.org/pdf/2610.42145",
+      "summary_zh": "现有基于基元的形状抽象方法主要关注几何保真度，却忽视语义一致性，导致基元跨越多个语义部件，在下游部件级编辑中产生伪影。本文提出语义感知形状抽象新任务，并设计SemEllipsoid方法，利用大模型语义线索，通过可微的投影-混合-评估方案与交替优化策略，将语义约束注入椭球基元优化过程。该方法无需训练、可泛化至任意类别并支持多级抽象，在多个3D形状数据集上验证了有效性。",
+      "summary_en": "Prior primitive-based shape abstraction methods focus on geometric fidelity while ignoring semantic consistency, causing primitives to span multiple semantic parts and produce artifacts in downstream part-level editing. This paper introduces semantic-aware shape abstraction and proposes SemEllipsoid, which injects semantic constraints into ellipsoid primitive optimization using cues from large foundation models via a differentiable projection-blending-evaluation scheme and an alternating optimization strategy. The training-free method generalizes to arbitrary categories, supports multiple abstraction levels, and is validated on several 3D shape collections.",
+      "highlights_zh": [
+        "语义约束注入基元优化，保证单部件归属",
+        "无需训练，跨类别泛化并支持多级抽象",
+        "提升部件级编辑质量，但依赖语义掩码"
+      ]
+    },
+    {
+      "id": "2610.42097",
+      "title": "ROOF: Learning Humanoid Fall Recovery under Overhead Constraints",
+      "authors": [
+        "Yidan Lu",
+        "Jiayuan Yu",
+        "Zongrui Cai",
+        "Jingwen Sun",
+        "Jinrui Han",
+        "Jing Wang",
+        "Ping Luo",
+        "Peng Lu"
+      ],
+      "abstract": "A fallen humanoid beneath an overhead obstacle faces a coupled recovery problem. It must create clearance while organizing support for a stable rise, since attempting to stand before making room can further increase obstruction. We introduce a reinforcement learning method with contact-supported geometric escape guidance, which rewards incremental reduction of robot-obstacle overlap without prescribing an escape path. To achieve this, a learned motion prior, together with posture-dependent support and joint-stall costs, is proposed to shape a single policy that learns when to clear the obstacle, how to establish support, and when to complete the rise, all using proprioception alone. In simulation, it recovers in 88.5% of trials beneath plates that can only be lifted, compared with 18.9% without geometric guidance, and in 98.6% of trials beneath free plates with randomized size, mass and placement. On a Unitree G1, the deployed policy recovered in 95 of 150 attempts across seven real-world obstacle scenes, including furniture and multi-object arrangements absent from training. Project page: https://lu-yidan.github.io/ROOF/",
+      "published": "2026-10-30T17:41:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42097",
+      "pdf_url": "https://arxiv.org/pdf/2610.42097",
+      "summary_zh": "倒下的人形机器人若处于头顶障碍物下方，会面临一个耦合的恢复难题：必须先腾出空间，同时组织支撑以稳定起身，因为过早尝试站立可能加剧受阻。作者提出一种带接触支撑几何逃逸引导的强化学习方法，通过奖励机器人-障碍物重叠的逐步减少而不规定逃逸路径，并结合学习到的运动先验、姿态相关支撑代价与关节失速代价，塑造单一策略，仅凭本体感知学习何时清障、如何建立支撑以及何时完成起身。仿真中，在只能被抬起的板下恢复成功率达88.5%（无几何引导仅18.9%），在随机尺寸、质量和位置的自由板下达98.6%；在Unitree G1真机上，于七类真实障碍场景（含训练中未出现的家具和多物体布置）150次尝试中成功恢复95次。",
+      "summary_en": "A fallen humanoid beneath an overhead obstacle faces a coupled recovery problem: it must create clearance while organizing support for a stable rise, since standing too early can worsen the obstruction. We introduce a reinforcement learning method with contact-supported geometric escape guidance that rewards incremental reduction of robot-obstacle overlap without prescribing an escape path, combining a learned motion prior with posture-dependent support and joint-stall costs to shape a single policy that learns when to clear the obstacle, how to establish support, and when to complete the rise using proprioception alone. In simulation it recovers in 88.5% of trials under plates that can only be lifted (vs. 18.9% without geometric guidance) and 98.6% under free plates with randomized size, mass, and placement; on a Unitree G1, the deployed policy recovered in 95 of 150 attempts across seven real-world obstacle scenes, including furniture and multi-object arrangements absent from training.",
+      "highlights_zh": [
+        "几何逃逸引导+运动先验单策略",
+        "仿真88.5%/98.6%，真机95/150",
+        "可用于家具下自救，泛化待验证"
+      ]
+    },
+    {
+      "id": "2610.42096",
+      "title": "CausalWAM: Learning the Causes of Actions in World Action Models",
+      "authors": [
+        "Juntao Cheng",
+        "Jinzhou Tang",
+        "Fan Feng",
+        "Henrik I. Christensen",
+        "Yujia Zheng"
+      ],
+      "abstract": "World action models (WAMs) learn latent variables from observations and use these to both predict the evolution of the scene and to generate actions. The prediction has to be of the whole scene, whereas only a portion of the scene causes actions. WAMs fitted to demonstrations do not, in general, guarantee that they will generate actions solely from the latent causes of the demonstrated actions (the action-relevant latent variables), as the model could just as well learn to imitate in this way whilst entangling the action-relevant latent variables with the nuisance variables. We therefore separate out what causes action from what prediction depends on. We prove that under a sparsity constraint the latent variables used to generate actions are an invertible function of the action-relevant latent variables alone and the true structure is identified up to a permutation of the latent variables. This requires neither sufficient temporal dependence nor any assumptions on how the unobserved regimes evolve and holds even when the action-relevant latent variables are statistically dependent on the rest. We therefore propose CWAM (Causal WAM), which incorporates the constraint into a pretrained WAM by adding a sparse routing path to its action head, with the world modeling objective remaining unchanged. Experiments on both synthetic data and real-world robots validate the theory as well as showcase the improved efficiency in closed-loop success.",
+      "published": "2026-10-30T17:40:00Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2610.42096",
+      "pdf_url": "https://arxiv.org/pdf/2610.42096",
+      "summary_zh": "世界动作模型（WAM）从观测中学习潜变量来预测场景并生成动作，但预测需要整个场景，而只有部分场景导致动作，因此模型可能将动作相关潜变量与干扰变量纠缠，无法保证仅从动作原因生成动作。作者提出CWAM，在预训练WAM的动作头上添加稀疏路由路径以引入稀疏约束，同时保持世界建模目标不变，并从理论上证明在该约束下用于生成动作的潜变量是动作相关潜变量的可逆函数，真实结构可识别至置换。合成数据与真实机器人实验验证了理论，并展示了闭环任务中效率与成功率的提升。",
+      "summary_en": "World action models (WAMs) learn latent variables from observations to predict scene evolution and generate actions, but since prediction covers the whole scene while only part of it causes actions, WAMs trained on demonstrations may entangle action-relevant latents with nuisance variables and fail to generate actions solely from the causes of demonstrated actions. The authors propose CWAM, which adds a sparse routing path to the action head of a pretrained WAM to enforce a sparsity constraint while keeping the world-modeling objective unchanged, and prove that under this constraint the latents used for action generation are an invertible function of the action-relevant latents alone, identifying the true structure up to permutation. Experiments on synthetic data and real-world robots validate the theory and show improved efficiency and closed-loop success.",
+      "highlights_zh": [
+        "稀疏路由解耦动作相关潜变量",
+        "合成与真机实验验证理论并提升闭环成功率",
+        "提升闭环效率，但依赖稀疏性假设"
+      ]
+    }
+  ]
+}
