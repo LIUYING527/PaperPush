@@ -1,0 +1,364 @@
+{
+  "date": "2026-11-03",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.03647",
+      "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
+      "authors": [
+        "Jason Jingzhou Liu",
+        "Tony Tao",
+        "Deepak Pathak",
+        "Ruslan Salakhutdinov"
+      ],
+      "abstract": "Sensorized human demonstrations offer scalable data for mobile manipulation, but embodiment differences complicate policy learning. We present Pixel-UMI, a pipeline for learning environment-aware whole-body policies from human data. We first introduce Environment-Aware Retargeting (EAR), which combines reconstructed scene geometry with demonstrated head and gripper trajectories to determine robot posture and generate collision-aware joint and base targets. Delay-calibrated action assignment converts these trajectories into actions. However, kinematic differences can leave residual pose errors, creating viewpoint mismatches between human demonstrations and robot observations. We therefore introduce Retargeting-Error-Aware Masking (REAM), which uses these errors during training to reduce reliance on mismatched views at deployment. Finally, because estimated actions cannot fully capture contact-rich interactions, we collect on-policy human corrections through DAgger to improve performance. We evaluate Pixel-UMI on five challenging tasks spanning articulated-object manipulation, deformable-object handling, constrained-space reaching, whole-body collision avoidance, and contact-rich bimanual coordination, achieving 87.0% average task progress. Video results are available at https://pixel-robot.com/pixel-umi",
+      "published": "2026-11-02T18:59:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03647",
+      "pdf_url": "https://arxiv.org/pdf/2611.03647",
+      "summary_zh": "传感器化人类演示为移动操作提供可扩展数据，但人机具身差异使策略学习困难。Pixel-UMI提出环境感知重定向（EAR）结合场景几何与演示轨迹生成无碰撞全身目标，并用重定向误差感知掩码（REAM）和DAgger在线人类纠正提升鲁棒性。在五类挑战任务上平均任务进度达87.0%，验证了从人类演示学习全身操作策略的有效性。",
+      "summary_en": "Sensorized human demonstrations offer scalable data for mobile manipulation, but embodiment gaps complicate policy learning. Pixel-UMI introduces Environment-Aware Retargeting (EAR) to generate collision-aware whole-body targets from scene geometry and demonstrated trajectories, complemented by Retargeting-Error-Aware Masking (REAM) and DAgger-based on-policy human corrections. It achieves 87.0% average task progress across five challenging tasks, demonstrating effective whole-body manipulation learning from human demonstrations.",
+      "highlights_zh": [
+        "环境感知重定向+误差感知掩码",
+        "五任务平均进度87.0%",
+        "可扩展人类数据用于全身操作"
+      ]
+    },
+    {
+      "id": "2611.03648",
+      "title": "Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation",
+      "authors": [
+        "Tony Tao",
+        "Jason Jingzhou Liu",
+        "Ruslan Salakhutdinov",
+        "Deepak Pathak"
+      ],
+      "abstract": "General-purpose mobile manipulation requires a combination of capable robot hardware, scalable demonstration collection, expressive whole-body control, and effective policy learning. Yet these components are often developed independently, creating mismatches that limit the capabilities of the complete system. We present Pixel, a co-designed full-stack system for learning general-purpose mobile manipulation. Pixel combines a low-cost wheeled humanoid with human-aligned kinematics and compliant grippers, multiple teleoperation and robot-free human data-collection interfaces, a unified whole-body controller, and a common policy learning pipeline across human and robot demonstrations. A hierarchical learning stack further enables language-conditioned visuomotor control and long-horizon task execution. We evaluate the system across hardware, data collection, and policy learning, and demonstrate mobile-manipulation behaviors requiring dexterity, active perception, navigation, and whole-body coordination. We hope that Pixel provides an integrated and extensible foundation for studying how robot hardware, data, control, and learning can be designed together for robot learning. More results at https://pixel-robot.com/pixel",
+      "published": "2026-11-02T18:59:32Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03648",
+      "pdf_url": "https://arxiv.org/pdf/2611.03648",
+      "summary_zh": "通用移动操作需要硬件、数据采集、全身控制和策略学习协同，但各组件常独立开发导致系统不匹配。Pixel提出协同设计的全栈系统，集成低成本轮式人形机器人、多种遥操作与无机器人人类数据采集接口、统一全身控制器及跨人类与机器人演示的通用策略学习流程，并采用分层学习实现语言条件视觉运动控制与长时任务执行。系统在硬件、数据采集和策略学习上评估，展示了灵巧操作、主动感知、导航和全身协调等行为，为机器人学习各环节协同设计提供可扩展基础。",
+      "summary_en": "General-purpose mobile manipulation requires capable hardware, scalable demonstration collection, expressive whole-body control, and effective policy learning, but these components are often developed independently, creating mismatches that limit the complete system. Pixel is a co-designed full-stack system combining a low-cost wheeled humanoid with human-aligned kinematics and compliant grippers, multiple teleoperation and robot-free human data-collection interfaces, a unified whole-body controller, and a common policy learning pipeline across human and robot demonstrations, with a hierarchical stack enabling language-conditioned visuomotor control and long-horizon execution. Evaluated across hardware, data collection, and policy learning, it demonstrates dexterity, active perception, navigation, and whole-body coordination, offering an integrated and extensible foundation for studying co-design of robot hardware, data, control, and learning.",
+      "highlights_zh": [
+        "全栈协同设计软硬件与学习流程",
+        "展示灵巧操作与全身协调等行为",
+        "为机器人学习提供可扩展基础"
+      ]
+    },
+    {
+      "id": "2611.03633",
+      "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+      "authors": [
+        "Catherine Li",
+        "Jingchu Gai",
+        "Andrej Risteski",
+        "Jacob Mitchell Springer",
+        "Aditi Raghunathan"
+      ],
+      "abstract": "Muon has recently emerged as a promising optimizer for pretraining large language models, offering a speedup over AdamW in minimizing pretraining loss. However, it remains unclear whether Muon's advantage persists after fine-tuning. In this paper, we study the downstream behavior of Muon and AdamW and uncover a surprising trend: beyond a sufficiently large pretraining data budget, AdamW outperforms Muon after fine-tuning. Moreover, as model size increases, AdamW overtakes Muon at progressively smaller pretraining token-parameter ratios. To explain this reversal, we view fine-tuning as a perturbation of the outputs and introduce the margin-to-spread ratio, which measures how far the correct logit lies above the wrong ones relative to how widely the wrong logits are spread. In language models, Muon has the larger margin-to-spread ratio at small data budgets and AdamW at large ones, mirroring the fine-tuning trend. In a linear associative memory, we prove that after one update the margin-to-spread ratio of gradient descent gains on that of Muon as the data budget grows, and simulations show that this trend persists after extended training.",
+      "published": "2026-11-02T18:56:43Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03633",
+      "pdf_url": "https://arxiv.org/pdf/2611.03633",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.03622",
+      "title": "D&A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models",
+      "authors": [
+        "Marius Memmel",
+        "Shawn Yin",
+        "Urvi Rutia",
+        "Angad Wadhwa",
+        "Eldon Li",
+        "Gavin Angeloff",
+        "Ankit Goyal",
+        "Jesse Zhang",
+        "Dieter Fox",
+        "Fabio Ramos",
+        "Anqi Li",
+        "Abhishek Gupta"
+      ],
+      "abstract": "Vision-Language Models (VLMs) hold promise for zero-shot video task-progress estimation in robot learning, yet existing frameworks frequently suffer from confirmation bias, hallucinating progress in failed executions due to implicit success assumptions or relative temporal ranking designs. Naive prompting of frontier models collapses into a binary success detector that fails to capture nuanced, non-linear progress and failures. While post-training approaches can mitigate this through explicit training, they demand expensive real-world robotics data and require computationally intensive post-training for every individual base model. To resolve these limitations, we introduce D&A (Describe & Assess): our approach decouples progress estimation into an objective, task-grounded textual description of scene dynamics followed by an assessment phase using explicit rubrics. By compelling the VLM to synthesize an explicit, text-based definition of absolute success before scoring, the framework anchors evaluations to an external, global criterion rather than the video's internal timeline. Empirical results demonstrate that our method calibrates zero-shot estimates and mitigates confirmation bias, providing fine-grained, partial progress metrics that accurately penalize failed executions while correctly interpolating successful runs. Being purely prompt-based, D&A generalizes across tasks, embodiments, and benchmarks---matching or surpassing post-trained reward models---and its reward estimates enable efficient downstream reinforcement learning.",
+      "published": "2026-11-02T18:52:11Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03622",
+      "pdf_url": "https://arxiv.org/pdf/2611.03622",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.03618",
+      "title": "Strategist: Evolving Reasoning with Agents",
+      "authors": [
+        "Taiming Lu",
+        "Qi Xu",
+        "Zhigang Hua",
+        "Zhuang Liu"
+      ],
+      "abstract": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Strategist, a meta-agent that evolves inference strategies across tasks. Each strategy is written as a blueprint,executable code that other strategies can reuse, and together the blueprints form a library. Given a task and a small development set, Strategist retrieves related blueprints, writes candidate strategies, tests them on real samples, and revises them from the results. Every candidate then enters the library, so later tasks build on earlier discoveries. On 30 benchmarks, Strategist beats the strongest baseline on 24 and matches its average accuracy (74.7% vs.74.0%) at 39% lower inference cost. Its strategies also transfer to unseen tasks and other models without further search. The part of an AI system that is not improved on its own now does.",
+      "published": "2026-11-02T18:51:04Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03618",
+      "pdf_url": "https://arxiv.org/pdf/2611.03618",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.03646",
+      "title": "EgoActionBench: Benchmarking Dense Action Captioning for Egocentric Human Videos",
+      "authors": [
+        "Yujiao Shen",
+        "Jiahe Song",
+        "Haitian Li",
+        "Jingkang Yang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Learning from human data offers a scalable path toward embodied intelligence, yet it requires models to accurately understand fine-grained human actions from egocentric observations. However, existing benchmarks remain limited in action atomicity, temporal precision, and hand-action association. We introduce EgoActionBench, a benchmark that represents continuous human manipulation as temporally localized atomic actions associated with the left hand, right hand, or both hands. EgoActionBench contains 1,407 episodes with 41,132 human-refined action annotations. To evaluate such dense predictions, we propose an evaluation protocol that retrieves temporally eligible candidates, selects a prediction by content agreement, and scores semantic fidelity and temporal overlap alongside action precision and recall, jointly capturing what happens, when it happens, and which hand performs it. We benchmark 20 baseline models and systems on EgoActionBench and further adapt two backbones, Qwen3-VL-4B and LLaVA-OneVision-2-8B, through supervised fine-tuning followed by reinforcement learning on automatically annotated training episodes. EgoAction improves EgoActionScore by 15.9 and 23.2 points on the two backbones, and both adapted models outperform all open-source baselines. Our experiments reveal substantial limitations of current models in action atomicity, temporal precision, and hand-action association, highlighting the gap between general video understanding and the action understanding required for embodied intelligence.",
+      "published": "2026-11-02T18:59:29Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03646",
+      "pdf_url": "https://arxiv.org/pdf/2611.03646",
+      "summary_zh": "现有基准在动作原子性、时间精度和手-动作关联方面存在不足，难以支撑具身智能对第一人称视频中细粒度人类动作的理解。本文提出EgoActionBench基准，将连续操作表示为与左手、右手或双手关联的时间局部化原子动作，包含1,407个片段和41,132条人工精修标注，并设计联合评估内容、时序与执行手的评测协议，还对Qwen3-VL-4B和LLaVA-OneVision-2-8B进行监督微调加强化学习适配。实验显示适配后EgoActionScore分别提升15.9和23.2分且超越所有开源基线，同时揭示当前模型在动作原子性、时间精度和手-动作关联上的显著局限，凸显通用视频理解与具身智能所需动作理解之间的差距。",
+      "summary_en": "Existing benchmarks fall short in action atomicity, temporal precision, and hand-action association, limiting models' ability to understand fine-grained human actions from egocentric videos for embodied intelligence. We introduce EgoActionBench, which represents continuous manipulation as temporally localized atomic actions tied to the left hand, right hand, or both, with 1,407 episodes and 41,132 human-refined annotations, plus an evaluation protocol that jointly scores what happens, when, and which hand, and we adapt Qwen3-VL-4B and LLaVA-OneVision-2-8B via supervised fine-tuning followed by reinforcement learning. The adapted models improve EgoActionScore by 15.9 and 23.2 points and outperform all open-source baselines, while experiments reveal substantial limitations of current models and highlight the gap between general video understanding and the action understanding required for embodied intelligence.",
+      "highlights_zh": [
+        "提出密集原子动作基准与联合评测协议",
+        "适配模型EgoActionScore提升15.9/23.2分",
+        "揭示具身动作理解与通用视频理解差距"
+      ]
+    },
+    {
+      "id": "2611.03626",
+      "title": "Isekai3D SDG: A Platform for Diverse Synthetic Gameplay Visual Data",
+      "authors": [
+        "Rafal Karp",
+        "Gene Liu",
+        "Shih-Hsin Li",
+        "Eric Courtemanche",
+        "Shengze Wang",
+        "Josef Spjut",
+        "David Pankratz",
+        "Mischa Kolbe",
+        "Michael Stengel",
+        "Sven Elflein",
+        "Adam Grygielski",
+        "Liwen Wu",
+        "Anjul Patney"
+      ],
+      "abstract": "We present Isekai3D Synthetic Data Generation (SDG), a platform for simulating and capturing synthetic 3D gameplay for research in vision and world models, neural graphics, gameplay agents, and other applications. The platform combines reusable environment and character assets with Unreal Engine plugins in a two-stage workflow. First, world simulation generates gameplay while recording the world state, character movements, actions, and camera tracks needed for replay. Second, the recorded simulation is replayed to capture selected outputs, such as rendered video, images, and depth maps, at a specified resolution and frame rate under selected rendering and camera configurations. Separating simulation from capture allows the same recorded gameplay to produce multiple output variants without repeating the original simulation. Visual outputs are accompanied by frame-aligned camera, character, and action metadata. The platform uploads generated data directly in a training-friendly format, reducing intermediate storage, preparation time, and manual processing. This report describes the design of our overall system, including the platform's assets, plugins, and their functionality, explaining how they work together to generate diverse synthetic gameplay data.",
+      "published": "2026-11-02T18:53:46Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03626",
+      "pdf_url": "https://arxiv.org/pdf/2611.03626",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.03588",
+      "title": "3D-BBDA: Backpropagation-Free Black-Box Domain Adaptation for Robust 3D Point Cloud Recognition",
+      "authors": [
+        "Shivangi Rai",
+        "Kunal Jangid",
+        "Vaibhav Kumar",
+        "Vinod K Kurmi"
+      ],
+      "abstract": "Robust 3D point-cloud recognition is critical for robotics, mapping, and urban sensing, yet point-cloud classifiers often suffer performance drops under domain shifts caused by sensor changes, environmental variation, and acquisition artifacts. Many existing adaptation methods are difficult to deploy in practice because they require access to source data or the internal parameters of the source model, which may be restricted by privacy, licensing, or security constraints. We present 3D-BBDA, a backpropagation-free black-box domain adaptation framework that adapts a source-trained predictor to unlabeled target data using only black-box outputs. Our method performs pseudo-label guided prototype-based alignment and employs a weighted prediction module to fuse source logits with alignment logits, reducing sensitivity to noisy pseudo-labels. To stabilize prototype memory when pseudo-label coverage is incomplete, we construct a Gaussian-perturbed prototype prior from unlabeled target predictions and use it as a fallback for missing or unreliable class prototypes during alignment. Experiments on four corrupted 3D benchmarks demonstrate consistent improvements over strong baselines. On ModelNet-40C, 3D-BBDA achieves mean errors of 32.08% (PointNet) and 29.62% (GDANet), outperforming Source-only (35.88% / 34.03%) and BFTT3D (33.78% / 32.36%). 3D-BBDA requires only a single forward pass with no gradient updates making it suitable for real-time, privacy-preserving deployment in transferable 3D recognition pipelines. Project page is available at https://visdomlab.github.io/3D_BBDA",
+      "published": "2026-11-02T18:33:10Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CE",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03588",
+      "pdf_url": "https://arxiv.org/pdf/2611.03588",
+      "summary_zh": "3D点云分类器在传感器变化、环境差异等域偏移下性能下降，而现有域适应方法常需源数据或源模型内部参数，受隐私、许可和安全限制难以部署。3D-BBDA提出无反向传播的黑盒域适应框架，仅用黑盒输出，通过伪标签引导的原型对齐、加权预测融合源logits与对齐logits，并用高斯扰动原型先验作为缺失原型的回退。在四个损坏3D基准上一致优于强基线，ModelNet-40C上PointNet和GDANet平均错误率分别为32.08%和29.62%，仅需单次前向、无梯度更新，适合实时隐私保护部署。",
+      "summary_en": "3D point-cloud classifiers degrade under domain shifts from sensor changes, environmental variation, and acquisition artifacts, while existing adaptation methods often require source data or source-model internals that may be restricted by privacy, licensing, or security. 3D-BBDA is a backpropagation-free black-box domain adaptation framework that uses only black-box outputs, performing pseudo-label-guided prototype alignment, weighted fusion of source and alignment logits, and a Gaussian-perturbed prototype prior as a fallback for missing or unreliable prototypes. It consistently improves over strong baselines on four corrupted 3D benchmarks, achieving mean errors of 32.08% (PointNet) and 29.62% (GDANet) on ModelNet-40C, and requires only a single forward pass with no gradient updates, making it suitable for real-time, privacy-preserving deployment.",
+      "highlights_zh": [
+        "无反向传播黑盒原型对齐",
+        "ModelNet-40C错误率32.08%",
+        "单次前向、隐私友好可实时"
+      ],
+      "highlights_en": [
+        "Backprop-free black-box prototype alignment",
+        "32.08% error on ModelNet-40C",
+        "Single forward pass, privacy-friendly, real-time"
+      ]
+    },
+    {
+      "id": "2611.03641",
+      "title": "From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles",
+      "authors": [
+        "Paulius Skaisgiris",
+        "Thomas Pammer",
+        "Veronika Semmelrock",
+        "Mykyta Ielanskyi",
+        "Maximilian Heisinger",
+        "Erich Kobler"
+      ],
+      "abstract": "Chain-of-Thought (CoT) generation has substantially improved the performance of Large Language Models (LLMs) on complex reasoning tasks, including code generation, data analysis, and exam-style question answering. Despite these advances, purely neural LLMs continue to struggle with elementary logical reasoning problems and lack the determinism, soundness, and reliability characteristic of symbolic reasoning systems. Conversely, classical symbolic methods such as SAT solving and exact cover guarantee correctness and completeness, but require problems to be expressed in highly specialized formal encodings, limiting their applicability to natural language inputs. In this work, we present a synergistic neuro-symbolic framework that bridges this gap by combining neural semantic parsing with deterministic exact cover reasoning. Given a Zebra-style logic puzzle in natural language, an LLM translates entities and constraints into structured tool calls that construct an exact cover instance. A symbolic solver then computes the solution and provides feedback to iteratively refine invalid, under- or overconstrained encodings, exploiting the uniqueness property of Zebra puzzles. We conduct a comprehensive empirical evaluation across multiple parameter scales, post-training paradigms, and LLM families. The results demonstrate that our hybrid approach consistently outperforms strong plain neural baselines, including CoT prompting, as well as recent neuro-symbolic methods.",
+      "published": "2026-11-02T18:58:21Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03641",
+      "pdf_url": "https://arxiv.org/pdf/2611.03641",
+      "summary_zh": "纯神经LLM在基础逻辑推理上仍缺乏确定性、可靠性与完备性，而SAT求解等符号方法虽能保证正确性却需要专门的形式化编码，难以直接处理自然语言输入。本文提出神经-符号协同框架，让LLM将Zebra逻辑谜题的自然语言实体与约束翻译为结构化工具调用以构建精确覆盖实例，再由符号求解器求解并利用谜题解的唯一性反馈迭代修正欠约束或过约束的编码。在多种参数规模、后训练范式和LLM家族上的实验表明，该混合方法稳定优于CoT等纯神经基线及近期神经-符号方法，为自然语言逻辑推理提供了可靠且可验证的解决路径。",
+      "summary_en": "Purely neural LLMs still lack the determinism, soundness, and reliability of symbolic reasoning on elementary logical problems, while classical symbolic methods such as SAT solving and exact cover require highly specialized formal encodings and thus cannot directly handle natural language. This work presents a synergistic neuro-symbolic framework in which an LLM performs neural semantic parsing, translating entities and constraints of Zebra-style puzzles into structured tool calls that build an exact cover instance, after which a symbolic solver computes the solution and feeds back to iteratively refine invalid, under- or over-constrained encodings by exploiting the uniqueness property of Zebra puzzles. Comprehensive experiments across parameter scales, post-training paradigms, and LLM families show that the hybrid approach consistently outperforms strong plain neural baselines including CoT prompting as well as recent neuro-symbolic methods, offering a reliable and verifiable route to natural-language logical reasoning.",
+      "highlights_zh": [
+        "LLM语义解析构建精确覆盖实例，符号求解器反馈迭代修正编码",
+        "跨模型规模与家族实验稳定超越CoT及近期神经-符号方法",
+        "为自然语言逻辑推理提供可验证的可靠求解路径"
+      ]
+    },
+    {
+      "id": "2611.03634",
+      "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+      "authors": [
+        "Zhaoyang Wang",
+        "Qianhui Wu",
+        "Boyu Gou",
+        "Demi Wang",
+        "Jiacheng Zhang",
+        "Peichun Hua",
+        "Qize Li",
+        "Shi Qiu",
+        "Yifan Jiang",
+        "Yifan Zhang",
+        "Zexu Jin",
+        "Baolin Peng",
+        "Bolin Shen",
+        "Chetan Bansal",
+        "Dehan Kong",
+        "Deren Lei",
+        "Dongshen Peng",
+        "Fengqing Jiang",
+        "Hao Cheng",
+        "Haoqing Wang",
+        "Jiaming Shan",
+        "Jicheng Wang",
+        "Jingguang Zhou",
+        "Jixuan He",
+        "Kaide Zeng",
+        "Kangyu Zhu",
+        "Lama Moukheiber",
+        "Mufan Qiu",
+        "Peng Xia",
+        "Qihan Sun",
+        "Qingwei Lin",
+        "Qiushi Sun",
+        "Ruichen Zhang",
+        "Shuqing Luo",
+        "Si Qin",
+        "Sicheng Fan",
+        "Tao Xiong",
+        "Wenlin Yao",
+        "Xinyu Zhang",
+        "Xinyue Zeng",
+        "Xuanrui Li",
+        "Xuchao Zhang",
+        "Yian Wang",
+        "Yichao Liu",
+        "Yiming Liang",
+        "Yiyang Zhou",
+        "Yizhu Jiao",
+        "Yuetai Li",
+        "Yurun Chen",
+        "Yuxuan Zhang",
+        "Zheyuan Yang",
+        "Zhiyuan Yao",
+        "Zhongyang Li",
+        "Zihao Li",
+        "Zili Wang",
+        "Jianfeng Gao",
+        "Huaxiu Yao"
+      ],
+      "abstract": "GUI web agents require realistic and interactive environments that remain stable during both evaluation and training. Live website evaluation suffers from changing content, access restrictions, and limited coverage of authenticated workflows, while existing synthetic environments for training often lack functional depth and visual fidelity. We propose WebHarbor, a suite of 153 executable and dockerized website environments that faithfully reconstruct the visual interfaces, content, and functional workflows of real-world web services under deterministic control. We build WebHarbor through task-driven human-agent collaboration, where environments evolve as new tasks expand their functional scope, coding agents implement the required changes, and human contributors audit visual fidelity, functional correctness, and task validity. The resulting suite comprises 3,518 tasks spanning multi-step and post-authentication workflows, where existing works often fail to cover. Beyond reliable evaluation, WebHarbor provides high-fidelity synthetic web environments for cost-efficient reinforcement learning (RL). We demonstrate that a Qwen 4B-level GUI agent trained with RL in WebHarbor generalizes to unseen tasks and performs competitively with leading open-source GUI web agents across four benchmarks. The code and data are publicly available at https://github.com/aiming-lab/WebHarbor.",
+      "published": "2026-11-02T18:57:36Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.03634",
+      "pdf_url": "https://arxiv.org/pdf/2611.03634",
+      "summary_zh": "GUI网页智能体需要稳定、可交互且贴近真实的环境，但在线网站评估受内容变动、访问限制和认证流程覆盖不足困扰，现有合成环境又缺乏功能深度与视觉保真度。WebHarbor通过任务驱动的人机协作构建了153个可执行、Docker化的真实网站复刻环境，由编码智能体实现功能扩展、人工审核视觉与功能正确性，覆盖3518个多步及登录后任务。实验表明，在WebHarbor中用强化学习训练的Qwen 4B级GUI智能体可泛化到未见任务，并在四个基准上与领先开源GUI网页智能体表现相当，为低成本RL训练提供了高保真环境。",
+      "summary_en": "GUI web agents need realistic, interactive environments that stay stable during evaluation and training, yet live websites suffer from changing content, access restrictions, and poor coverage of authenticated workflows, while existing synthetic environments lack functional depth and visual fidelity. WebHarbor builds 153 executable, dockerized website environments that faithfully reconstruct real web services' interfaces, content, and workflows under deterministic control, using task-driven human-agent collaboration in which coding agents implement functional expansions and humans audit fidelity and correctness, yielding 3,518 tasks including multi-step and post-authentication workflows. A Qwen 4B-level GUI agent trained with RL in WebHarbor generalizes to unseen tasks and performs competitively with leading open-source GUI web agents across four benchmarks, offering high-fidelity, cost-efficient environments for both reliable evaluation and RL training.",
+      "highlights_zh": [
+        "153个Docker化真实网站复刻环境",
+        "4B模型RL训练媲美领先开源智能体",
+        "支持登录后多步任务与低成本RL"
+      ],
+      "highlights_en": [
+        "153 dockerized real-website replicas",
+        "4B RL agent rivals leading open-source agents",
+        "Covers post-auth multi-step tasks, low-cost RL"
+      ]
+    }
+  ]
+}
