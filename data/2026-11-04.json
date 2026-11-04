@@ -1,0 +1,294 @@
+{
+  "date": "2026-11-04",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.05377",
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "authors": [
+        "Jisoo Kim",
+        "Chaehyun Kim",
+        "Junsu Kim",
+        "Jiho Park",
+        "Seongchan Kim",
+        "Eunbeen Hong",
+        "Soowon Son",
+        "Fu-En Yang",
+        "Seungryong Kim"
+      ],
+      "abstract": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by $\\boldsymbol{300\\times}$ ($\\boldsymbol{1{,}200 \\rightarrow 4}$ tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
+      "published": "2026-11-03T18:59:56Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05377",
+      "pdf_url": "https://arxiv.org/pdf/2611.05377",
+      "summary_zh": "现有潜在动作模型从视觉变化中推断动作时，常将动作与无关的视觉外观变化纠缠在一起，限制了跨具身迁移。DreamX将预训练视频扩散模型改造为通用潜在动作学习器，从其时空特征中提取紧凑潜在动作（将每帧视频压缩300倍，从1200个token降至4个），并借助生成先验分离出与外观无关的动作动态。在LARY-Bench上取得最优性能，支持跨具身、跨环境的任意视频迁移与零样本动作迁移，并降低视频扩散策略的计算成本。",
+      "summary_en": "Existing latent action models infer actions from visual transitions but entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. DreamX repurposes a pretrained video diffusion model as a universal latent action learner, extracting compact latent actions from its spatiotemporal features (300x compression, 1,200 to 4 tokens) and leveraging the generative prior to disentangle action-relevant dynamics from visual appearance. It achieves state-of-the-art results on LARY-Bench and enables any-to-any video transfer and zero-shot action transfer across embodiments and environments, while reducing the computational cost of video-diffusion-based policies.",
+      "highlights_zh": [
+        "复用视频扩散模型提取解耦的紧凑潜在动作",
+        "LARY-Bench上潜在动作模型最优",
+        "支持跨具身零样本迁移并降低策略成本"
+      ]
+    },
+    {
+      "id": "2611.05376",
+      "title": "From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence",
+      "authors": [
+        "Hao Fei"
+      ],
+      "abstract": "For a decade, progress in artificial intelligence has been measured by how much a machine can do on its own. Large foundation models now write code and run multistep tasks, and personal agents act on a person's behalf. Yet people still forget what they once knew, miss what they are not looking at, fail to find the right words, and face hard choices without the benefit of their own history, because the machine that could help stands outside the situation. As AI moves into the physical world, attention has settled on one kind of intelligent individual, the embodied robot; we argue that the era of Physical AI holds a second kind of equal importance, the person augmented by AI. Alongside artificial general intelligence, which asks how intelligent a machine can be, stands AI-augmented human intelligence (AHI), which asks how much intelligence a machine can enable in a particular person. Realizing it calls for a new kind of system, a cognitive symbiont: a lifelong, embedded, real-time, private, low-friction, and proactive companion that senses what the person senses through external devices, keeps their context across years, models their situation and their mind, takes part in their thinking at the right moment, carries out everyday tasks with their context, and keeps learning the person as both change. We give the paradigm a conceptual core, the cognitive gap between what a person could bring to a situation and what they can hold in working memory, and organize its design space as a symbiosis loop of sensing, keeping, understanding, living alongside, acting for and thinking with the person, and growing, enclosed by a personal runtime and by trust. Because a symbiont changes what a person can do in front of others, it also raises risks of a new kind, from covert assistance in examinations to pressure on everyone to adopt it, and we treat their governance as part of the paradigm.",
+      "published": "2026-11-03T18:59:52Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05376",
+      "pdf_url": "https://arxiv.org/pdf/2611.05376",
+      "summary_zh": "当前AI进展以机器独立完成任务为衡量标准，但人仍会遗忘、错过信息、找不到合适表达，因为能提供帮助的机器处于情境之外。作者提出“认知共生体”范式，即终身、嵌入、实时、私密、低摩擦且主动的伴侣，通过感知、记忆、理解、陪伴、行动、共同思考和成长构成的共生循环，弥合人可带入情境的能力与工作记忆所能容纳之间的认知鸿沟。该范式将AI增强的人类智能（AHI）与AGI并列，并指出需将新型风险治理纳入其中。",
+      "summary_en": "AI progress has been measured by what machines can do alone, yet people still forget, miss information, and struggle to express themselves because helpful machines stand outside their situation. The authors propose the cognitive symbiont: a lifelong, embedded, real-time, private, low-friction, proactive companion organized as a symbiosis loop of sensing, keeping, understanding, living alongside, acting for, thinking with, and growing with the person, grounded in the cognitive gap between what a person could bring to a situation and what working memory can hold. This positions AI-augmented human intelligence (AHI) alongside AGI and treats governance of new risks, from covert exam assistance to adoption pressure, as part of the paradigm.",
+      "highlights_zh": [
+        "提出认知共生体与AHI新范式",
+        "无实验，属概念与设计空间论文",
+        "应用广泛但需治理新型风险"
+      ]
+    },
+    {
+      "id": "2611.05372",
+      "title": "PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning",
+      "authors": [
+        "Yuhan Liu",
+        "Xinqi Liu",
+        "Zixuan Dong",
+        "Keith W. Ross",
+        "Shenji Wan"
+      ],
+      "abstract": "Inverse kinematics (IK) converts end-effector pose commands into joint motion, and many vision-language-action (VLA) policies rely on it to act on a given arm and to transfer across embodiments. Precise IK remains laborious: redundancy and singularities complicate the inverse mapping, execution depends on hand-tuned controllers, and training data on physical robots are costly to collect. We present PolicyIK, a goal-conditioned reinforcement learning policy for high-precision IK. It updates joint-position references from pose feedback and observes its accumulated reference relative to the measured joints, so it can retain the offset that the position controller needs at rest. Two-scale pose errors with an error-dependent action gain resolve millimeter residuals while preserving large motions. Progress and dwell rewards teach it to both reach the tolerance and stay within it. In simulation, a single attempt by the trained PPO policy keeps the mean errors over the final second within 1 mm and 0.2° on 93.5% of held-out tasks, and a deployment protocol raises success to 98.9%. When trained directly on a physical arm with an off-policy RL learner, PolicyIK achieves higher reaching and holding success than all four classical IK controllers under the same time budgets. In simulated pick-and-place, PolicyIK executes the end-effector commands of the $π_{0.5}$ VLA policy with 95.7% success. These results show that reinforcement learning can provide high-precision inverse kinematics for robot arms. Code is available at https://github.com/Tinaliu0123/PolicyIK.",
+      "published": "2026-11-03T18:59:14Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05372",
+      "pdf_url": "https://arxiv.org/pdf/2611.05372",
+      "summary_zh": "逆运动学（IK）将末端位姿指令转换为关节运动，但冗余、奇异性和依赖手工调参控制器使高精度IK难以实现，且物理机器人数据采集成本高。PolicyIK提出一种目标条件强化学习策略，利用位姿反馈更新关节位置参考并观测累积参考与实测关节的偏差以保留静止时位置控制器所需的偏移，结合双尺度位姿误差、误差相关动作增益以及进度与驻留奖励实现高精度IK。仿真中单次尝试在93.5%的留出任务上末秒平均误差保持在1 mm和0.2°以内，部署协议将成功率提升至98.9%，在物理臂上训练后优于四种经典IK控制器，并以95.7%成功率执行π0.5 VLA策略的末端指令，表明强化学习可提供高精度机器人臂逆运动学。",
+      "summary_en": "Inverse kinematics (IK) converts end-effector pose commands into joint motion, but redundancy, singularities, hand-tuned controllers, and costly physical data make high-precision IK laborious. PolicyIK is a goal-conditioned reinforcement learning policy that updates joint-position references from pose feedback and observes its accumulated reference relative to measured joints to retain the offset needed by the position controller at rest, using two-scale pose errors, an error-dependent action gain, and progress and dwell rewards. In simulation, a single PPO attempt keeps mean errors over the final second within 1 mm and 0.2° on 93.5% of held-out tasks (98.9% with a deployment protocol), outperforms four classical IK controllers on a physical arm, and executes π0.5 VLA commands with 95.7% success in simulated pick-and-place, showing RL can deliver high-precision IK for robot arms.",
+      "highlights_zh": [
+        "位姿反馈更新参考并保留静止偏移",
+        "93.5%任务误差≤1mm/0.2°，部署达98.9%",
+        "可替代经典IK控制器执行VLA指令"
+      ]
+    },
+    {
+      "id": "2611.05368",
+      "title": "GUILD: Guided Iterative Data Collection for Imitation Learning",
+      "authors": [
+        "Shivin Dass",
+        "Kevin Nguyen",
+        "Rohan Yelandur",
+        "Junhong Xu",
+        "Roberto Martín-Martín"
+      ],
+      "abstract": "Imitation learning policies in robotics are trained on datasets collected through costly real-world teleoperation. Often, the data-collection process is unguided, relying on the teleoperator's intuition, resulting in data that contributes little to overall policy performance. Recent work has shown that curating such unguided datasets can substantially improve policy performance, but these approaches operate by filtering existing datasets after collection and therefore do not prevent the acquisition of uninformative data. In this work, we propose GUILD, a novel Guided Data Collection (GDC) method that actively reasons about which data should be collected to maximize downstream policy performance. We introduce an iterative framework that alternates between 1) task proposal and data collection and 2) data evaluation to close the loop. For task proposal, we leverage semantic priors from vision-language models to identify relevant environments, object configurations, and goals for data collection. However, since semantic relevance does not imply policy improvement, we perform data evaluation. By leveraging predictive data attribution we approximate how the collected trajectories influence policy performance on a target deployment setting. This signal is then used as feedback to guide subsequent data collection, closing the data collection loop. We evaluate our approach in simulation and real robot settings, demonstrating that guided data collection substantially improves sample efficiency and deployment performance compared to passive data collection strategies, multiple baselines and experienced roboticists. More information at https://robin-lab.cs.utexas.edu/guild2026/",
+      "published": "2026-11-03T18:57:35Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05368",
+      "pdf_url": "https://arxiv.org/pdf/2611.05368",
+      "summary_zh": "机器人模仿学习依赖昂贵的真实遥操作数据采集，但采集过程缺乏引导，常产生对策略性能贡献很小的数据。GUILD提出引导式数据采集方法，迭代地进行任务提议与数据采集、数据评估，利用视觉语言模型的语义先验提出采集任务，并通过预测性数据归因估计轨迹对目标部署性能的影响，以此反馈指导后续采集。在仿真和真实机器人实验中，该方法相比被动采集、多种基线及经验丰富的机器人专家显著提升了样本效率和部署性能。",
+      "summary_en": "Robot imitation learning relies on costly real-world teleoperation data, but collection is often unguided and yields data that contributes little to policy performance. GUILD introduces Guided Data Collection, an iterative framework alternating between task proposal and data collection (using vision-language model semantic priors) and data evaluation via predictive data attribution that estimates how trajectories affect target deployment performance, feeding this signal back to guide subsequent collection. Experiments in simulation and on real robots show that guided data collection substantially improves sample efficiency and deployment performance over passive strategies, multiple baselines, and experienced roboticists.",
+      "highlights_zh": [
+        "用预测性数据归因闭环指导采集",
+        "样本效率与部署性能显著优于专家",
+        "降低真实机器人数据采集成本"
+      ]
+    },
+    {
+      "id": "2611.05355",
+      "title": "Reading Why: Born-Measured Attention with Exact Word Evidence on Light and Qubits",
+      "authors": [
+        "Teerawat Tongloy",
+        "Jiraporn Pongsopa",
+        "Rangsan Jomtarak"
+      ],
+      "abstract": "When a language model answers, we can usually only estimate why. We build a transformer in which every step is a Born measurement - attention $|\\langle q|k\\rangle|^4$ normalised over each row, a measured product in place of the feed-forward nonlinearity, and a Born readout. With its denominators held at their values for the input, each class probability is a polynomial in the word amplitudes, so its integrated-gradient evidence is computed by a finite quadrature with no quadrature error: the words' contributions sum to the class probability above its no-information share, to $10^{-11}$ or better. On e-SNLI natural language inference, with about 98k parameters outside the embedding, the model reaches $76.98 \\pm 0.17$% test accuracy, level with a softmax transformer of the same size ($76.62 \\pm 0.36$%). Deleting the word its evidence ranks first changes the answer in 45% of test pairs, out of the 53% any single deletion can change, against 32% for the softmax model explained the same way and 40% by its attention x gradient. Attention can look more like the words annotators highlighted, yet accounts for the answer less well: deleting the word it ranks first changes the Born Transformer's answer in 32% of pairs. The same weights compile exactly to optoelectronic optics and to qubits, and a coherent attention layer becomes one circuit equal to the model (852 CNOTs on 23 qubits). On IBM's ibm_kingston, reading only the attention overlaps by Hadamard tests, the device gave the model's answers on two short test pairs and kept or changed them under deletion as the model does; the evidence itself did not yet survive the device, and we work out the shots and calibration that measuring it on hardware would need.",
+      "published": "2026-11-03T18:52:44Z",
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "cs.CL",
+        "cs.LG",
+        "physics.optics"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05355",
+      "pdf_url": "https://arxiv.org/pdf/2611.05355",
+      "summary_zh": "语言模型的决策依据通常只能近似估计。作者构建了每步均为Born测量的Transformer（注意力为行归一化的|⟨q|k⟩|⁴、以测量乘积替代前馈非线性、Born读出），使类概率成为词幅值的多项式，从而用有限求积精确计算积分梯度证据。在e-SNLI上以约98k参数达到76.98%测试准确率，与同规模softmax模型持平，且删除证据排名第一的词有45%改变答案（上限53%），并验证了可精确编译到光电器件与量子比特。",
+      "summary_en": "It is usually only possible to estimate why a language model gives an answer. The authors build a transformer in which every step is a Born measurement (row-normalised attention |⟨q|k⟩|⁴, a measured product replacing the feed-forward nonlinearity, and a Born readout), making each class probability a polynomial in word amplitudes so its integrated-gradient evidence is computed by finite quadrature with no quadrature error. On e-SNLI it reaches 76.98±0.17% test accuracy with about 98k non-embedding parameters, level with a same-size softmax transformer, deleting its top-evidence word changes 45% of answers (out of 53% achievable), and the same weights compile exactly to optoelectronics and to qubits (852 CNOTs on 23 qubits).",
+      "highlights_zh": [
+        "每步Born测量使证据可精确求积",
+        "e-SNLI 76.98%，删除首位证据词改变45%答案",
+        "可精确编译至光学与量子硬件"
+      ],
+      "highlights_en": [
+        "Born-measured steps give exact evidence quadrature",
+        "76.98% on e-SNLI; top-word deletion flips 45%",
+        "Compiles exactly to optics and qubits"
+      ]
+    },
+    {
+      "id": "2611.05361",
+      "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
+      "authors": [
+        "Zhipeng Zhong",
+        "Matthew Coombes",
+        "Cunjia Liu"
+      ],
+      "abstract": "Reliable evaluation of visual 3D reconstruction and depth estimation in vegetation-rich outdoor environments is limited by the scarcity of geometric ground-truth data and the cost of complete scanner surveys. We present a LiDARbased reference-generation pipeline for evaluating the zero-shot performance of feed-forward visual-geometry models alongside conventional structure-from-motion (SfM) methods. The pipeline reuses camera images, LiDAR scans, and reference poses from existing multi-sensor localization datasets to generate per-view depth maps and visible reference point clouds. To address visibility errors in accumulated LiDAR scans, we introduce the LargeDepth-Gap Visibility Score (LDGVS) for point-wise visibility filtering and automatic scale selection in Hidden Point Removal(HPR). Experiments on TartanAirV2 and TartanGround show that, compared with Poisson surface reconstruction, which is an approach suited to completed scan surveys, the combined HPR and LDGVS filtering retains approximately three times the point density at comparable absolute relative error. We also apply the pipeline to the BotanicGarden dataset to systematically compare depth estimation and 3D reconstruction methods. Feedforward methods produce dense depth predictions efficiently, but their 3D reconstructions can contain duplicated structures. Conventional SfM generally produces more coherent geometry, but its reconstructions remain sparse and more prone to failure in challenging vegetated scenes. The benchmark toolkit and datasets will be released.",
+      "published": "2026-11-03T18:54:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05361",
+      "pdf_url": "https://arxiv.org/pdf/2611.05361",
+      "summary_zh": "植被茂密户外场景缺乏几何真值且扫描成本高，限制了视觉3D重建与深度估计的可靠评测。本文提出基于LiDAR的参考生成流程，复用多传感器定位数据生成逐视角深度图和可见参考点云，并引入LargeDepth-Gap Visibility Score（LDGVS）进行逐点可见性过滤与HPR尺度自动选择。在TartanAirV2和TartanGround上，HPR+LDGVS在相近误差下保留约三倍于点云密度的点，并用于BotanicGarden系统比较前馈方法与SfM，揭示前馈法稠密但易重复结构、SfM几何更连贯但稀疏易失败。",
+      "summary_en": "Reliable evaluation of visual 3D reconstruction and depth estimation in vegetation-rich outdoor scenes is hindered by scarce geometric ground truth and costly scanner surveys. We present a LiDAR-based reference-generation pipeline that reuses camera images, LiDAR scans, and reference poses from multi-sensor localization datasets to produce per-view depth maps and visible reference point clouds, introducing the LargeDepth-Gap Visibility Score (LDGVS) for point-wise visibility filtering and automatic scale selection in Hidden Point Removal (HPR). On TartanAirV2 and TartanGround, HPR with LDGVS retains about three times the point density of Poisson surface reconstruction at comparable absolute relative error, and applying the pipeline to BotanicGarden shows feed-forward methods yield dense but duplicated structures while SfM gives more coherent yet sparse and failure-prone geometry.",
+      "highlights_zh": [
+        "LDGVS可见性过滤与HPR尺度自动选择",
+        "同误差下点密度约为Poisson三倍",
+        "前馈稠密易重复、SfM连贯但稀疏"
+      ]
+    },
+    {
+      "id": "2611.05359",
+      "title": "GSCV++: Lightweight 3D Gaussian Splatting Sequence Compression via Standard Video Codecs",
+      "authors": [
+        "Qi Yang",
+        "Yingzhan Xu",
+        "Kai Zhang",
+        "Li Zhang"
+      ],
+      "abstract": "This paper presents GSCV++, a lightweight pipeline for 3D {G}aussian {S}platting (GS) sequences {C}ompression with standard {V}ideo codecs. To meet the requirements of low-complexity and hardware compatibility from the industry, GSCV++ jointly improves preprocessing, 3D-to-2D mapping, and practical video compression configuration of GS compression. First, for preprocessing, energy-adaptive inter-frame spherical harmonic (SH) alternative current (AC) dimensionality reduction (EA-SHDR) is proposed to produces a compact and stable temporal SH AC feature space. It can reduce the data volume of following mapping and practical compression, as well as less complexity while eliminating redundant information. Second, for 3D-to-2D mapping, prior-based Inter-MiniPLAS (P-MiniPLAS) is designed to generate smooth 2D feature maps through prior-based weighting factor inference and small scale remapping. Compared with vanilla Parallel Linear Assignment Sorting (PLAS) and Morton scan, P-MiniPLAS ensures the generated 2D maps are more suitable for the video codec while maintaining a low level of computational complexity. Third, for practical compression, content-aware generalized compression (CA-GC) is developed to use a non-uniform bit-depth split for coordinate map generation, and a coding unit size selection is introduced for efficient compression complexity control, which fully exploits the performance of video codecs without involving normative changes. Experiments demonstrate that GSCV++ reports over 20\\% in intra- and 60\\% in inter-prediction rate-distortion gains compared with state-of-the-art (SOTA) methods. GSCV++ also achieves faster 2D map generation, encoding, and decoding than other SOTA methods using the same type of video codecs. Ablation studies verify the effectiveness and robustness of the proposed modules and provide insights for subsequent research.",
+      "published": "2026-11-03T18:54:29Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05359",
+      "pdf_url": "https://arxiv.org/pdf/2611.05359",
+      "summary_zh": "3D高斯泼溅序列压缩需兼顾低复杂度与硬件兼容性，现有方法难以高效利用标准视频编解码器。GSCV++联合改进预处理、3D到2D映射与视频压缩配置，提出能量自适应SH AC降维、基于先验的Inter-MiniPLAS平滑映射及内容感知广义压缩。实验显示帧内率失真增益超20%、帧间超60%，且2D图生成与编解码速度均优于同类SOTA方法。",
+      "summary_en": "Compressing 3D Gaussian Splatting sequences requires low complexity and hardware compatibility, yet existing methods struggle to exploit standard video codecs efficiently. GSCV++ jointly improves preprocessing, 3D-to-2D mapping, and practical video compression via energy-adaptive SH AC dimensionality reduction, prior-based Inter-MiniPLAS smooth mapping, and content-aware generalized compression. Experiments show over 20% intra and 60% inter rate-distortion gains over SOTA, with faster 2D map generation and encoding/decoding than comparable video-codec-based methods.",
+      "highlights_zh": [
+        "能量自适应SH降维+先验平滑映射+内容感知压缩",
+        "帧内增益超20%、帧间超60%，速度更优",
+        "兼容标准编解码器，利于工业落地"
+      ]
+    },
+    {
+      "id": "2611.05373",
+      "title": "Aligning Language Models with General Preferences: An Empirical Study of Direct Nash Optimization",
+      "authors": [
+        "Austin Tsai",
+        "Saurav Nanda",
+        "Ganapathy Parthasarathy",
+        "Bhuvnesh Kumar",
+        "Parivesh Choudhary"
+      ],
+      "abstract": "Direct Nash Optimization (DNO) aligns a language model to a general preference function by approximating the Nash equilibrium of a two-player preference game. Its practical variant, DNO-Prct, iterates on-policy sampling, LLM-based rating of the samples together with a teacher's gold response, large-margin preference-pair selection and a DPO-style contrastive update. We re-implement DNO-Prct independently and study it on two open-weight instruct models, Llama 3.1 8B Instruct and Mistral 7B Instruct v0.1, with GPT-4o or a larger open-weight model of the same family as the annotator. On AlpacaEval 2.0 with GPT-4o as judge, three iterations raise the length-controlled (LC) win rate against GPT-4o from 31.7% to 45.3% for Llama and from 6.8% to 18.4% for Mistral, and the tuned 8B model scores above Llama 3.1 70B Instruct on every reported win rate. With same-family open-weight annotators, the runs retain 62% (Llama) and 82% (Mistral) of the LC gain achieved with GPT-4o as annotator, so the rating step does not require a proprietary model. In a separate ablation configuration, variants that remove the gold responses, remove the data look-back, or accept only teacher-preferred pairs score 6 to 10 LC points below the full procedure, whereas varying the number of on-policy samples per prompt (1 to 7) moves the LC win rate by at most 2.1 points, and a margin sweep (1 to 5) run in its own pipeline by at most 2.4 points. We also report the cost of the pipeline and where the practical algorithm departs from the theory it approximates. All results are single runs, and GPT-4o is both the teacher and the evaluation judge; we discuss what this implies for the reported gains.",
+      "published": "2026-11-03T18:59:15Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05373",
+      "pdf_url": "https://arxiv.org/pdf/2611.05373",
+      "summary_zh": "DNO通过近似双人偏好博弈的纳什均衡，将语言模型对齐到通用偏好函数，但其实际变体DNO-Prct的有效性尚缺乏独立验证。作者独立复现DNO-Prct，在Llama 3.1 8B Instruct和Mistral 7B Instruct上使用GPT-4o或同族开源模型作为标注者进行实证研究，并开展消融实验。三轮迭代后，Llama在AlpacaEval 2.0上的长度控制胜率从31.7%升至45.3%，Mistral从6.8%升至18.4%，调优后的8B模型在所有报告的胜率上超过Llama 3.1 70B Instruct，且同族开源标注者能保留大部分增益。",
+      "summary_en": "Direct Nash Optimization (DNO) aligns language models to general preference functions by approximating the Nash equilibrium of a two-player preference game, but its practical variant DNO-Prct lacks independent validation. The authors independently re-implement DNO-Prct and study it on Llama 3.1 8B Instruct and Mistral 7B Instruct v0.1 with GPT-4o or same-family open-weight annotators, including ablations. After three iterations, length-controlled win rate on AlpacaEval 2.0 rises from 31.7% to 45.3% for Llama and from 6.8% to 18.4% for Mistral, the tuned 8B model beats Llama 3.1 70B Instruct on all reported win rates, and open-weight annotators retain most of the gain.",
+      "highlights_zh": [
+        "独立复现DNO-Prct并系统消融",
+        "Llama LC胜率31.7%升至45.3%",
+        "开源标注可替代GPT-4o，但单次运行且评委同源"
+      ],
+      "highlights_en": [
+        "Independent re-implementation and ablation of DNO-Prct",
+        "Llama LC win rate rises from 31.7% to 45.3%",
+        "Open-weight annotators suffice, but single runs and shared judge"
+      ]
+    },
+    {
+      "id": "2611.05358",
+      "title": "Suppressing Misaligned Behaviors in Language Models, Durably",
+      "authors": [
+        "Luxi He",
+        "Pengcheng Jiang",
+        "Jifan Zhang",
+        "Jiawei Han",
+        "Danqi Chen"
+      ],
+      "abstract": "Undesired model behaviors can emerge or re-emerge at any stage of training. Once observed, how effectively can we suppress them? To study this question, we first construct two model organisms--language models deliberately trained to exhibit a specific misalignment--that differ in what triggers the behavior. The narrow-trigger organism misbehaves only when the prompt contains a specific cue: it cheats on multiple-choice questions by following a planted hint that points to a wrong answer, and behaves normally otherwise. The broad-trigger organism has no such cue: after fine-tuning on insecure code, it gives harmful responses across a wide range of open-ended prompts. We then formalize post-hoc behavioral suppression and evaluate methods along three criteria: immediate suppression of the target behavior, durability under further training, and preservation of general capability. We compare standard methods--SFT, GRPO, and gradient-ascent unlearning--along these dimensions. Building on prior work on alignment shallowness, we hypothesize that more durable suppression requires the ability to recover from a wider range of misalignment states. We introduce Prefix-Expanded Adversarial Reinforcement Learning (PEARL), a GRPO variant that augments rollouts with continuations from intermediate states sampled along cached organism trajectories. Across both organism settings and two model families (Qwen3-4B, GPT-OSS-20B), PEARL achieves strong immediate suppression while preserving task accuracy, and remains durable under further fine-tuning on either the organism's data or unrelated data. It obtains the greatest benefit when the undesirable behavior is broad and cannot be addressed through targeted SFT. Together, our framework and method offer a step toward more durable post-hoc removal of undesired behaviors.",
+      "published": "2026-11-03T18:54:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05358",
+      "pdf_url": "https://arxiv.org/pdf/2611.05358",
+      "summary_zh": "语言模型在训练任意阶段都可能出现或重现不良行为，但观测到后如何有效抑制尚不清楚。作者构建了窄触发（选择题提示作弊）和宽触发（不安全代码微调后广泛有害）两种模型生物，形式化事后行为抑制并沿即时抑制、训练耐久性和通用能力保持三个维度评估SFT、GRPO与梯度上升遗忘，提出PEARL——一种用缓存轨迹中间状态续写增强rollout的GRPO变体。在Qwen3-4B和GPT-OSS-20B上，PEARL实现强即时抑制且保持任务准确率，在后续微调下仍耐久，对宽触发行为收益最大，为更持久地事后移除不良行为提供了框架与方法。",
+      "summary_en": "Undesired model behaviors can emerge or re-emerge at any training stage, yet how effectively they can be suppressed once observed remains unclear. The authors build two model organisms—a narrow-trigger one that cheats on multiple-choice questions via a planted hint and a broad-trigger one that gives harmful responses after insecure-code fine-tuning—formalize post-hoc behavioral suppression, and evaluate SFT, GRPO, and gradient-ascent unlearning on immediate suppression, durability under further training, and capability preservation, introducing PEARL, a GRPO variant that augments rollouts with continuations from intermediate states along cached organism trajectories. Across both organisms and two model families (Qwen3-4B, GPT-OSS-20B), PEARL achieves strong immediate suppression while preserving task accuracy, remains durable under further fine-tuning on organism or unrelated data, and yields the greatest benefit for broad behaviors not addressable by targeted SFT, offering a step toward more durable post-hoc removal of undesired behaviors.",
+      "highlights_zh": [
+        "PEARL用中间状态续写增强GRPO rollout",
+        "宽触发下仍耐久且保持准确率",
+        "适用于难以定向SFT的广泛不良行为"
+      ]
+    },
+    {
+      "id": "2611.05348",
+      "title": "OpenBrain: An Auditable Generated-Label Release for Whole-Brain MRI Parcellation",
+      "authors": [
+        "Qizhen Lan",
+        "Yu-Chun Hsu",
+        "Yuxiang Wei",
+        "Lijing Zhu",
+        "Zenan Sun",
+        "Liang He",
+        "Lishan Yu",
+        "Xiaoqian Jiang"
+      ],
+      "abstract": "Automatic tools can now generate whole-brain MRI parcellations at cohort scale, but generated-label releases often provide little evidence about which cases are reliable enough to reuse. We introduce OpenBrain, a confidence-aware release of 35,838 provenance-verified OpenNeuro T1w cases from 607 source datasets. OpenBrain is organized as an auditable case-record release rather than a directory of standalone segmentation files: each record links a primary parcellation, two committee parcellations, source/license provenance, raw QC-7 measurements, percentile risks, a combined risk score R, and a confidence tier. QC-7 is a reference-free reliability panel over label geometry, image-label consistency, and committee disagreement, so users can filter, weight, audit, or re-threshold generated labels without rerunning inference. We evaluate this released evidence under a frozen protocol. Across external cohorts, lower QC-7 risk corresponds to higher generated-label quality; in fixed-budget training, lower-risk selections improve paired macro Dice over random selection by +3.2 to +3.7 percentage points. OpenBrain also exposes raw axes, committee outputs, provenance, and datasheet documentation, so confidence claims remain inspectable after download. It does not turn generated labels into manual annotations or clinical-grade segmentations. Its contribution is a large open generated-parcellation substrate, a reusable case-level risk-evidence layer, and an external validation protocol for release-time QC. Dataset: https://huggingface.co/datasets/lanqz7766/OpenBrain. Code: https://github.com/lanqz7766/openbrain.",
+      "published": "2026-11-03T18:47:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.05348",
+      "pdf_url": "https://arxiv.org/pdf/2611.05348",
+      "summary_zh": "全脑MRI自动分割已可队列级生成，但发布的分割标签缺乏可靠性证据，用户难以判断哪些病例可复用。OpenBrain发布了35,838例经来源验证的OpenNeuro T1w病例，以可审计病例记录形式组织，每条记录关联主分割、两个委员会分割、来源许可、QC-7无参考可靠性指标、百分位风险、综合风险分R与置信层级，用户无需重跑推理即可筛选、加权、审计或重新阈值化。在冻结协议下，外部队列中QC-7风险越低生成标签质量越高，固定预算训练中低风险选择较随机选择提升配对宏Dice 3.2–3.7个百分点，为发布时质控提供了可复用风险证据层与外部验证协议。",
+      "summary_en": "Automated tools can now generate whole-brain MRI parcellations at cohort scale, but generated-label releases offer little evidence about which cases are reliable enough to reuse. OpenBrain releases 35,838 provenance-verified OpenNeuro T1w cases as auditable case records, each linking a primary parcellation, two committee parcellations, source/license provenance, reference-free QC-7 reliability measurements, percentile risks, a combined risk score R, and a confidence tier, so users can filter, weight, audit, or re-threshold labels without rerunning inference. Under a frozen protocol, lower QC-7 risk corresponds to higher generated-label quality across external cohorts, and lower-risk selection improves paired macro Dice by 3.2–3.7 percentage points over random selection in fixed-budget training, providing a reusable case-level risk-evidence layer and an external validation protocol for release-time QC.",
+      "highlights_zh": [
+        "可审计病例记录+QC-7无参考风险证据层",
+        "低风险选择较随机提升宏Dice 3.2–3.7个百分点",
+        "非临床级标注，仅供生成标签复用筛选"
+      ]
+    }
+  ]
+}
