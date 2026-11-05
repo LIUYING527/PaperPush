@@ -1,0 +1,385 @@
+{
+  "date": "2026-11-05",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.06911",
+      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+      "authors": [
+        "Fei Lin",
+        "Tengchao Zhang",
+        "Ziyang Gong",
+        "Xiaotong Yu",
+        "Bohan Zhang",
+        "Yifan Zhou",
+        "Qihao Yang",
+        "Ji Dai",
+        "Dong Li",
+        "Yining Jiang",
+        "Qinghua Ni",
+        "Jun Huang",
+        "Qiang Zhang",
+        "Yue Zhou",
+        "Zhihang Zhong",
+        "Yonglin Tian",
+        "Fei-Yue Wang",
+        "Xue Yang"
+      ],
+      "abstract": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.",
+      "published": "2026-11-04T18:57:17Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06911",
+      "pdf_url": "https://arxiv.org/pdf/2611.06911",
+      "summary_zh": "自驱动化学实验室需要多模态大模型作为具身大脑，但现有实验室基准主要关注安全、异常检测或通用科学理解，缺乏对执行导向具身能力的评估。作者提出BEAKER基准，包含1000个由化学与具身AI专家人工创建和审核的问答样本，覆盖11种图像与视频任务类型，评估28个通用、科学、化学专用及具身MLLM。结果显示模型能跟随粗略实验流程，但在可操作区域定位、可行轨迹规划、细粒度仪器与状态识别及中等长度步骤排序上仍存在明显差距，揭示了粗略流程理解与精确动作感知之间的鸿沟。",
+      "summary_en": "Self-driving chemical laboratories require MLLMs as embodied brains, yet existing lab benchmarks focus on safety, anomaly detection, or general scientific understanding, leaving execution-oriented embodied capabilities underexplored. We introduce BEAKER, a 1,000-sample expert-curated benchmark across 11 image and video task types, manually created and reviewed by chemistry and embodied AI experts, and evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs. Results show models can follow coarse procedures but struggle with action grounding, feasible trajectories, fine-grained apparatus/state/safety recognition, and step ordering, revealing a clear gap between coarse procedural understanding and precise action-grounded perception.",
+      "highlights_zh": [
+        "专家人工构建执行导向具身基准",
+        "28个MLLM在动作定位与轨迹上普遍失败",
+        "为自驱动实验室诊断模型短板"
+      ]
+    },
+    {
+      "id": "2611.06910",
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "authors": [
+        "Bingran You",
+        "Wenjun Ke",
+        "Ria Rosenauer",
+        "Bo Liu",
+        "Wenbo Chen",
+        "Min Chen",
+        "Shuqi Xu",
+        "Yue Ma",
+        "Jiechao Feng",
+        "Bo Chen",
+        "Xiangkai Sun",
+        "Jiarui Liu",
+        "Jinen Guo",
+        "Zeyu Zhou",
+        "Xu Huang",
+        "Zhuohan Li",
+        "Haoyu Li",
+        "Heguang Lin",
+        "Lijie Ding",
+        "Yadong Zeng",
+        "Kangqi Zhang",
+        "Xinge Liu",
+        "Hanwen Liu",
+        "Zhenghong Li",
+        "Alexander von Recum",
+        "Yuchen Zhu",
+        "Felix Schwarzfischer",
+        "Yizhou Zhao",
+        "Jicheng Wang",
+        "Binxu Li",
+        "Qian Yu",
+        "Chan Li",
+        "Cheng Dai",
+        "Di Wang",
+        "Haoyu Zhang",
+        "Jiankai Sun",
+        "Kaituo Feng",
+        "Mian Qin",
+        "Ruihong Yin",
+        "Yiqun Luo",
+        "Weiwei Wu",
+        "Shihong Pan",
+        "Tsung Yeh Hsieh",
+        "Xiao Huang",
+        "Yan Zhang",
+        "Sihan Li",
+        "Zirui Ren",
+        "Zengji Tu",
+        "Kyoung Whan Choe",
+        "Ke Sun",
+        "Vincenzo Galia",
+        "Vaisakhi Mishra",
+        "Jiashu He",
+        "Hongyang Wang",
+        "Zhiheng Yang",
+        "Shubham Gaur",
+        "Yifan Gu",
+        "Shuyi Wang",
+        "Zihao Zuo",
+        "Steven Dillmann",
+        "Yiyou Sun",
+        "Xinyang Han",
+        "Hanchung Lee",
+        "Molei Tao",
+        "Yue Zhao",
+        "Shilong Liu",
+        "Yuchen Wu",
+        "Xuandong Zhao",
+        "Xiangyi Li",
+        "Florian Brand",
+        "Gerbrand Ceder",
+        "Hartmut Haeffner"
+      ],
+      "abstract": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.",
+      "published": "2026-11-04T18:56:22Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06910",
+      "pdf_url": "https://arxiv.org/pdf/2611.06910",
+      "summary_zh": "现有物理基准只评估固定问题、孤立子任务或给定解的论文复现，且很少同时检验研究质量与正确性。FrontierPhysics由42位物理学家基于自身研究构建56个端到端任务，覆盖九大领域，要求智能体完成文献综述、研究规划、实验与论文撰写，并用确定性验证器与专家评分表联合评估。在22个模型26种配置中，最佳配置168次运行仅通过46次，主要短板是推理不够严谨与专家直觉不足，而非物理知识或执行错误。",
+      "summary_en": "Existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely assess research quality alongside correctness. FrontierPhysics is an end-to-end benchmark of 56 tasks authored by 42 physicists from their own research across nine domains, requiring agents to review literature, plan, conduct experiments, and produce structured outputs and manuscripts, evaluated via deterministic verifiers plus expert rubrics. Across 22 models in 26 configurations, the best passes only 46 of 168 rollouts, with weaknesses traced to insufficiently rigorous reasoning and limited expert intuition rather than physics knowledge or execution errors.",
+      "highlights_zh": [
+        "专家自建56个端到端物理研究任务",
+        "最佳配置168次仅通过46次",
+        "短板在推理严谨性与专家直觉"
+      ]
+    },
+    {
+      "id": "2611.06914",
+      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+      "authors": [
+        "Mattia Greiche",
+        "Reihaneh Rabbany",
+        "Maximilian Puelma Touzel"
+      ],
+      "abstract": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a validation problem for social simulation. One plausible hypothesis is that this brittleness reflects a lack of grounding and can be reduced by enriching the context provided to the agents. Whether richer context improves robustness remains unclear, in part because context richness and robustness are rarely defined in ways that support controlled comparisons. We address the first need with controlled context enrichment, a set of prompt substitution rules that systematically enriches distinct types of context: neutral padding, generic social background, descriptive decision grounding, and normative decision grounding. We address the second by introducing selective robustness as a validation criterion: insensitivity to meaning-preserving prompt variation combined with a directional response to decision-relevant changes in the social world. We demonstrate the framework in a Prisoner's Dilemma-like game, showing how it can be used to identify which forms of context enrichment produce more desirable and robust agent behavior. We find that these forms of enrichment produce distinct behavioral patterns that vary between the two models tested.",
+      "published": "2026-11-04T18:58:23Z",
+      "primary_category": "cs.MA",
+      "categories": [
+        "cs.MA",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06914",
+      "pdf_url": "https://arxiv.org/pdf/2611.06914",
+      "summary_zh": "LLM智能体在社会模拟中对保持语义的提示变化表现出行为漂移，构成验证难题，而丰富上下文能否提升鲁棒性尚不明确。作者提出受控上下文丰富方法（中性填充、通用社会背景、描述性决策依据、规范性决策依据）并引入选择性鲁棒性作为验证标准，即对语义保持变化不敏感、同时对决策相关变化有方向性响应。在类囚徒困境博弈中，不同丰富形式产生各异行为模式且在两模型间不同，为识别更理想且鲁棒的上下文设计提供了可比较框架。",
+      "summary_en": "LLM agents in social simulations drift behavior under meaning-preserving prompt variations, creating a validation problem, and whether richer context improves robustness is unclear. The authors introduce controlled context enrichment (neutral padding, generic social background, descriptive and normative decision grounding) and selective robustness as a validation criterion: insensitivity to meaning-preserving variation combined with directional response to decision-relevant changes. In a Prisoner's Dilemma-like game, enrichment forms yield distinct behavioral patterns that differ across the two tested models, offering a comparable framework for identifying desirable, robust context designs.",
+      "highlights_zh": [
+        "受控上下文丰富+选择性鲁棒性标准",
+        "不同丰富形式行为模式各异且随模型变化",
+        "为社会模拟智能体验证提供可比较框架"
+      ]
+    },
+    {
+      "id": "2611.06912",
+      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
+      "authors": [
+        "Nicolas Tricard",
+        "Linzheng Wang",
+        "Jason Chen",
+        "Sili Deng"
+      ],
+      "abstract": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluates ten learned and five classical methods on three regimes: a laminar cylinder wake across Reynolds numbers, two-dimensional Kolmogorov turbulence and a large-scale three-dimensional (3D) isotropic turbulence. Methods share leakage-controlled splits and sensor draws and are scored on per-channel error, ensemble spread, calibration, spectra and cost. The leading method changes for each regime. Classical methods perform strongly in low-order and dense-sensing regimes. On the cylinder wake, linear stochastic estimation and gappy proper orthogonal decomposition lead, including for unobserved pressure. In 3D, inverse-distance weighting matches the best learned methods on observed channels. Data-driven methods become superior at decreasing sensor density or poor sensor observability. On Kolmogorov flow, continuous ranked probability score and error yield different method rankings: generative models offer broader but underdispersed ensembles, while deterministic models prioritize pointwise error. Generative models balance this tradeoff through their sampler budget, with a larger budget improving ensemble quality at higher computational cost. In 3D, scaling tests demonstrate that queryable methods are flat in memory, while full-grid construction methods run out of memory. Observing only 2 of 4 fields leaves the problem kinematically underconstrained, yet a latent model can reproduce structural similarities to the ground truth.",
+      "published": "2026-11-04T18:57:47Z",
+      "primary_category": "physics.flu-dyn",
+      "categories": [
+        "physics.flu-dyn",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06912",
+      "pdf_url": "https://arxiv.org/pdf/2611.06912",
+      "summary_zh": "从稀疏传感器重建完整流场需要先验假设，但学习模型何时优于经典估计器、其预测哪些方面可信尚不清楚。FlowReconBench在层流圆柱尾迹、二维Kolmogorov湍流和大规模三维各向同性湍流三种情形下，用泄漏控制的划分与传感器采样统一评测10种学习方法和5种经典方法，并按逐通道误差、集合离散度、校准、谱和成本打分。结果表明各情形领先方法不同：经典方法在低阶和密集传感下表现强，数据驱动方法在传感器稀疏或可观测性差时更优，生成模型以采样预算权衡集合质量与计算成本，且可查询方法内存占用平稳而全网格方法会内存耗尽。",
+      "summary_en": "Reconstructing full flow fields from sparse sensors requires prior assumptions, yet it remains unclear when learned models beat classical estimators and which predictions are trustworthy. FlowReconBench benchmarks ten learned and five classical methods across a laminar cylinder wake, 2D Kolmogorov turbulence and large-scale 3D isotropic turbulence with leakage-controlled splits and sensor draws, scoring per-channel error, ensemble spread, calibration, spectra and cost. The leading method differs by regime: classical methods excel in low-order and dense-sensing settings, data-driven methods win at low sensor density or poor observability, generative models trade sampler budget for ensemble quality versus cost, and queryable methods keep flat memory while full-grid construction runs out of memory.",
+      "highlights_zh": [
+        "统一基准评测10种学习与5种经典流场重建方法",
+        "圆柱尾迹中LSE与gappy POD领先，含未观测压力",
+        "生成模型以采样预算权衡集合质量与计算成本"
+      ]
+    },
+    {
+      "id": "2611.06876",
+      "title": "SpecCompact: Accelerating LLM Agent Context Compaction with Slot-Parallel Semantic Speculative Verification",
+      "authors": [
+        "Yulu An",
+        "Yifei Feng",
+        "Xiangyang Yin"
+      ],
+      "abstract": "LLM agents use context compaction to manage growing interaction histories, but summarizing long histories with large models can introduce substantial delays. Compaction therefore requires balancing information retention against latency. We observe that structured summary slots can retain information when generated independently. Based on this observation, we present SpecCompact, a framework that accelerates compaction through slot-parallel semantic speculation. SpecCompact fine-tunes a small drafter and generates slots in parallel. The target model verifies each proposed line and repairs rejected content, while subsequent drafting uses the updated slot prefix. System optimizations further reduce repeated context processing and model calls. Across AppWorld and $τ^3$ benchmarks with two target models, SpecCompact achieves $2.04$--$5.63\\times$ compaction speedups over Hermes-style summarization. Separate downstream evaluations reveal model- and task-dependent performance trade-offs. A user study within Hermes further shows an $8.68\\times$ median compaction speedup.",
+      "published": "2026-11-04T18:34:41Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06876",
+      "pdf_url": "https://arxiv.org/pdf/2611.06876",
+      "summary_zh": "LLM智能体需压缩不断增长的交互历史，但大模型摘要长历史会带来显著延迟，需在信息保留与延迟间权衡。SpecCompact利用结构化摘要槽可独立生成以保留信息的观察，微调小型起草器并行生成各槽，由目标模型逐行验证并修复被拒内容，后续起草使用更新后的槽前缀，并辅以系统优化减少重复上下文处理和模型调用。在AppWorld和τ³基准上，该方法相比Hermes式摘要实现2.04–5.63倍压缩加速，用户研究中位压缩加速达8.68倍，但下游评估显示性能权衡依赖模型与任务。",
+      "summary_en": "LLM agents compress growing interaction histories, but summarizing long histories with large models incurs substantial latency, forcing a trade-off between information retention and speed. SpecCompact exploits the observation that structured summary slots retain information when generated independently, fine-tuning a small drafter to generate slots in parallel while the target model verifies each proposed line, repairs rejected content, and subsequent drafting uses the updated slot prefix, with system optimizations reducing repeated context processing and model calls. On AppWorld and τ³ with two target models, it achieves 2.04–5.63× compaction speedups over Hermes-style summarization, with an 8.68× median speedup in a user study, though downstream evaluations reveal model- and task-dependent performance trade-offs.",
+      "highlights_zh": [
+        "槽并行语义推测验证加速压缩",
+        "2.04–5.63倍压缩加速，中位8.68倍",
+        "提速显著但下游性能存在权衡"
+      ]
+    },
+    {
+      "id": "2611.06859",
+      "title": "Balancing hierarchical representation and quantization: A performance trade-off in text embeddings",
+      "authors": [
+        "Kai Ponel",
+        "Marco Polignano",
+        "Erasmo Purificato",
+        "Aylin Julia Temizkan",
+        "Marco Levantesi",
+        "Giovanni Semeraro",
+        "Ernesto William De Luca"
+      ],
+      "abstract": "Hierarchical text embedding models offer variable-length representations, while quantization reduces numerical precision; both aim to improve computational efficiency. This work is an empirical benchmark study of how these two orthogonal, already-established techniques interact. We evaluate 38 tasks from the Massive Text Embedding Benchmark (MTEB) using four transformer-based embedding models, covering 1D and 2D hierarchical representations combined with 32-bit, 8-bit, and binary quantization, for 168 configurations per task. We report each efficiency dimension separately: theoretical per-vector storage and end-to-end evaluation time. Under a Friedman test with Nemenyi post-hoc analysis, int8 quantization is statistically indistinguishable from float32 for pair classification and re-ranking and costs at most 1.5 percentage points overall, whereas binary quantization is significantly worse across every task category. Halving the embedding dimension once is not statistically detectable above $m=16$; two successive halvings always are. Combining an 8x dimensionality reduction with int8 yields a 32x reduction in per-vector storage at 94.4% of baseline effectiveness. Because evaluation times were measured once, we treat them as indicative: we find no evidence that quantization speeds up evaluation, whereas sampling from intermediate layers shortens it substantially. Retrieval degrades far faster than every other category, so we report findings per task category.",
+      "published": "2026-11-04T18:15:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06859",
+      "pdf_url": "https://arxiv.org/pdf/2611.06859",
+      "summary_zh": "分层文本嵌入与量化是两种正交的效率优化技术，但它们如何相互作用尚缺乏系统实证。本文在MTEB的38个任务上，用4个模型将1D/2D分层表示与32位、8位、二值量化组合成168种配置，分别测量存储与端到端评估时间。结果显示int8量化与float32统计上不可区分（最多损失1.5个百分点），二值量化则显著变差；8倍降维加int8可实现32倍存储缩减并保留94.4%效果，且量化并未加速评估，而中间层采样能显著缩短时间。",
+      "summary_en": "Hierarchical text embeddings and quantization are two orthogonal efficiency techniques whose interaction remains empirically uncharacterized. This work benchmarks 168 configurations per task across 38 MTEB tasks and four transformer models, combining 1D/2D hierarchical representations with 32-bit, 8-bit, and binary quantization while reporting storage and end-to-end evaluation time separately. Int8 quantization is statistically indistinguishable from float32 (at most 1.5 percentage points loss) whereas binary quantization is significantly worse; 8x dimensionality reduction plus int8 yields 32x storage reduction at 94.4% of baseline effectiveness, and quantization shows no evaluation speedup while intermediate-layer sampling shortens it substantially.",
+      "highlights_zh": [
+        "系统基准分层表示与量化的交互",
+        "8倍降维+int8达32倍存储缩减、94.4%效果",
+        "量化不加速评估，检索退化最快"
+      ]
+    },
+    {
+      "id": "2611.06918",
+      "title": "From Pixels to Actions - Towards Native Vision-Language-Action Policies",
+      "authors": [
+        "Weichen Fan",
+        "Haiwen Diao",
+        "Penghao Wu",
+        "Siyuan Hu",
+        "Ziqi Huang",
+        "Tianqi Liu",
+        "Mingze Sun",
+        "Ziyi Wang",
+        "Zhongang Cai",
+        "Hanming Deng",
+        "Quan Wang",
+        "Lei Yang",
+        "Lewei Lu",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Dahua Lin",
+        "Ziwei Liu"
+      ],
+      "abstract": "Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on precisely the visual signals most vulnerable to this abstraction, e.g., local geometry, boundaries, depth, and subtle state changes. This raises a fundamental question: should action policies inherit a fixed visual endpoint, or directly access evolving visual computation? We introduce NEO-VLA, a structurally encoder-free vision-language-action framework. Images are tokenized by lightweight patch convolutional layers and evolve jointly with language throughout the backbone, allowing a flow-matching action expert to draw from instruction-conditioned visual representations at different depths. This simple change reveals a consistent pattern. Native architectures outperform encoder-based counterparts under controlled comparisons; full fine-tuning reduces but does not erase the gap, and additional scale alone cannot recover it. More strikingly, layer-wise probing shows that the action-critical signals often peak well before the final visual representation. Across diverse manipulation settings and distribution shifts, NEO-VLA consequently achieves stronger and more robust control. Together, these results suggest that embodied control benefits from access to visual representations across the computational hierarchy, rather than a fixed encoder output.",
+      "published": "2026-11-04T18:59:58Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06918",
+      "pdf_url": "https://arxiv.org/pdf/2611.06918",
+      "summary_zh": "现有视觉-语言-动作模型通常先用视觉编码器压缩感知、再开始动作推理，但操作任务恰恰依赖局部几何、边界、深度和细微状态变化等易被抽象丢失的信号。作者提出NEO-VLA，一种无编码器框架，用轻量patch卷积对图像分词，使视觉与语言在主干中共同演化，并让流匹配动作专家从不同深度的指令条件视觉表征中提取信息。受控对比显示原生架构持续优于编码器方案，逐层探测发现动作关键信号常在最终视觉表征之前达到峰值，从而在多种操作场景和分布偏移下实现更强更鲁棒的控制。",
+      "summary_en": "Vision-language-action models typically compress perception through a visual encoder before action reasoning, yet manipulation depends on local geometry, boundaries, depth, and subtle state changes that such abstraction can lose. The authors introduce NEO-VLA, an encoder-free framework that tokenizes images with lightweight patch convolutions, evolves vision jointly with language through the backbone, and lets a flow-matching action expert draw from instruction-conditioned visual representations at multiple depths. Controlled comparisons show native architectures consistently outperform encoder-based counterparts, layer-wise probing reveals action-critical signals often peak before the final visual representation, and NEO-VLA achieves stronger, more robust control across diverse manipulation settings and distribution shifts.",
+      "highlights_zh": [
+        "无编码器原生VLA架构",
+        "动作关键信号早于末层峰值",
+        "层次化视觉表征提升鲁棒控制"
+      ]
+    },
+    {
+      "id": "2611.06901",
+      "title": "Motion-guided Contrastive Regularization For Latent World Models",
+      "authors": [
+        "Yiwen Chen",
+        "Qiqi Hou",
+        "Jisoo Jeong",
+        "Yinhao Zhu",
+        "Huaizu Jiang",
+        "Amir Said"
+      ],
+      "abstract": "JEPA-style world models learn action-conditioned latent dynamics without reconstructing observations, but distributional regularization alone does not ensure that their representations preserve information needed for control. We identify static collapse, a failure mode in which the encoder preserves episode-specific static content while suppressing manipulation-relevant state changes. Because static content is temporally predictable yet diverse across episodes, this failure can persist despite regularizers such as SIGReg. A controlled study on OGBench-Cube shows that introducing randomized backgrounds substantially degrades planning performance while leaving the underlying manipulation task unchanged. To address this problem, we propose motion-guided contrastive regularization. Our approach compares predicted latent transitions with transitions to candidate observations from the same episode, reducing the usefulness of static background identity for distinguishing action outcomes. Optical-flow similarities provide soft contrastive targets, allowing candidates with similar motion to receive similar supervision. Combined with latent prediction and SIGReg, our objective encourages representations to preserve within-episode state distinctions and similarities between related transitions. Our method improves planning success over LeWorldModel (LeWM) from 52% to 78% on OGBench-Cube with randomized backgrounds and from 14% to 54% on LIBERO-Object, while maintaining comparable performance on four other visual-control benchmarks.",
+      "published": "2026-11-04T18:49:35Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06901",
+      "pdf_url": "https://arxiv.org/pdf/2611.06901",
+      "summary_zh": "JEPA式世界模型仅靠分布正则无法保证表征保留控制所需信息，会出现静态坍缩——编码器保留回合特有的静态内容却抑制操作相关状态变化，随机背景会显著降低规划性能。作者提出运动引导对比正则，将预测的潜在转移与同一回合候选观测的转移对比，并用光流相似度提供软对比目标，使相似运动的候选获得相似监督。在OGBench-Cube随机背景下规划成功率从52%提升至78%，LIBERO-Object从14%提升至54%，其余四个视觉控制基准性能相当。",
+      "summary_en": "JEPA-style world models with only distributional regularization can suffer static collapse, where the encoder preserves episode-specific static content while suppressing manipulation-relevant state changes, and randomized backgrounds substantially degrade planning performance. The authors propose motion-guided contrastive regularization that compares predicted latent transitions with transitions to candidate observations from the same episode, using optical-flow similarities as soft contrastive targets so candidates with similar motion receive similar supervision. Planning success improves from 52% to 78% on OGBench-Cube with randomized backgrounds and from 14% to 54% on LIBERO-Object, while performance remains comparable on four other visual-control benchmarks.",
+      "highlights_zh": [
+        "运动引导软对比正则",
+        "OGBench-Cube 52%→78%",
+        "提升视觉控制鲁棒性"
+      ],
+      "highlights_en": [
+        "Motion-guided soft contrastive regularization",
+        "OGBench-Cube 52% to 78%",
+        "Improves visual-control robustness"
+      ]
+    },
+    {
+      "id": "2611.06913",
+      "title": "cuRoboV2-Fast: Fast Torque-Limited Collision-Free Motion Planning",
+      "authors": [
+        "Balakumar Sundaralingam",
+        "Adithyavairavan Murali",
+        "Stan Birchfield"
+      ],
+      "abstract": "We present cuRoboV2-Fast, a GPU-accelerated planner that reduces both planning latency and execution time for collision-free, payload-aware, torque-limited motions. B-spline trajectory optimization reduces the required iterations, while accelerated robot computations and differentiable inverse dynamics reduce refinement cost and accommodate changing payloads. TimeOpt optimizes traversal speed along the fixed path under sampled velocity, acceleration, jerk, and torque constraints, exploiting local spline support to solve banded Newton systems efficiently on the GPU. With a 3,kg payload, cuRoboV2-Fast achieves 4.4 ms mean planning time on RTX 5090, 14.7x faster than cuRoboV2. Our method on Jetson AGX Orin plans faster than cuRoboV1 + TOPPRA on RTX 5090. A stereo-camera-based deployment on YAM achieves 5.93 s mean completed pick-and-drop cycles, 34.6% shorter than cuRoboV2. Code (Apache 2.0): www.github.com/NVlabs/curobo , Project Page: www.research.nvidia.com/labs/lpr/curobov2-fast .",
+      "published": "2026-11-04T18:58:20Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06913",
+      "pdf_url": "https://arxiv.org/pdf/2611.06913",
+      "summary_zh": "针对无碰撞、负载感知且受力矩约束的运动规划，现有方法规划延迟与执行时间仍偏高。cuRoboV2-Fast 采用B样条轨迹优化减少迭代，结合加速机器人计算与可微逆动力学降低细化成本并适应负载变化，同时用TimeOpt在采样约束下优化固定路径速度并利用局部样条支撑在GPU上高效求解带状牛顿系统。在3kg负载下于RTX 5090上实现4.4ms平均规划时间，比cuRoboV2快14.7倍，Jetson AGX Orin上的规划速度超过RTX 5090上的cuRoboV1+TOPPRA，YAM双目部署完成抓放循环平均5.93s、缩短34.6%。",
+      "summary_en": "Collision-free, payload-aware, torque-limited motion planning still suffers from high planning latency and execution time. cuRoboV2-Fast uses B-spline trajectory optimization to cut iterations, accelerated robot computations and differentiable inverse dynamics to reduce refinement cost and handle changing payloads, and TimeOpt to optimize traversal speed along a fixed path under sampled velocity, acceleration, jerk, and torque constraints via GPU-efficient banded Newton solves exploiting local spline support. With a 3 kg payload it achieves 4.4 ms mean planning on an RTX 5090, 14.7x faster than cuRoboV2, plans faster on Jetson AGX Orin than cuRoboV1+TOPPRA on RTX 5090, and reaches 5.93 s mean pick-and-drop cycles on YAM with stereo cameras, 34.6% shorter than cuRoboV2.",
+      "highlights_zh": [
+        "B样条优化+可微逆动力学降迭代",
+        "RTX 5090上4.4ms，快14.7倍",
+        "抓放循环缩短34.6%，已开源"
+      ]
+    },
+    {
+      "id": "2611.06881",
+      "title": "VABAR: A Variational Automation Benchmark for Agentic Robotics",
+      "authors": [
+        "Shuangyu Xie",
+        "Kaiyuan Chen",
+        "Uksang Yoo",
+        "Xinyue Zhu",
+        "Meadow Shen",
+        "Jaimyn Drake",
+        "Eugen Solowjow",
+        "Lionel Gulich",
+        "Alexander Millane",
+        "Rafael Cathomen",
+        "Tuur Stuyck",
+        "Sangeeta Subramanian",
+        "Yichao Pan",
+        "Bruce McGowan",
+        "Michael Benedict",
+        "Linxi Fan",
+        "Yuke Zhu",
+        "Spencer Huang",
+        "Ken Goldberg"
+      ],
+      "abstract": "For robots to operate reliably in commercial and industrial applications, they must persistently perform specific tasks with known variations in object shape and pose. We call this Variational Automation (VA) to differentiate these settings from fixed automation. Inspired by recent papers on Agentic Robotics, where pretrained LLM and VLM coding agents combine interpretable robot programming with the open-world adaptability of model free policies, we propose a general set of agentic robotics benchmark design criteria that includes accessibility, repeatability, diversity, relevance to agentic robotics and practical applications, physical realizability, resistance to benchmark saturation, and computational efficiency. We instantiate these principles in six manipulation task classes spanning industrial, medical, and infrastructure applications: tool sorting, tool hanging, gear meshing, syringe packing, cable insertion, and cable routing. We introduce the Variational Automation Benchmark for Agentic Robotics (VABAR), an open, easily replicable, simulation-based manipulation benchmark to systematically evaluating agentic robotics systems. Built fully on open-source tools, VABAR features detailed implementations using the Newton physics engine, standardized task variations, difficulty tiers, success metrics, and a library of 33 generalizable skills with human-authored programmatic reference solutions. We provide initial baseline evaluations using an open agentic manipulation harness, Graph-as-Policy (GaP), and Isaac Lab Arena.",
+      "published": "2026-11-04T18:38:01Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.06881",
+      "pdf_url": "https://arxiv.org/pdf/2611.06881",
+      "summary_zh": "商业和工业机器人需在物体形状和位姿变化下持续执行特定任务（变异性自动化），但缺乏系统评估智能体机器人系统的基准。作者提出一套基准设计准则，并构建了基于开源Newton物理引擎的仿真基准VABAR，包含六类操作任务、标准化变体、难度分级、成功指标及33个可泛化技能与人工编写的程序化参考解。该基准为智能体机器人提供了可复现的评估平台，并用Graph-as-Policy和Isaac Lab Arena给出了初始基线结果。",
+      "summary_en": "Robots in commercial and industrial settings must persistently perform tasks under known variations in object shape and pose, termed Variational Automation, yet no systematic benchmark exists for evaluating agentic robotics systems in these settings. The authors propose benchmark design criteria and instantiate them in VABAR, an open-source, simulation-based manipulation benchmark built on the Newton physics engine with six task classes, standardized variations, difficulty tiers, success metrics, 33 generalizable skills, and human-authored programmatic reference solutions. VABAR offers a reproducible evaluation platform for agentic robotics, with initial baselines from Graph-as-Policy and Isaac Lab Arena.",
+      "highlights_zh": [
+        "提出变异性自动化基准设计准则",
+        "六类任务+33技能+参考解",
+        "开源可复现，支持智能体评估"
+      ]
+    }
+  ]
+}
