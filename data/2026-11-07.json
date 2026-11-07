@@ -1,0 +1,303 @@
+{
+  "date": "2026-11-07",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.08483",
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "authors": [
+        "Qile Jiang",
+        "George Em Karniadakis"
+      ],
+      "abstract": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve first found with frontier LLMs. Our work shows that agent swarms that communicate in latent space offer a fast, low-cost approach to program search for scientific problems.",
+      "published": "2026-11-05T18:59:29Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.NE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08483",
+      "pdf_url": "https://arxiv.org/pdf/2611.08483",
+      "summary_zh": "LLM引导的进化搜索通过迭代精炼和组合高分方案来改进程序，但每轮生成长文本思维链且需多次重复以维持种群多样性，导致过程缓慢。SwarmEvolve让每轮数百个低成本智能体以群体形式在潜空间中推理而无需解码为文本，通过传递KV缓存共享信息，各群体从不同角度研究问题，新颖性过滤器直接测量隐藏状态向量距离以保留最独特的想法，并在潜空间中自然完成思想交叉。在21个数学发现与科学计算问题上，SwarmEvolve取得最高平均分，仅需3至8分钟中位时间即可达到其他最先进框架60分钟才能达到的最佳分数，并在若干问题上用Qwen3 8B超越了AlphaEvolve首次用前沿LLM找到的解，展示了潜空间通信智能体群体为科学问题程序搜索提供快速低成本途径。",
+      "summary_en": "LLM-guided evolutionary search improves programs by iteratively refining and combining high-scoring solutions, but it is slow because the LLM generates long textual chains of thought each round and must repeat this many times to maintain population diversity. SwarmEvolve lets hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches, with each swarm studying the problem from a different angle, a novelty filter keeping the most distinct ideas via hidden-state distances, and crossover occurring naturally as a summarizer agent receives combined KV caches. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve achieves the highest average score and needs a median of only 3 to 8 minutes to reach best scores that other state-of-the-art frameworks reach in 60 minutes, improving on several solutions AlphaEvolve first found with frontier LLMs using Qwen3 8B, showing that latent-space-communicating agent swarms offer a fast, low-cost approach to program search for scientific problems.",
+      "highlights_zh": [
+        "潜空间KV缓存通信的智能体群体",
+        "3-8分钟达他人60分钟最佳分数",
+        "快速低成本科学程序搜索"
+      ],
+      "highlights_en": [
+        "Latent-space KV-cache agent swarms",
+        "3-8 min vs 60 min best scores",
+        "Fast low-cost scientific program search"
+      ]
+    },
+    {
+      "id": "2611.08478",
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "authors": [
+        "Taiming Lu",
+        "Sachin Konan",
+        "Zhuang Liu"
+      ],
+      "abstract": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment. Our autonomous pipeline extracts each paper's open-ended research question and reproduces its proposed method as the baseline; an AI-Scientist entering the environment is evaluated against what the human authors achieved. We release the first 1,000 verified environments. With the world as an evaluation, we found that frontier AI-Scientists can already surpass the human researchers 74% of the time. As a record of how AI does science, it contains 6,400 hours of research traces, with every idea, experiment, failure, and success. As a training ground, we are able to raise (+158%) a small model to match frontier models in research ideation. At last, AI-Scientists' own world has arrived, grown from and growing with science itself.",
+      "published": "2026-11-05T18:58:17Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08478",
+      "pdf_url": "https://arxiv.org/pdf/2611.08478",
+      "summary_zh": "AI-Scientists已经出现，但缺乏可供其运行和成长的研究环境，科学文献对它们只可读而不可执行。作者构建了Scientist World，将每篇论文转化为可执行环境，自动提取开放研究问题并复现基线方法，供AI-Scientist在其中与人类作者成果对比评估。首批发布1000个已验证环境，发现前沿AI-Scientists已有74%的情况超越人类研究者，并积累6400小时研究轨迹，还能将小模型研究构思能力提升158%以比肩前沿模型。",
+      "summary_en": "AI-Scientists have arrived, but they lack a runnable world to grow in, since the scientific literature is readable yet not executable for them. The authors build Scientist World, turning each paper into an executable environment that extracts its open-ended research question and reproduces its method as a baseline, so an entering AI-Scientist is evaluated against the human authors' results. They release the first 1,000 verified environments, find frontier AI-Scientists already surpass human researchers 74% of the time, record 6,400 hours of research traces, and raise a small model's research ideation by 158% to match frontier models.",
+      "highlights_zh": [
+        "论文转为可执行研究环境",
+        "AI-Scientist 74%超越人类",
+        "可作评估与训练双重基地"
+      ]
+    },
+    {
+      "id": "2611.08487",
+      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+      "authors": [
+        "Jonathan Kozaczuk",
+        "Zheng Dong",
+        "Noyan Evirgen",
+        "Keivan Majidi",
+        "Eddie K. H. Ng",
+        "Chris Porter",
+        "Qi Zhao",
+        "Jia Geng",
+        "Changmao Li",
+        "Brandon R. Feng"
+      ],
+      "abstract": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we argue that user embeddings can be understood as sparse superpositions of interpretable behavioral modes. This structure is directly predicted by generative models of user behavior for linear embeddings and extends approximately to deep-learning representations by the superposition hypothesis. Superimposed modes can naturally be recovered by sparse dictionary learning methods, such as sparse autoencoders (SAEs), and recovered modes can be automatically named and queried in natural language. We validate mode recovery against known ground truth on synthetic data, where SAEs recover modes better than classical sparse baselines, including on transformer-encoded embeddings. We then apply the method to classical and transformer-based user embeddings from two real-world datasets. We also show how the corresponding natural-language labels enable zero-shot audience retrieval and characterization over embeddings never trained on text. The framework is post-hoc and model-agnostic, requiring no modification to the upstream embedding system.",
+      "published": "2026-11-05T18:59:42Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08487",
+      "pdf_url": "https://arxiv.org/pdf/2611.08487",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.08453",
+      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+      "authors": [
+        "Zeyu Leo Liu",
+        "Yang Li",
+        "Bo Pang",
+        "Emre Can Acikgoz",
+        "Xuan-Phi Nguyen",
+        "Anurag Koul",
+        "Srijan Bansal",
+        "Erik Nijkamp",
+        "Shafiq Joty",
+        "Semih Yavuz"
+      ],
+      "abstract": "On-policy distillation (OPD) trains a student on its own rollouts under a frozen teacher's per-token supervision. Does this dense signal reduce the training FLOPs needed to reach a target accuracy compared with reinforcement learning? We systematically compare vanilla reverse-KL OPD with Group Relative Policy Optimization (GRPO) across task difficulty, student and teacher size, domain, and optimization choices, measuring held-out accuracy against training FLOPs. With an external post-trained teacher, OPD generally loses to GRPO in accuracy per training FLOP at matched settings, even when the teacher is further trained with GRPO, and often suffers response-length inflation. Yet a different teacher changes the picture: when the teacher is the student's own GRPO checkpoint, OPD recovers that checkpoint's accuracy on math with $50\\times$ fewer distillation FLOPs than GRPO needs to reach the same accuracy. Following the same teacher setting, we consistently observe this high efficiency with a larger student, on code, and in a second model family. On a single domain, however, the GRPO checkpoint is already the desired model, so distilling it adds to total compute. Across domains, separate GRPO checkpoints hold different capabilities, and no single checkpoint serves every domain. Multi-teacher OPD (DeepSeek-AI, 2026) consolidates per-domain GRPO experts into a single student that matches each expert's accuracy, with the distillation stage costing only 5.2% (on 2 domains) and 8.0% (on 4 domains) of the specialist training FLOPs. Counting specialist training and distillation together, this pipeline reaches joint GRPO's performance on the 2-domain mix with 42.0% fewer total FLOPs.",
+      "published": "2026-11-05T18:47:05Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08453",
+      "pdf_url": "https://arxiv.org/pdf/2611.08453",
+      "summary_zh": "论文比较在线策略蒸馏（OPD）与GRPO在达到目标准确率时所需的训练FLOPs，探究密集教师监督能否降低计算成本。作者系统对比反向KL OPD与GRPO在不同任务难度、模型规模、领域和优化设置下的表现，并考察教师来源（外部后训练教师 vs 学生自身GRPO检查点）及多教师OPD的影响。结果显示外部教师下OPD通常不如GRPO高效，但以学生自身GRPO检查点为教师时数学任务仅需1/50蒸馏FLOPs，多教师OPD整合领域专家仅需专家训练FLOPs的5.2%–8.0%，2领域混合下总FLOPs减少42.0%。",
+      "summary_en": "This paper compares on-policy distillation (OPD) with GRPO to test whether dense teacher supervision reduces the training FLOPs needed to reach a target accuracy. The authors systematically vary task difficulty, model sizes, domains, and optimization choices, and examine teacher source (external post-trained teacher vs. the student's own GRPO checkpoint) as well as multi-teacher OPD. With an external teacher OPD generally loses to GRPO in accuracy per FLOP, but distilling the student's own GRPO checkpoint recovers math accuracy with 50x fewer distillation FLOPs, and multi-teacher OPD consolidates domain experts at only 5.2%-8.0% of specialist training FLOPs, cutting total FLOPs by 42.0% on a 2-domain mix.",
+      "highlights_zh": [
+        "揭示教师来源决定OPD计算效率",
+        "自身GRPO检查点蒸馏省50倍FLOPs",
+        "多教师整合省42%总FLOPs"
+      ],
+      "highlights_en": [
+        "Teacher source determines OPD compute efficiency",
+        "Self-GRPO-checkpoint distillation uses 50x fewer FLOPs",
+        "Multi-teacher consolidation cuts total FLOPs by 42%"
+      ]
+    },
+    {
+      "id": "2611.08439",
+      "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
+      "authors": [
+        "Vladimir Beskorovainyi"
+      ],
+      "abstract": "Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-language tasks; the later release adds an augmentation that presents labels in several surface forms. Holding questions fixed and varying only how eighteen routing labels are worded, we evaluate ten label vocabularies, produced by three separate processes and checked for overlap with the training data, with five candidates per question and, for eight of them, also with eighteen. On held-out vocabularies made of ordinary or borrowed words (English-derived jargon, office slang, department names), the augmented release is more accurate in every setting, by up to 0.24. Eleven of these fourteen gains survive a Holm correction (slang with eighteen candidates and descriptive sentences with five do not), and for jargon on all labels the label-level interval excludes zero in both settings. On abbreviations and opaque codes it gives no usable gain: on abbreviations it is not better, and worse on the clean slice, and on opaque codes both releases stay at or below chance once labels related to training options are removed. In most cells where accuracy rises, the risk-coverage area falls, but with eighteen candidates confident errors rise on jargon and slang. On two datasets neither release saw, accuracy moves by -8.4 and +5.6 points. We also report four evaluation hazards from comparing the two releases.",
+      "published": "2026-11-05T18:31:24Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08439",
+      "pdf_url": "https://arxiv.org/pdf/2611.08439",
+      "summary_zh": "类型化决策模型依赖调用方提供的标签措辞，而开发者无法控制这些措辞，因此需要评估标签措辞增强的效果。作者比较了307M参数多语言交叉编码器Ru-Jev的两个版本，后期版本增加了将标签以多种表面形式呈现的增强，并在十个标签词表上固定问题、仅改变十八个路由标签的措辞进行评测。结果显示，增强版在普通词或借词上最多提升0.24且多数通过Holm校正，但在缩写和不透明代码上无可用增益，甚至低于随机水平，说明该增强对不熟悉词汇有效而对缩写和代码无效。",
+      "summary_en": "Typed-decision models score caller-supplied options at request time, so accuracy depends on label wording outside the developer's control, motivating an evaluation of label-wording augmentation. The authors compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, where the later release augments labels with multiple surface forms, and they hold questions fixed while varying the wording of eighteen routing labels across ten label vocabularies. The augmented release is more accurate on ordinary or borrowed words by up to 0.24 with most gains surviving Holm correction, but shows no usable gain on abbreviations and opaque codes, remaining at or below chance, indicating the augmentation helps with unfamiliar words but not abbreviations or codes.",
+      "highlights_zh": [
+        "多表面形式标签增强",
+        "普通词准确率提升0.24",
+        "缩写与代码无增益"
+      ],
+      "highlights_en": [
+        "Multi-surface label augmentation",
+        "Up to 0.24 gain on ordinary words",
+        "No gain on abbreviations or codes"
+      ]
+    },
+    {
+      "id": "2611.08486",
+      "title": "Do You Miss the Nights We Spent Crafting Figures? Rethinking Teaser and Framework Figures in the Age of Generative AI",
+      "authors": [
+        "Xiaoqi Zhao",
+        "Youwei Pang",
+        "Kailai Zhou"
+      ],
+      "abstract": "Scientific figures give research ideas a visual form through choices of abstraction, composition, and emphasis. Generative AI offers new ways to realize these choices, raising questions about explanatory clarity and purposeful visual expression. We examine these questions through a visual retrospective of 371 motivation and framework figures from 200 papers. The corpus comprises a quota-based main sample of 160 papers spanning four temporal periods and a separate purposive style-contrast sample of 40 papers. A single multimodal judge evaluates six dimensions of communication and design, with three repeated judgments per figure. We attempt source-constrained revisions of all 371 figures, of which 369 pass the recorded fidelity checks. Original-figure ratings show no uniform decline across periods. Revisions increase mean clarity ratings by 0.428 points and decrease aesthetic coherence ratings by 0.111 points on a five-point scale. Gains in the six-dimension average are larger for main-sample motivation figures than for frameworks. Case analyses show that added explanation can clarify comparisons while leaving typographic hierarchy and visual economy unresolved. These model-based findings support researcher-led design, with AI assisting exploration and authors retaining responsibility for explanatory purpose, composition, and scientific relationships. The accompanying atlas and evaluation records are available at https://ntu-ai4x.github.io/Rethinking_Figures/index_en.html.",
+      "published": "2026-11-05T18:59:33Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08486",
+      "pdf_url": "https://arxiv.org/pdf/2611.08486",
+      "summary_zh": "生成式AI为科研配图提供新手段，但如何保证解释清晰与视觉表达目的性尚不明确。作者对200篇论文的371幅动机图与框架图进行视觉回溯，用多模态评判器按六维度重复评分，并尝试源约束修订其中369幅。结果显示修订使清晰度平均提升0.428分、审美连贯性下降0.111分，动机图收益大于框架图，表明AI宜辅助探索而作者须主导解释目的与构图。",
+      "summary_en": "Generative AI offers new ways to realize abstraction, composition, and emphasis choices in scientific figures, raising questions about explanatory clarity and purposeful visual expression. The authors conduct a visual retrospective of 371 motivation and framework figures from 200 papers, using a single multimodal judge across six communication and design dimensions with repeated judgments, and attempt source-constrained revisions of all 371 figures (369 passing fidelity checks). Revisions raise mean clarity by 0.428 points but lower aesthetic coherence by 0.111 points on a five-point scale, with larger gains for motivation figures than frameworks, supporting researcher-led design with AI assisting exploration.",
+      "highlights_zh": [
+        "源约束修订371幅论文配图并多维度评分",
+        "清晰度+0.428分，审美连贯性-0.111分",
+        "AI辅助探索，作者主导解释与构图"
+      ]
+    },
+    {
+      "id": "2611.08485",
+      "title": "Where and Why is Grounded Reasoning Useful?",
+      "authors": [
+        "David Yan",
+        "Le Xue",
+        "Forrest Huang",
+        "Qiuyi Zhang",
+        "Dustin Tran",
+        "Andrew M. Dai",
+        "Yinfei Yang"
+      ],
+      "abstract": "Grounded reasoning, where a model outputs text coordinates of relevant locations in chain-of-thought reasoning, is a common strategy for solving complex visual reasoning problems. However, the benefits and limitations of grounded reasoning are understudied. We study where and why grounded reasoning is most useful. To do so, we introduce a chain-of-thought analysis method to measure how much a model uses its outputted grounding in its thinking trace and perform a detailed ablation study of a grounded reasoning training recipe. We find that grounded reasoning improves counting but shows no significant gain over baselines without coordinate grounding across a wide range of spatial reasoning and perception benchmarks. Using several synthetic tasks, we show that grounded reasoning is most useful when a task requires undescribable references, which are visual concepts that are difficult to describe in language. However, we observe that many existing visual reasoning benchmarks are solvable with only describable text references. To close this gap, we introduce BrickVision, a new benchmark that requires undescribable visual references to solve.",
+      "published": "2026-11-05T18:59:32Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08485",
+      "pdf_url": "https://arxiv.org/pdf/2611.08485",
+      "summary_zh": " grounded reasoning（在思维链中输出相关位置的文本坐标）被广泛用于复杂视觉推理，但其收益与局限缺乏系统研究。作者提出一种思维链分析方法来量化模型对输出定位信息的使用程度，并对 grounded reasoning 训练方案做详细消融，同时构建合成任务与需要不可描述视觉指代的 BrickVision 基准。结果显示 grounded reasoning 仅提升计数能力，在广泛空间推理与感知基准上无显著增益，其真正价值在于任务需要难以用语言描述的视觉指代时。",
+      "summary_en": "Grounded reasoning, which outputs text coordinates of relevant locations within chain-of-thought, is widely used for complex visual reasoning but its benefits and limits are understudied. The authors introduce a chain-of-thought analysis method to measure how much a model uses its outputted grounding, perform a detailed ablation of a grounded reasoning training recipe, and build synthetic tasks plus BrickVision, a benchmark requiring undescribable visual references. They find grounded reasoning improves counting but shows no significant gain over non-grounded baselines across many spatial reasoning and perception benchmarks, and is most useful when tasks require undescribable visual references that existing benchmarks largely avoid.",
+      "highlights_zh": [
+        "量化模型对定位信息的使用程度",
+        "仅计数提升，多基准无显著增益",
+        "适用于不可描述视觉指代任务"
+      ]
+    },
+    {
+      "id": "2611.08462",
+      "title": "OopsieRecover: Learning Transferable VLA Corrections from Semantic Interventions",
+      "authors": [
+        "Arpit Bahety",
+        "Skand Peri",
+        "Sriniket Ambatipudi",
+        "Chen Xu",
+        "Haruki Nishimura",
+        "Masha Itkina",
+        "Roberto Martín-Martín"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models can perform a wide range of robotic manipulation tasks, but often fail during deployment. Teaching them to recover from these failures requires substantial corrective data: existing approaches learn to recover from failures by directly associating corrective actions with the observations in which they were demonstrated. For instance, DAgger-like fine-tuning can require tens to hundreds of interactions, yet the resulting policy may still fail to generalize the learned corrections beyond the demonstrated scenarios. We hypothesize that semantics can capture the underlying reasons for failures and their corrections, enabling policies to learn from only a handful of corrective demonstrations and generalize those corrections to novel objects, and scene variations. We propose OopsieRecover, a framework that uses abduction to infer the intent behind a small set of corrective demonstrations and encodes the inferred knowledge as dense spatial representations and conditional costs. These costs capture when a behavior is undesirable and steer the policy toward more desirable action regions. We experiment across 6 tasks and variations in object poses, scenes, and related tasks, and find that only a handful of corrective demonstrations can enable a VLA to overcome failures across a broad range of novel situations, without requiring new corrective data for each variation. Please refer to https://robin-lab.cs.utexas.edu/oopsierecover for videos.",
+      "published": "2026-11-05T18:53:16Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08462",
+      "pdf_url": "https://arxiv.org/pdf/2611.08462",
+      "summary_zh": "VLA模型在机器人操作部署中常失败，而现有恢复方法需大量纠正数据且难以泛化到新场景。OopsieRecover通过溯因推理从少量纠正演示中推断意图，并将其编码为密集空间表示和条件代价以引导策略。在6个任务及多种变化上，仅需少量演示即可让VLA克服失败并泛化到新情境，无需为每种变化采集新数据。",
+      "summary_en": "VLA models often fail during robotic manipulation deployment, and existing recovery methods require substantial corrective data while generalizing poorly to novel scenarios. OopsieRecover uses abduction to infer intent from a handful of corrective demonstrations and encodes it as dense spatial representations and conditional costs that steer the policy toward desirable action regions. Across 6 tasks and variations in object poses, scenes, and related tasks, a handful of demonstrations enables VLA recovery and generalization to novel situations without new corrective data per variation.",
+      "highlights_zh": [
+        "溯因推断意图编码为空间代价引导策略",
+        "仅需少量演示即可泛化至新场景",
+        "降低纠正数据采集成本，泛化仍受限"
+      ],
+      "highlights_en": [
+        "Abduction infers intent as spatial costs to steer policy",
+        "A handful of demos generalizes to novel scenarios",
+        "Cuts corrective data cost; generalization still bounded"
+      ]
+    },
+    {
+      "id": "2611.08458",
+      "title": "Latent RL Priors for Data-Efficient Dexterous Manipulation",
+      "authors": [
+        "Yixiao Wang",
+        "Peiyi Chen",
+        "Mustafa Mukadam",
+        "Shreekant Gayaka",
+        "Masayoshi Tomizuka",
+        "Son Tran"
+      ],
+      "abstract": "Learning dexterous manipulation from limited visual demonstrations is challenging because policies must acquire both perceptual grounding and precise control, while reinforcement learning (RL) in simulation can acquire rich control behaviors from large-scale interaction with privileged information. We introduce \\textbf{Latent RL Prior}, a two-stage framework that reuses this control knowledge for data-efficient visual policy learning. During privileged pretraining, we distill large-scale RL rollouts into a flow-matching action decoder conditioned on proprioception and latent task context. During visual adaptation, we freeze the decoder and learn a visual interface that maps images to its latent context using action supervision alone, without privileged labels or latent targets. The same decoder can further be shared across arms by learning coordinated visual contexts for bimanual manipulation. Across three simulated tasks, our method outperforms full-parameter fine-tuning of $π_{0.5}$ and GR00T N1.7 in the low-data regime; on door lifting and bimanual assembly, it surpasses full-data baselines using $10\\times$ and $5\\times$ fewer demonstrations, respectively. Further analysis shows that direct visual-to-latent conditioning improves adaptation performance and training stability over routing visual predictions through the pretrained state encoder. Robustness to unseen mass variation and greater linear accessibility of contact-force information in decoder representations further provide evidence of retained RL-acquired control knowledge. Project website: https://yixiaowang7.github.io/latent-rl-prior-page/.",
+      "published": "2026-11-05T18:50:06Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08458",
+      "pdf_url": "https://arxiv.org/pdf/2611.08458",
+      "summary_zh": "从有限视觉示范中学习灵巧操作很困难，因为策略需同时获得感知基础与精确控制，而仿真RL虽能利用特权信息习得丰富控制行为却难以直接用于视觉策略。作者提出Latent RL Prior两阶段框架：先在大规模RL rollout上蒸馏出以本体感受和潜在任务上下文为条件的流匹配动作解码器，再冻结解码器、仅用动作监督学习将图像映射到其潜在上下文的视觉接口，并可共享解码器实现双臂协调。在三个仿真任务上，该方法低数据下优于π0.5和GR00T N1.7全参数微调，门抬起和双臂装配分别用少10倍和5倍示范超越全数据基线，且对未见质量变化鲁棒，表明保留了RL习得的控制知识。",
+      "summary_en": "Learning dexterous manipulation from limited visual demonstrations is hard because policies must acquire both perceptual grounding and precise control, while simulation RL can learn rich control behaviors from large-scale interaction with privileged information. We introduce Latent RL Prior, a two-stage framework that distills large-scale RL rollouts into a flow-matching action decoder conditioned on proprioception and latent task context, then freezes the decoder and learns a visual interface mapping images to its latent context using action supervision alone, with the same decoder shareable across arms for bimanual manipulation. Across three simulated tasks, it outperforms full-parameter fine-tuning of π0.5 and GR00T N1.7 in the low-data regime and surpasses full-data baselines on door lifting and bimanual assembly with 10× and 5× fewer demonstrations, while robustness to unseen mass variation and greater linear accessibility of contact-force information in decoder representations provide evidence of retained RL-acquired control knowledge.",
+      "highlights_zh": [
+        "冻结RL蒸馏动作解码器，仅学视觉潜在接口",
+        "少10倍示范超越全数据基线",
+        "保留RL控制知识，限于仿真验证"
+      ]
+    },
+    {
+      "id": "2611.08472",
+      "title": "XStack: A Benchmark for ML Repo Migration",
+      "authors": [
+        "Linrong Cai",
+        "Taiming Lu",
+        "Haozhe Chen",
+        "Zhuang Liu"
+      ],
+      "abstract": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable.",
+      "published": "2026-11-05T18:55:54Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.08472",
+      "pdf_url": "https://arxiv.org/pdf/2611.08472",
+      "summary_zh": "ML代码目前主要绑定在PyTorch+NVIDIA GPU和JAX+Google TPU两大生态中，跨框架、跨硬件的仓库迁移是实际需求但缺乏衡量手段。作者提出XStack基准，让智能体接收PyTorch仓库并在干净TPU机器上交付可运行的JAX仓库，以源仓库已发表结果为依据进行认证和校准评分。结果显示迁移仍不可靠，Claude Opus 5通过率75%、GPT-5.6-sol 45%、其余智能体不超过40%，该基准为可衡量的可靠迁移研究提供了基础。",
+      "summary_en": "ML code is largely locked into two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs, making cross-framework and cross-hardware repository migration a practical need without a way to measure it. The authors introduce XStack, a benchmark where an agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository, graded against the source repository's published results that they authenticate and calibrate. Migration remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and all other agents at most 40%, establishing a measurable foundation for research on reliable cross-framework, cross-hardware migration.",
+      "highlights_zh": [
+        "整仓库跨框架跨硬件迁移基准",
+        "最高通过率75%（Claude Opus 5）",
+        "释放ML代码的硬件选择自由"
+      ]
+    }
+  ]
+}
