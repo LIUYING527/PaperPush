@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-09",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.09892",
+      "title": "On Agentic Manipulation Policies",
+      "authors": [
+        "Chen Chen",
+        "Omid Bagherieh",
+        "Naveen Nikamanth Appiah Balaji",
+        "Jesse T. Gonzalez",
+        "Negin Heravi",
+        "Fahad Islam",
+        "Xueting Li",
+        "Jean-Baptiste Regli",
+        "Kejia Ren",
+        "Petr Švec",
+        "David J. Yoon",
+        "Matthias Müller",
+        "Vladlen Koltun"
+      ],
+      "abstract": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
+      "published": "2026-11-06T18:59:34Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09892",
+      "pdf_url": "https://arxiv.org/pdf/2611.09892",
+      "summary_zh": "机器人操作领域近期主要依赖基于示教数据的专家策略（如VLA和WAM）。本文提出智能体操作策略（AMP），让通用AI模型直接控制机械臂并随任务进展自适应调整动作，同时给出可跨单臂、双臂和移动操作运行的参考框架AMP1。AMP1在RoboLab-120上零样本成功率达85.6%（VLA为49.2%、WAM为42.9%），真实世界108次试验成功104次、失败率降低20倍和15倍，加入持久记忆后双臂任务失败率再降4.6倍，表明AMP比专家策略更通用、更鲁棒。",
+      "summary_en": "Robot manipulation research has largely relied on specialist policies trained on demonstrations, such as vision-language-action models (VLAs) and world-action models (WAMs). This paper proposes agentic manipulation policies (AMPs), in which a generalist AI model directly commands the manipulator and adapts its actions as the task unfolds, and presents AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves 85.6% zero-shot success on RoboLab-120 versus 49.2% and 42.9% for leading VLA and WAM policies, succeeds in 104 of 108 real-world trials (20x and 15x lower failure rates), and a persistent memory store further lowers bimanual failure rates by 4.6x, suggesting AMPs are substantially more general and robust than specialist policies.",
+      "highlights_zh": [
+        "通用AI模型直接控制机械臂的AMP范式",
+        "零样本85.6%成功率，真实试验104/108",
+        "无需示教与任务训练，跨形态通用"
+      ]
+    },
+    {
+      "id": "2611.09891",
+      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "authors": [
+        "Peter Belcak",
+        "Greg Heinrich",
+        "Saurav Muralidharan",
+        "Shizhe Diao",
+        "Pavlo Molchanov"
+      ],
+      "abstract": "Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the solutions, which forces them to solve every problem from scratch. We show that once a task has been reasoned through, the application of its solution to a new problem instance can be done very efficiently and with little involvement from language models. We introduce agentic reasoning caching, a method for constructing robust CPU-executable agentic reasoning caches (ARCs) from LLM reasoning traces. ARCs show on-par performance with frontier LLMs across a range of difficult mathematical and scientific tasks, are fully explainable, continually trainable, robust to input perturbations, and 16-291x cheaper to invoke than the source model.",
+      "published": "2026-11-06T18:58:50Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09891",
+      "pdf_url": "https://arxiv.org/pdf/2611.09891",
+      "summary_zh": "大语言模型常将任务求解与解的执行混为一谈，导致每个问题都从头推理。本文提出智能体推理缓存（ARC），从LLM推理轨迹中构建可CPU执行的鲁棒推理缓存，使解在新问题实例上的应用几乎无需LLM参与。ARC在多项数学与科学任务上达到前沿LLM水平，完全可解释、可持续训练、抗输入扰动，且调用成本降低16-291倍。",
+      "summary_en": "Large language models conflate task-solving with solution execution, forcing them to reason from scratch for every problem. This paper introduces agentic reasoning caching, which constructs robust CPU-executable agentic reasoning caches (ARCs) from LLM reasoning traces so that solutions can be applied to new instances with little LLM involvement. ARCs match frontier LLMs on difficult mathematical and scientific tasks, are fully explainable, continually trainable, robust to input perturbations, and 16-291x cheaper to invoke than the source model.",
+      "highlights_zh": [
+        "从推理轨迹构建CPU可执行推理缓存",
+        "性能媲美前沿LLM且成本低16-291倍",
+        "可解释、可训练、抗扰动，但依赖已有推理轨迹"
+      ],
+      "highlights_en": [
+        "Builds CPU-executable caches from reasoning traces",
+        "Matches frontier LLMs at 16-291x lower cost",
+        "Explainable, trainable, robust; depends on existing traces"
+      ]
+    },
+    {
+      "id": "2611.09887",
+      "title": "On the (non-)closedness of the set of ReLU networks",
+      "authors": [
+        "Eloi Martinet",
+        "Leon Bungert"
+      ],
+      "abstract": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(Ω)$ or in $C(\\overlineΩ)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
+      "published": "2026-11-06T18:58:06Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "math.CA",
+        "math.FA",
+        "math.NA",
+        "math.OC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09887",
+      "pdf_url": "https://arxiv.org/pdf/2611.09887",
+      "summary_zh": "论文研究ReLU神经网络集合在Sobolev空间中的闭性这一基础拓扑性质，此前对单隐层网络是否弱闭尚不明确。作者在W^{1,p}(Ω)中证明至多N个神经元的单隐层ReLU网络集合是弱闭的，并构造反例说明两个有界宽度隐层的网络集合在W^{1,p}(Ω)和C(Ω̄)中均不闭。该结果保证了Deep Ritz方法、Sobolev训练和Lipschitz学习等能量泛函极小元的存在性，并否定了Petersen等人的猜想。",
+      "summary_en": "This paper studies the fundamental topological property of closedness of ReLU network sets in Sobolev spaces, which was previously unclear for one-hidden-layer networks. The authors prove that the set of one-hidden-layer ReLU networks with at most N neurons is weakly closed in W^{1,p}(Ω), and construct a counterexample showing that networks with two hidden layers of bounded widths are not closed in W^{1,p}(Ω) or C(Ω̄). These results guarantee existence of minimizers for coercive weakly lower semicontinuous energies in Deep Ritz, Sobolev training and Lipschitz learning, and disprove a conjecture of Petersen, Raslan and Voigtlaender.",
+      "highlights_zh": [
+        "证明单隐层ReLU网络集弱闭",
+        "正则化极小元收敛到最小范数解",
+        "否定双隐层网络闭性猜想"
+      ]
+    },
+    {
+      "id": "2611.09882",
+      "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
+      "authors": [
+        "Aadya Agrawal",
+        "Ho Kei Cheng",
+        "Alexander Schwing"
+      ],
+      "abstract": "Predicting the future motion of multiple people is inherently stochastic: the same observed history admits many plausible continuations depending on intent, coordination, and social context. Yet the dominant paradigm in multi-person 3D motion prediction remains deterministic, with existing methods producing a fixed number of outputs per agent. In contrast, we present a conditional flow matching framework that jointly generates diverse future motions for multiple agents, modeling both global trajectories and root-relative poses. A B-spline reparameterization compresses the generative state space while enforcing temporal smoothness, and a dual-stream transformer conditions each agent's predictions on observed neighbor motion for interaction-aware forecasting. Our method achieves state-of-the-art performance on CMU-Mocap (UMPM) and 3DPW, outperforming deterministic baselines on joint position error, pose error, and final displacement error despite producing a full predictive distribution. We additionally establish the first motion prediction baseline on WorldPose, a large-scale professional soccer dataset, where social conditioning demonstrably concentrates predictive uncertainty along interaction-constrained directions.",
+      "published": "2026-11-06T18:56:41Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09882",
+      "pdf_url": "https://arxiv.org/pdf/2611.09882",
+      "summary_zh": "多人3D运动预测本质上是随机的，但主流方法仍是确定性的，每个智能体只产生固定数量的输出。本文提出条件流匹配框架，联合生成多个智能体的多样化未来运动，并用B样条重参数化压缩生成状态空间、双流Transformer建模邻居交互。方法在CMU-Mocap和3DPW上取得最优性能，并在WorldPose足球数据集上建立了首个基线，表明社会条件能沿交互约束方向集中预测不确定性。",
+      "summary_en": "Multi-person 3D motion prediction is inherently stochastic, yet dominant methods remain deterministic and produce a fixed number of outputs per agent. We present a conditional flow matching framework that jointly generates diverse future motions for multiple agents, combining B-spline reparameterization for compact and smooth generation with a dual-stream transformer for interaction-aware conditioning on neighbor motion. Our method achieves state-of-the-art results on CMU-Mocap (UMPM) and 3DPW, outperforming deterministic baselines on joint position, pose, and final displacement errors, and establishes the first motion prediction baseline on the WorldPose soccer dataset, where social conditioning concentrates predictive uncertainty along interaction-constrained directions.",
+      "highlights_zh": [
+        "条件流匹配联合生成多人多样未来运动",
+        "CMU-Mocap与3DPW上多项误差优于确定性基线",
+        "可用于人群/体育分析，但依赖邻居观测"
+      ]
+    },
+    {
+      "id": "2611.09868",
+      "title": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
+      "authors": [
+        "Xingyu Liu",
+        "Xiangyang Yin",
+        "Tianhua Xia",
+        "Haiyu Wang",
+        "Sai Qian Zhang"
+      ],
+      "abstract": "Large reasoning models (LRMs) improve task performance by generating longer intermediate reasoning traces, but this substantially increases inference costs and makes low-precision quantization increasingly important. However, aggressively quantized models often perform poorly on reasoning tasks. We observe larger activation fluctuations during the first decoding steps of reasoning. Calibration that omits these early states may miss their activation fluctuations. To address these reasoning-specific quantization challenges, we propose \\textbf{CodeQuant2}, a clustering-based LUT quantization framework for low-precision large reasoning models. CodeQuant2 mitigates activation outliers with rotation and scaling, uses clustering to represent non-uniform weight distributions, and adapts codebook sizes to the quantization difficulty of each layer. Guided by our observation of reasoning-time activation behavior, CodeQuant2 further improves calibration sample selection to better match actual decoding statistics. Combined with our customized LUT CUDA kernel, CodeQuant2 delivers substantial accuracy improvements on reasoning benchmarks while achieving up to $2.85\\times$ speedup over BF16.",
+      "published": "2026-11-06T18:48:04Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09868",
+      "pdf_url": "https://arxiv.org/pdf/2611.09868",
+      "summary_zh": "大型推理模型通过生成更长的推理链提升性能，但显著增加推理成本，低精度量化因此变得重要，然而激进量化模型在推理任务上表现不佳，且推理早期解码步骤存在更大的激活波动，忽略这些状态的校准会遗漏激活波动。为此，作者提出CodeQuant2，一个基于聚类的查找表量化框架，通过旋转与缩放缓解激活离群值、用聚类表示非均匀权重分布、按层自适应调整码本大小，并基于推理时激活行为观察改进校准样本选择以匹配实际解码统计，同时配套定制LUT CUDA内核。实验表明，CodeQuant2在推理基准上大幅提升精度，相比BF16最高实现2.85倍加速，为低精度大型推理模型提供了有效的量化方案。",
+      "summary_en": "Large reasoning models (LRMs) improve task performance by generating longer reasoning traces, but this raises inference costs and makes low-precision quantization important, yet aggressively quantized models often perform poorly on reasoning tasks, with larger activation fluctuations observed in the first decoding steps that calibration may miss. To address these reasoning-specific challenges, the authors propose CodeQuant2, a clustering-based LUT quantization framework that mitigates activation outliers via rotation and scaling, represents non-uniform weight distributions with clustering, adapts codebook sizes per layer, and improves calibration sample selection guided by observed reasoning-time activation behavior, together with a customized LUT CUDA kernel. CodeQuant2 delivers substantial accuracy improvements on reasoning benchmarks while achieving up to 2.85x speedup over BF16, offering an effective quantization solution for low-precision large reasoning models.",
+      "highlights_zh": [
+        "旋转缩放+聚类+自适应码本",
+        "推理基准精度大幅提升",
+        "较BF16最高2.85倍加速"
+      ]
+    },
+    {
+      "id": "2611.09848",
+      "title": "How far does a hash-only sender go? A pre-registered map of sender memory versus bits for short text messages",
+      "authors": [
+        "Marcelo Samoilenko"
+      ],
+      "abstract": "Can a sender that only computes hashes, with a language model only at the receiver, transmit short human text more cheaply than a classical sender trained on the same domain? We answer with one pre-registered run on 1,000 English user utterances from Taskmaster-1. The primary endpoint is the cost per message to deliver 100% of the messages (hash bits, plus a 2-byte negative acknowledgement and the raw text when the first attempt fails), paired against an in-domain PPM order-1 sender. The hash-only sender delivered 857 of 1,000 messages on the first attempt and cost 192.8 bits per message, 18.4 bits more than PPM order 1 (95% bootstrap interval 10.9 to 26.3); by the pre-registered rule it spends more and is not equivalent within one byte. As secondary results we map measured sender memory against bits. The hash-only sender (8,190 B on a host build, keyed BLAKE2b tag included, as in every method) was the cheapest point in bits from 8,190 B up to, but excluding, PPM order 1 at 24,844 B, 45 to 46 bits below smaz2 and Unishox2; from PPM order 1 upwards, in-domain senders spend fewer bits, except order 2 pruned to 16 KiB. In airtime it loses to PPM order 1 on all five links priced, to Unishox2 on four, and to raw text with a tag on two, because each failure costs an acknowledgement frame and a fallback frame. A wider receiver search recovers half of the failures and makes the cost 7.7 bits lower than PPM order 1, at about three minutes of receiver time per failure, and still loses in airtime on four of five links. We report the measurement as a delimitation, with every deviation of the run.",
+      "published": "2026-11-06T18:31:24Z",
+      "primary_category": "cs.IT",
+      "categories": [
+        "cs.IT",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09848",
+      "pdf_url": "https://arxiv.org/pdf/2611.09848",
+      "summary_zh": "论文探究仅计算哈希的发送端能否在接收端配备语言模型的条件下，比同领域训练的传统发送端更廉价地传输短文本。作者在Taskmaster-1的1000条英文用户话语上进行预注册实验，以每条消息送达全部内容的成本为主终点，对比仅哈希发送端与域内PPM一阶发送端，并绘制发送端内存与比特数的关系图。结果显示仅哈希发送端每条消息花费192.8比特，比PPM一阶多18.4比特，未达预注册的等价标准；但在8190字节至24844字节内存区间内它是最省比特的方案，且在无线传输时间上因失败重传开销而劣于多个基线，说明其优势受内存区间与链路条件严格限制。",
+      "summary_en": "This paper asks whether a hash-only sender with a language model only at the receiver can transmit short human text more cheaply than a classical in-domain sender. In one pre-registered run on 1,000 English Taskmaster-1 utterances, the authors measure cost per message to deliver all messages (hash bits plus negative acknowledgement and raw-text fallback) against an in-domain PPM order-1 sender, and map sender memory against bits. The hash-only sender delivered 857/1,000 messages first try at 192.8 bits per message, 18.4 bits more than PPM order 1 and not equivalent within one byte by the pre-registered rule; it is the cheapest point in bits from 8,190 B up to 24,844 B, but loses in airtime on most priced links because each failure costs an acknowledgement and fallback frame, framing the result as a delimitation.",
+      "highlights_zh": [
+        "预注册实验绘制哈希发送端内存-比特图谱",
+        "首试送达857/1000，每条192.8比特",
+        "低内存区间省比特，但空口时间常劣"
+      ],
+      "highlights_en": [
+        "Pre-registered memory-versus-bits map for hash-only sender",
+        "857/1,000 first-attempt delivery at 192.8 bits/message",
+        "Cheapest in bits at low memory, but loses in airtime"
+      ]
+    },
+    {
+      "id": "2611.09894",
+      "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+      "authors": [
+        "Chaoyang Wang",
+        "Sicheng Gao",
+        "Junan Hu",
+        "Kunyang Li",
+        "Dongyang Chen",
+        "Yiyang Zhou",
+        "Huaxiu Yao",
+        "Yong Jae Lee",
+        "Radu Timofte",
+        "Yuzhang Shang"
+      ],
+      "abstract": "Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dynamics, and controllable scene composition remains challenging. In this paper, we introduce Video-Coder, the first attempt to train a code-driven video generation agent, which autonomously writes and executes code to construct a dynamic 3D scene (Draft Video) that provides structure and motion signals to downstream video generators. To support this paradigm, we design a dedicated data pipeline and curate two high-quality datasets, Video-Coder-SFT-6k and Video-Coder-RL-2k, which contain diverse prompts and ground-truth reference videos. We further develop the Video- Coder Harness, a unified interactive environment integrating code execution, 3D scene rendering, and execution feedback for agent training and inference. We then train Video-Coder with SFT fol- lowed by harness-native agentic reinforcement learning with dual reward feedback, which combines execution-based and video-based rewards. Additionally, we design an annealing training strategy that gradually reduces the execution reward over time, allowing the model to rely more on the video reward in the later training stages. Experiments show that Video-Coder achieves significant gains, improving Minimax-H3 by approximately 7 points on PhyGenBench and 24 points on VBench-2.0. We hope this work can serve as an open foundation for coding agents in video generation, and we fully open-source our data, models, and code",
+      "published": "2026-11-06T18:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09894",
+      "pdf_url": "https://arxiv.org/pdf/2611.09894",
+      "summary_zh": "视频生成在视觉质量和时序一致性上进步显著，但精确的空间结构、连贯的运动动态和可控的场景构图仍具挑战。本文提出Video-Coder，首个通过编写并执行代码构建动态3D场景（Draft Video）为下游生成器提供结构与运动信号的代码驱动视频生成智能体，配套构建专用数据管线、两个高质量数据集和统一交互环境Video-Coder Harness，并采用SFT加双奖励（执行奖励与视频奖励）的智能体强化学习及执行奖励退火策略训练。实验显示其在PhyGenBench上较Minimax-H3提升约7分、VBench-2.0提升24分，且全面开源数据、模型与代码，为视频生成领域的编码智能体提供开放基础。",
+      "summary_en": "Video generation has advanced in visual quality and temporal consistency, yet precise spatial structure, coherent motion dynamics, and controllable scene composition remain difficult. This paper introduces Video-Coder, the first code-driven video generation agent that autonomously writes and executes code to build a dynamic 3D scene (Draft Video) supplying structure and motion signals to downstream generators, supported by a dedicated data pipeline, two curated datasets (Video-Coder-SFT-6k and Video-Coder-RL-2k), and the Video-Coder Harness interactive environment, trained with SFT followed by harness-native agentic reinforcement learning using dual execution-based and video-based rewards plus an annealing strategy that decays the execution reward over time. Experiments show gains of about 7 points on PhyGenBench and 24 points on VBench-2.0 over Minimax-H3, with data, models, and code fully open-sourced as an open foundation for coding agents in video generation.",
+      "highlights_zh": [
+        "代码驱动智能体构建3D场景作结构先验",
+        "PhyGenBench+7分，VBench-2.0+24分",
+        "开源数据模型代码，可作通用基础"
+      ]
+    },
+    {
+      "id": "2611.09880",
+      "title": "ZeoBench: A Benchmark for Self-Supervised Learning on 3D Zeolite Representations",
+      "authors": [
+        "Aaron Sun",
+        "Yachan Liu",
+        "Ping Yang",
+        "Peng Bai",
+        "Subhransu Maji"
+      ],
+      "abstract": "Zeolites are an important class of porous crystalline materials with broad applications in gas storage, separations, and catalysis. Although hundreds of thousands of experimentally realized and hypothetical zeolite structures are known, identifying materials optimized for a target application remains challenging because property labels are expensive to obtain and available only for limited structure-molecule pairs. While prior work has demonstrated that 3D neural representations can predict zeolite properties effectively, it remains unclear which representation-learning strategies are most effective in the low-data regime relevant to materials discovery. We present ZeoBench, a benchmark for self-supervised learning on dense 3D representations of all-silica zeolites, and evaluate the resulting features on six existing downstream adsorption-property prediction tasks, across a range of training set sizes. Our study compares self-supervised 3D pretraining on volumetric zeolite data, adaptations of image-pretrained 2D ConvNets and vision transformers to 3D via multiview and channel-inflation strategies, and 3D ConvNets pretrained on out-of-domain volumetric datasets, alongside hand-crafted descriptors and supervised baselines. Using our pretraining and evaluation framework, we find self-supervised 3D representations outperform existing methods and achieve state-of-the-art performance across both in-domain label regimes and for the unseen domain of metal organic frameworks. Learned representations consistently outperform hand-crafted descriptors, and convolutional architectures are generally more effective than vision transformers in this setting. These results establish ZeoBench as a practical benchmark for 3D representation learning in zeolites and provide guidance for data-limited adsorption property prediction.",
+      "published": "2026-11-06T18:55:34Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09880",
+      "pdf_url": "https://arxiv.org/pdf/2611.09880",
+      "summary_zh": "沸石等多孔晶体材料在气体存储、分离和催化中应用广泛，但性质标签昂贵且稀缺，低数据条件下哪种3D表示学习策略最有效尚不明确。作者提出ZeoBench基准，系统比较了体积数据自监督3D预训练、图像预训练2D网络的多视图与通道膨胀3D适配、域外3D预训练卷积网络，以及手工描述符和有监督基线，并在六个吸附性质预测任务上跨训练集规模评估。结果显示自监督3D表示优于现有方法，在同域标签稀缺和未见过的金属有机框架域上均达到最优性能，卷积架构普遍优于视觉Transformer，为数据受限的吸附性质预测提供了实用基准与指导。",
+      "summary_en": "Zeolites are important porous crystalline materials, but property labels are expensive and scarce, leaving unclear which 3D representation-learning strategies work best in the low-data regime. We present ZeoBench, a benchmark comparing self-supervised 3D pretraining on volumetric zeolite data, multiview and channel-inflation adaptations of image-pretrained 2D ConvNets and vision transformers, out-of-domain 3D pretrained ConvNets, hand-crafted descriptors, and supervised baselines across six adsorption-property tasks and varying training-set sizes. Self-supervised 3D representations outperform existing methods and achieve state-of-the-art results in both in-domain label-limited regimes and on unseen metal-organic frameworks, with learned features consistently beating hand-crafted descriptors and convolutional architectures generally surpassing vision transformers, establishing ZeoBench as a practical benchmark and offering guidance for data-limited adsorption property prediction.",
+      "highlights_zh": [
+        "构建沸石3D自监督学习统一基准",
+        "自监督3D表示达最优性能",
+        "指导低数据吸附性质预测"
+      ]
+    },
+    {
+      "id": "2611.09888",
+      "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
+      "authors": [
+        "Frieda Rong",
+        "Zhaoyue Wang",
+        "Veer Kapadia",
+        "Vishaka Rajani",
+        "Aren A. Babikian",
+        "Xujie Si",
+        "Mahsa Golchoubian",
+        "Raquel Urtasun",
+        "Igor Gilitschenski"
+      ],
+      "abstract": "Scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. Scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. At each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. We further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. Experiments in the CARLA simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. These results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
+      "published": "2026-11-06T18:58:27Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09888",
+      "pdf_url": "https://arxiv.org/pdf/2611.09888",
+      "summary_zh": "基于场景的仿真对自动驾驶策略评估至关重要，但预先脚本化的场景在闭环中难以保持预期交互，而学习型交通参与者又无法可靠实现特定场景意图。本文提出场景编排器，持续监测联合交通状态，通过重定时、重路由和角色重分配对非自车参与者进行约束优化干预，以在保持交通可行性的同时实现目标交互，并区分场景实现与策略失败。在CARLA多场景族与多策略实验中，编排比脚本化和学习型基线更可靠地实现目标交互，支持可控可复现的闭环策略评估。",
+      "summary_en": "Scenario-based simulation is central to autonomous-driving policy evaluation, yet pre-scripted scenarios may not preserve their intended interaction once the ego policy responds in closed loop, while learned traffic actors may fail to reliably realize a specific scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors via re-timing, re-routing, and role reassignment, solving a constrained optimization problem at each step to preserve the intended interaction while limiting interventions and maintaining traffic feasibility, and we further distinguish scenario realization from policy failure. Experiments in CARLA across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior, supporting closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
+      "highlights_zh": [
+        "闭环场景编排器，约束优化动态调整参与者",
+        "CARLA多场景下交互实现优于脚本与学习基线",
+        "提升评估可控性与可复现性，依赖仿真环境"
+      ]
+    },
+    {
+      "id": "2611.09877",
+      "title": "Locating Contact on Tendon-Driven Continuum Robots From Tendon Measurements Alone via Constrained Moving Horizon Estimation",
+      "authors": [
+        "Haitham El-Hussieny"
+      ],
+      "abstract": "Tendon-driven continuum robots can reach through constrained spaces, but contact along their bodies is invisible to the sensors at their motors. We show that this is a structural limitation rather than a tuning problem: the map from contact forces to tendon measurements has a null space of dimension at least seven, so no estimator that leaves the contact support free can locate contact. When the obstacle geometry is known, however, non-penetration and complementarity make the contact force locally identifiable, and we prove that the resulting system with unknown contact inputs is locally exponentially strongly detectable. We present a constrained moving horizon estimator (MHE) that encodes these conditions and runs in real time as one quadratic program per sample, and we give a local, mode-wise robust stability result for it. In a finite- element benchmark of a two-section robot pressing and sliding on a wall, the estimator located contact to 0.9 mm and estimated contact force to 0.22 N, compared with 65 mm and 0.72 N for a tuned extended Kalman filter (EKF) with state projection. The estimator tolerated millimeter- level errors in the obstacle position and unmodeled wall friction, under which the projected EKF failed. Under randomized model mismatch over 40 trials, including unmodeled tendon friction, it remained better in force and location in every trial. Without contact, the MHE offered no advantage over the EKF, which confirms that its benefit comes from the contact constraints. This report extends a letter submitted to IEEE Control Systems Letters with complete proofs and additional experiments.",
+      "published": "2026-11-06T18:53:10Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.09877",
+      "pdf_url": "https://arxiv.org/pdf/2611.09877",
+      "summary_zh": "肌腱驱动连续体机器人身体接触对电机传感器不可见，且接触力到肌腱测量的映射存在至少七维零空间，使无约束估计器无法定位接触。该工作证明已知障碍几何时非穿透与互补条件使接触力局部可辨识，并设计约束移动地平线估计器（MHE）实时求解二次规划。在两段机器人有限元基准中接触定位达0.9 mm、力估计0.22 N，显著优于投影EKF的65 mm与0.72 N，并在模型失配下保持鲁棒。",
+      "summary_en": "Contact along tendon-driven continuum robots is invisible to motor sensors, and the contact-force-to-tendon-measurement map has a null space of dimension at least seven, so estimators leaving contact support free cannot locate contact. The authors show that known obstacle geometry plus non-penetration and complementarity make contact force locally identifiable, prove local exponential strong detectability, and present a constrained moving horizon estimator solved as one quadratic program per sample with mode-wise robust stability. In a finite-element benchmark of a two-section robot pressing and sliding on a wall, it achieved 0.9 mm contact localization and 0.22 N force error versus 65 mm and 0.72 N for a projected EKF, tolerating millimeter obstacle errors and unmodeled friction across 40 randomized mismatch trials.",
+      "highlights_zh": [
+        "约束MHE利用非穿透与互补条件定位接触",
+        "定位0.9 mm、力误差0.22 N，远优于EKF",
+        "适用于已知几何约束空间，依赖障碍模型"
+      ]
+    }
+  ]
+}
