@@ -1,0 +1,287 @@
+{
+  "date": "2026-11-12",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.14519",
+      "title": "Medical Image Segmentation: Foundation Model Adaptation versus Task-Specific Training",
+      "authors": [
+        "Emre Kutlusan",
+        "Yongmin Li"
+      ],
+      "abstract": "Foundation models pretrained on large natural-image collections are increasingly adapted for medical image segmentation, in the expectation that they will replace models trained for each task. Most comparisons, however, use data from the training distribution and a single task-specific baseline whose configuration is rarely justified, and therefore provide limited evidence of performance at new clinical sites. It also remains unclear how much of a foundation model must be adapted, and what determines this. We adapted a foundation model, DINOv2, with strategies ranging from tuning only its bias terms to full fine-tuning, and compared it with U-Nets and ResU-Nets trained from scratch. Experiments covered colonoscopy, breast ultrasound and dermoscopy, with testing on held-out data from the training source and on independent datasets from other institutions. The adapted foundation model generalised better on every external dataset. Within the training distribution, the task-specific models remained competitive when training data were abundant, and delineated boundaries more precisely, while the foundation model more often missed small lesions. Only a small fraction of the foundation model required adaptation, and the capacity needed was determined by the imaging domain rather than by the adaptation method. A widely used polyp test set was also found to duplicate images from another benchmark. Foundation-model adaptation is therefore warranted where models must work across sites, with capacity selected on the target domain.",
+      "published": "2026-11-10T18:59:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14519",
+      "pdf_url": "https://arxiv.org/pdf/2611.14519",
+      "summary_zh": "基础模型被期望替代任务专用模型进行医学图像分割，但现有比较多在训练分布内进行且基线配置缺乏依据，难以证明跨临床站点的性能。该研究将DINOv2从仅调偏置到全微调多种策略与从头训练的U-Net/ResU-Net比较，在结肠镜、乳腺超声和皮肤镜数据上于训练来源留出集及其他机构独立数据集测试。结果显示适配后的基础模型在所有外部数据集上泛化更好，训练分布内数据充足时任务专用模型仍有竞争力且边界更精确，仅需适配极小部分容量且所需容量由成像域决定，同时发现常用息肉测试集存在图像重复问题。",
+      "summary_en": "Foundation models pretrained on natural images are expected to replace task-specific models for medical image segmentation, yet most comparisons use in-distribution data and a single unjustified baseline, giving limited evidence of performance at new clinical sites. This study adapted DINOv2 with strategies from bias-only tuning to full fine-tuning and compared it with from-scratch U-Nets and ResU-Nets across colonoscopy, breast ultrasound and dermoscopy, testing on held-out training-source data and independent datasets from other institutions. The adapted foundation model generalised better on every external dataset, task-specific models remained competitive with abundant in-distribution data and delineated boundaries more precisely, only a small fraction of the foundation model needed adaptation with capacity determined by imaging domain rather than adaptation method, and a widely used polyp test set was found to duplicate images from another benchmark.",
+      "highlights_zh": [
+        "系统比较DINOv2多级适配与任务专用模型",
+        "外部数据集上基础模型泛化全面占优",
+        "仅需少量适配容量，由成像域决定"
+      ]
+    },
+    {
+      "id": "2611.14518",
+      "title": "Toward Foundation Detection Models via Example-Based Grounding in EM-DETR",
+      "authors": [
+        "Sheethal Bhat",
+        "Bogdan Georgescu",
+        "Awais Mansoor",
+        "Florin C. Ghesu",
+        "Sasa Grbic",
+        "Andreas Maier"
+      ],
+      "abstract": "DeepLearning (DL)-based Computer-Aided Diagnostic (CAD) systems have shown great promise in supporting clinicians, but their performance heavily depends on the availability of large, well-annotated datasets. In medical lesion detection, the scarcity of comprehensive, stan dardized annotations and the heterogeneity of existing datasets limit the development of robust foundation models. In this work, we introduce a novel approach to building a multi-domain foundation model for le sion detection by integrating diverse medical image datasets annotated for both anatomical structures and abnormalities. We first propose a student-teacher training strategy to effectively combine datasets with heterogeneous label spaces, mitigating catastrophic forgetting, and im proving feature learning. In addition, building on our previously pro posed example-based EM-DETR framework, we adapt it to jointly learn from multiple domain-specific datasets, enabling fine-grained, example driven detection across modalities. Our model achieves state-of-the-art (SOTA) results, with image-level AUC scores exceeding previous SOTA by 1% point on four key findings in CXRs. We achieve a leading mAP50 in CXRs and mammography, surpassing EM-DETR trained on a single dataset by 2-3% points. This approach paves the way for scalable foundation models in medical imaging that leverage heterogeneous data while maintaining robust and generalizable performance.",
+      "published": "2026-11-10T18:59:17Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14518",
+      "pdf_url": "https://arxiv.org/pdf/2611.14518",
+      "summary_zh": "医学病灶检测缺乏大规模标准化标注，现有数据集异质性强，限制了鲁棒基础模型的发展。本文整合多域医学图像数据集，提出学生-教师训练策略以融合异质标签空间并缓解灾难性遗忘，同时将基于示例的EM-DETR框架扩展为多域联合学习。模型在胸片四项关键发现上图像级AUC超此前SOTA 1个百分点，胸片与乳腺摄影mAP50领先单数据集EM-DETR 2-3个百分点，为可扩展医学影像基础模型提供了路径。",
+      "summary_en": "Medical lesion detection lacks large, standardized annotations and existing datasets are heterogeneous, limiting robust foundation models. This work integrates multi-domain medical image datasets, proposes a student-teacher training strategy to combine heterogeneous label spaces while mitigating catastrophic forgetting, and extends the example-based EM-DETR framework to joint multi-domain learning. The model exceeds prior SOTA by 1 AUC point on four key CXR findings and leads single-dataset EM-DETR by 2-3 mAP50 points on CXR and mammography, paving the way for scalable medical imaging foundation models.",
+      "highlights_zh": [
+        "学生-教师策略融合异质标签空间",
+        "胸片AUC超SOTA 1个百分点",
+        "支持多模态可扩展病灶检测"
+      ]
+    },
+    {
+      "id": "2611.14516",
+      "title": "TorchCurves: Differentiable Parametric Curves",
+      "authors": [
+        "Alex Shtoff"
+      ],
+      "abstract": "We present TorchCurves, a PyTorch library that treats vector-valued parametric curves as learnable primitives. Its central operation maps batches of scalar inputs to points on curves represented in B-spline or Legendre polynomial bases, with differentiation through both inputs and coefficients. Curve coefficients can be optimized jointly with the surrounding model or produced by another network. The library provides trainable modules, reusable basis modules, and a functional interface, supporting applications ranging from continuous feature embeddings to Kolmogorov-Arnold networks and functional regression. Its implementation combines classical evaluation algorithms with vectorized PyTorch operations, emphasizing readability and maintainability without custom hardware kernels. Timing experiments compare curve evaluation against NumPy and SciPy and KAN training against EfficientKAN across a range of problem sizes. The results illustrate where this generality remains computationally practical and where overhead is substantial. Library is available on GitHub at https://github.com/alexshtf/torchcurves.",
+      "published": "2026-11-10T18:58:52Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14516",
+      "pdf_url": "https://arxiv.org/pdf/2611.14516",
+      "summary_zh": "在连续特征嵌入、Kolmogorov-Arnold网络和函数回归等任务中，需要将向量值参数曲线作为可学习基元，并对其输入与系数同时求导。TorchCurves 是一个 PyTorch 库，用 B 样条或 Legendre 多项式基表示曲线，通过向量化 PyTorch 操作实现批量标量输入到曲线点的映射，并提供可训练模块、可复用基模块和函数式接口。计时实验将其曲线求值与 NumPy/SciPy 对比、将 KAN 训练与 EfficientKAN 对比，揭示了该通用方法在哪些规模下计算可行、在哪些情况下开销显著，为研究人员提供了可读易维护的曲线学习工具。",
+      "summary_en": "Tasks such as continuous feature embeddings, Kolmogorov-Arnold networks, and functional regression require vector-valued parametric curves as learnable primitives with differentiation through both inputs and coefficients. TorchCurves is a PyTorch library that represents curves in B-spline or Legendre polynomial bases, maps batches of scalar inputs to curve points via vectorized PyTorch operations, and offers trainable modules, reusable basis modules, and a functional interface. Timing experiments compare curve evaluation against NumPy and SciPy and KAN training against EfficientKAN across problem sizes, showing where this generality remains computationally practical and where overhead is substantial, providing a readable and maintainable tool for curve-based learning.",
+      "highlights_zh": [
+        "曲线作为可学习基元，输入与系数均可微",
+        "与NumPy/SciPy及EfficientKAN的计时对比",
+        "适用于KAN与函数回归，但部分规模开销大"
+      ]
+    },
+    {
+      "id": "2611.14515",
+      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+      "authors": [
+        "Zijian Zhang",
+        "Rizhen Hu",
+        "Jiangweizhi Peng",
+        "Shiyang Li",
+        "Sujay Bhatt",
+        "Sihan Zeng",
+        "Mingyi Hong"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training, offer a natural way to turn this information into guidance, but their design and adaptation are largely left to humans and tailored to specific domains. We introduce AutoScaffold, a unified AI-for-AI framework that turns a student's training experience into adaptive scaffolds, with minimal domain-specific information and no human intervention during training. A frozen teacher periodically examines this experience, diagnoses bottlenecks, and designs scaffolds in two forms: (i) strategies shared across a class of tasks and (ii) hints for individual hard tasks, adjusting the content and amount of support as the student learns. The scaffolds are removed at evaluation. We apply the same framework to ALFWorld, search-based QA, mathematical reasoning, and GPU kernel generation. When evaluated without scaffolds, students trained with AutoScaffold outperform those trained with the corresponding RL baselines in all four domains, with gains of 7.2 points in ALFWorld success and 4.0 points in average QA exact match. On GPU kernel generation, AutoScaffold increases the fraction of tasks with a correct kernel that runs faster than the PyTorch reference by up to 5.0 points. On math, our student surpasses QuestA's reported accuracy using approximately one-third as many student training steps. Analyses show that the teacher identifies a different failure in each task class and shifts its scaffolds from step-by-step workflows to targeted fixes as the student improves, and that its revised scaffolds help the student learn more than keeping the previous scaffold or using no scaffold.",
+      "published": "2026-11-10T18:58:46Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14515",
+      "pdf_url": "https://arxiv.org/pdf/2611.14515",
+      "summary_zh": "RLVR训练中结果奖励将每次尝试压缩为单一数值，大量训练经验信息未被利用，而训练时脚手架的设计与适配主要依赖人工且针对特定领域。AutoScaffold提出统一的AI-for-AI框架，由冻结教师周期性检查学生训练经验、诊断瓶颈，并生成跨任务共享策略与难题专属提示两类脚手架，随学生进步动态调整内容与支持量，评估时移除脚手架。在ALFWorld、搜索式QA、数学推理和GPU内核生成四个领域，无脚手架评估下学生均超越对应RL基线，ALFWorld成功率提升7.2点、QA平均精确匹配提升4.0点，GPU内核生成中正确且快于PyTorch参考的任务比例最高提升5.0点，数学上以约三分之一训练步数超过QuestA报告精度。",
+      "summary_en": "In RLVR, outcome rewards collapse each attempt into a single number, leaving most training experience unused, while training-time scaffolds are largely hand-designed and domain-specific. AutoScaffold introduces a unified AI-for-AI framework in which a frozen teacher periodically inspects the student's experience, diagnoses bottlenecks, and designs two forms of scaffolds—shared strategies and per-task hints—adapting their content and amount as the student improves, with scaffolds removed at evaluation. Across ALFWorld, search-based QA, mathematical reasoning, and GPU kernel generation, students trained with AutoScaffold outperform corresponding RL baselines when evaluated without scaffolds, gaining 7.2 points in ALFWorld success, 4.0 points in average QA exact match, up to 5.0 points in faster-than-PyTorch correct kernels, and surpassing QuestA's reported math accuracy with about one-third of the student training steps.",
+      "highlights_zh": [
+        "冻结教师自动诊断并生成自适应脚手架",
+        "四领域均超RL基线，最高+7.2点",
+        "减少人工设计，评估时需移除脚手架"
+      ]
+    },
+    {
+      "id": "2611.14483",
+      "title": "Mechanistic Interpretability Needs a Logic of Inference",
+      "authors": [
+        "Zhimin Hu",
+        "Chen Jiang",
+        "Hanbo Xie",
+        "N. Apurva Ratan Murty",
+        "Sashank Varma"
+      ],
+      "abstract": "Neural networks are increasingly studied not merely as predictive systems, but as complex systems whose internal computations are themselves objects of scientific inquiry. Recent progress in mechanistic interpretability (MI) has made it possible to identify neurons, features, circuits, population structures, and dynamical patterns associated with model behavior. As these tools improve, attention is shifting from what can be observed inside a model to how those observations support mechanistic explanations. We examine the parallel efforts of neuroscience and MI to address this question and identify recurring inferential bottlenecks when inferring mechanisms from complex neural systems. We propose five principles and organize them into a recursive logic for a more rigorous procedure of mechanistic inference. These principles provide a framework that supports scientific discovery in two senses: it helps turn local interpretability findings into cumulative knowledge of mechanisms within models, and it makes those mechanisms sufficiently precise to generate testable hypotheses about domains beyond the models. Evidence beyond MI is ultimately required to establish what model mechanisms reveal about the world.",
+      "published": "2026-11-10T18:45:07Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14483",
+      "pdf_url": "https://arxiv.org/pdf/2611.14483",
+      "summary_zh": "机制可解释性(MI)研究正从识别模型内部结构转向如何用这些观察支撑机制性解释，但缺乏严谨的推理逻辑。作者借鉴神经科学的经验，识别出从复杂神经系统中推断机制的反复出现的推理瓶颈，并提出五项原则组织成递归推理逻辑。该框架既能把局部可解释性发现累积为模型内机制的累积知识，又能生成关于模型之外领域的可检验假设，但最终仍需MI之外的证据来确定机制对世界的揭示。",
+      "summary_en": "Mechanistic interpretability (MI) is shifting from identifying internal structures to how observations support mechanistic explanations, yet lacks a rigorous inferential logic. Drawing on parallels with neuroscience, the authors identify recurring inferential bottlenecks in inferring mechanisms from complex neural systems and propose five principles organized into a recursive logic for more rigorous mechanistic inference. The framework helps turn local interpretability findings into cumulative mechanistic knowledge and generate testable hypotheses beyond models, though evidence beyond MI is ultimately required to establish what mechanisms reveal about the world.",
+      "highlights_zh": [
+        "提出五项原则构成递归机制推理逻辑",
+        "无具体实验数据，属方法论框架",
+        "助累积知识并生成可检验假设"
+      ],
+      "highlights_en": [
+        "Proposes five principles forming recursive mechanistic inference logic",
+        "No empirical results; conceptual/methodological framework",
+        "Enables cumulative knowledge and testable hypotheses"
+      ]
+    },
+    {
+      "id": "2611.14498",
+      "title": "Measuring Robustness and Efficiency in a Connectome-Constrained Fly Visual System Model: Linking an Adversarial and a Perceptual Illusion",
+      "authors": [
+        "Alexandre Garcia-Duran",
+        "Alejandro Rodriguez-Garcia",
+        "Manuel Molano-Mazón",
+        "Alexandre Hyafil",
+        "Srikanth Ramaswamy",
+        "Janne K. Lappalainen"
+      ],
+      "abstract": "Biological visual systems compute reliably under tight metabolic and wiring constraints, whereas artificial vision systems consume far more energy and can be sensitive to adversarial perturbations. Whether networks with brain-like wiring are more robust at lower computational cost is unclear. We address this by benchmarking a task-optimized, continuous-time recurrent neural network of the fly visual system constrained by its synaptic connectome (FlyNet) against artificial neural networks. We compare it against CNNs, RAFT, and continuous-time recurrent neural networks without detailed connectome constraints (sCTRNN, CTRNN) on a collision-detection task within a differentiable 3D rendering pipeline. FlyNet is adversarially vulnerable but, relative to its compute, more robust to common video corruptions than RAFT, while using up to five orders of magnitude fewer FLOPs. The CTRNNs remain more robust than FlyNet across almost all tested perturbations, suggesting that connectome constraints benefit efficiency, through their low edge count, over robustness. Recurrence improves robustness to white-box attacks in RAFT and temporal context improves robustness to common corruptions. FlyNet's position and velocity representations degrade under adversarial textures but recover under counterfactual textures that restore correct classification while staying equally far from training, ruling out unfamiliar textures as the cause of failure. The reverse-phi illusion similarly disrupts these representations and inverts the same low-level motion statistic as the adversarial textures. Optimizing this input statistic alone, without access to the network, suffices to induce classification failure, attributing both perturbations to the same circuit vulnerability. Connectome-constrained models can thus surface adversarial failure mechanisms as testable hypotheses about biological perceptual vulnerabilities.",
+      "published": "2026-11-10T18:51:31Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "q-bio.NC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14498",
+      "pdf_url": "https://arxiv.org/pdf/2611.14498",
+      "summary_zh": "生物视觉系统在代谢和布线约束下可靠计算，而人工视觉系统能耗高且易受对抗扰动，但类脑布线网络是否更鲁棒且低耗尚不明确。该研究在可微3D渲染的碰撞检测任务上，将受突触连接组约束的果蝇视觉连续时间循环网络FlyNet与CNN、RAFT及无连接组约束的循环网络进行基准对比。结果显示FlyNet对抗脆弱但相对其计算量对常见视频损坏比RAFT更鲁棒且FLOPs少至五个数量级，连接组约束主要提升效率而非鲁棒性，且对抗纹理与反向phi错觉通过同一低层运动统计量引发失败，为生物知觉脆弱性提供可检验假设。",
+      "summary_en": "Biological visual systems compute reliably under metabolic and wiring constraints, whereas artificial vision systems are energy-hungry and vulnerable to adversarial perturbations, leaving unclear whether brain-like wiring yields robustness at lower cost. This work benchmarks a task-optimized continuous-time recurrent network of the fly visual system constrained by its synaptic connectome (FlyNet) against CNNs, RAFT, and unconstrained recurrent networks on a collision-detection task in a differentiable 3D rendering pipeline. FlyNet is adversarially vulnerable but more robust to common video corruptions than RAFT relative to its compute while using up to five orders of magnitude fewer FLOPs; connectome constraints mainly benefit efficiency over robustness, and both adversarial textures and the reverse-phi illusion disrupt the same low-level motion statistic, attributing failures to a shared circuit vulnerability and yielding testable hypotheses about biological perceptual weaknesses.",
+      "highlights_zh": [
+        "连接组约束网络与人工网络基准对比",
+        "同等计算下比RAFT更鲁棒且FLOPs少五个量级",
+        "揭示对抗与错觉共享同一电路脆弱性"
+      ]
+    },
+    {
+      "id": "2611.14496",
+      "title": "RS-JEPA: Remote Sensing Joint-Embedding Predictive Architecture with Scan-Path Views for Cross-Sensor Image Retrieval",
+      "authors": [
+        "Tanishq Rachamalla",
+        "Srishti Kaushik",
+        "Muhammad Attique Khan",
+        "Gustau Camps-Valls",
+        "Swalpa Kumar Roy"
+      ],
+      "abstract": "Cross-sensor remote sensing image retrieval aims to find scenes with the same content across heterogeneous sensors, such as SAR and optical or panchromatic (PAN) and multispectral (MS) imagery, without manual labels. Existing self-supervised methods either reconstruct sensor-specific pixel detail, align each image only with its co-registered twin, or rely on large transformers with 118-173M parameters (and up to 398M). We introduce RS-JEPA, a compact joint-embedding predictive framework built on a Vision Mamba encoder shared by both sensors. Since a state-space encoder reads an image as an ordered sequence of patches, we propose scan-path views, which treat two reading orders of the same image as two views with identical pixels and predict the hidden patches in one order from the visible patches in the other.To keep this prediction challenging, we propose Adversarial View Coupling (AVC), which learns the hardest split of the visible patches, and a neighbourhood consensus loss that aligns the scene similarities of both sensors. Extensive experiments on SAR-optical (BEN-14K, CBRSIR-VS) and PAN-MS (DSRSID) benchmarks demonstrate that RS-JEPA achieves the highest F1@5 among twelve re-implemented methods (72.92, 80.35 and 94.43) with a retrieval network of only 3.88M parameters (14.57M in training, 8-16times fewer than prior JEPA retrievers). Like prior methods, RS-JEPA trains on co-registered pairs. Our results highlight reading order as a source of self-supervised views. code: https://github.com/Tanishq251/RSJEPA.",
+      "published": "2026-11-10T18:51:05Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14496",
+      "pdf_url": "https://arxiv.org/pdf/2611.14496",
+      "summary_zh": "跨传感器遥感图像检索需在无标签条件下匹配SAR与光学或全色与多光谱等异源图像，现有自监督方法或重建像素细节、或仅对齐配准图像对、或依赖118-398M参数的大Transformer。RS-JEPA提出基于共享Vision Mamba编码器的紧凑联合嵌入预测框架，将同一图像两种读取顺序视为像素相同的两个视图并互相预测隐藏块，配合对抗视图耦合学习最难可见块划分及邻域一致性损失对齐两传感器场景相似度。在SAR-光学与全色-多光谱基准上以仅3.88M参数检索网络取得最高F1@5（72.92、80.35、94.43），训练参数比先前JEPA检索器少8-16倍，揭示读取顺序可作为自监督视图来源。",
+      "summary_en": "Cross-sensor remote sensing image retrieval aims to match scenes across heterogeneous sensors such as SAR-optical or PAN-MS without labels, but existing self-supervised methods either reconstruct sensor-specific pixels, align only co-registered pairs, or rely on large 118-398M-parameter transformers. RS-JEPA introduces a compact joint-embedding predictive framework with a shared Vision Mamba encoder, treating two reading orders of the same image as two pixel-identical views that predict each other's hidden patches, aided by Adversarial View Coupling for hard visible-patch splits and a neighbourhood consensus loss aligning cross-sensor scene similarities. On SAR-optical (BEN-14K, CBRSIR-VS) and PAN-MS (DSRSID) benchmarks it achieves the best F1@5 (72.92, 80.35, 94.43) among twelve re-implemented methods with only 3.88M retrieval parameters (14.57M in training, 8-16x fewer than prior JEPA retrievers), highlighting reading order as a source of self-supervised views.",
+      "highlights_zh": [
+        "扫描路径双视图+对抗视图耦合",
+        "F1@5达72.92/80.35/94.43，参数仅3.88M",
+        "仍需配准图像对训练，跨传感器泛化待验证"
+      ]
+    },
+    {
+      "id": "2611.14488",
+      "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+      "authors": [
+        "Chubin Zhang",
+        "Bo An"
+      ],
+      "abstract": "Memory-augmented vision-language-action (VLA) policies are meant to remember what happened. Many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each frame with its time step. Because time passes even when nothing happens, such a memory may not tell waiting from working. We show that it does not. On the counting tasks of RoboMME, we make the robot briefly pause or fidget its wrist. Such a null event changes nothing the task depends on, yet a released memory VLA counts the interval as work done and stops early. We call this failure phantom progress. It cuts success from 47 to 16 of 50 on one task and from 44 to 10 on the other. When the same frames are withheld from memory, success returns, so the cause lies in memory rather than in the interruption itself. We trace the failure to a temporal shortcut: because demonstrations proceed at a steady pace, elapsed time predicts progress. Indeed, rescaling the time stamps alone makes the policy stop early when the clock runs fast and repeat when it runs slow. Surprisingly, removing the time encoding does not cure the failure, because the frames of a null event still occupy slots of the time-sampled memory. Across RoboMME's released designs, vulnerability follows how memory is indexed. Of the fixes the diagnosis suggests, training with injected pauses does not remove the failure and impairs counting, whereas indexing memory by events recovers half or more of the loss without retraining. A memory meant to remember what happened should count events rather than clock ticks.",
+      "published": "2026-11-10T18:47:57Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14488",
+      "pdf_url": "https://arxiv.org/pdf/2611.14488",
+      "summary_zh": "记忆增强VLA策略常按时间均匀采样帧并打时间戳来填充记忆，但时间流逝不等于任务进展，导致机器人把停顿等空事件误判为已完成工作。作者在RoboMME计数任务中注入短暂停顿或手腕抖动，揭示出“幻影进展”失败，并归因于时间戳可预测进度的时序捷径，进一步比较了不同记忆索引方式的影响。实验表明该失败使成功率从47/50降至16/50、从44/10降至10/50，而去除时间编码无效，按事件索引记忆无需重训即可挽回至少一半损失，说明记忆应计数事件而非时钟滴答。",
+      "summary_en": "Memory-augmented VLA policies often fill memory by sampling frames uniformly over time and stamping each with its time step, but elapsed time does not equal task progress, so such memory cannot distinguish waiting from working. The authors inject brief pauses or wrist fidgets into RoboMME counting tasks, expose a failure termed phantom progress, and trace it to a temporal shortcut in which time stamps predict progress, then compare how vulnerability follows memory indexing across released designs. The failure cuts success from 47 to 16 of 50 on one task and from 44 to 10 on the other, removing time encoding does not help, and event-based memory indexing recovers half or more of the loss without retraining, implying memory should count events rather than clock ticks.",
+      "highlights_zh": [
+        "揭示时序捷径致幻影进展",
+        "成功率47→16、44→10",
+        "事件索引免重训可挽回半数"
+      ],
+      "highlights_en": [
+        "Exposes temporal shortcut phantom progress",
+        "Success drops 47→16 and 44→10",
+        "Event indexing recovers half without retraining"
+      ]
+    },
+    {
+      "id": "2611.14470",
+      "title": "TanCRAFT: Context-Reasoned Anticipatory Feedback for Assembly Tasks",
+      "authors": [
+        "Sassan Mokhtar",
+        "Lars Doorenbos",
+        "Marius Bock",
+        "Sina Mokhtar",
+        "Katharina Beckh",
+        "Dominik Bach",
+        "Juergen Gall"
+      ],
+      "abstract": "Preventing human error in physical assembly tasks requires assistance systems that can intervene before mistakes are made. This is especially challenging in settings where users are free to choose the construction order and correctness depends on the evolving assembly rather than a fixed next step. We present TanCRAFT, a four-stage real-time predictive assistance system that tracks the scene state, reasons about the current partial assembly, forecasts the near-future motion of manipulated pieces, and intervenes when the predicted placement is incompatible with the target. We instantiate our framework and confirm its effectiveness in a controlled tangram assembly task through offline benchmarks and a within-subject user study. Our findings show that the predictive feedback significantly reduces mistakes relative to unguided and reactive sessions, while yielding the lowest mean perceived workload and shortest mean completion time. Overall, these results demonstrate the value of predictive feedback for error prevention and provide a step toward cost-aware assistance for automation and human-robot workcells.",
+      "published": "2026-11-10T18:33:53Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14470",
+      "pdf_url": "https://arxiv.org/pdf/2611.14470",
+      "summary_zh": "在物理装配任务中，用户可自由选择装配顺序且正确性取决于动态装配状态，传统系统难以在错误发生前干预。TanCRAFT提出四阶段实时预测辅助系统：跟踪场景状态、推理当前部分装配、预测操作件的近期运动，并在预测放置与目标不兼容时干预。在七巧板装配实验中，预测反馈相比无引导和反应式会话显著减少错误，同时感知工作负荷最低、平均完成时间最短，展示了预测反馈在错误预防中的价值。",
+      "summary_en": "Preventing errors in physical assembly is hard when users freely choose the construction order and correctness depends on the evolving assembly rather than a fixed next step. TanCRAFT is a four-stage real-time predictive assistance system that tracks the scene state, reasons about the current partial assembly, forecasts near-future motion of manipulated pieces, and intervenes when the predicted placement is incompatible with the target. In a controlled tangram assembly task, predictive feedback significantly reduced mistakes versus unguided and reactive sessions while yielding the lowest perceived workload and shortest completion time, demonstrating the value of predictive feedback for error prevention.",
+      "highlights_zh": [
+        "四阶段实时预测式装配辅助框架",
+        "错误显著减少且完成时间最短",
+        "面向人机协作的预见性防错辅助"
+      ]
+    },
+    {
+      "id": "2611.14514",
+      "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+      "authors": [
+        "Ziang Liu",
+        "James J. Kim",
+        "Yijia Dai",
+        "Jennifer J. Sun"
+      ],
+      "abstract": "LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\\neg h$. When evidence rejects $h$, the agent learns that one explanation is unlikely but not which alternative the evidence supports. To recover that alternative, we introduce Contrastive Discovery, which replaces the single hypothesis with a contrast set, a scientific question paired with mutually exclusive and collectively exhaustive competing explanations. Each experiment is scored by how its evidence redistributes belief across the set, and the question is resolved when belief concentrates on one explanation. Because contrast sets change only the unit an agent proposes and scores, an existing agent can use them to re-evaluate evidence it has already collected or to guide its search. Across six domains, $89\\%$ of the pointwise candidates with the largest belief shifts are rejections. On the same evidence, contrast sets resolve $73\\%$ of these candidates to a specific alternative. When contrast sets guide search, the agent resolves $67\\%$ more questions than pointwise surprisal under the same experiment budget. In a blinded study, $38$ human experts chose the same explanation on $78\\%$ of resolved questions and on $82\\%$ of questions where the pointwise agent rejected its hypothesis and stopped. Together, these results support explicit competing explanations as a way for discovery agents to resolve more scientific questions from the same evidence and validation budget.",
+      "published": "2026-11-10T18:58:43Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.14514",
+      "pdf_url": "https://arxiv.org/pdf/2611.14514",
+      "summary_zh": "现有LLM科学发现智能体通常逐点评估假设，只检验假设与其否定的对立，证据拒绝假设时无法指出哪个替代解释成立。本文提出Contrastive Discovery，用由互斥且完备的竞争解释构成的对比集替代单一假设，按实验证据在集合上重新分配信念的程度打分，信念集中于某一解释即解决问题，且可直接嵌入现有智能体复用已有证据或指导搜索。在六个领域中，逐点评估中信念变化最大的候选有89%只是被拒绝，而对比集将其中73%解析到具体替代解释；指导搜索时在相同实验预算下多解决67%的问题，盲测中人类专家在78%的已解决问题上与智能体选择一致，表明显式竞争解释能让发现智能体在同等证据与验证预算下解决更多科学问题。",
+      "summary_en": "LLM agents for open-ended scientific discovery typically evaluate hypotheses pointwise, testing a claim only against its negation, so rejecting a hypothesis reveals no supported alternative. Contrastive Discovery replaces the single hypothesis with a contrast set of mutually exclusive and collectively exhaustive competing explanations, scores each experiment by how it redistributes belief across the set, and treats the question as resolved when belief concentrates on one explanation; because only the unit of proposal and scoring changes, existing agents can reuse collected evidence or guide search. Across six domains, 89% of pointwise candidates with the largest belief shifts are mere rejections, yet contrast sets resolve 73% of them to a specific alternative, resolve 67% more questions than pointwise surprisal under the same experiment budget, and agree with 38 blinded human experts on 78% of resolved questions (82% where the pointwise agent rejected and stopped), supporting explicit competing explanations as a way to resolve more scientific questions from the same evidence and validation budget.",
+      "highlights_zh": [
+        "用互斥完备对比集替代单假设评估",
+        "同预算下多解决67%问题",
+        "可复用已有证据，需预定义解释集"
+      ]
+    }
+  ]
+}
