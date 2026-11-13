@@ -1,0 +1,331 @@
+{
+  "date": "2026-11-13",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.17323",
+      "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+      "authors": [
+        "Ethan Lin",
+        "Akanksha Sarkar",
+        "Ziang Liu",
+        "Kristin Branson",
+        "Jennifer J. Sun"
+      ],
+      "abstract": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested in realistic regimes where labeled data is scarce but unlabeled data is abundant. In this work, we introduce Agentic Semi-Supervised Learning (AgentSSL), framing SSL as a program search problem and studying how agents navigate this space under limited supervision. We find that even under weak feedback and matched compute, agents can synthesize code that combines and adapts established SSL techniques, exceeding the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%. However, our results identify program selection as a critical bottleneck in AgentSSL, where performance drops by as much as 47% when selecting based on the agent's feedback metric. To systematically study this bottleneck, we introduce ProgramSelectBench, a large-scale benchmark with a combined total of 16,977 agent-generated and human-engineered SSL programs, and evaluate both unsupervised and active program selection methods. We further evaluate AgentSSL on real-world ecology detection tasks, highlighting the opportunities and challenges of transferring agent-discovered strategies beyond controlled benchmarks.",
+      "published": "2026-11-12T18:59:06Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17323",
+      "pdf_url": "https://arxiv.org/pdf/2611.17323",
+      "summary_zh": "在标签稀缺但无标签数据丰富的现实场景中，MLE智能体此前几乎只在全监督设置下被研究，缺乏对半监督学习（SSL）能力的检验。本文提出AgentSSL，将SSL建模为程序搜索问题，让智能体在弱反馈和有限算力下合成并适配已有SSL技术的代码，并引入ProgramSelectBench基准系统研究程序选择瓶颈。结果显示智能体在12个设置中的8个超越最强人工基线（最高+21.8%），但基于智能体反馈指标选择程序时性能可下降47%，揭示了AgentSSL的关键瓶颈与真实生态检测任务中的迁移挑战。",
+      "summary_en": "Applying ML systems to new domains is bottlenecked by scarce labels and manual pipeline engineering, yet MLE agents have been studied almost exclusively in fully supervised settings, leaving their semi-supervised capabilities untested. We introduce AgentSSL, framing semi-supervised learning as a program search problem in which agents synthesize code combining and adapting established SSL techniques under weak feedback and matched compute, and we present ProgramSelectBench to systematically study the program-selection bottleneck. Agents exceed the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%, but performance drops by as much as 47% when selecting programs via the agent's feedback metric, highlighting program selection as a critical bottleneck and revealing opportunities and challenges in transferring agent-discovered strategies to real-world ecology detection.",
+      "highlights_zh": [
+        "将SSL建模为智能体程序搜索问题",
+        "8/12设置超人工基线，最高+21.8%",
+        "程序选择瓶颈致性能降47%"
+      ]
+    },
+    {
+      "id": "2611.17316",
+      "title": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+      "authors": [
+        "Peiwen Li",
+        "Harshit Verma",
+        "Sophia Zhou",
+        "Haiwen Wang",
+        "Ngoc Bui",
+        "Heng Chang",
+        "Fei Fei",
+        "David van Dijk",
+        "Rex Ying"
+      ],
+      "abstract": "Coding agents tackle successive tasks on an evolving repository, carrying forward edits and writing memory before the next task is known. Selecting memory for unknown next tasks requires balancing future usefulness against the costs of writing and reading it. The actor must also decide when acting on available memory saves effort as the task unfolds. We introduce Coding-Repository Memory (CoReMem), a cost-internalizing framework that guides memory design and actor adaptation through measured memory value on the next task. Prospective segment valuation compares runs of the next task with and without individual trajectory segments from the same inherited repository state, guiding a compact memory built around anchors: repository locations and executable checks. Actor adaptation estimates on-policy memory value within rollout groups with and without memory, using a reward that prioritizes resolution and penalizes step count in successful runs. Provenance-gated value credit assigns the additional value term to steps identified as using memory-supplied anchors, while every step retains outcome credit. On ChainSWE, CoReMem raises the 27B actor's resolve rate from 21.0% to 25.7%, with 17% fewer steps and 11% fewer total cache-aware tokens, including memory-module calls, relative to the untrained actor model without memory.",
+      "published": "2026-11-12T18:58:22Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17316",
+      "pdf_url": "https://arxiv.org/pdf/2611.17316",
+      "summary_zh": "编码智能体在演化仓库上连续执行任务时，需在未知下一任务的情况下写记忆，并权衡未来收益与读写成本。CoReMem 提出成本内化框架，用前瞻性片段估值比较有无记忆的运行，围绕仓库位置与可执行检查构建紧凑记忆，并通过溯源门控价值信用适配演员。在 ChainSWE 上，27B 演员解决率从 21.0% 升至 25.7%，步数减少 17%、缓存感知 token 减少 11%，表明记忆价值可被度量并内化为效率收益。",
+      "summary_en": "Coding agents working on evolving repositories must write memory before the next task is known, trading future usefulness against read/write costs. CoReMem introduces a cost-internalizing framework that uses prospective segment valuation to compare runs with and without trajectory segments, builds compact anchor-based memory around repository locations and executable checks, and adapts the actor via provenance-gated value credit. On ChainSWE, it raises a 27B actor's resolve rate from 21.0% to 25.7% with 17% fewer steps and 11% fewer cache-aware tokens, showing that measured memory value can be internalized into efficiency gains.",
+      "highlights_zh": [
+        "前瞻估值+溯源门控信用",
+        "解决率21.0%→25.7%",
+        "可度量记忆价值内化"
+      ]
+    },
+    {
+      "id": "2611.17334",
+      "title": "Unbundling Multimodal Vision Encoding",
+      "authors": [
+        "Ellis Brown",
+        "Chris Hoang",
+        "Shengyi Qian",
+        "Shang-Wen Li",
+        "Mike Lewis",
+        "Marjan Ghazvininejad",
+        "Luke Zettlemoyer",
+        "Lucas Beyer",
+        "Mengye Ren",
+        "Jakob Verbeek",
+        "Saining Xie",
+        "Hu Xu"
+      ],
+      "abstract": "How multimodal language models should encode visual input remains up for debate. Most models use a pretrained vision encoder, while some recent recipes train the encoder from scratch with the language model or remove it entirely. Vision encoders bundle together three design choices: a visual prior from upstream pretraining, dedicated vision capacity, and pre-fusion placement of that capacity (i.e., before the multimodal backbone). Because published models also differ in data, architecture, and compute, comparing them cannot isolate the effect of each choice. We disentangle these choices via a controlled framework where we pretrain all models from scratch on common data and compare them on visual question answering and language benchmarks at matched lifetime compute. We find that the visual prior is not necessary; an encoder trained jointly from scratch is on par with a pretrained one, without a separate training stage. What matters instead is dedicated vision capacity: an encoder-free model trails on visual understanding even when its backbone is enlarged by the encoder's parameter count. Yet that capacity need not precede multimodal fusion, as vision-only modules added in-fusion to early backbone layers perform comparably to a pre-fusion encoder and can lower time to first token. These results also hold across backbone sizes, when encoder pretraining is treated as free, and when starting from a pretrained language model. Overall, our findings favor dedicated vision capacity trained jointly with the backbone and placed early within it.",
+      "published": "2026-11-12T18:59:54Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17334",
+      "pdf_url": "https://arxiv.org/pdf/2611.17334",
+      "summary_zh": "多模态语言模型如何编码视觉输入尚无定论，现有模型在数据、架构和算力上差异大，难以隔离各项设计选择的影响。作者提出受控框架，从零预训练所有模型并在相同数据与匹配总算力下比较，将视觉先验、专用视觉容量和融合前放置这三个捆绑选择解耦。结果表明视觉先验并非必要，联合从零训练的编码器与预训练编码器相当，真正重要的是专用视觉容量，且该容量可在融合早期加入而非必须前置，从而降低首token时延。",
+      "summary_en": "How multimodal language models should encode visual input remains debated, and published models differ in data, architecture, and compute, making it impossible to isolate the effect of each design choice. The authors introduce a controlled framework that pretrains all models from scratch on common data and compares them at matched lifetime compute, disentangling the visual prior, dedicated vision capacity, and pre-fusion placement. They find the visual prior is unnecessary—a jointly trained from-scratch encoder matches a pretrained one—while dedicated vision capacity matters, and this capacity can be added in-fusion to early backbone layers rather than before fusion, matching a pre-fusion encoder and lowering time to first token.",
+      "highlights_zh": [
+        "解耦视觉先验、容量与放置三选择",
+        "从零联合训练编码器媲美预训练编码器",
+        "专用视觉容量可置于融合早期层"
+      ],
+      "highlights_en": [
+        "Disentangles visual prior, capacity, placement",
+        "From-scratch joint encoder matches pretrained",
+        "Vision capacity can sit in early fusion layers"
+      ]
+    },
+    {
+      "id": "2611.17332",
+      "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+      "authors": [
+        "Jie Wang",
+        "Tong Zhu",
+        "JiaHao Kuang",
+        "Zhe Xu",
+        "Yunkai Chai",
+        "Dehong Zheng",
+        "Yu Cheng",
+        "Tao Ji",
+        "ZhouHan Lin",
+        "Qi Zhang",
+        "Bowen Zhou"
+      ],
+      "abstract": "Model architecture shapes the scaling behavior, training efficiency, and inference cost of LLMs, making it a central focus of both industry and academia. In industry, teams such as those behind DeepSeek, Qwen, and Kimi routinely introduce architectural innovations, yet public reports rarely document which ideas succeeded, which were abandoned, and why. In academia, limited compute and inconsistent baselines often restrict evaluations to small-scale, single-point comparisons, making it difficult to establish whether improvements hold at larger scales or translate into broader impact. ArchSpace addresses both gaps as a public platform for Recording, Reviewing, and Referencing Architecture Researc}: each proposal is recorded with its experiments and reasoning, reviewed by the community, and referenced by later work. To evaluate ideas before costly large-scale training, ArchSpace leverages scaling laws to predict model loss at larger scales from smaller experiments, a practice widely adopted in industry. We provide initial references that make the platform usable: Qwen3.5 and OLMo3 baselines, fitted scaling laws, and a reusable training recipe. Ideas validated through this review can in turn become new baselines, and ArchSpace thereby aims to broaden the range of ideas that shape the next generation of models.",
+      "published": "2026-11-12T18:59:52Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17332",
+      "pdf_url": "https://arxiv.org/pdf/2611.17332",
+      "summary_zh": "LLM架构研究缺乏公开的成功与失败记录，学术界受限于算力和基线不一致，难以验证改进能否扩展到更大规模。ArchSpace构建公共平台，记录每个架构提案的实验与推理、由社区评审并被后续工作引用，并利用缩放定律从小规模实验预测大规模损失。平台提供Qwen3.5与OLMo3基线、拟合的缩放定律和可复用训练配方，使经评审验证的想法成为新基线，从而扩大影响下一代模型的想法范围。",
+      "summary_en": "LLM architecture research lacks public records of which ideas succeeded or failed, and academia is constrained by limited compute and inconsistent baselines, making it hard to verify whether improvements scale. ArchSpace is a public platform that records each architecture proposal with its experiments and reasoning, has it reviewed by the community, and lets later work reference it, using scaling laws to predict large-scale loss from small experiments. It provides Qwen3.5 and OLMo3 baselines, fitted scaling laws, and a reusable training recipe, so validated ideas can become new baselines and broaden the range of ideas shaping next-generation models.",
+      "highlights_zh": [
+        "记录-评审-引用闭环的公共架构平台",
+        "提供基线、缩放定律与可复用训练配方",
+        "降低大规模验证成本，但依赖社区参与"
+      ]
+    },
+    {
+      "id": "2611.17320",
+      "title": "Learning When Diffusion Language Models Should Regenerate",
+      "authors": [
+        "Minhae Oh",
+        "Jeonghye Kim",
+        "Jinwoo Koo",
+        "Yeongoon Kim",
+        "Jimin Seo",
+        "Minsik Seol",
+        "Jungwoo Lee"
+      ],
+      "abstract": "Remasking allows diffusion language models to revisit generated text, but effective correction requires knowing when and what to revise. Our diagnosis on Sudoku reveals two gaps. Hidden states contain error information that token confidence does not reliably expose, and remasking an isolated error usually reproduces it when the surrounding context remains fixed. These findings motivate DiVR , a verifier that predicts whether a partially generated sequence will reach a correct answer. Trained on the final correctness of the model's own trajectories, DiVR decides when to regenerate a block and which alternative to retain, while the generator itself stays unchanged. On five reasoning benchmarks with LLaDA-8B-Base, DiVR raises the average accuracy of the fine-tuned generator from 35.3\\% to 43.4\\% at $1.9$-$3.5\\times$ the cost of greedy decoding, above search baselines that use $3.8$-$7.4\\times$. It also complements post-training such as supervised fine-tuning and reinforcement learning, and generalizes to other generators, including Dream.",
+      "published": "2026-11-12T18:58:50Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17320",
+      "pdf_url": "https://arxiv.org/pdf/2611.17320",
+      "summary_zh": "扩散语言模型通过重掩码修正生成文本，但难以判断何时修正及修正什么，在数独任务上的诊断显示隐藏状态含错误信息而token置信度无法可靠暴露，且孤立重掩码常因上下文不变而重现错误。为此提出DiVR验证器，基于模型自身轨迹的最终正确性训练，预测部分生成序列能否达到正确答案，决定何时重新生成块及保留哪个候选，而生成器本身不变。在LLaDA-8B-Base的五个推理基准上，DiVR将微调生成器平均准确率从35.3%提升至43.4%，成本为贪婪解码的1.9-3.5倍，优于使用3.8-7.4倍成本的搜索基线，并可补充监督微调和强化学习，泛化到Dream等其他生成器。",
+      "summary_en": "Remasking lets diffusion language models revise generated text, but effective correction requires knowing when and what to revise; diagnosis on Sudoku reveals that hidden states contain error information not reliably exposed by token confidence, and remasking an isolated error often reproduces it when context stays fixed. We propose DiVR, a verifier trained on the final correctness of the model's own trajectories that predicts whether a partially generated sequence will reach a correct answer, deciding when to regenerate a block and which alternative to retain while keeping the generator unchanged. On five reasoning benchmarks with LLaDA-8B-Base, DiVR raises average accuracy from 35.3% to 43.4% at 1.9-3.5x the cost of greedy decoding, outperforming search baselines using 3.8-7.4x, complements post-training such as SFT and RL, and generalizes to other generators including Dream.",
+      "highlights_zh": [
+        "基于轨迹正确性训练验证器决定重生成",
+        "准确率35.3%→43.4%，成本低于搜索基线",
+        "可补充后训练并泛化至其他生成器"
+      ]
+    },
+    {
+      "id": "2611.17314",
+      "title": "Linking Rapid Learning to Compositional Structure in Neural Networks: Evidence from Additive Analogies in Meta-Learned Parameter Spaces",
+      "authors": [
+        "Abigail L. Tenenbaum",
+        "R. Thomas McCoy"
+      ],
+      "abstract": "Humans can learn rapidly from limited experience, while neural networks typically require extensive training. In this work, we investigate what properties of a neural network can enable it to learn rapidly. We study neural networks that have been optimized via meta-learning, a technique that exposes a network to many related functions to facilitate its subsequent learning of similar functions. Prior work has shown that these meta-learned networks can learn new functions rapidly, but how they do so remains unclear. To investigate their internal structure, we take inspiration from classic work demonstrating additive relationships among the learned vectors that neural networks use to represent words (e.g., \"king\" minus \"man\" plus \"woman\" approximates \"queen\"). Analogously, we look for additive relationships among a meta-learned network's \"representations\" of different functions; when a meta-learned network rapidly learns to implement a specific function, all of its adapted parameter values can be concatenated into a single vector that we treat as representing the function. We find that such parameter vectors can be added and subtracted according to symbolic relationships among the functions they represent, yielding new parameter vectors that successfully represent the functions predicted by the corresponding symbolic manipulations: the networks specified by these artificially recombined vectors actually implement the intended functions without any direct training on them. Our results suggest that meta-learning can tune a network's starting point to organize subsequent learning along systematic, functionally meaningful trajectories through the space of possible parameter vectors, providing a geometric basis for realizing inductive biases in neural networks.",
+      "published": "2026-11-12T18:57:49Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17314",
+      "pdf_url": "https://arxiv.org/pdf/2611.17314",
+      "summary_zh": "神经网络通常需要大量训练才能学会新任务，而元学习网络虽能快速学习却机制不明。该研究借鉴词向量加性类比，将元学习网络适应某函数后的参数拼接为向量，检验这些参数向量能否按函数间的符号关系进行加减组合。结果显示重组向量无需训练即可实现目标函数，表明元学习将网络起点组织成沿系统性、功能有意义轨迹的参数空间，为归纳偏置提供几何基础。",
+      "summary_en": "Neural networks typically require extensive training to learn new tasks, and although meta-learned networks can learn rapidly, the underlying mechanism remains unclear. Inspired by additive analogies in word vectors, this work concatenates a meta-learned network's adapted parameters for a function into a single vector and tests whether such vectors can be added and subtracted according to symbolic relationships among functions. Recombined vectors successfully implement the intended functions without direct training, suggesting meta-learning tunes the network's starting point to organize learning along systematic, functionally meaningful trajectories through parameter space, providing a geometric basis for inductive biases.",
+      "highlights_zh": [
+        "参数向量加性类比揭示元学习结构",
+        "重组向量无需训练即实现目标函数",
+        "为归纳偏置提供几何解释"
+      ],
+      "highlights_en": [
+        "Additive parameter analogies reveal meta-learning structure",
+        "Recombined vectors implement functions without training",
+        "Geometric basis for inductive biases"
+      ]
+    },
+    {
+      "id": "2611.17336",
+      "title": "Back to Pixels: Lifting Latent Video Diffusion into Pixel Space",
+      "authors": [
+        "Yanke Song",
+        "Shuo Chen",
+        "Chris Rockwell",
+        "Guande He",
+        "Nan Liu",
+        "Desai Xie",
+        "Tianpei Gu",
+        "Yong-Hyun Park",
+        "Aryan V S",
+        "Dennis Yuren Menn",
+        "Ming-Hsuan Yang",
+        "Xun Huang"
+      ],
+      "abstract": "Frontier video generation models work in a VAE latent space that compresses video in both space and time. This compression made training tractable, but now limits high-resolution, controllable, and interactive generation -- doubling resolution quadruples token count, conditions apply to groups of frames rather than individual ones, and each response must wait for the rest of its multi-frame block. We present PixVid, a simple yet effective method that lifts a pretrained latent video model to directly generate every frame in pixel space. PixVid keeps the diffusion transformer and replaces the VAE decoder with a convolutional head that renders its outputs into pixels. We find that predicting clean video rather than velocity, together with a larger noise shift, is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within $\\sim 1.3$M training clips. Working framewise in pixels, it generates at $2\\times$ higher resolution with the same per-frame token count, keeps depth-conditioned video editing aligned under fast motion, and responds to each action at the next frame. Project page: https://chenshuo20.github.io/PixVid/",
+      "published": "2026-11-12T18:59:55Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17336",
+      "pdf_url": "https://arxiv.org/pdf/2611.17336",
+      "summary_zh": "前沿视频生成模型依赖VAE潜空间在时空上压缩视频，虽使训练可行，却限制了高分辨率、精细控制和交互式生成（分辨率翻倍使token数增至四倍、条件作用于帧组而非单帧、响应需等待整个多帧块）。作者提出PixVid，保留扩散Transformer并将VAE解码器替换为卷积头，把预训练潜空间视频模型提升到像素空间逐帧直接生成，并发现预测干净视频而非速度、配合更大的噪声偏移是质量关键。基于Wan2.1-14B微调，PixVid在约130万训练片段内即与潜空间基线相当，在相同每帧token数下实现2倍分辨率、快速运动下保持深度条件编辑对齐，并能逐帧响应动作。",
+      "summary_en": "Frontier video generation models operate in a VAE latent space that compresses video in space and time, which made training tractable but now limits high-resolution, controllable, and interactive generation (doubling resolution quadruples tokens, conditions apply to frame groups, and each response waits for a multi-frame block). The authors present PixVid, which keeps the diffusion transformer and replaces the VAE decoder with a convolutional head to lift a pretrained latent video model into direct per-frame pixel-space generation, finding that predicting clean video rather than velocity plus a larger noise shift is key to quality. Finetuned from Wan2.1-14B, PixVid is competitive with the latent baseline within ~1.3M training clips, generates at 2x higher resolution with the same per-frame token count, keeps depth-conditioned editing aligned under fast motion, and responds to each action at the next frame.",
+      "highlights_zh": [
+        "用卷积头替换VAE解码器，逐帧像素生成",
+        "约130万片段内追平潜空间基线，分辨率2倍",
+        "支持逐帧交互与快速运动编辑对齐"
+      ]
+    },
+    {
+      "id": "2611.17331",
+      "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+      "authors": [
+        "Chin-Yang Lin",
+        "Ryo Hachiuma",
+        "Jaesung Choe",
+        "Min-Hung Chen",
+        "Yu-Chiang Frank Wang",
+        "Yen-Yu Lin",
+        "Wei-Chen Chiu",
+        "Yu-Lun Liu",
+        "Cheng Sun"
+      ],
+      "abstract": "Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while Test-Time Training (TTT) layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), a strategy that learns to bake global scene information from cross-view attention into a lightweight MLP, enabling fast and high-fidelity novel-view decoding. The first key is to repurpose the fast-weight MLP of TTT to learn the cross-view attention mapping explicitly from its input-output pairs, rather than replacing attention entirely, achieving the same rendering efficiency as TTT while delivering substantially higher quality. The second key addresses a modality misalignment between context prefilling and novel-view rendering: we disentangle context tokens into camera-only context rendering tokens to serve as TTB input, and context ground-truth tokens with image content to serve as the TTB mapping target, ensuring the baked MLPs are relieved of the modality generalization challenge between context and novel-view processing. Our method achieves up to **23x** rendering speedup with quality on par with the state-of-the-art across several benchmarks. Project page: https://test-time-baking.github.io",
+      "published": "2026-11-12T18:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17331",
+      "pdf_url": "https://arxiv.org/pdf/2611.17331",
+      "summary_zh": "仅解码器视图合成模型借助KV-cache取得领先质量，但测试时训练层虽节省计算却牺牲质量。本文提出测试时烘焙（TTB），将跨视图注意力映射显式烘焙进轻量MLP，并解耦上下文token为相机-only渲染输入与含图像内容的目标，避免模态错配。方法实现最高23倍渲染加速且质量与SOTA持平，为高效高保真新视图解码提供新路径。",
+      "summary_en": "Decoder-only view synthesis models with KV-cache achieve state-of-the-art quality, while test-time training layers save computation but sacrifice quality. We propose Test-Time Baking (TTB), which explicitly bakes the cross-view attention mapping into a lightweight MLP and disentangles context tokens into camera-only rendering inputs and image-content mapping targets to avoid modality misalignment. TTB achieves up to 23x rendering speedup with quality on par with the state of the art across benchmarks.",
+      "highlights_zh": [
+        "将跨视图注意力显式烘焙进轻量MLP",
+        "最高23倍加速且质量与SOTA持平",
+        "高效高保真新视图渲染新范式"
+      ]
+    },
+    {
+      "id": "2611.17238",
+      "title": "HEIR: Harness Egocentric Intent for Human-Robot Interactions",
+      "authors": [
+        "Yichi Zhang",
+        "Bo Wang",
+        "Zhenghan Zhu",
+        "Yutong Han",
+        "Jiayin Zou",
+        "Gao Kejun",
+        "Chang Liu",
+        "Shaoxuan Xie",
+        "Chi Zhang",
+        "Shi Haoyang",
+        "Zongxuan Lai",
+        "Sen Cui",
+        "Guocai Yao",
+        "Miao Liu"
+      ],
+      "abstract": "For robots to assist, serve, and collaborate with humans, they must not only interpret human requests conveyed through language and multimodal intentional cues, but also execute long-horizon tasks that interleave navigation and manipulation. In this paper, we introduce HEIR, a resource for studying how to Harness Egocentric Intent for Human-Robot Interaction. HEIR pairs human speech, measured gaze, and egocentric video with robot observations and teleoperated navigation-manipulation trajectories, while each session preserves successive episodes, with each request fulfilled through multiple execution subtasks. The captured data, together with human-authored annotations, support the study of intent grounding, execution planning, and task completion within a unified interaction setting. To demonstrate the value of HEIR, we conduct extensive offline experiments to evaluate how models benefit from additional human-centric context across these tasks, together with real-robot experiments that assess execution task completion. HEIR thus provides a valuable resource for studying user-centric robot interaction in naturalistic household environments. Our demo and dataset are available online.",
+      "published": "2026-11-12T18:25:41Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17238",
+      "pdf_url": "https://arxiv.org/pdf/2611.17238",
+      "summary_zh": "机器人需理解人类语言与多模态意图线索，并执行导航与操作交织的长时程任务，但缺乏统一交互场景下的数据资源。HEIR将人类语音、注视与自我中心视频同机器人观测及遥操作导航-操作轨迹配对，保留连续多轮请求与多子任务执行，并附人工标注，支持意图 grounding、执行规划与任务完成研究。离线实验表明模型可从额外以人为中心的上下文获益，真机实验评估执行任务完成度，为自然家庭环境下的以用户为中心机器人交互提供宝贵资源。",
+      "summary_en": "Robots must interpret human requests via language and multimodal intentional cues while executing long-horizon tasks that interleave navigation and manipulation, yet resources for studying this in a unified interaction setting are lacking. HEIR pairs human speech, measured gaze, and egocentric video with robot observations and teleoperated navigation-manipulation trajectories, preserving successive episodes with multi-subtask execution and human-authored annotations to support intent grounding, execution planning, and task completion. Offline experiments show models benefit from additional human-centric context, real-robot experiments assess execution task completion, and HEIR offers a valuable resource for user-centric robot interaction in naturalistic household environments.",
+      "highlights_zh": [
+        "配对语音注视视频与机器人轨迹",
+        "多任务离线实验验证上下文增益",
+        "面向自然家庭环境的交互资源"
+      ]
+    },
+    {
+      "id": "2611.17213",
+      "title": "Collaborative Task Allocation for Heterogeneous Multi-Robot Systems Through Iterative Clustering",
+      "authors": [
+        "David R. Martin",
+        "Brooks A. Butler",
+        "Scott Nivison",
+        "Magnus Egerstedt",
+        "Mohammad Abdullah Al Faruque",
+        "Pramod Khargonekar"
+      ],
+      "abstract": "Multi-robot systems face the challenge of efficiently allocating teams of heterogeneous robots to tasks. The task allocation problem is complicated by collaborative interactions between robots where teams of robots develop emergent capabilities that enable them to complete tasks that would be inefficient or impossible for individual robots. To address these challenges, we present an iterative clustering algorithm for collaborative task allocation in heterogeneous multi-robot systems. This approach partitions the computationally intractable global optimization problem into smaller, tractable subproblems by iteratively forming clusters of robots and tasks, then optimizing assignments within each cluster. By ensuring robots remain clustered with their currently assigned tasks, we guarantee monotonic improvement in overall utility with each iteration. We analyze the convergence of the algorithm and characterize how cluster size constraints determine which suboptimal assignments could trap the algorithm. In simulation, iterative clustering consistently outperforms simulated annealing, and a group-based auction in both computation time and solution quality, and outperforms a hedonic game approach in solution quality.",
+      "published": "2026-11-12T18:10:27Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.17213",
+      "pdf_url": "https://arxiv.org/pdf/2611.17213",
+      "summary_zh": "异构多机器人系统需高效分配机器人团队执行任务，但机器人间的协作交互使全局优化难以求解。本文提出迭代聚类算法，将全局问题分解为机器人-任务簇的子问题并迭代优化簇内分配，保证整体效用单调提升。仿真中该方法在计算时间和解质量上均优于模拟退火和基于群体的拍卖，解质量优于享乐博弈方法。",
+      "summary_en": "Heterogeneous multi-robot systems must efficiently allocate robot teams to tasks, but collaborative interactions make the global optimization intractable. We present an iterative clustering algorithm that partitions the global problem into tractable robot-task cluster subproblems and optimizes assignments within each cluster, guaranteeing monotonic utility improvement. Simulations show it outperforms simulated annealing and group-based auction in both computation time and solution quality, and beats a hedonic game approach in solution quality.",
+      "highlights_zh": [
+        "迭代聚类分解全局优化并保证单调改进",
+        "计算时间与解质量均优于模拟退火和拍卖",
+        "适用于异构多机器人协作任务分配"
+      ],
+      "highlights_en": [
+        "Iterative clustering decomposition with monotonic utility guarantee",
+        "Faster and better solutions than annealing and auction baselines",
+        "Applicable to heterogeneous multi-robot collaborative allocation"
+      ]
+    }
+  ]
+}
