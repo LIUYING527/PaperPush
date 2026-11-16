@@ -1,0 +1,291 @@
+{
+  "date": "2026-11-16",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.18553",
+      "title": "WeightBench: Evaluating Language Models as Weight-Space Programmers",
+      "authors": [
+        "Aayush Marasini",
+        "Barsat Khadka",
+        "Nick Rahimi"
+      ],
+      "abstract": "Recent work shows that large language models (LLMs) can operate directly on the parameters of other neural networks. They can read what a network was trained to do, fix a network that fails, and write working networks from scratch, all without gradient descent. This capability has been termed Weight-Space Programming (WSP). Exploring this new paradigm systematically requires a robust benchmark. We introduce WEIGHTBENCH, a benchmark that evaluates LLMs of increasing capability on 42 WSP tasks across five tracks: reading, fixing and writing weights, recognizing edits that are impossible, and data-free compression. The networks whose weights the LLMs read and edit range from 2K-parameter control policies to 7B-parameter language models. Experimental benchmark results show that frontier agents can already read small networks and write working control policies without ever running them, but cannot yet patch language models, compress them without data, or tell an impossible edit from a hard one. On all 42 tasks, Claude Opus 5.5 reaches a macro score of 0.535 (Sonnet 5.5 0.466, Haiku 5.5 0.402, DeepSeek v4-flash 0.215); on the 38 tasks it was run on, GPT-6.1-sol reaches 0.568 against Opus's 0.546. Code, the task registry, our OS-level sandbox harness, and the live leaderboard are publicly available at https://github.com/Aayush-Marasini/WeightBench.",
+      "published": "2026-11-13T18:58:08Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18553",
+      "pdf_url": "https://arxiv.org/pdf/2611.18553",
+      "summary_zh": "大语言模型已被证明能直接读取、修复和编写其他神经网络的参数（权重空间编程，WSP），但缺乏系统评估这一能力的基准。作者提出WEIGHTBENCH，涵盖读取、修复、编写权重、识别不可能编辑和无数据压缩五个方向共42项任务，网络规模从2K参数控制策略到7B语言模型。结果显示前沿模型已能读取小网络并零运行编写可用控制策略，却仍无法修补语言模型、无数据压缩或区分不可能编辑与困难编辑，Claude Opus 5.5宏平均得分0.535，为WSP研究提供了标准化评测基础。",
+      "summary_en": "LLMs have been shown to operate directly on other networks' parameters (Weight-Space Programming, WSP), but no systematic benchmark existed to evaluate this capability. We introduce WEIGHTBENCH, spanning 42 WSP tasks across five tracks—reading, fixing, and writing weights, recognizing impossible edits, and data-free compression—on networks from 2K-parameter control policies to 7B language models. Frontier agents can already read small networks and write working control policies without execution, but cannot yet patch or compress language models or distinguish impossible from hard edits; Claude Opus 5.5 reaches a macro score of 0.535, establishing a standardized foundation for WSP research.",
+      "highlights_zh": [
+        "首个系统评测权重空间编程的基准",
+        "Opus 5.5宏平均得分0.535领先",
+        "可评WSP能力，尚难处理大模型"
+      ]
+    },
+    {
+      "id": "2611.18543",
+      "title": "Imitation Bootstrapped Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Tony H. Zhang",
+        "Connor Mattson",
+        "Daniel S. Brown"
+      ],
+      "abstract": "Demonstrations are an effective way to accelerate single-agent reinforcement learning (RL), but extending this idea to multi-agent reinforcement learning (MARL) is non-trivial as it is difficult and often impossible for a single person to teleoperate multiple agents simultaneously. Round-Robin Behavior Cloning (R2BC) addresses this by letting a single demonstrator control one agent at a time while the others execute their current policies. However, the resulting imitation policies are limited by the quality of the demonstrations. We propose Imitation Bootstrapped Multi-Agent Reinforcement Learning (IBMARL), a framework that extends Imitation Bootstrapped Reinforcement Learning (IBRL) to cooperative teams and uses R2BC to train the imitation policies. At each time step, every agent receives one action proposal from its imitation policy and one from its RL policy, and an ensemble of centralized critics selects among the per-agent combinations of the two. A gated imitation penalty, a soft Q-filtered behavior cloning loss, regularizes each RL policy toward its imitation policy only where the critics value the imitation action more, so that after training each agent executes its RL policy alone, without the centralized critics. On four cooperative multi-agent RL benchmarks, IBMARL surpasses its imitation policies $2.6$-$4.2\\times$ faster than demonstration-based baselines on two tasks, is the only method to surpass it on the other two, and exceeds the demonstrator itself on two of the four. With real human demonstrations IBMARL still surpasses imitation learning alone, and does so more than twice as fast as the best baseline.",
+      "published": "2026-11-13T18:50:05Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18543",
+      "pdf_url": "https://arxiv.org/pdf/2611.18543",
+      "summary_zh": "多智能体强化学习难以直接借用单智能体示范加速，因为单人无法同时遥操作多个智能体，而轮流行为克隆（R2BC）生成的模仿策略又受示范质量限制。本文提出IBMARL，将模仿自举强化学习扩展到协作团队：每步各智能体分别由模仿策略和RL策略给出动作提议，由集中式评论家集成在组合中择优，并用门控模仿惩罚（软Q过滤的行为克隆损失）仅在评论家更认可模仿动作处正则化RL策略。在四个协作MARL基准上，IBMARL在两个任务上比示范基线快2.6-4.2倍超越其模仿策略，在另两个任务上成为唯一超越者，并在两个任务上超过示范者本身，使用真实人类示范时也以两倍以上速度优于最佳基线。",
+      "summary_en": "Extending demonstration-accelerated RL to multi-agent settings is hard because a single person cannot teleoperate multiple agents, and Round-Robin Behavior Cloning (R2BC) imitation policies are capped by demonstration quality. We propose IBMARL, which extends Imitation Bootstrapped RL to cooperative teams: at each step each agent proposes one action from its imitation policy and one from its RL policy, an ensemble of centralized critics selects among per-agent combinations, and a gated imitation penalty (soft Q-filtered behavior cloning loss) regularizes each RL policy toward imitation only where critics value the imitation action, so agents later act on their RL policies alone. On four cooperative MARL benchmarks, IBMARL surpasses its imitation policies 2.6-4.2x faster than demonstration-based baselines on two tasks, is the only method to surpass them on the other two, exceeds the demonstrator on two of four, and with real human demonstrations still beats imitation learning alone more than twice as fast as the best baseline.",
+      "highlights_zh": [
+        "双策略提议+集中评论家集成择优",
+        "比示范基线快2.6-4.2倍超越模仿策略",
+        "依赖示范质量，需集中式评论家训练"
+      ]
+    },
+    {
+      "id": "2611.18563",
+      "title": "Pairing AIS with RF: Analysis of a Markovian Approach for Maritime Data Fusion",
+      "authors": [
+        "Daniel Grimm",
+        "Kyra Jongman",
+        "Renato Cordeiro Ferreira",
+        "Giuseppe Cascavilla",
+        "Alfredo Cuzzocrea",
+        "Willem-Jan Van Den Heuvel"
+      ],
+      "abstract": "Monitoring maritime activities is important for safety and security, particularly for detecting illegal activities, but remains challenging due to the size and complexity of the maritime domain. The Automatic Identification System (AIS) is commonly used for this purpose, despite its known vulnerabilities. In contrast, space-based radio frequency (RF) observations provide an independent source of vessel activity but lack ship identification and therefore cannot identify vessels on their own. Following the CRISP-DM process, this study applies a Pair Hidden Markov Model (PHMM) to align individual RF detections with AIS trajectories, using temporal and spatial information while modeling noise and timing discrepancies. We evaluate it on NOAA AIS data with synthetic RF detections against nearest-neighbor baselines and analyze its errors with bias tests on trajectory length, sampling density, stationarity and AIS--RF distance. The length-corrected Forward score reaches a top-1 precision of $0.7776$ on the validation split of multi-candidate detections, where errors are possible, and an AUC of $0.637$ for detecting dark vessels among the detections that pass the prefilter. With a single RF detection, the score mostly reflects the AIS trajectory itself, and its errors favor longer and more stationary trajectories. A log-odds score, which compares the full model with a null model without match transitions, raises precision to $0.8580$ and AUC to $0.852$. Its length-corrected variant no longer shows a significant bias towards stationary trajectories and short inter-message distances, but still favors candidates farther from the RF detection. A time-weighted nearest-neighbor baseline without fitting remains ahead (precision $0.9013$, AUC $0.904$), so this single-detection, hand-designed PHMM formulation approaches but does not beat it.",
+      "published": "2026-11-13T18:59:43Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18563",
+      "pdf_url": "https://arxiv.org/pdf/2611.18563",
+      "summary_zh": "海上活动监控对安全至关重要，但AIS存在漏洞且RF观测缺乏船舶身份，二者需融合。本文按CRISP-DM流程，用成对隐马尔可夫模型（PHMM）结合时空信息与噪声、时序偏差建模，将单个RF检测与AIS轨迹对齐。在NOAA AIS数据加合成RF检测上，对数几率评分将精度提升至0.8580、AUC提升至0.852，但仍未超越时间加权最近邻基线（精度0.9013），表明该手工PHMM接近但未击败简单基线。",
+      "summary_en": "Maritime monitoring is important for safety and security, but AIS has known vulnerabilities while space-based RF detections lack vessel identity, necessitating data fusion. Following CRISP-DM, this study applies a Pair Hidden Markov Model (PHMM) to align individual RF detections with AIS trajectories, modeling noise and timing discrepancies using temporal and spatial information. Evaluated on NOAA AIS data with synthetic RF detections, a log-odds score raises top-1 precision to 0.8580 and AUC to 0.852, yet a time-weighted nearest-neighbor baseline without fitting remains ahead (precision 0.9013, AUC 0.904), showing the hand-designed PHMM approaches but does not beat it.",
+      "highlights_zh": [
+        "PHMM对齐RF检测与AIS轨迹",
+        "对数几率评分精度0.8580、AUC0.852",
+        "接近但未超越最近邻基线"
+      ],
+      "highlights_en": [
+        "PHMM aligns RF detections with AIS trajectories",
+        "Log-odds score: precision 0.8580, AUC 0.852",
+        "Approaches but does not beat NN baseline"
+      ]
+    },
+    {
+      "id": "2611.18561",
+      "title": "FETTUCCINE: Fast and efficient brain-to-text decoding on mobile devices",
+      "authors": [
+        "Jonathan D. McCart",
+        "Pranav I. Deevi",
+        "Mehdi Azabou",
+        "Nanda H. Krishna",
+        "Caleb A. McKinney",
+        "Nicholas S. Card",
+        "Sergey D. Stavisky",
+        "Chethan Pandarinath"
+      ],
+      "abstract": "Recent advances in speech neuroprostheses have enabled new communication avenues for people who have lost the ability to speak due to neurological illness or injury. These systems can decode neural activity during attempted speech into text by relying on language priors to achieve high decoding accuracy. This performance currently comes at the cost of using a compute-intensive language modeling stack, presenting a major bottleneck for real-world use. Further, current language models incur highly variable and disruptive inference latencies, limiting communication throughput and preventing users from reliably participating in natural conversation. We introduce FETTUCCINE, an end-to-end brain-to-text framework that leverages the speed and portability of automatic speech recognition (ASR) models to address the aforementioned practical challenges, while achieving usable (<10%) word error rates (WER), efficient adaptation to neural non-stationarities, and reliable performance on mobile devices. When evaluated using publicly available data from an intracortical speech neuroprosthesis user, FETTUCCINE outperforms previous end-to-end methods, achieving as low as 4.39% WER. Most notably, our models successfully run on a commercially-available mobile device with throughput reaching up to 370x real-time, providing the first demonstration of brain-to-text decoding on a mobile device. We also show that our models can be successfully finetuned to extend usable performance to future days. Beyond performance, our approach enables localization of the neural features most relevant for decoding via gradient-based saliency maps, which we show align with well-established physiological priors across different ASR model families. Taken together, our results show that FETTUCCINE overcomes core infrastructural and computational barriers, yielding a new class of portable brain-to-text communication.",
+      "published": "2026-11-13T18:59:02Z",
+      "primary_category": "q-bio.NC",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18561",
+      "pdf_url": "https://arxiv.org/pdf/2611.18561",
+      "summary_zh": "语音神经假体虽能将尝试说话时的神经活动解码为文本，但依赖计算密集的语言模型，推理延迟高且波动大，难以在移动设备上实用。FETTUCCINE提出端到端脑到文本框架，利用自动语音识别模型的速度与可移植性，实现高效适配神经非平稳性并支持移动端运行。在公开皮层内语音假体用户数据上，词错误率低至4.39%，移动设备吞吐达实时370倍，首次实现移动端脑到文本解码，并可通过微调维持多日可用性能。",
+      "summary_en": "Speech neuroprostheses can decode attempted speech from neural activity into text, but rely on compute-intensive language models with highly variable inference latency, hindering real-world and mobile use. FETTUCCINE is an end-to-end brain-to-text framework that leverages the speed and portability of automatic speech recognition models, enabling efficient adaptation to neural non-stationarities and reliable mobile deployment. On public intracortical speech neuroprosthesis data it achieves word error rates as low as 4.39%, runs on a commercial mobile device at up to 370x real-time, and can be finetuned to extend usable performance to future days, demonstrating the first mobile brain-to-text decoding.",
+      "highlights_zh": [
+        "用ASR模型替代重型语言模型栈",
+        "词错误率低至4.39%，移动端370倍实时",
+        "首次实现移动端脑到文本解码"
+      ]
+    },
+    {
+      "id": "2611.18527",
+      "title": "WaferTetris: Efficient Freeform Mapping on Wafer-Scale Accelerators",
+      "authors": [
+        "Dayou Du",
+        "Congjie He",
+        "Andrew Boutros",
+        "Luo Mai",
+        "Vaughn Betz",
+        "Jianyi Cheng"
+      ],
+      "abstract": "Wafer-scale accelerators offer massive compute capacity through hundreds of thousands of processing elements (PEs) interconnected across a single wafer, but realizing this potential requires efficient application mapping. Their scale makes programming these systems and mapping applications onto them challenging. Existing approaches rely on template-based mappings to maintain productivity, but these templates restrict the mapping design space. In particular, they impose fixed geometric layouts over the PE grid, often leaving compute and memory resources underutilized. In this work, we present WaferTetris, a system that removes these geometric restrictions through freeform mapping. Its Tetris-like strategy flexibly packs computation across the wafer, improving PE utilization and usable memory capacity while preserving PE-task code. We develop a recurrence-based throughput model that captures branch-and-join dependencies to guide spatial parallelism, and an architecture model with per-color gates that enable existing FPGA place-and-route algorithms to enforce WSE routing constraints. We evaluate WaferTetris on Cerebras WSE-3 using LLM decoding and scientific stencil benchmarks. For LLM decoding, it achieves up to $4.42\\times$ the system throughput of a template-based automatic mapping baseline on the same fabric size. Compared with the manually optimized WaferLLM, WaferTetris supports $1.8\\times$ the context length for LLaMA3.1-8B (80k versus 44k), while delivering equal or higher per-user throughput at matched context lengths, up to $1.10\\times$.",
+      "published": "2026-11-13T18:41:44Z",
+      "primary_category": "cs.AR",
+      "categories": [
+        "cs.AR",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18527",
+      "pdf_url": "https://arxiv.org/pdf/2611.18527",
+      "summary_zh": "晶圆级加速器拥有海量处理单元，但现有基于模板的映射方式受固定几何布局限制，导致计算与内存资源利用率不足。WaferTetris提出自由形式映射，采用类似俄罗斯方块的策略灵活打包计算任务，并引入基于递推的吞吐模型与带颜色门的架构模型来指导空间并行和约束路由。在Cerebras WSE-3上，该方法使LLM解码系统吞吐量最高达模板基线的4.42倍，并支持LLaMA3.1-8B达1.8倍上下文长度。",
+      "summary_en": "Wafer-scale accelerators offer massive compute capacity, but existing template-based mappings impose fixed geometric layouts that underutilize compute and memory resources. WaferTetris enables freeform mapping with a Tetris-like packing strategy, guided by a recurrence-based throughput model for branch-and-join dependencies and a per-color gate architecture model that lets FPGA place-and-route algorithms enforce routing constraints. On Cerebras WSE-3, it achieves up to 4.42x the system throughput of a template-based baseline for LLM decoding and supports 1.8x the context length for LLaMA3.1-8B.",
+      "highlights_zh": [
+        "自由形式映射突破固定几何布局限制",
+        "LLM解码吞吐量最高提升4.42倍",
+        "支持1.8倍上下文长度，提升资源利用率"
+      ]
+    },
+    {
+      "id": "2611.18514",
+      "title": "Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination",
+      "authors": [
+        "Mohamed Aghzal",
+        "Mor Geva",
+        "Gregory J. Stein",
+        "Ziyu Yao"
+      ],
+      "abstract": "Mechanistic Interpretability (MI) has made significant progress in explaining the internal computations of Large Language Models (LLMs); however, these advances have yet to demonstrate comparable success in explaining the decision-making processes of LLM-based agents. This paper examines the challenges MI tools face when applied to realistic agentic failures. We focus on one such failure: web agents hallucinating actions that are not available on a website. We apply a series of mechanistic analyzes to Qwen2.5-7B-Instruct as it interacts with live websites. We find that a linear probe trained on the last prompt token can predict hallucinations before generation begins (0.80 AUC) and steering along a probe direction corrects 85\\% of hallucinations, but disrupts 7\\% of valid actions. However, these results only provide a partial explanation of why the agent hallucinates. The probe direction is sensitive to prompt formatting, losing much of its steering effect after a minor change to how actions are represented. Additionally, circuit identification can be difficult as the computation is distributed across multiple components and positions, and the information the agent relies on varies across examples. We discuss how these observations challenge the assumptions underlying standard MI methods for circuit discovery and feature identification, and outline future directions for making these methods better suited to explain failures in LLM-based agents.",
+      "published": "2026-11-13T18:30:58Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18514",
+      "pdf_url": "https://arxiv.org/pdf/2611.18514",
+      "summary_zh": "机械可解释性（MI）在解释LLM内部计算上进展显著，但尚未成功解释LLM智能体的决策失败，本文聚焦网页智能体幻觉出不存在的动作这一现实失败案例。作者对Qwen2.5-7B-Instruct与真实网站交互的过程做了一系列机制分析，包括训练线性探针预测幻觉并沿探针方向进行引导干预。结果显示探针可在生成前预测幻觉（AUC 0.80），引导可纠正85%的幻觉但破坏7%的有效动作，且探针方向对提示格式敏感、电路识别困难，说明标准MI方法在解释智能体失败时面临假设性挑战。",
+      "summary_en": "Mechanistic interpretability (MI) has advanced in explaining LLM internal computations but has not yet succeeded in explaining the decision-making failures of LLM-based agents; this paper studies a realistic agentic failure where web agents hallucinate actions unavailable on a website. The authors apply a series of mechanistic analyses to Qwen2.5-7B-Instruct interacting with live websites, training a linear probe on the last prompt token and steering along the probe direction. They find the probe predicts hallucinations before generation (0.80 AUC) and steering corrects 85% of hallucinations while disrupting 7% of valid actions, yet the probe direction is sensitive to prompt formatting and circuit identification is difficult, challenging assumptions underlying standard MI methods for explaining agent failures.",
+      "highlights_zh": [
+        "用线性探针在生成前预测智能体幻觉",
+        "探针引导纠正85%幻觉，仅破坏7%有效动作",
+        "揭示MI方法对格式敏感、电路分散的局限"
+      ]
+    },
+    {
+      "id": "2611.18550",
+      "title": "Restoring Diversity in Distilled Image and Video Generators by Probing Activations",
+      "authors": [
+        "Furkan Horoz",
+        "Ozgur Kara",
+        "Kaan Oktay",
+        "Adil Kaan Akan",
+        "Atakan Kara",
+        "Anand Bhattad",
+        "James Matthew Rehg"
+      ],
+      "abstract": "Distilling diffusion models into few-step student models substantially reduces sampling latency, but induces severe diversity collapse: samples generated from different random seeds show minimal variation. In this work, we investigate the root cause of this failure by probing the internal representations of student models relative to their teachers. We find that distilled students maintain total activation variance comparable to their teachers, but concentrate it into substantially fewer directions. This directional collapse is localized to an identifiable intermediate block at the initial denoising step. Consequently, diversity collapse stems from a misallocation of activation variance rather than an inherent loss of generative capacity. Guided by this finding, we propose ReDiverse to reinstate the missing variance directions. At training time, ReDiverse-FT fine-tunes a lightweight adapter that regresses student activations onto the teacher's, reviving the teacher's feature variance characteristic. At inference time, ReDiverse-TF introduces a training-free mechanism that steers activations along precomputed teacher principal directions. Across image and video distillation benchmarks, ReDiverse consistently restores sample diversity while preserving generation quality, further supported by the user study.",
+      "published": "2026-11-13T18:55:59Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18550",
+      "pdf_url": "https://arxiv.org/pdf/2611.18550",
+      "summary_zh": "扩散模型蒸馏为少步学生模型虽能大幅降低采样延迟，却导致严重的多样性崩塌，不同随机种子生成的样本几乎无差异。作者通过探测学生模型相对教师的内部表征，发现激活方差总量相当但集中在极少数方向上，且该方向性崩塌定位于初始去噪步的特定中间块，据此提出ReDiverse，用ReDiverse-FT微调轻量适配器回归教师激活、用ReDiverse-TF在推理时沿教师主方向引导激活。在图像与视频蒸馏基准上，该方法在保持生成质量的同时持续恢复样本多样性，并获得用户研究支持。",
+      "summary_en": "Distilling diffusion models into few-step students greatly reduces sampling latency but causes severe diversity collapse, where samples from different seeds barely vary. By probing student internal representations against teachers, the authors find that total activation variance is preserved but concentrated into far fewer directions, localized to an identifiable intermediate block at the initial denoising step, and propose ReDiverse: ReDiverse-FT fine-tunes a lightweight adapter to regress student activations onto the teacher's, while ReDiverse-TF is a training-free inference mechanism steering activations along precomputed teacher principal directions. Across image and video distillation benchmarks, ReDiverse consistently restores sample diversity while preserving generation quality, further supported by a user study.",
+      "highlights_zh": [
+        "揭示方差方向性崩塌是多样性丢失根因",
+        "图像与视频蒸馏基准均恢复多样性且保质量",
+        "可用于少步生成加速，需教师模型先验"
+      ],
+      "highlights_en": [
+        "Identifies directional variance collapse as root cause",
+        "Restores diversity with quality on image/video benchmarks",
+        "Enables fast few-step generation; needs teacher priors"
+      ]
+    },
+    {
+      "id": "2611.18549",
+      "title": "JVT: Just Video Transformer makes pixel-space video diffusion simple",
+      "authors": [
+        "Jianjun Zhou",
+        "Hua Geng",
+        "Haoyu Guo"
+      ],
+      "abstract": "Direct diffusion modeling of high-dimensional raw video data is challenging, and existing pixel-space methods often rely on specialized architectures. We introduce JVT (Just Video Transformer), a simple large-patch DiT-style Transformer for pixel-space video diffusion, without a pretrained autoencoder, auxiliary detailers, cascaded stages, or U-Net-style skip connections. We systematically examine video patch embeddings, register tokens, and adaptive layer normalization to identify design choices that balance generation quality and computational efficiency. The resulting JVT design achieves generation quality competitive with latent diffusion baselines in both class-conditioned and unconditional settings. The pixel-space formulation of JVT also naturally supports joint generation of pixel-aligned modalities. We demonstrate this capability through camera-conditioned RGB-disparity generation, which improves camera following relative to RGB-only baselines and yields explicit scene geometry without an additional reconstruction model at inference. These results highlight the potential of simple DiT-style Transformers for pixel-space video diffusion, and we hope our findings offer useful insights and practical guidance for future research.",
+      "published": "2026-11-13T18:55:25Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18549",
+      "pdf_url": "https://arxiv.org/pdf/2611.18549",
+      "summary_zh": "直接对高维原始视频做像素空间扩散建模很困难，现有方法依赖专用架构。作者提出JVT，一种简单的大patch DiT式Transformer，无需预训练自编码器、辅助细节器、级联阶段或U-Net式跳连，并系统考察patch嵌入、register token与自适应层归一化以平衡质量与效率。JVT在类条件和无条件生成上达到与潜空间扩散基线相当的质量，还自然支持像素对齐模态联合生成（如相机条件RGB-视差生成），凸显简单DiT式Transformer用于像素空间视频扩散的潜力。",
+      "summary_en": "Direct diffusion modeling of high-dimensional raw video is challenging, and existing pixel-space methods rely on specialized architectures. We introduce JVT, a simple large-patch DiT-style Transformer for pixel-space video diffusion without pretrained autoencoders, auxiliary detailers, cascaded stages, or U-Net-style skip connections, systematically examining patch embeddings, register tokens, and adaptive layer normalization to balance quality and efficiency. JVT achieves generation quality competitive with latent diffusion baselines in class-conditioned and unconditional settings, and its pixel-space formulation naturally supports joint generation of pixel-aligned modalities, demonstrated via camera-conditioned RGB-disparity generation that improves camera following and yields explicit scene geometry without an extra reconstruction model.",
+      "highlights_zh": [
+        "极简DiT式像素空间视频扩散",
+        "质量媲美潜空间扩散基线",
+        "支持像素对齐多模态联合生成"
+      ]
+    },
+    {
+      "id": "2611.18546",
+      "title": "Modeling the Frictional Contact of Continuum Robots with Environments through Linear Complementarity Problem",
+      "authors": [
+        "Jia Shen",
+        "Junhyoung Ha",
+        "Yue Chen"
+      ],
+      "abstract": "Accurate friction modeling in continuum robots is essential for precise motion control and path planning. However, current approaches make predictions only for the mechanism's internal friction that is limited by the boundary forces of the Coulomb friction cone, which fail to characterize the static friction and motion hysteresis. In this paper, we propose a novel friction model based on complementarity constraints under the Coulomb friction assumption. This model predicts various friction effects caused by environmental interactions, including both static and sliding frictions and hysteresis behavior, as well as the corresponding robot deformation induced by these interactions, which are crucial for the practical motion planning and control of continuum robots. Additionally, real-time implementation of this model can be achieved, meeting the demand for computational efficiency in robotic applications. Experimental validations demonstrated that this model is able to reduce the maximum tip position error from 45.4 mm in the frictionless model to 5.85 mm in our friction-included model with a 287.9 mm-long tendon-driven continuum robot.",
+      "published": "2026-11-13T18:51:17Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18546",
+      "pdf_url": "https://arxiv.org/pdf/2611.18546",
+      "summary_zh": "现有连续体机器人摩擦建模仅预测受库仑摩擦锥边界力限制的内部摩擦，无法刻画静摩擦与运动迟滞。本文基于库仑摩擦假设提出互补约束摩擦模型，可预测环境交互引起的静摩擦、滑动摩擦、迟滞及相应机器人变形，并支持实时实现。实验表明该模型将287.9 mm绳驱动连续体机器人的最大末端位置误差从无摩擦模型的45.4 mm降至5.85 mm。",
+      "summary_en": "Current friction models for continuum robots only predict internal friction bounded by the Coulomb friction cone, failing to capture static friction and motion hysteresis. This paper proposes a friction model based on complementarity constraints under the Coulomb friction assumption, predicting static and sliding friction, hysteresis, and induced robot deformation from environmental interactions, while remaining real-time implementable. Experiments on a 287.9 mm tendon-driven continuum robot reduced the maximum tip position error from 45.4 mm (frictionless model) to 5.85 mm.",
+      "highlights_zh": [
+        "互补约束建模环境摩擦与迟滞",
+        "末端误差45.4mm降至5.85mm",
+        "利于运动规划控制，可实时实现"
+      ]
+    },
+    {
+      "id": "2611.18505",
+      "title": "Disturbance-Aware Informative Planning in Spatiotemporal Environments",
+      "authors": [
+        "Kaleb Ben Naveed",
+        "Haejoon Lee",
+        "Anouck Girard",
+        "Dimitra Panagou"
+      ],
+      "abstract": "Autonomous robots are widely used for persistent monitoring of spatiotemporal environments, where quantities of interest (QoI) change across space and time and require repeated measurements. In practice, robot motion can be affected by external disturbances that vary across the environment. When such external disturbances are not considered in trajectory optimization, it can lead to inaccurate predictions of robot motion and, consequently, the information acquired about the QoI during execution. However, estimating disturbances throughout the environment can be inefficient, as disturbances in regions with little overlap with monitoring trajectories have limited impact on monitoring performance. We therefore propose a two-stage informative planning framework for unknown, spatially varying but time-invariant disturbances, combining informed disturbance sampling with disturbance-aware trajectory optimization. First, we identify where QoI measurements are needed and generate alternative paths to these locations using the environment geometry. We then prioritize disturbance measurements based on their expected reduction of disturbance uncertainty along these paths. Second, rather than optimizing information acquisition based on nominal robot motion, we incorporate the learned disturbance belief into trajectory optimization to account for its effects on robot motion and information acquisition. Across four simulation scenarios, the proposed method reduces disturbance-learning time by 25.0--52.3 percent compared with environment-wide estimation and identifies paths that appear costly under nominal dynamics but become preferable when disturbances are considered.",
+      "published": "2026-11-13T18:22:50Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.18505",
+      "pdf_url": "https://arxiv.org/pdf/2611.18505",
+      "summary_zh": "机器人持续监测时空环境时，外部扰动会影响运动并降低信息采集精度，但全域估计扰动效率低下。作者提出两阶段信息规划框架，先用信息引导的扰动采样优先测量对路径影响大的区域，再将学习到的扰动信念融入轨迹优化。在四个仿真场景中，扰动学习时间比全域估计减少25.0–52.3%，并能发现名义动力学下看似代价高但考虑扰动后更优的路径。",
+      "summary_en": "Robots persistently monitoring spatiotemporal environments face external disturbances that degrade motion prediction and information acquisition, yet estimating disturbances everywhere is inefficient. The authors propose a two-stage informative planning framework that combines informed disturbance sampling—prioritizing measurements by their expected reduction of uncertainty along candidate paths—with disturbance-aware trajectory optimization that embeds the learned disturbance belief. Across four simulation scenarios, disturbance-learning time drops by 25.0–52.3% versus environment-wide estimation, and the method identifies paths that appear costly under nominal dynamics but become preferable when disturbances are considered.",
+      "highlights_zh": [
+        "信息引导扰动采样+扰动感知轨迹优化",
+        "扰动学习时间减少25.0–52.3%",
+        "适用于未知空间变化扰动监测"
+      ],
+      "highlights_en": [
+        "Informed disturbance sampling plus disturbance-aware trajectory optimization",
+        "Cuts disturbance-learning time by 25.0–52.3%",
+        "Suited to unknown spatially varying disturbances"
+      ]
+    }
+  ]
+}
