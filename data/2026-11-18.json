@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-18",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.23229",
+      "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
+      "authors": [
+        "Giannis Daras",
+        "Marios Papachristou",
+        "Adam Klivans",
+        "Antonio Torralba",
+        "Constantinos Daskalakis"
+      ],
+      "abstract": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrophic forgetting of the tails of the data distribution. To prevent this collapse, we introduce Ambient SFT, a principled framework for leveraging imperfect predictions to augment the fine-tuning set. In our method, a \"frozen\" version of the pre-trained model serves as a noisy teacher that the fine-tuned model must match at a coarse level. In particular, we require that the high-temperature versions of the conditional distributions produced by the post-training model should match the high-temperature versions of the pre-training ones. The temperature hyperparameter controls the level of trust in the pre-trained model, with the limit $T\\to \\infty$ reverting back to regular SFT and $T=1$ to knowledge distillation. We demonstrate that our approach outperforms standard SFT across domain adaptation, instruction-tuning, and reasoning, leading for up to $21\\%$ average relative improvement to standard SFT.",
+      "published": "2026-11-17T18:59:37Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23229",
+      "pdf_url": "https://arxiv.org/pdf/2611.23229",
+      "summary_zh": "SFT数据规模远小于预训练数据，易导致过拟合和分布尾部灾难性遗忘。作者提出Ambient SFT，用冻结预训练模型作噪声教师，要求微调模型的高温条件分布与预训练模型的高温版本在粗粒度上匹配，温度参数控制对预训练模型的信任程度。该方法在领域适应、指令微调和推理任务上优于标准SFT，平均相对提升最高达21%。",
+      "summary_en": "Supervised fine-tuning on much smaller datasets than pre-training causes overfitting and catastrophic forgetting of the tails of the data distribution. The authors propose Ambient SFT, which uses a frozen pre-trained model as a noisy teacher and requires the high-temperature conditional distributions of the fine-tuned model to match those of the pre-trained model at a coarse level, with a temperature hyperparameter controlling trust in the pre-trained model. The approach outperforms standard SFT on domain adaptation, instruction tuning, and reasoning, with up to 21% average relative improvement.",
+      "highlights_zh": [
+        "用冻结预训练模型作噪声教师匹配高温分布",
+        "平均相对提升最高达21%",
+        "缓解小数据SFT的遗忘与过拟合"
+      ]
+    },
+    {
+      "id": "2611.23225",
+      "title": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
+      "authors": [
+        "Xingyang Yu"
+      ],
+      "abstract": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics. The collection comprises 18 volumes, 190 chapters and 3,795 pages, covering brane probes, brane webs, geometric engineering, F-theory constructions, wrapped M5-branes and exact worldsheet constructions. Its open-book benchmark inventory contains 1,073 items, including 499 with automatic finite-answer checking. For retrieval-augmented generation, it provides 1,371 section records linked to textbook sources and PDF locations, together with a local lexical retriever. Training-data preparation is illustrated by 21 private, source-linked examples. For agents, it exposes 19 calculation tools with specified inputs and finite domains, connecting tool use to textbook derivations. We illustrate these uses through specific questions, retrieved passages and finite calculations. The textbook collection and accompanying resources are available at https://github.com/xingyang-yu/StringQFT.",
+      "published": "2026-11-17T18:58:40Z",
+      "primary_category": "hep-th",
+      "categories": [
+        "hep-th",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23225",
+      "pdf_url": "https://arxiv.org/pdf/2611.23225",
+      "summary_zh": "摘要生成失败",
+      "summary_en": "Summary generation failed",
+      "highlights_zh": [
+        "—",
+        "—",
+        "—"
+      ]
+    },
+    {
+      "id": "2611.23228",
+      "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
+      "authors": [
+        "Rui Ning",
+        "Om Chabra",
+        "Hari Balakrishnan"
+      ],
+      "abstract": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent layers such as Gated DeltaNet (GDN), are attractive for this setting, but maintaining a sliding window is expensive. The reason is that recurrent layers combine all past frames into a shared state, so expiring old frames normally requires re-running the entire window through the model. We observe that the recurrent update is affine in the state with input-dependent coefficients, so the effect of each frame can be captured as a transformation that composes associatively. We present Spool, a training-free framework that caches per-frame state transformations and composes them efficiently as the window advances, removing expired frames from each recurrent layer's state without replaying frames through the backbone. Removal is exact within each layer; as with key-value eviction in attention, expired frames can retain residual influence through the cached inputs computed by earlier layers. We design a dedicated data structure and GPU kernels to achieve low caching and composition overhead. Across five open-source hybrid VLMs and four video reasoning benchmarks, Spool achieves the lowest p95 time-to-first-token in all 20 model-benchmark tests, reducing it by a geometric mean of $6.6\\times$ over the faster of two recent vLLM baselines, while improving accuracy by 2.3 percentage points on average.",
+      "published": "2026-11-17T18:59:27Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23228",
+      "pdf_url": "https://arxiv.org/pdf/2611.23228",
+      "summary_zh": "视觉无障碍与机器人等应用需要在有限的历史帧窗口内低延迟地回答关于近期视频的问题，而混合VLM（注意力与GDN等线性循环层交错）维护滑动窗口代价高昂，因为循环层将所有过去帧压缩进共享状态，过期旧帧通常需重跑整个窗口。Spool观察到循环更新对状态是仿射的且系数依赖输入，因此可将每帧影响视为可结合复合的变换，无需重放帧即可精确移除过期帧（层内精确，跨层仍有残差影响），并设计了专用数据结构与GPU内核降低开销。在五个开源混合VLM和四个视频推理基准的20项测试中，Spool均取得最低p95首token时延，较两个vLLM基线中较快者几何平均降低6.6倍，同时平均准确率提升2.3个百分点。",
+      "summary_en": "Applications such as visual accessibility agents and robotics need to answer questions about recent video promptly within a bounded window of past frames, yet maintaining a sliding window in hybrid VLMs that interleave attention with linear recurrent layers like Gated DeltaNet is expensive because recurrent layers compress all past frames into a shared state, so expiring old frames normally requires re-running the entire window. Spool observes that the recurrent update is affine in the state with input-dependent coefficients, so each frame's effect can be captured as an associatively composable transformation, enabling exact per-layer removal of expired frames without replaying them through the backbone (with residual cross-layer influence akin to KV eviction), backed by a dedicated data structure and GPU kernels for low overhead. Across five open-source hybrid VLMs and four video reasoning benchmarks, Spool achieves the lowest p95 time-to-first-token in all 20 model-benchmark tests, reducing it by a geometric mean of 6.6x over the faster of two recent vLLM baselines while improving accuracy by 2.3 percentage points on average.",
+      "highlights_zh": [
+        "仿射变换缓存实现免重放的精确帧移除",
+        "20项测试p95时延降低6.6倍、准确率+2.3pp",
+        "适用于实时视频推理，跨层仍有残差影响"
+      ]
+    },
+    {
+      "id": "2611.23221",
+      "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
+      "authors": [
+        "Zhaosong Lu",
+        "Yifeng Xiao"
+      ],
+      "abstract": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satisfy these constraints. Motivated by this, we focus on computing an $ε$-$surely\\ feasible\\ stochastic\\ optimal$ ($ε$-SFSO) solution, in which the constraint violation is deterministically bounded by $ε$, and the expected optimality gap is at most $ε$. While a recently proposed stochastic variance-reduced first-order penalty method can compute an $ε$-SFSO solution, there remains a significant gap between its first-order oracle complexity for computing an $ε$-SFSO solution and that for computing an $ε$-$expected\\ feasible\\ stochastic\\ optimal$ solution, where both the expected constraint violation and the expected optimality gap are bounded by $ε$. To narrow this gap, we propose an inexact stochastic variance-reduced gradient (SVRG) method that significantly improves the previously best-known first-order oracle complexity for computing an $ε$-SFSO solution. Furthermore, when the objective consists of a single function, the proposed method reduces to a novel deterministic first-order method for solving standard convex conic optimization. It achieves a significantly lower gradient evaluation complexity with respect to the objective function compared to existing methods, and can outperform them when computing constraint gradients and projections onto the associated cone is cheaper than evaluating the objective gradient. Preliminary numerical results are presented to illustrate the performance of the proposed method.",
+      "published": "2026-11-17T18:57:16Z",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23221",
+      "pdf_url": "https://arxiv.org/pdf/2611.23221",
+      "summary_zh": "针对带硬约束的凸有限和优化问题，现有随机方差缩减惩罚法在计算ε-必然可行随机最优解时的一阶预言机复杂度与期望可行情形存在显著差距。本文提出非精确随机方差缩减梯度（SVRG）方法，通过非精确求解子问题缩小该差距，并在目标为单函数时退化为新型确定性一阶锥优化方法。新方法显著降低了计算ε-SFSO解的一阶预言机复杂度，且在约束梯度与投影计算较廉价时优于现有方法。",
+      "summary_en": "For constrained convex finite-sum optimization with hard constraints, existing stochastic variance-reduced penalty methods exhibit a significant gap in first-order oracle complexity between computing an ε-surely feasible stochastic optimal (ε-SFSO) solution and an ε-expected feasible one. This paper proposes an inexact stochastic variance-reduced gradient (SVRG) method that narrows this gap via inexact subproblem solves, and reduces to a novel deterministic first-order method for convex conic optimization when the objective is a single function. The method significantly improves the best-known first-order oracle complexity for ε-SFSO solutions and can outperform existing methods when constraint gradients and cone projections are cheaper than objective gradient evaluations.",
+      "highlights_zh": [
+        "非精确SVRG缩小复杂度差距",
+        "显著降低一阶预言机复杂度",
+        "适用于约束梯度廉价的锥优化"
+      ]
+    },
+    {
+      "id": "2611.23218",
+      "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
+      "authors": [
+        "S. M Seefat Alam"
+      ],
+      "abstract": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instruct. The head map correlates at $ρ= -0.950$ and $-0.768$ with a label-blind response-length map, apparently identifying a surface confound. An intervention that breaks the length-label coupling rejects this reading: with the prompt held fixed, response length explains 1% of the statistic's variance. What does explain it is prompt identity, at 64% of variance, in an ordering that is not monotonic in length. Within any fixed prompt the fairness label, response length and the presence of a protected-group token are collinear at $φ= 0.95$, partly by definition of the labelling rule, so no observational analysis can attribute the map to any of them, and no method in this family performs an experiment that could. The substantive claims fail independently: bias selectivity is not late-layer-concentrated on either model under either reference reading, and no head set we tested reduces the unfairness rate when ablated. Its complement, scored on the opposite label, reliably destroys refusal behaviour ($p = 2.7\\times10^{-5}$), demonstrating that the pipeline detects effects at this scale.",
+      "published": "2026-11-17T18:57:08Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23218",
+      "pdf_url": "https://arxiv.org/pdf/2611.23218",
+      "summary_zh": "现有方法将大语言模型的社会偏见定位到单个注意力头并通过消融去除，其有效性仅由公平性指标验证，却从未证明筛选头的统计量本身测量的是偏见。作者在Qwen-2.5-7B-Instruct和Llama-3.1-8B-Instruct上审计该流程，发现头图与标签盲的响应长度图高度相关，并通过打破长度-标签耦合的干预表明统计量方差主要由提示身份（64%）解释，而在固定提示内公平标签、响应长度与受保护群体词元存在共线性（φ=0.95），使观察性分析无法归因。结果表明该家族方法的核心主张独立失效：偏见选择性并非后层集中，且所测头集消融后不降低不公平率，说明头级偏见归因存在不可识别性。",
+      "summary_en": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated only by fairness metrics, never by evidence that the head-selecting statistic measures bias. The authors audit this pipeline on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instruct, showing the head map correlates strongly with a label-blind response-length map, and that an intervention breaking the length-label coupling leaves prompt identity explaining 64% of the statistic's variance, while within any fixed prompt the fairness label, response length and protected-group token presence are collinear at φ=0.95, making attribution observationally impossible. The substantive claims fail independently: bias selectivity is not late-layer-concentrated and no tested head set reduces unfairness when ablated, establishing non-identifiability in head-level bias attribution.",
+      "highlights_zh": [
+        "揭示头级偏见归因的不可识别性",
+        "长度图相关达ρ=-0.950",
+        "消融头集不降低不公平率"
+      ],
+      "highlights_en": [
+        "Exposes non-identifiability in head-level bias attribution",
+        "Length-map correlation reaches ρ=-0.950",
+        "No ablated head set reduces unfairness"
+      ]
+    },
+    {
+      "id": "2611.23197",
+      "title": "Structure--Residual Inductive Biases for Language Model Pretraining",
+      "authors": [
+        "Hai Huang",
+        "Bartosz Żuk",
+        "Rassul Magauin",
+        "Jiaxin Huang",
+        "Xue Liu"
+      ],
+      "abstract": "Next-token prediction is relied upon to learn both predictive behavior and internal representations. We ask whether representation structure itself should be an explicit inductive bias. Motivated by the two-part coding view of Kolmogorov complexity, we study a structure--residual principle in which a representation separates structure from realization detail. We instantiate this principle in two complementary ways. Boundary Bottleneck Concept (BBC) routes information from token segments through boundary carriers while preserving local autoregressive computation. Continuous Concept (CC) regularizes representation geometry and induces a spectral decomposition into low-frequency structure and high-frequency residual. We derive coding bounds for both views and show that multiplicity-corrected boundary attention becomes exact as the within-segment path energy vanishes. Empirically, BBC and CC exhibit strikingly different depth preferences: BBC works best in early layers, whereas CC is most effective in later layers. At 300M training tokens, combining BBC and CC improves NLL by 1.44\\% on GPT-2 Medium. These gains persist with training runs up to 20B tokens. Representation diagnostics show that BBC increases the relative predictive importance of boundary states, while CC reduces spectral residual energy. Together, these results suggest that structure--residual biases can improve language-model pretraining beyond next-token prediction. Code: https://github.com/haihuang-ml/structure-residual",
+      "published": "2026-11-17T18:38:27Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23197",
+      "pdf_url": "https://arxiv.org/pdf/2611.23197",
+      "summary_zh": "下一词预测同时学习预测行为和内部表示，但表示结构本身是否应作为显式归纳偏置尚不清楚。受Kolmogorov复杂度两部分编码启发，作者提出结构-残差原则，并用边界瓶颈概念（BBC，早期层）和连续概念（CC，后期层）两种互补方式实现，同时给出编码界。在GPT-2 Medium上，300M token训练时BBC+CC使NLL降低1.44%，且增益持续到20B token，表明结构-残差偏置可改进语言模型预训练。",
+      "summary_en": "Next-token prediction learns both predictive behavior and internal representations, but whether representation structure itself should be an explicit inductive bias remains unclear. Motivated by the two-part coding view of Kolmogorov complexity, the authors propose a structure-residual principle instantiated as Boundary Bottleneck Concept (BBC, best in early layers) and Continuous Concept (CC, best in later layers), with derived coding bounds. Combining BBC and CC improves NLL by 1.44% on GPT-2 Medium at 300M tokens, with gains persisting up to 20B tokens, showing structure-residual biases can improve language-model pretraining.",
+      "highlights_zh": [
+        "结构-残差显式归纳偏置",
+        "NLL降低1.44%（GPT-2 Medium）",
+        "分层偏好：BBC早层、CC晚层"
+      ]
+    },
+    {
+      "id": "2611.23226",
+      "title": "FastFrames: Video Generation at Interactive Latency",
+      "authors": [
+        "Gene Chou",
+        "Guandao Yang",
+        "Fujun Luan",
+        "Lars Mescheder",
+        "Wei Dong",
+        "Stephan Richter",
+        "Vladlen Koltun"
+      ],
+      "abstract": "Autoregressive video diffusion models generate frames based on new observations and inputs, making them a promising medium for interactive visual experiences. However, existing models are orders of magnitude too slow for fluid interaction. This paper introduces FastFrames, a family of fast autoregressive video diffusion models that achieves interactive latency without compromising quality. We profile the inference pipeline of state-of-the-art models and find that operations often treated as fixed implementation details, such as VAE decoding and KV cache updates, in fact account for over half of end-to-end inference latency. We challenge the assumption that these components are indispensable and replace them with lightweight alternatives. Our 1.3B variant runs at 36 ms per frame, or 28 responses per second (RPS), on a single B200 GPU while matching the generation quality of a state-of-the-art model that is nearly 8x slower. Our 14B variant runs at 45 ms per frame, or 22 RPS, on an 8x B200 GPU node and yields significantly better visual quality and realism. We show that FastFrames enables real-time interaction in applications such as camera-conditioned and physics-conditioned video generation.",
+      "published": "2026-11-17T18:59:13Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23226",
+      "pdf_url": "https://arxiv.org/pdf/2611.23226",
+      "summary_zh": "自回归视频扩散模型有潜力用于交互式视觉体验，但现有模型推理速度慢了几个数量级，无法实现流畅交互。FastFrames通过剖析推理流程，发现VAE解码和KV缓存更新等被视为固定实现细节的操作占端到端延迟一半以上，并用轻量替代方案替换这些组件。其1.3B变体在单张B200 GPU上达到每帧36毫秒（28 RPS），质量匹配慢近8倍的SOTA模型，14B变体在8×B200节点上达到每帧45毫秒（22 RPS）并显著提升视觉质量，支持相机条件和物理条件视频生成的实时交互。",
+      "summary_en": "Autoregressive video diffusion models are promising for interactive visual experiences, but existing models are orders of magnitude too slow for fluid interaction. FastFrames profiles the inference pipeline and finds that operations treated as fixed implementation details, such as VAE decoding and KV cache updates, account for over half of end-to-end latency; it replaces them with lightweight alternatives. The 1.3B variant runs at 36 ms per frame (28 RPS) on a single B200 GPU while matching a nearly 8x slower state-of-the-art model, and the 14B variant runs at 45 ms per frame (22 RPS) on an 8x B200 node with significantly better visual quality, enabling real-time camera-conditioned and physics-conditioned video generation.",
+      "highlights_zh": [
+        "用轻量方案替换VAE解码与KV缓存更新",
+        "1.3B模型单B200达36ms/帧、28 RPS",
+        "支持实时相机与物理条件视频生成"
+      ]
+    },
+    {
+      "id": "2611.23212",
+      "title": "EviSlide-MIL: Multi-Query Pooling and Shared Prediction for Class-Incremental Whole-Slide Image Classification",
+      "authors": [
+        "Zhouhan Qian",
+        "Sicheng Chen",
+        "Chad Wong",
+        "Tianyi Zhang",
+        "Enhui Chai",
+        "Zeyu Liu",
+        "Fei Xia"
+      ],
+      "abstract": "Histopathological analysis of whole-slide images (WSIs) plays a critical role in cancer diagnosis, and multiple instance learning (MIL) is widely adopted for WSI analysis under weak supervision. As new tumor subtypes are introduced, extending existing MIL models requires learning new classes while retaining knowledge of previously learned ones. This presents a class-incremental learning challenge, where models must acquire new classes with limited access to historical training data and recognize all learned classes without task identifiers at inference. A major obstacle is forgetting, as updates to feature aggregation and prediction modules can degrade performance on previously learned classes. To address this challenge, we propose \\textbf{EviSlide-MIL}, a class-incremental WSI framework that integrates multiple learnable queries per class with a shared prediction module. The queries aggregate frozen patch features into class-specific representations, while the shared prediction module limits parameter growth across incremental stages. By freezing queries associated with previously learned classes, EviSlide-MIL preserves their attention patterns for identical inputs, while experience replay and knowledge distillation further mitigate forgetting as shared parameters are updated. Experiments on eight tumor subtypes from The Cancer Genome Atlas demonstrate that EviSlide-MIL achieves improved performance and reduced forgetting compared with competing methods across most learning settings, demonstrating its potential for scalable and knowledge-preserving WSI classification. Code and pretrained models will be released.",
+      "published": "2026-11-17T18:50:42Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23212",
+      "pdf_url": "https://arxiv.org/pdf/2611.23212",
+      "summary_zh": "全切片图像分类中，MIL模型需在新肿瘤亚型出现时增量学习新类别并保留旧知识，面临灾难性遗忘且推理时无任务标识。EviSlide-MIL为每类引入多个可学习查询聚合冻结的切片特征，并共享预测模块以限制参数增长，通过冻结旧类查询、经验回放与知识蒸馏缓解遗忘。在TCGA八个肿瘤亚型上，该方法在多数设置下性能更优、遗忘更少，展现了可扩展且保知的WSI分类潜力。",
+      "summary_en": "In whole-slide image classification, MIL models must incrementally learn new tumor subtypes while retaining old knowledge, facing catastrophic forgetting without task identifiers at inference. EviSlide-MIL uses multiple learnable queries per class to aggregate frozen patch features with a shared prediction module that limits parameter growth, freezing old-class queries and adding experience replay and knowledge distillation to mitigate forgetting. On eight TCGA tumor subtypes, it achieves better performance and less forgetting than competing methods across most settings, showing potential for scalable, knowledge-preserving WSI classification.",
+      "highlights_zh": [
+        "每类多查询+共享预测模块",
+        "TCGA八亚型多数设置性能更优",
+        "可扩展保知WSI分类，待代码发布"
+      ]
+    },
+    {
+      "id": "2611.23215",
+      "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
+      "authors": [
+        "Pranav Gupta",
+        "Deepan Muthirayan",
+        "Ravi Banavar"
+      ],
+      "abstract": "Data-driven predictive control (DDPC) predicts system responses from recorded trajectories, but nonlinear dynamics can limit the accuracy of fixed linear predictors. This paper studies geometric robust DDPC for trajectory tracking of a fully actuated manipulator using model-based feedback linearisation. A mechanical model maps virtual acceleration commands into joint torques, while recorded data capture residual dynamics arising from imperfect model parameters. The controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator under gravity compare the proposed method with double-integrator model predictive control (MPC) and direct regularised data-enabled predictive control (DeePC). Results show improved tracking over double-integrator MPC despite increased torque effort, while performance relative to DeePC depends on the reference trajectory.",
+      "published": "2026-11-17T18:56:09Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23215",
+      "pdf_url": "https://arxiv.org/pdf/2611.23215",
+      "summary_zh": "数据驱动预测控制（DDPC）依赖固定线性预测器，但非线性动力学限制了其轨迹跟踪精度。本文提出基于模型反馈线性化的几何鲁棒DDPC：用机械模型将虚拟加速度指令映射为关节力矩，用记录数据捕捉模型参数不完美导致的残差动力学，并在以拟合轨迹子空间为中心的Grassmannian球上最小化最坏情况预测误差。平面2R机械臂仿真表明，该方法跟踪性能优于双积分MPC（但力矩更大），相对DeePC的优势取决于参考轨迹。",
+      "summary_en": "Data-driven predictive control (DDPC) relies on fixed linear predictors, but nonlinear dynamics can degrade trajectory-tracking accuracy. This paper proposes a geometric robust DDPC using model-based feedback linearisation: a mechanical model maps virtual acceleration commands to joint torques, recorded data capture residual dynamics from imperfect model parameters, and the controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator show improved tracking over double-integrator MPC despite higher torque effort, while performance relative to DeePC depends on the reference trajectory.",
+      "highlights_zh": [
+        "反馈线性化+Grassmannian鲁棒DDPC",
+        "跟踪优于双积分MPC但力矩更大",
+        "相对DeePC优势依轨迹而定"
+      ]
+    },
+    {
+      "id": "2611.23198",
+      "title": "Learned versus Kinematic Trajectory Prediction under Reduced Observation Frequency",
+      "authors": [
+        "Nukhbala Gadzhiev",
+        "Alexander Morochko"
+      ],
+      "abstract": "Trajectory prediction models for automated driving are usually trained on data with a fixed sampling frequency, while positions received via vehicle-to-everything (V2X) communication arrive at 1-10 Hz. We study whether a learned predictor that uses only the observation history keeps its advantage over constant velocity (CV) and constant acceleration (CA) models when the history frequency drops. On the Argoverse 2 motion forecasting dataset, the 5 s history of the focal agent was downsampled from 10 Hz to 5, 2, and 1 Hz, and the 6 s future was predicted without maps or neighboring agents. An LSTM-based recurrent neural network (RNN) trained for each frequency was compared with the same network trained at 10 Hz and applied to sparse histories after linear interpolation. Hypotheses and thresholds were fixed before training, the main RNNs were trained with ten seeds each, and results on 24,984 test scenarios have bootstrap confidence intervals over scenarios and seeds. The average displacement error of the frequency-specific RNN grew by 3.1% at 5 Hz, 10.1% at 2 Hz, and 20.3% at 1 Hz. Contrary to our hypothesis, its advantage over the better kinematic model did not vanish on straight motion and was 24-30% on both straight motion and turns at every frequency, while for pedestrians CV was more accurate. The 10 Hz model with interpolation was at most 1.3% less accurate than the frequency-specific model down to 2 Hz but 11.5% less accurate at 1 Hz. Each hypothesis was only partly supported.",
+      "published": "2026-11-17T18:38:28Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.23198",
+      "pdf_url": "https://arxiv.org/pdf/2611.23198",
+      "summary_zh": "自动驾驶轨迹预测模型通常在固定采样频率数据上训练，但V2X通信位置以1-10 Hz到达，本文研究历史频率下降时学习型预测器是否仍优于匀速和匀加速模型。在Argoverse 2数据集上将5秒历史从10 Hz降采样至5、2、1 Hz，用LSTM RNN按频率训练并与10 Hz训练加线性插值方案对比，采用十种子训练和自助法置信区间评估。结果显示频率特定RNN误差在5、2、1 Hz分别增长3.1%、10.1%、20.3%，但其相对更优运动学模型的优势在各频率直线和转弯上均保持24-30%，仅行人场景CV更准，10 Hz加插值方案在2 Hz以上最多差1.3%但1 Hz时差11.5%。",
+      "summary_en": "Trajectory prediction models for automated driving are typically trained at a fixed sampling frequency, yet V2X positions arrive at 1-10 Hz, so this work asks whether a learned predictor retains its advantage over constant velocity and constant acceleration models as history frequency drops. On Argoverse 2, the focal agent's 5 s history was downsampled from 10 Hz to 5, 2, and 1 Hz and the 6 s future predicted without maps or neighbors, comparing frequency-specific LSTM RNNs against a 10 Hz model with linear interpolation, using ten seeds and bootstrap confidence intervals over 24,984 scenarios. Frequency-specific RNN error grew by 3.1%, 10.1%, and 20.3% at 5, 2, and 1 Hz, but contrary to the hypothesis its 24-30% advantage over the better kinematic model persisted on both straight and turning motion at every frequency (CV was more accurate only for pedestrians), while the interpolated 10 Hz model was at most 1.3% worse down to 2 Hz but 11.5% worse at 1 Hz.",
+      "highlights_zh": [
+        "按频率训练RNN并对比插值方案",
+        "优势在各频率保持24-30%",
+        "低频1 Hz时插值方案明显退化"
+      ]
+    }
+  ]
+}
