@@ -1,0 +1,325 @@
+{
+  "date": "2026-11-19",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.24932",
+      "title": "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems",
+      "authors": [
+        "Priyanka Sinha",
+        "Sugam Pandey"
+      ],
+      "abstract": "When a capable model and a human reviewer cooperate on the same decision, which human still adds value? We argue this is a question about a single cognitive trait, metacognitive calibration: the alignment between a reviewer's behavioral confidence and the actual correctness of their judgments. We develop a trait theory of reviewer value to make it precise. The theory makes five claims: value is governed by calibration rather than by activity, speed, agreement, or tenure; calibration leaves observable traces in behavioral telemetry; those traces are non-diagnostic on their own, because the fast, low-revision signature of a calibrated expert is indistinguishable from that of a confident novice until it is gated by outcomes; human calibration and a model's self-knowledge are the same construct, so the joint system should defer to whichever agent is better calibrated on each item; and individual calibration is causally identifiable only above the level of the single judgment. We ground each claim in a six-month production window of an AI-assisted accounting system (541621 reviewer events, 483 reviewers), and find that a purely behavioral expertise profile inverts the ground truth, scoring an overconfident cohort (5.2 percent correction survival) higher than genuine experts (99.2 percent); that reviewer quality is flat across tenure, so the trait is not learned on the job; and that the same calibration logic that separates good from bad reviewers, applied to the model, concentrates 92.5 percent of human effort on genuine errors. We close with the boundary the theory must respect: under majority-vote aggregation, individual causal value is unidentifiable.",
+      "published": "2026-11-18T18:55:07Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24932",
+      "pdf_url": "https://arxiv.org/pdf/2611.24932",
+      "summary_zh": "论文研究在人类审核员与强AI模型协同决策时，哪类人类仍能贡献价值。作者提出“审核员价值特质理论”，以元认知校准（行为置信度与实际正确性的对齐）为核心，并利用AI辅助会计系统六个月的541621条审核事件、483名审核员的生产数据加以验证。结果显示纯行为专家画像会颠倒真实水平（过度自信组5.2%纠错存活率反被评高于真专家99.2%），审核质量不随任期提升，而将同一校准逻辑用于模型可把92.5%的人力集中于真实错误，同时指出多数投票聚合下个体因果价值不可识别。",
+      "summary_en": "This paper asks which human reviewers still add value when a capable model and a person cooperate on the same decision. It proposes a trait theory of reviewer value centered on metacognitive calibration—the alignment between behavioral confidence and actual correctness—and grounds it in a six-month production window of an AI-assisted accounting system (541,621 reviewer events, 483 reviewers). Results show a purely behavioral expertise profile inverts ground truth (a 5.2% correction-survival cohort scored above genuine experts at 99.2%), reviewer quality is flat across tenure, and applying the same calibration logic to the model concentrates 92.5% of human effort on genuine errors, while individual causal value is unidentifiable under majority-vote aggregation.",
+      "highlights_zh": [
+        "以元认知校准定义审核员价值",
+        "行为画像颠倒真实水平(5.2% vs 99.2%)",
+        "92.5%人力集中于真实错误"
+      ],
+      "highlights_en": [
+        "Calibration, not activity, defines reviewer value",
+        "Behavioral profile inverts truth (5.2% vs 99.2%)",
+        "92.5% of human effort on genuine errors"
+      ]
+    },
+    {
+      "id": "2611.24927",
+      "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
+      "authors": [
+        "Sarah H. Cen",
+        "Lindsey A. Gailmard",
+        "Joohan Kim",
+        "Rishi Bommasani",
+        "Daniel E. Ho",
+        "Percy Liang"
+      ],
+      "abstract": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In this work, we focus on the organizations that make up the AI supply chain: the complex network of actors that contribute to the development and deployment of AI. We motivate the examination of the organizational AI supply chain---highlighting concerns about concentration, power, chokepoints, cascading failures, fragmented accountability, and risk---then describe our pipeline for mapping the AI supply chain. Our pipeline yields our main contribution: a multilayered, large-scale dataset of actors and relationships in the AI ecosystem, annotated with dates, descriptions, types, tags, and more. This work takes a step toward systematically mapping and measuring the AI supply chain and its properties, cataloging how models, data, chips, infrastructure, capital, and even talent flow between organizations. This data enable critical examinations of industry relationships and yield insights into the political economy of AI development and concentration. We provide several illustrative analyses, including studying the most central actors, analyzing network concentration, and identifying communities and chokepoints. While our dataset is fairly comprehensive, it is also necessarily incomplete: public documents omit private deals, and coverage is shaped by search design. Together, the approach, data, and findings aim to serve as a resource for studying the AI ecosystem. The dataset is publicly available at https://huggingface.co/datasets/sarahcen/ai-supply-chain and can be explored interactively at https://aisupplychains.org/.",
+      "published": "2026-11-18T18:53:58Z",
+      "primary_category": "cs.CY",
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24927",
+      "pdf_url": "https://arxiv.org/pdf/2611.24927",
+      "summary_zh": "AI系统由跨组织贡献的模型、数据、算力、资本和人才构建，但各层参与者与组件间的关系记录稀疏，存在集中化、瓶颈、级联失败等风险。作者提出映射AI供应链的流水线，构建了带日期、描述、类型和标签的多层大规模参与者与关系数据集。该数据集支持中心性、网络集中度、社区与瓶颈等分析，为研究AI生态政治经济学提供公开资源。",
+      "summary_en": "AI systems are built across many organizations contributing models, data, compute, capital, and talent, yet relationships between actors and components across layers remain sparsely documented, raising concerns about concentration, chokepoints, and cascading failures. The authors present a pipeline for mapping the organizational AI supply chain and produce a multilayered, large-scale dataset of actors and relationships annotated with dates, descriptions, types, and tags. Illustrative analyses of central actors, network concentration, communities, and chokepoints demonstrate how the publicly released data can support study of the political economy of AI development and concentration.",
+      "highlights_zh": [
+        "构建多层AI供应链参与者关系数据集",
+        "公开数据集支持中心性与瓶颈分析",
+        "覆盖受搜索设计限制且缺私有交易"
+      ]
+    },
+    {
+      "id": "2611.24908",
+      "title": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
+      "authors": [
+        "Samet Demir",
+        "Zafer Dogan"
+      ],
+      "abstract": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD updates to the complement are initially isotropic, the training dynamics induce teacher-dependent spectral spikes in the complement Gram matrix. This emergent anisotropy provides a concrete mechanism by which representation variance is amplified, and generalization degrades. To isolate this effect, we introduce Decomposed Dynamics, an analytically tractable surrogate whose asymptotic test-error dynamics coincide with those of SGD. In simulations with a ReLU student, freezing the directions of the orthogonal complement improves generalization relative to training them. Finally, we show that the signal component rapidly aligns with the second-layer weights, revealing strong cross-layer coupling even in this shallow setting. Together, our results provide a dynamical explanation for how feature learning outside the teacher subspace harms generalization.",
+      "published": "2026-11-18T18:43:40Z",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24908",
+      "pdf_url": "https://arxiv.org/pdf/2611.24908",
+      "summary_zh": "研究两层神经网络在多指标教师模型下用SGD训练时，第一层中与教师子空间正交的参数如何影响泛化。作者将第一层权重分解为信号分量与正交补，并在比例极限下联合分析其与第二层的SGD动力学，提出可解析的Decomposed Dynamics代理模型。结果表明SGD会在正交补的Gram矩阵中诱导出依赖教师的谱尖峰，造成表征方差膨胀与泛化下降，冻结正交补方向可提升泛化，且信号分量会快速与第二层权重对齐，揭示了跨层强耦合。",
+      "summary_en": "This work studies how first-layer parameters orthogonal to the teacher subspace affect generalization in two-layer networks trained by SGD on a multi-index teacher model. The authors decompose first-layer weights into a teacher-aligned signal component and an orthogonal complement, analyze their joint SGD dynamics with the second layer in the proportional limit, and introduce an analytically tractable surrogate called Decomposed Dynamics whose asymptotic test-error dynamics match SGD. They show that SGD induces teacher-dependent spectral spikes in the complement Gram matrix, amplifying representation variance and degrading generalization, while freezing the orthogonal complement improves generalization and the signal component rapidly aligns with second-layer weights, revealing strong cross-layer coupling.",
+      "highlights_zh": [
+        "分解信号与正交补并揭示谱尖峰机制",
+        "冻结正交补方向可提升泛化性能",
+        "揭示浅层网络中的强跨层耦合"
+      ]
+    },
+    {
+      "id": "2611.24896",
+      "title": "Equivariant Modeling with Polynomial Features via Minimal Homogeneous Generators",
+      "authors": [
+        "Michael Liaofan Liu",
+        "Joe Kileel"
+      ],
+      "abstract": "We present a general framework for modeling and learning equivariant functions between finite dimensional semisimple real group representations, unifying constructions developed across many application areas. Our model is a linear combination of equivariant polynomial features whose coefficients are arbitrary learnable functions of invariant polynomial features. We take as features minimal homogeneous generators for the invariant algebra and the covariant module over the invariant algebra, up to prescribed degrees. We provide a Python package that automatically computes these features and fits the resulting models to training data. The algorithm for feature computation requires explicit isotypic decompositions of the input and output representations, along with explicit Clebsch-Gordan decompositions of the tensor product of irreducible representations, and achieves speedups over alternative methods in computational algebra. Numerical experiments in scientific modeling demonstrate the full learning pipeline and yield accurate predictors with few trainable parameters, using the model both for end-to-end prediction and within layers of larger architectures.",
+      "published": "2026-11-18T18:37:02Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24896",
+      "pdf_url": "https://arxiv.org/pdf/2611.24896",
+      "summary_zh": "针对有限维半单实群表示间的等变函数建模，现有方法分散于不同应用领域且缺乏统一框架。本文提出以不变代数与协变模的极小齐次生成元为特征，用不变多项式特征的可学习函数作系数线性组合等变多项式特征，并提供自动计算特征的Python包。数值实验表明该框架能以极少可训练参数获得准确预测，可用于端到端预测及大型网络层内。",
+      "summary_en": "Modeling equivariant functions between finite-dimensional semisimple real group representations has been fragmented across application areas without a unified framework. This work proposes using minimal homogeneous generators of the invariant algebra and covariant module as features, combining equivariant polynomial features linearly with coefficients that are learnable functions of invariant features, and provides a Python package that computes these features automatically. Numerical experiments in scientific modeling show accurate predictors with few trainable parameters, usable both for end-to-end prediction and within layers of larger architectures.",
+      "highlights_zh": [
+        "极小齐次生成元构造等变多项式特征",
+        "少参数下科学建模预测准确",
+        "统一框架并开源自动计算包"
+      ]
+    },
+    {
+      "id": "2611.24936",
+      "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+      "authors": [
+        "Yan Qiu",
+        "Yuanyuan Li"
+      ],
+      "abstract": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness.",
+      "published": "2026-11-18T18:56:12Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24936",
+      "pdf_url": "https://arxiv.org/pdf/2611.24936",
+      "summary_zh": "越狱攻击和有害提示词威胁大语言模型的安全部署，本文研究对比学习表征能否在不训练额外下游分类器的情况下支持安全检测。作者提出JDPI方法，利用二元安全标签构建有害与良性原型，并基于相对原型距离进行预测，仅需二元标签完成编码器适配、原型构建与验证。实验表明对比微调使检测准确率提升9.1-18.0个百分点，在四个基准上ROC-AUC接近甚至超过基线，跨数据集迁移平均准确率高1.59个百分点，展现出更强的鲁棒性。",
+      "summary_en": "Jailbreak attempts and harmful prompts threaten the safe deployment of large language models, and this work asks whether contrastively learned representations can support safety detection without training an additional downstream classifier. The authors propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to build harmful and benign prototypes and predicts via relative prototype distances, requiring only binary labels for encoder adaptation, prototype construction, and validation. Contrastive fine-tuning improves detection accuracy by 9.1-18.0 percentage points, JDPI stays within 0.017 ROC-AUC of the classifier baseline across four benchmarks and exceeds Llama Guard 3-8B by 0.173-0.310, while outperforming the classifier by 1.59 percentage points on average across 12 directed transfers, showing stronger cross-dataset robustness.",
+      "highlights_zh": [
+        "原型距离替代下游分类器",
+        "准确率提升9.1-18.0个百分点",
+        "跨数据集迁移更鲁棒"
+      ]
+    },
+    {
+      "id": "2611.24887",
+      "title": "Ground, Iterate, Trace: Decomposing AI Research Ideation",
+      "authors": [
+        "Samson Yu",
+        "Qiran Zou",
+        "Jing Yu Lim",
+        "Rushi Shah",
+        "Anirudh Goyal",
+        "Dianbo Liu"
+      ],
+      "abstract": "Large language models have been widely used to generate plausible research ideas, yet it remains unclear what makes automated ideation effective and how generated novel proposals arise from prior scientific work. We introduce the Creative AI Researcher (CAR), an agentic framework combining literature grounding, iterative development and explicit conceptual operators. CAR constructs a semantic knowledge graph from retrieved literature and equips an ideation agent with graph-retrieval tools and four operators: bisociation, analogy, exploration and elaboration. Each operator call is checked against structural acceptance conditions and recorded, producing a trace of intermediate transformations and declared literature sources. We evaluate CAR with two language-model backbones across 40 LiveIdeaBench research topics and two execution benchmarks. CAR achieves significantly higher methodological novelty (MN) than single-shot prompting and The AI Scientist. Its methodological novelty does not differ significantly from the Research Ideation Agent, while its feasibility scores are higher on both backbones. With a shared experiment executor, CAR achieves the highest pairwise win rate among the evaluated AI methods on FML-bench-Lite and BioXArena. In a ten-condition ablation study, MN point estimates favor CAR over one-step proposal on both backbones, but no MN contrast survives correction for multiple comparisons. The results do not establish a consistent quality benefit from explicit operators beyond free-form iteration. CAR makes the sequence of operations and declared literature sources inspectable, separating judged idea quality from procedural traceability.",
+      "published": "2026-11-18T18:31:37Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24887",
+      "pdf_url": "https://arxiv.org/pdf/2611.24887",
+      "summary_zh": "大语言模型虽能生成看似合理的研究想法，但自动构思为何有效、新提案如何源于既有科学工作仍不清楚。作者提出创意AI研究员（CAR）框架，结合文献接地、迭代开发与显式概念算子，通过语义知识图谱和四种算子（双联想、类比、探索、细化）记录可追溯的变换过程。在40个LiveIdeaBench主题上，CAR的方法学新颖性显著高于单次提示和The AI Scientist，可行性优于Research Ideation Agent，并在两个执行基准上取得最高胜率，但消融显示显式算子相对自由迭代无一致质量优势，其价值在于过程可检查性。",
+      "summary_en": "Although large language models can generate plausible research ideas, it remains unclear what makes automated ideation effective and how novel proposals arise from prior work. The authors introduce the Creative AI Researcher (CAR), an agentic framework combining literature grounding, iterative development, and explicit conceptual operators (bisociation, analogy, exploration, elaboration) over a semantic knowledge graph, with each operator call checked and recorded to yield a traceable transformation process. Across 40 LiveIdeaBench topics, CAR achieves significantly higher methodological novelty than single-shot prompting and The AI Scientist and higher feasibility than the Research Ideation Agent, with the highest pairwise win rate on FML-bench-Lite and BioXArena, though ablations show no consistent quality benefit of explicit operators over free-form iteration, positioning CAR's contribution as procedural traceability.",
+      "highlights_zh": [
+        "知识图谱+四概念算子的可追溯构思框架",
+        "方法学新颖性显著优于单次提示与AI Scientist",
+        "显式算子无稳定质量增益，重在过程可查"
+      ]
+    },
+    {
+      "id": "2611.24941",
+      "title": "UltraTex: Aligning Physical Knowledge for High-Fidelity PBR Texture Generation",
+      "authors": [
+        "Jingzhi Bao",
+        "Xiaohe Ma",
+        "Hong Li",
+        "Yuanming Hu",
+        "Xiaoguang Han"
+      ],
+      "abstract": "Generating physically based rendering (PBR) texture maps for a 3D mesh from a single reference image is highly ambiguous, as the observed appearance entangles material identity, surface reflectance, and illumination. While current generative methods produce realistic albedo maps, they still struggle to infer accurate metallic and roughness attributes for relighting. We present UltraTex, a cascaded multi-view framework that moves beyond appearance matching by integrating physical knowledge into multi-view diffusion-based PBR generation. UltraTex first jointly predicts albedo and world-space shading normals to generate more detailed albedo maps, and then predicts metallic-roughness (MR) maps conditioned on the generated albedo, reference image, and material semantic priors. To inject material semantics, a lightweight adapter transforms hidden-layer features of a vision-language model (VLM) into intrinsic material representation tokens, providing part-level knowledge anchors for MR estimation. To model material-light interaction, photometric representation alignment guides intermediate diffusion features toward ground-truth material renderings under controlled lighting. This makes metallic and roughness variations observable through highlight intensity, specular sharpness, and local reflectance contrast, providing stronger guidance for fine-grained material prediction without explicit lighting supervision. Extensive experiments show that UltraTex generates high-quality textures and outperforms existing open-source and commercial methods in visual fidelity, material accuracy, and physical plausibility.",
+      "published": "2026-11-18T18:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24941",
+      "pdf_url": "https://arxiv.org/pdf/2611.24941",
+      "summary_zh": "从单张参考图生成PBR纹理存在高度歧义，因为外观同时纠缠了材质、反射率与光照，现有生成方法虽能产出逼真反照率，却难以推断准确的金属度与粗糙度。UltraTex提出级联多视图框架，先联合预测反照率与世界空间着色法线，再以反照率、参考图和VLM材质语义先验为条件预测MR图，并通过光度表示对齐让扩散特征逼近受控光照下的真实材质渲染。实验表明UltraTex在视觉保真度、材质准确性和物理合理性上优于现有开源与商业方法，为可重光照的高保真PBR纹理生成提供了新思路。",
+      "summary_en": "Generating PBR texture maps from a single reference image is highly ambiguous because observed appearance entangles material identity, surface reflectance, and illumination, and current generative methods still struggle to infer accurate metallic and roughness attributes for relighting. UltraTex is a cascaded multi-view framework that jointly predicts albedo and world-space shading normals, then predicts metallic-roughness maps conditioned on the generated albedo, reference image, and VLM-derived material semantic tokens, while photometric representation alignment guides diffusion features toward ground-truth material renderings under controlled lighting. Experiments show UltraTex outperforms existing open-source and commercial methods in visual fidelity, material accuracy, and physical plausibility, enabling high-fidelity relightable PBR texture generation.",
+      "highlights_zh": [
+        "级联多视图+光度表示对齐注入物理知识",
+        "视觉保真、材质准确与物理合理性均超越基线",
+        "可用于可重光照资产制作，依赖单图输入"
+      ],
+      "highlights_en": [
+        "Cascaded multi-view framework with photometric alignment",
+        "Outperforms open-source and commercial baselines",
+        "Enables relightable assets from a single image"
+      ]
+    },
+    {
+      "id": "2611.24940",
+      "title": "$Z$-sight: Unifying Vision-Language-Action and Latent World Modeling",
+      "authors": [
+        "Junjie Ye",
+        "Yiqi Zhao",
+        "Muchen Xu",
+        "Celina Shiyu Wang",
+        "Hao Dong",
+        "Ruohai Ge",
+        "Rong Xue",
+        "Benjamin J Kolligs",
+        "Aditya Dutt",
+        "Sasanka Nagavalli",
+        "Nassim A. Samad",
+        "Gaurav S. Sukhatme",
+        "Jyotirmoy V. Deshmukh",
+        "Yue Wang",
+        "Yuliang Guo"
+      ],
+      "abstract": "We introduce $Z$-sight, a unified robot foundation model that couples vision-language-action (VLA) and generative latent world modeling. Video-based world action models (WAMs) show the value of joint future-and-action generation for control, yet inherit the heavy cost of video generators. Recent latent-space policies avoid pixel generation, yet typically align intermediate features or rely on frozen target encoders, decoupling future prediction from the VLM's native feature space. $Z$-sight instead predicts the future directly in the visual token space in which its VLM perceives the present. Coupling a foresight expert and a continuous action expert with the VLM in a mixture-of-transformers, $Z$-sight jointly denoises future spatial tokens and actions at inference without pixel reconstruction or external encoders. Trained on human video and robot trajectories, $Z$-sight achieves 81.9% success on SIMPLE (+9.6 points over the strongest baseline) and 73.3% across six Unitree G1 tasks (+20.0 points) at 110 ms per chunk, while remaining competitive on tabletop benchmarks.",
+      "published": "2026-11-18T18:59:38Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24940",
+      "pdf_url": "https://arxiv.org/pdf/2611.24940",
+      "summary_zh": "视频世界动作模型虽能联合预测未来与动作，但视频生成开销大；现有潜空间策略又常与VLM原生特征空间解耦。Z-sight在VLM感知当下的同一视觉token空间中直接预测未来，以混合Transformer耦合前瞻专家、连续动作专家与VLM，推理时联合去噪未来空间token与动作，无需像素重建或外部编码器。在SIMPLE上达81.9%成功率（+9.6点），Unitree G1六任务平均73.3%（+20.0点），每chunk仅110ms，兼具性能与效率。",
+      "summary_en": "Video-based world action models jointly generate future and actions but inherit the heavy cost of video generators, while latent-space policies often decouple future prediction from the VLM's native feature space. Z-sight predicts the future directly in the same visual token space where its VLM perceives the present, coupling a foresight expert and a continuous action expert with the VLM in a mixture-of-transformers that jointly denoises future spatial tokens and actions without pixel reconstruction or external encoders. It reaches 81.9% success on SIMPLE (+9.6 points) and 73.3% across six Unitree G1 tasks (+20.0 points) at 110 ms per chunk, while remaining competitive on tabletop benchmarks.",
+      "highlights_zh": [
+        "在VLM原生视觉token空间预测未来",
+        "SIMPLE 81.9%，G1任务73.3%",
+        "110ms/chunk，高效可部署"
+      ],
+      "highlights_en": [
+        "Predicts future in VLM's native visual token space",
+        "81.9% on SIMPLE; 73.3% on six G1 tasks",
+        "110 ms per chunk, efficient for deployment"
+      ]
+    },
+    {
+      "id": "2611.24938",
+      "title": "Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models",
+      "authors": [
+        "Yupeng Zheng",
+        "Chaoyue Li",
+        "Linbo Wang",
+        "Xiang Li",
+        "Yuhang Zheng",
+        "Xiaotong Su",
+        "Songen Gu",
+        "Yichen Zhang",
+        "Zebin Xing",
+        "Shuai Tian",
+        "Jingxiang Guo",
+        "Jing Li",
+        "Zhiyong Zhao",
+        "Zhongpu Xia",
+        "Qichao Zhang",
+        "Haoran Li",
+        "Shuicheng Yan",
+        "Dongbin Zhao"
+      ],
+      "abstract": "World-action models jointly predict future observations and actions, yet reconstruction-oriented visual representations do not explicitly emphasize the spatial relationships and object-state changes needed for manipulation. We introduce Phoenix, which learns representations of scene structure for world-action modeling. Specifically, Phoenix Encoder enriches DINOv3's general visual semantics through dual-teacher distillation of geometric and spatiotemporal semantic knowledge. Next, CS-VAE causally aggregates and compresses Phoenix Encoder features into generative latents while preserving scene information and spatial layout. Finally, Phoenix jointly predicts these latents, complementary appearance latents, and robot actions, linking scene evolution with action generation. To study pretraining data efficiency, we curate approximately 39,000 hours of egocentric and robot manipulation data for representation learning and use the robot demonstration subset for WAM pretraining. Following benchmark-specific post-training, Phoenix achieves state-of-the-art performance across simulation and real-robot benchmarks spanning single-arm, bimanual, and dexterous manipulation. It demonstrates strong robustness to perturbations, achieving success rates of 94.8% on LIBERO-Plus and 72.4% on RoboTwin 2.0 C2R, alongside strong cross-embodiment transfer and real-world manipulation performance on Bench2Dex and RoboDojo-RealWorld, respectively. Pretraining-scale analysis shows larger performance gains from data scaling than a video-VAE-only baseline, indicating stronger scaling benefits and more effective data utilization. Moreover, Phoenix maintains high success rates when adapted with limited downstream demonstrations, demonstrating strong few-shot adaptation. Our code, pretraining data, and models are available on the project page to help the community reproduce our results.",
+      "published": "2026-11-18T18:59:04Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24938",
+      "pdf_url": "https://arxiv.org/pdf/2611.24938",
+      "summary_zh": "世界-动作模型中的重建导向视觉表征未显式强调操作所需的空间关系与物体状态变化。Phoenix通过双教师蒸馏增强DINOv3几何与时空语义、用CS-VAE聚合压缩为生成潜变量，并联合预测场景潜变量、外观潜变量与机器人动作。在仿真与真实机器人基准上取得SOTA，LIBERO-Plus达94.8%、RoboTwin 2.0 C2R达72.4%，并展现强鲁棒性、跨具身迁移与少样本适应能力。",
+      "summary_en": "World-action models rely on reconstruction-oriented visual representations that do not explicitly emphasize the spatial relationships and object-state changes needed for manipulation. Phoenix learns scene structure representations by enriching DINOv3 semantics via dual-teacher distillation of geometric and spatiotemporal knowledge, compressing features with a CS-VAE into generative latents, and jointly predicting these latents, appearance latents, and robot actions. It achieves state-of-the-art results across simulation and real-robot benchmarks (94.8% on LIBERO-Plus, 72.4% on RoboTwin 2.0 C2R) with strong robustness, cross-embodiment transfer, and few-shot adaptation, and shows better scaling from data than a video-VAE-only baseline.",
+      "highlights_zh": [
+        "双教师蒸馏学习场景结构表征",
+        "LIBERO-Plus 94.8%、RoboTwin 72.4%",
+        "强鲁棒与少样本适应，跨具身迁移"
+      ]
+    },
+    {
+      "id": "2611.24926",
+      "title": "Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation",
+      "authors": [
+        "Zi-ang Cao",
+        "Kaiyuan Zheng",
+        "Yinzhen Xu",
+        "Haonan Duan",
+        "Jiasheng Gu",
+        "Fengyuan Hu",
+        "Nan Zhu",
+        "Kun Lei",
+        "Kevin Lin",
+        "Ruijie Zheng",
+        "Shenyuan Gao",
+        "Fangqi Zhu",
+        "Zhe Zhang",
+        "Radha Poovendran",
+        "Linxi Fan",
+        "Guanzhi Wang",
+        "Yuke Zhu"
+      ],
+      "abstract": "Robot reward modeling faces two challenges: generalizing across tasks and accurately tracking progress in long-horizon manipulation. General-purpose reward models demonstrate broad task transfer, but transfer from short-task pretraining to long-horizon tasks remains underexplored. Long-horizon progress models often rely on task-specific subtask classifiers or fixed action vocabularies, limiting the reuse of learned progress knowledge when adapting to new tasks. To address these challenges, we introduce Grana, a vision-language robot reward model that learns to identify unfinished subtasks and estimate their continuous progress using open-vocabulary subtask descriptions. We train a language-conditioned model to estimate progress in short-horizon tasks and individual subtasks of long-horizon tasks. For long-horizon tasks, we combine the selected subtask's predicted progress with credit for preceding completed subtasks to estimate whole-task progress. General progress prediction requires training the model across diverse tasks with progress supervision that accounts for imperfect execution. Elapsed-time proxies can misrepresent progress when relative subtask durations vary, or failures reverse local progress. We therefore introduce an annotation protocol that converts sparse subtask boundaries and action-quality annotations into dense progress targets, without requiring annotators to assign numerical progress scores. Pretraining with this supervision on 200 diverse, mostly short-horizon manipulation tasks enables zero-shot reward prediction on unseen tasks and improves progress prediction after adaptation to multi-minute, long-horizon tasks. Experiments demonstrate (i) generalizable reward prediction, including adaptation to five long-horizon tasks, (ii) benefits from pretraining and composing subtask progress estimates, and (iii) improved downstream policy performance.",
+      "published": "2026-11-18T18:53:53Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.24926",
+      "pdf_url": "https://arxiv.org/pdf/2611.24926",
+      "summary_zh": "机器人奖励建模面临跨任务泛化与长时程进度跟踪两大难题，现有通用奖励模型从短任务到长任务的迁移研究不足，长时程进度模型又依赖任务特定子任务分类器或固定动作词表。Grana提出一种视觉-语言奖励模型，利用开放词汇子任务描述识别未完成子任务并估计其连续进度，通过将稀疏子任务边界与动作质量标注转化为稠密进度目标进行预训练，并将所选子任务进度与前置已完成子任务的信用结合以估计整体任务进度。实验表明该方法可对未见任务进行零样本奖励预测，经适配后在多分钟长时程任务上提升进度预测，并改善下游策略性能。",
+      "summary_en": "Robot reward modeling faces two challenges: generalizing across tasks and accurately tracking progress in long-horizon manipulation, with transfer from short-task pretraining underexplored and long-horizon progress models often relying on task-specific subtask classifiers or fixed action vocabularies. Grana introduces a vision-language reward model that identifies unfinished subtasks and estimates their continuous progress using open-vocabulary subtask descriptions, trained with an annotation protocol converting sparse subtask boundaries and action-quality annotations into dense progress targets, and composes selected subtask progress with credit for preceding completed subtasks for whole-task estimation. Experiments show zero-shot reward prediction on unseen tasks, improved progress prediction after adaptation to multi-minute long-horizon tasks, and improved downstream policy performance.",
+      "highlights_zh": [
+        "开放词汇子任务进度建模与组合",
+        "零样本奖励预测并可适配长时程任务",
+        "提升下游策略性能，需进度标注"
+      ],
+      "highlights_en": [
+        "Open-vocabulary subtask progress modeling and composition",
+        "Zero-shot reward prediction with long-horizon adaptation",
+        "Improves downstream policy; needs progress annotations"
+      ]
+    }
+  ]
+}
