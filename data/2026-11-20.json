@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-20",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.26624",
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "authors": [
+        "Weihao Cheng"
+      ],
+      "abstract": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
+      "published": "2026-11-19T18:59:34Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26624",
+      "pdf_url": "https://arxiv.org/pdf/2611.26624",
+      "summary_zh": "现有AI智能体虽能生成可玩游戏，但游戏未必具有吸引力，而精通感是吸引力的关键来源，其设计却依赖大量人工试玩与调优。PlayCraft提出自动化框架，用基于视觉的智能体反复游玩并记录进度、决策与反思，再由创作智能体据此估计玩家能力、预测不同熟练度下的表现并对照目标学习曲线来修订游戏。实验表明，在三种智能体设置下，PlayCraft在多数游戏中带来更大的学习增益和更陡的学习斜率，且各项指标的宏平均均优于基线，为自动化设计具有精通感的游戏提供了可行路径。",
+      "summary_en": "Recent AI agents can generate playable games, but these games are not necessarily engaging, and designing for mastery—a key source of engagement—typically requires extensive human play and tuning. PlayCraft is an automated framework in which a vision-based player agent plays games over repeated episodes while retaining memory and reporting progress, decisions, and reflections, and a crafter agent uses these reports to estimate player abilities, predict performance across proficiency levels, and revise the game toward a target learning progression. Evaluated with fresh player agents across three intelligence settings, PlayCraft yields larger learning gains and steeper learning slopes than initial games in most cases and outperforms baselines on the macro-average of each metric at every setting, showing that agent play experience can drive automated mastery-oriented game design.",
+      "highlights_zh": [
+        "视觉智能体游玩与创作智能体修订交替迭代",
+        "多数游戏学习增益与斜率提升，宏平均全面优于基线",
+        "可用于自动化游戏调优，但依赖智能体模拟真实性"
+      ]
+    },
+    {
+      "id": "2611.26617",
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "authors": [
+        "Yuxin Jiang",
+        "Wenqiang Sun",
+        "Jiaqi Li",
+        "Yuchao Gu",
+        "Lvmin Zhang",
+        "Ivor Tsang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for both inverse and forward dynamics. We introduce O$^{2}$LaF, built on a simple principle: one prior, two dynamics. We initialize both models from the same pretrained video DiT and adapt them to their distinct roles: a feed-forward transition encoder with learnable action queries for inverse dynamics, and a causal, action-conditioned video generator for forward dynamics. By controlling information access and optimizing both dynamics end-to-end through a compact bottleneck, O$^{2}$LaF learns transferable actions from unlabeled videos. Across navigation and robotic manipulation, O$^{2}$LaF sets a new state of the art in few-shot action probing and enables stronger zero-shot action transfer across visual contexts and embodiments. Beyond generative video priors, we further extend our framework to predictive representation priors such as V-JEPA2, achieving competitive performance. Our findings suggest a broader paradigm for latent-action learning: repurposing pretrained video models to discover transferable actions and predict their consequences.",
+      "published": "2026-11-19T18:58:14Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26617",
+      "pdf_url": "https://arxiv.org/pdf/2611.26617",
+      "summary_zh": "从视频中学习潜在动作通常需要从零开始建模动态，缺乏可迁移的先验知识。O²LaF提出“一个先验、两个动态”原则，用同一个预训练视频DiT分别初始化前馈逆动态编码器和因果动作条件前向生成器，并通过紧凑瓶颈端到端联合优化。在导航和机器人操作任务上，该方法在少样本动作探测上达到新SOTA，并实现跨视觉场景与跨具身的零样本动作迁移，还可扩展到V-JEPA2等预测表征先验。",
+      "summary_en": "Latent action learning from videos typically learns dynamics from scratch without transferable priors. O²LaF introduces a 'one prior, two dynamics' principle, initializing both an inverse-dynamics transition encoder with learnable action queries and a causal action-conditioned forward video generator from the same pretrained video DiT, jointly optimized end-to-end through a compact bottleneck. It sets a new state of the art in few-shot action probing on navigation and robotic manipulation, enables stronger zero-shot action transfer across visual contexts and embodiments, and extends to predictive representation priors such as V-JEPA2.",
+      "highlights_zh": [
+        "同一视频DiT先验驱动逆/前向双动态",
+        "少样本动作探测达新SOTA并支持零样本迁移",
+        "可复用于多种视频/表征先验，但依赖预训练模型"
+      ]
+    },
+    {
+      "id": "2611.26627",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Alec Helbling",
+        "Atakan Kara",
+        "Duen Horng Chau",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
+      "published": "2026-11-19T18:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26627",
+      "pdf_url": "https://arxiv.org/pdf/2611.26627",
+      "summary_zh": "RL后训练能显著提升扩散Transformer的视觉质量与组合能力，但通常被认为需要学习复杂的输入依赖变换。作者用一组与输入无关的固定 steering 向量加到冻结基座模型的块输出上，通过匹配公开RL检查点的速度预测来拟合，无需奖励目标。这些向量参数量比RL调优的LoRA少65倍，却恢复了六个图像模型90.0-96.3%的奖励增益和两个视频模型89.8%/111.9%的增益，说明策略梯度RL的大部分收益可由一个恒定偏移实现。",
+      "summary_en": "RL post-training substantially improves diffusion transformers, but it is unclear how much of the gain requires complex input-dependent transformations. The authors fit a fixed set of input-independent steering vectors added to block outputs of a frozen base model, matching the velocity predictions of public RL-tuned checkpoints without any reward objective. With 65x fewer parameters than RL-tuned LoRA, these vectors recover 90.0-96.3% of reward gains on six image models and 89.8%/111.9% on two video models, showing that a constant shift suffices for most of policy-gradient RL's benefit.",
+      "highlights_zh": [
+        "用输入无关固定steering向量替代RL学习",
+        "参数量少65倍仍恢复90%以上奖励增益",
+        "表明RL主要将生成器导向已有能力"
+      ],
+      "highlights_en": [
+        "Input-independent fixed steering vectors replace RL learning",
+        "65x fewer parameters recover >90% reward gains",
+        "RL mainly steers generator toward existing capabilities"
+      ]
+    },
+    {
+      "id": "2611.26619",
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "authors": [
+        "Jinbin Luo",
+        "Xiaozhe Yao",
+        "Shang Yang",
+        "Zhijian Liu",
+        "Song Han",
+        "Qinghao Hu"
+      ],
+      "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
+      "published": "2026-11-19T18:58:31Z",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26619",
+      "pdf_url": "https://arxiv.org/pdf/2611.26619",
+      "summary_zh": "混合架构语言模型的全局注意力和有界状态层产生异构缓存，其需求随上下文长度和并发度变化，给GPU显存分配带来挑战。TideCache通过透明缓存池在固定虚拟地址下重分配物理页、利用有界状态层计算间隙预取下一全局注意力层前缀的缓存流式器，以及按请求大小和队列状态选择驻留或流式执行的调度器，实现高效混合服务。在GB300和GH200的七种配置上，相比SGLang+HiCache，智能体轮次完成量最高提升2.04倍，P50每token延迟降低20–59%，智能体P50 TTFT提升1.40–3.05倍。",
+      "summary_en": "Hybrid language models with global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency, complicating GPU memory allocation. TideCache addresses this with a transparent cache pool that redistributes physical pages behind fixed virtual addresses, a cache streamer that prefetches the next global-attention layer's prefix during bounded-state layer computation into shared GPU slots, and a request scheduler that selects resident or streamed execution and triggers capacity adjustments. On GB300 and GH200 across seven configurations, it completes up to 2.04x more agent turns, cuts P50 per-token latency by 20–59%, and improves agent P50 TTFT by 1.40–3.05x versus SGLang with HiCache.",
+      "highlights_zh": [
+        "透明缓存池+层间流式预取",
+        "轮次完成量最高提升2.04倍",
+        "释放HBM以容纳更多请求"
+      ]
+    },
+    {
+      "id": "2611.26613",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "authors": [
+        "Yiyang Du",
+        "Yuxuan Kuang",
+        "Qitao Zhao",
+        "Yixuan Wang",
+        "Zhanqiu Guo",
+        "Yi Xu",
+        "Xin Li",
+        "Wenbin He",
+        "Liu Ren",
+        "Chenyan Xiong"
+      ],
+      "abstract": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succeed nor where they fail. In this paper, we present a systematic action-level analysis of frontier agents on direct robot control across 12 manipulation benchmarks. We introduce AgentRoboCritic, an intent-grounded critique framework in which the policy agent states a local intent alongside each action, and a critic evaluates the action's outcome and failure mode against this intent. Our action-level analysis demonstrates the promising capabilities of frontier agents on direct robot control, including closed-loop recovery from local execution failures, reliable semantic grounding across diverse scenes, and strong zero-shot manipulation without task-specific adaptation. It also identifies their current limitations, including task-relevant physical execution bottlenecks such as grasping and alignment, and uneven recovery across failure modes. Finally, we validate our critic on a 400-action human-annotated benchmark and release a dataset of 12,844 annotated actions alongside a fine-tuned open-source critic, Muse-Glimmer-30B, whose failure-mode accuracy rises from 32.58% to 74.24%, enabling low-cost action-level analysis.",
+      "published": "2026-11-19T18:57:25Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26613",
+      "pdf_url": "https://arxiv.org/pdf/2611.26613",
+      "summary_zh": "现有基准仅报告回合级成功率，无法说明前沿多模态智能体在直接机器人控制中如何成功或失败。本文提出AgentRoboCritic意图锚定批评框架，让策略智能体为每个动作声明局部意图，并由批评器评估动作结果与失败模式，从而对12个操作基准进行动作级系统分析。分析揭示了智能体在闭环恢复、语义 grounding 和零样本操作上的能力及抓取对齐等瓶颈，并发布12,844条标注动作数据集与微调开源批评器Muse-Glimmer-30B，其失败模式准确率从32.58%提升至74.24%。",
+      "summary_en": "Existing benchmarks report only episode-level success rates, failing to reveal how frontier multimodal agents succeed or fail in direct robot control. This paper introduces AgentRoboCritic, an intent-grounded critique framework where the policy agent states a local intent with each action and a critic evaluates outcomes and failure modes against it, enabling systematic action-level analysis across 12 manipulation benchmarks. The analysis highlights capabilities such as closed-loop recovery, semantic grounding, and zero-shot manipulation, identifies bottlenecks like grasping and alignment, and releases a 12,844-action annotated dataset plus a fine-tuned open-source critic, Muse-Glimmer-30B, raising failure-mode accuracy from 32.58% to 74.24%.",
+      "highlights_zh": [
+        "意图锚定的动作级批评框架",
+        "失败模式准确率32.58%→74.24%",
+        "低成本动作级分析，抓取对齐仍受限"
+      ]
+    },
+    {
+      "id": "2611.26584",
+      "title": "Represented but misread: Post-training changes how language models read out what they represent",
+      "authors": [
+        "Jochen Laubrock"
+      ],
+      "abstract": "Does post-training change what a language model represents, or how this representation is read out into an answer? We compared linear probes with the models' own answers, analyzed with signal detection theory, in six open-weight base models and their post-trained versions. For judgments of whether German texts were written by a human or an AI, probes and word n-gram classifiers separated the classes well, but the answers did not and often ordered the texts inversely. Post-training lowered the sensitivity of the answers on average ($Δd' = -0.34$ across model families; -0.29 across three prompts). It also changed the use of a stated base rate: Base models shifted their log-odds by less than the stated change in prior odds, most post-trained models by more. In two models with stage-wise checkpoints, the change occurred during supervised fine-tuning, model stitching implicated the early layers, and from mid-depth on internal states at positions after the text, not those of the text, transferred the change between checkpoints. Our corpora cannot be shared, so we add a case reproducible from public data, the truth of negated statements. Here, post-training acted in the opposite direction: Probes decoded truth at or near ceiling in every model, the answers of several base models did not use it, and post-training repaired them; by mid-depth the repair resided at the positions after the statement; below it, the representation of the statement contributed, strongly in one of four models. In a training study, adding 2,000 correctly labeled authorship judgments of news texts to otherwise identical fine-tuning data improved the answers on our newspaper and textbook corpora and inverted them on the chats, where they followed a news-trained probe of the base model. Post-training thus changed how a judgment is read out of what a model represents, and a small training signal can set its direction.",
+      "published": "2026-11-19T18:43:56Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26584",
+      "pdf_url": "https://arxiv.org/pdf/2611.26584",
+      "summary_zh": "后训练究竟改变了语言模型的内部表征，还是改变了表征被读取为答案的方式，这一问题尚不清楚。研究者在六个开源基础模型及其后训练版本上，用线性探针与模型自身答案做信号检测论对比，并借助分阶段检查点、模型缝合和训练干预来定位变化来源。结果显示后训练主要改变判断的读出方式而非表征本身，且变化发生在监督微调阶段的早期层与文本之后的位置，少量训练信号即可设定读出方向。",
+      "summary_en": "It remains unclear whether post-training changes what a language model represents or how that representation is read out into an answer. The authors compared linear probes with models' own answers using signal detection theory across six open-weight base models and their post-trained versions, complemented by stage-wise checkpoints, model stitching, and a controlled training study. They find that post-training mainly alters readout rather than representation, with changes arising during supervised fine-tuning in early layers and at post-text positions, and that a small training signal can set the direction of readout.",
+      "highlights_zh": [
+        "探针与答案对比区分表征与读出",
+        "后训练使答案敏感度平均降0.34",
+        "小训练信号可设定读出方向"
+      ]
+    },
+    {
+      "id": "2611.26629",
+      "title": "Posterior Matching Distillation",
+      "authors": [
+        "Hidir Yesiltepe",
+        "Julius Berner",
+        "Arash Vahdat",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this by matching the student's output distribution to the teacher's. This matching is often driven by reverse-KL objectives, whose mode-seeking bias favors dominant teacher modes at the expense of diversity across samples. We introduce Posterior Matching Distillation (PMD), a new member of the distribution-based distillation family that combines mode-covering posterior sampling with any-step generation. At zero population loss, PMD recovers the teacher's full posterior of clean images at each trained noise level. Its stochastic student supports any-step sampling budgets within the trained timestep grid without further training. To learn these posteriors, PMD matches exponentially reweighted averages of student samples conditioned on a fixed noisy state to corresponding teacher posterior means. Under Gaussian corruption, exponentially tilted posterior mean is a single teacher evaluation at a shifted input. We prove that, matching tilted means over an open neighborhood uniquely identifies the full posterior. PMD thus supervises the entire conditional distribution through a family of mean constraints, without any auxiliary student-score network. Experiments on SDXL and FLUX.2 [klein] 4B demonstrate that PMD achieves the best FID among 4-step methods on both models, while maintaining competitive or leading performance across prompt-alignment and perceptual-quality metrics.",
+      "published": "2026-11-19T18:59:57Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26629",
+      "pdf_url": "https://arxiv.org/pdf/2611.26629",
+      "summary_zh": "扩散蒸馏通过将预训练教师的迭代采样压缩为少步网络评估来加速图像与视频生成，但现有基于分布匹配的方法多依赖反向KL目标，其模式寻求偏差会偏向教师的主导模式而牺牲样本多样性。本文提出后验匹配蒸馏（PMD），将模式覆盖的后验采样与任意步生成相结合，通过匹配学生样本的指数重加权均值与教师后验均值来监督完整条件分布，并证明在高斯扰动下指数倾斜后验均值等价于一次偏移输入的教师评估，且在一开邻域上匹配倾斜均值可唯一确定完整后验。在SDXL与FLUX.2 [klein] 4B上的实验表明，PMD在两种模型上均取得4步方法中最佳FID，同时在提示对齐与感知质量指标上保持有竞争力或领先的表现。",
+      "summary_en": "Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling into a few network evaluations, but existing distribution-based methods often rely on reverse-KL objectives whose mode-seeking bias favors dominant teacher modes at the expense of sample diversity. We introduce Posterior Matching Distillation (PMD), which combines mode-covering posterior sampling with any-step generation by matching exponentially reweighted averages of student samples to teacher posterior means, and prove that under Gaussian corruption the exponentially tilted posterior mean is a single teacher evaluation at a shifted input and that matching tilted means over an open neighborhood uniquely identifies the full posterior. Experiments on SDXL and FLUX.2 [klein] 4B show that PMD achieves the best FID among 4-step methods on both models while maintaining competitive or leading performance on prompt-alignment and perceptual-quality metrics.",
+      "highlights_zh": [
+        "用倾斜均值约束监督完整后验分布",
+        "SDXL与FLUX.2上4步方法最佳FID",
+        "无需辅助学生评分网络，支持任意步采样"
+      ]
+    },
+    {
+      "id": "2611.26600",
+      "title": "A Tutorial on Complementarity-Based Contact Models for Robotics",
+      "authors": [
+        "Onur Beker",
+        "A. René Geist",
+        "Michael Posa",
+        "Marc Toussaint",
+        "Justin Carpentier",
+        "Georg Martius"
+      ],
+      "abstract": "Simulating rigid-body dynamics with contact is fundamental to robotics, from motion synthesis and control to mechanism design. Many widely used simulators rely on cone complementarity formulations, whose physical assumptions and numerical solution require substantial background. While excellent surveys, monographs, and course notes exist, they mostly address computational mechanics or computer graphics or document a single simulator. To the best of our knowledge, a self-contained pedagogical treatment for robotics, bringing these formulations and their solvers together with complete derivations and a unified notation, does not yet exist. This tutorial addresses this gap by connecting rigid-body dynamics, conic optimization, and frictional contact. In particular, we explain how complementarity conditions encode non-penetration and frictional dissipation, determining separation, sticking, and sliding without prescribed contact modes. We distinguish equivalent transcriptions from convex relaxations, showing how the latter can introduce artifacts such as lift-off and creep. We examine the existence and uniqueness of motion and contact forces, including the solver's role in selecting among multiple solutions. We then compare first-order and Newton-based methods, explain regularization and proximal strategies, and discuss trade-offs between computational cost, robustness, and physical fidelity. Connections to widely used simulators, optimal control, and differentiable simulation help readers interpret simulation results, choose suitable formulations and solvers, and develop their own contact dynamics routines.",
+      "published": "2026-11-19T18:54:07Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.GR",
+        "math.OC"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26600",
+      "pdf_url": "https://arxiv.org/pdf/2611.26600",
+      "summary_zh": "机器人刚体接触仿真广泛依赖锥互补 formulations，但其物理假设与数值求解需要大量背景知识，现有综述多面向计算力学、图形学或单一模拟器，缺乏面向机器人学的自包含教学材料。本教程统一记号并给出完整推导，将刚体动力学、锥优化与摩擦接触相连接，解释互补条件如何编码非穿透与摩擦耗散，区分等价改写与凸松弛及其伪影，并分析解的存在唯一性、求解器选择及一阶与牛顿类方法的权衡。该工作帮助读者解读仿真结果、选择合适的 formulations 与求解器，并自行开发接触动力学程序，填补了机器人学教学空白。",
+      "summary_en": "Rigid-body contact simulation in robotics widely relies on cone complementarity formulations, yet their physical assumptions and numerical solution demand substantial background, and existing surveys target computational mechanics, graphics, or a single simulator rather than offering a self-contained robotics-oriented treatment. This tutorial unifies notation and provides complete derivations connecting rigid-body dynamics, conic optimization, and frictional contact, explaining how complementarity encodes non-penetration and frictional dissipation, distinguishing equivalent transcriptions from convex relaxations and their artifacts, and analyzing existence/uniqueness, solver-dependent solution selection, and trade-offs between first-order and Newton-based methods. It helps readers interpret simulation results, choose suitable formulations and solvers, and develop their own contact dynamics routines, filling a pedagogical gap for robotics.",
+      "highlights_zh": [
+        "统一记号与完整推导的机器人接触教程",
+        "区分等价改写与凸松弛及其伪影",
+        "指导求解器选择与自主实现接触动力学"
+      ],
+      "highlights_en": [
+        "Self-contained tutorial with unified notation and full derivations",
+        "Distinguishes equivalent transcriptions from convex relaxations and artifacts",
+        "Guides solver selection and custom contact dynamics implementation"
+      ]
+    },
+    {
+      "id": "2611.26596",
+      "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation",
+      "authors": [
+        "Kai Lu",
+        "Chenyang Ma",
+        "Ioannis Havoutis"
+      ],
+      "abstract": "Robotic vision-language-action (VLA) models can execute diverse individual manipulation skills, yet they still struggle with long-horizon loco-manipulation tasks, where temporal structure, skills, and precision are tightly coupled within a monolithic model. We propose Physically Grounded Execution (PGX), a framework that offloads temporal and precision control to two classical training-free components, allowing the VLA to focus on stage-specific skill dynamics. PGX decomposes long-horizon loco-manipulation into three layers: (i) a predicate-based state machine governs task progression, using physical predicates to gate phase transitions, trigger recovery, and coordinate navigation and waiting. Shared predicate semantics connect offline demonstration segmentation, online execution, and stage-wise evaluation; (ii) VLA skills operate within active manipulation phases, with flat or stage-trained models concentrating on task-relevant actions; and (iii) world-coordinate locking (WCL) maintains spatial consistency through base station keeping, object-relative positioning, and world-anchored contact targets. We demonstrate the effectiveness of PGX with extensive experiments conducted on three simulated tasks and one real-world task using a Unitree G1 humanoid robot for long-horizon loco-manipulation, showing improvements in stage progression and task success rates. Project page is available at: https://kl-research.github.io/pgx",
+      "published": "2026-11-19T18:52:18Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26596",
+      "pdf_url": "https://arxiv.org/pdf/2611.26596",
+      "summary_zh": "VLA模型能执行单一操作技能，但在时间结构、技能与精度紧密耦合的长程移动操作任务中仍表现不佳。PGX将时序与精度控制卸载到两个免训练经典组件，通过谓词状态机、VLA技能层和世界坐标锁定三层架构，让VLA专注阶段特定技能动态。在三个仿真任务和Unitree G1真机任务上，PGX提升了阶段推进与任务成功率。",
+      "summary_en": "VLA models can execute individual manipulation skills but struggle with long-horizon loco-manipulation where temporal structure, skills, and precision are tightly coupled. PGX offloads temporal and precision control to two classical training-free components via a three-layer architecture: a predicate-based state machine, VLA skills within active phases, and world-coordinate locking for spatial consistency. Experiments on three simulated tasks and one real-world Unitree G1 task show improved stage progression and task success rates.",
+      "highlights_zh": [
+        "谓词状态机+世界坐标锁定分层解耦",
+        "仿真与真机任务成功率均提升",
+        "适用于人形机器人长程移动操作"
+      ]
+    },
+    {
+      "id": "2611.26601",
+      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+      "authors": [
+        "Amine Lbath",
+        "Manan Suri",
+        "Aurelien Delaitre",
+        "Vadim Okun",
+        "Massih-Reza Amini",
+        "Dinesh Manocha"
+      ],
+      "abstract": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports and disclosures and are rarely comparable. We introduce a framework that rates these capabilities on an autonomy scale modeled on the levels of driving automation, and qualifies each claim by its correctness, its availability and the strength of its evidence. We use this framework to systematize the published evidence on LLM capability in vulnerability research. We find that agents discovered, validated, and patched vulnerabilities in real-world software without human intervention before the restricted frontier models of 2026, and that open-weight models subsequently attained comparable autonomy for discovery and validation. We then measure the consequences of evolving LLM security capabilities in a decade of public vulnerability records, advisories and exploitation data. In 2026 the number of disclosed vulnerabilities more than doubled, with an increasing share rated critical or high, and severe bugs that had survived a decade or more in widely used code were reported several times more often than before. Yet the time between the stages of a vulnerability's life, from report to fix and from disclosure to attack, has not shifted noticeably so far. We grade the mitigations proposed in the literature with an explicit rubric and draw guidance for each group of stakeholders from the best-supported ones.",
+      "published": "2026-11-19T18:54:19Z",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26601",
+      "pdf_url": "https://arxiv.org/pdf/2611.26601",
+      "summary_zh": "LLM智能体在真实软件漏洞发现、验证与修复中的能力声明散落于论文、厂商报告和披露中，彼此难以比较。本文提出一个仿驾驶自动化分级的能力自主性评级框架，并按正确性、可用性和证据强度对每项声明进行限定，据此系统梳理已发表证据，并结合十年公开漏洞记录、公告与利用数据量化能力演进的后果。研究发现，2026年受限前沿模型之前智能体已能在无人工干预下发现、验证和修复真实软件漏洞，开放权重模型随后在发现与验证上达到相当自主性；2026年披露漏洞数量翻倍以上、严重漏洞占比上升，但漏洞生命周期各阶段的时间间隔尚未明显变化，论文还为各类利益相关者给出了基于最佳证据的缓解建议。",
+      "summary_en": "Claims about LLM agents' ability to discover, validate and patch vulnerabilities in real software are scattered across papers, vendor reports and disclosures and are rarely comparable. This paper introduces an autonomy scale modeled on driving automation levels and qualifies each claim by correctness, availability and evidence strength, using it to systematize published evidence and to measure consequences across a decade of public vulnerability records, advisories and exploitation data. It finds that agents achieved human-free discovery, validation and patching of real-world vulnerabilities before the restricted frontier models of 2026, that open-weight models later reached comparable autonomy for discovery and validation, and that 2026 saw disclosed vulnerabilities more than double with a growing share rated critical or high, while the time between vulnerability lifecycle stages has not yet shifted noticeably; it also grades proposed mitigations and offers stakeholder guidance.",
+      "highlights_zh": [
+        "仿驾驶分级的漏洞研究自主性评级框架",
+        "2026年披露漏洞数量翻倍以上",
+        "生命周期时间间隔未明显变化"
+      ]
+    }
+  ]
+}
