@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-21",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 7,
+  "papers": [
+    {
+      "id": "2611.26624",
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "authors": [
+        "Weihao Cheng"
+      ],
+      "abstract": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
+      "published": "2026-11-19T18:59:34Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26624",
+      "pdf_url": "https://arxiv.org/pdf/2611.26624",
+      "summary_zh": "近期AI智能体虽能生成可玩的游戏，但这些游戏未必具有吸引力，而精通感是吸引力的关键来源，却需要大量人类游玩与调优才能设计好。PlayCraft提出一种自动化框架，用基于视觉的智能体反复游玩游戏，并依据其详细游玩体验（进度、结果、决策与反思报告）来修订游戏，通过估计玩家能力、预测不同熟练度下的表现并与目标学习曲线对比来诊断和弥补差距。实验表明，与初始游戏相比，PlayCraft在多数游戏中带来更大的学习增益和更陡的学习斜率，并在各智能设置下于两项指标的宏平均上优于基线，说明自动游玩体验可有效指导面向精通感的游戏设计。",
+      "summary_en": "Recent AI agents can generate playable games, but these games are not necessarily engaging, and designing for mastery—a key source of engagement—requires extensive human play and tuning. PlayCraft is an automated framework in which a vision-based player agent repeatedly plays a game and reports its progress, outcomes, decisions, and reflections, and a crafter agent uses these reports to estimate player abilities, predict performance at different proficiency levels, compare predictions with a target learning progression, and revise the game to close the gaps. Evaluated with fresh player agents across three intelligence settings, PlayCraft yields larger learning gains and steeper learning slopes than the initial games in most cases and outperforms baselines on the macro-average of each metric at every setting, showing that agent play experience can effectively guide mastery-oriented game design.",
+      "highlights_zh": [
+        "视觉智能体游玩报告驱动游戏自动修订",
+        "多数游戏学习增益与斜率优于初始及基线",
+        "可用于自动游戏设计，但依赖智能体模拟保真度"
+      ]
+    },
+    {
+      "id": "2611.26617",
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "authors": [
+        "Yuxin Jiang",
+        "Wenqiang Sun",
+        "Jiaqi Li",
+        "Yuchao Gu",
+        "Lvmin Zhang",
+        "Ivor Tsang",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for both inverse and forward dynamics. We introduce O$^{2}$LaF, built on a simple principle: one prior, two dynamics. We initialize both models from the same pretrained video DiT and adapt them to their distinct roles: a feed-forward transition encoder with learnable action queries for inverse dynamics, and a causal, action-conditioned video generator for forward dynamics. By controlling information access and optimizing both dynamics end-to-end through a compact bottleneck, O$^{2}$LaF learns transferable actions from unlabeled videos. Across navigation and robotic manipulation, O$^{2}$LaF sets a new state of the art in few-shot action probing and enables stronger zero-shot action transfer across visual contexts and embodiments. Beyond generative video priors, we further extend our framework to predictive representation priors such as V-JEPA2, achieving competitive performance. Our findings suggest a broader paradigm for latent-action learning: repurposing pretrained video models to discover transferable actions and predict their consequences.",
+      "published": "2026-11-19T18:58:14Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26617",
+      "pdf_url": "https://arxiv.org/pdf/2611.26617",
+      "summary_zh": "从视频中学习潜在动作通常需要从零开始建模动态，缺乏可迁移的先验知识。O²LaF提出“一个先验，两个动态”原则，用同一个预训练视频DiT分别初始化前馈逆动态编码器和因果动作条件前向生成器，并通过紧凑瓶颈端到端联合优化。在导航和机器人操作任务上，该方法在少样本动作探测上达到新SOTA，并实现跨视觉上下文与具身形态的零样本动作迁移，还可扩展到V-JEPA2等预测表征先验。",
+      "summary_en": "Latent action learning from videos typically learns dynamics from scratch, lacking transferable priors. O²LaF introduces the 'one prior, two dynamics' principle, initializing both an inverse-dynamics feed-forward encoder with learnable action queries and a causal action-conditioned forward video generator from the same pretrained video DiT, jointly optimized end-to-end through a compact bottleneck. It sets a new state of the art in few-shot action probing on navigation and robotic manipulation, enables stronger zero-shot action transfer across visual contexts and embodiments, and extends to predictive representation priors such as V-JEPA2.",
+      "highlights_zh": [
+        "同一视频DiT先验驱动逆/前向双动态",
+        "少样本动作探测达新SOTA并支持零样本迁移",
+        "可复用视频生成或表征先验，跨具身迁移"
+      ],
+      "highlights_en": [
+        "One video DiT prior drives inverse and forward dynamics",
+        "New SOTA in few-shot probing with zero-shot transfer",
+        "Works with generative or representation priors across embodiments"
+      ]
+    },
+    {
+      "id": "2611.26627",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "authors": [
+        "Tuna Han Salih Meral",
+        "Kaan Oktay",
+        "Alec Helbling",
+        "Atakan Kara",
+        "Duen Horng Chau",
+        "Pinar Yanardag"
+      ],
+      "abstract": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
+      "published": "2026-11-19T18:59:53Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26627",
+      "pdf_url": "https://arxiv.org/pdf/2611.26627",
+      "summary_zh": "强化学习后训练能显著提升扩散Transformer的视觉质量、文字渲染和组合准确性，但此前认为这些能力依赖输入相关的复杂变换。作者用一组与输入无关的固定 steering 向量加到冻结基座模型的块输出上，通过匹配公开RL检查点的速度预测来拟合，目标中不含奖励。这些向量在参数量远少于RL LoRA的情况下恢复了六个图像模型90.0-96.3%的奖励增益，并在文字渲染和人类偏好上超过基于权重的RL，表明策略梯度RL后训练的大部分收益可由一个恒定偏移解释。",
+      "summary_en": "RL post-training substantially improves diffusion transformers' visual quality, text rendering, and compositional accuracy, which was assumed to require complex input-dependent transformations. The authors probe RL-tuned models with a fixed set of input-independent steering vectors added to block outputs of the frozen base model, fitted to match velocity predictions of public RL checkpoints without any reward in the objective. Despite being identical across prompts, tokens, and seeds, these vectors recover 90.0-96.3% of the reward gains of six RL-tuned image models and even exceed weight-based RL on text rendering and human preference, showing that a constant shift suffices for most of the gain.",
+      "highlights_zh": [
+        "用输入无关的固定steering向量替代RL学习",
+        "恢复90%以上奖励增益，参数量少65倍",
+        "表明RL后训练主要是恒定偏移引导"
+      ]
+    },
+    {
+      "id": "2611.26619",
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "authors": [
+        "Jinbin Luo",
+        "Xiaozhe Yao",
+        "Shang Yang",
+        "Zhijian Liu",
+        "Song Han",
+        "Qinghao Hu"
+      ],
+      "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
+      "published": "2026-11-19T18:58:31Z",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26619",
+      "pdf_url": "https://arxiv.org/pdf/2611.26619",
+      "summary_zh": "混合架构语言模型同时维护全局注意力和有界状态两类异构缓存，其需求随上下文长度和并发度变化，给GPU内存分配与驻留管理带来挑战。TideCache在CPU-GPU超级芯片上提出透明缓存池、缓存流式器和请求调度器三个组件，通过固定虚拟地址重分配物理页、利用有界状态层计算间隙预取下一全局注意力层前缀并共享GPU槽位，实现层间传输与计算重叠。在GB300和GH200的七种配置上，相比SGLang+HiCache最多完成2.04倍智能体轮次，P50每token延迟降低20-59%，智能体P50 TTFT提升1.40-3.05倍。",
+      "summary_en": "Hybrid language models maintain heterogeneous caches across global-attention and bounded-state layers whose demands vary with context length and concurrency, complicating GPU memory allocation and residency management. TideCache introduces a transparent cache pool that redistributes physical pages behind fixed virtual addresses, a cache streamer that prefetches the next global-attention layer's prefix into shared GPU slots during bounded-state layer computation, and a request scheduler that selects resident or streamed execution with capacity adjustments. On GB300 and GH200 across seven configurations, it completes up to 2.04x more agent turns, cuts P50 per-token latency by 20-59%, and improves agent P50 TTFT by 1.40-3.05x over SGLang with HiCache.",
+      "highlights_zh": [
+        "透明缓存池+层间流式预取",
+        "最多2.04倍智能体轮次",
+        "释放HBM以容纳更多请求"
+      ]
+    },
+    {
+      "id": "2611.26601",
+      "title": "SoK: Assessing the Evolution of LLM Capability in Software Vulnerability Research",
+      "authors": [
+        "Amine Lbath",
+        "Manan Suri",
+        "Aurelien Delaitre",
+        "Vadim Okun",
+        "Massih-Reza Amini",
+        "Dinesh Manocha"
+      ],
+      "abstract": "LLM-based agents are becoming increasingly capable at discovering, validating and patching vulnerabilities in real software, and vendors and researchers report that this is already changing how vulnerabilities are found and fixed. These claims, however, are scattered across papers, vendor reports and disclosures and are rarely comparable. We introduce a framework that rates these capabilities on an autonomy scale modeled on the levels of driving automation, and qualifies each claim by its correctness, its availability and the strength of its evidence. We use this framework to systematize the published evidence on LLM capability in vulnerability research. We find that agents discovered, validated, and patched vulnerabilities in real-world software without human intervention before the restricted frontier models of 2026, and that open-weight models subsequently attained comparable autonomy for discovery and validation. We then measure the consequences of evolving LLM security capabilities in a decade of public vulnerability records, advisories and exploitation data. In 2026 the number of disclosed vulnerabilities more than doubled, with an increasing share rated critical or high, and severe bugs that had survived a decade or more in widely used code were reported several times more often than before. Yet the time between the stages of a vulnerability's life, from report to fix and from disclosure to attack, has not shifted noticeably so far. We grade the mitigations proposed in the literature with an explicit rubric and draw guidance for each group of stakeholders from the best-supported ones.",
+      "published": "2026-11-19T18:54:19Z",
+      "primary_category": "cs.CR",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26601",
+      "pdf_url": "https://arxiv.org/pdf/2611.26601",
+      "summary_zh": "LLM智能体在真实软件漏洞发现、验证与修复上的能力声明分散于论文、厂商报告和披露中，彼此难以比较。作者提出一个仿驾驶自动化等级的自主性评分框架，并按正确性、可用性和证据强度对每项声明进行限定，据此系统梳理已发表证据，并结合十年公开漏洞记录、公告与利用数据量化能力演进的后果。结果显示2026年前受限前沿模型已能在无人工干预下完成真实软件漏洞的发现、验证与修复，开放权重模型随后在发现与验证上达到相当自主性；2026年披露漏洞数量翻倍以上、严重漏洞占比上升，但报告到修复、披露到攻击的时间间隔尚未明显变化，作者还用明确评分标准评估文献中的缓解措施并为各类利益相关者提供建议。",
+      "summary_en": "Claims about LLM agents' ability to discover, validate, and patch vulnerabilities in real software are scattered across papers, vendor reports, and disclosures and are rarely comparable. The authors introduce an autonomy scale modeled on driving automation levels, qualify each claim by correctness, availability, and evidence strength, and use this framework to systematize published evidence while measuring consequences across a decade of public vulnerability records, advisories, and exploitation data. They find that agents achieved human-free discovery, validation, and patching of real-world vulnerabilities before the restricted frontier models of 2026, with open-weight models later reaching comparable autonomy for discovery and validation; disclosed vulnerabilities more than doubled in 2026 with a growing share rated critical or high, yet the time between vulnerability lifecycle stages has not shifted noticeably, and the paper grades proposed mitigations with an explicit rubric to guide stakeholders.",
+      "highlights_zh": [
+        "提出仿驾驶等级的LLM漏洞研究自主性评分框架",
+        "2026年披露漏洞数量翻倍以上且严重漏洞占比上升",
+        "漏洞生命周期各阶段时间间隔尚未明显变化"
+      ]
+    },
+    {
+      "id": "2611.26598",
+      "title": "Active Feature Acquisition by Distilling an Oracle Teacher",
+      "authors": [
+        "Yang Meng",
+        "Zixin Ding",
+        "Robert L. Grossman",
+        "Yuxin Chen"
+      ],
+      "abstract": "Acquiring every feature of an instance is often costly: a measurement can carry a monetary price, a time delay, or a privacy cost. Active Feature Acquisition (AFA) addresses this by learning a policy that decides, per instance, which features to acquire under a budget. Existing AFA methods train this policy by optimizing a self-constructed utility target rather than distilling an explicit teacher. We construct this teacher explicitly. At training time the label and the unobserved feature values are available, and together they determine the teacher in closed form: an oracle that ranks every candidate by its effect on the downstream predictor's error. OracleImitator distills this ranking into a deployable policy by soft-target imitation. Across multimodal medical diagnosis and the AFABench benchmark, OracleImitator matches or outperforms existing AFA methods across the budget range, recovering 90% of the attainable accuracy gain at under a quarter of the acquisition cost. Because the teacher is an explicit algorithmic object rather than an implicit optimization target, we can also measure directly how much of its ranking is recoverable by a policy restricted to what is visible at deployment.",
+      "published": "2026-11-19T18:52:57Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26598",
+      "pdf_url": "https://arxiv.org/pdf/2611.26598",
+      "summary_zh": "主动特征获取（AFA）需在预算内为每个实例决定采集哪些特征，但现有方法通过优化自构造的效用目标来训练策略，而非蒸馏显式教师。本文在训练时利用标签和未观测特征值闭式构造一个按对下游预测器误差影响排序候选特征的oracle教师，并通过软目标模仿将其排序蒸馏为可部署策略OracleImitator。在多模态医学诊断和AFABench上，该方法在预算范围内匹配或超越现有AFA方法，以不到四分之一采集成本恢复90%可达精度增益，并可直接度量部署可见信息下教师排序的可恢复程度。",
+      "summary_en": "Active Feature Acquisition (AFA) learns a per-instance policy to decide which features to acquire under a budget, but existing methods train this policy by optimizing a self-constructed utility target rather than distilling an explicit teacher. This paper constructs the teacher explicitly: at training time the label and unobserved feature values determine, in closed form, an oracle that ranks each candidate by its effect on the downstream predictor's error, and OracleImitator distills this ranking into a deployable policy via soft-target imitation. Across multimodal medical diagnosis and the AFABench benchmark, OracleImitator matches or outperforms existing AFA methods across the budget range, recovering 90% of the attainable accuracy gain at under a quarter of the acquisition cost, and because the teacher is an explicit algorithmic object, it directly measures how much of its ranking is recoverable by a deployment-visible policy.",
+      "highlights_zh": [
+        "闭式构造oracle教师并软目标蒸馏排序",
+        "不到1/4成本恢复90%精度增益",
+        "可度量部署可见信息的排序可恢复性"
+      ]
+    },
+    {
+      "id": "2611.26607",
+      "title": "Bio-PM-Guided Synthetic IMU Generation",
+      "authors": [
+        "Deepali Singh",
+        "Deepesh Parpani",
+        "Aviral Gupta"
+      ],
+      "abstract": "Collecting and labeling inertial measurement unit (IMU) data for human activity recognition (HAR) is expensive, and models trained on one group of subjects often fail to generalize to unseen individuals. Even with balanced data, classifiers struggle to distinguish dynamically similar activity classes and benefit from targeted augmentation. We explore whether synthetic IMU data generated in the representation space of a pretrained biosignal encoder, Bio-PM \\cite{b1}, can serve as a practical augmentation source. Rather than synthesizing raw signals, we leverage Bio-PM's frozen encoder to convert 10-second IMU windows into token embedding sequences and train class-conditional decoders in this space: (1) an autoregressive transformer decoder that predicts tokens sequentially, and (2) a diffusion decoder that learns the token distribution through a denoising objective. We analyze generation realism through distributional metrics and embedding-space visualizations, evaluate downstream utility through leave-one-subject-out HAR classification, and present a PatchDecoder for approximate raw waveform reconstruction. Our diffusion decoder achieves a Train-on-Synthetic-Test-on-Real (TSTR) macro-F1 of 0.68, demonstrating that generated tokens are realistic enough to train a classifier that transfers to real data. Combining synthetic-token augmentation with a 320-dimensional gravity-aware feature representation raises LOSO macro-F1 from 0.729 to 0.809 over a real-only baseline across 51 subjects on the WISDM benchmark, with statistically significant gains concentrated in the most challenging activity classes. These results demonstrate that high-fidelity generation in a pretrained encoder's representation space is achievable and practically useful for cross-subject HAR augmentation.",
+      "published": "2026-11-19T18:56:25Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.26607",
+      "pdf_url": "https://arxiv.org/pdf/2611.26607",
+      "summary_zh": "IMU数据采集标注成本高且跨受试者泛化差，动态相似活动类难以区分，需要针对性增强。本文不合成原始信号，而是在预训练生物信号编码器Bio-PM的冻结表示空间中，用自回归Transformer解码器和扩散解码器生成类别条件的token序列，并配PatchDecoder近似重建波形。扩散解码器TSTR宏F1达0.68，合成token增强使WISDM 51人LOSO宏F1从0.729升至0.809，增益集中于最难活动类，证明表示空间高保真生成对跨受试者HAR增强实用有效。",
+      "summary_en": "IMU data collection and labeling for HAR is expensive and models generalize poorly to unseen subjects, especially for dynamically similar activity classes that need targeted augmentation. Instead of synthesizing raw signals, this work generates class-conditional token sequences in the frozen representation space of the pretrained biosignal encoder Bio-PM, using an autoregressive transformer decoder and a diffusion decoder, plus a PatchDecoder for approximate waveform reconstruction. The diffusion decoder reaches 0.68 TSTR macro-F1, and synthetic-token augmentation raises LOSO macro-F1 from 0.729 to 0.809 across 51 WISDM subjects with gains concentrated in the hardest classes, showing that high-fidelity generation in a pretrained encoder space is practical for cross-subject HAR augmentation.",
+      "highlights_zh": [
+        "在Bio-PM冻结表示空间生成token而非原始信号",
+        "扩散解码器TSTR宏F1 0.68；LOSO 0.729→0.809",
+        "增益集中于难类；依赖预训练编码器质量"
+      ]
+    }
+  ]
+}
