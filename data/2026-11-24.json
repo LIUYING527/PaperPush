@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-24",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 8,
+  "papers": [
+    {
+      "id": "2611.31228",
+      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+      "authors": [
+        "Daniel Theron"
+      ],
+      "abstract": "Prompting language models to verbalize stepwise numerical confidence during generation is an increasingly popular approach for triggering backtracking and error correction in agentic reasoning. This strategy presupposes two capabilities: (1) in-situ monitoring fidelity (does confidence drop when an error occurs?) and (2) downstream steering control (does an uncertainty token causally steer the model to repair its error?). We evaluated four open-weights models (Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, and Phi-4, 14.7B) across 15,200 math benchmark attempts, isolating 2,017 reasoning errors within each model's capability frontier. Applying 27,568 counterfactual continuations across these failure points, we demonstrate a consistent decoupling between monitoring and control. On monitoring, all four models fail to detect their own errors. Verbalized confidence does not distinguish mistake steps from sound reasoning, yielding near-chance within-position AUROCs between 0.500 and 0.561. Even at a model's first reasoning error, trajectory confidence remains saturated at 95.1% to 99.9%, with noticeable drops ($\\ge 10$ points) appearing on fewer than 9% of errors in Llama and under 1.6% in the other three models. In contrast, models respond readily to external uncertainty: injecting a low-confidence tag (10%) at the error step significantly increases downstream correction across all models (+3.7 to +22.5 points over format-matched 95% certainty; all $p \\le 0.0022$), reaching up to 38.5% under active rethinking instructions. However, injecting doubt onto already-correct steps causes models to discard valid reasoning, reducing solve rates by up to 22.8 points. Inference-time self-correction is thus bottlenecked by in-situ error detection rather than downstream repair capacity: models readily steer toward recovery when prompted with doubt, yet fail to self-monitor during generation.",
+      "published": "2026-11-23T18:58:52Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31228",
+      "pdf_url": "https://arxiv.org/pdf/2611.31228",
+      "summary_zh": "让语言模型在生成过程中口头表达逐步数值置信度，被认为能触发回溯与纠错，但这依赖两个前提：原位监控的保真度与不确定性标记的下游引导控制。作者在四个开源模型（Qwen2.5-7B、Llama-3.1-8B、Mistral-7B、Phi-4）的15,200次数学基准尝试中隔离出2,017个推理错误，并施加27,568次反事实续写，以解耦监控与控制两种能力。结果显示模型无法检测自身错误（同位置AUROC仅0.500–0.561，首个错误处置信度仍高达95.1%–99.9%），但注入低置信标记可显著提升纠错（+3.7至+22.5点），说明自纠错的瓶颈在于原位错误检测而非下游修复能力。",
+      "summary_en": "Verbalizing stepwise numerical confidence during generation is promoted as a way to trigger backtracking and error correction, but this presupposes in-situ monitoring fidelity and downstream steering control by uncertainty tokens. The authors evaluated four open-weights models (Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, Phi-4) across 15,200 math benchmark attempts, isolating 2,017 reasoning errors and applying 27,568 counterfactual continuations to decouple monitoring from control. All models failed to detect their own errors (near-chance within-position AUROC of 0.500–0.561, confidence saturated at 95.1%–99.9% at first errors), yet injected low-confidence tags significantly increased downstream correction (+3.7 to +22.5 points), showing that inference-time self-correction is bottlenecked by in-situ error detection rather than repair capacity.",
+      "highlights_zh": [
+        "解耦监控与控制两种能力",
+        "注入低置信标记纠错+22.5点",
+        "瓶颈在原位错误检测"
+      ],
+      "highlights_en": [
+        "Decouples monitoring from steering control",
+        "Injected doubt tags boost repair by 22.5 pts",
+        "Bottleneck is in-situ error detection"
+      ]
+    },
+    {
+      "id": "2611.31222",
+      "title": "CTLink: A Text-Prompted Segmentation Model for Linking Radiology Report Findings to 3D Chest CT Scans",
+      "authors": [
+        "Mohammed Baharoon",
+        "Sung Eun Kim",
+        "Mahmoud Hussain Alabbad",
+        "Lucas Bijnens",
+        "Ali Piracha",
+        "Reem Alwasiah",
+        "Talal Yahyan",
+        "Abdulrahman Alamoudi",
+        "Mashael Alshehri",
+        "Rayan Alsager",
+        "Hannah Hancock",
+        "Anna M. Hunkemöller",
+        "Peter Youssef",
+        "Mona A. Alhammad",
+        "Afnan Aljumayan",
+        "Brecht Van Berkel",
+        "Eric Bijnens",
+        "Saud Alhussain",
+        "Maarten Steyvers",
+        "Rolf Symons",
+        "Bryan Eelen",
+        "Ayed Alaklubi",
+        "Maha Buraykan Alshammari",
+        "Amirah Fahad Alshammeri",
+        "Tomas Gilvydis",
+        "Ibrahim AlTurki",
+        "Monerah Almohideb",
+        "Ali Alburkani",
+        "Shahad Alhomaiani",
+        "Fatima Jabali",
+        "Abdulrhman Aljouie",
+        "Daesung Kim",
+        "Junha Im",
+        "Michael Moritz",
+        "Hassan R. Alomaish",
+        "Pranav Rajpurkar"
+      ],
+      "abstract": "Radiology reports describe findings in text only, without visually marking them on the scan, so readers cannot directly see which abnormality each reported finding refers to. We introduce CTLink, a text-prompted 3D segmentation model that segments findings described in a chest CT report. CTLink was trained on 4123 noncontrast chest CT scans with 9547 segmented report findings, including ReXGroundingCTv2, a newly annotated dataset of 1134 scans and 1895 findings with every instance of each finding segmented. On the 200 ReXGroundingCT validation scans, CTLink achieved a hit rate of 0.816, an instance F1 score of 0.456, and a mean Dice score of 0.400, compared with 0.533, 0.175, and 0.234 for VoxTell, a publicly available text-prompted segmentation model (P < .001 for all). On the test set of the MICCAI 2026 ReXGrounding challenge, an ensemble of seven CTLink models achieved the highest hit rate (0.782) and instance F1 score (0.386) of all 48 participating teams. On 50 test scans segmented twice by independent radiologists, CTLink matched or exceeded inter-rater agreement. Diffuse non-focal findings remained the main limitation, partly because their extent is outlined inconsistently even between radiologists. The CTLink model weights are available at https://huggingface.co/rajpurkarlab/CTLink, and the dataset at https://huggingface.co/datasets/rajpurkarlab/ReXGroundingCT.",
+      "published": "2026-11-23T18:57:26Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31222",
+      "pdf_url": "https://arxiv.org/pdf/2611.31222",
+      "summary_zh": "放射学报告仅以文本描述发现而不在扫描上标注，读者无法直接看到每个发现对应的异常区域。CTLink是一个文本提示的3D分割模型，用4123例胸部CT和9547个分割报告发现（含新标注数据集ReXGroundingCTv2）训练，可根据报告文本分割出对应发现。在验证集上命中率0.816、实例F1 0.456、平均Dice 0.400，显著优于VoxTell，并在MICCAI 2026 ReXGrounding挑战赛48支队伍中取得最高命中率和实例F1，达到或超过放射科医师间一致性。",
+      "summary_en": "Radiology reports describe findings in text without marking them on scans, so readers cannot directly see which abnormality each finding refers to. CTLink is a text-prompted 3D segmentation model trained on 4123 chest CT scans with 9547 segmented report findings (including the new ReXGroundingCTv2 dataset) that segments findings described in a report. It achieved a hit rate of 0.816, instance F1 of 0.456, and mean Dice of 0.400 on validation scans, significantly outperforming VoxTell, and its seven-model ensemble ranked highest among 48 teams in the MICCAI 2026 ReXGrounding challenge, matching or exceeding inter-rater agreement.",
+      "highlights_zh": [
+        "文本提示分割报告发现",
+        "命中率0.816、F1 0.456",
+        "挑战赛第一，弥漫病变受限"
+      ]
+    },
+    {
+      "id": "2611.31240",
+      "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
+      "authors": [
+        "Seongchan Kim",
+        "Soowon Son",
+        "Sangoh Kim",
+        "Hyunah Ko",
+        "Eunbeen Hong",
+        "Hyunkoo Lee",
+        "Sanghyun Lee",
+        "WonJun Moon",
+        "Kihong Kim",
+        "Dongyeon Son",
+        "Woongchan Nam",
+        "Seungryong Kim"
+      ],
+      "abstract": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understanding and trajectory prediction. Our analysis of Taylor importance in Alpamayo-1.5-10B shows that reasoning and trajectory objectives assign different importance to the same vision-language model (VLM) structures. In the action expert, MLP channels exhibit more stable importance rankings across denoising steps than query heads, and a small fraction of channels accounts for most of the measured importance. Based on these findings, we propose MoOP, which combines importance ranks from both objectives for VLM pruning and aggregates stepwise importance to select a fixed subset of expert MLP channels. At 24.0% total parameter reduction, VLM-only pruning with MoOP performs comparably to or slightly better than the strongest baselines in driving, while retaining 94.0% of the dense model's LingoQA score, far above all other methods. At a higher reduction of 30.0%, MoOP degrades much less than every other method, as it is the only one whose reasoning does not collapse. Removing 93.75% of expert MLP channels increases total parameter reduction to 39.4%, with nearly unchanged open-loop errors relative to VLM-only pruning and competitive closed-loop performance. The resulting model achieves a 1.37x end-to-end inference speedup and 36.6% lower peak memory than the dense model, without post-pruning fine-tuning.",
+      "published": "2026-11-23T18:59:52Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31240",
+      "pdf_url": "https://arxiv.org/pdf/2611.31240",
+      "summary_zh": "面向自动驾驶的推理式VLA模型依赖思维链推理来引导动作生成，但带来巨大的内存与计算开销，结构化剪枝需同时保住场景理解与轨迹预测能力。作者分析Alpamayo-1.5-10B的Taylor重要性，发现推理与轨迹目标对同一VLM结构赋予不同重要性，且动作专家中MLP通道的重要性排序比query头更稳定、少数通道贡献大部分重要性，据此提出MoOP，融合双目标重要性排序剪枝VLM并聚合逐步重要性选择固定专家MLP通道子集。在24.0%参数削减下MoOP驾驶性能持平或略优于最强基线并保留94.0%的LingoQA分数，30.0%削减时是唯一推理不崩溃的方法，去除93.75%专家MLP通道达39.4%总削减且开环误差几乎不变，实现1.37倍推理加速与36.6%峰值内存降低，无需剪枝后微调。",
+      "summary_en": "Reasoning vision-language-action models for autonomous driving use chain-of-thought reasoning to guide action generation but incur substantial memory and compute costs, so structured pruning must preserve both scene understanding and trajectory prediction. Analyzing Taylor importance in Alpamayo-1.5-10B, the authors find that reasoning and trajectory objectives assign different importance to the same VLM structures, and that in the action expert MLP channels have more stable importance rankings across denoising steps than query heads with a small fraction of channels dominating importance; they thus propose MoOP, which combines importance ranks from both objectives for VLM pruning and aggregates stepwise importance to select a fixed subset of expert MLP channels. At 24.0% parameter reduction MoOP matches or slightly beats the strongest baselines in driving while retaining 94.0% of the dense LingoQA score, at 30.0% reduction it is the only method whose reasoning does not collapse, and removing 93.75% of expert MLP channels reaches 39.4% total reduction with nearly unchanged open-loop errors, yielding a 1.37x inference speedup and 36.6% lower peak memory without post-pruning fine-tuning.",
+      "highlights_zh": [
+        "融合推理与轨迹双目标重要性排序剪枝VLM",
+        "24%削减保留94% LingoQA且驾驶性能不降",
+        "1.37倍加速、峰值内存降36.6%，无需微调"
+      ]
+    },
+    {
+      "id": "2611.31237",
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "authors": [
+        "JB Kim",
+        "Byungwoo Jeon",
+        "Kyungmin Lee",
+        "Hyeonmo Kang",
+        "Cheonbok Park",
+        "Shinyoung Joo",
+        "Jinwoo Shin",
+        "Jeonghoon Kim"
+      ],
+      "abstract": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this knowledge effectively accessible to visual generation remains nontrivial. We find that a central challenge lies in the heterogeneous visual representations used for understanding and generation. To address this challenge, we introduce Integral, which converts a pretrained vision-language model into a unified multimodal model by constructing a shared visual representation space across the two capabilities. Integral implements this design through two complementary components. Abstraction Fusion constructs shared visual tokens by aggregating hierarchical representations from the frozen vision encoder, while Block-wise MoT introduces a lightweight generative stream that interacts with the vision-language model only at block boundaries. Our approach effectively preserves the pretrained understanding capability while extending it to strong visual generation. Controlled comparisons further demonstrate that sharing visual representations between understanding and generation substantially improves generative learning compared with using a separate visual representation space, despite comparable reconstruction fidelity. These results suggest that representations learned by pretrained vision-language models already provide an effective foundation for visual generation.",
+      "published": "2026-11-23T18:59:32Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31237",
+      "pdf_url": "https://arxiv.org/pdf/2611.31237",
+      "summary_zh": "统一多模态模型难以有效整合视觉理解与生成，核心挑战在于两种能力使用异构的视觉表征。作者提出Integral，通过Abstraction Fusion聚合冻结视觉编码器的层级表征构建共享视觉token，并用Block-wise MoT让轻量生成流仅在块边界与VLM交互。实验表明共享视觉表征显著提升生成学习效果，说明预训练VLM的表征已为视觉生成提供有效基础。",
+      "summary_en": "Unified multimodal models struggle to integrate visual understanding and generation, largely because the two capabilities rely on heterogeneous visual representations. The authors propose Integral, which builds shared visual tokens via Abstraction Fusion over a frozen vision encoder's hierarchical features and adds a lightweight generative stream (Block-wise MoT) that interacts with the VLM only at block boundaries. Controlled comparisons show that sharing visual representations substantially improves generative learning over separate representation spaces, indicating that pretrained VLM representations already offer an effective foundation for visual generation.",
+      "highlights_zh": [
+        "共享视觉表征空间统一理解与生成",
+        "共享表征优于独立表征的生成效果",
+        "保留预训练理解能力并扩展生成"
+      ],
+      "highlights_en": [
+        "Shared visual representation space unifies understanding and generation",
+        "Shared representations outperform separate ones for generation",
+        "Preserves pretrained understanding while adding generation"
+      ]
+    },
+    {
+      "id": "2611.31215",
+      "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
+      "authors": [
+        "Xiwei Liu",
+        "Yulong Li",
+        "Xuhui Li",
+        "Xinlin Zhuang",
+        "Zhixiang Lu",
+        "Haolin Yang",
+        "Jianxu Chen",
+        "Yifan Lu",
+        "Zhiran Zhang",
+        "Yutong Xie"
+      ],
+      "abstract": "Humans explore unfamiliar spaces with purpose, deciding where to look until they have gathered the evidence a spatial question requires. However, can vision-language models (VLMs), which reason increasingly well over curated images and videos, also seek in space when the evidence is not handed to them? We present ActSpace-Bench, a benchmark of 994 questions across 234 exploration episodes in 72 real-scanned indoor scenes, where a model starts from a single view, navigates real captured frames, and must gather evidence before answering. To assess whether such exploration is purposeful, we introduce a controlled evaluation protocol that fixes each model as the reasoner and compares its own exploration against a same-budget random walk and an oracle route, separating evidence seeking from spatial reasoning. Every question is verified to require exploration and answered from 3D annotations, masked-evidence questions test whether models know when to abstain, and over 95% of sampled questions are confirmed correct by human verification. Evaluations of 23 proprietary, open-weight, and spatially specialized VLMs reveal that the strongest models do seek evidence with purpose but lose much of it to limited memory, whereas weaker and specialized models explore no better than a random walk or fail to reason over the evidence they are given, pointing to memory and evidence-grounded reasoning as the next targets for active spatial intelligence.",
+      "published": "2026-11-23T18:55:44Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31215",
+      "pdf_url": "https://arxiv.org/pdf/2611.31215",
+      "summary_zh": "现有视觉语言模型虽能在精选图像视频上推理，但能否在证据未被直接提供时主动在空间中探索以收集证据尚不清楚。作者提出ActSpace-Bench基准（72个真实室内场景、234个探索回合、994个问题）及受控评估协议，将模型自身探索与同预算随机游走和oracle路线对比，以区分证据寻找与空间推理能力。对23个模型的评测显示最强模型能有目的地寻找证据但受限于记忆，较弱和专用模型探索不如随机游走或无法基于证据推理，指明记忆与证据 grounded 推理是主动空间智能的下一步目标。",
+      "summary_en": "While vision-language models reason well over curated images and videos, it remains unclear whether they can actively explore space to gather evidence when it is not handed to them. The authors present ActSpace-Bench (994 questions across 234 exploration episodes in 72 real-scanned indoor scenes) with a controlled protocol comparing each model's own exploration against a same-budget random walk and an oracle route, separating evidence seeking from spatial reasoning. Evaluating 23 proprietary, open-weight, and spatially specialized VLMs shows the strongest models do seek evidence purposefully but lose much of it to limited memory, while weaker and specialized models explore no better than a random walk or fail to reason over given evidence, pointing to memory and evidence-grounded reasoning as next targets for active spatial intelligence.",
+      "highlights_zh": [
+        "真实场景主动探索基准与受控协议",
+        "最强模型有目的探索但受记忆限制",
+        "指向记忆与证据推理为下一步目标"
+      ]
+    },
+    {
+      "id": "2611.31198",
+      "title": "ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents",
+      "authors": [
+        "Rui Sun",
+        "Junhua Huang",
+        "Luca Zancato",
+        "Md Mofijul Islam",
+        "Kai-Wei Chang"
+      ],
+      "abstract": "Recent multimodal search agents use reasoning, vision, and live web search across many turns to answer questions beyond parametric knowledge by orchestrating a small library of hand-crafted search and visual tools. However, the library is laborious to create and maintain, and frozen when new query types, evidence formats, and failure modes are encountered in the wild. Human practitioners, by contrast, cope with insufficient tools by fashioning new ones from familiar parts and reusing them across tasks. Inspired by this, we propose ToolSmith, an automatic tool-generation framework that grows and reuses modules on top of a lean base tool library. We evaluate ToolSmith on three in-domain multimodal search benchmarks and ten out-of-domain benchmarks under a VLM-as-a-Judge protocol. ToolSmith consistently improves over the base library across deployed agents of varying scales, with larger backbones reaping greater gains, demonstrating the scalability of the approach. Our code and data are available at https://threesr.github.io/toolsmith/.",
+      "published": "2026-11-23T18:48:02Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31198",
+      "pdf_url": "https://arxiv.org/pdf/2611.31198",
+      "summary_zh": "现有多模态搜索智能体依赖人工构建的固定工具库，面对新查询类型、证据格式和失败模式时难以扩展且维护成本高。ToolSmith受人类复用熟悉部件自制工具的启发，提出自动工具生成框架，在精简基础工具库之上自动生长并复用新模块。在三个域内和十个域外多模态搜索基准上，ToolSmith对多种规模智能体均稳定优于基础库，且骨干模型越大收益越明显，展现了良好的可扩展性。",
+      "summary_en": "Existing multimodal search agents rely on a small hand-crafted tool library that is laborious to maintain and frozen when new query types, evidence formats, and failure modes appear. Inspired by how humans fashion new tools from familiar parts and reuse them, ToolSmith is an automatic tool-generation framework that grows and reuses modules on top of a lean base tool library. Evaluated on three in-domain and ten out-of-domain multimodal search benchmarks under a VLM-as-a-Judge protocol, ToolSmith consistently outperforms the base library across agents of varying scales, with larger backbones gaining more, demonstrating scalability.",
+      "highlights_zh": [
+        "自动生成并复用工具模块",
+        "多基准稳定超越基础工具库",
+        "可扩展但依赖VLM评判"
+      ]
+    },
+    {
+      "id": "2611.31233",
+      "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
+      "authors": [
+        "Hani Alomari",
+        "Md Atabuzzaman",
+        "Chris Thomas"
+      ],
+      "abstract": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the usual suspect. Yet removing it post hoc degrades retrieval on every CLIP checkpoint we test. We introduce a paired statistic that identifies directions where the two towers agree more on hard negatives than on matched pairs. Mildly attenuating these directions improves retrieval while largely preserving the gap. We arrive at this correction through weight-space programming: guided by the statistic, an LLM agent inspects both towers and writes closed-form weight edits without backpropagation. Free to edit any component, the agent improves COCO test retrieval on all 13 CLIP checkpoints and edits an output projection in 12 of the 13. We distill and refine its recurring correction into TowerBridge, a closed-form recipe motivated by a first-order analysis of the hard-negative margin. Computed in seconds from 25,000 labelled pairs, it requires no model-specific tuning and leaves the architecture and inference cost unchanged. TowerBridge improves COCO test retrieval by 16.8 RSUM and Flickr30k test retrieval by 6.6 on average across all 21 evaluated CLIP checkpoints, including 8 unseen by the agent, while limiting any drop in ImageNet zero-shot accuracy to 0.5 points. It also reduces hubness on all 21 checkpoints and improves retrieval on 4 of 5 dual encoders from other families.",
+      "published": "2026-11-23T18:59:13Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31233",
+      "pdf_url": "https://arxiv.org/pdf/2611.31233",
+      "summary_zh": "CLIP式双编码器存在模态间隙，导致难负样本可能排在正确匹配之前，而事后消除间隙反而会降低检索性能。作者提出配对统计量识别两塔在难负样本上比匹配对更一致的方向，并通过权重空间编程让LLM智能体写出闭式权重编辑，进而提炼为无需调参的TowerBridge方法。在21个CLIP检查点上，TowerBridge平均提升COCO检索16.8 RSUM、Flickr30k检索6.6，同时将ImageNet零样本精度下降限制在0.5点以内。",
+      "summary_en": "CLIP-style dual encoders suffer from a modality gap that lets hard negatives outrank correct matches, yet post hoc gap removal degrades retrieval on every tested checkpoint. The authors introduce a paired statistic that identifies directions where the two towers agree more on hard negatives than on matched pairs, and use weight-space programming in which an LLM agent writes closed-form weight edits, distilled into TowerBridge, a tuning-free recipe motivated by first-order analysis of the hard-negative margin. Across 21 CLIP checkpoints, TowerBridge improves COCO retrieval by 16.8 RSUM and Flickr30k by 6.6 on average while limiting ImageNet zero-shot accuracy drop to 0.5 points, and it also reduces hubness and generalizes to other dual-encoder families.",
+      "highlights_zh": [
+        "权重空间编程生成闭式权重编辑",
+        "COCO检索平均提升16.8 RSUM",
+        "无需调参且推理成本不变"
+      ]
+    },
+    {
+      "id": "2611.31227",
+      "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
+      "authors": [
+        "Abhishek Sharma",
+        "Aleksej Zelezniak"
+      ],
+      "abstract": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation responses in unseen cell types and identifying perturbed genes from their transcriptional effects therefore remain challenging. Here, we show that both tasks can be addressed through a common linear decomposition of transcriptional responses into shared and perturbation-specific components. Building on this principle, we introduce BiPert, a simple linear framework for both forward perturbation prediction and inverse identification. For forward prediction, BiPert outperforms existing methods that use no external biological knowledge when predicting gene expression changes in unseen cell lines. Its few-shot extension, BiPert-FS, adapts to new cell lines using as few as ten measured perturbations. For inverse identification, BiPert-ID identifies perturbed genes from single-cell expression profiles, outperforming deep-learning methods in unseen cell lines and donors. We further show that perturbations whose effects transfer more consistently across cellular contexts are also easier to identify, even after controlling for perturbation effect size. Together, these results establish a connection between perturbation transfer and identification, and demonstrate that simple linear models provide strong, interpretable baselines for both tasks.",
+      "published": "2026-11-23T18:58:32Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "q-bio.CB",
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.31227",
+      "pdf_url": "https://arxiv.org/pdf/2611.31227",
+      "summary_zh": "在单细胞扰动建模中，从大规模CRISPR筛选预测未见细胞类型的扰动响应以及从表达谱反推扰动基因仍具挑战。作者提出BiPert统一线性框架，将转录响应分解为共享与扰动特异成分，同时支持正向预测（含少样本扩展BiPert-FS）和逆向识别（BiPert-ID）。实验表明线性模型在未见细胞系和供体上优于无外部知识的现有方法及深度学习基线，并揭示扰动跨情境可迁移性与可识别性之间的关联。",
+      "summary_en": "Predicting perturbation responses in unseen cell types and identifying perturbed genes from transcriptional profiles remain challenging given the limited cellular contexts of large-scale CRISPR screens. The authors introduce BiPert, a unified linear framework that decomposes transcriptional responses into shared and perturbation-specific components, supporting forward prediction (with a few-shot extension, BiPert-FS) and inverse identification (BiPert-ID). Results show that simple linear models outperform existing knowledge-free and deep-learning baselines on unseen cell lines and donors, and reveal a link between cross-context perturbation transferability and identifiability.",
+      "highlights_zh": [
+        "线性分解统一正逆向扰动建模",
+        "未见细胞系预测优于深度学习方法",
+        "少样本十例即可适配新细胞系"
+      ]
+    }
+  ]
+}
