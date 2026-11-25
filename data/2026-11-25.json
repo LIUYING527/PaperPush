@@ -1,0 +1,317 @@
+{
+  "date": "2026-11-25",
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO"
+  ],
+  "count": 10,
+  "papers": [
+    {
+      "id": "2611.33158",
+      "title": "OmniAct: One Policy, One Million Embodiments",
+      "authors": [
+        "Xiang Fan",
+        "Yuheng Wang",
+        "Jiayuan Yan",
+        "Bohan Fang",
+        "Wisdom Oluchi Ikezogwo",
+        "Ainaz Eftekhar",
+        "Max Argus",
+        "Jason Ren",
+        "Jiafei Duan",
+        "Ranjay Krishna"
+      ],
+      "abstract": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
+      "published": "2026-11-24T18:59:58Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33158",
+      "pdf_url": "https://arxiv.org/pdf/2611.33158",
+      "summary_zh": "现有跨具身机器人策略依赖共享动作表示，难以体现形态差异对操作策略的影响。OmniAct以机器人运动学图（关节位置、运动轴、与视觉观测的连接）为条件，用流匹配策略预测各节点相对关节运动，并在百万级程序化生成具身上训练。在2000个未见具身-场景评估中成功率达63.0%，远超pi 0.5的17.8%和最强基线57.9%，在真实新机器人上成功率约为次优方法MolmoAct2的两倍。",
+      "summary_en": "Existing cross-embodiment policies rely on shared action representations that fail to capture how morphological differences should shape manipulation strategies. OmniAct conditions directly on a robot's kinematic graph—joint positions, motion axes, and connectivity to visual observations—and uses a flow-matching policy to predict relative joint motions per node, trained on one million procedurally generated feasible embodiments. It achieves 63.0% success on 2,000 held-out embodiment-scene episodes versus 17.8% for pi 0.5 and 57.9% for the strongest baseline, and nearly doubles the success of MolmoAct2 on an unseen real-world robot.",
+      "highlights_zh": [
+        "运动学图条件化+流匹配关节控制",
+        "2000评估集63.0%成功率",
+        "真实新机器人成功率翻倍"
+      ]
+    },
+    {
+      "id": "2611.33119",
+      "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
+      "authors": [
+        "Scott Piersall",
+        "Yang Gao",
+        "Shenyang Liu",
+        "Liqiang Wang"
+      ],
+      "abstract": "Large language models (LLMs) can generate parallel programs, but their correctness and performance depend strongly on the instructions that guide generation. We present \\textsc{MetaFORGE}, an execution-grounded meta-learning framework that iteratively optimizes persistent natural-language skill specifications for MPI C code generation. \\textsc{MetaFORGE} combines correctness testing, compiler diagnostics, static-analysis findings, runtime measurements, and rank-level load-imbalance profiles into a scalar reward that drives textual-gradient refinement, while an external memory distills and retrieves reward-supported optimization knowledge across runs. Across six MPI tasks and three workload sizes, \\textsc{MetaFORGE} improves static-analysis quality, runtime, and load balance relative to zero-shot generation and generally exceeds the evaluated \\textsc{TextGrad} iterative baseline. A model-matched refinement ablation shows that the MetaFORGE advantage persists when its refinement model is reduced to \\texttt{gpt-4o}. An expanded retrieval ablation across all 18 task--workload configurations shows consistent runtime benefit and broad static-analysis and load-balance benefit from retrieved context. Leakage-controlled held-out and zero-update experiments further provide evidence that optimization knowledge persists in both the transferred skill and external memory under the evaluated protocol.",
+      "published": "2026-11-24T18:49:19Z",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33119",
+      "pdf_url": "https://arxiv.org/pdf/2611.33119",
+      "summary_zh": "LLM生成并行程序时，其正确性与性能高度依赖引导生成的指令质量。MetaFORGE提出一种执行驱动的元学习框架，将正确性测试、编译器诊断、静态分析、运行时测量和rank级负载不均衡画像整合为标量奖励，驱动自然语言技能规范的文本梯度迭代优化，并通过外部记忆跨运行蒸馏和检索优化知识。在六个MPI任务和三种工作负载规模上，该方法提升了静态分析质量、运行时间和负载均衡，总体优于零样本生成和TextGrad迭代基线，且优化知识可在技能与外部记忆中持续保留。",
+      "summary_en": "LLM-generated parallel programs depend heavily on the quality of instructions guiding generation. MetaFORGE is an execution-grounded meta-learning framework that combines correctness testing, compiler diagnostics, static-analysis findings, runtime measurements, and rank-level load-imbalance profiles into a scalar reward to drive textual-gradient refinement of persistent natural-language skill specifications for MPI C code generation, with an external memory that distills and retrieves optimization knowledge across runs. Across six MPI tasks and three workload sizes, it improves static-analysis quality, runtime, and load balance over zero-shot generation and generally exceeds the TextGrad iterative baseline, with ablations showing the advantage persists under a reduced refinement model and that retrieved context yields consistent runtime benefits.",
+      "highlights_zh": [
+        "执行驱动元学习优化自然语言技能规范",
+        "六任务三规模上运行时间与负载均衡均提升",
+        "适用于MPI并行代码生成，跨任务知识可迁移"
+      ]
+    },
+    {
+      "id": "2611.33151",
+      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+      "authors": [
+        "Yuwei Yang",
+        "Xiaoxiao Sun",
+        "Alejandro Lozano",
+        "Yuan-Sen Ting",
+        "Yuhui Yuan",
+        "Liang Zheng",
+        "Serena Yeung-Levy"
+      ],
+      "abstract": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
+      "published": "2026-11-24T18:59:04Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33151",
+      "pdf_url": "https://arxiv.org/pdf/2611.33151",
+      "summary_zh": "生物医学视觉语言模型依赖大规模图文对扩展，但将图、子图、标题和正文视为独立图文对会忽略科学文献的结构关系。BioLoom利用文献结构引入弱正样本监督、同类型跨文章负样本加权，并用视觉内容、原图注和提及段落丰富子图描述，构建了5240万图文对的Loom52M数据集。BioLoom（DFN-2B）在67个零样本分类任务上达到56.82%域平衡平均准确率（MedPMC-CLIP为48.77%），并在BioLoomBench和BioMedFlickr上显著提升双向Recall@1。",
+      "summary_en": "Biomedical vision-language models rely on scaling image-text pairs, but treating figures, panels, captions, and article text as independent pairs overlooks the structural relationships in scientific literature. BioLoom incorporates these structural relations into contrastive supervision via weaker positives for related pairs, upweighted same-type cross-article negatives, and enriched panel descriptions from visual content, original captions, and mentioning paragraphs, yielding the 52.4M-pair Loom52M dataset. BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy on 67 zero-shot tasks versus 48.77% for MedPMC-CLIP, and improves bidirectional mean Recall@1 to 63.20% and 10.59% on BioLoomBench and BioMedFlickr.",
+      "highlights_zh": [
+        "利用文献结构构建弱正样本监督",
+        "67任务零样本准确率56.82%",
+        "提升生物医学多模态检索能力"
+      ]
+    },
+    {
+      "id": "2611.33141",
+      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
+      "authors": [
+        "Vansh Kapoor",
+        "Max Sobol Mark",
+        "Sreyas Venkataraman",
+        "Max Simchowitz",
+        "Aviral Kumar"
+      ],
+      "abstract": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.",
+      "published": "2026-11-24T18:56:04Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33141",
+      "pdf_url": "https://arxiv.org/pdf/2611.33141",
+      "summary_zh": "世界-动作模型依赖预训练视频生成模型预测场景演化来指导动作，但生成未来场景对实时控制而言开销过大。iWAM利用流匹配模型的可逆动力学将训练未来反演为潜在噪声，并学习双向流映射以摊销未来生成计算，使策略仅需一次视频骨干前向传播即可获得有效条件特征。在仿真基准和真实机器人上，iWAM在显著降低推理成本的同时恢复了WAM的泛化优势。",
+      "summary_en": "World-action models build policies on pretrained video-generation models, but generating future scenes is too expensive for real-time control. iWAM inverts each training future into a latent noise vector via the reversible dynamics of flow-matching models and learns a bidirectional flow map that amortizes future-generation computation, so the policy is conditioned on features from a single video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing inference cost.",
+      "highlights_zh": [
+        "单次前向传播替代完整未来帧生成",
+        "仿真与真实机器人均保持泛化优势",
+        "大幅降低推理成本，利于实时控制"
+      ]
+    },
+    {
+      "id": "2611.33153",
+      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+      "authors": [
+        "Binfei Ji",
+        "Zhiwen Cao",
+        "Anqi Yang",
+        "Prem Seetharaman",
+        "Shuo Yang",
+        "Ratheesh Kalarot",
+        "Yingyan Celine Lin",
+        "Mingze Xu"
+      ],
+      "abstract": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
+      "published": "2026-11-24T18:59:08Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.MM",
+        "cs.SD"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33153",
+      "pdf_url": "https://arxiv.org/pdf/2611.33153",
+      "summary_zh": "视频对话字幕需要同时确定每句话的转写、时间戳和说话人视觉描述，而说话时机与视听说话人分离紧密耦合，现有方法难以统一处理。DiaCap 将这两项任务统一到单个视听大模型中，先用22.5万条合成密集标注片段训练，再通过强化学习在2900条人工校正片段上以细粒度反馈优化时间、分组与绑定。在DiaDemBench上，其时间戳准确率显著优于Gemini 4 Argon（76.59 vs. 42.76 TIME），说话人分离与之相当，并具备多语言、长视频和视听问答迁移能力。",
+      "summary_en": "Audiovisual dialogue captioning requires jointly producing transcripts, timestamps, and visual speaker descriptions, yet utterance timing and audiovisual diarization are tightly coupled and hard to unify. DiaCap addresses this with a single audiovisual LLM trained in two stages: dense synthetic captions on 225K curated clips, followed by reinforcement learning on 2.9K human-corrected clips with fine-grained feedback on timing, speaker grouping, and speaker binding. On DiaDemBench, DiaCap matches Gemini 4 Argon in diarization while far exceeding it in timestamp accuracy (76.59 vs. 42.76 TIME), and it generalizes to multilingual, minute-long videos and audiovisual question answering.",
+      "highlights_zh": [
+        "统一时间戳与视听说话人分离",
+        "时间戳准确率76.59 TIME",
+        "可迁移至多语言与长视频"
+      ]
+    },
+    {
+      "id": "2611.33148",
+      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+      "authors": [
+        "Dawid J. Kopiczko",
+        "Tijmen Blankevoort",
+        "Yuki M. Asano"
+      ],
+      "abstract": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
+      "published": "2026-11-24T18:58:53Z",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33148",
+      "pdf_url": "https://arxiv.org/pdf/2611.33148",
+      "summary_zh": "强教师模型的思维链常被闭源API隐藏，传统蒸馏需同时模仿思维链与动作，导致无法用于闭源教师。本文提出仅用教师动作蒸馏长程策略，学生推理块留空训练，并用自身生成回放缓冲区的KL损失限制漂移，还引入CoT-proxies（教师推理的简短摘要）置于空推理块之后。实验表明空推理块学到的策略可迁移到开启思考的推理（跨格式迁移），Qwen3-4B在AppWorld上从7%提升至18%（动作蒸馏）和35%（CoT-proxies），蒸馏GPT-5.6 Luna更提升至48%，并在SWE-bench Verified上从3%升至28%。",
+      "summary_en": "Strong teachers' chain-of-thought is often hidden behind closed APIs, so standard fine-tuning that imitates both reasoning and actions cannot be applied to them. This work shows long-horizon policies can be distilled from teacher actions alone: the student trains on trajectories with an empty reasoning block, regularized by a KL loss on a replay buffer of its own generations, and optionally augmented with CoT-proxies (short summaries of teacher reasoning) placed after the empty block. The resulting policy transfers to inference with thinking enabled (cross-format transfer), raising Qwen3-4B on AppWorld from 7% to 18% via action distillation and to 35% with CoT-proxies, and distilling GPT-5.6 Luna from visible outputs and API reasoning summaries lifts Qwen3-4B to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
+      "highlights_zh": [
+        "仅用动作蒸馏，无需教师思维链",
+        "AppWorld成功率7%提升至48%",
+        "适用于闭源教师，但依赖可见输出"
+      ]
+    },
+    {
+      "id": "2611.33157",
+      "title": "PointX: Multi-View Consistent Intrinsics by Querying Surface Points",
+      "authors": [
+        "Miguel Farinha",
+        "Sam Sartor",
+        "Iliyan Georgiev",
+        "Giuseppe Vecchio",
+        "Ronald Clark",
+        "Michael Fischer"
+      ],
+      "abstract": "The appearance of a scene is determined by the albedo, roughness, metallicity and normal of every point on its surface, and by the light that reaches it, its irradiance. Recovering these intrinsics from images is ambiguous, and methods that predict them per pixel give the same surface point a different decomposition in every view. We introduce PointX, a simple feed-forward model that predicts intrinsics per 3D surface point instead. A multi-view transformer encodes a set of unposed images, and for any queried surface point, PointX pools the point's tokens across the views in which it appears and decodes the point's intrinsics once. Each point of a 3D reconstruction of the scene, such as a point cloud or a mesh, thus receives a single prediction, which is exactly consistent across views by construction and enables view-consistent relighting and editing. The same model also predicts per-view maps, from one image or many, by querying the point seen at every pixel. These maps agree across views up to the precision of the estimated geometry and correspondences. PointX is significantly more consistent than existing methods, while remaining competitive in accuracy from a single image and improving as views are added. Project page: https://pointx-paper.github.io/",
+      "published": "2026-11-24T18:59:42Z",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33157",
+      "pdf_url": "https://arxiv.org/pdf/2611.33157",
+      "summary_zh": "从图像中恢复反照率、粗糙度、金属度和法线等本征属性存在歧义，逐像素预测的方法会让同一表面点在不同视角下得到不同分解。PointX提出一种前馈模型，用多视图Transformer编码无位姿图像，并对任意查询的表面点跨视图汇聚其token，一次性解码该点的本征属性。该方法在跨视图一致性上显著优于现有方法，单图精度保持竞争力且随视图增加而提升，支持视角一致的重光照与编辑。",
+      "summary_en": "Recovering intrinsics such as albedo, roughness, metallicity and normals from images is ambiguous, and per-pixel methods decompose the same surface point differently in each view. PointX is a feed-forward model that predicts intrinsics per 3D surface point: a multi-view transformer encodes unposed images and, for any queried surface point, pools its tokens across views and decodes its intrinsics once. It is significantly more consistent than existing methods while remaining competitive from a single image and improving as views are added, enabling view-consistent relighting and editing.",
+      "highlights_zh": [
+        "按3D表面点而非像素预测本征属性",
+        "跨视图一致性显著优于现有方法",
+        "支持视角一致重光照与编辑"
+      ]
+    },
+    {
+      "id": "2611.33144",
+      "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
+      "authors": [
+        "Feixiang Ruan",
+        "Guodong Lv",
+        "Kewei Zhang",
+        "Wenbo Huang",
+        "Yintianrun Zhang",
+        "Qiang Wang",
+        "Ruiyang Si",
+        "Shunyu Yang",
+        "Shulong Jiang",
+        "Weicheng Duan",
+        "Rui Ni",
+        "Jianxin Bi",
+        "Lekai Wang",
+        "Yuze Fan",
+        "Haobo Li",
+        "Zeliang Fu",
+        "Jiankun Zhang",
+        "Duomin Wang",
+        "Enze Xie",
+        "Daquan Zhou"
+      ],
+      "abstract": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
+      "published": "2026-11-24T18:56:44Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33144",
+      "pdf_url": "https://arxiv.org/pdf/2611.33144",
+      "summary_zh": "灵巧操作学习受限于高质量演示稀缺，人类视频重定向不精确、遥操作缺乏力反馈、外骨骼采集难扩展。PyRUA-Dex让编码智能体通过程序化策略开发灵巧操作，分探索阶段（多智能体并行探索技能与组合方式并由蒸馏智能体凝练为任务库和单一程序）与精炼阶段（随机布局提升鲁棒性与执行效率），无需演示。仿真中在Bench2Dex达72.9分SOTA、DexJoCo全随机化下81.0%成功率均超越所有训练策略，真实双臂22自由度平台上可学弹钢琴、书法等，从乐谱学新曲最快30分钟。",
+      "summary_en": "Learning dexterous manipulation is bottlenecked by scarce high-quality demonstrations, since video retargeting is imprecise, teleoperation lacks force feedback, and exoskeleton collection is hard to scale. PyRUA-Dex enables coding agents to develop dexterous manipulation via programmatic policies without demonstrations, using a two-stage process: parallel exploration by multiple agents distilled into a task library and single program, followed by refinement with randomized layouts for robustness and efficiency. It achieves SOTA on Bench2Dex (72.9) and 81.0% success on DexJoCo under full randomization, outperforming all trained policies, and on a real bimanual 22-DoF platform learns piano, calligraphy, and more, with a new piece from sheet music in as little as 30 minutes.",
+      "highlights_zh": [
+        "编码智能体无需演示生成程序化策略",
+        "Bench2Dex 72.9分、DexJoCo 81.0%成功率",
+        "真实双臂学新曲最快30分钟"
+      ]
+    },
+    {
+      "id": "2611.33143",
+      "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+      "authors": [
+        "Xingjian Ran",
+        "Xiaoye Mo",
+        "Sihao Liu",
+        "Li Luo",
+        "Taiqiang Wu",
+        "Ji Zhao",
+        "Wenqi Shao",
+        "Hongyang Li",
+        "Jiaqi Wang",
+        "Bo Dai"
+      ],
+      "abstract": "Embodied spatial intelligence requires agents to gather information through exploration and interaction, then use it to reason and act. Existing benchmarks insufficiently distinguish correct outcomes from completion of these task requirements. We introduce ROAM-Bench to evaluate these abilities under robot motion and collision constraints. Independent checks use simulation state and episode records to assess outcomes and task requirements, with stronger checks of geometry, coverage, or placement. It comprises 250 manually validated tasks across 11 types in five groups and 27 indoor environments, covering object and room search, counting, geometric judgments, direction reasoning, and relocation. Human evaluators achieve 84% strict task success on 100 sampled tasks, with every correct outcome satisfying the required checks. Across seven frontier vision-language models, we identify two complementary failure modes: correct outcomes with unmet task requirements, and incorrect outcomes despite passing stronger checks. Oracle-input diagnostics show that more complete target observations and calibrated feedback improve final spatial judgments.",
+      "published": "2026-11-24T18:56:22Z",
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33143",
+      "pdf_url": "https://arxiv.org/pdf/2611.33143",
+      "summary_zh": "现有具身空间智能基准无法区分正确结果与任务要求是否真正完成。作者提出ROAM-Bench，在机器人运动与碰撞约束下用仿真状态和回合记录独立校验结果与任务要求，涵盖5组11类250个任务、27个室内环境。人类严格成功率84%，七个前沿视觉语言模型暴露出两类互补失败模式，诊断表明更完整的目标观测与校准反馈可改善空间判断。",
+      "summary_en": "Existing embodied spatial intelligence benchmarks fail to distinguish correct outcomes from genuine completion of task requirements. ROAM-Bench addresses this with independent checks using simulation state and episode records under robot motion and collision constraints, spanning 250 validated tasks in 11 types across 27 indoor environments. Humans achieve 84% strict success, seven frontier vision-language models reveal two complementary failure modes, and oracle diagnostics show fuller target observations and calibrated feedback improve spatial judgments.",
+      "highlights_zh": [
+        "结果与任务要求分离校验",
+        "人类严格成功率84%",
+        "暴露VLM两类失败模式"
+      ]
+    },
+    {
+      "id": "2611.33111",
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+      "authors": [
+        "Yuxing Liu",
+        "Wei Zuo",
+        "Walid Krichene",
+        "Tong Zhang",
+        "Li Zhang"
+      ],
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by employing a lightweight draft model to propose draft tokens and allowing the target model to verify the new tokens in parallel to improve inference-time compute utilization. The speedup relies on the acceptance probability of draft tokens in target verification, which is directly related to the gap $\\|p-q\\|_1$ between the target distribution $p$ and the draft distribution $q$. In this paper, we study draft calibration of speculative decoding to improve the speedup of speculative decoding, where we employ post-hoc methods to calibrate the draft distribution to mitigate the distribution gap. We observe that though current community open-source draft models may learn the top candidate token correctly, they are generally underconfident compared to the target model, suggesting a consistent distribution mismatch. To mitigate the effect of this mismatch on the acceptance rate of the draft models, we try various post-hoc calibration methods, including standard temperature scaling and token-wise calibration. Our results suggest that a standard temperature scaling applied to the draft distribution improves the acceptance length by up to approximately 10\\% with almost no additional cost across different tasks. Throughput analysis further verifies that this improvement in serving efficiency. Analysis of more general calibration methods reveals further potential room for improvement.",
+      "published": "2026-11-24T18:41:59Z",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "arxiv_url": "https://arxiv.org/abs/2611.33111",
+      "pdf_url": "https://arxiv.org/pdf/2611.33111",
+      "summary_zh": "投机解码通过草稿模型提议、目标模型并行验证来加速LLM推理，但其加速比受限于草稿与目标分布之间的差距。本文提出对草稿分布进行事后校准（如标准温度缩放和逐token校准），以缩小该分布差距、提升草稿token的接受率。实验表明，标准温度缩放几乎不增加成本即可将接受长度提升约10%，并提升服务吞吐量，显示出进一步校准的潜力。",
+      "summary_en": "Speculative decoding accelerates LLM inference via draft proposals and parallel target verification, but its speedup is limited by the distribution gap between draft and target models. This paper applies post-hoc calibration methods, including standard temperature scaling and token-wise calibration, to the draft distribution to reduce this mismatch and improve acceptance. Results show that standard temperature scaling improves acceptance length by up to about 10% at almost no extra cost and increases serving throughput, with further room for improvement from more general calibration.",
+      "highlights_zh": [
+        "事后校准草稿分布以缩小分布差距",
+        "温度缩放提升接受长度约10%",
+        "几乎零成本提升服务吞吐量"
+      ],
+      "highlights_en": [
+        "Post-hoc draft calibration narrows distribution gap",
+        "Temperature scaling boosts acceptance length ~10%",
+        "Near-zero-cost throughput gain in LLM serving"
+      ]
+    }
+  ]
+}
